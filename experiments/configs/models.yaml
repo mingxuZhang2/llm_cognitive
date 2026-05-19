@@ -1,0 +1,45 @@
+models:
+  qwen7b:
+    name: "Qwen/Qwen2.5-7B-Instruct"
+    short: "qwen7b"
+    n_layers: 28
+    ffn_dim: 11008
+    hidden_dim: 3584
+
+  llama8b:
+    name: "meta-llama/Meta-Llama-3-8B-Instruct"
+    short: "llama8b"
+    n_layers: 32
+    ffn_dim: 14336
+    hidden_dim: 4096
+
+  mistral7b:
+    name: "mistralai/Mistral-7B-Instruct-v0.3"
+    short: "mistral7b"
+    n_layers: 32
+    ffn_dim: 14336
+    hidden_dim: 4096
+
+  gemma9b:
+    name: "google/gemma-2-9b-it"
+    short: "gemma9b"
+    n_layers: 42
+    ffn_dim: 14336
+    hidden_dim: 3584
+
+scaling_models:
+  - "EleutherAI/pythia-70m"
+  - "EleutherAI/pythia-160m"
+  - "EleutherAI/pythia-410m"
+  - "EleutherAI/pythia-1b"
+  - "EleutherAI/pythia-1.4b"
+  - "EleutherAI/pythia-2.8b"
+  - "EleutherAI/pythia-6.9b"
+  - "EleutherAI/pythia-12b"
+
+paths:
+  model_cache: "/data/user/mzhang630/data/nature_exp/models"
+  activations: "/data/user/mzhang630/data/nature_exp/activations"
+  modules: "/data/user/mzhang630/data/nature_exp/modules"
+  results: "/data/user/mzhang630/data/nature_exp/results"
+  stimuli: "/data/user/mzhang630/data/nature_exp/stimuli"
