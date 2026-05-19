@@ -22,3 +22,10 @@ Build the first "Brodmann Atlas" of Large Language Models -- a comprehensive fun
 ## Current Status
 - Phase: Literature review and feasibility assessment
 - Branch: master
+
+## Module Transplantation Feasibility (May 19, 2026)
+- `feasibility_module_transplant.md` -- Exhaustive literature search on module/neuron transplantation between LLMs (50+ papers reviewed)
+- Key finding: Neuron-level transplantation exists for safety functions (CNT, 2026) and agent roles (ARM, 2026), but nobody has transplanted causally-validated cognitive functional modules (math, code, reasoning) between different LLM architectures
+- The field is moving fast -- multiple groups converging on transplantation ideas -- 12-18 month window of opportunity
+- Closest papers: CNT (safety neurons), ARM (role-conditioned neurons), Beyond Learning (layer-level transplant), NOT (checkpoint-based layer blocks)
+- Technical feasibility: POSITIVE -- all building blocks exist (module identification, neuron correspondence via OT, weight transfer), integration is the novelty
