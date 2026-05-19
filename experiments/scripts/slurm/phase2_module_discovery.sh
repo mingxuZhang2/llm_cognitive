@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=funcatlas_discover
 #SBATCH --partition=acd_u
+#SBATCH --account=d_yings_team
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=256G
 #SBATCH --time=24:00:00

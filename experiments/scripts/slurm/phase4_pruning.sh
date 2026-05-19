@@ -1,8 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=funcatlas_prune
 #SBATCH --partition=acd_u
+#SBATCH --account=d_yings_team
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=12
 #SBATCH --mem=128G
 #SBATCH --time=12:00:00
 #SBATCH --output=/data/user/mzhang630/logs/prune_%A_%a.out

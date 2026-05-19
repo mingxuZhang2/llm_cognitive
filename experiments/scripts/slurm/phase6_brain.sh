@@ -1,7 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=funcatlas_brain
 #SBATCH --partition=acd_u
-#SBATCH --cpus-per-task=16
+#SBATCH --account=d_yings_team
+#SBATCH --cpus-per-task=12
 #SBATCH --mem=64G
 #SBATCH --time=2:00:00
 #SBATCH --output=/data/user/mzhang630/logs/brain_%j.out
