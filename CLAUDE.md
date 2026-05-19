@@ -51,6 +51,17 @@ Build a causal functional atlas of Large Language Models — mapping which neuro
    - 9 universal spillover edges, ethics is universal hub
    - Mistral and Gemma have identical modularity rankings (rho=1.0)
 
+6. **Statistical Validation** (local, no GPU)
+   - `src/statistical_validation.py` — Formal tests on all 28 pairwise dissociations
+   - Matrix-level permutation test (10K perms): all 12 (4 models x 3 scales) p < 0.0002
+   - Per-pair one-sample t-test (12 obs = 4 models x 3 scales): ALL 28/28 p < 1.1e-5
+   - After BH-FDR correction: ALL 28/28 remain significant (p_adj < 0.05)
+   - Cohen's d: matrix-level mean=5.97; per-pair mean=3.73, min=2.02 (all "very large")
+   - Bootstrap 95% CIs: all 28 pairs above zero
+   - Cross-model universality: 28/28 pairs positive in all 4 models
+   - Cross-scale consistency: 27-28/28 pairs positive at all 3 scales per model
+   - Results: `results/statistical_validation.json`
+
 ### Key Findings (from analysis_findings.md)
 1. **Universal 3-layer functional hierarchy**: language/code → math/science → reasoning/ethics
 2. **Science-humanities knowledge integration zone**: bidirectional, near-symmetric, layer-colocalized
