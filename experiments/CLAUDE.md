@@ -33,6 +33,19 @@
 - `scripts/slurm/dose_response.sh` — SLURM script for Qwen on HPC3
   - Output: `/data/user/mzhang630/data/nature_exp/results/dose_response/`
 
+## Subcategory Dissociation (Format-Control Experiment)
+- `src/prepare_subcategory_stimuli.py` — Splits 8 broad categories into 12 format-matched subcategories
+  - Addresses criticism: categories might be distinguished by surface features, not cognitive functions
+  - Splits: science -> science_factual / science_explanation (both MC, different cognitive demand);
+    humanities -> history / philosophy; math -> arithmetic / word_problem;
+    language -> procedural / activity_narration; code, reasoning, factual_qa, ethics unchanged
+  - Reads stimuli_full.jsonl, outputs stimuli_subcategory.jsonl with category=subcategory
+  - 581 samples total, ~50/subcat (31 for science_explanation)
+- `scripts/slurm/subcategory_dissociation.sh` — 12-way dissociation on subcategory stimuli across 4 models
+  - Uses existing multi_function_dissociation.py (reads categories from stimuli automatically)
+  - Output: `/data/user/mzhang630/data/nature_exp/results/subcategory/`
+  - SLURM job 306991 submitted 2026-05-20
+
 ## Statistical Validation
 - `src/statistical_validation.py` — Formal statistical validation of all dissociation claims
   - No GPU needed; works from pre-computed JSON dissociation results

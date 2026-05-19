@@ -39,17 +39,12 @@ from collections import Counter, defaultdict
 # Keyword lists for subcategory classification
 # ============================================================
 
-# Science split: factual recall vs quantitative reasoning
-# Both are MMLU STEM multiple-choice (same format), but different cognitive demands.
-# Quantitative: involves numbers, calculations, measurements, units
-SCIENCE_QUANTITATIVE_KEYWORDS = [
-    "calculate", "how much", "how many", "how far", "how long",
-    "how old", "how fast", "numerical value", "equal to",
-    "formula", "speed of", "velocity of", "distance of", "radius of",
-    "diameter of", "mass of", "temperature of", "value of",
-    "km", " au", "mpc", "kg", "joule", "watt", "kelvin",
-    "second cosmic", "escape velocity", "10^", "10-",
-]
+# Science split: factual recall vs causal explanation
+# Both are MMLU STEM multiple-choice (same format), but different cognitive demands:
+# - science_factual: "What is X?", "Which is Y?" -> factual recall
+# - science_explanation: "Why does X?", "How does Y work?" -> causal reasoning
+# This is the strongest format-controlled split: identical stimulus format (MC),
+# but one requires recall and the other requires mechanistic understanding.
 
 PHILOSOPHY_KEYWORDS = [
     "moral", "ethic", "utilitari", "virtue", "kant", "argument",
@@ -99,19 +94,31 @@ def has_keyword(text, keywords):
 
 
 def classify_science(sample):
-    """Classify a science sample as science_quantitative or science_factual.
+    """Classify a science sample as science_explanation or science_factual.
 
     Both are MMLU STEM multiple-choice (same format), but:
-    - science_quantitative: involves calculations, numbers, units, measurements
-    - science_factual: recall-based ("what is X", "which is Y", "what defines")
+    - science_explanation: "Why does X?", "How does Y work?" -> causal reasoning
+    - science_factual: "What is X?", "Which is Y?" -> factual recall
     """
-    text = sample["text"]
-    if has_keyword(text, SCIENCE_QUANTITATIVE_KEYWORDS):
-        return "science_quantitative"
-    # Also check for presence of numbers with units (e.g., "150 million km")
-    if re.search(r'\d+\s*(km|kg|m/s|au|mpc|joule|watt|kelvin|k\b|ev\b)', text.lower()):
-        return "science_quantitative"
-    return "science_factual"
+    text = sample["text"].strip().lower()
+    is_explanation = (
+        text.startswith("why ") or
+        text.startswith("how do") or
+        text.startswith("how does") or
+        text.startswith("how did") or
+        text.startswith("how is") or
+        text.startswith("how are") or
+        text.startswith("how can") or
+        text.startswith("how could") or
+        text.startswith("how would") or
+        "what is the reason" in text or
+        "what causes" in text or
+        "what caused" in text or
+        "what explains" in text or
+        "what would happen" in text or
+        "what effect" in text
+    )
+    return "science_explanation" if is_explanation else "science_factual"
 
 
 def classify_humanities(sample):
