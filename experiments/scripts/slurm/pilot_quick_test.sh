@@ -21,11 +21,10 @@ conda activate alphasteer
 SRC="/data/user/mzhang630/data/nature_exp/src"
 BASE="/data/user/mzhang630/data/nature_exp"
 
-# Offline mode — HPC3 has no internet
-export HF_HOME="/data/user/mzhang630/.cache/huggingface"
+# Offline mode — HPC3 has no internet, use direct snapshot path
 export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
-MODEL_NAME="Qwen/Qwen2.5-7B-Instruct"
+MODEL_NAME="/data/user/mzhang630/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28"
 MODEL_SHORT="Qwen2.5-7B-Instruct"
 
 mkdir -p ${BASE}/{activations,modules,results/dissociation} /data/user/mzhang630/logs
