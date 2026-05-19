@@ -14,34 +14,76 @@ from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
-def get_ffn_hook(layer_idx, storage, model_type="qwen"):
-    """Create a forward hook that captures FFN intermediate activations."""
+def get_ffn_hook(layer_idx, storage):
+    """Create a forward hook that captures FFN intermediate activations.
+
+    Captures the output tensor, computes mean absolute activation per neuron
+    across the token dimension. Works for any linear layer output.
+    """
     def hook_fn(module, input, output):
         if isinstance(output, tuple):
             act = output[0]
         else:
             act = output
-        mean_abs = act.abs().mean(dim=1)  # mean across tokens → [batch, ffn_dim]
+        # act shape: [batch, seq_len, ffn_dim]
+        mean_abs = act.float().abs().mean(dim=1)  # [batch, ffn_dim]
         storage[layer_idx] = mean_abs.detach().cpu()
     return hook_fn
 
 
 def get_ffn_modules(model):
-    """Identify FFN intermediate modules across different architectures."""
+    """Identify FFN gate projection modules across architectures.
+
+    Architecture support:
+    - Qwen2, LLaMA, Mistral: mlp.gate_proj (SwiGLU)
+    - Gemma-2: mlp.gate_proj (GeGLU)
+    - GPT-NeoX (Pythia): mlp.dense_h_to_4h (plain MLP)
+    - GPT-2: mlp.c_fc (Conv1D)
+    - Fallback: first linear child of mlp
+    """
     ffn_modules = []
-    for i, layer in enumerate(model.model.layers):
+    layers = None
+    if hasattr(model, 'model') and hasattr(model.model, 'layers'):
+        layers = model.model.layers
+    elif hasattr(model, 'gpt_neox') and hasattr(model.gpt_neox, 'layers'):
+        layers = model.gpt_neox.layers
+    elif hasattr(model, 'transformer') and hasattr(model.transformer, 'h'):
+        layers = model.transformer.h
+
+    if layers is None:
+        raise ValueError(f"Cannot find layer list in model: {type(model)}")
+
+    for i, layer in enumerate(layers):
+        mlp = None
         if hasattr(layer, 'mlp'):
             mlp = layer.mlp
-            if hasattr(mlp, 'gate_proj'):
-                ffn_modules.append((i, mlp.gate_proj))
-            elif hasattr(mlp, 'fc1'):
-                ffn_modules.append((i, mlp.fc1))
-            elif hasattr(mlp, 'up_proj'):
-                ffn_modules.append((i, mlp.up_proj))
-            else:
-                w_names = [n for n, _ in mlp.named_modules() if 'linear' in n.lower() or 'dense' in n.lower()]
-                if w_names:
-                    ffn_modules.append((i, getattr(mlp, w_names[0])))
+        elif hasattr(layer, 'feed_forward'):
+            mlp = layer.feed_forward
+
+        if mlp is None:
+            continue
+
+        target = None
+        if hasattr(mlp, 'gate_proj'):
+            target = mlp.gate_proj
+        elif hasattr(mlp, 'dense_h_to_4h'):
+            target = mlp.dense_h_to_4h
+        elif hasattr(mlp, 'c_fc'):
+            target = mlp.c_fc
+        elif hasattr(mlp, 'fc1'):
+            target = mlp.fc1
+        else:
+            for name, child in mlp.named_children():
+                if hasattr(child, 'weight') and child.weight.dim() == 2:
+                    target = child
+                    break
+
+        if target is not None:
+            ffn_modules.append((i, target))
+
+    if not ffn_modules:
+        raise ValueError(f"No FFN modules found in model: {type(model)}")
+
     return ffn_modules
 
 
@@ -79,7 +121,15 @@ def extract_activations(
 
     ffn_modules = get_ffn_modules(model)
     n_layers = len(ffn_modules)
-    ffn_dim = ffn_modules[0][1].out_features if hasattr(ffn_modules[0][1], 'out_features') else ffn_modules[0][1].weight.shape[0]
+    first_mod = ffn_modules[0][1]
+    if hasattr(first_mod, 'out_features'):
+        ffn_dim = first_mod.out_features
+    elif hasattr(first_mod, 'weight'):
+        ffn_dim = first_mod.weight.shape[0]
+    elif hasattr(first_mod, 'nf'):  # GPT-2 Conv1D
+        ffn_dim = first_mod.nf
+    else:
+        raise ValueError(f"Cannot determine FFN dim from {type(first_mod)}")
 
     print(f"Model has {n_layers} layers, FFN dim = {ffn_dim}")
     print(f"Total neurons: {n_layers * ffn_dim:,}")
