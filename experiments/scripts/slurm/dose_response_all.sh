@@ -46,6 +46,6 @@ python dose_response.py \
     --stimuli "${BASE}/stimuli/stimuli_medium.jsonl" \
     --output_dir "${BASE}/results/dose_response" \
     --functions math code \
-    --ablation_sizes 500 1000 2000 5000 10000 20000
+    --sizes 500 1000 2000 5000 10000 20000
 
 echo "DONE: ${MODEL_SHORT}"
