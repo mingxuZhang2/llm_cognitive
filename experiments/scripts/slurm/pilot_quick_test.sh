@@ -8,8 +8,8 @@
 #SBATCH --output=/data/user/mzhang630/logs/pilot_%j.out
 #SBATCH --error=/data/user/mzhang630/logs/pilot_%j.err
 
-# PILOT: Quick test with Pythia-410M + 200 samples
-# Validates entire Phase 1-3 pipeline before committing to 7B models
+# PILOT: Quick test with Qwen2.5-7B (already on HPC3) + pilot stimuli
+# Validates Phase 1-3 pipeline
 # Submit: sbatch pilot_quick_test.sh
 
 set -e
@@ -17,90 +17,99 @@ set -e
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
 conda activate funcatlas
 
-SRC="/hpc2hdd/home/mzhang630/data/nature/experiments/src"
+SRC="/data/user/mzhang630/data/nature_exp/src"
 BASE="/data/user/mzhang630/data/nature_exp"
-MODEL_PATH="/data/user/mzhang630/data/nature_exp/models/pythia-410m"
-MODEL_NAME="EleutherAI/pythia-410m"
 
-mkdir -p ${BASE}/{stimuli,activations,modules,results/dissociation} /data/user/mzhang630/logs
+# Use Qwen from HPC3 cache (already downloaded)
+export HF_HOME="/data/user/mzhang630/.cache/huggingface"
+MODEL_NAME="Qwen/Qwen2.5-7B-Instruct"
+MODEL_SHORT="Qwen2.5-7B-Instruct"
+
+mkdir -p ${BASE}/{activations,modules,results/dissociation} /data/user/mzhang630/logs
 
 echo "============================================"
-echo "PILOT TEST: Pythia-410M, 200 samples"
+echo "PILOT TEST: ${MODEL_NAME}"
+echo "Stimuli: pilot set (~120 samples)"
 echo "GPU: $(nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null || echo 'unknown')"
 echo "============================================"
 
-# Step 1: Prepare pilot stimuli (small set)
+# Step 1: Extract activations
 echo ""
-echo "[Step 1/4] Preparing pilot stimuli..."
+echo "[Step 1/3] Extracting activations..."
 cd ${SRC}
-python stimulus_preparation.py \
-    --output "${BASE}/stimuli/pilot_stimuli.jsonl" \
-    --pilot \
-    --n_pilot 15
-
-# Step 2: Extract activations
-echo ""
-echo "[Step 2/4] Extracting activations from Pythia-410M..."
 python activation_extraction.py \
-    --model "${MODEL_PATH}" \
-    --stimuli "${BASE}/stimuli/pilot_stimuli.jsonl" \
+    --model "${MODEL_NAME}" \
+    --stimuli "${BASE}/stimuli/stimuli_pilot.jsonl" \
     --output_dir "${BASE}/activations" \
     --max_length 256 \
-    --batch_size 8
+    --batch_size 4
 
-# Step 3: Module discovery
+# Step 2: Module discovery (K=5 and K=8 for pilot)
 echo ""
-echo "[Step 3/4] Running module discovery (K=5,10)..."
-MODEL_SHORT="pythia-410m"
+echo "[Step 2/3] Running module discovery..."
 python module_discovery.py \
     --activation_path "${BASE}/activations/${MODEL_SHORT}_activations.npy" \
     --output_dir "${BASE}/modules" \
-    --K 5 10
+    --K 5 8
 
-# Step 4: Quick dissociation test (module 0 vs module 1)
+# Step 3: Analyze module composition
 echo ""
-echo "[Step 4/4] Running pilot ablation test..."
-
-# Check which module is which by looking at sample composition
+echo "[Step 3/3] Analyzing module composition..."
 python -c "
-import numpy as np
-import json
+import numpy as np, json
 
-modules = np.load('${BASE}/modules/${MODEL_SHORT}_K10_modules.npz')
-neuron_assign = modules['neuron_assign']
-sample_assign = modules['sample_assign']
+for K in [5, 8]:
+    print(f'\n=== K={K} ===')
+    modules = np.load('${BASE}/modules/${MODEL_SHORT}_K{K}_modules.npz'.replace('{K}', str(K)))
+    neuron_assign = modules['neuron_assign']
+    sample_assign = modules['sample_assign']
 
-# Load stimuli to check categories
-with open('${BASE}/stimuli/pilot_stimuli.jsonl') as f:
-    stimuli = [json.loads(line) for line in f]
+    with open('${BASE}/stimuli/stimuli_pilot.jsonl') as f:
+        stimuli = [json.loads(line) for line in f]
 
-print('Module composition (K=10):')
-for k in range(10):
-    s_mask = sample_assign == k
-    n_neurons = (neuron_assign == k).sum()
-    n_samples = s_mask.sum()
-    cats = [stimuli[i]['category'] for i in range(len(stimuli)) if i < len(sample_assign) and sample_assign[i] == k]
-    cat_counts = {}
-    for c in cats:
-        cat_counts[c] = cat_counts.get(c, 0) + 1
-    top_cats = sorted(cat_counts.items(), key=lambda x: -x[1])[:3]
-    top_str = ', '.join([f'{c}({n})' for c, n in top_cats])
-    print(f'  Module {k}: {n_neurons:>6d} neurons, {n_samples:>3d} samples | {top_str}')
+    for k in range(K):
+        n_neurons = (neuron_assign == k).sum()
+        s_indices = np.where(sample_assign == k)[0]
+        cats = {}
+        for i in s_indices:
+            if i < len(stimuli):
+                c = stimuli[i]['category']
+                cats[c] = cats.get(c, 0) + 1
+        top = sorted(cats.items(), key=lambda x: -x[1])[:3]
+        top_str = ', '.join([f'{c}({n})' for c,n in top])
+        # Purity: fraction of samples from dominant category
+        purity = max(cats.values()) / sum(cats.values()) if cats else 0
+        print(f'  Module {k}: {n_neurons:>6,} neurons, {len(s_indices):>3} samples, purity={purity:.2f} | {top_str}')
 
-# Module sizes summary
-total_n = len(neuron_assign)
-print(f'\nTotal neurons: {total_n:,}')
-print(f'Module size range: {min((neuron_assign==k).sum() for k in range(10)):,} - {max((neuron_assign==k).sum() for k in range(10)):,}')
+    # Check math vs code separation
+    math_modules = set()
+    code_modules = set()
+    for k in range(K):
+        s_indices = np.where(sample_assign == k)[0]
+        cats = {}
+        for i in s_indices:
+            if i < len(stimuli):
+                c = stimuli[i]['category']
+                cats[c] = cats.get(c, 0) + 1
+        if cats:
+            dominant = max(cats, key=cats.get)
+            if dominant == 'math': math_modules.add(k)
+            if dominant == 'code': code_modules.add(k)
+
+    if math_modules and code_modules and math_modules.isdisjoint(code_modules):
+        print(f'  >>> Math/Code SEPARATED: math={math_modules}, code={code_modules}')
+    elif math_modules or code_modules:
+        print(f'  >>> Partial separation: math={math_modules}, code={code_modules}')
+    else:
+        print(f'  >>> Math/Code NOT clearly separated at K={K}')
 "
 
 echo ""
 echo "============================================"
 echo "PILOT COMPLETE"
 echo "============================================"
-echo "Check results:"
-echo "  Activations: ${BASE}/activations/${MODEL_SHORT}_*"
-echo "  Modules:     ${BASE}/modules/${MODEL_SHORT}_*"
-echo "  Stimuli:     ${BASE}/stimuli/pilot_stimuli.jsonl"
+echo "Check results in: ${BASE}/activations/ and ${BASE}/modules/"
 echo ""
-echo "If module composition looks reasonable, proceed with:"
-echo "  sbatch phase1_extract_activations.sh  (for 7B models)"
+echo "KEY QUESTION: Are math and code samples in different modules?"
+echo "If yes → proceed to full experiment with double dissociation"
+echo "If no  → try larger K or switch to SAE-based module discovery"
