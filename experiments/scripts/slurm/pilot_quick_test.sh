@@ -21,8 +21,10 @@ conda activate alphasteer
 SRC="/data/user/mzhang630/data/nature_exp/src"
 BASE="/data/user/mzhang630/data/nature_exp"
 
-# Use Qwen from HPC3 cache (already downloaded)
+# Offline mode — HPC3 has no internet
 export HF_HOME="/data/user/mzhang630/.cache/huggingface"
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
 MODEL_NAME="Qwen/Qwen2.5-7B-Instruct"
 MODEL_SHORT="Qwen2.5-7B-Instruct"
 

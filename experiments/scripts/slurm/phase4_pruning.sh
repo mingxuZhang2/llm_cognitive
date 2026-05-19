@@ -16,6 +16,8 @@
 
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
 conda activate alphasteer
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
 
 export HF_HOME="/data/user/mzhang630/data/nature_exp/models"
 BASE="/data/user/mzhang630/data/nature_exp"

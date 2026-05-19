@@ -16,6 +16,8 @@
 
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
 conda activate alphasteer
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
 
 MODELS=(
     "Qwen/Qwen2.5-7B-Instruct"
