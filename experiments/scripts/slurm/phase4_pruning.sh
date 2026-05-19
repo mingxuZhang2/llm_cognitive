@@ -14,7 +14,7 @@
 # Submit after Phase 2: sbatch phase4_pruning.sh
 
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
-conda activate funcatlas
+conda activate alphasteer
 
 export HF_HOME="/data/user/mzhang630/data/nature_exp/models"
 BASE="/data/user/mzhang630/data/nature_exp"

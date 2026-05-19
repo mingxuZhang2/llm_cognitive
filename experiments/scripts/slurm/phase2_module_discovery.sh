@@ -12,7 +12,7 @@
 # Submit after Phase 1: sbatch phase2_module_discovery.sh
 
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
-conda activate funcatlas
+conda activate alphasteer
 
 MODELS=(
     "Qwen2.5-7B-Instruct"

@@ -40,8 +40,23 @@ else
     echo "[4/4] No Pythia-410M found, will use Qwen for pilot."
 fi
 
+# Sync wheel files for offline pip install
+WHEELS_DIR="/hpc2hdd/home/mzhang630/data/nature/wheels"
+if [ -d "${WHEELS_DIR}" ] && [ "$(ls -A ${WHEELS_DIR})" ]; then
+    echo "[5/5] Syncing wheel files for offline install..."
+    ssh -i ${SSH_KEY} ${HPC3} "mkdir -p ${REMOTE_BASE}/wheels"
+    scp -i ${SSH_KEY} ${WHEELS_DIR}/*.whl ${HPC3}:${REMOTE_BASE}/wheels/ 2>/dev/null
+    echo "  On HPC3, install missing packages with:"
+    echo "    conda activate alphasteer"
+    echo "    pip install --no-index --find-links=${REMOTE_BASE}/wheels/ scikit-learn scipy networkx"
+fi
+
 echo ""
 echo "=== Sync complete ==="
 echo "On HPC3, run:"
-echo "  cd ${REMOTE_BASE}"
-echo "  sbatch scripts/slurm/pilot_quick_test.sh"
+echo "  # 1. Install missing packages"
+echo "  source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh"
+echo "  conda activate alphasteer"
+echo "  pip install --no-index --find-links=${REMOTE_BASE}/wheels/ scikit-learn scipy networkx"
+echo "  # 2. Submit pilot"
+echo "  sbatch ${REMOTE_BASE}/scripts/slurm/pilot_quick_test.sh"

@@ -14,7 +14,7 @@
 # Submit after Phase 2: sbatch phase3_double_dissociation.sh
 
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
-conda activate funcatlas
+conda activate alphasteer
 
 MODELS=(
     "Qwen/Qwen2.5-7B-Instruct"

@@ -11,7 +11,7 @@
 # Submit after Phase 2: sbatch phase6_brain.sh
 
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
-conda activate funcatlas
+conda activate alphasteer
 
 SRC="/hpc2hdd/home/mzhang630/data/nature/experiments/src"
 BASE="/data/user/mzhang630/data/nature_exp"

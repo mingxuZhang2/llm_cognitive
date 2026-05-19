@@ -13,7 +13,7 @@
 # Submit: sbatch phase1_extract_activations.sh
 
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
-conda activate funcatlas
+conda activate alphasteer
 
 MODELS=(
     "Qwen/Qwen2.5-7B-Instruct"

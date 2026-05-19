@@ -15,7 +15,7 @@
 set -e
 
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
-conda activate funcatlas
+conda activate alphasteer
 
 SRC="/data/user/mzhang630/data/nature_exp/src"
 BASE="/data/user/mzhang630/data/nature_exp"

@@ -12,7 +12,7 @@
 # Submit after Phase 0: sbatch phase5_scaling.sh (can run parallel with Phases 1-4)
 
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
-conda activate funcatlas
+conda activate alphasteer
 
 export HF_HOME="/data/user/mzhang630/data/nature_exp/models"
 SRC="/hpc2hdd/home/mzhang630/data/nature/experiments/src"

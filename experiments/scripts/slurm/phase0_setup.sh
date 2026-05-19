@@ -17,7 +17,7 @@ source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
 
 # Create environment
 bash /hpc2hdd/home/mzhang630/data/nature/experiments/setup/create_env.sh
-conda activate funcatlas
+conda activate alphasteer
 
 # Prepare stimuli
 echo "Preparing stimulus dataset..."
