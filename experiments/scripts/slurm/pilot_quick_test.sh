@@ -42,7 +42,7 @@ python activation_extraction.py \
     --stimuli "${BASE}/stimuli/stimuli_pilot.jsonl" \
     --output_dir "${BASE}/activations" \
     --max_length 256 \
-    --batch_size 4
+    --batch_size 32
 
 # Step 2: Module discovery (K=5 and K=8 for pilot)
 echo ""

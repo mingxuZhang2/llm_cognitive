@@ -38,6 +38,6 @@ python /hpc2hdd/home/mzhang630/data/nature/experiments/src/activation_extraction
     --stimuli "${STIMULI}" \
     --output_dir "${OUTPUT}" \
     --max_length 512 \
-    --batch_size 4
+    --batch_size 32
 
 echo "Done: ${MODEL}"
