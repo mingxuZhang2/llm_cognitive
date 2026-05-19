@@ -1,122 +1,63 @@
+# 15 categories, all from public datasets (no custom templates)
 stimulus_categories:
-  language:
-    - name: "grammar_correction"
-      n_samples: 400
-      source: "custom"
-    - name: "translation"
-      n_samples: 400
-      source: "flores"
-    - name: "summarization"
-      n_samples: 400
-      source: "xsum"
-    - name: "creative_writing"
-      n_samples: 400
-      source: "custom"
-    - name: "formal_writing"
-      n_samples: 400
-      source: "custom"
-    - name: "dialogue"
-      n_samples: 400
-      source: "custom"
-
-  reasoning:
-    - name: "math_word_problems"
-      n_samples: 400
-      source: "gsm8k"
-    - name: "formal_math"
-      n_samples: 400
-      source: "math"
-    - name: "logical_reasoning"
-      n_samples: 400
-      source: "logiqa"
-    - name: "commonsense"
-      n_samples: 400
-      source: "arc_challenge"
-    - name: "causal_reasoning"
-      n_samples: 400
-      source: "custom"
+  math_reasoning:
+    - {name: "math_word_problems", source: "gsm8k", n: 400}
+    - {name: "formal_math", source: "hendrycks/competition_math", n: 400}
+    - {name: "logical_reasoning", source: "logiqa", n: 400}
+    - {name: "commonsense_reasoning", source: "ai2_arc", n: 400}
 
   code:
-    - name: "code_generation"
-      n_samples: 400
-      source: "humaneval+mbpp"
-    - name: "code_debugging"
-      n_samples: 400
-      source: "custom"
-    - name: "code_explanation"
-      n_samples: 400
-      source: "custom"
-    - name: "algorithm_design"
-      n_samples: 400
-      source: "custom"
+    - {name: "code_generation", source: "humaneval", n: 164}
+    - {name: "code_problems", source: "mbpp", n: 400}
+
+  language:
+    - {name: "translation", source: "flores", n: 400}
+    - {name: "summarization", source: "xsum", n: 400}
+    - {name: "text_completion", source: "hellaswag", n: 400}
 
   knowledge:
-    - name: "science_qa"
-      n_samples: 400
-      source: "mmlu_stem"
-    - name: "history_geography"
-      n_samples: 400
-      source: "mmlu_humanities"
-    - name: "current_events"
-      n_samples: 400
-      source: "custom"
-    - name: "domain_expertise"
-      n_samples: 400
-      source: "mmlu_professional"
+    - {name: "science_knowledge", source: "mmlu_stem", n: 400}
+    - {name: "humanities_knowledge", source: "mmlu_humanities", n: 400}
+    - {name: "factual_qa", source: "triviaqa", n: 400}
 
-  higher_cognition:
-    - name: "ethical_reasoning"
-      n_samples: 400
-      source: "ethics"
-    - name: "analogical_reasoning"
-      n_samples: 400
-      source: "custom"
-    - name: "planning"
-      n_samples: 400
-      source: "custom"
-    - name: "metacognition"
-      n_samples: 400
-      source: "custom"
+  ethics_social:
+    - {name: "ethical_judgment", source: "hendrycks/ethics", n: 400}
+    - {name: "truthfulness", source: "truthful_qa", n: 400}
 
-  specialized:
-    - name: "role_playing"
-      n_samples: 400
-      source: "custom"
-    - name: "humor_sarcasm"
-      n_samples: 400
-      source: "custom"
+# Module-function mapping validation
+module_labeling:
+  method: "dual"  # ground truth classification accuracy + LLM label sanity check
+  ground_truth_threshold: 0.6  # module must have >=60% samples from one category group
+  llm_labeler: "Qwen/Qwen2.5-7B-Instruct"  # use same model for labeling
+  human_spot_check: 30  # spot-check 30 samples per module
 
+# Primary dissociation pair (pilot focus)
 dissociation_pairs:
   - pair_name: "math_vs_code"
-    module_a: "math"
-    module_b: "code"
-    benchmarks_a: ["gsm8k", "math"]
+    module_a_categories: ["math_word_problems", "formal_math"]
+    module_b_categories: ["code_generation", "code_problems"]
+    benchmarks_a: ["gsm8k", "minerva_math"]
     benchmarks_b: ["humaneval", "mbpp"]
+    priority: "primary"
 
   - pair_name: "knowledge_vs_reasoning"
-    module_a: "knowledge"
-    module_b: "reasoning"
-    benchmarks_a: ["triviaqa", "naturalquestions"]
-    benchmarks_b: ["logiqa", "arc_challenge"]
+    module_a_categories: ["science_knowledge", "humanities_knowledge", "factual_qa"]
+    module_b_categories: ["logical_reasoning", "commonsense_reasoning"]
+    benchmarks_a: ["triviaqa", "mmlu"]
+    benchmarks_b: ["arc_challenge", "logiqa"]
+    priority: "secondary"
 
   - pair_name: "language_vs_math"
-    module_a: "language"
-    module_b: "math"
-    benchmarks_a: ["mmlu_humanities", "hellaswag"]
-    benchmarks_b: ["gsm8k", "math"]
+    module_a_categories: ["translation", "summarization", "text_completion"]
+    module_b_categories: ["math_word_problems", "formal_math"]
+    benchmarks_a: ["hellaswag"]
+    benchmarks_b: ["gsm8k"]
+    priority: "secondary"
 
+# Pruning config (Phase 4, after pilot)
 pruning_config:
   sparsity_levels: [0.2, 0.3, 0.4, 0.5, 0.6, 0.7]
-  preserve_scenarios:
-    - name: "preserve_math"
-      protect_module: "math"
-      eval_target: ["gsm8k", "math"]
-      eval_collateral: ["humaneval", "mmlu", "hellaswag"]
-    - name: "preserve_code"
-      protect_module: "code"
-      eval_target: ["humaneval", "mbpp"]
-      eval_collateral: ["gsm8k", "mmlu", "hellaswag"]
-    - name: "preserve_language"
-      protect_module: "language"
-      eval_target: ["mmlu_humanities", "hellaswag"]
-      eval_collateral: ["gsm8k", "humaneval"]
+  protect_scenarios:
+    - {name: "preserve_math", protect_categories: ["math_word_problems", "formal_math"]}
+    - {name: "preserve_code", protect_categories: ["code_generation", "code_problems"]}
+    - {name: "preserve_language", protect_categories: ["translation", "summarization", "text_completion"]}

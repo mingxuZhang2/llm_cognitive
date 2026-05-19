@@ -1,32 +1,47 @@
 models:
+  # Primary models (already on HPC3, all complete)
   qwen7b:
     name: "Qwen/Qwen2.5-7B-Instruct"
-    short: "qwen7b"
+    hf_cache: "/data/user/mzhang630/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct"
+    short: "Qwen2.5-7B-Instruct"
     n_layers: 28
     ffn_dim: 11008
     hidden_dim: 3584
 
   llama8b:
-    name: "meta-llama/Meta-Llama-3-8B-Instruct"
-    short: "llama8b"
+    name: "camenduru/Meta-Llama-3.1-8B-Instruct"
+    hf_cache: "/data/user/mzhang630/.cache/huggingface/hub/models--camenduru--Meta-Llama-3.1-8B-Instruct"
+    short: "Meta-Llama-3.1-8B-Instruct"
     n_layers: 32
     ffn_dim: 14336
     hidden_dim: 4096
 
   mistral7b:
     name: "mistralai/Mistral-7B-Instruct-v0.3"
-    short: "mistral7b"
+    hf_cache: "/data/user/mzhang630/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.3"
+    short: "Mistral-7B-Instruct-v0.3"
     n_layers: 32
     ffn_dim: 14336
     hidden_dim: 4096
 
   gemma9b:
     name: "google/gemma-2-9b-it"
-    short: "gemma9b"
+    hf_cache: "/data/user/mzhang630/.cache/huggingface/hub/models--google--gemma-2-9b-it"
+    short: "gemma-2-9b-it"
     n_layers: 42
     ffn_dim: 14336
     hidden_dim: 3584
 
+# Pilot model (needs to be synced from HPC2)
+pilot:
+  name: "EleutherAI/pythia-410m"
+  local_path: "/data/user/mzhang630/data/nature_exp/models/pythia-410m"
+  short: "pythia-410m"
+  n_layers: 24
+  ffn_dim: 4096
+  hidden_dim: 1024
+
+# Scaling law models (need to be downloaded on HPC2 and synced)
 scaling_models:
   - "EleutherAI/pythia-70m"
   - "EleutherAI/pythia-160m"
@@ -38,7 +53,8 @@ scaling_models:
   - "EleutherAI/pythia-12b"
 
 paths:
-  model_cache: "/data/user/mzhang630/data/nature_exp/models"
+  hf_cache: "/data/user/mzhang630/.cache/huggingface/hub"
+  local_models: "/data/user/mzhang630/data/nature_exp/models"
   activations: "/data/user/mzhang630/data/nature_exp/activations"
   modules: "/data/user/mzhang630/data/nature_exp/modules"
   results: "/data/user/mzhang630/data/nature_exp/results"
