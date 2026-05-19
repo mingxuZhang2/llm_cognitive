@@ -1,0 +1,2658 @@
+{
+  "n_layers": 32,
+  "ffn_dim": 14336,
+  "categories": [
+    "code",
+    "ethics",
+    "factual_qa",
+    "humanities",
+    "language",
+    "math",
+    "reasoning",
+    "science"
+  ],
+  "layers": {
+    "0": {
+      "code": {
+        "n_selective_03": 4,
+        "n_selective_05": 3,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.7201451063156128,
+        "max_selectivity": 0.8526408672332764,
+        "mean_importance": 6.415907137125032e-06,
+        "top1pct_importance": 2.4822294381010546e-05
+      },
+      "ethics": {
+        "n_selective_03": 13881,
+        "n_selective_05": 7648,
+        "n_selective_07": 566,
+        "mean_selectivity": 0.5079853534698486,
+        "max_selectivity": 0.9789797067642212,
+        "mean_importance": 0.00011047747830161825,
+        "top1pct_importance": 0.0006203356926562247
+      },
+      "factual_qa": {
+        "n_selective_03": 13140,
+        "n_selective_05": 2807,
+        "n_selective_07": 71,
+        "mean_selectivity": 0.42469072341918945,
+        "max_selectivity": 0.9260963201522827,
+        "mean_importance": 8.039705426199362e-05,
+        "top1pct_importance": 0.00034387498162686793
+      },
+      "humanities": {
+        "n_selective_03": 30,
+        "n_selective_05": 7,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3881886303424835,
+        "max_selectivity": 0.6466195583343506,
+        "mean_importance": 1.68221267813351e-05,
+        "top1pct_importance": 6.527149926114355e-05
+      },
+      "language": {
+        "n_selective_03": 54,
+        "n_selective_05": 26,
+        "n_selective_07": 15,
+        "mean_selectivity": -0.3157813847064972,
+        "max_selectivity": 0.9377530813217163,
+        "mean_importance": 2.0187666450510733e-05,
+        "top1pct_importance": 8.205211161111939e-05
+      },
+      "math": {
+        "n_selective_03": 5,
+        "n_selective_05": 4,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.5721464157104492,
+        "max_selectivity": 0.6926182508468628,
+        "mean_importance": 1.0603437658573966e-05,
+        "top1pct_importance": 4.197442376607784e-05
+      },
+      "reasoning": {
+        "n_selective_03": 1063,
+        "n_selective_05": 88,
+        "n_selective_07": 16,
+        "mean_selectivity": 0.13048109412193298,
+        "max_selectivity": 0.9280008673667908,
+        "mean_importance": 5.1804316171910614e-05,
+        "top1pct_importance": 0.0002534922241466119
+      },
+      "science": {
+        "n_selective_03": 34,
+        "n_selective_05": 14,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.3471030294895172,
+        "max_selectivity": 0.7009978890419006,
+        "mean_importance": 1.8557093426352367e-05,
+        "top1pct_importance": 7.583558472106227e-05
+      }
+    },
+    "1": {
+      "code": {
+        "n_selective_03": 2,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.7155240178108215,
+        "max_selectivity": 0.30560001730918884,
+        "mean_importance": 6.39868494545226e-06,
+        "top1pct_importance": 2.497357163520059e-05
+      },
+      "ethics": {
+        "n_selective_03": 13500,
+        "n_selective_05": 3796,
+        "n_selective_07": 83,
+        "mean_selectivity": 0.4430757164955139,
+        "max_selectivity": 0.8885786533355713,
+        "mean_importance": 9.652248991187662e-05,
+        "top1pct_importance": 0.00019980746146757138
+      },
+      "factual_qa": {
+        "n_selective_03": 13485,
+        "n_selective_05": 4424,
+        "n_selective_07": 48,
+        "mean_selectivity": 0.4517379701137543,
+        "max_selectivity": 0.8779867887496948,
+        "mean_importance": 7.950804865686223e-05,
+        "top1pct_importance": 0.00017191750157508033
+      },
+      "humanities": {
+        "n_selective_03": 22,
+        "n_selective_05": 5,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3334383964538574,
+        "max_selectivity": 0.6749856472015381,
+        "mean_importance": 1.790824535419233e-05,
+        "top1pct_importance": 5.678462985088098e-05
+      },
+      "language": {
+        "n_selective_03": 6,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.2652108073234558,
+        "max_selectivity": 0.6768372654914856,
+        "mean_importance": 2.076715463772416e-05,
+        "top1pct_importance": 5.168080333532987e-05
+      },
+      "math": {
+        "n_selective_03": 3,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.514602541923523,
+        "max_selectivity": 0.5314934253692627,
+        "mean_importance": 1.1857123354275245e-05,
+        "top1pct_importance": 3.280776872998101e-05
+      },
+      "reasoning": {
+        "n_selective_03": 896,
+        "n_selective_05": 44,
+        "n_selective_07": 2,
+        "mean_selectivity": 0.12571167945861816,
+        "max_selectivity": 0.8256921768188477,
+        "mean_importance": 4.964152321917936e-05,
+        "top1pct_importance": 0.00011450123784015883
+      },
+      "science": {
+        "n_selective_03": 49,
+        "n_selective_05": 6,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.29904741048812866,
+        "max_selectivity": 0.6572529673576355,
+        "mean_importance": 1.9131553926854394e-05,
+        "top1pct_importance": 6.638938430114649e-05
+      }
+    },
+    "2": {
+      "code": {
+        "n_selective_03": 5,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6965428590774536,
+        "max_selectivity": 0.5764526128768921,
+        "mean_importance": 6.322098215605365e-06,
+        "top1pct_importance": 2.4513363587175264e-05
+      },
+      "ethics": {
+        "n_selective_03": 13219,
+        "n_selective_05": 3083,
+        "n_selective_07": 85,
+        "mean_selectivity": 0.43024754524230957,
+        "max_selectivity": 0.9465172290802002,
+        "mean_importance": 6.750543252564967e-05,
+        "top1pct_importance": 0.0001875699170341249
+      },
+      "factual_qa": {
+        "n_selective_03": 13379,
+        "n_selective_05": 3539,
+        "n_selective_07": 62,
+        "mean_selectivity": 0.44007784128189087,
+        "max_selectivity": 0.8843566179275513,
+        "mean_importance": 6.718737859046087e-05,
+        "top1pct_importance": 0.00016007327430997968
+      },
+      "humanities": {
+        "n_selective_03": 43,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.32172730565071106,
+        "max_selectivity": 0.6274029612541199,
+        "mean_importance": 1.7530850527691655e-05,
+        "top1pct_importance": 5.980408222967524e-05
+      },
+      "language": {
+        "n_selective_03": 41,
+        "n_selective_05": 6,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.244340181350708,
+        "max_selectivity": 0.6784722805023193,
+        "mean_importance": 1.99377209355589e-05,
+        "top1pct_importance": 5.4572880435443944e-05
+      },
+      "math": {
+        "n_selective_03": 6,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4805296063423157,
+        "max_selectivity": 0.5813466906547546,
+        "mean_importance": 1.1999033631582279e-05,
+        "top1pct_importance": 3.455620972090397e-05
+      },
+      "reasoning": {
+        "n_selective_03": 932,
+        "n_selective_05": 77,
+        "n_selective_07": 10,
+        "mean_selectivity": 0.125746950507164,
+        "max_selectivity": 0.8351815342903137,
+        "mean_importance": 3.9733022276777774e-05,
+        "top1pct_importance": 0.00010750615474535149
+      },
+      "science": {
+        "n_selective_03": 75,
+        "n_selective_05": 15,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.29973432421684265,
+        "max_selectivity": 0.7655432224273682,
+        "mean_importance": 1.843123754952103e-05,
+        "top1pct_importance": 6.332379562081767e-05
+      }
+    },
+    "3": {
+      "code": {
+        "n_selective_03": 6,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6778639554977417,
+        "max_selectivity": 0.6170113682746887,
+        "mean_importance": 6.495191428257385e-06,
+        "top1pct_importance": 2.4057567225099763e-05
+      },
+      "ethics": {
+        "n_selective_03": 13212,
+        "n_selective_05": 2871,
+        "n_selective_07": 97,
+        "mean_selectivity": 0.42790156602859497,
+        "max_selectivity": 0.9220947623252869,
+        "mean_importance": 6.482372555183247e-05,
+        "top1pct_importance": 0.0001988629752304404
+      },
+      "factual_qa": {
+        "n_selective_03": 12881,
+        "n_selective_05": 2868,
+        "n_selective_07": 96,
+        "mean_selectivity": 0.42260080575942993,
+        "max_selectivity": 0.9163076877593994,
+        "mean_importance": 6.277476495597512e-05,
+        "top1pct_importance": 0.00017291278127231635
+      },
+      "humanities": {
+        "n_selective_03": 53,
+        "n_selective_05": 9,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3211055099964142,
+        "max_selectivity": 0.6673358082771301,
+        "mean_importance": 1.69917730090674e-05,
+        "top1pct_importance": 6.0645819576166095e-05
+      },
+      "language": {
+        "n_selective_03": 47,
+        "n_selective_05": 15,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.2292461395263672,
+        "max_selectivity": 0.8935650587081909,
+        "mean_importance": 1.9756556866923347e-05,
+        "top1pct_importance": 5.47035333511303e-05
+      },
+      "math": {
+        "n_selective_03": 9,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4405910074710846,
+        "max_selectivity": 0.654125452041626,
+        "mean_importance": 1.2724774933303706e-05,
+        "top1pct_importance": 3.798204725171671e-05
+      },
+      "reasoning": {
+        "n_selective_03": 878,
+        "n_selective_05": 102,
+        "n_selective_07": 14,
+        "mean_selectivity": 0.11691950261592865,
+        "max_selectivity": 0.8975462317466736,
+        "mean_importance": 3.787859532167204e-05,
+        "top1pct_importance": 0.00011620354816841417
+      },
+      "science": {
+        "n_selective_03": 103,
+        "n_selective_05": 30,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.29488131403923035,
+        "max_selectivity": 0.775641918182373,
+        "mean_importance": 1.8130160242435522e-05,
+        "top1pct_importance": 6.542420269397525e-05
+      }
+    },
+    "4": {
+      "code": {
+        "n_selective_03": 8,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6608673930168152,
+        "max_selectivity": 0.5869971513748169,
+        "mean_importance": 6.74386592436349e-06,
+        "top1pct_importance": 2.3731053533992957e-05
+      },
+      "ethics": {
+        "n_selective_03": 13257,
+        "n_selective_05": 3298,
+        "n_selective_07": 144,
+        "mean_selectivity": 0.43496736884117126,
+        "max_selectivity": 0.911596953868866,
+        "mean_importance": 6.495156412711367e-05,
+        "top1pct_importance": 0.00018454688615747713
+      },
+      "factual_qa": {
+        "n_selective_03": 11667,
+        "n_selective_05": 1623,
+        "n_selective_07": 105,
+        "mean_selectivity": 0.3826174736022949,
+        "max_selectivity": 0.8853486776351929,
+        "mean_importance": 5.854877963429317e-05,
+        "top1pct_importance": 0.00015911072478047531
+      },
+      "humanities": {
+        "n_selective_03": 48,
+        "n_selective_05": 7,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.32771873474121094,
+        "max_selectivity": 0.6190069913864136,
+        "mean_importance": 1.6402555047534406e-05,
+        "top1pct_importance": 5.566799682128469e-05
+      },
+      "language": {
+        "n_selective_03": 61,
+        "n_selective_05": 16,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.21472395956516266,
+        "max_selectivity": 0.8351818919181824,
+        "mean_importance": 2.0039782612002455e-05,
+        "top1pct_importance": 5.291873130772724e-05
+      },
+      "math": {
+        "n_selective_03": 30,
+        "n_selective_05": 7,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.39327457547187805,
+        "max_selectivity": 0.7723228335380554,
+        "mean_importance": 1.397727282892447e-05,
+        "top1pct_importance": 4.0911913129093546e-05
+      },
+      "reasoning": {
+        "n_selective_03": 909,
+        "n_selective_05": 120,
+        "n_selective_07": 13,
+        "mean_selectivity": 0.12314020097255707,
+        "max_selectivity": 0.862309455871582,
+        "mean_importance": 3.7685058487113565e-05,
+        "top1pct_importance": 0.00011072814631916108
+      },
+      "science": {
+        "n_selective_03": 115,
+        "n_selective_05": 34,
+        "n_selective_07": 4,
+        "mean_selectivity": -0.2801569402217865,
+        "max_selectivity": 0.7780886888504028,
+        "mean_importance": 1.8265482140122913e-05,
+        "top1pct_importance": 6.583327049156651e-05
+      }
+    },
+    "5": {
+      "code": {
+        "n_selective_03": 8,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.644896388053894,
+        "max_selectivity": 0.4214092493057251,
+        "mean_importance": 6.9315178734541405e-06,
+        "top1pct_importance": 2.246940121040096e-05
+      },
+      "ethics": {
+        "n_selective_03": 13324,
+        "n_selective_05": 3330,
+        "n_selective_07": 122,
+        "mean_selectivity": 0.43786123394966125,
+        "max_selectivity": 0.916083812713623,
+        "mean_importance": 6.378629768732935e-05,
+        "top1pct_importance": 0.00018636917957337565
+      },
+      "factual_qa": {
+        "n_selective_03": 10540,
+        "n_selective_05": 1278,
+        "n_selective_07": 85,
+        "mean_selectivity": 0.3600054383277893,
+        "max_selectivity": 0.8821130990982056,
+        "mean_importance": 5.536180833587423e-05,
+        "top1pct_importance": 0.0001512816525064405
+      },
+      "humanities": {
+        "n_selective_03": 32,
+        "n_selective_05": 4,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3381483852863312,
+        "max_selectivity": 0.5949892401695251,
+        "mean_importance": 1.570513086335268e-05,
+        "top1pct_importance": 5.112040034873637e-05
+      },
+      "language": {
+        "n_selective_03": 65,
+        "n_selective_05": 17,
+        "n_selective_07": 5,
+        "mean_selectivity": -0.2053624838590622,
+        "max_selectivity": 0.7722958922386169,
+        "mean_importance": 1.995319325942546e-05,
+        "top1pct_importance": 5.209630799072329e-05
+      },
+      "math": {
+        "n_selective_03": 33,
+        "n_selective_05": 6,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.35392025113105774,
+        "max_selectivity": 0.7700156569480896,
+        "mean_importance": 1.4942995221645106e-05,
+        "top1pct_importance": 4.162746645306467e-05
+      },
+      "reasoning": {
+        "n_selective_03": 855,
+        "n_selective_05": 98,
+        "n_selective_07": 12,
+        "mean_selectivity": 0.12921133637428284,
+        "max_selectivity": 0.839248538017273,
+        "mean_importance": 3.714349804795347e-05,
+        "top1pct_importance": 0.00010391730211267697
+      },
+      "science": {
+        "n_selective_03": 64,
+        "n_selective_05": 18,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.27466392517089844,
+        "max_selectivity": 0.8067400455474854,
+        "mean_importance": 1.793520277715288e-05,
+        "top1pct_importance": 5.7643890795588894e-05
+      }
+    },
+    "6": {
+      "code": {
+        "n_selective_03": 2,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6271334290504456,
+        "max_selectivity": 0.3182012736797333,
+        "mean_importance": 7.005328825471224e-06,
+        "top1pct_importance": 2.006620188694796e-05
+      },
+      "ethics": {
+        "n_selective_03": 13478,
+        "n_selective_05": 3834,
+        "n_selective_07": 134,
+        "mean_selectivity": 0.4465578496456146,
+        "max_selectivity": 0.9038784503936768,
+        "mean_importance": 6.258466601138934e-05,
+        "top1pct_importance": 0.0001811760674172546
+      },
+      "factual_qa": {
+        "n_selective_03": 9721,
+        "n_selective_05": 988,
+        "n_selective_07": 58,
+        "mean_selectivity": 0.3441150486469269,
+        "max_selectivity": 0.8416720032691956,
+        "mean_importance": 5.200129089644179e-05,
+        "top1pct_importance": 0.0001443107161321677
+      },
+      "humanities": {
+        "n_selective_03": 15,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.357546865940094,
+        "max_selectivity": 0.5748263597488403,
+        "mean_importance": 1.432267981726909e-05,
+        "top1pct_importance": 4.13342706451658e-05
+      },
+      "language": {
+        "n_selective_03": 67,
+        "n_selective_05": 17,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.1996239423751831,
+        "max_selectivity": 0.7976090908050537,
+        "mean_importance": 1.9419434465817176e-05,
+        "top1pct_importance": 4.870653228863373e-05
+      },
+      "math": {
+        "n_selective_03": 52,
+        "n_selective_05": 10,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.31259632110595703,
+        "max_selectivity": 0.6559382677078247,
+        "mean_importance": 1.57051927089924e-05,
+        "top1pct_importance": 4.4118641926615935e-05
+      },
+      "reasoning": {
+        "n_selective_03": 823,
+        "n_selective_05": 66,
+        "n_selective_07": 4,
+        "mean_selectivity": 0.13242095708847046,
+        "max_selectivity": 0.7884331941604614,
+        "mean_importance": 3.5803179343929514e-05,
+        "top1pct_importance": 9.423911833437157e-05
+      },
+      "science": {
+        "n_selective_03": 36,
+        "n_selective_05": 6,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.29486241936683655,
+        "max_selectivity": 0.6429125666618347,
+        "mean_importance": 1.6331023289239965e-05,
+        "top1pct_importance": 4.615360376192256e-05
+      }
+    },
+    "7": {
+      "code": {
+        "n_selective_03": 8,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6114354133605957,
+        "max_selectivity": 0.5079391598701477,
+        "mean_importance": 6.836242391727865e-06,
+        "top1pct_importance": 1.8888770955527428e-05
+      },
+      "ethics": {
+        "n_selective_03": 13514,
+        "n_selective_05": 3813,
+        "n_selective_07": 132,
+        "mean_selectivity": 0.44715043902397156,
+        "max_selectivity": 0.8695838451385498,
+        "mean_importance": 5.854881965206005e-05,
+        "top1pct_importance": 0.00017325985463685354
+      },
+      "factual_qa": {
+        "n_selective_03": 8670,
+        "n_selective_05": 929,
+        "n_selective_07": 33,
+        "mean_selectivity": 0.3300189673900604,
+        "max_selectivity": 0.8350529670715332,
+        "mean_importance": 4.753811299451627e-05,
+        "top1pct_importance": 0.00013437676461762745
+      },
+      "humanities": {
+        "n_selective_03": 12,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3482901155948639,
+        "max_selectivity": 0.5545454621315002,
+        "mean_importance": 1.352756044070702e-05,
+        "top1pct_importance": 3.79739996787975e-05
+      },
+      "language": {
+        "n_selective_03": 68,
+        "n_selective_05": 13,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.19577144086360931,
+        "max_selectivity": 0.8058175444602966,
+        "mean_importance": 1.827483174565714e-05,
+        "top1pct_importance": 4.7901153993734615e-05
+      },
+      "math": {
+        "n_selective_03": 62,
+        "n_selective_05": 14,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.2865574061870575,
+        "max_selectivity": 0.8776074647903442,
+        "mean_importance": 1.542040627100505e-05,
+        "top1pct_importance": 4.363572734291663e-05
+      },
+      "reasoning": {
+        "n_selective_03": 734,
+        "n_selective_05": 62,
+        "n_selective_07": 5,
+        "mean_selectivity": 0.1281202882528305,
+        "max_selectivity": 0.8306363224983215,
+        "mean_importance": 3.3251526474487036e-05,
+        "top1pct_importance": 9.037375748448534e-05
+      },
+      "science": {
+        "n_selective_03": 17,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.301174134016037,
+        "max_selectivity": 0.5069183111190796,
+        "mean_importance": 1.4931217265257146e-05,
+        "top1pct_importance": 4.063242668053134e-05
+      }
+    },
+    "8": {
+      "code": {
+        "n_selective_03": 1,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6005248427391052,
+        "max_selectivity": 0.32227256894111633,
+        "mean_importance": 6.495710749732098e-06,
+        "top1pct_importance": 1.8443584212946004e-05
+      },
+      "ethics": {
+        "n_selective_03": 13285,
+        "n_selective_05": 3518,
+        "n_selective_07": 126,
+        "mean_selectivity": 0.43931373953819275,
+        "max_selectivity": 0.9229080677032471,
+        "mean_importance": 5.3778898291056976e-05,
+        "top1pct_importance": 0.0001718903127766678
+      },
+      "factual_qa": {
+        "n_selective_03": 8197,
+        "n_selective_05": 715,
+        "n_selective_07": 57,
+        "mean_selectivity": 0.32033905386924744,
+        "max_selectivity": 0.852308988571167,
+        "mean_importance": 4.349986556917429e-05,
+        "top1pct_importance": 0.000136934696638491
+      },
+      "humanities": {
+        "n_selective_03": 13,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.33914217352867126,
+        "max_selectivity": 0.6342440247535706,
+        "mean_importance": 1.2713341675407719e-05,
+        "top1pct_importance": 3.676617106975753e-05
+      },
+      "language": {
+        "n_selective_03": 74,
+        "n_selective_05": 17,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.1912624090909958,
+        "max_selectivity": 0.8172865509986877,
+        "mean_importance": 1.705885551928077e-05,
+        "top1pct_importance": 4.632604104699564e-05
+      },
+      "math": {
+        "n_selective_03": 85,
+        "n_selective_05": 16,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.2638573944568634,
+        "max_selectivity": 0.6726289987564087,
+        "mean_importance": 1.4865471712255385e-05,
+        "top1pct_importance": 4.3318985808582485e-05
+      },
+      "reasoning": {
+        "n_selective_03": 744,
+        "n_selective_05": 55,
+        "n_selective_07": 3,
+        "mean_selectivity": 0.1285383552312851,
+        "max_selectivity": 0.7754688858985901,
+        "mean_importance": 3.077682777075097e-05,
+        "top1pct_importance": 8.983933912531918e-05
+      },
+      "science": {
+        "n_selective_03": 20,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.30201080441474915,
+        "max_selectivity": 0.5636020302772522,
+        "mean_importance": 1.3730066712014377e-05,
+        "top1pct_importance": 3.875470229104394e-05
+      }
+    },
+    "9": {
+      "code": {
+        "n_selective_03": 6,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.595302939414978,
+        "max_selectivity": 0.6762384176254272,
+        "mean_importance": 6.477261649706634e-06,
+        "top1pct_importance": 1.8944382009067313e-05
+      },
+      "ethics": {
+        "n_selective_03": 13435,
+        "n_selective_05": 3767,
+        "n_selective_07": 106,
+        "mean_selectivity": 0.4436328709125519,
+        "max_selectivity": 0.8824134469032288,
+        "mean_importance": 5.241909093456343e-05,
+        "top1pct_importance": 0.0001619110109459143
+      },
+      "factual_qa": {
+        "n_selective_03": 7672,
+        "n_selective_05": 634,
+        "n_selective_07": 38,
+        "mean_selectivity": 0.31108972430229187,
+        "max_selectivity": 0.830473780632019,
+        "mean_importance": 4.171369437244721e-05,
+        "top1pct_importance": 0.0001289917869144118
+      },
+      "humanities": {
+        "n_selective_03": 14,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3366454243659973,
+        "max_selectivity": 0.5125437378883362,
+        "mean_importance": 1.2517950381152332e-05,
+        "top1pct_importance": 3.641831863205874e-05
+      },
+      "language": {
+        "n_selective_03": 83,
+        "n_selective_05": 18,
+        "n_selective_07": 5,
+        "mean_selectivity": -0.1864246279001236,
+        "max_selectivity": 0.8574506640434265,
+        "mean_importance": 1.679507658991497e-05,
+        "top1pct_importance": 4.8140943727048544e-05
+      },
+      "math": {
+        "n_selective_03": 100,
+        "n_selective_05": 17,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.2516774535179138,
+        "max_selectivity": 0.8558300137519836,
+        "mean_importance": 1.4900610949553084e-05,
+        "top1pct_importance": 4.449439002200959e-05
+      },
+      "reasoning": {
+        "n_selective_03": 653,
+        "n_selective_05": 59,
+        "n_selective_07": 1,
+        "mean_selectivity": 0.12408075481653214,
+        "max_selectivity": 0.7231879830360413,
+        "mean_importance": 2.9723256375291385e-05,
+        "top1pct_importance": 8.511281084793141e-05
+      },
+      "science": {
+        "n_selective_03": 14,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3047478497028351,
+        "max_selectivity": 0.4507363438606262,
+        "mean_importance": 1.336925652140053e-05,
+        "top1pct_importance": 3.868633648380632e-05
+      }
+    },
+    "10": {
+      "code": {
+        "n_selective_03": 3,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.5882684588432312,
+        "max_selectivity": 0.5540159344673157,
+        "mean_importance": 6.384810603776714e-06,
+        "top1pct_importance": 1.8102943522535476e-05
+      },
+      "ethics": {
+        "n_selective_03": 13321,
+        "n_selective_05": 3547,
+        "n_selective_07": 88,
+        "mean_selectivity": 0.4393494427204132,
+        "max_selectivity": 0.8977633118629456,
+        "mean_importance": 5.1546816393965855e-05,
+        "top1pct_importance": 0.0001636744753341188
+      },
+      "factual_qa": {
+        "n_selective_03": 7869,
+        "n_selective_05": 635,
+        "n_selective_07": 24,
+        "mean_selectivity": 0.31331777572631836,
+        "max_selectivity": 0.8270043730735779,
+        "mean_importance": 4.100993464817293e-05,
+        "top1pct_importance": 0.00012937074934598055
+      },
+      "humanities": {
+        "n_selective_03": 13,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3300386071205139,
+        "max_selectivity": 0.5321232676506042,
+        "mean_importance": 1.2290601262066048e-05,
+        "top1pct_importance": 3.414225575397717e-05
+      },
+      "language": {
+        "n_selective_03": 72,
+        "n_selective_05": 17,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.1955857276916504,
+        "max_selectivity": 0.8773024082183838,
+        "mean_importance": 1.611671905266121e-05,
+        "top1pct_importance": 4.709881613962348e-05
+      },
+      "math": {
+        "n_selective_03": 97,
+        "n_selective_05": 13,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.24416682124137878,
+        "max_selectivity": 0.677298903465271,
+        "mean_importance": 1.4584234122594353e-05,
+        "top1pct_importance": 4.3435752922960056e-05
+      },
+      "reasoning": {
+        "n_selective_03": 627,
+        "n_selective_05": 32,
+        "n_selective_07": 4,
+        "mean_selectivity": 0.1256946623325348,
+        "max_selectivity": 0.7684057354927063,
+        "mean_importance": 2.9058806831017137e-05,
+        "top1pct_importance": 8.470463508274398e-05
+      },
+      "science": {
+        "n_selective_03": 12,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3048350512981415,
+        "max_selectivity": 0.5372811555862427,
+        "mean_importance": 1.2930222510476597e-05,
+        "top1pct_importance": 3.459554845903766e-05
+      }
+    },
+    "11": {
+      "code": {
+        "n_selective_03": 1,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.5859664678573608,
+        "max_selectivity": 0.3391781747341156,
+        "mean_importance": 6.199166818987578e-06,
+        "top1pct_importance": 1.665282234171172e-05
+      },
+      "ethics": {
+        "n_selective_03": 13395,
+        "n_selective_05": 4054,
+        "n_selective_07": 139,
+        "mean_selectivity": 0.4479241371154785,
+        "max_selectivity": 0.9075865745544434,
+        "mean_importance": 5.100728230900131e-05,
+        "top1pct_importance": 0.00017789947669371027
+      },
+      "factual_qa": {
+        "n_selective_03": 7564,
+        "n_selective_05": 575,
+        "n_selective_07": 21,
+        "mean_selectivity": 0.30861949920654297,
+        "max_selectivity": 0.849096417427063,
+        "mean_importance": 3.977659434895031e-05,
+        "top1pct_importance": 0.00013196700820117252
+      },
+      "humanities": {
+        "n_selective_03": 7,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3270281255245209,
+        "max_selectivity": 0.46789559721946716,
+        "mean_importance": 1.1954884939768817e-05,
+        "top1pct_importance": 3.320848900330016e-05
+      },
+      "language": {
+        "n_selective_03": 40,
+        "n_selective_05": 8,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.205076664686203,
+        "max_selectivity": 0.750392735004425,
+        "mean_importance": 1.535602677904535e-05,
+        "top1pct_importance": 4.361534101917641e-05
+      },
+      "math": {
+        "n_selective_03": 73,
+        "n_selective_05": 12,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.24432441592216492,
+        "max_selectivity": 0.7453057169914246,
+        "mean_importance": 1.4109873518464155e-05,
+        "top1pct_importance": 4.0250539859698594e-05
+      },
+      "reasoning": {
+        "n_selective_03": 498,
+        "n_selective_05": 30,
+        "n_selective_07": 0,
+        "mean_selectivity": 0.12157528847455978,
+        "max_selectivity": 0.6853060722351074,
+        "mean_importance": 2.7995307391393e-05,
+        "top1pct_importance": 8.429056506429324e-05
+      },
+      "science": {
+        "n_selective_03": 8,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3081486225128174,
+        "max_selectivity": 0.6444140076637268,
+        "mean_importance": 1.2405349480104633e-05,
+        "top1pct_importance": 3.340399161970707e-05
+      }
+    },
+    "12": {
+      "code": {
+        "n_selective_03": 3,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.5897067189216614,
+        "max_selectivity": 0.5553215146064758,
+        "mean_importance": 6.221423518582014e-06,
+        "top1pct_importance": 1.8956124313262988e-05
+      },
+      "ethics": {
+        "n_selective_03": 13494,
+        "n_selective_05": 4729,
+        "n_selective_07": 170,
+        "mean_selectivity": 0.45823046565055847,
+        "max_selectivity": 0.9333820343017578,
+        "mean_importance": 5.304376099957153e-05,
+        "top1pct_importance": 0.00020170438147033563
+      },
+      "factual_qa": {
+        "n_selective_03": 7610,
+        "n_selective_05": 604,
+        "n_selective_07": 25,
+        "mean_selectivity": 0.3086600601673126,
+        "max_selectivity": 0.9057264924049377,
+        "mean_importance": 4.043208173243329e-05,
+        "top1pct_importance": 0.0001439191073586698
+      },
+      "humanities": {
+        "n_selective_03": 5,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.33553433418273926,
+        "max_selectivity": 0.48759591579437256,
+        "mean_importance": 1.1930190339626279e-05,
+        "top1pct_importance": 3.923427993868243e-05
+      },
+      "language": {
+        "n_selective_03": 61,
+        "n_selective_05": 13,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.20465907454490662,
+        "max_selectivity": 0.7510039210319519,
+        "mean_importance": 1.5692145098000765e-05,
+        "top1pct_importance": 5.34616721779457e-05
+      },
+      "math": {
+        "n_selective_03": 49,
+        "n_selective_05": 10,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.2585242688655853,
+        "max_selectivity": 0.7207361459732056,
+        "mean_importance": 1.3846220099367201e-05,
+        "top1pct_importance": 4.177492919552603e-05
+      },
+      "reasoning": {
+        "n_selective_03": 559,
+        "n_selective_05": 30,
+        "n_selective_07": 2,
+        "mean_selectivity": 0.12138725817203522,
+        "max_selectivity": 0.7772407531738281,
+        "mean_importance": 2.849698103091214e-05,
+        "top1pct_importance": 9.685385193733957e-05
+      },
+      "science": {
+        "n_selective_03": 13,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.32236742973327637,
+        "max_selectivity": 0.5401473045349121,
+        "mean_importance": 1.2284711374377366e-05,
+        "top1pct_importance": 4.0518642344977685e-05
+      }
+    },
+    "13": {
+      "code": {
+        "n_selective_03": 4,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.5989524722099304,
+        "max_selectivity": 0.5962426662445068,
+        "mean_importance": 6.051374839444179e-06,
+        "top1pct_importance": 1.8385350813332473e-05
+      },
+      "ethics": {
+        "n_selective_03": 13760,
+        "n_selective_05": 5561,
+        "n_selective_07": 166,
+        "mean_selectivity": 0.4727603793144226,
+        "max_selectivity": 0.9331758618354797,
+        "mean_importance": 5.3704108722740784e-05,
+        "top1pct_importance": 0.0001863144032540729
+      },
+      "factual_qa": {
+        "n_selective_03": 7590,
+        "n_selective_05": 655,
+        "n_selective_07": 28,
+        "mean_selectivity": 0.3087957203388214,
+        "max_selectivity": 0.8280702829360962,
+        "mean_importance": 3.9933151128934696e-05,
+        "top1pct_importance": 0.00013906305830460025
+      },
+      "humanities": {
+        "n_selective_03": 12,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3538675308227539,
+        "max_selectivity": 0.4595143795013428,
+        "mean_importance": 1.141506709245732e-05,
+        "top1pct_importance": 3.5836398819810686e-05
+      },
+      "language": {
+        "n_selective_03": 54,
+        "n_selective_05": 9,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.20470523834228516,
+        "max_selectivity": 0.791049063205719,
+        "mean_importance": 1.551539207866881e-05,
+        "top1pct_importance": 4.907012080366257e-05
+      },
+      "math": {
+        "n_selective_03": 81,
+        "n_selective_05": 14,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.26961761713027954,
+        "max_selectivity": 0.8107020854949951,
+        "mean_importance": 1.3560626939579379e-05,
+        "top1pct_importance": 4.1658879308670276e-05
+      },
+      "reasoning": {
+        "n_selective_03": 597,
+        "n_selective_05": 48,
+        "n_selective_07": 2,
+        "mean_selectivity": 0.12328942120075226,
+        "max_selectivity": 0.7311176657676697,
+        "mean_importance": 2.8324389859335497e-05,
+        "top1pct_importance": 8.801961157587349e-05
+      },
+      "science": {
+        "n_selective_03": 16,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3436095416545868,
+        "max_selectivity": 0.5917853116989136,
+        "mean_importance": 1.1680311217787676e-05,
+        "top1pct_importance": 3.807508946920274e-05
+      }
+    },
+    "14": {
+      "code": {
+        "n_selective_03": 3,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6121858954429626,
+        "max_selectivity": 0.4991609454154968,
+        "mean_importance": 5.858045824425062e-06,
+        "top1pct_importance": 1.9211947528674496e-05
+      },
+      "ethics": {
+        "n_selective_03": 13819,
+        "n_selective_05": 6446,
+        "n_selective_07": 285,
+        "mean_selectivity": 0.4872935712337494,
+        "max_selectivity": 0.9175683259963989,
+        "mean_importance": 5.5554100981680676e-05,
+        "top1pct_importance": 0.0002150687563698737
+      },
+      "factual_qa": {
+        "n_selective_03": 8150,
+        "n_selective_05": 770,
+        "n_selective_07": 44,
+        "mean_selectivity": 0.3180769383907318,
+        "max_selectivity": 0.8250452876091003,
+        "mean_importance": 4.0769304177956656e-05,
+        "top1pct_importance": 0.00014553558576153587
+      },
+      "humanities": {
+        "n_selective_03": 12,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3804776966571808,
+        "max_selectivity": 0.5969992280006409,
+        "mean_importance": 1.0914307495113462e-05,
+        "top1pct_importance": 3.7467541005753406e-05
+      },
+      "language": {
+        "n_selective_03": 72,
+        "n_selective_05": 17,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.2079179733991623,
+        "max_selectivity": 0.8367136120796204,
+        "mean_importance": 1.5614807125530206e-05,
+        "top1pct_importance": 5.368495058064577e-05
+      },
+      "math": {
+        "n_selective_03": 58,
+        "n_selective_05": 15,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.29541486501693726,
+        "max_selectivity": 0.6744926571846008,
+        "mean_importance": 1.292538127017906e-05,
+        "top1pct_importance": 4.283136222511529e-05
+      },
+      "reasoning": {
+        "n_selective_03": 768,
+        "n_selective_05": 56,
+        "n_selective_07": 3,
+        "mean_selectivity": 0.12431742250919342,
+        "max_selectivity": 0.8884770274162292,
+        "mean_importance": 2.870550270017702e-05,
+        "top1pct_importance": 9.757590196386438e-05
+      },
+      "science": {
+        "n_selective_03": 16,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3740297853946686,
+        "max_selectivity": 0.5917680263519287,
+        "mean_importance": 1.1094315595983062e-05,
+        "top1pct_importance": 3.898596860381073e-05
+      }
+    },
+    "15": {
+      "code": {
+        "n_selective_03": 8,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6336506605148315,
+        "max_selectivity": 0.6038140654563904,
+        "mean_importance": 5.603628778771963e-06,
+        "top1pct_importance": 2.2261321919359004e-05
+      },
+      "ethics": {
+        "n_selective_03": 13845,
+        "n_selective_05": 7234,
+        "n_selective_07": 378,
+        "mean_selectivity": 0.4972568154335022,
+        "max_selectivity": 0.9528911113739014,
+        "mean_importance": 5.7040837418753654e-05,
+        "top1pct_importance": 0.00022916042871656817
+      },
+      "factual_qa": {
+        "n_selective_03": 8718,
+        "n_selective_05": 1066,
+        "n_selective_07": 105,
+        "mean_selectivity": 0.3289901316165924,
+        "max_selectivity": 0.9217352271080017,
+        "mean_importance": 4.215271110297181e-05,
+        "top1pct_importance": 0.00017043226398527565
+      },
+      "humanities": {
+        "n_selective_03": 8,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4079073369503021,
+        "max_selectivity": 0.49614015221595764,
+        "mean_importance": 1.043045449478086e-05,
+        "top1pct_importance": 3.9040685805957703e-05
+      },
+      "language": {
+        "n_selective_03": 101,
+        "n_selective_05": 21,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.2080523669719696,
+        "max_selectivity": 0.9210166931152344,
+        "mean_importance": 1.5752093531773426e-05,
+        "top1pct_importance": 5.794799235445679e-05
+      },
+      "math": {
+        "n_selective_03": 87,
+        "n_selective_05": 18,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.3224354386329651,
+        "max_selectivity": 0.7794410586357117,
+        "mean_importance": 1.2484354556363542e-05,
+        "top1pct_importance": 4.8246205369650815e-05
+      },
+      "reasoning": {
+        "n_selective_03": 1045,
+        "n_selective_05": 111,
+        "n_selective_07": 7,
+        "mean_selectivity": 0.1255098134279251,
+        "max_selectivity": 0.7697189450263977,
+        "mean_importance": 2.92608547169948e-05,
+        "top1pct_importance": 0.00010818344526342104
+      },
+      "science": {
+        "n_selective_03": 35,
+        "n_selective_05": 9,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4021852910518646,
+        "max_selectivity": 0.6700744032859802,
+        "mean_importance": 1.0668582945072558e-05,
+        "top1pct_importance": 4.456561746337677e-05
+      }
+    },
+    "16": {
+      "code": {
+        "n_selective_03": 12,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6484988331794739,
+        "max_selectivity": 0.5075165033340454,
+        "mean_importance": 5.2406967370188795e-06,
+        "top1pct_importance": 1.970404382518607e-05
+      },
+      "ethics": {
+        "n_selective_03": 13894,
+        "n_selective_05": 7420,
+        "n_selective_07": 404,
+        "mean_selectivity": 0.5014156699180603,
+        "max_selectivity": 0.950912356376648,
+        "mean_importance": 5.588331259787083e-05,
+        "top1pct_importance": 0.00019881367043126361
+      },
+      "factual_qa": {
+        "n_selective_03": 9379,
+        "n_selective_05": 1268,
+        "n_selective_07": 124,
+        "mean_selectivity": 0.3426211178302765,
+        "max_selectivity": 0.9197816252708435,
+        "mean_importance": 4.185541547485627e-05,
+        "top1pct_importance": 0.00015523439142270943
+      },
+      "humanities": {
+        "n_selective_03": 15,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.42194053530693054,
+        "max_selectivity": 0.5353396534919739,
+        "mean_importance": 9.8202217486687e-06,
+        "top1pct_importance": 3.471672662271881e-05
+      },
+      "language": {
+        "n_selective_03": 114,
+        "n_selective_05": 28,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.20133064687252045,
+        "max_selectivity": 0.7911207675933838,
+        "mean_importance": 1.5615078154951334e-05,
+        "top1pct_importance": 5.357897371141001e-05
+      },
+      "math": {
+        "n_selective_03": 65,
+        "n_selective_05": 16,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.34725016355514526,
+        "max_selectivity": 0.8394471406936646,
+        "mean_importance": 1.1662838005577214e-05,
+        "top1pct_importance": 4.028671919513723e-05
+      },
+      "reasoning": {
+        "n_selective_03": 1080,
+        "n_selective_05": 141,
+        "n_selective_07": 19,
+        "mean_selectivity": 0.12039060145616531,
+        "max_selectivity": 0.8316512703895569,
+        "mean_importance": 2.838664840965066e-05,
+        "top1pct_importance": 0.00010165566382056532
+      },
+      "science": {
+        "n_selective_03": 42,
+        "n_selective_05": 9,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.41328874230384827,
+        "max_selectivity": 0.7444664835929871,
+        "mean_importance": 1.0189126442128327e-05,
+        "top1pct_importance": 3.914618355338445e-05
+      }
+    },
+    "17": {
+      "code": {
+        "n_selective_03": 16,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6486587524414062,
+        "max_selectivity": 0.5957205891609192,
+        "mean_importance": 5.137803327670554e-06,
+        "top1pct_importance": 2.1725952410633902e-05
+      },
+      "ethics": {
+        "n_selective_03": 13786,
+        "n_selective_05": 7146,
+        "n_selective_07": 400,
+        "mean_selectivity": 0.4964471459388733,
+        "max_selectivity": 0.9751242995262146,
+        "mean_importance": 5.394459731178358e-05,
+        "top1pct_importance": 0.00020558965625241374
+      },
+      "factual_qa": {
+        "n_selective_03": 9873,
+        "n_selective_05": 1457,
+        "n_selective_07": 131,
+        "mean_selectivity": 0.351999968290329,
+        "max_selectivity": 0.9484422206878662,
+        "mean_importance": 4.139013253734447e-05,
+        "top1pct_importance": 0.00015641826394130446
+      },
+      "humanities": {
+        "n_selective_03": 26,
+        "n_selective_05": 7,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.42852047085762024,
+        "max_selectivity": 0.6843000054359436,
+        "mean_importance": 9.496164238953497e-06,
+        "top1pct_importance": 3.674781273730331e-05
+      },
+      "language": {
+        "n_selective_03": 158,
+        "n_selective_05": 40,
+        "n_selective_07": 6,
+        "mean_selectivity": -0.2040877640247345,
+        "max_selectivity": 0.8937366604804993,
+        "mean_importance": 1.519558372820029e-05,
+        "top1pct_importance": 5.4818452008475966e-05
+      },
+      "math": {
+        "n_selective_03": 82,
+        "n_selective_05": 24,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.35793760418891907,
+        "max_selectivity": 0.7114301323890686,
+        "mean_importance": 1.1230283234908711e-05,
+        "top1pct_importance": 4.476368358154998e-05
+      },
+      "reasoning": {
+        "n_selective_03": 1163,
+        "n_selective_05": 154,
+        "n_selective_07": 12,
+        "mean_selectivity": 0.12141931056976318,
+        "max_selectivity": 0.849678635597229,
+        "mean_importance": 2.766537363640964e-05,
+        "top1pct_importance": 9.920257507474153e-05
+      },
+      "science": {
+        "n_selective_03": 56,
+        "n_selective_05": 12,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.4161858558654785,
+        "max_selectivity": 0.8104264140129089,
+        "mean_importance": 9.952258551493287e-06,
+        "top1pct_importance": 4.094368159712757e-05
+      }
+    },
+    "18": {
+      "code": {
+        "n_selective_03": 13,
+        "n_selective_05": 5,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6509825587272644,
+        "max_selectivity": 0.6325048804283142,
+        "mean_importance": 4.79662185171037e-06,
+        "top1pct_importance": 1.795804428184054e-05
+      },
+      "ethics": {
+        "n_selective_03": 13798,
+        "n_selective_05": 6744,
+        "n_selective_07": 376,
+        "mean_selectivity": 0.49203571677207947,
+        "max_selectivity": 0.9487866759300232,
+        "mean_importance": 5.038470044382848e-05,
+        "top1pct_importance": 0.00018142914850614015
+      },
+      "factual_qa": {
+        "n_selective_03": 10780,
+        "n_selective_05": 1646,
+        "n_selective_07": 142,
+        "mean_selectivity": 0.36987927556037903,
+        "max_selectivity": 0.9512234330177307,
+        "mean_importance": 3.9912636566441506e-05,
+        "top1pct_importance": 0.0001370641009998506
+      },
+      "humanities": {
+        "n_selective_03": 15,
+        "n_selective_05": 2,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.4255557656288147,
+        "max_selectivity": 0.7090756297111511,
+        "mean_importance": 8.982183317129966e-06,
+        "top1pct_importance": 3.059810424019812e-05
+      },
+      "language": {
+        "n_selective_03": 155,
+        "n_selective_05": 33,
+        "n_selective_07": 4,
+        "mean_selectivity": -0.20000804960727692,
+        "max_selectivity": 0.761160135269165,
+        "mean_importance": 1.4446292880165856e-05,
+        "top1pct_importance": 4.9104273239208795e-05
+      },
+      "math": {
+        "n_selective_03": 76,
+        "n_selective_05": 13,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.3739480972290039,
+        "max_selectivity": 0.7958359718322754,
+        "mean_importance": 1.0231381565972697e-05,
+        "top1pct_importance": 3.8954973388172155e-05
+      },
+      "reasoning": {
+        "n_selective_03": 1060,
+        "n_selective_05": 132,
+        "n_selective_07": 13,
+        "mean_selectivity": 0.11268715560436249,
+        "max_selectivity": 0.8747875690460205,
+        "mean_importance": 2.580301952548325e-05,
+        "top1pct_importance": 9.048181564139644e-05
+      },
+      "science": {
+        "n_selective_03": 40,
+        "n_selective_05": 15,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.41303136944770813,
+        "max_selectivity": 0.6833280920982361,
+        "mean_importance": 9.382607458974235e-06,
+        "top1pct_importance": 3.332489704916952e-05
+      }
+    },
+    "19": {
+      "code": {
+        "n_selective_03": 9,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6468388438224792,
+        "max_selectivity": 0.6947669386863708,
+        "mean_importance": 4.607133178069489e-06,
+        "top1pct_importance": 1.8289267973159427e-05
+      },
+      "ethics": {
+        "n_selective_03": 13826,
+        "n_selective_05": 6221,
+        "n_selective_07": 328,
+        "mean_selectivity": 0.4856477379798889,
+        "max_selectivity": 0.9426125884056091,
+        "mean_importance": 4.7634337533963844e-05,
+        "top1pct_importance": 0.00016830182066769313
+      },
+      "factual_qa": {
+        "n_selective_03": 11594,
+        "n_selective_05": 1996,
+        "n_selective_07": 142,
+        "mean_selectivity": 0.38712140917778015,
+        "max_selectivity": 0.9075402617454529,
+        "mean_importance": 3.907581776729785e-05,
+        "top1pct_importance": 0.0001330296414380422
+      },
+      "humanities": {
+        "n_selective_03": 20,
+        "n_selective_05": 4,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4220134913921356,
+        "max_selectivity": 0.6920976638793945,
+        "mean_importance": 8.593035090598278e-06,
+        "top1pct_importance": 2.9396593890851364e-05
+      },
+      "language": {
+        "n_selective_03": 126,
+        "n_selective_05": 25,
+        "n_selective_07": 4,
+        "mean_selectivity": -0.20936234295368195,
+        "max_selectivity": 0.7871403098106384,
+        "mean_importance": 1.354726373392623e-05,
+        "top1pct_importance": 4.646164125006173e-05
+      },
+      "math": {
+        "n_selective_03": 69,
+        "n_selective_05": 19,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.38082796335220337,
+        "max_selectivity": 0.797245442867279,
+        "mean_importance": 9.653585038904566e-06,
+        "top1pct_importance": 3.958809211326297e-05
+      },
+      "reasoning": {
+        "n_selective_03": 943,
+        "n_selective_05": 131,
+        "n_selective_07": 14,
+        "mean_selectivity": 0.10628204047679901,
+        "max_selectivity": 0.8641138076782227,
+        "mean_importance": 2.4294073227792978e-05,
+        "top1pct_importance": 8.517819951521232e-05
+      },
+      "science": {
+        "n_selective_03": 41,
+        "n_selective_05": 14,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.40891048312187195,
+        "max_selectivity": 0.6195412874221802,
+        "mean_importance": 8.953122232924215e-06,
+        "top1pct_importance": 3.2594859476375805e-05
+      }
+    },
+    "20": {
+      "code": {
+        "n_selective_03": 7,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.645993173122406,
+        "max_selectivity": 0.6418008208274841,
+        "mean_importance": 4.4662165237241425e-06,
+        "top1pct_importance": 1.564365593367254e-05
+      },
+      "ethics": {
+        "n_selective_03": 13815,
+        "n_selective_05": 5799,
+        "n_selective_07": 283,
+        "mean_selectivity": 0.4800242781639099,
+        "max_selectivity": 0.9638614654541016,
+        "mean_importance": 4.5619286538567394e-05,
+        "top1pct_importance": 0.00016532302324776527
+      },
+      "factual_qa": {
+        "n_selective_03": 12270,
+        "n_selective_05": 2457,
+        "n_selective_07": 158,
+        "mean_selectivity": 0.40624040365219116,
+        "max_selectivity": 0.9271141886711121,
+        "mean_importance": 3.886621561832726e-05,
+        "top1pct_importance": 0.00012084340814908473
+      },
+      "humanities": {
+        "n_selective_03": 18,
+        "n_selective_05": 6,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4163452088832855,
+        "max_selectivity": 0.697729766368866,
+        "mean_importance": 8.445730600215029e-06,
+        "top1pct_importance": 2.7290105754218528e-05
+      },
+      "language": {
+        "n_selective_03": 95,
+        "n_selective_05": 23,
+        "n_selective_07": 4,
+        "mean_selectivity": -0.2201889306306839,
+        "max_selectivity": 0.7794830203056335,
+        "mean_importance": 1.2818578397855163e-05,
+        "top1pct_importance": 4.219680904498084e-05
+      },
+      "math": {
+        "n_selective_03": 52,
+        "n_selective_05": 18,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.3930695354938507,
+        "max_selectivity": 0.7939134836196899,
+        "mean_importance": 9.072376997210085e-06,
+        "top1pct_importance": 3.238797053199958e-05
+      },
+      "reasoning": {
+        "n_selective_03": 867,
+        "n_selective_05": 129,
+        "n_selective_07": 14,
+        "mean_selectivity": 0.0991443619132042,
+        "max_selectivity": 0.8409076929092407,
+        "mean_importance": 2.3331804186454974e-05,
+        "top1pct_importance": 8.11715741292573e-05
+      },
+      "science": {
+        "n_selective_03": 34,
+        "n_selective_05": 13,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.40716904401779175,
+        "max_selectivity": 0.6632614731788635,
+        "mean_importance": 8.749918379180599e-06,
+        "top1pct_importance": 2.9423594060062853e-05
+      }
+    },
+    "21": {
+      "code": {
+        "n_selective_03": 14,
+        "n_selective_05": 3,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.6483461260795593,
+        "max_selectivity": 0.7544893026351929,
+        "mean_importance": 4.2294782360841054e-06,
+        "top1pct_importance": 1.6203283848881256e-05
+      },
+      "ethics": {
+        "n_selective_03": 13698,
+        "n_selective_05": 5144,
+        "n_selective_07": 263,
+        "mean_selectivity": 0.4692506790161133,
+        "max_selectivity": 0.9414821267127991,
+        "mean_importance": 4.2980136640835553e-05,
+        "top1pct_importance": 0.00017383098384016174
+      },
+      "factual_qa": {
+        "n_selective_03": 12746,
+        "n_selective_05": 3233,
+        "n_selective_07": 174,
+        "mean_selectivity": 0.4247693419456482,
+        "max_selectivity": 0.9295255541801453,
+        "mean_importance": 3.85080165870022e-05,
+        "top1pct_importance": 0.00013243872454040678
+      },
+      "humanities": {
+        "n_selective_03": 19,
+        "n_selective_05": 5,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.4154537618160248,
+        "max_selectivity": 0.7622197270393372,
+        "mean_importance": 8.103624168143142e-06,
+        "top1pct_importance": 2.9043078120594113e-05
+      },
+      "language": {
+        "n_selective_03": 93,
+        "n_selective_05": 30,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.22471170127391815,
+        "max_selectivity": 0.788485586643219,
+        "mean_importance": 1.224300740432227e-05,
+        "top1pct_importance": 4.780036215379363e-05
+      },
+      "math": {
+        "n_selective_03": 62,
+        "n_selective_05": 14,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.41044577956199646,
+        "max_selectivity": 0.750519871711731,
+        "mean_importance": 8.3449131125235e-06,
+        "top1pct_importance": 3.4803569542418685e-05
+      },
+      "reasoning": {
+        "n_selective_03": 892,
+        "n_selective_05": 146,
+        "n_selective_07": 17,
+        "mean_selectivity": 0.0916048213839531,
+        "max_selectivity": 0.873807966709137,
+        "mean_importance": 2.2162237655720674e-05,
+        "top1pct_importance": 8.894276579667334e-05
+      },
+      "science": {
+        "n_selective_03": 46,
+        "n_selective_05": 14,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.3978555500507355,
+        "max_selectivity": 0.709114134311676,
+        "mean_importance": 8.570179488742724e-06,
+        "top1pct_importance": 3.330415584059663e-05
+      }
+    },
+    "22": {
+      "code": {
+        "n_selective_03": 12,
+        "n_selective_05": 4,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.652567446231842,
+        "max_selectivity": 0.7052798867225647,
+        "mean_importance": 3.88086255043163e-06,
+        "top1pct_importance": 1.3849914193997388e-05
+      },
+      "ethics": {
+        "n_selective_03": 13538,
+        "n_selective_05": 4495,
+        "n_selective_07": 233,
+        "mean_selectivity": 0.45734119415283203,
+        "max_selectivity": 0.9427677989006042,
+        "mean_importance": 3.8974285416770726e-05,
+        "top1pct_importance": 0.00014535266018356172
+      },
+      "factual_qa": {
+        "n_selective_03": 13179,
+        "n_selective_05": 4150,
+        "n_selective_07": 212,
+        "mean_selectivity": 0.44690564274787903,
+        "max_selectivity": 0.9395132064819336,
+        "mean_importance": 3.7147223338251933e-05,
+        "top1pct_importance": 0.00011659389856504224
+      },
+      "humanities": {
+        "n_selective_03": 22,
+        "n_selective_05": 3,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.4113768935203552,
+        "max_selectivity": 0.7526400089263916,
+        "mean_importance": 7.5870962064072955e-06,
+        "top1pct_importance": 2.430623781037866e-05
+      },
+      "language": {
+        "n_selective_03": 102,
+        "n_selective_05": 16,
+        "n_selective_07": 4,
+        "mean_selectivity": -0.22731004655361176,
+        "max_selectivity": 0.820057213306427,
+        "mean_importance": 1.1269160495430697e-05,
+        "top1pct_importance": 3.9474964978580795e-05
+      },
+      "math": {
+        "n_selective_03": 44,
+        "n_selective_05": 15,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.4344327449798584,
+        "max_selectivity": 0.8523457646369934,
+        "mean_importance": 7.368074420810444e-06,
+        "top1pct_importance": 2.93663140837452e-05
+      },
+      "reasoning": {
+        "n_selective_03": 838,
+        "n_selective_05": 148,
+        "n_selective_07": 19,
+        "mean_selectivity": 0.08220125734806061,
+        "max_selectivity": 0.8732065558433533,
+        "mean_importance": 2.0236484488123097e-05,
+        "top1pct_importance": 7.458186119038144e-05
+      },
+      "science": {
+        "n_selective_03": 66,
+        "n_selective_05": 13,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3896333873271942,
+        "max_selectivity": 0.6745176911354065,
+        "mean_importance": 8.129046364047099e-06,
+        "top1pct_importance": 3.072196341236121e-05
+      }
+    },
+    "23": {
+      "code": {
+        "n_selective_03": 12,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6561446189880371,
+        "max_selectivity": 0.6080137491226196,
+        "mean_importance": 3.6442627333599376e-06,
+        "top1pct_importance": 1.3466059999700498e-05
+      },
+      "ethics": {
+        "n_selective_03": 13496,
+        "n_selective_05": 3939,
+        "n_selective_07": 207,
+        "mean_selectivity": 0.4484281539916992,
+        "max_selectivity": 0.9596015810966492,
+        "mean_importance": 3.647530684247613e-05,
+        "top1pct_importance": 0.00013570845403592093
+      },
+      "factual_qa": {
+        "n_selective_03": 13456,
+        "n_selective_05": 5260,
+        "n_selective_07": 193,
+        "mean_selectivity": 0.4643322825431824,
+        "max_selectivity": 0.9316200613975525,
+        "mean_importance": 3.6208606616128236e-05,
+        "top1pct_importance": 9.613007168809405e-05
+      },
+      "humanities": {
+        "n_selective_03": 17,
+        "n_selective_05": 4,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4095136225223541,
+        "max_selectivity": 0.6102098822593689,
+        "mean_importance": 7.210942840174539e-06,
+        "top1pct_importance": 2.221280392404876e-05
+      },
+      "language": {
+        "n_selective_03": 93,
+        "n_selective_05": 24,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.23190023005008698,
+        "max_selectivity": 0.8300430774688721,
+        "mean_importance": 1.0594841114652809e-05,
+        "top1pct_importance": 3.593361470848311e-05
+      },
+      "math": {
+        "n_selective_03": 41,
+        "n_selective_05": 10,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.44917598366737366,
+        "max_selectivity": 0.7443229556083679,
+        "mean_importance": 6.703864528390113e-06,
+        "top1pct_importance": 2.5876581639749864e-05
+      },
+      "reasoning": {
+        "n_selective_03": 791,
+        "n_selective_05": 143,
+        "n_selective_07": 17,
+        "mean_selectivity": 0.07637684792280197,
+        "max_selectivity": 0.938335657119751,
+        "mean_importance": 1.9065095330006443e-05,
+        "top1pct_importance": 6.896352642797864e-05
+      },
+      "science": {
+        "n_selective_03": 53,
+        "n_selective_05": 17,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.384502112865448,
+        "max_selectivity": 0.653689980506897,
+        "mean_importance": 7.819895472493954e-06,
+        "top1pct_importance": 2.7545630382519437e-05
+      }
+    },
+    "24": {
+      "code": {
+        "n_selective_03": 10,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6603647470474243,
+        "max_selectivity": 0.5702593326568604,
+        "mean_importance": 3.4260535812791204e-06,
+        "top1pct_importance": 1.2622058238775922e-05
+      },
+      "ethics": {
+        "n_selective_03": 13390,
+        "n_selective_05": 3365,
+        "n_selective_07": 195,
+        "mean_selectivity": 0.43899017572402954,
+        "max_selectivity": 0.9388020634651184,
+        "mean_importance": 3.393070073798299e-05,
+        "top1pct_importance": 0.00012828111939597873
+      },
+      "factual_qa": {
+        "n_selective_03": 13605,
+        "n_selective_05": 6354,
+        "n_selective_07": 197,
+        "mean_selectivity": 0.47893890738487244,
+        "max_selectivity": 0.9501847624778748,
+        "mean_importance": 3.518647645250894e-05,
+        "top1pct_importance": 9.392261599714401e-05
+      },
+      "humanities": {
+        "n_selective_03": 16,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4060536026954651,
+        "max_selectivity": 0.6110659241676331,
+        "mean_importance": 6.907810984557727e-06,
+        "top1pct_importance": 2.1655797354469528e-05
+      },
+      "language": {
+        "n_selective_03": 74,
+        "n_selective_05": 15,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.2355886548757553,
+        "max_selectivity": 0.7243324518203735,
+        "mean_importance": 9.962183867173735e-06,
+        "top1pct_importance": 3.306055095890763e-05
+      },
+      "math": {
+        "n_selective_03": 36,
+        "n_selective_05": 7,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.4618631899356842,
+        "max_selectivity": 0.7380669713020325,
+        "mean_importance": 6.177532213769155e-06,
+        "top1pct_importance": 2.3536205571872404e-05
+      },
+      "reasoning": {
+        "n_selective_03": 741,
+        "n_selective_05": 105,
+        "n_selective_07": 13,
+        "mean_selectivity": 0.07498233765363693,
+        "max_selectivity": 0.8592004179954529,
+        "mean_importance": 1.7839804058894515e-05,
+        "top1pct_importance": 6.13430162047734e-05
+      },
+      "science": {
+        "n_selective_03": 42,
+        "n_selective_05": 5,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3772788345813751,
+        "max_selectivity": 0.6602330803871155,
+        "mean_importance": 7.50513299863087e-06,
+        "top1pct_importance": 2.661424887264727e-05
+      }
+    },
+    "25": {
+      "code": {
+        "n_selective_03": 10,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6692807078361511,
+        "max_selectivity": 0.597484827041626,
+        "mean_importance": 3.2283455766446423e-06,
+        "top1pct_importance": 1.2995422093808866e-05
+      },
+      "ethics": {
+        "n_selective_03": 13369,
+        "n_selective_05": 3321,
+        "n_selective_07": 134,
+        "mean_selectivity": 0.43705326318740845,
+        "max_selectivity": 0.9148610830307007,
+        "mean_importance": 3.316782749607228e-05,
+        "top1pct_importance": 0.0001305381665588355
+      },
+      "factual_qa": {
+        "n_selective_03": 13720,
+        "n_selective_05": 7194,
+        "n_selective_07": 177,
+        "mean_selectivity": 0.49276450276374817,
+        "max_selectivity": 0.8952828645706177,
+        "mean_importance": 3.515812204568647e-05,
+        "top1pct_importance": 9.487455790804215e-05
+      },
+      "humanities": {
+        "n_selective_03": 11,
+        "n_selective_05": 4,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.40900251269340515,
+        "max_selectivity": 0.6798861622810364,
+        "mean_importance": 6.631766154896468e-06,
+        "top1pct_importance": 1.9621133924374575e-05
+      },
+      "language": {
+        "n_selective_03": 55,
+        "n_selective_05": 10,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.24257899820804596,
+        "max_selectivity": 0.7646303772926331,
+        "mean_importance": 9.539206985209603e-06,
+        "top1pct_importance": 3.322190113976829e-05
+      },
+      "math": {
+        "n_selective_03": 24,
+        "n_selective_05": 7,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.47425413131713867,
+        "max_selectivity": 0.630052387714386,
+        "mean_importance": 5.814844371343497e-06,
+        "top1pct_importance": 2.3154199607233746e-05
+      },
+      "reasoning": {
+        "n_selective_03": 702,
+        "n_selective_05": 102,
+        "n_selective_07": 15,
+        "mean_selectivity": 0.07338975369930267,
+        "max_selectivity": 0.8578913807868958,
+        "mean_importance": 1.742852691677399e-05,
+        "top1pct_importance": 6.517082583741272e-05
+      },
+      "science": {
+        "n_selective_03": 40,
+        "n_selective_05": 8,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3824390470981598,
+        "max_selectivity": 0.6280031204223633,
+        "mean_importance": 7.190416908997577e-06,
+        "top1pct_importance": 2.6195406735496363e-05
+      }
+    },
+    "26": {
+      "code": {
+        "n_selective_03": 3,
+        "n_selective_05": 0,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6796213984489441,
+        "max_selectivity": 0.42547234892845154,
+        "mean_importance": 3.0800438253208995e-06,
+        "top1pct_importance": 1.3120412631906216e-05
+      },
+      "ethics": {
+        "n_selective_03": 13320,
+        "n_selective_05": 3266,
+        "n_selective_07": 151,
+        "mean_selectivity": 0.434922993183136,
+        "max_selectivity": 0.9439032673835754,
+        "mean_importance": 3.237078635720536e-05,
+        "top1pct_importance": 0.00012506091661634844
+      },
+      "factual_qa": {
+        "n_selective_03": 13775,
+        "n_selective_05": 7947,
+        "n_selective_07": 187,
+        "mean_selectivity": 0.5020119547843933,
+        "max_selectivity": 0.9212055802345276,
+        "mean_importance": 3.4962347854161635e-05,
+        "top1pct_importance": 9.091734937101104e-05
+      },
+      "humanities": {
+        "n_selective_03": 13,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.41513791680336,
+        "max_selectivity": 0.6359354257583618,
+        "mean_importance": 6.434731858462328e-06,
+        "top1pct_importance": 2.1453023236972445e-05
+      },
+      "language": {
+        "n_selective_03": 44,
+        "n_selective_05": 12,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.24960766732692719,
+        "max_selectivity": 0.7357708811759949,
+        "mean_importance": 9.23250445339363e-06,
+        "top1pct_importance": 3.20792792990687e-05
+      },
+      "math": {
+        "n_selective_03": 27,
+        "n_selective_05": 9,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.4773401618003845,
+        "max_selectivity": 0.7766457200050354,
+        "mean_importance": 5.673492069036001e-06,
+        "top1pct_importance": 2.3387253168039025e-05
+      },
+      "reasoning": {
+        "n_selective_03": 579,
+        "n_selective_05": 72,
+        "n_selective_07": 11,
+        "mean_selectivity": 0.07291039079427719,
+        "max_selectivity": 0.9048911929130554,
+        "mean_importance": 1.697610605333466e-05,
+        "top1pct_importance": 6.1004340204817667e-05
+      },
+      "science": {
+        "n_selective_03": 33,
+        "n_selective_05": 6,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.38866710662841797,
+        "max_selectivity": 0.5885180234909058,
+        "mean_importance": 6.956049674045062e-06,
+        "top1pct_importance": 2.5477587496425254e-05
+      }
+    },
+    "27": {
+      "code": {
+        "n_selective_03": 8,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.6895875930786133,
+        "max_selectivity": 0.5917562246322632,
+        "mean_importance": 3.046364781766897e-06,
+        "top1pct_importance": 1.462632399125138e-05
+      },
+      "ethics": {
+        "n_selective_03": 13309,
+        "n_selective_05": 3434,
+        "n_selective_07": 158,
+        "mean_selectivity": 0.4371502101421356,
+        "max_selectivity": 0.9559280276298523,
+        "mean_importance": 3.3666139643173665e-05,
+        "top1pct_importance": 0.0001493826457590328
+      },
+      "factual_qa": {
+        "n_selective_03": 13708,
+        "n_selective_05": 8206,
+        "n_selective_07": 220,
+        "mean_selectivity": 0.5044113397598267,
+        "max_selectivity": 0.9176706075668335,
+        "mean_importance": 3.5427470720605925e-05,
+        "top1pct_importance": 0.00010131788076250785
+      },
+      "humanities": {
+        "n_selective_03": 13,
+        "n_selective_05": 4,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.42012378573417664,
+        "max_selectivity": 0.648349940776825,
+        "mean_importance": 6.4572441260679625e-06,
+        "top1pct_importance": 2.251899286420665e-05
+      },
+      "language": {
+        "n_selective_03": 43,
+        "n_selective_05": 11,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.25548678636550903,
+        "max_selectivity": 0.7724317908287048,
+        "mean_importance": 9.393353138875682e-06,
+        "top1pct_importance": 3.607302805903597e-05
+      },
+      "math": {
+        "n_selective_03": 20,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4822235703468323,
+        "max_selectivity": 0.5358138680458069,
+        "mean_importance": 5.739075731980847e-06,
+        "top1pct_importance": 2.445811105644676e-05
+      },
+      "reasoning": {
+        "n_selective_03": 603,
+        "n_selective_05": 79,
+        "n_selective_07": 15,
+        "mean_selectivity": 0.07444137334823608,
+        "max_selectivity": 0.9089508652687073,
+        "mean_importance": 1.7484069758211263e-05,
+        "top1pct_importance": 6.892800083733126e-05
+      },
+      "science": {
+        "n_selective_03": 25,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.39220359921455383,
+        "max_selectivity": 0.6374865174293518,
+        "mean_importance": 6.9976654231140856e-06,
+        "top1pct_importance": 2.5733471102284945e-05
+      }
+    },
+    "28": {
+      "code": {
+        "n_selective_03": 4,
+        "n_selective_05": 1,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.7041078209877014,
+        "max_selectivity": 0.5232390761375427,
+        "mean_importance": 2.959388211820624e-06,
+        "top1pct_importance": 1.5634000556019586e-05
+      },
+      "ethics": {
+        "n_selective_03": 13581,
+        "n_selective_05": 4515,
+        "n_selective_07": 189,
+        "mean_selectivity": 0.45732730627059937,
+        "max_selectivity": 0.9774894118309021,
+        "mean_importance": 3.533511335263029e-05,
+        "top1pct_importance": 0.00018818354510585707
+      },
+      "factual_qa": {
+        "n_selective_03": 13545,
+        "n_selective_05": 6798,
+        "n_selective_07": 134,
+        "mean_selectivity": 0.48338794708251953,
+        "max_selectivity": 0.905356764793396,
+        "mean_importance": 3.463189204921946e-05,
+        "top1pct_importance": 0.00012677979320869742
+      },
+      "humanities": {
+        "n_selective_03": 13,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4256587624549866,
+        "max_selectivity": 0.6292572617530823,
+        "mean_importance": 6.463872068707133e-06,
+        "top1pct_importance": 2.6383876956970157e-05
+      },
+      "language": {
+        "n_selective_03": 49,
+        "n_selective_05": 12,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.2442924827337265,
+        "max_selectivity": 0.7918893098831177,
+        "mean_importance": 9.773572855920065e-06,
+        "top1pct_importance": 4.488825652515516e-05
+      },
+      "math": {
+        "n_selective_03": 25,
+        "n_selective_05": 8,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.49076032638549805,
+        "max_selectivity": 0.7651074528694153,
+        "mean_importance": 5.7277793530374765e-06,
+        "top1pct_importance": 2.853465084626804e-05
+      },
+      "reasoning": {
+        "n_selective_03": 681,
+        "n_selective_05": 79,
+        "n_selective_07": 14,
+        "mean_selectivity": 0.09043756872415543,
+        "max_selectivity": 0.872962474822998,
+        "mean_importance": 1.823786078603007e-05,
+        "top1pct_importance": 8.545535783923669e-05
+      },
+      "science": {
+        "n_selective_03": 15,
+        "n_selective_05": 4,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.3988540470600128,
+        "max_selectivity": 0.6747854948043823,
+        "mean_importance": 6.97031009622151e-06,
+        "top1pct_importance": 3.0021786369616124e-05
+      }
+    },
+    "29": {
+      "code": {
+        "n_selective_03": 13,
+        "n_selective_05": 2,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.712081253528595,
+        "max_selectivity": 0.6249805092811584,
+        "mean_importance": 3.343870730532217e-06,
+        "top1pct_importance": 2.01510786610015e-05
+      },
+      "ethics": {
+        "n_selective_03": 13804,
+        "n_selective_05": 5911,
+        "n_selective_07": 287,
+        "mean_selectivity": 0.47964921593666077,
+        "max_selectivity": 0.9457554221153259,
+        "mean_importance": 4.834859646507539e-05,
+        "top1pct_importance": 0.00027463506703497833
+      },
+      "factual_qa": {
+        "n_selective_03": 13258,
+        "n_selective_05": 5434,
+        "n_selective_07": 124,
+        "mean_selectivity": 0.46094849705696106,
+        "max_selectivity": 0.8939979076385498,
+        "mean_importance": 4.009859912912361e-05,
+        "top1pct_importance": 0.00016776079137343895
+      },
+      "humanities": {
+        "n_selective_03": 11,
+        "n_selective_05": 5,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.4356944262981415,
+        "max_selectivity": 0.9426522254943848,
+        "mean_importance": 7.4691674853966106e-06,
+        "top1pct_importance": 3.474271361483261e-05
+      },
+      "language": {
+        "n_selective_03": 56,
+        "n_selective_05": 19,
+        "n_selective_07": 6,
+        "mean_selectivity": -0.23762379586696625,
+        "max_selectivity": 0.9065526127815247,
+        "mean_importance": 1.1646190614555962e-05,
+        "top1pct_importance": 5.8660923969000564e-05
+      },
+      "math": {
+        "n_selective_03": 24,
+        "n_selective_05": 6,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.490023672580719,
+        "max_selectivity": 0.6744623184204102,
+        "mean_importance": 6.784317520214245e-06,
+        "top1pct_importance": 3.5562695666158064e-05
+      },
+      "reasoning": {
+        "n_selective_03": 801,
+        "n_selective_05": 77,
+        "n_selective_07": 10,
+        "mean_selectivity": 0.09539592266082764,
+        "max_selectivity": 0.9310469627380371,
+        "mean_importance": 2.314265293534845e-05,
+        "top1pct_importance": 0.00011757564752770119
+      },
+      "science": {
+        "n_selective_03": 18,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.41732731461524963,
+        "max_selectivity": 0.5686147212982178,
+        "mean_importance": 7.804622327967081e-06,
+        "top1pct_importance": 3.613281223806545e-05
+      }
+    },
+    "30": {
+      "code": {
+        "n_selective_03": 22,
+        "n_selective_05": 7,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.7132453918457031,
+        "max_selectivity": 0.7519626617431641,
+        "mean_importance": 4.278145752323326e-06,
+        "top1pct_importance": 3.1980217136151604e-05
+      },
+      "ethics": {
+        "n_selective_03": 13809,
+        "n_selective_05": 7114,
+        "n_selective_07": 285,
+        "mean_selectivity": 0.4949816167354584,
+        "max_selectivity": 0.9484086036682129,
+        "mean_importance": 6.478682189481333e-05,
+        "top1pct_importance": 0.0004002070942078713
+      },
+      "factual_qa": {
+        "n_selective_03": 12793,
+        "n_selective_05": 4342,
+        "n_selective_07": 131,
+        "mean_selectivity": 0.4381987750530243,
+        "max_selectivity": 0.924625813961029,
+        "mean_importance": 5.0218186515849084e-05,
+        "top1pct_importance": 0.00025263631832785874
+      },
+      "humanities": {
+        "n_selective_03": 13,
+        "n_selective_05": 4,
+        "n_selective_07": 2,
+        "mean_selectivity": -0.44329896569252014,
+        "max_selectivity": 0.7079232335090637,
+        "mean_importance": 9.300308192905504e-06,
+        "top1pct_importance": 5.4373801140172745e-05
+      },
+      "language": {
+        "n_selective_03": 95,
+        "n_selective_05": 30,
+        "n_selective_07": 10,
+        "mean_selectivity": -0.23505568504333496,
+        "max_selectivity": 0.8291652202606201,
+        "mean_importance": 1.5342915503424592e-05,
+        "top1pct_importance": 0.0001007564645988168
+      },
+      "math": {
+        "n_selective_03": 41,
+        "n_selective_05": 13,
+        "n_selective_07": 3,
+        "mean_selectivity": -0.4838566780090332,
+        "max_selectivity": 0.7587981820106506,
+        "mean_importance": 9.054107977135573e-06,
+        "top1pct_importance": 5.7672321236168104e-05
+      },
+      "reasoning": {
+        "n_selective_03": 975,
+        "n_selective_05": 110,
+        "n_selective_07": 25,
+        "mean_selectivity": 0.10169505327939987,
+        "max_selectivity": 0.9419301748275757,
+        "mean_importance": 3.1500090699410066e-05,
+        "top1pct_importance": 0.0001860507145465817
+      },
+      "science": {
+        "n_selective_03": 19,
+        "n_selective_05": 3,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4338781535625458,
+        "max_selectivity": 0.6148244142532349,
+        "mean_importance": 9.527735528536141e-06,
+        "top1pct_importance": 5.692845479643437e-05
+      }
+    },
+    "31": {
+      "code": {
+        "n_selective_03": 29,
+        "n_selective_05": 9,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.7133309245109558,
+        "max_selectivity": 0.8415771126747131,
+        "mean_importance": 7.600811841257382e-06,
+        "top1pct_importance": 8.231139181589232e-05
+      },
+      "ethics": {
+        "n_selective_03": 13797,
+        "n_selective_05": 8268,
+        "n_selective_07": 499,
+        "mean_selectivity": 0.5128766894340515,
+        "max_selectivity": 0.9802386164665222,
+        "mean_importance": 0.00012257735943421721,
+        "top1pct_importance": 0.001353144139284267
+      },
+      "factual_qa": {
+        "n_selective_03": 11964,
+        "n_selective_05": 3796,
+        "n_selective_07": 103,
+        "mean_selectivity": 0.41470569372177124,
+        "max_selectivity": 0.9813204407691956,
+        "mean_importance": 8.568743214709684e-05,
+        "top1pct_importance": 0.0008511389518389453
+      },
+      "humanities": {
+        "n_selective_03": 25,
+        "n_selective_05": 8,
+        "n_selective_07": 1,
+        "mean_selectivity": -0.4676738381385803,
+        "max_selectivity": 0.8459005951881409,
+        "mean_importance": 1.554717709950637e-05,
+        "top1pct_importance": 0.00017606484980205988
+      },
+      "language": {
+        "n_selective_03": 123,
+        "n_selective_05": 40,
+        "n_selective_07": 7,
+        "mean_selectivity": -0.22530436515808105,
+        "max_selectivity": 0.9181820154190063,
+        "mean_importance": 2.8742328140651807e-05,
+        "top1pct_importance": 0.00036043162399437254
+      },
+      "math": {
+        "n_selective_03": 57,
+        "n_selective_05": 18,
+        "n_selective_07": 4,
+        "mean_selectivity": -0.47884824872016907,
+        "max_selectivity": 0.9461563229560852,
+        "mean_importance": 1.7136899259639904e-05,
+        "top1pct_importance": 0.00021883672961848784
+      },
+      "reasoning": {
+        "n_selective_03": 1239,
+        "n_selective_05": 145,
+        "n_selective_07": 26,
+        "mean_selectivity": 0.10961028188467026,
+        "max_selectivity": 0.9011099338531494,
+        "mean_importance": 5.819527359562926e-05,
+        "top1pct_importance": 0.0006597638071980322
+      },
+      "science": {
+        "n_selective_03": 23,
+        "n_selective_05": 7,
+        "n_selective_07": 0,
+        "mean_selectivity": -0.4836764931678772,
+        "max_selectivity": 0.6778346300125122,
+        "mean_importance": 1.4779152479604818e-05,
+        "top1pct_importance": 0.0001640563059481791
+      }
+    }
+  },
+  "top5000_layer_dist": {
+    "code": [
+      80,
+      75,
+      121,
+      138,
+      151,
+      153,
+      125,
+      131,
+      163,
+      193,
+      161,
+      121,
+      126,
+      164,
+      179,
+      219,
+      194,
+      249,
+      199,
+      201,
+      159,
+      168,
+      174,
+      134,
+      128,
+      118,
+      106,
+      114,
+      131,
+      143,
+      224,
+      258
+    ],
+    "ethics": [
+      390,
+      57,
+      64,
+      64,
+      95,
+      86,
+      92,
+      100,
+      82,
+      69,
+      67,
+      94,
+      116,
+      111,
+      201,
+      262,
+      275,
+      289,
+      259,
+      232,
+      203,
+      201,
+      159,
+      152,
+      138,
+      97,
+      106,
+      112,
+      125,
+      181,
+      188,
+      333
+    ],
+    "factual_qa": [
+      92,
+      78,
+      87,
+      128,
+      139,
+      117,
+      75,
+      61,
+      70,
+      50,
+      40,
+      28,
+      33,
+      37,
+      67,
+      132,
+      154,
+      182,
+      189,
+      204,
+      202,
+      230,
+      278,
+      274,
+      289,
+      290,
+      316,
+      375,
+      237,
+      211,
+      176,
+      159
+    ],
+    "humanities": [
+      121,
+      184,
+      313,
+      343,
+      358,
+      284,
+      155,
+      147,
+      189,
+      192,
+      170,
+      219,
+      186,
+      182,
+      163,
+      135,
+      112,
+      139,
+      123,
+      126,
+      123,
+      124,
+      142,
+      125,
+      109,
+      78,
+      79,
+      60,
+      57,
+      68,
+      93,
+      101
+    ],
+    "language": [
+      72,
+      24,
+      76,
+      103,
+      137,
+      144,
+      149,
+      141,
+      165,
+      181,
+      158,
+      110,
+      137,
+      132,
+      164,
+      221,
+      258,
+      302,
+      293,
+      254,
+      173,
+      198,
+      193,
+      174,
+      127,
+      112,
+      91,
+      89,
+      99,
+      115,
+      185,
+      223
+    ],
+    "math": [
+      15,
+      10,
+      27,
+      34,
+      88,
+      101,
+      165,
+      220,
+      273,
+      314,
+      354,
+      313,
+      258,
+      286,
+      224,
+      259,
+      206,
+      245,
+      219,
+      184,
+      140,
+      153,
+      137,
+      110,
+      79,
+      74,
+      72,
+      64,
+      69,
+      66,
+      100,
+      141
+    ],
+    "reasoning": [
+      145,
+      94,
+      132,
+      169,
+      209,
+      173,
+      134,
+      114,
+      112,
+      100,
+      65,
+      59,
+      62,
+      78,
+      104,
+      203,
+      242,
+      258,
+      215,
+      207,
+      198,
+      232,
+      221,
+      207,
+      167,
+      162,
+      124,
+      120,
+      124,
+      137,
+      182,
+      251
+    ],
+    "science": [
+      140,
+      238,
+      295,
+      332,
+      366,
+      293,
+      185,
+      131,
+      132,
+      119,
+      84,
+      107,
+      106,
+      93,
+      92,
+      113,
+      112,
+      142,
+      124,
+      137,
+      114,
+      156,
+      188,
+      175,
+      189,
+      157,
+      149,
+      135,
+      93,
+      113,
+      110,
+      80
+    ]
+  }
+}
