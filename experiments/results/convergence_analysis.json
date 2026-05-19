@@ -1,0 +1,787 @@
+{
+  "models": [
+    "Qwen2.5-7B-Instruct",
+    "Meta-Llama-3.1-8B-Instruct",
+    "Mistral-7B-Instruct-v0.3",
+    "gemma-2-9b-it"
+  ],
+  "categories": [
+    "code",
+    "ethics",
+    "factual_qa",
+    "humanities",
+    "language",
+    "math",
+    "reasoning",
+    "science"
+  ],
+  "metric1_dissociation_similarity": {
+    "pair_details": {
+      "Qwen2.5-7B-Instruct vs Meta-Llama-3.1-8B-Instruct": {
+        "full_r": 0.629405858762151,
+        "full_p": 2.535233894185069e-08,
+        "diagonal_r": 0.04101736332937506,
+        "diagonal_p": 0.9231786609697196,
+        "offdiag_r": 0.4108071286830977,
+        "offdiag_p": 0.0016610898730433233
+      },
+      "Qwen2.5-7B-Instruct vs Mistral-7B-Instruct-v0.3": {
+        "full_r": 0.7797454899999671,
+        "full_p": 3.1588629494653566e-14,
+        "diagonal_r": 0.16904054125105217,
+        "diagonal_p": 0.6890350805941594,
+        "offdiag_r": 0.5957114486327733,
+        "offdiag_p": 1.2764277387581574e-06
+      },
+      "Qwen2.5-7B-Instruct vs gemma-2-9b-it": {
+        "full_r": 0.7503844100118539,
+        "full_p": 9.465618885490258e-13,
+        "diagonal_r": 0.14919053288169998,
+        "diagonal_p": 0.7243908535171901,
+        "offdiag_r": 0.5063854637964177,
+        "offdiag_p": 6.835972162333119e-05
+      },
+      "Meta-Llama-3.1-8B-Instruct vs Mistral-7B-Instruct-v0.3": {
+        "full_r": 0.9059352679606694,
+        "full_p": 8.035439786109739e-25,
+        "diagonal_r": 0.829068447567224,
+        "diagonal_p": 0.010939614684240902,
+        "offdiag_r": 0.8078743924993277,
+        "offdiag_p": 5.2807597181333394e-14
+      },
+      "Meta-Llama-3.1-8B-Instruct vs gemma-2-9b-it": {
+        "full_r": 0.9379338341385562,
+        "full_p": 3.287816552676785e-30,
+        "diagonal_r": 0.8667757167702441,
+        "diagonal_p": 0.005336479452097416,
+        "offdiag_r": 0.9171321181417843,
+        "offdiag_p": 3.146887756816244e-23
+      },
+      "Mistral-7B-Instruct-v0.3 vs gemma-2-9b-it": {
+        "full_r": 0.9826369332383418,
+        "full_p": 4.511457400466863e-47,
+        "diagonal_r": 0.9516425050365344,
+        "diagonal_p": 0.0002725496695325548,
+        "offdiag_r": 0.8989154767304196,
+        "offdiag_p": 5.300637156731577e-21
+      }
+    },
+    "full_matrix": {
+      "mean_r": 0.8310069656852567,
+      "std_r": 0.12234513641376761,
+      "all_r": [
+        0.629405858762151,
+        0.7797454899999671,
+        0.7503844100118539,
+        0.9059352679606694,
+        0.9379338341385562,
+        0.9826369332383418
+      ]
+    },
+    "diagonal": {
+      "mean_r": 0.5011225178060216,
+      "std_r": 0.3851515649704882,
+      "all_r": [
+        0.04101736332937506,
+        0.16904054125105217,
+        0.14919053288169998,
+        0.829068447567224,
+        0.8667757167702441,
+        0.9516425050365344
+      ]
+    },
+    "off_diagonal": {
+      "mean_r": 0.6894710047473033,
+      "std_r": 0.1956530335051723,
+      "all_r": [
+        0.4108071286830977,
+        0.5957114486327733,
+        0.5063854637964177,
+        0.8078743924993277,
+        0.9171321181417843,
+        0.8989154767304196
+      ]
+    }
+  },
+  "metric2_dag_edge_consistency": {
+    "threshold": 0.03,
+    "total_off_diagonal_entries": 56,
+    "universal_4_4": 9,
+    "consistent_3_4": 4,
+    "weak_1_2": 29,
+    "absent_0_4": 14,
+    "consistency_score": 0.23214285714285715,
+    "edge_details": {
+      "code->ethics": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "code->factual_qa": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "code->humanities": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3"
+        ]
+      },
+      "code->language": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "code->math": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct"
+        ]
+      },
+      "code->reasoning": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "code->science": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Mistral-7B-Instruct-v0.3"
+        ]
+      },
+      "ethics->code": {
+        "n_models": 3,
+        "classification": "consistent",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3"
+        ]
+      },
+      "ethics->factual_qa": {
+        "n_models": 4,
+        "classification": "universal",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "ethics->humanities": {
+        "n_models": 4,
+        "classification": "universal",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "ethics->language": {
+        "n_models": 4,
+        "classification": "universal",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "ethics->math": {
+        "n_models": 4,
+        "classification": "universal",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "ethics->reasoning": {
+        "n_models": 4,
+        "classification": "universal",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "ethics->science": {
+        "n_models": 3,
+        "classification": "consistent",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "factual_qa->code": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "factual_qa->ethics": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3"
+        ]
+      },
+      "factual_qa->humanities": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "factual_qa->language": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "factual_qa->math": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "factual_qa->reasoning": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "factual_qa->science": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "humanities->code": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "humanities->ethics": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "humanities->factual_qa": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "humanities->language": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct"
+        ]
+      },
+      "humanities->math": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct"
+        ]
+      },
+      "humanities->reasoning": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "humanities->science": {
+        "n_models": 4,
+        "classification": "universal",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "language->code": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3"
+        ]
+      },
+      "language->ethics": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "language->factual_qa": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "language->humanities": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "language->math": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "language->reasoning": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "language->science": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "math->code": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3"
+        ]
+      },
+      "math->ethics": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "math->factual_qa": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "math->humanities": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "math->language": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3"
+        ]
+      },
+      "math->reasoning": {
+        "n_models": 3,
+        "classification": "consistent",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "math->science": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3"
+        ]
+      },
+      "reasoning->code": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct"
+        ]
+      },
+      "reasoning->ethics": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "reasoning->factual_qa": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "reasoning->humanities": {
+        "n_models": 3,
+        "classification": "consistent",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3"
+        ]
+      },
+      "reasoning->language": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "reasoning->math": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Mistral-7B-Instruct-v0.3"
+        ]
+      },
+      "reasoning->science": {
+        "n_models": 4,
+        "classification": "universal",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "science->code": {
+        "n_models": 2,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "science->ethics": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "science->factual_qa": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Meta-Llama-3.1-8B-Instruct"
+        ]
+      },
+      "science->humanities": {
+        "n_models": 4,
+        "classification": "universal",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      },
+      "science->language": {
+        "n_models": 0,
+        "classification": "absent",
+        "models_present": []
+      },
+      "science->math": {
+        "n_models": 1,
+        "classification": "weak",
+        "models_present": [
+          "Qwen2.5-7B-Instruct"
+        ]
+      },
+      "science->reasoning": {
+        "n_models": 4,
+        "classification": "universal",
+        "models_present": [
+          "Qwen2.5-7B-Instruct",
+          "Meta-Llama-3.1-8B-Instruct",
+          "Mistral-7B-Instruct-v0.3",
+          "gemma-2-9b-it"
+        ]
+      }
+    }
+  },
+  "metric3_layer_profile_similarity": {
+    "per_category": {
+      "code": {
+        "mean_cosine_sim": 0.8395541250441494,
+        "std_cosine_sim": 0.06291915290670712,
+        "all_sims": [
+          0.7886342939980036,
+          0.8325905922892785,
+          0.7659199012461138,
+          0.9485374335801613,
+          0.8930014821696383,
+          0.8086410469817009
+        ]
+      },
+      "ethics": {
+        "mean_cosine_sim": 0.7963687264453374,
+        "std_cosine_sim": 0.06965911914422068,
+        "all_sims": [
+          0.7398139420261989,
+          0.7124558372567852,
+          0.7735631112788144,
+          0.9271156064434891,
+          0.8317462490362045,
+          0.7935176126305319
+        ]
+      },
+      "factual_qa": {
+        "mean_cosine_sim": 0.6725134616859828,
+        "std_cosine_sim": 0.1487551633180061,
+        "all_sims": [
+          0.528178166279907,
+          0.49907130596169247,
+          0.6916674633344794,
+          0.9443115655916827,
+          0.7461459325135292,
+          0.6257063364346056
+        ]
+      },
+      "humanities": {
+        "mean_cosine_sim": 0.8221910058609531,
+        "std_cosine_sim": 0.10354270816779353,
+        "all_sims": [
+          0.6917574675657947,
+          0.8196336861316019,
+          0.6782894152011948,
+          0.9296149287014767,
+          0.8882203352992334,
+          0.9256302022664169
+        ]
+      },
+      "language": {
+        "mean_cosine_sim": 0.8310569220405534,
+        "std_cosine_sim": 0.08225521606837922,
+        "all_sims": [
+          0.8575720844508224,
+          0.8710477931154584,
+          0.7916676625991725,
+          0.974981044730035,
+          0.7190785940647801,
+          0.7719943532830511
+        ]
+      },
+      "math": {
+        "mean_cosine_sim": 0.943367013306811,
+        "std_cosine_sim": 0.03340238496978626,
+        "all_sims": [
+          0.9070682349999305,
+          0.9678171384428694,
+          0.8911943389286194,
+          0.9678631071216287,
+          0.9815108351051597,
+          0.944748425242659
+        ]
+      },
+      "reasoning": {
+        "mean_cosine_sim": 0.8297414349809388,
+        "std_cosine_sim": 0.07918203525899416,
+        "all_sims": [
+          0.7191435693338042,
+          0.7657385714337425,
+          0.7763542465442238,
+          0.9324541682189106,
+          0.8970416684807179,
+          0.8877163858742344
+        ]
+      },
+      "science": {
+        "mean_cosine_sim": 0.7580936629833107,
+        "std_cosine_sim": 0.07166881829573879,
+        "all_sims": [
+          0.6418751703978924,
+          0.8231023583391216,
+          0.6750508960276672,
+          0.8010267441525352,
+          0.8131521813602698,
+          0.7943546276223783
+        ]
+      }
+    },
+    "overall_mean": 0.8116107940435043,
+    "overall_std": 0.11311060605455923
+  },
+  "metric4_hierarchy_consistency": {
+    "model_rankings": {
+      "Qwen2.5-7B-Instruct": {
+        "diagonal_values": {
+          "code": 2.4114021140936495,
+          "ethics": 2.507852017279668,
+          "factual_qa": 1.978100128302161,
+          "humanities": 1.926036616716873,
+          "language": 1.8882087037385717,
+          "math": 4.957235930768339,
+          "reasoning": 1.821382369267131,
+          "science": 2.2930635192575792
+        },
+        "rank_order": [
+          "math",
+          "ethics",
+          "code",
+          "science",
+          "factual_qa",
+          "humanities",
+          "language",
+          "reasoning"
+        ]
+      },
+      "Meta-Llama-3.1-8B-Instruct": {
+        "diagonal_values": {
+          "code": 2.4521254118880607,
+          "ethics": 5.958991703537677,
+          "factual_qa": 2.394788917033156,
+          "humanities": 3.0855862315941818,
+          "language": 1.7442153578410735,
+          "math": 2.3649570717852453,
+          "reasoning": 1.7289237971958042,
+          "science": 2.845214882529718
+        },
+        "rank_order": [
+          "ethics",
+          "humanities",
+          "science",
+          "code",
+          "factual_qa",
+          "math",
+          "language",
+          "reasoning"
+        ]
+      },
+      "Mistral-7B-Instruct-v0.3": {
+        "diagonal_values": {
+          "code": 2.097912765769128,
+          "ethics": 2.7806889801989243,
+          "factual_qa": 1.7482018294658168,
+          "humanities": 1.9933633674655251,
+          "language": 1.698238561610295,
+          "math": 2.0494247338119087,
+          "reasoning": 1.80410857169897,
+          "science": 2.5552546494361614
+        },
+        "rank_order": [
+          "ethics",
+          "science",
+          "code",
+          "math",
+          "humanities",
+          "reasoning",
+          "factual_qa",
+          "language"
+        ]
+      },
+      "gemma-2-9b-it": {
+        "diagonal_values": {
+          "code": 1.7910028822809616,
+          "ethics": 2.5062678147934467,
+          "factual_qa": 1.5947955990176799,
+          "humanities": 1.6793068075009685,
+          "language": 1.2558502510997864,
+          "math": 1.7439156035558496,
+          "reasoning": 1.6769427474900027,
+          "science": 2.0904212162832887
+        },
+        "rank_order": [
+          "ethics",
+          "science",
+          "code",
+          "math",
+          "humanities",
+          "reasoning",
+          "factual_qa",
+          "language"
+        ]
+      }
+    },
+    "pair_details": {
+      "Qwen2.5-7B-Instruct vs Meta-Llama-3.1-8B-Instruct": {
+        "spearman_rho": 0.4761904761904762,
+        "p_value": 0.23293553465009798
+      },
+      "Qwen2.5-7B-Instruct vs Mistral-7B-Instruct-v0.3": {
+        "spearman_rho": 0.7142857142857144,
+        "p_value": 0.04652823228416724
+      },
+      "Qwen2.5-7B-Instruct vs gemma-2-9b-it": {
+        "spearman_rho": 0.7142857142857144,
+        "p_value": 0.04652823228416724
+      },
+      "Meta-Llama-3.1-8B-Instruct vs Mistral-7B-Instruct-v0.3": {
+        "spearman_rho": 0.7142857142857144,
+        "p_value": 0.04652823228416724
+      },
+      "Meta-Llama-3.1-8B-Instruct vs gemma-2-9b-it": {
+        "spearman_rho": 0.7142857142857144,
+        "p_value": 0.04652823228416724
+      },
+      "Mistral-7B-Instruct-v0.3 vs gemma-2-9b-it": {
+        "spearman_rho": 1.0,
+        "p_value": 0.0
+      }
+    },
+    "mean_spearman": 0.7222222222222223,
+    "std_spearman": 0.15162677122653015,
+    "all_spearman": [
+      0.4761904761904762,
+      0.7142857142857144,
+      0.7142857142857144,
+      0.7142857142857144,
+      0.7142857142857144,
+      1.0
+    ]
+  },
+  "metric5_overall_convergence": {
+    "metric1_dissociation_similarity": {
+      "raw": 0.8310069656852567,
+      "normalized_01": 0.9155034828426283
+    },
+    "metric3_layer_profile_similarity": {
+      "raw": 0.8116107940435043,
+      "normalized_01": 0.8116107940435043
+    },
+    "metric4_hierarchy_consistency": {
+      "raw": 0.7222222222222223,
+      "normalized_01": 0.8611111111111112
+    },
+    "convergence_index": 0.8627417959990812,
+    "null_model": {
+      "n_permutations": 1000,
+      "null_mean": 0.6933999942751167,
+      "null_std": 0.03004101783233678,
+      "z_score": 5.637019446847153,
+      "p_value": 0.0,
+      "null_metric1_mean": 0.6926533078661157,
+      "null_metric3_mean": 0.7368792812732448,
+      "null_metric4_mean": -0.006011904761904763
+    }
+  }
+}

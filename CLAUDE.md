@@ -42,6 +42,15 @@ Build a causal functional atlas of Large Language Models — mapping which neuro
 - **Job 306948**: Balanced multi-dissociation (152/cat, 1216 total) — 4 models
 - **Job 306949**: Scaled predictive experiments (50/cat) — 4 models
 
+5. **Convergence Analysis** (local, no GPU)
+   - `src/convergence_analysis.py` — Functional Convergence Index across 4 architectures
+   - 5 metrics: dissociation matrix similarity, DAG edge consistency, layer profile similarity, hierarchy consistency, overall index with null model
+   - Results: `results/convergence_analysis.json`
+   - **Convergence Index = 0.86** (z=5.64 vs null, p<0.001) — strong cross-architecture convergence
+   - Math most conserved layer profile (cos=0.94), factual_qa most variable (cos=0.67)
+   - 9 universal spillover edges, ethics is universal hub
+   - Mistral and Gemma have identical modularity rankings (rho=1.0)
+
 ### Key Findings (from analysis_findings.md)
 1. **Universal 3-layer functional hierarchy**: language/code → math/science → reasoning/ethics
 2. **Science-humanities knowledge integration zone**: bidirectional, near-symmetric, layer-colocalized
