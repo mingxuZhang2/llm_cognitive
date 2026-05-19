@@ -201,6 +201,8 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, required=True)
+    parser.add_argument("--model_short", type=str, default=None,
+                        help="Short name for output files. Default: last component of model path.")
     parser.add_argument("--stimuli", type=str, required=True, help="Path to stimuli jsonl")
     parser.add_argument("--output_dir", type=str, required=True)
     parser.add_argument("--max_length", type=int, default=512)
@@ -210,10 +212,20 @@ if __name__ == "__main__":
     with open(args.stimuli) as f:
         samples = [json.loads(line)["text"] for line in f]
 
-    extract_activations(
+    A, meta = extract_activations(
         model_name=args.model,
         samples=samples,
         output_dir=args.output_dir,
         max_length=args.max_length,
         batch_size=args.batch_size,
     )
+
+    if args.model_short:
+        import shutil
+        old_short = args.model.split("/")[-1]
+        for suffix in ["_activations.npy", "_meta.json"]:
+            old_path = os.path.join(args.output_dir, old_short + suffix)
+            new_path = os.path.join(args.output_dir, args.model_short + suffix)
+            if os.path.exists(old_path) and old_path != new_path:
+                shutil.move(old_path, new_path)
+                print(f"Renamed: {old_short}{suffix} → {args.model_short}{suffix}")
