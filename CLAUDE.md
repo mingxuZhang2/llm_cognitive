@@ -1,31 +1,67 @@
 # Nature Paper Project: LLM Functional Atlas
 
 ## Project Goal
-Build the first "Brodmann Atlas" of Large Language Models -- a comprehensive functional map validated by neuroscience gold standards (double dissociation), shown to be universal across architectures (Transformer, Mamba, RWKV), with quantitative brain alignment and developmental trajectory. Targeting Nature/NMI.
+Build a causal functional atlas of Large Language Models — mapping which neurons implement which cognitive functions, validated by double dissociation, with predictive power for controlling model behavior. Targeting Nature Machine Intelligence.
 
 ## Repository Structure
-- `IDEA_SYNTHESIS.md` -- Main paper idea synthesis with 6-act story arc
-- `research_paper_analysis.md` -- Analysis of ULCMOD and related prior work
-- `research_neuroscience_methods.md` -- Survey of neuroscience methods applicable to LLMs
-- `research_neuro_llm_landscape.md` -- Landscape survey of neuro-LLM research
-- `research_nature_storytelling.md` -- Analysis of Nature-level storytelling patterns
-- `feasibility_critical_periods.md` -- Feasibility study on critical periods angle
-- `feasibility_convergent_evolution.md` -- Feasibility study on convergent functional organization across architectures (Transformer vs Mamba vs RWKV)
+- `IDEA_SYNTHESIS.md` -- Original paper idea synthesis
+- `experiments/` -- All experimental code and results
+  - `src/` -- Python scripts for each experiment phase
+  - `scripts/slurm/` -- SLURM job scripts for HPC3
+  - `results/` -- JSON results from all experiments
+  - `figures/` -- Generated visualizations
+  - `analysis_findings.md` -- Comprehensive findings document (8 key findings)
+- Research docs: `research_paper_analysis.md`, `research_neuroscience_methods.md`, etc.
+- Feasibility studies: `feasibility_*.md`
 
-## Key Findings So Far
-1. The specific "convergent evolution of functional modules across different architectures" angle has NOT been done as a unified study
-2. Individual pieces exist: SAE feature universality (Towards Universality, ICLR 2025/2026), brain alignment across architectures (NeurIPS 2025 spotlight), functional modules in Transformers (Nature Comms 2024)
-3. RWKV interpretability is nearly unexplored -- major opportunity
-4. Working at the SAE-feature level on the residual stream is the methodologically safest path for cross-architecture comparison
-5. The gap at the intersection of functional modules + multiple architectures + causal validation + brain alignment is wide open
+## Current Experimental Status (May 20, 2026)
+- Branch: experiments
 
-## Current Status
-- Phase: Literature review and feasibility assessment
-- Branch: master
+### Completed Experiments
+1. **8-way Functional Dissociation** (pilot: 15/cat, scaled: 50/cat)
+   - 4 models × 8 categories × causal attribution (grad × act)
+   - Pilot: 27-28/28 pairwise dissociation
+   - Scaled (50/cat): ALL 8/8 specificity, 28/28 pairwise (3 models confirmed, Gemma pending)
+   - Key: only ~1% of neurons (5000) needed per function
 
-## Module Transplantation Feasibility (May 19, 2026)
-- `feasibility_module_transplant.md` -- Exhaustive literature search on module/neuron transplantation between LLMs (50+ papers reviewed)
-- Key finding: Neuron-level transplantation exists for safety functions (CNT, 2026) and agent roles (ARM, 2026), but nobody has transplanted causally-validated cognitive functional modules (math, code, reasoning) between different LLM architectures
-- The field is moving fast -- multiple groups converging on transplantation ideas -- 12-18 month window of opportunity
-- Closest papers: CNT (safety neurons), ARM (role-conditioned neurons), Beyond Learning (layer-level transplant), NOT (checkpoint-based layer blocks)
-- Technical feasibility: POSITIVE -- all building blocks exist (module identification, neuron correspondence via OT, weight transfer), integration is the novelty
+2. **Predictive Experiments** (pilot)
+   - Pathway decomposition: 12/12 predictions correct (math-only, reasoning-only, shared)
+   - Atlas-guided steering: dependency DAG confirmed (4/4 code→reasoning = no effect)
+   - Instance-level prediction: 11/12 correct
+
+3. **Atlas-Guided Pruning** (pilot)
+   - 50% sparsity: atlas 1.11-3.24x vs random 3-3948x vs magnitude 13-11898x
+   - No phase transition for atlas method (linear degradation)
+
+4. **Structural Analysis** (pilot attribution data)
+   - Hub neurons extremely rare (<50 across 500K+ neurons)
+   - Science-humanities uniquely bidirectional coupling (layer-colocalized)
+   - Reasoning is emergent coalition (3x weaker self-effect than math)
+
+### Running Experiments
+- **Job 306948**: Balanced multi-dissociation (152/cat, 1216 total) — 4 models
+- **Job 306949**: Scaled predictive experiments (50/cat) — 4 models
+
+### Key Findings (from analysis_findings.md)
+1. **Universal 3-layer functional hierarchy**: language/code → math/science → reasoning/ethics
+2. **Science-humanities knowledge integration zone**: bidirectional, near-symmetric, layer-colocalized
+3. **Reasoning as emergent coalition**: weakest self-effect, depends on math+science+language
+4. **Atlas pruning eliminates phase transition**: never >10x degradation at 50% sparsity
+5. **Steering confirms DAG non-linearly**: 10-20x damage escalation from mild to strong amplification
+6. **Shared hub neurons catastrophically important**: <50 neurons → model collapse when ablated
+7. **Competitive inhibition**: code suppresses ethics, ethics suppresses humanities
+8. **Modularity gradient**: formal (math) → distributed (reasoning), parallels brain cortex
+
+## HPC3 Configuration
+- SSH: `ssh -i /hpc2hdd/home/mzhang630/data/id_rsa -o StrictHostKeyChecking=no mzhang630@hpc3login.hpc.hkust-gz.edu.cn`
+- Base dir: `/data/user/mzhang630/data/nature_exp`
+- Conda env: `alphasteer`
+- SLURM: partition=acd_u, account=d_yings_team
+- Models: Qwen2.5-7B, LLaMA-3.1-8B, Mistral-7B, Gemma-2-9b (snapshot paths in SLURM scripts)
+
+## Stimuli
+- `stimuli_pilot.jsonl` — 120 samples (15/category, balanced)
+- `stimuli_medium.jsonl` — 400 samples (50/category, balanced)
+- `stimuli_balanced.jsonl` — 1216 samples (152/category, balanced)
+- `stimuli_full.jsonl` — 3133 samples (unbalanced, original)
+- 8 categories: math, code, reasoning, language, science, ethics, factual_qa, humanities
