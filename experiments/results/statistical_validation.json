@@ -1,0 +1,4416 @@
+{
+  "categories": [
+    "code",
+    "ethics",
+    "factual_qa",
+    "humanities",
+    "language",
+    "math",
+    "reasoning",
+    "science"
+  ],
+  "models": [
+    "Qwen2.5-7B-Instruct",
+    "Meta-Llama-3.1-8B-Instruct",
+    "Mistral-7B-Instruct-v0.3",
+    "gemma-2-9b-it"
+  ],
+  "scales": [
+    "pilot",
+    "medium",
+    "balanced"
+  ],
+  "n_permutations_matrix": 10000,
+  "alpha": 0.05,
+  "cross_scale_consistency": {
+    "Qwen2.5-7B-Instruct": {
+      "code_vs_ethics": {
+        "effects_by_scale": {
+          "pilot": 0.9227114166396289,
+          "medium": 0.877616885510358,
+          "balanced": 0.8459741140288091
+        },
+        "mean": 0.8821008053929319,
+        "std": 0.03856465423326312,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_factual_qa": {
+        "effects_by_scale": {
+          "pilot": 0.8442973985192284,
+          "medium": 0.6628286223652188,
+          "balanced": 0.6713345280085263
+        },
+        "mean": 0.7261535162976577,
+        "std": 0.10240395640546053,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.4719575787962016,
+          "medium": 0.6221807444889782,
+          "balanced": 0.549749235024961
+        },
+        "mean": 0.5479625194367136,
+        "std": 0.07512751920657848,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.9025618269701783,
+          "medium": 0.607545569313925,
+          "balanced": 0.5921279714602828
+        },
+        "mean": 0.7007451225814622,
+        "std": 0.17494831296310354,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.8819035504234118,
+          "medium": 0.8354626555933573,
+          "balanced": 0.8118707248117679
+        },
+        "mean": 0.8430789769428456,
+        "std": 0.03563222458620478,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.15866837136839673,
+          "medium": 0.5640003119369204,
+          "balanced": 0.4910035115789063
+        },
+        "mean": 0.4045573982947411,
+        "std": 0.21605136747476356,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.5887794558784645,
+          "medium": 0.7816782005637801,
+          "balanced": 0.7697371212608636
+        },
+        "mean": 0.7133982592343694,
+        "std": 0.10808807499499151,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_factual_qa": {
+        "effects_by_scale": {
+          "pilot": 0.8833854414242741,
+          "medium": 0.6825116999113501,
+          "balanced": 0.6140879403040023
+        },
+        "mean": 0.7266616938798754,
+        "std": 0.13997214902605207,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.4905753367915118,
+          "medium": 0.6540491192000659,
+          "balanced": 0.5895146351533049
+        },
+        "mean": 0.5780463637149609,
+        "std": 0.08233808548343519,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.9393855039606334,
+          "medium": 0.6365717942496301,
+          "balanced": 0.5939178259963969
+        },
+        "mean": 0.7232917080688868,
+        "std": 0.1883540196521296,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.9267078537404737,
+          "medium": 0.7744541516271726,
+          "balanced": 0.8542788875695758
+        },
+        "mean": 0.8518136309790741,
+        "std": 0.0761567828190255,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.16765293788582647,
+          "medium": 0.6212344303221169,
+          "balanced": 0.5445155873271252
+        },
+        "mean": 0.44446765184502285,
+        "std": 0.24277815926449467,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.5951973993056914,
+          "medium": 0.8300629222508957,
+          "balanced": 0.8107855309314616
+        },
+        "mean": 0.7453486174960163,
+        "std": 0.13039150929815008,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.46794666911515614,
+          "medium": 0.646129724845288,
+          "balanced": 0.5848416698435135
+        },
+        "mean": 0.5663060212679859,
+        "std": 0.09052611799043639,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.8325635933683802,
+          "medium": 0.6214988992876638,
+          "balanced": 0.6131294130756633
+        },
+        "mean": 0.6890639685772357,
+        "std": 0.12434475787608676,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.8360317878231638,
+          "medium": 0.6583010094520073,
+          "balanced": 0.6568272351184665
+        },
+        "mean": 0.7170533441312127,
+        "std": 0.1030409896605019,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.1636701273634189,
+          "medium": 0.5868227639387205,
+          "balanced": 0.5187853148065695
+        },
+        "mean": 0.42309273536956965,
+        "std": 0.2272275088532135,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.6032391931231582,
+          "medium": 0.6465022504265121,
+          "balanced": 0.6660815424149686
+        },
+        "mean": 0.638607661988213,
+        "std": 0.032156393004907614,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.48529679586935437,
+          "medium": 0.623459852744304,
+          "balanced": 0.5458129697563456
+        },
+        "mean": 0.5515232061233347,
+        "std": 0.06925830398430796,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.443852466978198,
+          "medium": 0.6195946820940348,
+          "balanced": 0.5500737532364977
+        },
+        "mean": 0.5378403007695768,
+        "std": 0.08850748308985275,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.17890403617484085,
+          "medium": 0.5464134342016393,
+          "balanced": 0.3996055370740441
+        },
+        "mean": 0.3749743358168414,
+        "std": 0.1849886792915571,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.4616505191570166,
+          "medium": 0.5595900927495061,
+          "balanced": 0.5112128133028042
+        },
+        "mean": 0.510817808403109,
+        "std": 0.048970981616899965,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.8822854442368108,
+          "medium": 0.5807716617024906,
+          "balanced": 0.5314137904572749
+        },
+        "mean": 0.6648236321321921,
+        "std": 0.18993756778566262,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.1442377464116278,
+          "medium": 0.5679664531409849,
+          "balanced": 0.5008418873672085
+        },
+        "mean": 0.4043486956399404,
+        "std": 0.22774921792164265,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.6128632856436451,
+          "medium": 0.606138530801926,
+          "balanced": 0.5912003056911459
+        },
+        "mean": 0.6034007073789057,
+        "std": 0.011087963425594661,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "math_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": -0.1555248164981946,
+          "medium": 0.5128872051166461,
+          "balanced": 0.39933365905064633
+        },
+        "mean": 0.2522320158896993,
+        "std": 0.35766300860628225,
+        "n_scales": 3,
+        "all_positive": false
+      },
+      "math_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.5762397675554494,
+          "medium": 0.7892447614941253,
+          "balanced": 0.7647621625790482
+        },
+        "mean": 0.7100822305428743,
+        "std": 0.11655557938732185,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "reasoning_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.12659141442163646,
+          "medium": 0.4216505408909066,
+          "balanced": 0.33890143935336114
+        },
+        "mean": 0.29571446488863473,
+        "std": 0.15219661001732226,
+        "n_scales": 3,
+        "all_positive": true
+      }
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "code_vs_ethics": {
+        "effects_by_scale": {
+          "pilot": 0.8164496154035186,
+          "medium": 0.9401588157399041,
+          "balanced": 0.851143917198264
+        },
+        "mean": 0.8692507827805622,
+        "std": 0.06381132734772531,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_factual_qa": {
+        "effects_by_scale": {
+          "pilot": 0.7011979831138297,
+          "medium": 0.8486358863391492,
+          "balanced": 0.764901710380288
+        },
+        "mean": 0.7715785266110889,
+        "std": 0.073945376685122,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.771807764643303,
+          "medium": 0.8543850162142406,
+          "balanced": 0.7441484589625333
+        },
+        "mean": 0.7901137466066923,
+        "std": 0.0573529107405211,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.8134714946372181,
+          "medium": 0.49126235037517363,
+          "balanced": 0.4763055332967574
+        },
+        "mean": 0.5936797927697164,
+        "std": 0.1904920490509745,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.8305528649242182,
+          "medium": 0.78907470979187,
+          "balanced": 0.712958568706445
+        },
+        "mean": 0.7775287144741778,
+        "std": 0.05964132067321677,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.2580680001631168,
+          "medium": 0.5403219428787362,
+          "balanced": 0.6837324156195073
+        },
+        "mean": 0.49404078622045344,
+        "std": 0.21657333109752694,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.8138312241309669,
+          "medium": 0.8737413851769544,
+          "balanced": 0.780119893901599
+        },
+        "mean": 0.8225641677365068,
+        "std": 0.04741776181103996,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_factual_qa": {
+        "effects_by_scale": {
+          "pilot": 0.705970611940439,
+          "medium": 0.7553537200687237,
+          "balanced": 0.6481934358744716
+        },
+        "mean": 0.7031725892945447,
+        "std": 0.05363490771124174,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.8890519793902394,
+          "medium": 1.1012358881263098,
+          "balanced": 1.0485465446883415
+        },
+        "mean": 1.012944804068297,
+        "std": 0.11048129132578043,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.8146495237758526,
+          "medium": 0.5165216943337922,
+          "balanced": 0.47429262047785903
+        },
+        "mean": 0.601821279529168,
+        "std": 0.18552013322420646,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.8847642999246546,
+          "medium": 0.8334755279187704,
+          "balanced": 0.7537009889120267
+        },
+        "mean": 0.8239802722518172,
+        "std": 0.066045573534748,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": -0.0009710793374089199,
+          "medium": 0.5663381882318985,
+          "balanced": 0.6374034297402931
+        },
+        "mean": 0.4009235128782609,
+        "std": 0.34985999282114444,
+        "n_scales": 3,
+        "all_positive": false
+      },
+      "ethics_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.7883373375786153,
+          "medium": 1.0180667781296737,
+          "balanced": 1.1034703042133573
+        },
+        "mean": 0.969958139973882,
+        "std": 0.1629816783074313,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.7240995360405083,
+          "medium": 0.7508750046329502,
+          "balanced": 0.6861825199048006
+        },
+        "mean": 0.7203856868594197,
+        "std": 0.03250575182764385,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.7027179571118829,
+          "medium": 0.5303103055667022,
+          "balanced": 0.4986052566430619
+        },
+        "mean": 0.5772111731072157,
+        "std": 0.10984200997436387,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.7768127107179756,
+          "medium": 0.8214069019793557,
+          "balanced": 0.7407627737774107
+        },
+        "mean": 0.7796607954915807,
+        "std": 0.04039743238772937,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.4908521182677741,
+          "medium": 0.5540253717736605,
+          "balanced": 0.5942023624887978
+        },
+        "mean": 0.5463599508434108,
+        "std": 0.052099781704578595,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.6989810957928877,
+          "medium": 0.8119791431234464,
+          "balanced": 0.7315891170170357
+        },
+        "mean": 0.7475164519777899,
+        "std": 0.05815840158002837,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.8106053226685406,
+          "medium": 0.47590518992749997,
+          "balanced": 0.4569953979998167
+        },
+        "mean": 0.5811686368652857,
+        "std": 0.19892282335612768,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.9990251948040214,
+          "medium": 0.8142720337535194,
+          "balanced": 0.7378032695926477
+        },
+        "mean": 0.8503668327167295,
+        "std": 0.13429947668151965,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.19920370501745177,
+          "medium": 0.481588808098361,
+          "balanced": 0.551080037076765
+        },
+        "mean": 0.41062418339752593,
+        "std": 0.18636314478747346,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.6126969226844392,
+          "medium": 0.639244707258412,
+          "balanced": 0.5679412847441365
+        },
+        "mean": 0.6066276382289959,
+        "std": 0.036037087505972724,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.797175970758842,
+          "medium": 0.46479829079451074,
+          "balanced": 0.42778957564429954
+        },
+        "mean": 0.5632546123992174,
+        "std": 0.2034252016635999,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.14000757719090817,
+          "medium": 0.45935957796612925,
+          "balanced": 0.429802196328267
+        },
+        "mean": 0.3430564504951015,
+        "std": 0.17646541705075905,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.8399951324979011,
+          "medium": 0.5165578567847153,
+          "balanced": 0.4903135684891051
+        },
+        "mean": 0.6156221859239072,
+        "std": 0.19475524391594193,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "math_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.22629374590084694,
+          "medium": 0.5493270823985128,
+          "balanced": 0.5930782428411892
+        },
+        "mean": 0.4562330237135163,
+        "std": 0.20033121229798206,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "math_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.983699206194109,
+          "medium": 0.8171498013756686,
+          "balanced": 0.7278039611596556
+        },
+        "mean": 0.8428843229098111,
+        "std": 0.12987414410402928,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "reasoning_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.1335031201828223,
+          "medium": 0.3285922727407655,
+          "balanced": 0.45425805869885405
+        },
+        "mean": 0.30545115054081395,
+        "std": 0.16162477006359716,
+        "n_scales": 3,
+        "all_positive": true
+      }
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "code_vs_ethics": {
+        "effects_by_scale": {
+          "pilot": 0.5700573943815919,
+          "medium": 0.7480095478370374,
+          "balanced": 0.5715272916332155
+        },
+        "mean": 0.6298647446172816,
+        "std": 0.10231904048298492,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_factual_qa": {
+        "effects_by_scale": {
+          "pilot": 0.6414092176566142,
+          "medium": 0.5539640914124546,
+          "balanced": 0.4847463671323853
+        },
+        "mean": 0.5600398920671513,
+        "std": 0.07850795309260669,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.6976736867446944,
+          "medium": 0.6501447228331363,
+          "balanced": 0.6597188319278473
+        },
+        "mean": 0.6691790805018926,
+        "std": 0.025137080775988977,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.603183150372474,
+          "medium": 0.478183897575303,
+          "balanced": 0.352777268392362
+        },
+        "mean": 0.478048105446713,
+        "std": 0.12520299621888484,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.819272015797599,
+          "medium": 0.6408292463650089,
+          "balanced": 0.5728405338809648
+        },
+        "mean": 0.6776472653478575,
+        "std": 0.12727448177570067,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.4676564319374503,
+          "medium": 0.5677995801688136,
+          "balanced": 0.6344673092687927
+        },
+        "mean": 0.5566411071250189,
+        "std": 0.08396338987627201,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.8110168699230793,
+          "medium": 0.6819484962191358,
+          "balanced": 0.7404395128788674
+        },
+        "mean": 0.7444682930070275,
+        "std": 0.06462843472215615,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_factual_qa": {
+        "effects_by_scale": {
+          "pilot": 0.5335334058120837,
+          "medium": 0.5098815364585674,
+          "balanced": 0.42846655784372123
+        },
+        "mean": 0.4906271667047908,
+        "std": 0.055116319738015083,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.5945884240769108,
+          "medium": 0.6840863041812768,
+          "balanced": 0.5434393051798709
+        },
+        "mean": 0.6073713444793528,
+        "std": 0.07118951378213467,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.565740539657793,
+          "medium": 0.5260881184982913,
+          "balanced": 0.41093873176393236
+        },
+        "mean": 0.5009224633066722,
+        "std": 0.08041071186551908,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.5537064582540427,
+          "medium": 0.7080919803481354,
+          "balanced": 0.552807284365243
+        },
+        "mean": 0.6048685743224737,
+        "std": 0.08939522242309446,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.4627282089726119,
+          "medium": 0.5698491658443059,
+          "balanced": 0.4725541338244872
+        },
+        "mean": 0.5017105028804684,
+        "std": 0.05921397843983515,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.5566220582681567,
+          "medium": 0.9160119888729459,
+          "balanced": 0.5646346692736794
+        },
+        "mean": 0.6790895721382606,
+        "std": 0.20521994091056148,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.6418911627105661,
+          "medium": 0.5322846534036878,
+          "balanced": 0.46573022961261623
+        },
+        "mean": 0.5466353485756233,
+        "std": 0.08895293939170001,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.627860983163723,
+          "medium": 0.5110859656922062,
+          "balanced": 0.4100214984872932
+        },
+        "mean": 0.5163228157810741,
+        "std": 0.10901412165477956,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.6685428104101137,
+          "medium": 0.550311114239866,
+          "balanced": 0.48750336354801194
+        },
+        "mean": 0.5687857627326639,
+        "std": 0.09192281984215489,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.45778029135268516,
+          "medium": 0.4717376177374768,
+          "balanced": 0.4711952296320283
+        },
+        "mean": 0.46690437957406344,
+        "std": 0.007906344643250327,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.6425661416003312,
+          "medium": 0.5442472654459172,
+          "balanced": 0.471821886086947
+        },
+        "mean": 0.5528784310443985,
+        "std": 0.08569873372691258,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.6562414312241538,
+          "medium": 0.551803731370589,
+          "balanced": 0.4344953283680759
+        },
+        "mean": 0.5475134969876062,
+        "std": 0.11093528796672529,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.6591060622479219,
+          "medium": 0.6752518640984244,
+          "balanced": 0.6226832377690972
+        },
+        "mean": 0.6523470547051479,
+        "std": 0.02692820558003386,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.455012482940262,
+          "medium": 0.46498443238820863,
+          "balanced": 0.4975598841931763
+        },
+        "mean": 0.4725189331738823,
+        "std": 0.02225189575993722,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.45511635722300015,
+          "medium": 0.35780405207225563,
+          "balanced": 0.2831400841830565
+        },
+        "mean": 0.3653534978261041,
+        "std": 0.08623633352926155,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.6277088819104599,
+          "medium": 0.502093261843281,
+          "balanced": 0.38285496368440164
+        },
+        "mean": 0.5042190358127142,
+        "std": 0.12244079999693791,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.46083138984942984,
+          "medium": 0.5120877478103907,
+          "balanced": 0.40327956383236474
+        },
+        "mean": 0.45873290049739507,
+        "std": 0.05443443733813584,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.6606064640557385,
+          "medium": 0.5317968816631311,
+          "balanced": 0.415109844404004
+        },
+        "mean": 0.5358377300409579,
+        "std": 0.1227981836462435,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "math_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.47749830582803154,
+          "medium": 0.5515050357845828,
+          "balanced": 0.5255396834340491
+        },
+        "mean": 0.5181810083488878,
+        "std": 0.037548123707746094,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "math_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.8006026499688856,
+          "medium": 0.6763816367560238,
+          "balanced": 0.5975233999835994
+        },
+        "mean": 0.6915025622361696,
+        "std": 0.1023805510542832,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "reasoning_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.41823341318061713,
+          "medium": 0.385390056115543,
+          "balanced": 0.4235129956265
+        },
+        "mean": 0.4090454883075534,
+        "std": 0.02065558282508193,
+        "n_scales": 3,
+        "all_positive": true
+      }
+    },
+    "gemma-2-9b-it": {
+      "code_vs_ethics": {
+        "effects_by_scale": {
+          "pilot": 0.6372491342648725,
+          "medium": 0.5841499252195479,
+          "balanced": 0.42744550368808865
+        },
+        "mean": 0.5496148543908363,
+        "std": 0.10908205255062811,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_factual_qa": {
+        "effects_by_scale": {
+          "pilot": 0.5598758660204761,
+          "medium": 0.4614120308662346,
+          "balanced": 0.47491752606900395
+        },
+        "mean": 0.49873514098523825,
+        "std": 0.05337828016659895,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.541164660384305,
+          "medium": 0.49583975825609694,
+          "balanced": 0.5045255807042406
+        },
+        "mean": 0.5138433331148808,
+        "std": 0.024056227275331517,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.26686710026369975,
+          "medium": 0.21978730436127925,
+          "balanced": 0.19160161871469183
+        },
+        "mean": 0.22608534111322362,
+        "std": 0.03802594020399291,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.6161196151921275,
+          "medium": 0.5326464715687143,
+          "balanced": 0.46748347805071555
+        },
+        "mean": 0.5387498549371857,
+        "std": 0.07450579697236356,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.4108358376551209,
+          "medium": 0.5164818282274699,
+          "balanced": 0.48305350559862203
+        },
+        "mean": 0.47012372382707096,
+        "std": 0.05399678947398786,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "code_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.6038700342170036,
+          "medium": 0.5669331901553936,
+          "balanced": 0.5774407252902944
+        },
+        "mean": 0.5827479832208972,
+        "std": 0.019031759045458285,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_factual_qa": {
+        "effects_by_scale": {
+          "pilot": 0.5861833398306877,
+          "medium": 0.4407814367669314,
+          "balanced": 0.34537063952364644
+        },
+        "mean": 0.45744513870708853,
+        "std": 0.12126808475050234,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.5576483036697581,
+          "medium": 0.531924476555858,
+          "balanced": 0.3121608387605832
+        },
+        "mean": 0.4672445396620664,
+        "std": 0.13492088249904827,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.27148977376690997,
+          "medium": 0.24312005851564145,
+          "balanced": 0.20442256206980103
+        },
+        "mean": 0.23967746478411747,
+        "std": 0.033665877530616256,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.6646703586958345,
+          "medium": 0.5412270656801064,
+          "balanced": 0.39904585990550423
+        },
+        "mean": 0.5349810947604817,
+        "std": 0.13292235592235843,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.4098157764458552,
+          "medium": 0.49161444379069463,
+          "balanced": 0.4063078780615905
+        },
+        "mean": 0.43591269943271344,
+        "std": 0.04827100145180332,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "ethics_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.5699150308445593,
+          "medium": 0.74289654445198,
+          "balanced": 0.4032167667406905
+        },
+        "mean": 0.5720094473457432,
+        "std": 0.16984957398197403,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_humanities": {
+        "effects_by_scale": {
+          "pilot": 0.548706107746479,
+          "medium": 0.4442850360409425,
+          "balanced": 0.4870794381578931
+        },
+        "mean": 0.4933568606484382,
+        "std": 0.05249280502008632,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.2606640731659895,
+          "medium": 0.23188407201723837,
+          "balanced": 0.20997173362469201
+        },
+        "mean": 0.2341732929359733,
+        "std": 0.025423585926332818,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.5611214514134004,
+          "medium": 0.462936112300528,
+          "balanced": 0.4801105291171739
+        },
+        "mean": 0.5013893642770341,
+        "std": 0.05243740862683639,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.4030675746164052,
+          "medium": 0.46748274816074753,
+          "balanced": 0.44711420785714884
+        },
+        "mean": 0.43922151021143385,
+        "std": 0.03292490930559933,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "factual_qa_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.5671053803870174,
+          "medium": 0.46200562567532977,
+          "balanced": 0.47148380413407587
+        },
+        "mean": 0.5001982700654743,
+        "std": 0.05813673559298208,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_language": {
+        "effects_by_scale": {
+          "pilot": 0.2674849083885955,
+          "medium": 0.20800811392602458,
+          "balanced": 0.20787714043233718
+        },
+        "mean": 0.22779005424898577,
+        "std": 0.03437681445956972,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.5489863397773052,
+          "medium": 0.5262687164787079,
+          "balanced": 0.49509513853609377
+        },
+        "mean": 0.5234500649307022,
+        "std": 0.02705594186527225,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.3930328962398111,
+          "medium": 0.4948733487441088,
+          "balanced": 0.45432069337351066
+        },
+        "mean": 0.4474089794524769,
+        "std": 0.05127083267867502,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "humanities_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.4027746862389905,
+          "medium": 0.3208769040192636,
+          "balanced": 0.33936997880220776
+        },
+        "mean": 0.35434052302015395,
+        "std": 0.042952294220024674,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_math": {
+        "effects_by_scale": {
+          "pilot": 0.2382164961605322,
+          "medium": 0.20056225888432877,
+          "balanced": 0.16916244313761553
+        },
+        "mean": 0.2026470660608255,
+        "std": 0.03457420100950022,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.21544202206520602,
+          "medium": 0.2226193581971141,
+          "balanced": 0.1939766530703415
+        },
+        "mean": 0.21067934444422054,
+        "std": 0.014903471502837452,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "language_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.2553528534635241,
+          "medium": 0.21773840226464714,
+          "balanced": 0.19976749532797378
+        },
+        "mean": 0.22428625035204833,
+        "std": 0.028365273587542043,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "math_vs_reasoning": {
+        "effects_by_scale": {
+          "pilot": 0.3922699925349029,
+          "medium": 0.4712232219387049,
+          "balanced": 0.41264610761724585
+        },
+        "mean": 0.42537977403028454,
+        "std": 0.040987959250995395,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "math_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.5975836284767846,
+          "medium": 0.5450192434042531,
+          "balanced": 0.4807873079801048
+        },
+        "mean": 0.5411300599537142,
+        "std": 0.05849520861852485,
+        "n_scales": 3,
+        "all_positive": true
+      },
+      "reasoning_vs_science": {
+        "effects_by_scale": {
+          "pilot": 0.34993427047200854,
+          "medium": 0.41072732425011127,
+          "balanced": 0.3605575761774995
+        },
+        "mean": 0.37373972363320646,
+        "std": 0.03246961049311838,
+        "n_scales": 3,
+        "all_positive": true
+      }
+    }
+  },
+  "cross_model_universality": {
+    "code_vs_ethics": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.877616885510358,
+        "Meta-Llama-3.1-8B-Instruct": 0.9401588157399041,
+        "Mistral-7B-Instruct-v0.3": 0.7480095478370374,
+        "gemma-2-9b-it": 0.5841499252195479
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "code_vs_factual_qa": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.6628286223652188,
+        "Meta-Llama-3.1-8B-Instruct": 0.8486358863391492,
+        "Mistral-7B-Instruct-v0.3": 0.5539640914124546,
+        "gemma-2-9b-it": 0.4614120308662346
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "code_vs_humanities": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.6221807444889782,
+        "Meta-Llama-3.1-8B-Instruct": 0.8543850162142406,
+        "Mistral-7B-Instruct-v0.3": 0.6501447228331363,
+        "gemma-2-9b-it": 0.49583975825609694
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "code_vs_language": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.607545569313925,
+        "Meta-Llama-3.1-8B-Instruct": 0.49126235037517363,
+        "Mistral-7B-Instruct-v0.3": 0.478183897575303,
+        "gemma-2-9b-it": 0.21978730436127925
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "code_vs_math": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.8354626555933573,
+        "Meta-Llama-3.1-8B-Instruct": 0.78907470979187,
+        "Mistral-7B-Instruct-v0.3": 0.6408292463650089,
+        "gemma-2-9b-it": 0.5326464715687143
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "code_vs_reasoning": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.5640003119369204,
+        "Meta-Llama-3.1-8B-Instruct": 0.5403219428787362,
+        "Mistral-7B-Instruct-v0.3": 0.5677995801688136,
+        "gemma-2-9b-it": 0.5164818282274699
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "code_vs_science": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.7816782005637801,
+        "Meta-Llama-3.1-8B-Instruct": 0.8737413851769544,
+        "Mistral-7B-Instruct-v0.3": 0.6819484962191358,
+        "gemma-2-9b-it": 0.5669331901553936
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "ethics_vs_factual_qa": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.6825116999113501,
+        "Meta-Llama-3.1-8B-Instruct": 0.7553537200687237,
+        "Mistral-7B-Instruct-v0.3": 0.5098815364585674,
+        "gemma-2-9b-it": 0.4407814367669314
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "ethics_vs_humanities": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.6540491192000659,
+        "Meta-Llama-3.1-8B-Instruct": 1.1012358881263098,
+        "Mistral-7B-Instruct-v0.3": 0.6840863041812768,
+        "gemma-2-9b-it": 0.531924476555858
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "ethics_vs_language": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.6365717942496301,
+        "Meta-Llama-3.1-8B-Instruct": 0.5165216943337922,
+        "Mistral-7B-Instruct-v0.3": 0.5260881184982913,
+        "gemma-2-9b-it": 0.24312005851564145
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "ethics_vs_math": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.7744541516271726,
+        "Meta-Llama-3.1-8B-Instruct": 0.8334755279187704,
+        "Mistral-7B-Instruct-v0.3": 0.7080919803481354,
+        "gemma-2-9b-it": 0.5412270656801064
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "ethics_vs_reasoning": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.6212344303221169,
+        "Meta-Llama-3.1-8B-Instruct": 0.5663381882318985,
+        "Mistral-7B-Instruct-v0.3": 0.5698491658443059,
+        "gemma-2-9b-it": 0.49161444379069463
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "ethics_vs_science": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.8300629222508957,
+        "Meta-Llama-3.1-8B-Instruct": 1.0180667781296737,
+        "Mistral-7B-Instruct-v0.3": 0.9160119888729459,
+        "gemma-2-9b-it": 0.74289654445198
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "factual_qa_vs_humanities": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.646129724845288,
+        "Meta-Llama-3.1-8B-Instruct": 0.7508750046329502,
+        "Mistral-7B-Instruct-v0.3": 0.5322846534036878,
+        "gemma-2-9b-it": 0.4442850360409425
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "factual_qa_vs_language": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.6214988992876638,
+        "Meta-Llama-3.1-8B-Instruct": 0.5303103055667022,
+        "Mistral-7B-Instruct-v0.3": 0.5110859656922062,
+        "gemma-2-9b-it": 0.23188407201723837
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "factual_qa_vs_math": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.6583010094520073,
+        "Meta-Llama-3.1-8B-Instruct": 0.8214069019793557,
+        "Mistral-7B-Instruct-v0.3": 0.550311114239866,
+        "gemma-2-9b-it": 0.462936112300528
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "factual_qa_vs_reasoning": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.5868227639387205,
+        "Meta-Llama-3.1-8B-Instruct": 0.5540253717736605,
+        "Mistral-7B-Instruct-v0.3": 0.4717376177374768,
+        "gemma-2-9b-it": 0.46748274816074753
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "factual_qa_vs_science": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.6465022504265121,
+        "Meta-Llama-3.1-8B-Instruct": 0.8119791431234464,
+        "Mistral-7B-Instruct-v0.3": 0.5442472654459172,
+        "gemma-2-9b-it": 0.46200562567532977
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "humanities_vs_language": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.623459852744304,
+        "Meta-Llama-3.1-8B-Instruct": 0.47590518992749997,
+        "Mistral-7B-Instruct-v0.3": 0.551803731370589,
+        "gemma-2-9b-it": 0.20800811392602458
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "humanities_vs_math": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.6195946820940348,
+        "Meta-Llama-3.1-8B-Instruct": 0.8142720337535194,
+        "Mistral-7B-Instruct-v0.3": 0.6752518640984244,
+        "gemma-2-9b-it": 0.5262687164787079
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "humanities_vs_reasoning": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.5464134342016393,
+        "Meta-Llama-3.1-8B-Instruct": 0.481588808098361,
+        "Mistral-7B-Instruct-v0.3": 0.46498443238820863,
+        "gemma-2-9b-it": 0.4948733487441088
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "humanities_vs_science": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.5595900927495061,
+        "Meta-Llama-3.1-8B-Instruct": 0.639244707258412,
+        "Mistral-7B-Instruct-v0.3": 0.35780405207225563,
+        "gemma-2-9b-it": 0.3208769040192636
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "language_vs_math": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.5807716617024906,
+        "Meta-Llama-3.1-8B-Instruct": 0.46479829079451074,
+        "Mistral-7B-Instruct-v0.3": 0.502093261843281,
+        "gemma-2-9b-it": 0.20056225888432877
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "language_vs_reasoning": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.5679664531409849,
+        "Meta-Llama-3.1-8B-Instruct": 0.45935957796612925,
+        "Mistral-7B-Instruct-v0.3": 0.5120877478103907,
+        "gemma-2-9b-it": 0.2226193581971141
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "language_vs_science": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.606138530801926,
+        "Meta-Llama-3.1-8B-Instruct": 0.5165578567847153,
+        "Mistral-7B-Instruct-v0.3": 0.5317968816631311,
+        "gemma-2-9b-it": 0.21773840226464714
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "math_vs_reasoning": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.5128872051166461,
+        "Meta-Llama-3.1-8B-Instruct": 0.5493270823985128,
+        "Mistral-7B-Instruct-v0.3": 0.5515050357845828,
+        "gemma-2-9b-it": 0.4712232219387049
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "math_vs_science": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.7892447614941253,
+        "Meta-Llama-3.1-8B-Instruct": 0.8171498013756686,
+        "Mistral-7B-Instruct-v0.3": 0.6763816367560238,
+        "gemma-2-9b-it": 0.5450192434042531
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    },
+    "reasoning_vs_science": {
+      "model_effects": {
+        "Qwen2.5-7B-Instruct": 0.4216505408909066,
+        "Meta-Llama-3.1-8B-Instruct": 0.3285922727407655,
+        "Mistral-7B-Instruct-v0.3": 0.385390056115543,
+        "gemma-2-9b-it": 0.41072732425011127
+      },
+      "n_models_positive": 4,
+      "n_models_total": 4,
+      "universal": true
+    }
+  },
+  "matrix_permutation_test": {
+    "Qwen2.5-7B-Instruct": {
+      "pilot": {
+        "observed": 0.7538225081767381,
+        "p_value": 9.999000099990002e-05,
+        "null_mean": -0.0003163771634548042,
+        "null_std": 0.11665269705784674,
+        "z_score": 6.464821683117701
+      },
+      "medium": {
+        "observed": 0.8187533645945764,
+        "p_value": 9.999000099990002e-05,
+        "null_mean": 0.00262617682725788,
+        "null_std": 0.12434649479463439,
+        "z_score": 6.5633308691864425
+      },
+      "balanced": {
+        "observed": 0.7893146740175587,
+        "p_value": 0.00019998000199980003,
+        "null_mean": -0.00023030727277776144,
+        "null_std": 0.12307785698943666,
+        "z_score": 6.4150042956279725
+      }
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "pilot": {
+        "observed": 0.7944960098193192,
+        "p_value": 0.00019998000199980003,
+        "null_mean": 0.0012681611286744002,
+        "null_std": 0.12341307989455251,
+        "z_score": 6.427421221170177
+      },
+      "medium": {
+        "observed": 0.8678897487272367,
+        "p_value": 9.999000099990002e-05,
+        "null_mean": 0.002031492747906307,
+        "null_std": 0.13895134097594533,
+        "z_score": 6.231377472801739
+      },
+      "balanced": {
+        "observed": 0.841074209131661,
+        "p_value": 9.999000099990002e-05,
+        "null_mean": -0.002340118769167844,
+        "null_std": 0.13299770362778168,
+        "z_score": 6.34157060527102
+      }
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "pilot": {
+        "observed": 0.6743343289499659,
+        "p_value": 9.999000099990002e-05,
+        "null_mean": -0.0003652505678305276,
+        "null_std": 0.09745684528219695,
+        "z_score": 6.923059920082648
+      },
+      "medium": {
+        "observed": 0.6706581395753718,
+        "p_value": 0.00019998000199980003,
+        "null_mean": 0.0010455164057755074,
+        "null_std": 0.10141419931923673,
+        "z_score": 6.602750183484199
+      },
+      "balanced": {
+        "observed": 0.6089681523276596,
+        "p_value": 9.999000099990002e-05,
+        "null_mean": 0.00025570735271927353,
+        "null_std": 0.09224425089542124,
+        "z_score": 6.59892013929896
+      }
+    },
+    "gemma-2-9b-it": {
+      "pilot": {
+        "observed": 0.5447221075479505,
+        "p_value": 9.999000099990002e-05,
+        "null_mean": -0.00013887911872698732,
+        "null_std": 0.07971644733995953,
+        "z_score": 6.834988322249523
+      },
+      "medium": {
+        "observed": 0.529868878156311,
+        "p_value": 9.999000099990002e-05,
+        "null_mean": 0.0001932977177484442,
+        "null_std": 0.08066711528236867,
+        "z_score": 6.566189686812403
+      },
+      "balanced": {
+        "observed": 0.4708161483217323,
+        "p_value": 0.00019998000199980003,
+        "null_mean": -0.0009170207361432546,
+        "null_std": 0.07059244993813693,
+        "z_score": 6.682487567219897
+      }
+    }
+  },
+  "per_pair_replication_tests": {
+    "code_vs_ethics": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.7327077967954031,
+      "std": 0.1681558604698111,
+      "min": 0.42744550368808865,
+      "max": 0.9401588157399041,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.9227114166396289
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.877616885510358
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.8459741140288091
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.8164496154035186
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.9401588157399041
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.851143917198264
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.5700573943815919
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.7480095478370374
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.5715272916332155
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.6372491342648725
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.5841499252195479
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.42744550368808865
+        }
+      ],
+      "ttest": {
+        "t_statistic": 15.094176647852592,
+        "p_value_onesided": 5.334876714421766e-09,
+        "p_value_twosided": 1.0669753428843531e-08,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "code_vs_factual_qa": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.6391267689902841,
+      "std": 0.13590754059726626,
+      "min": 0.4614120308662346,
+      "max": 0.8486358863391492,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.8442973985192284
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.6628286223652188
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.6713345280085263
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.7011979831138297
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.8486358863391492
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.764901710380288
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.6414092176566142
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5539640914124546
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.4847463671323853
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.5598758660204761
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.4614120308662346
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.47491752606900395
+        }
+      ],
+      "ttest": {
+        "t_statistic": 16.290487363741992,
+        "p_value_onesided": 2.3832746265009775e-09,
+        "p_value_twosided": 4.766549253001955e-09,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "code_vs_humanities": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.6302746699150449,
+      "std": 0.1215315299698654,
+      "min": 0.4719575787962016,
+      "max": 0.8543850162142406,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.4719575787962016
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.6221807444889782
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.549749235024961
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.771807764643303
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.8543850162142406
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.7441484589625333
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.6976736867446944
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.6501447228331363
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.6597188319278473
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.541164660384305
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.49583975825609694
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.5045255807042406
+        }
+      ],
+      "ttest": {
+        "t_statistic": 17.965177452916915,
+        "p_value_onesided": 8.420966955879912e-10,
+        "p_value_twosided": 1.6841933911759824e-09,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "code_vs_language": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.49963959047777884,
+      "std": 0.22193101579399838,
+      "min": 0.19160161871469183,
+      "max": 0.9025618269701783,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.9025618269701783
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.607545569313925
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5921279714602828
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.8134714946372181
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.49126235037517363
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.4763055332967574
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.603183150372474
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.478183897575303
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.352777268392362
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.26686710026369975
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.21978730436127925
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.19160161871469183
+        }
+      ],
+      "ttest": {
+        "t_statistic": 7.7988302183387095,
+        "p_value_onesided": 4.157510366443497e-06,
+        "p_value_twosided": 8.315020732886995e-06,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "code_vs_math": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.7092512029255166,
+      "std": 0.13852368709903298,
+      "min": 0.46748347805071555,
+      "max": 0.8819035504234118,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.8819035504234118
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.8354626555933573
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.8118707248117679
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.8305528649242182
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.78907470979187
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.712958568706445
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.819272015797599
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.6408292463650089
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.5728405338809648
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.6161196151921275
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.5326464715687143
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.46748347805071555
+        }
+      ],
+      "ttest": {
+        "t_statistic": 17.73644846629143,
+        "p_value_onesided": 9.653594477882356e-10,
+        "p_value_twosided": 1.930718895576471e-09,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "code_vs_reasoning": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.4813407538668211,
+      "std": 0.14852432580742644,
+      "min": 0.15866837136839673,
+      "max": 0.6837324156195073,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.15866837136839673
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.5640003119369204
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.4910035115789063
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.2580680001631168
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.5403219428787362
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.6837324156195073
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.4676564319374503
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5677995801688136
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.6344673092687927
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.4108358376551209
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.5164818282274699
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.48305350559862203
+        }
+      ],
+      "ttest": {
+        "t_statistic": 11.2265332553242,
+        "p_value_onesided": 1.1501039542697847e-07,
+        "p_value_twosided": 2.3002079085395694e-07,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "code_vs_science": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.7157946757997004,
+      "std": 0.10733475031995224,
+      "min": 0.5669331901553936,
+      "max": 0.8737413851769544,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.5887794558784645
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.7816782005637801
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.7697371212608636
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.8138312241309669
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.8737413851769544
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.780119893901599
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.8110168699230793
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.6819484962191358
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.7404395128788674
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.6038700342170036
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.5669331901553936
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.5774407252902944
+        }
+      ],
+      "ttest": {
+        "t_statistic": 23.10142321245818,
+        "p_value_onesided": 5.6624107343159787e-11,
+        "p_value_twosided": 1.1324821468631957e-10,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "ethics_vs_factual_qa": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.594476647146575,
+      "std": 0.15284438186808694,
+      "min": 0.34537063952364644,
+      "max": 0.8833854414242741,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.8833854414242741
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.6825116999113501
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.6140879403040023
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.705970611940439
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.7553537200687237
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.6481934358744716
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.5335334058120837
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5098815364585674
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.42846655784372123
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.5861833398306877
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.4407814367669314
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.34537063952364644
+        }
+      ],
+      "ttest": {
+        "t_statistic": 13.473360867914922,
+        "p_value_onesided": 1.753991136843758e-08,
+        "p_value_twosided": 3.507982273687516e-08,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "ethics_vs_humanities": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.6664017629811693,
+      "std": 0.2330929140462188,
+      "min": 0.3121608387605832,
+      "max": 1.1012358881263098,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.4905753367915118
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.6540491192000659
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5895146351533049
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.8890519793902394
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 1.1012358881263098
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 1.0485465446883415
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.5945884240769108
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.6840863041812768
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.5434393051798709
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.5576483036697581
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.531924476555858
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.3121608387605832
+        }
+      ],
+      "ttest": {
+        "t_statistic": 9.903704850572929,
+        "p_value_onesided": 4.0714154549281676e-07,
+        "p_value_twosided": 8.142830909856335e-07,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "ethics_vs_language": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.5164282289222112,
+      "std": 0.22068820453536062,
+      "min": 0.20442256206980103,
+      "max": 0.9393855039606334,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.9393855039606334
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.6365717942496301
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5939178259963969
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.8146495237758526
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.5165216943337922
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.47429262047785903
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.565740539657793
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5260881184982913
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.41093873176393236
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.27148977376690997
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.24312005851564145
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.20442256206980103
+        }
+      ],
+      "ttest": {
+        "t_statistic": 8.106277658466874,
+        "p_value_onesided": 2.8803035895321145e-06,
+        "p_value_twosided": 5.760607179064229e-06,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "ethics_vs_math": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.7039108930784616,
+      "std": 0.16391767994150727,
+      "min": 0.39904585990550423,
+      "max": 0.9267078537404737,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.9267078537404737
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.7744541516271726
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.8542788875695758
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.8847642999246546
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.8334755279187704
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.7537009889120267
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.5537064582540427
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.7080919803481354
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.552807284365243
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.6646703586958345
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.5412270656801064
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.39904585990550423
+        }
+      ],
+      "ttest": {
+        "t_statistic": 14.87587466157579,
+        "p_value_onesided": 6.21897323627782e-09,
+        "p_value_twosided": 1.243794647255564e-08,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "ethics_vs_reasoning": {
+      "n_observations": 12,
+      "n_positive": 11,
+      "mean": 0.44575359175911644,
+      "std": 0.18831248065307182,
+      "min": -0.0009710793374089199,
+      "max": 0.6374034297402931,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.16765293788582647
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.6212344303221169
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5445155873271252
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": -0.0009710793374089199
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.5663381882318985
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.6374034297402931
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.4627282089726119
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5698491658443059
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.4725541338244872
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.4098157764458552
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.49161444379069463
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.4063078780615905
+        }
+      ],
+      "ttest": {
+        "t_statistic": 8.199858723177105,
+        "p_value_onesided": 2.581089904603647e-06,
+        "p_value_twosided": 5.162179809207294e-06,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 77.0,
+        "p_value": 0.00048828125
+      },
+      "sign_test": {
+        "n_positive": 11,
+        "n_total": 12,
+        "p_value": 0.003173828125
+      }
+    },
+    "ethics_vs_science": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.7416014442384756,
+      "std": 0.20966383358621696,
+      "min": 0.4032167667406905,
+      "max": 1.1034703042133573,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.5951973993056914
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.8300629222508957
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.8107855309314616
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.7883373375786153
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 1.0180667781296737
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 1.1034703042133573
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.5566220582681567
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.9160119888729459
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.5646346692736794
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.5699150308445593
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.74289654445198
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.4032167667406905
+        }
+      ],
+      "ttest": {
+        "t_statistic": 12.252865536385368,
+        "p_value_onesided": 4.6928971764854284e-08,
+        "p_value_twosided": 9.385794352970857e-08,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "factual_qa_vs_humanities": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.5816709793378667,
+      "std": 0.10675104295740534,
+      "min": 0.4442850360409425,
+      "max": 0.7508750046329502,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.46794666911515614
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.646129724845288
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5848416698435135
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.7240995360405083
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.7508750046329502
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.6861825199048006
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.6418911627105661
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5322846534036878
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.46573022961261623
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.548706107746479
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.4442850360409425
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.4870794381578931
+        }
+      ],
+      "ttest": {
+        "t_statistic": 18.875388222736657,
+        "p_value_onesided": 4.967139316434257e-10,
+        "p_value_twosided": 9.934278632868513e-10,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "factual_qa_vs_language": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.5041928126003746,
+      "std": 0.19489268762737386,
+      "min": 0.20997173362469201,
+      "max": 0.8325635933683802,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.8325635933683802
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.6214988992876638
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.6131294130756633
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.7027179571118829
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.5303103055667022
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.4986052566430619
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.627860983163723
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5110859656922062
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.4100214984872932
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.2606640731659895
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.23188407201723837
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.20997173362469201
+        }
+      ],
+      "ttest": {
+        "t_statistic": 8.961727388198263,
+        "p_value_onesided": 1.0926831803619068e-06,
+        "p_value_twosided": 2.1853663607238136e-06,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "factual_qa_vs_math": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.6417223166581228,
+      "std": 0.13349918884554313,
+      "min": 0.462936112300528,
+      "max": 0.8360317878231638,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.8360317878231638
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.6583010094520073
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.6568272351184665
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.7768127107179756
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.8214069019793557
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.7407627737774107
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.6685428104101137
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.550311114239866
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.48750336354801194
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.5611214514134004
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.462936112300528
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.4801105291171739
+        }
+      ],
+      "ttest": {
+        "t_statistic": 16.651721503546497,
+        "p_value_onesided": 1.8887275039479465e-09,
+        "p_value_twosided": 3.777455007895893e-09,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "factual_qa_vs_reasoning": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.4688946439996194,
+      "std": 0.1119805217652377,
+      "min": 0.1636701273634189,
+      "max": 0.5942023624887978,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.1636701273634189
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.5868227639387205
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5187853148065695
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.4908521182677741
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.5540253717736605
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.5942023624887978
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.45778029135268516
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.4717376177374768
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.4711952296320283
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.4030675746164052
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.46748274816074753
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.44711420785714884
+        }
+      ],
+      "ttest": {
+        "t_statistic": 14.505189545497881,
+        "p_value_onesided": 8.107145416953599e-09,
+        "p_value_twosided": 1.6214290833907198e-08,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "factual_qa_vs_science": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.6098002037689689,
+      "std": 0.11095703214255707,
+      "min": 0.46200562567532977,
+      "max": 0.8119791431234464,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.6032391931231582
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.6465022504265121
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.6660815424149686
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.6989810957928877
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.8119791431234464
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.7315891170170357
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.6425661416003312
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5442472654459172
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.471821886086947
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.5671053803870174
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.46200562567532977
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.47148380413407587
+        }
+      ],
+      "ttest": {
+        "t_statistic": 19.038089159354975,
+        "p_value_onesided": 4.53136191951753e-10,
+        "p_value_twosided": 9.06272383903506e-10,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "humanities_vs_language": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.47699884855630303,
+      "std": 0.18244762686481994,
+      "min": 0.20787714043233718,
+      "max": 0.8106053226685406,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.48529679586935437
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.623459852744304
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5458129697563456
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.8106053226685406
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.47590518992749997
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.4569953979998167
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.6562414312241538
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.551803731370589
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.4344953283680759
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.2674849083885955
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.20800811392602458
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.20787714043233718
+        }
+      ],
+      "ttest": {
+        "t_statistic": 9.056694844965143,
+        "p_value_onesided": 9.855796838043919e-07,
+        "p_value_twosided": 1.9711593676087837e-06,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "humanities_vs_math": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.6410010632805391,
+      "std": 0.15371862242875095,
+      "min": 0.443852466978198,
+      "max": 0.9990251948040214,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.443852466978198
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.6195946820940348
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5500737532364977
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.9990251948040214
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.8142720337535194
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.7378032695926477
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.6591060622479219
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.6752518640984244
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.6226832377690972
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.5489863397773052
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.5262687164787079
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.49509513853609377
+        }
+      ],
+      "ttest": {
+        "t_statistic": 14.445177711921914,
+        "p_value_onesided": 8.46761833856599e-09,
+        "p_value_twosided": 1.693523667713198e-08,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "humanities_vs_reasoning": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.4263816079601816,
+      "std": 0.12080682486087424,
+      "min": 0.17890403617484085,
+      "max": 0.551080037076765,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.17890403617484085
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.5464134342016393
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.3996055370740441
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.19920370501745177
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.481588808098361
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.551080037076765
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.455012482940262
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.46498443238820863
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.4975598841931763
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.3930328962398111
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.4948733487441088
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.45432069337351066
+        }
+      ],
+      "ttest": {
+        "t_statistic": 12.226372297267982,
+        "p_value_onesided": 4.798750740756186e-08,
+        "p_value_twosided": 9.597501481512372e-08,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "humanities_vs_science": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.45928486686959064,
+      "std": 0.12006162365656509,
+      "min": 0.2831400841830565,
+      "max": 0.639244707258412,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.4616505191570166
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.5595900927495061
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5112128133028042
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.6126969226844392
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.639244707258412
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.5679412847441365
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.45511635722300015
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.35780405207225563
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.2831400841830565
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.4027746862389905
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.3208769040192636
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.33936997880220776
+        }
+      ],
+      "ttest": {
+        "t_statistic": 13.251606972119102,
+        "p_value_onesided": 2.084773330595947e-08,
+        "p_value_twosided": 4.169546661191894e-08,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "language_vs_math": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.4837360866012374,
+      "std": 0.22216494399021375,
+      "min": 0.16916244313761553,
+      "max": 0.8822854442368108,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.8822854442368108
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.5807716617024906
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5314137904572749
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.797175970758842
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.46479829079451074
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.42778957564429954
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.6277088819104599
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.502093261843281
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.38285496368440164
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.2382164961605322
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.20056225888432877
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.16916244313761553
+        }
+      ],
+      "ttest": {
+        "t_statistic": 7.542643446796798,
+        "p_value_onesided": 5.6904834812436055e-06,
+        "p_value_twosided": 1.1380966962487211e-05,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "language_vs_reasoning": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.3542043477691643,
+      "std": 0.15808026461713376,
+      "min": 0.14000757719090817,
+      "max": 0.5679664531409849,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.1442377464116278
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.5679664531409849
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5008418873672085
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.14000757719090817
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.45935957796612925
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.429802196328267
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.46083138984942984
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5120877478103907
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.40327956383236474
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.21544202206520602
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.2226193581971141
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.1939766530703415
+        }
+      ],
+      "ttest": {
+        "t_statistic": 7.761878790927751,
+        "p_value_onesided": 4.3480623525607245e-06,
+        "p_value_twosided": 8.696124705121449e-06,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "language_vs_science": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.4947867184239548,
+      "std": 0.1934459647338737,
+      "min": 0.19976749532797378,
+      "max": 0.8399951324979011,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.6128632856436451
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.606138530801926
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.5912003056911459
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.8399951324979011
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.5165578567847153
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.4903135684891051
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.6606064640557385
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5317968816631311
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.415109844404004
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.2553528534635241
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.21773840226464714
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.19976749532797378
+        }
+      ],
+      "ttest": {
+        "t_statistic": 8.86031131638798,
+        "p_value_onesided": 1.2210946918179346e-06,
+        "p_value_twosided": 2.442189383635869e-06,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "math_vs_reasoning": {
+      "n_observations": 12,
+      "n_positive": 11,
+      "mean": 0.413006455495597,
+      "std": 0.20429164093543917,
+      "min": -0.1555248164981946,
+      "max": 0.5930782428411892,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": -0.1555248164981946
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.5128872051166461
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.39933365905064633
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.22629374590084694
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.5493270823985128
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.5930782428411892
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.47749830582803154
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.5515050357845828
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.5255396834340491
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.3922699925349029
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.4712232219387049
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.41264610761724585
+        }
+      ],
+      "ttest": {
+        "t_statistic": 7.003205432163275,
+        "p_value_onesided": 1.1300626842277392e-05,
+        "p_value_twosided": 2.2601253684554784e-05,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 77.0,
+        "p_value": 0.00048828125
+      },
+      "sign_test": {
+        "n_positive": 11,
+        "n_total": 12,
+        "p_value": 0.003173828125
+      }
+    },
+    "math_vs_science": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.6963997939106422,
+      "std": 0.1433510391012344,
+      "min": 0.4807873079801048,
+      "max": 0.983699206194109,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.5762397675554494
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.7892447614941253
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.7647621625790482
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.983699206194109
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.8171498013756686
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.7278039611596556
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.8006026499688856
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.6763816367560238
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.5975233999835994
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.5975836284767846
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.5450192434042531
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.4807873079801048
+        }
+      ],
+      "ttest": {
+        "t_statistic": 16.828616422960284,
+        "p_value_onesided": 1.6882942290894096e-09,
+        "p_value_twosided": 3.376588458178819e-09,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    },
+    "reasoning_vs_science": {
+      "n_observations": 12,
+      "n_positive": 12,
+      "mean": 0.3459877068425521,
+      "std": 0.10799234597893817,
+      "min": 0.12659141442163646,
+      "max": 0.45425805869885405,
+      "observations": [
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "pilot",
+          "D": 0.12659141442163646
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "medium",
+          "D": 0.4216505408909066
+        },
+        {
+          "model": "Qwen2.5-7B-Instruct",
+          "scale": "balanced",
+          "D": 0.33890143935336114
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "pilot",
+          "D": 0.1335031201828223
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "medium",
+          "D": 0.3285922727407655
+        },
+        {
+          "model": "Meta-Llama-3.1-8B-Instruct",
+          "scale": "balanced",
+          "D": 0.45425805869885405
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "pilot",
+          "D": 0.41823341318061713
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "medium",
+          "D": 0.385390056115543
+        },
+        {
+          "model": "Mistral-7B-Instruct-v0.3",
+          "scale": "balanced",
+          "D": 0.4235129956265
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "pilot",
+          "D": 0.34993427047200854
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "medium",
+          "D": 0.41072732425011127
+        },
+        {
+          "model": "gemma-2-9b-it",
+          "scale": "balanced",
+          "D": 0.3605575761774995
+        }
+      ],
+      "ttest": {
+        "t_statistic": 11.098347417370155,
+        "p_value_onesided": 1.292665356499556e-07,
+        "p_value_twosided": 2.585330712999112e-07,
+        "df": 11
+      },
+      "wilcoxon": {
+        "statistic": 78.0,
+        "p_value": 0.000244140625
+      },
+      "sign_test": {
+        "n_positive": 12,
+        "n_total": 12,
+        "p_value": 0.000244140625
+      }
+    }
+  },
+  "effect_sizes": {
+    "Qwen2.5-7B-Instruct": {
+      "matrix_cohens_d": 7.0130297011370715
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "matrix_cohens_d": 4.383979712345579
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "matrix_cohens_d": 6.748777761815337
+    },
+    "gemma-2-9b-it": {
+      "matrix_cohens_d": 5.716341732752569
+    },
+    "per_pair_cohens_d": {
+      "code_vs_ethics": 4.357313475390816,
+      "code_vs_factual_qa": 4.702658632308716,
+      "code_vs_humanities": 5.186100019197815,
+      "code_vs_language": 2.2513283629508765,
+      "code_vs_math": 5.1200716482036785,
+      "code_vs_reasoning": 3.2408209984920364,
+      "code_vs_science": 6.668806455125968,
+      "ethics_vs_factual_qa": 3.8894242619643777,
+      "ethics_vs_humanities": 2.8589533307141757,
+      "ethics_vs_language": 2.340080794110246,
+      "ethics_vs_math": 4.2942951201197594,
+      "ethics_vs_reasoning": 2.367095320559031,
+      "ethics_vs_science": 3.53709760787132,
+      "factual_qa_vs_humanities": 5.448855235676807,
+      "factual_qa_vs_language": 2.5870278599768803,
+      "factual_qa_vs_math": 4.806937946235617,
+      "factual_qa_vs_reasoning": 4.187287544332481,
+      "factual_qa_vs_science": 5.495822950455313,
+      "humanities_vs_language": 2.6144426033401307,
+      "humanities_vs_math": 4.169963620207922,
+      "humanities_vs_reasoning": 3.529449668490911,
+      "humanities_vs_science": 3.8254094262421803,
+      "language_vs_math": 2.177373612194948,
+      "language_vs_reasoning": 2.2406614046655178,
+      "language_vs_science": 2.5577515617970215,
+      "math_vs_reasoning": 2.021651270714962,
+      "math_vs_science": 4.8580031109086494,
+      "reasoning_vs_science": 3.203816934459656
+    }
+  },
+  "bootstrap_cis": {
+    "code_vs_ethics": {
+      "mean": 0.7327077967954031,
+      "ci_lo": 0.6368761018058877,
+      "ci_hi": 0.8138548668517915
+    },
+    "code_vs_factual_qa": {
+      "mean": 0.6391267689902841,
+      "ci_lo": 0.5715815882869313,
+      "ci_hi": 0.7117033231703233
+    },
+    "code_vs_humanities": {
+      "mean": 0.6302746699150449,
+      "ci_lo": 0.5690007826651096,
+      "ci_hi": 0.6967376424864113
+    },
+    "code_vs_language": {
+      "mean": 0.49963959047777884,
+      "ci_lo": 0.3831109743110977,
+      "ci_hi": 0.6139562547094046
+    },
+    "code_vs_math": {
+      "mean": 0.7092512029255166,
+      "ci_lo": 0.6345697547380418,
+      "ci_hi": 0.7841996799447384
+    },
+    "code_vs_reasoning": {
+      "mean": 0.4813407538668211,
+      "ci_lo": 0.3946591000853034,
+      "ci_hi": 0.561898547670509
+    },
+    "code_vs_science": {
+      "mean": 0.7157946757997004,
+      "ci_lo": 0.6587211739116817,
+      "ci_hi": 0.7743255562187701
+    },
+    "ethics_vs_factual_qa": {
+      "mean": 0.594476647146575,
+      "ci_lo": 0.5082281260130951,
+      "ci_hi": 0.677226330169896
+    },
+    "ethics_vs_humanities": {
+      "mean": 0.6664017629811693,
+      "ci_lo": 0.5429998846307151,
+      "ci_hi": 0.797164629596833
+    },
+    "ethics_vs_language": {
+      "mean": 0.5164282289222112,
+      "ci_lo": 0.4004339197918421,
+      "ci_hi": 0.6405475731411362
+    },
+    "ethics_vs_math": {
+      "mean": 0.7039108930784616,
+      "ci_lo": 0.6166710638367843,
+      "ci_hi": 0.7901267048105135
+    },
+    "ethics_vs_reasoning": {
+      "mean": 0.44575359175911644,
+      "ci_lo": 0.3304269123841652,
+      "ci_hi": 0.5349325246078488
+    },
+    "ethics_vs_science": {
+      "mean": 0.7416014442384756,
+      "ci_lo": 0.6322933688414731,
+      "ci_hi": 0.8505635353439006
+    },
+    "factual_qa_vs_humanities": {
+      "mean": 0.5816709793378667,
+      "ci_lo": 0.5246770258173598,
+      "ci_hi": 0.6411119700757065
+    },
+    "factual_qa_vs_language": {
+      "mean": 0.5041928126003746,
+      "ci_lo": 0.4042880911609466,
+      "ci_hi": 0.6087793940215488
+    },
+    "factual_qa_vs_math": {
+      "mean": 0.6417223166581228,
+      "ci_lo": 0.5730701963886226,
+      "ci_hi": 0.7138541067310568
+    },
+    "factual_qa_vs_reasoning": {
+      "mean": 0.4688946439996194,
+      "ci_lo": 0.40755745010263156,
+      "ci_hi": 0.5201764549041091
+    },
+    "factual_qa_vs_science": {
+      "mean": 0.6098002037689689,
+      "ci_lo": 0.551330346092187,
+      "ci_hi": 0.6738295203323197
+    },
+    "humanities_vs_language": {
+      "mean": 0.47699884855630303,
+      "ci_lo": 0.3797138013061329,
+      "ci_hi": 0.5719058462488757
+    },
+    "humanities_vs_math": {
+      "mean": 0.6410010632805391,
+      "ci_lo": 0.5612719170770379,
+      "ci_hi": 0.7283968888006253
+    },
+    "humanities_vs_reasoning": {
+      "mean": 0.4263816079601816,
+      "ci_lo": 0.3562976166388044,
+      "ci_hi": 0.48482282590561343
+    },
+    "humanities_vs_science": {
+      "mean": 0.45928486686959064,
+      "ci_lo": 0.3962046584425797,
+      "ci_hi": 0.5251919503872169
+    },
+    "language_vs_math": {
+      "mean": 0.4837360866012374,
+      "ci_lo": 0.37032262385949116,
+      "ci_hi": 0.602194915540686
+    },
+    "language_vs_reasoning": {
+      "mean": 0.3542043477691643,
+      "ci_lo": 0.269266274387591,
+      "ci_hi": 0.4380000395018797
+    },
+    "language_vs_science": {
+      "mean": 0.4947867184239548,
+      "ci_lo": 0.38928466406747775,
+      "ci_hi": 0.6020746624565153
+    },
+    "math_vs_reasoning": {
+      "mean": 0.413006455495597,
+      "ci_lo": 0.291577045262026,
+      "ci_hi": 0.5045726734309978
+    },
+    "math_vs_science": {
+      "mean": 0.6963997939106422,
+      "ci_lo": 0.6210974059088127,
+      "ci_hi": 0.7703349237578203
+    },
+    "reasoning_vs_science": {
+      "mean": 0.3459877068425521,
+      "ci_lo": 0.2870726976109139,
+      "ci_hi": 0.40072964559366936
+    }
+  },
+  "fdr_correction": {
+    "n_total": 28,
+    "n_significant_raw": 28,
+    "n_significant_fdr": 28,
+    "alpha": 0.05,
+    "method": "one-sample t-test (D > 0), BH-FDR corrected",
+    "results": [
+      {
+        "pair": "code_vs_science",
+        "p_raw": 5.6624107343159787e-11,
+        "p_adjusted": 1.585475005608474e-09,
+        "significant": true
+      },
+      {
+        "pair": "factual_qa_vs_humanities",
+        "p_raw": 4.967139316434257e-10,
+        "p_adjusted": 4.6359966953386394e-09,
+        "significant": true
+      },
+      {
+        "pair": "factual_qa_vs_science",
+        "p_raw": 4.53136191951753e-10,
+        "p_adjusted": 4.6359966953386394e-09,
+        "significant": true
+      },
+      {
+        "pair": "code_vs_humanities",
+        "p_raw": 8.420966955879912e-10,
+        "p_adjusted": 5.4060129076141195e-09,
+        "significant": true
+      },
+      {
+        "pair": "code_vs_math",
+        "p_raw": 9.653594477882356e-10,
+        "p_adjusted": 5.4060129076141195e-09,
+        "significant": true
+      },
+      {
+        "pair": "factual_qa_vs_math",
+        "p_raw": 1.8887275039479465e-09,
+        "p_adjusted": 7.554910015791786e-09,
+        "significant": true
+      },
+      {
+        "pair": "math_vs_science",
+        "p_raw": 1.6882942290894096e-09,
+        "p_adjusted": 7.554910015791786e-09,
+        "significant": true
+      },
+      {
+        "pair": "code_vs_factual_qa",
+        "p_raw": 2.3832746265009775e-09,
+        "p_adjusted": 8.341461192753421e-09,
+        "significant": true
+      },
+      {
+        "pair": "code_vs_ethics",
+        "p_raw": 5.334876714421766e-09,
+        "p_adjusted": 1.659739422264549e-08,
+        "significant": true
+      },
+      {
+        "pair": "ethics_vs_math",
+        "p_raw": 6.21897323627782e-09,
+        "p_adjusted": 1.7413125061577894e-08,
+        "significant": true
+      },
+      {
+        "pair": "factual_qa_vs_reasoning",
+        "p_raw": 8.107145416953599e-09,
+        "p_adjusted": 1.9757776123320644e-08,
+        "significant": true
+      },
+      {
+        "pair": "humanities_vs_math",
+        "p_raw": 8.46761833856599e-09,
+        "p_adjusted": 1.9757776123320644e-08,
+        "significant": true
+      },
+      {
+        "pair": "ethics_vs_factual_qa",
+        "p_raw": 1.753991136843758e-08,
+        "p_adjusted": 3.777827063971171e-08,
+        "significant": true
+      },
+      {
+        "pair": "humanities_vs_science",
+        "p_raw": 2.084773330595947e-08,
+        "p_adjusted": 4.1695466611918935e-08,
+        "significant": true
+      },
+      {
+        "pair": "ethics_vs_science",
+        "p_raw": 4.6928971764854284e-08,
+        "p_adjusted": 8.397813796323325e-08,
+        "significant": true
+      },
+      {
+        "pair": "humanities_vs_reasoning",
+        "p_raw": 4.798750740756186e-08,
+        "p_adjusted": 8.397813796323325e-08,
+        "significant": true
+      },
+      {
+        "pair": "code_vs_reasoning",
+        "p_raw": 1.1501039542697847e-07,
+        "p_adjusted": 1.8942888658561159e-07,
+        "significant": true
+      },
+      {
+        "pair": "reasoning_vs_science",
+        "p_raw": 1.292665356499556e-07,
+        "p_adjusted": 2.0108127767770868e-07,
+        "significant": true
+      },
+      {
+        "pair": "ethics_vs_humanities",
+        "p_raw": 4.0714154549281676e-07,
+        "p_adjusted": 5.999980670420458e-07,
+        "significant": true
+      },
+      {
+        "pair": "humanities_vs_language",
+        "p_raw": 9.855796838043919e-07,
+        "p_adjusted": 1.3798115573261486e-06,
+        "significant": true
+      },
+      {
+        "pair": "factual_qa_vs_language",
+        "p_raw": 1.0926831803619068e-06,
+        "p_adjusted": 1.456910907149209e-06,
+        "significant": true
+      },
+      {
+        "pair": "language_vs_science",
+        "p_raw": 1.2210946918179346e-06,
+        "p_adjusted": 1.5541205168591893e-06,
+        "significant": true
+      },
+      {
+        "pair": "ethics_vs_reasoning",
+        "p_raw": 2.581089904603647e-06,
+        "p_adjusted": 3.1421964056044395e-06,
+        "significant": true
+      },
+      {
+        "pair": "ethics_vs_language",
+        "p_raw": 2.8803035895321145e-06,
+        "p_adjusted": 3.360354187787467e-06,
+        "significant": true
+      },
+      {
+        "pair": "code_vs_language",
+        "p_raw": 4.157510366443497e-06,
+        "p_adjusted": 4.656411610416717e-06,
+        "significant": true
+      },
+      {
+        "pair": "language_vs_reasoning",
+        "p_raw": 4.3480623525607245e-06,
+        "p_adjusted": 4.682528687373088e-06,
+        "significant": true
+      },
+      {
+        "pair": "language_vs_math",
+        "p_raw": 5.6904834812436055e-06,
+        "p_adjusted": 5.901242128697072e-06,
+        "significant": true
+      },
+      {
+        "pair": "math_vs_reasoning",
+        "p_raw": 1.1300626842277392e-05,
+        "p_adjusted": 1.1300626842277392e-05,
+        "significant": true
+      }
+    ]
+  }
+}

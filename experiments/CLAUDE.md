@@ -33,6 +33,15 @@
 - `scripts/slurm/dose_response.sh` — SLURM script for Qwen on HPC3
   - Output: `/data/user/mzhang630/data/nature_exp/results/dose_response/`
 
+## Statistical Validation
+- `src/statistical_validation.py` — Formal statistical validation of all dissociation claims
+  - No GPU needed; works from pre-computed JSON dissociation results
+  - Tests: cross-scale consistency, cross-model universality, matrix-level permutation test,
+    per-pair cross-replication (t-test, Wilcoxon, sign test), Cohen's d, bootstrap CIs, BH-FDR
+  - Uses 12 independent observations per pair (4 models x 3 scales)
+  - Output: `results/statistical_validation.json`
+  - Run: `python -m experiments.src.statistical_validation`
+
 ## Configs
 - `configs/models.yaml` — Model paths and specs
 - `configs/tasks.yaml` — Stimulus categories, dissociation pairs, pruning configs
