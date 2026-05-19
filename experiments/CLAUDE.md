@@ -24,6 +24,15 @@
 - `scripts/slurm/scaled_multi_dissociation.sh` — 8-way dissociation on medium set (50/cat) across 4 models
   - Output: `/data/user/mzhang630/data/nature_exp/results/scaled_multi/`
 
+## Dose-Response Experiment
+- `src/dose_response.py` — Dose-response curves for causal ablation
+  - Loads pre-computed selectivity from `multi_attribution.npz` (no re-computation)
+  - Sweeps ablation sizes: 500, 1000, 2000, 5000, 10000, 20000 neurons
+  - Tests math and code functions; also runs random ablation controls
+  - Output: `{model_short}_dose_response.json`
+- `scripts/slurm/dose_response.sh` — SLURM script for Qwen on HPC3
+  - Output: `/data/user/mzhang630/data/nature_exp/results/dose_response/`
+
 ## Configs
 - `configs/models.yaml` — Model paths and specs
 - `configs/tasks.yaml` — Stimulus categories, dissociation pairs, pruning configs
