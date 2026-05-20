@@ -53,8 +53,8 @@ python accuracy_dissociation.py \
     --model_path "${MODEL_PATH}" \
     --model_short "${MODEL_SHORT}" \
     --meta_path "${BASE}/activations/${MODEL_SHORT}_meta.json" \
-    --discovery_stimuli "${BASE}/stimuli/stimuli_medium_discovery.jsonl" \
-    --validation_stimuli "${BASE}/stimuli/stimuli_medium_validation.jsonl" \
+    --discovery_stimuli "${BASE}/stimuli/stimuli_with_answers_medium_discovery.jsonl" \
+    --validation_stimuli "${BASE}/stimuli/stimuli_with_answers_medium_validation.jsonl" \
     --output_dir "${BASE}/results/accuracy" \
     --n_ablate 5000
 
