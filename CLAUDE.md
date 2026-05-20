@@ -69,6 +69,11 @@ Build a causal functional atlas of Large Language Models — mapping which neuro
    - Cross-scale consistency: 27-28/28 pairs positive at all 3 scales per model
    - Results: `results/statistical_validation.json`
 
+### Running Experiments (new)
+- **Job 307966**: Method triangulation — Qwen only, 3 attribution methods (G×A, Act-only, Grad-only)
+  - `src/method_triangulation.py` — Compares top-k overlap and dissociation matrix correlation
+  - Output: `results/method_triangulation/`
+
 ### Key Findings (from analysis_findings.md)
 1. **Universal 3-layer functional hierarchy**: language/code → math/science → reasoning/ethics
 2. **Science-humanities knowledge integration zone**: bidirectional, near-symmetric, layer-colocalized

@@ -67,6 +67,18 @@
   - Output: `results/statistical_validation.json`
   - Run: `python -m experiments.src.statistical_validation`
 
+## Method Triangulation (Robustness to Attribution Method)
+- `src/method_triangulation.py` — Compares 3 attribution methods on one model (Qwen)
+  - Method 1: Gradient x Activation (existing): |dL/d_act * act|
+  - Method 2: Activation-Only: |act| (no gradient, simplest baseline)
+  - Method 3: Gradient-Only: |dL/d_act| (gradient without activation weighting)
+  - Per method: importance → selectivity → top-5000 neurons → 8x8 ablation dissociation matrix
+  - Cross-method: Jaccard overlap of top-k neurons, Pearson/Spearman correlation of dissociation matrices
+  - Output: `{model_short}_method_triangulation.json` + per-method `_attribution.npz`
+- `scripts/slurm/method_triangulation.sh` — Single GPU job for Qwen on medium stimuli
+  - Output: `/data/user/mzhang630/data/nature_exp/results/method_triangulation/`
+  - SLURM job 307966 submitted 2026-05-20
+
 ## Configs
 - `configs/models.yaml` — Model paths and specs
 - `configs/tasks.yaml` — Stimulus categories, dissociation pairs, pruning configs
