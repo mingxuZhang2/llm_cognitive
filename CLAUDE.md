@@ -92,3 +92,17 @@ Build a causal functional atlas of Large Language Models — mapping which neuro
 - `stimuli_balanced.jsonl` — 1216 samples (152/category, balanced)
 - `stimuli_full.jsonl` — 3133 samples (unbalanced, original)
 - 8 categories: math, code, reasoning, language, science, ethics, factual_qa, humanities
+
+### Stimuli with Gold Answers (for accuracy evaluation)
+- `src/prepare_stimuli_with_answers.py` — Loads from HuggingFace, adds gold answers
+  - Fields: {text, category, source, idx, answer, answer_type}
+  - answer_type: exact_match (GSM8K, TriviaQA), multiple_choice (ARC, MMLU),
+    completion (HellaSwag), generation (HumanEval, TruthfulQA)
+- Output files (in `experiments/data/stimuli_with_answers/` and HPC3 `stimuli/`):
+  - `stimuli_with_answers_full.jsonl` — 2964 samples (unbalanced, code=164)
+  - `stimuli_with_answers_balanced.jsonl` — 1312 samples (164/category)
+  - `stimuli_with_answers_medium.jsonl` — 400 samples (50/category)
+  - `*_discovery.jsonl` / `*_validation.jsonl` — 50/50 splits per category
+    - Discovery: used for computing attribution (finding neurons)
+    - Validation: used for measuring ablation effects on accuracy
+- HPC3 path: `/data/user/mzhang630/data/nature_exp/stimuli/stimuli_with_answers_*.jsonl`
