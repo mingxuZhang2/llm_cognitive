@@ -1,0 +1,900 @@
+{
+  "model": "Qwen2.5-7B-Instruct",
+  "n_neurons": 530432,
+  "n_ablate": 5000,
+  "pct_neurons": 0.9426278957528957,
+  "categories": [
+    "code",
+    "ethics",
+    "factual_qa",
+    "humanities",
+    "language",
+    "math",
+    "reasoning",
+    "science"
+  ],
+  "discovery_stimuli": "/data/user/mzhang630/data/nature_exp/stimuli/stimuli_with_answers_medium_discovery.jsonl",
+  "validation_stimuli": "/data/user/mzhang630/data/nature_exp/stimuli/stimuli_with_answers_medium_validation.jsonl",
+  "n_discovery_samples": 200,
+  "n_validation_samples": 200,
+  "baseline_accuracy": {
+    "code": 0.96,
+    "ethics": 0.44,
+    "factual_qa": 0.68,
+    "humanities": 0.48,
+    "language": 0.12,
+    "math": 0.04,
+    "reasoning": 0.68,
+    "science": 0.52
+  },
+  "baseline_ppl": {
+    "code": 2.3130502283055203,
+    "ethics": 26.00795958371836,
+    "factual_qa": 12.799968922879678,
+    "humanities": 12.75547641356383,
+    "language": 21.63491461759853,
+    "math": 1.1629603160022268,
+    "reasoning": 6.629280003293956,
+    "science": 6.454033999373927
+  },
+  "baseline": {
+    "ethics": {
+      "accuracy": 0.44,
+      "n_correct": 11,
+      "n_total": 25,
+      "perplexity": 26.00795958371836,
+      "avg_loss": 3.258402629006178,
+      "n_samples_ppl": 25,
+      "mean_logprob": -2.7022154834956065
+    },
+    "factual_qa": {
+      "accuracy": 0.68,
+      "n_correct": 17,
+      "n_total": 25,
+      "perplexity": 12.799968922879678,
+      "avg_loss": 2.549442743022599,
+      "n_samples_ppl": 25
+    },
+    "language": {
+      "accuracy": 0.12,
+      "n_correct": 3,
+      "n_total": 25,
+      "perplexity": 21.63491461759853,
+      "avg_loss": 3.074308427174886,
+      "n_samples_ppl": 25,
+      "mean_logprob": -2.6228753550834396
+    },
+    "humanities": {
+      "accuracy": 0.48,
+      "n_correct": 12,
+      "n_total": 25,
+      "perplexity": 12.75547641356383,
+      "avg_loss": 2.5459607020184523,
+      "n_samples_ppl": 25
+    },
+    "reasoning": {
+      "accuracy": 0.68,
+      "n_correct": 17,
+      "n_total": 25,
+      "perplexity": 6.629280003293956,
+      "avg_loss": 1.891496201512471,
+      "n_samples_ppl": 25
+    },
+    "math": {
+      "accuracy": 0.04,
+      "n_correct": 1,
+      "n_total": 25,
+      "perplexity": 1.1629603160022268,
+      "avg_loss": 0.15096875085824774,
+      "n_samples_ppl": 25
+    },
+    "code": {
+      "accuracy": 0.96,
+      "n_correct": 24,
+      "n_total": 25,
+      "perplexity": 2.3130502283055203,
+      "avg_loss": 0.8385670986665776,
+      "n_samples_ppl": 25,
+      "mean_logprob": -0.7823617437106057
+    },
+    "science": {
+      "accuracy": 0.52,
+      "n_correct": 13,
+      "n_total": 25,
+      "perplexity": 6.454033999373927,
+      "avg_loss": 1.8647053615697102,
+      "n_samples_ppl": 25
+    }
+  },
+  "ablation_results": {
+    "code": {
+      "ethics": {
+        "accuracy": 0.44,
+        "n_correct": 11,
+        "n_total": 25,
+        "perplexity": 26.420905172689935,
+        "avg_loss": 3.274155559396385,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.691249687332524
+      },
+      "factual_qa": {
+        "accuracy": 0.64,
+        "n_correct": 16,
+        "n_total": 25,
+        "perplexity": 12.79846786249418,
+        "avg_loss": 2.549325465518523,
+        "n_samples_ppl": 25
+      },
+      "language": {
+        "accuracy": 0.12,
+        "n_correct": 3,
+        "n_total": 25,
+        "perplexity": 21.363912945392947,
+        "avg_loss": 3.06170318764208,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.653868289481687
+      },
+      "humanities": {
+        "accuracy": 0.48,
+        "n_correct": 12,
+        "n_total": 25,
+        "perplexity": 12.918220468218328,
+        "avg_loss": 2.5586387542101425,
+        "n_samples_ppl": 25
+      },
+      "reasoning": {
+        "accuracy": 0.68,
+        "n_correct": 17,
+        "n_total": 25,
+        "perplexity": 6.705702703779326,
+        "avg_loss": 1.9029583141921331,
+        "n_samples_ppl": 25
+      },
+      "math": {
+        "accuracy": 0.04,
+        "n_correct": 1,
+        "n_total": 25,
+        "perplexity": 1.2242981849379144,
+        "avg_loss": 0.2023677695661382,
+        "n_samples_ppl": 25
+      },
+      "code": {
+        "accuracy": 0.96,
+        "n_correct": 24,
+        "n_total": 25,
+        "perplexity": 4.819688131910758,
+        "avg_loss": 1.5727092230461053,
+        "n_samples_ppl": 25,
+        "mean_logprob": -1.0382503745566924
+      },
+      "science": {
+        "accuracy": 0.56,
+        "n_correct": 14,
+        "n_total": 25,
+        "perplexity": 6.681521886931813,
+        "avg_loss": 1.8993457889848389,
+        "n_samples_ppl": 25
+      }
+    },
+    "ethics": {
+      "ethics": {
+        "accuracy": 0.32,
+        "n_correct": 8,
+        "n_total": 25,
+        "perplexity": 64.44426788958731,
+        "avg_loss": 4.165800786556158,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.8259496479681006
+      },
+      "factual_qa": {
+        "accuracy": 0.56,
+        "n_correct": 14,
+        "n_total": 25,
+        "perplexity": 18.543046086068692,
+        "avg_loss": 2.9200948447042183,
+        "n_samples_ppl": 25
+      },
+      "language": {
+        "accuracy": 0.08,
+        "n_correct": 2,
+        "n_total": 25,
+        "perplexity": 25.185341582015933,
+        "avg_loss": 3.2262621420207043,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.6755483818138104
+      },
+      "humanities": {
+        "accuracy": 0.48,
+        "n_correct": 12,
+        "n_total": 25,
+        "perplexity": 14.964836921551537,
+        "avg_loss": 2.7057032439216333,
+        "n_samples_ppl": 25
+      },
+      "reasoning": {
+        "accuracy": 0.64,
+        "n_correct": 16,
+        "n_total": 25,
+        "perplexity": 7.801691135889384,
+        "avg_loss": 2.054340522488668,
+        "n_samples_ppl": 25
+      },
+      "math": {
+        "accuracy": 0.04,
+        "n_correct": 1,
+        "n_total": 25,
+        "perplexity": 1.4690127244814066,
+        "avg_loss": 0.3845905591565442,
+        "n_samples_ppl": 25
+      },
+      "code": {
+        "accuracy": 0.96,
+        "n_correct": 24,
+        "n_total": 25,
+        "perplexity": 2.4602009540806993,
+        "avg_loss": 0.9002430352586261,
+        "n_samples_ppl": 25,
+        "mean_logprob": -0.7959512989904504
+      },
+      "science": {
+        "accuracy": 0.48,
+        "n_correct": 12,
+        "n_total": 25,
+        "perplexity": 7.324158901657155,
+        "avg_loss": 1.9911783225978203,
+        "n_samples_ppl": 25
+      }
+    },
+    "factual_qa": {
+      "ethics": {
+        "accuracy": 0.44,
+        "n_correct": 11,
+        "n_total": 25,
+        "perplexity": 27.182210955933957,
+        "avg_loss": 3.3025627503717754,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.7270718683783626
+      },
+      "factual_qa": {
+        "accuracy": 0.4,
+        "n_correct": 10,
+        "n_total": 25,
+        "perplexity": 19.694353401822262,
+        "avg_loss": 2.980331965308776,
+        "n_samples_ppl": 25
+      },
+      "language": {
+        "accuracy": 0.08,
+        "n_correct": 2,
+        "n_total": 25,
+        "perplexity": 22.324098558068837,
+        "avg_loss": 3.10566674780933,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.6817528926187015
+      },
+      "humanities": {
+        "accuracy": 0.48,
+        "n_correct": 12,
+        "n_total": 25,
+        "perplexity": 13.833673771002742,
+        "avg_loss": 2.6271057482177285,
+        "n_samples_ppl": 25
+      },
+      "reasoning": {
+        "accuracy": 0.68,
+        "n_correct": 17,
+        "n_total": 25,
+        "perplexity": 6.907343832733989,
+        "avg_loss": 1.9325851691970661,
+        "n_samples_ppl": 25
+      },
+      "math": {
+        "accuracy": 0.04,
+        "n_correct": 1,
+        "n_total": 25,
+        "perplexity": 1.2579818042089714,
+        "avg_loss": 0.22950869411082236,
+        "n_samples_ppl": 25
+      },
+      "code": {
+        "accuracy": 0.96,
+        "n_correct": 24,
+        "n_total": 25,
+        "perplexity": 2.3634130394675448,
+        "avg_loss": 0.8601067774570905,
+        "n_samples_ppl": 25,
+        "mean_logprob": -0.7875853929894658
+      },
+      "science": {
+        "accuracy": 0.52,
+        "n_correct": 13,
+        "n_total": 25,
+        "perplexity": 6.640212745904329,
+        "avg_loss": 1.893144003020904,
+        "n_samples_ppl": 25
+      }
+    },
+    "humanities": {
+      "ethics": {
+        "accuracy": 0.4,
+        "n_correct": 10,
+        "n_total": 25,
+        "perplexity": 25.80695776004548,
+        "avg_loss": 3.250644136192207,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.5626796040141926
+      },
+      "factual_qa": {
+        "accuracy": 0.56,
+        "n_correct": 14,
+        "n_total": 25,
+        "perplexity": 13.001970163498994,
+        "avg_loss": 2.5651008970172224,
+        "n_samples_ppl": 25
+      },
+      "language": {
+        "accuracy": 0.08,
+        "n_correct": 2,
+        "n_total": 25,
+        "perplexity": 21.81899507125581,
+        "avg_loss": 3.0827809239481834,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.6489573780080025
+      },
+      "humanities": {
+        "accuracy": 0.36,
+        "n_correct": 9,
+        "n_total": 25,
+        "perplexity": 20.090622402572183,
+        "avg_loss": 3.0002531590623405,
+        "n_samples_ppl": 25
+      },
+      "reasoning": {
+        "accuracy": 0.24,
+        "n_correct": 6,
+        "n_total": 25,
+        "perplexity": 6.815761430988315,
+        "avg_loss": 1.9192377875923172,
+        "n_samples_ppl": 25
+      },
+      "math": {
+        "accuracy": 0.04,
+        "n_correct": 1,
+        "n_total": 25,
+        "perplexity": 1.1973859633451238,
+        "avg_loss": 0.18014081682901614,
+        "n_samples_ppl": 25
+      },
+      "code": {
+        "accuracy": 0.96,
+        "n_correct": 24,
+        "n_total": 25,
+        "perplexity": 2.398226984861028,
+        "avg_loss": 0.8747297080310844,
+        "n_samples_ppl": 25,
+        "mean_logprob": -0.769271232925323
+      },
+      "science": {
+        "accuracy": 0.32,
+        "n_correct": 8,
+        "n_total": 25,
+        "perplexity": 6.823380421417309,
+        "avg_loss": 1.9203550120194752,
+        "n_samples_ppl": 25
+      }
+    },
+    "language": {
+      "ethics": {
+        "accuracy": 0.44,
+        "n_correct": 11,
+        "n_total": 25,
+        "perplexity": 27.332628398946973,
+        "avg_loss": 3.3080811679811406,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.6785455210115687
+      },
+      "factual_qa": {
+        "accuracy": 0.56,
+        "n_correct": 14,
+        "n_total": 25,
+        "perplexity": 13.353749756462133,
+        "avg_loss": 2.591797226040546,
+        "n_samples_ppl": 25
+      },
+      "language": {
+        "accuracy": 0.08,
+        "n_correct": 2,
+        "n_total": 25,
+        "perplexity": 29.75368686729365,
+        "avg_loss": 3.3929530526255514,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.868870794935552
+      },
+      "humanities": {
+        "accuracy": 0.44,
+        "n_correct": 11,
+        "n_total": 25,
+        "perplexity": 13.207292848591969,
+        "avg_loss": 2.5807691655564233,
+        "n_samples_ppl": 25
+      },
+      "reasoning": {
+        "accuracy": 0.68,
+        "n_correct": 17,
+        "n_total": 25,
+        "perplexity": 6.9055211506812615,
+        "avg_loss": 1.9323212584058587,
+        "n_samples_ppl": 25
+      },
+      "math": {
+        "accuracy": 0.04,
+        "n_correct": 1,
+        "n_total": 25,
+        "perplexity": 1.2160562279350287,
+        "avg_loss": 0.19561302255308433,
+        "n_samples_ppl": 25
+      },
+      "code": {
+        "accuracy": 0.96,
+        "n_correct": 24,
+        "n_total": 25,
+        "perplexity": 2.387150852009258,
+        "avg_loss": 0.8701005426825151,
+        "n_samples_ppl": 25,
+        "mean_logprob": -0.7712783085602962
+      },
+      "science": {
+        "accuracy": 0.48,
+        "n_correct": 12,
+        "n_total": 25,
+        "perplexity": 6.639125686544185,
+        "avg_loss": 1.8929802811053729,
+        "n_samples_ppl": 25
+      }
+    },
+    "math": {
+      "ethics": {
+        "accuracy": 0.44,
+        "n_correct": 11,
+        "n_total": 25,
+        "perplexity": 25.93946180300937,
+        "avg_loss": 3.2557654309093502,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.731987452680224
+      },
+      "factual_qa": {
+        "accuracy": 0.64,
+        "n_correct": 16,
+        "n_total": 25,
+        "perplexity": 12.681817535585767,
+        "avg_loss": 2.5401692775056537,
+        "n_samples_ppl": 25
+      },
+      "language": {
+        "accuracy": 0.08,
+        "n_correct": 2,
+        "n_total": 25,
+        "perplexity": 21.251857870497044,
+        "avg_loss": 3.056444320748577,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.622541039123981
+      },
+      "humanities": {
+        "accuracy": 0.44,
+        "n_correct": 11,
+        "n_total": 25,
+        "perplexity": 12.124372077636512,
+        "avg_loss": 2.495217648071111,
+        "n_samples_ppl": 25
+      },
+      "reasoning": {
+        "accuracy": 0.72,
+        "n_correct": 18,
+        "n_total": 25,
+        "perplexity": 6.451543385110533,
+        "avg_loss": 1.864319386696969,
+        "n_samples_ppl": 25
+      },
+      "math": {
+        "accuracy": 0.04,
+        "n_correct": 1,
+        "n_total": 25,
+        "perplexity": 4.934094192453616,
+        "avg_loss": 1.5961691084100709,
+        "n_samples_ppl": 25
+      },
+      "code": {
+        "accuracy": 0.96,
+        "n_correct": 24,
+        "n_total": 25,
+        "perplexity": 2.357899459540223,
+        "avg_loss": 0.8577711631824985,
+        "n_samples_ppl": 25,
+        "mean_logprob": -0.806217851378625
+      },
+      "science": {
+        "accuracy": 0.4,
+        "n_correct": 10,
+        "n_total": 25,
+        "perplexity": 6.444090225285131,
+        "avg_loss": 1.8631634666576042,
+        "n_samples_ppl": 25
+      }
+    },
+    "reasoning": {
+      "ethics": {
+        "accuracy": 0.4,
+        "n_correct": 10,
+        "n_total": 25,
+        "perplexity": 25.951962145232716,
+        "avg_loss": 3.256247219286467,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.7005606793011157
+      },
+      "factual_qa": {
+        "accuracy": 0.6,
+        "n_correct": 15,
+        "n_total": 25,
+        "perplexity": 13.14652534333696,
+        "avg_loss": 2.5761574912623715,
+        "n_samples_ppl": 25
+      },
+      "language": {
+        "accuracy": 0.08,
+        "n_correct": 2,
+        "n_total": 25,
+        "perplexity": 21.89845222029589,
+        "avg_loss": 3.086415959452535,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.6673701849423805
+      },
+      "humanities": {
+        "accuracy": 0.4,
+        "n_correct": 10,
+        "n_total": 25,
+        "perplexity": 12.624340331429613,
+        "avg_loss": 2.5356267228204215,
+        "n_samples_ppl": 25
+      },
+      "reasoning": {
+        "accuracy": 0.36,
+        "n_correct": 9,
+        "n_total": 25,
+        "perplexity": 9.631143035971803,
+        "avg_loss": 2.2650019140904765,
+        "n_samples_ppl": 25
+      },
+      "math": {
+        "accuracy": 0.04,
+        "n_correct": 1,
+        "n_total": 25,
+        "perplexity": 1.2203002363633566,
+        "avg_loss": 0.19909692384846492,
+        "n_samples_ppl": 25
+      },
+      "code": {
+        "accuracy": 0.96,
+        "n_correct": 24,
+        "n_total": 25,
+        "perplexity": 2.3720909047137795,
+        "avg_loss": 0.8637718044794522,
+        "n_samples_ppl": 25,
+        "mean_logprob": -0.8240091998544895
+      },
+      "science": {
+        "accuracy": 0.2,
+        "n_correct": 5,
+        "n_total": 25,
+        "perplexity": 7.571095635922823,
+        "avg_loss": 2.024337790916018,
+        "n_samples_ppl": 25
+      }
+    },
+    "science": {
+      "ethics": {
+        "accuracy": 0.44,
+        "n_correct": 11,
+        "n_total": 25,
+        "perplexity": 25.025291946184204,
+        "avg_loss": 3.219886991314422,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.705544257670955
+      },
+      "factual_qa": {
+        "accuracy": 0.68,
+        "n_correct": 17,
+        "n_total": 25,
+        "perplexity": 13.077520797566192,
+        "avg_loss": 2.5708947865933234,
+        "n_samples_ppl": 25
+      },
+      "language": {
+        "accuracy": 0.08,
+        "n_correct": 2,
+        "n_total": 25,
+        "perplexity": 21.743721076122586,
+        "avg_loss": 3.07932502970154,
+        "n_samples_ppl": 25,
+        "mean_logprob": -2.634918108674439
+      },
+      "humanities": {
+        "accuracy": 0.36,
+        "n_correct": 9,
+        "n_total": 25,
+        "perplexity": 13.514380980480617,
+        "avg_loss": 2.603754376273279,
+        "n_samples_ppl": 25
+      },
+      "reasoning": {
+        "accuracy": 0.52,
+        "n_correct": 13,
+        "n_total": 25,
+        "perplexity": 7.759389723657568,
+        "avg_loss": 2.048903687243976,
+        "n_samples_ppl": 25
+      },
+      "math": {
+        "accuracy": 0.0,
+        "n_correct": 0,
+        "n_total": 25,
+        "perplexity": 1.2585956056107914,
+        "avg_loss": 0.22999650061468466,
+        "n_samples_ppl": 25
+      },
+      "code": {
+        "accuracy": 0.96,
+        "n_correct": 24,
+        "n_total": 25,
+        "perplexity": 2.3970531105636783,
+        "avg_loss": 0.8742401123046875,
+        "n_samples_ppl": 25,
+        "mean_logprob": -0.8018986044168749
+      },
+      "science": {
+        "accuracy": 0.24,
+        "n_correct": 6,
+        "n_total": 25,
+        "perplexity": 9.95895563800932,
+        "avg_loss": 2.2984722104772177,
+        "n_samples_ppl": 25
+      }
+    }
+  },
+  "random_control": {
+    "ethics": {
+      "accuracy": 0.44,
+      "n_correct": 11,
+      "n_total": 25,
+      "perplexity": 26.45950139524048,
+      "avg_loss": 3.2756153147919735,
+      "n_samples_ppl": 25,
+      "mean_logprob": -2.669360551841781
+    },
+    "factual_qa": {
+      "accuracy": 0.72,
+      "n_correct": 18,
+      "n_total": 25,
+      "perplexity": 13.023507457860116,
+      "avg_loss": 2.5667559905060684,
+      "n_samples_ppl": 25
+    },
+    "language": {
+      "accuracy": 0.08,
+      "n_correct": 2,
+      "n_total": 25,
+      "perplexity": 21.362144689699548,
+      "avg_loss": 3.0616204158727065,
+      "n_samples_ppl": 25,
+      "mean_logprob": -2.659762886343093
+    },
+    "humanities": {
+      "accuracy": 0.48,
+      "n_correct": 12,
+      "n_total": 25,
+      "perplexity": 13.118964387381679,
+      "avg_loss": 2.574058846511908,
+      "n_samples_ppl": 25
+    },
+    "reasoning": {
+      "accuracy": 0.76,
+      "n_correct": 19,
+      "n_total": 25,
+      "perplexity": 6.687710797363564,
+      "avg_loss": 1.900271632826439,
+      "n_samples_ppl": 25
+    },
+    "math": {
+      "accuracy": 0.04,
+      "n_correct": 1,
+      "n_total": 25,
+      "perplexity": 1.1951209222298516,
+      "avg_loss": 0.17824737041459957,
+      "n_samples_ppl": 25
+    },
+    "code": {
+      "accuracy": 0.96,
+      "n_correct": 24,
+      "n_total": 25,
+      "perplexity": 2.361405911554915,
+      "avg_loss": 0.8592571668988149,
+      "n_samples_ppl": 25,
+      "mean_logprob": -0.7900034124401144
+    },
+    "science": {
+      "accuracy": 0.56,
+      "n_correct": 14,
+      "n_total": 25,
+      "perplexity": 6.472236169591668,
+      "avg_loss": 1.867521670065638,
+      "n_samples_ppl": 25
+    }
+  },
+  "accuracy_dissociation_matrix": [
+    [
+      0.0,
+      0.0,
+      0.040000000000000036,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.040000000000000036
+    ],
+    [
+      0.0,
+      0.12,
+      0.12,
+      0.0,
+      0.039999999999999994,
+      0.0,
+      0.040000000000000036,
+      0.040000000000000036
+    ],
+    [
+      0.0,
+      0.0,
+      0.28,
+      0.0,
+      0.039999999999999994,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.03999999999999998,
+      0.12,
+      0.12,
+      0.039999999999999994,
+      0.0,
+      0.44000000000000006,
+      0.2
+    ],
+    [
+      0.0,
+      0.0,
+      0.12,
+      0.03999999999999998,
+      0.039999999999999994,
+      0.0,
+      0.0,
+      0.040000000000000036
+    ],
+    [
+      0.0,
+      0.0,
+      0.040000000000000036,
+      0.03999999999999998,
+      0.039999999999999994,
+      0.0,
+      -0.039999999999999925,
+      0.12
+    ],
+    [
+      0.0,
+      0.03999999999999998,
+      0.08000000000000007,
+      0.07999999999999996,
+      0.039999999999999994,
+      0.0,
+      0.32000000000000006,
+      0.32
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.12,
+      0.039999999999999994,
+      0.04,
+      0.16000000000000003,
+      0.28
+    ]
+  ],
+  "ppl_dissociation_matrix": [
+    [
+      2.0836936755331656,
+      1.015877661899709,
+      0.9998827293726615,
+      1.0127587594048184,
+      0.9874738737362457,
+      1.0527428735887925,
+      1.0115280543961633,
+      1.0352473952848644
+    ],
+    [
+      1.0636176093257506,
+      2.4778671191849684,
+      1.4486789927218795,
+      1.1732087800059223,
+      1.1641063543430568,
+      1.2631666827044112,
+      1.1768534640282022,
+      1.1348187664285057
+    ],
+    [
+      1.021773332263052,
+      1.0451496922869223,
+      1.5386250951452713,
+      1.0845281918511789,
+      1.0318551726527132,
+      1.0817065611777614,
+      1.041944800838382,
+      1.0288468803462243
+    ],
+    [
+      1.036824430145603,
+      0.9922715266060813,
+      1.0157813852390096,
+      1.575058567095805,
+      1.0085084899529737,
+      1.0296017386571177,
+      1.028129966995164,
+      1.057227219763517
+    ],
+    [
+      1.0320358904432532,
+      1.0509332080036717,
+      1.043264232664861,
+      1.035421368859864,
+      1.3752625047612184,
+      1.0456558243666676,
+      1.0416698566435643,
+      1.0286784493524845
+    ],
+    [
+      1.0193896486491596,
+      0.9973662762552171,
+      0.9907694004566903,
+      0.9505228722577371,
+      0.9822945108001538,
+      4.242702115077303,
+      0.9731891520504324,
+      0.9984592931971291
+    ],
+    [
+      1.0255250299737377,
+      0.997846911507787,
+      1.0270747860830989,
+      0.9897192329096567,
+      1.012181125156047,
+      1.0493051392830328,
+      1.452818862860866,
+      1.173079602099595
+    ],
+    [
+      1.036316929580771,
+      0.962216657774671,
+      1.0216837928559652,
+      1.0594963717787749,
+      1.0050292067450801,
+      1.082234353393346,
+      1.1704724675684364,
+      1.5430590602676384
+    ]
+  ],
+  "n_specific_categories_accuracy": 2,
+  "n_pairwise_dissociations_accuracy": 5,
+  "total_pairwise": 28,
+  "elapsed_seconds": 572.009280204773
+}
