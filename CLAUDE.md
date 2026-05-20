@@ -38,9 +38,16 @@ Build a causal functional atlas of Large Language Models — mapping which neuro
    - Science-humanities uniquely bidirectional coupling (layer-colocalized)
    - Reasoning is emergent coalition (3x weaker self-effect than math)
 
-### Running Experiments
+### Pending Experiments
 - **Job 306948**: Balanced multi-dissociation (152/cat, 1216 total) — 4 models
 - **Job 306949**: Scaled predictive experiments (50/cat) — 4 models
+
+7. **Accuracy-Based Dissociation** (code ready, awaiting stimuli)
+   - `src/accuracy_dissociation.py` — Downstream task accuracy under causal ablation
+   - Supports 4 answer_types: multiple_choice, exact_match, completion, generation
+   - Uses separate discovery (attribution) and validation (accuracy) stimuli sets
+   - Outputs: 8x8 accuracy drop matrix + PPL matrix + baselines + random control
+   - SLURM: `scripts/slurm/accuracy_dissociation.sh` (array 0-3, 4 models)
 
 5. **Convergence Analysis** (local, no GPU)
    - `src/convergence_analysis.py` — Functional Convergence Index across 4 architectures

@@ -46,6 +46,18 @@
   - Output: `/data/user/mzhang630/data/nature_exp/results/subcategory/`
   - SLURM job 306991 submitted 2026-05-20
 
+## Accuracy-Based Dissociation
+- `src/accuracy_dissociation.py` — Extends causal dissociation to downstream task ACCURACY
+  - Supports 4 answer_types: multiple_choice (log-prob of A/B/C/D), exact_match (generate + extract),
+    completion (log-prob of gold completion), generation (mean log-prob of gold answer)
+  - Uses separate DISCOVERY stimuli (for attribution) and VALIDATION stimuli (for accuracy)
+  - Outputs: 8x8 accuracy drop matrix + 8x8 PPL ratio matrix + baseline accuracies + random control
+  - Output per model: `{model_short}_accuracy_dissociation.json`
+- `scripts/slurm/accuracy_dissociation.sh` — SLURM array job for 4 models
+  - Discovery: `stimuli/stimuli_medium_discovery.jsonl`, Validation: `stimuli/stimuli_medium_validation.jsonl`
+  - Output: `/data/user/mzhang630/data/nature_exp/results/accuracy/`
+  - Time: ~6-8h per model (generation for exact_match is slower than PPL-only)
+
 ## Statistical Validation
 - `src/statistical_validation.py` — Formal statistical validation of all dissociation claims
   - No GPU needed; works from pre-computed JSON dissociation results
