@@ -27,8 +27,12 @@ import json
 import random
 import argparse
 import re
+import gzip
+import io
 from pathlib import Path
 from collections import Counter, defaultdict
+
+import requests
 from datasets import load_dataset
 
 
@@ -52,8 +56,8 @@ MMLU_HUMANITIES_SUBJECTS = [
 # ---------------------------------------------------------------------------
 
 def load_gsm8k(n, rng):
-    """math: GSM8K — answer is the number after ####."""
-    ds = load_dataset("openai/gsm8k", "main", split="train", trust_remote_code=True)
+    """math: GSM8K -- answer is the number after ####."""
+    ds = load_dataset("openai/gsm8k", "main", split="train")
     items = list(ds)
     if len(items) > n:
         items = rng.sample(items, n)
@@ -82,10 +86,42 @@ def load_gsm8k(n, rng):
     return samples
 
 
+def _download_humaneval_from_github():
+    """Download HumanEval dataset from the official GitHub repository.
+
+    The openai/openai_humaneval HuggingFace dataset uses a legacy loading
+    script that is no longer supported in datasets>=4.0. We fall back to
+    downloading the gzipped JSONL directly from GitHub.
+    """
+    url = "https://raw.githubusercontent.com/openai/human-eval/master/data/HumanEval.jsonl.gz"
+    print(f"    Downloading HumanEval from GitHub: {url}")
+    resp = requests.get(url, timeout=60)
+    resp.raise_for_status()
+    raw = gzip.decompress(resp.content).decode("utf-8")
+    items = [json.loads(line) for line in raw.strip().split("\n") if line.strip()]
+    print(f"    Downloaded {len(items)} HumanEval problems")
+    return items
+
+
 def load_humaneval(n, rng):
-    """code: HumanEval — answer is canonical_solution."""
-    ds = load_dataset("openai/openai_humaneval", split="test", trust_remote_code=True)
-    items = list(ds)
+    """code: HumanEval -- answer is canonical_solution."""
+    # Try HuggingFace first, fall back to GitHub download
+    items = None
+    try:
+        ds = load_dataset("openai/openai_humaneval", split="test")
+        items = list(ds)
+        print("    Loaded from HuggingFace")
+    except Exception:
+        pass
+
+    if items is None:
+        try:
+            items = _download_humaneval_from_github()
+        except Exception as e:
+            print(f"    WARNING: GitHub download failed: {e}")
+            print("    Falling back to MBPP as code source")
+            return _load_mbpp_fallback(n, rng)
+
     if len(items) > n:
         items = rng.sample(items, n)
 
@@ -105,10 +141,30 @@ def load_humaneval(n, rng):
     return samples
 
 
+def _load_mbpp_fallback(n, rng):
+    """Fallback: use MBPP if HumanEval is unavailable."""
+    ds = load_dataset("google-research-datasets/mbpp", "sanitized", split="test")
+    items = list(ds)
+    if len(items) > n:
+        items = rng.sample(items, n)
+    samples = []
+    for item in items:
+        text = item.get("text", item.get("prompt", "")).strip()
+        answer = item.get("code", "").strip()
+        if text and len(text) > 10 and answer:
+            samples.append({
+                "text": text[:2000],
+                "category": "code",
+                "source": "mbpp",
+                "answer": answer[:2000],
+                "answer_type": "generation",
+            })
+    return samples
+
+
 def load_arc_challenge(n, rng):
-    """reasoning: ARC-Challenge — MC with correct answer letter."""
-    ds = load_dataset("allenai/ai2_arc", "ARC-Challenge", split="train",
-                      trust_remote_code=True)
+    """reasoning: ARC-Challenge -- MC with correct answer letter."""
+    ds = load_dataset("allenai/ai2_arc", "ARC-Challenge", split="train")
     items = list(ds)
     if len(items) > n:
         items = rng.sample(items, n)
@@ -140,8 +196,8 @@ def load_arc_challenge(n, rng):
 
 
 def load_hellaswag(n, rng):
-    """language: HellaSwag — answer is the correct ending."""
-    ds = load_dataset("Rowan/hellaswag", split="train", trust_remote_code=True)
+    """language: HellaSwag -- answer is the correct ending."""
+    ds = load_dataset("Rowan/hellaswag", split="train")
     items = list(ds)
     if len(items) > n:
         items = rng.sample(items, n)
@@ -168,9 +224,16 @@ def load_hellaswag(n, rng):
     return samples
 
 
+def _load_mmlu_all():
+    """Load and cache the full MMLU test set (shared between STEM and humanities)."""
+    if not hasattr(_load_mmlu_all, "_cache"):
+        _load_mmlu_all._cache = load_dataset("cais/mmlu", "all", split="test")
+    return _load_mmlu_all._cache
+
+
 def load_mmlu_stem(n, rng):
-    """science: MMLU-STEM — MC with correct letter."""
-    ds = load_dataset("cais/mmlu", "all", split="test", trust_remote_code=True)
+    """science: MMLU-STEM -- MC with correct letter."""
+    ds = _load_mmlu_all()
     items = [x for x in ds if x.get("subject", "") in MMLU_STEM_SUBJECTS]
     if len(items) > n:
         items = rng.sample(items, n)
@@ -200,8 +263,8 @@ def load_mmlu_stem(n, rng):
 
 
 def load_mmlu_humanities(n, rng):
-    """humanities: MMLU-Humanities — MC with correct letter."""
-    ds = load_dataset("cais/mmlu", "all", split="test", trust_remote_code=True)
+    """humanities: MMLU-Humanities -- MC with correct letter."""
+    ds = _load_mmlu_all()
     items = [x for x in ds if x.get("subject", "") in MMLU_HUMANITIES_SUBJECTS]
     if len(items) > n:
         items = rng.sample(items, n)
@@ -230,9 +293,12 @@ def load_mmlu_humanities(n, rng):
 
 
 def load_triviaqa(n, rng):
-    """factual_qa: TriviaQA — answer is the canonical value or first alias."""
-    ds = load_dataset("mandarjoshi/trivia_qa", "rc.nocontext", split="train",
-                      trust_remote_code=True)
+    """factual_qa: TriviaQA -- answer is the canonical value or first alias."""
+    # Use the cached dataset name (trivia_qa, not mandarjoshi/trivia_qa)
+    try:
+        ds = load_dataset("trivia_qa", "rc.nocontext", split="train")
+    except Exception:
+        ds = load_dataset("mandarjoshi/trivia_qa", "rc.nocontext", split="train")
     items = list(ds)
     if len(items) > n:
         items = rng.sample(items, n)
@@ -265,9 +331,12 @@ def load_triviaqa(n, rng):
 
 
 def load_truthfulqa(n, rng):
-    """ethics: TruthfulQA — answer is best_answer."""
-    ds = load_dataset("truthfulqa/truthful_qa", "generation", split="validation",
-                      trust_remote_code=True)
+    """ethics: TruthfulQA -- answer is best_answer."""
+    # Use the cached dataset name (truthful_qa, not truthfulqa/truthful_qa)
+    try:
+        ds = load_dataset("truthful_qa", "generation", split="validation")
+    except Exception:
+        ds = load_dataset("truthfulqa/truthful_qa", "generation", split="validation")
     items = list(ds)
     if len(items) > n:
         items = rng.sample(items, n)
