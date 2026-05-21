@@ -114,28 +114,28 @@ def plot_dissociation_matrix(dissoc_path, model_name, ax):
     idx_map = {c: cats.index(c) for c in cat_order}
 
     matrix = np.array(data["dissociation_matrix_logppl_delta"])
-    # Reorder to standard order
     order = [idx_map[c] for c in cat_order]
     matrix = matrix[np.ix_(order, order)]
 
-    im = ax.imshow(matrix, cmap="RdYlBu_r", vmin=-0.1, vmax=1.3, interpolation="nearest")
+    im = ax.imshow(matrix, cmap="RdYlBu_r", vmin=-0.05, vmax=1.3, interpolation="nearest")
     ax.set_xticks(range(len(cat_order)))
-    ax.set_xticklabels(cat_order, rotation=45, ha="right", fontsize=8)
+    ax.set_xticklabels(cat_order, rotation=45, ha="right", fontsize=9)
     ax.set_yticks(range(len(cat_order)))
-    ax.set_yticklabels(cat_order, fontsize=8)
-    ax.set_title(model_name, fontsize=11, fontweight="bold")
+    ax.set_yticklabels(cat_order, fontsize=9)
+    ax.set_xlabel("Measured category", fontsize=10)
+    ax.set_ylabel("Ablated category", fontsize=10)
+    ax.set_title(model_name, fontsize=12, fontweight="bold")
 
-    # Annotate values
     for i in range(len(cat_order)):
         for j in range(len(cat_order)):
             val = matrix[i, j]
-            color = "white" if val > 0.6 else "black"
+            color = "white" if val > 0.5 else "black"
             if i == j:
                 ax.text(j, i, f"{val:.2f}", ha="center", va="center",
-                        fontsize=7, fontweight="bold", color=color)
-            elif abs(val) > 0.05:
+                        fontsize=8, fontweight="bold", color=color)
+            elif abs(val) > 0.04:
                 ax.text(j, i, f"{val:.2f}", ha="center", va="center",
-                        fontsize=6, color=color)
+                        fontsize=7, color=color)
 
     return im
 
@@ -176,16 +176,20 @@ def main(stats_dir, dissoc_dir, output_dir):
     plt.close()
 
     # === Figure 3: 4-panel dissociation matrices ===
-    fig, axes = plt.subplots(2, 2, figsize=(16, 14))
-    axes = axes.flatten()
+    fig, axes = plt.subplots(2, 2, figsize=(18, 15))
+    axes_flat = axes.flatten()
+    im = None
     for idx, (model_full, model_short) in enumerate(MODELS):
         path = os.path.join(dissoc_dir, f"{model_full}_multi_dissociation.json")
         if os.path.exists(path):
-            im = plot_dissociation_matrix(path, model_short, axes[idx])
+            im = plot_dissociation_matrix(path, model_short, axes_flat[idx])
     fig.suptitle("8-way Functional Dissociation Matrices (Log-PPL delta)",
-                 fontsize=14, fontweight="bold", y=0.98)
-    fig.colorbar(im, ax=axes, shrink=0.6, label="Log-PPL increase (ablated - baseline)")
-    plt.tight_layout(rect=[0, 0, 0.92, 0.95])
+                 fontsize=15, fontweight="bold", y=1.0)
+    fig.subplots_adjust(right=0.88, hspace=0.35, wspace=0.25)
+    cbar_ax = fig.add_axes([0.91, 0.15, 0.02, 0.7])
+    if im is not None:
+        cb = fig.colorbar(im, cax=cbar_ax)
+        cb.set_label("Log-PPL increase (ablated − baseline)", fontsize=11)
     fig.savefig(os.path.join(output_dir, "dissociation_matrices.png"), dpi=200, bbox_inches="tight")
     print(f"Saved: dissociation_matrices.png")
     plt.close()
