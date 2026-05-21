@@ -97,49 +97,66 @@ def plot_steering(pred_dir, ax):
     scales = ["1.2", "1.5", "2.0", "3.0"]
     scale_vals = [1.2, 1.5, 2.0, 3.0]
     targets = ["math", "code"]
-    target_labels = {"math": "Amplify math", "code": "Amplify code"}
     target_colors = {"math": "#e41a1c", "code": "#377eb8"}
-    target_styles = {"math": "-o", "code": "--s"}
+
+    model_markers = {
+        "Qwen-7B": "o",
+        "LLaMA-8B": "s",
+        "Mistral-7B": "D",
+        "Gemma-9B": "^",
+    }
 
     for target in targets:
-        all_deltas = {s: [] for s in scales}
+        per_model = {}
         for model_full, model_short in MODELS:
             path = os.path.join(pred_dir, f"{model_full}_predictive_results.json")
             if not os.path.exists(path):
                 continue
             with open(path) as f:
                 data = json.load(f)
-            st = data["steering"]
 
             pd_bl = data["pathway_decomposition"]["baseline"]
             bl_reas = pd_bl["reasoning"]["ppl"]
+            sr = data["steering"]["steering_results"].get(target, {})
 
-            sr = st["steering_results"].get(target, {})
+            ratios = []
             for s in scales:
                 if s in sr and "reasoning" in sr[s]:
                     reas_ppl = sr[s]["reasoning"]["ppl"] if isinstance(sr[s]["reasoning"], dict) else sr[s]["reasoning"]
-                    all_deltas[s].append(reas_ppl / bl_reas)
+                    r = reas_ppl / bl_reas
+                    ratios.append(min(r, 3.0))
+                else:
+                    ratios.append(1.0)
+            per_model[model_short] = ratios
 
-        medians = [np.median(all_deltas[s]) if all_deltas[s] else 1.0 for s in scales]
-        q25 = [np.percentile(all_deltas[s], 25) if all_deltas[s] else 1.0 for s in scales]
-        q75 = [np.percentile(all_deltas[s], 75) if all_deltas[s] else 1.0 for s in scales]
-        yerr_low = [medians[i] - q25[i] for i in range(len(scales))]
-        yerr_high = [q75[i] - medians[i] for i in range(len(scales))]
+        for model_short, ratios in per_model.items():
+            jitter = 0.03 if target == "math" else -0.03
+            x_vals = [sv + jitter for sv in scale_vals]
+            label = f"{'Math' if target == 'math' else 'Code'} ({model_short})" if model_short == "Qwen-7B" else None
+            ax.plot(x_vals, ratios, marker=model_markers[model_short],
+                    color=target_colors[target], linewidth=1.2, markersize=5,
+                    alpha=0.7, linestyle="-" if target == "math" else "--",
+                    label=None)
+            # Only label once per target for legend
+        # Draw a single legend entry per target
+        ax.plot([], [], color=target_colors[target],
+                linestyle="-" if target == "math" else "--",
+                marker="o", label=f"Amplify {target}", linewidth=2)
 
-        ax.errorbar(scale_vals, medians, yerr=[yerr_low, yerr_high],
-                    fmt=target_styles[target],
-                    color=target_colors[target], label=target_labels[target],
-                    linewidth=2, markersize=6, capsize=4, alpha=0.9)
+    # Add model legend
+    for model_short, marker in model_markers.items():
+        ax.plot([], [], marker=marker, color="gray", linestyle="none",
+                markersize=5, label=model_short)
 
     ax.axhline(y=1.0, color="gray", linestyle="--", linewidth=0.8, alpha=0.5)
     ax.set_xlabel("Amplification scale", fontsize=10)
-    ax.set_ylabel("Reasoning PPL ratio (median ± IQR)", fontsize=10)
+    ax.set_ylabel("Reasoning PPL ratio", fontsize=10)
     ax.set_title("B. Atlas-Guided Steering (DAG validation)", fontsize=12, fontweight="bold")
-    ax.legend(fontsize=9, loc="upper left")
-    ax.set_ylim(0.8, 2.5)
+    ax.legend(fontsize=7, loc="upper left", ncol=2)
+    ax.set_ylim(0.8, 3.0)
 
     ax.annotate("math→reasoning: disrupted ✓\ncode→reasoning: unaffected ✓",
-                xy=(2.0, 2.1), fontsize=8, color="#2a7f2a",
+                xy=(1.8, 2.6), fontsize=8, color="#2a7f2a",
                 bbox=dict(boxstyle="round,pad=0.3", facecolor="lightyellow", alpha=0.8))
 
 
