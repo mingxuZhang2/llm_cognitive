@@ -190,7 +190,7 @@ def plot_pruning(pruning_dir, ax):
                     label=method, linewidth=2, markersize=6, capsize=4, alpha=0.9)
 
     ax.set_yscale("log")
-    ax.set_xlabel("Sparsity (%)", fontsize=10)
+    ax.set_xlabel("FFN neuron sparsity (%)", fontsize=10)
     ax.set_ylabel("Avg PPL ratio (log scale)", fontsize=10)
     ax.set_title("C. Atlas-Guided Pruning", fontsize=12, fontweight="bold")
     ax.legend(fontsize=9)
