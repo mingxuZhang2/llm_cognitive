@@ -83,15 +83,17 @@ def run(model_path, model_short, attribution_npz, decomposition_jsonl,
     base_scores, base_expected, _ = compute_wrongness_scores(
         model, tokenizer, stimuli, rating_token_ids, device,
     )
-    base_summary, _ = pair_discrimination(stimuli, base_scores)
     print("  Baseline log-odds discrimination:")
     for c in CONDITIONS:
         s = base_summary[c]
         print(f"    {c:>12s}: {s['mean']:+7.3f} (std {s['std']:.2f}, n={s['n']})")
 
     # 4x4 ablation matrix + anti-ablation per condition + random control
+    base_summary, base_pairs = pair_discrimination(stimuli, base_scores)
+
     print(f"\n[3/4] Ablating top-{n_ablate} contrast neurons for each condition...")
     ablation_summaries = {}  # ablation_target -> {cond: summary_dict}
+    ablation_pairs = {}      # ablation_target -> list of per-pair records
     for target_cond in CONDITIONS:
         # top-k contrast (a > b)
         try:
@@ -106,8 +108,9 @@ def run(model_path, model_short, attribution_npz, decomposition_jsonl,
         )
         for h in hooks:
             h.remove()
-        summary, _ = pair_discrimination(stimuli, scores)
+        summary, pairs = pair_discrimination(stimuli, scores)
         ablation_summaries[f"top_{target_cond}"] = summary
+        ablation_pairs[f"top_{target_cond}"] = pairs
 
         # anti (bottom-k)
         neurons_anti, _ = select_neurons(
@@ -119,8 +122,9 @@ def run(model_path, model_short, attribution_npz, decomposition_jsonl,
         )
         for h in hooks:
             h.remove()
-        anti_summary, _ = pair_discrimination(stimuli, scores_anti)
+        anti_summary, anti_pairs = pair_discrimination(stimuli, scores_anti)
         ablation_summaries[f"bot_{target_cond}"] = anti_summary
+        ablation_pairs[f"bot_{target_cond}"] = anti_pairs
 
     # Random control (3 seeds)
     print(f"\n  Random ablation (3 seeds)...")
@@ -228,8 +232,9 @@ def run(model_path, model_short, attribution_npz, decomposition_jsonl,
         "n_ablate": n_ablate,
         "n_neurons": n_neurons,
         "metric": "log-odds wrongness, chat-template",
-        "baseline": base_summary,
+        "baseline": {"summary": base_summary, "pairs": base_pairs},
         "ablation_summaries": ablation_summaries,
+        "ablation_pairs": ablation_pairs,
         "random_control": rand_summary,
         "diagonal_deltas": diag_deltas,
         "antidiagonal_deltas": anti_diag,
