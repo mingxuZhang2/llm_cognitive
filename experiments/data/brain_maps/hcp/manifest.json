@@ -1,0 +1,219 @@
+{
+  "source": "NeuroVault collection 457 \u2014 HCP S1200 group-average task fMRI contrasts",
+  "doi": "10.1016/j.neuroimage.2013.05.041",
+  "neurovault_collection": "https://neurovault.org/collections/457/",
+  "license": "HCP Open Access Data Use Terms (https://www.humanconnectome.org/study/hcp-young-adult/document/wu-minn-hcp-consortium-open-access-data-use-terms)",
+  "note": "Group-average z-stat maps (zstat1) from FSL FEAT GLM. These are the canonical Barch et al. 2013 task contrasts available without ConnectomeDB registration. The per-subject contrasts and raw timeseries are NOT included here \u2014 they require ConnectomeDB.",
+  "downloads": [
+    {
+      "neurovault_image_id": 3181,
+      "slug": "social_tom",
+      "description": "tfMRI SOCIAL TOM (Mental Interaction)",
+      "original_filename": "tfMRI_SOCIAL_TOM_zstat1.nii.gz",
+      "saved_as": "hcp/social_tom.nii.gz",
+      "size_bytes": 1177145,
+      "contrast_definition": "Mental Interaction",
+      "cognitive_paradigm": "social cognition (theory of mind) fMRI task paradigm",
+      "elapsed_s": 3.89
+    },
+    {
+      "neurovault_image_id": 3179,
+      "slug": "social_random",
+      "description": "tfMRI SOCIAL RANDOM (Random Interaction)",
+      "original_filename": "tfMRI_SOCIAL_RANDOM_zstat1.nii.gz",
+      "saved_as": "hcp/social_random.nii.gz",
+      "size_bytes": 1176438,
+      "contrast_definition": "Random Interaction",
+      "cognitive_paradigm": "social cognition (theory of mind) fMRI task paradigm",
+      "elapsed_s": 2.56
+    },
+    {
+      "neurovault_image_id": 3180,
+      "slug": "social_tom_vs_random",
+      "description": "tfMRI SOCIAL TOM minus RANDOM",
+      "original_filename": "tfMRI_SOCIAL_TOM-RANDOM_zstat1.nii.gz",
+      "saved_as": "hcp/social_tom_vs_random.nii.gz",
+      "size_bytes": 1180644,
+      "contrast_definition": "Mental Interaction minus Random Interaction",
+      "cognitive_paradigm": "social cognition (theory of mind) fMRI task paradigm",
+      "elapsed_s": 2.32
+    },
+    {
+      "neurovault_image_id": 3129,
+      "slug": "emotion_faces",
+      "description": "tfMRI EMOTION FACES",
+      "original_filename": "tfMRI_EMOTION_FACES_zstat1.nii.gz",
+      "saved_as": "hcp/emotion_faces.nii.gz",
+      "size_bytes": 1182924,
+      "contrast_definition": "Faces",
+      "cognitive_paradigm": "emotion processing fMRI task paradigm",
+      "elapsed_s": 2.67
+    },
+    {
+      "neurovault_image_id": 3131,
+      "slug": "emotion_shapes",
+      "description": "tfMRI EMOTION SHAPES",
+      "original_filename": "tfMRI_EMOTION_SHAPES_zstat1.nii.gz",
+      "saved_as": "hcp/emotion_shapes.nii.gz",
+      "size_bytes": 1183414,
+      "contrast_definition": "Shapes",
+      "cognitive_paradigm": "emotion processing fMRI task paradigm",
+      "elapsed_s": 2.33
+    },
+    {
+      "neurovault_image_id": 3128,
+      "slug": "emotion_faces_vs_shapes",
+      "description": "tfMRI EMOTION FACES minus SHAPES",
+      "original_filename": "tfMRI_EMOTION_FACES-SHAPES_zstat1.nii.gz",
+      "saved_as": "hcp/emotion_faces_vs_shapes.nii.gz",
+      "size_bytes": 1180649,
+      "contrast_definition": "Faces minus Shapes",
+      "cognitive_paradigm": "emotion processing fMRI task paradigm",
+      "elapsed_s": 2.36
+    },
+    {
+      "neurovault_image_id": 3143,
+      "slug": "language_story",
+      "description": "tfMRI LANGUAGE STORY",
+      "original_filename": "tfMRI_LANGUAGE_STORY_zstat1.nii.gz",
+      "saved_as": "hcp/language_story.nii.gz",
+      "size_bytes": 1158653,
+      "contrast_definition": "Story",
+      "cognitive_paradigm": "language processing fMRI task paradigm",
+      "elapsed_s": 2.47
+    },
+    {
+      "neurovault_image_id": 3141,
+      "slug": "language_math",
+      "description": "tfMRI LANGUAGE MATH",
+      "original_filename": "tfMRI_LANGUAGE_MATH_zstat1.nii.gz",
+      "saved_as": "hcp/language_math.nii.gz",
+      "size_bytes": 1171178,
+      "contrast_definition": "Math",
+      "cognitive_paradigm": "language processing fMRI task paradigm",
+      "elapsed_s": 3.59
+    },
+    {
+      "neurovault_image_id": 3142,
+      "slug": "language_story_vs_math",
+      "description": "tfMRI LANGUAGE STORY minus MATH",
+      "original_filename": "tfMRI_LANGUAGE_STORY-MATH_zstat1.nii.gz",
+      "saved_as": "hcp/language_story_vs_math.nii.gz",
+      "size_bytes": 1177802,
+      "contrast_definition": "Story minus Math",
+      "cognitive_paradigm": "language processing fMRI task paradigm",
+      "elapsed_s": 3.78
+    },
+    {
+      "neurovault_image_id": 3175,
+      "slug": "relational_rel",
+      "description": "tfMRI RELATIONAL Relational Processing",
+      "original_filename": "tfMRI_RELATIONAL_REL_zstat1.nii.gz",
+      "saved_as": "hcp/relational_rel.nii.gz",
+      "size_bytes": 1179510,
+      "contrast_definition": "Relational Processing",
+      "cognitive_paradigm": "relational processing fMRI task paradigm",
+      "elapsed_s": 91.39
+    },
+    {
+      "neurovault_image_id": 3173,
+      "slug": "relational_match",
+      "description": "tfMRI RELATIONAL Matching",
+      "original_filename": "tfMRI_RELATIONAL_MATCH_zstat1.nii.gz",
+      "saved_as": "hcp/relational_match.nii.gz",
+      "size_bytes": 1178855,
+      "contrast_definition": "Matching",
+      "cognitive_paradigm": "relational processing fMRI task paradigm",
+      "elapsed_s": 5.64
+    },
+    {
+      "neurovault_image_id": 8820,
+      "slug": "relational_rel_vs_match",
+      "description": "tfMRI RELATIONAL REL minus MATCH",
+      "original_filename": "tfMRI_RELATIONAL_REL-MATCH.nii_tstat1.nii.gz",
+      "saved_as": "hcp/relational_rel_vs_match.nii.gz",
+      "size_bytes": 1158793,
+      "contrast_definition": "Relational Processing minus Matching",
+      "cognitive_paradigm": "relational processing fMRI task paradigm",
+      "elapsed_s": 3.9
+    },
+    {
+      "neurovault_image_id": 3195,
+      "slug": "wm_2bk",
+      "description": "tfMRI WM 2-back (all)",
+      "original_filename": "tfMRI_WM_2BK_zstat1.nii.gz",
+      "saved_as": "hcp/wm_2bk.nii.gz",
+      "size_bytes": 1180245,
+      "contrast_definition": "2-back All",
+      "cognitive_paradigm": "working memory fMRI task paradigm",
+      "elapsed_s": 3.23
+    },
+    {
+      "neurovault_image_id": 3189,
+      "slug": "wm_0bk",
+      "description": "tfMRI WM 0-back (all)",
+      "original_filename": "tfMRI_WM_0BK_zstat1.nii.gz",
+      "saved_as": "hcp/wm_0bk.nii.gz",
+      "size_bytes": 1182546,
+      "contrast_definition": "0-back All",
+      "cognitive_paradigm": "working memory fMRI task paradigm",
+      "elapsed_s": 44.59
+    },
+    {
+      "neurovault_image_id": 3190,
+      "slug": "wm_2bk_vs_0bk",
+      "description": "tfMRI WM 2BK minus 0BK",
+      "original_filename": "tfMRI_WM_2BK-0BK_zstat1.nii.gz",
+      "saved_as": "hcp/wm_2bk_vs_0bk.nii.gz",
+      "size_bytes": 1184043,
+      "contrast_definition": "2-back minus 0-back",
+      "cognitive_paradigm": "working memory fMRI task paradigm",
+      "elapsed_s": 7.82
+    },
+    {
+      "neurovault_image_id": 3192,
+      "slug": "wm_2bk_face",
+      "description": "tfMRI WM 2-back Face",
+      "original_filename": "tfMRI_WM_2BK_FACE_zstat1.nii.gz",
+      "saved_as": "hcp/wm_2bk_face.nii.gz",
+      "size_bytes": 1183225,
+      "contrast_definition": "2-back Face",
+      "cognitive_paradigm": "working memory fMRI task paradigm",
+      "elapsed_s": 6.68
+    },
+    {
+      "neurovault_image_id": 3137,
+      "slug": "gambling_reward",
+      "description": "tfMRI GAMBLING REWARD",
+      "original_filename": "tfMRI_GAMBLING_REWARD_zstat1.nii.gz",
+      "saved_as": "hcp/gambling_reward.nii.gz",
+      "size_bytes": 1182342,
+      "contrast_definition": "Reward",
+      "cognitive_paradigm": "gambling fMRI task paradigm",
+      "elapsed_s": 5.38
+    },
+    {
+      "neurovault_image_id": 3135,
+      "slug": "gambling_punish",
+      "description": "tfMRI GAMBLING PUNISH",
+      "original_filename": "tfMRI_GAMBLING_PUNISH_zstat1.nii.gz",
+      "saved_as": "hcp/gambling_punish.nii.gz",
+      "size_bytes": 1182956,
+      "contrast_definition": "Punish",
+      "cognitive_paradigm": "gambling fMRI task paradigm",
+      "elapsed_s": 4.7
+    },
+    {
+      "neurovault_image_id": 3136,
+      "slug": "gambling_reward_vs_punish",
+      "description": "tfMRI GAMBLING REWARD minus PUNISH",
+      "original_filename": "tfMRI_GAMBLING_REWARD-PUNISH_zstat1.nii.gz",
+      "saved_as": "hcp/gambling_reward_vs_punish.nii.gz",
+      "size_bytes": 1167932,
+      "contrast_definition": "Reward minus Punish",
+      "cognitive_paradigm": "gambling fMRI task paradigm",
+      "elapsed_s": 5.13
+    }
+  ],
+  "failures": []
+}

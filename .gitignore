@@ -1,3 +1,23 @@
 models/
-experiments/data/
 wheels/
+
+# data/ contents — selective tracking
+experiments/data/*
+!experiments/data/cognitive_stimuli/
+!experiments/data/brain_maps/
+
+# Cognitive stimuli — track JSONL/CSV/MD/scripts, ignore raw downloads
+experiments/data/cognitive_stimuli/**/warriner_raw.csv
+experiments/data/cognitive_stimuli/**/goemotions_*.tsv
+experiments/data/cognitive_stimuli/**/goemotions_*.txt
+experiments/data/cognitive_stimuli/**/goemotions_*.json
+experiments/data/cognitive_stimuli/**/__pycache__/
+
+# Brain maps — track manifests/docs only (nii.gz files too large for git)
+experiments/data/brain_maps/**/*.nii.gz
+experiments/data/brain_maps/**/raw/
+experiments/data/brain_maps/**/__pycache__/
+
+# Python artifacts
+**/__pycache__/
+*.pyc

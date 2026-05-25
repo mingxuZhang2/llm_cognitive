@@ -1,0 +1,290 @@
+{
+  "source": "Neurosynth v7 abstracts, MKDA Chi-square association test (vs. all other studies)",
+  "dataset_path": "/hpc2hdd/home/mzhang630/data/nature/experiments/data/brain_maps/neurosynth/raw/neurosynth_dataset.pkl.gz",
+  "total_studies_in_corpus": 14371,
+  "tfidf_threshold": 0.001,
+  "kernel_radius_mm": 10,
+  "min_studies_warning": 30,
+  "groups": {
+    "emotion": [
+      {
+        "term_vocab": "anger",
+        "out_name": "anger",
+        "slug": "anger",
+        "n_studies_term": 89,
+        "n_studies_other": 14282,
+        "association_map": "neurosynth/anger.nii.gz",
+        "uniformity_map": "neurosynth/anger_uniformity.nii.gz",
+        "elapsed_s": 16.23
+      },
+      {
+        "term_vocab": "disgust",
+        "out_name": "disgust",
+        "slug": "disgust",
+        "n_studies_term": 103,
+        "n_studies_other": 14268,
+        "association_map": "neurosynth/disgust.nii.gz",
+        "uniformity_map": "neurosynth/disgust_uniformity.nii.gz",
+        "elapsed_s": 15.11
+      },
+      {
+        "term_vocab": "fear",
+        "out_name": "fear",
+        "slug": "fear",
+        "n_studies_term": 363,
+        "n_studies_other": 14008,
+        "association_map": "neurosynth/fear.nii.gz",
+        "uniformity_map": "neurosynth/fear_uniformity.nii.gz",
+        "elapsed_s": 14.63
+      },
+      {
+        "term_vocab": "sad",
+        "out_name": "sadness",
+        "slug": "sadness",
+        "n_studies_term": 163,
+        "n_studies_other": 14208,
+        "association_map": "neurosynth/sadness.nii.gz",
+        "uniformity_map": "neurosynth/sadness_uniformity.nii.gz",
+        "elapsed_s": 14.31
+      },
+      {
+        "term_vocab": "happy",
+        "out_name": "happiness",
+        "slug": "happiness",
+        "n_studies_term": 225,
+        "n_studies_other": 14146,
+        "association_map": "neurosynth/happiness.nii.gz",
+        "uniformity_map": "neurosynth/happiness_uniformity.nii.gz",
+        "elapsed_s": 14.56
+      },
+      {
+        "term_vocab": "happy faces",
+        "out_name": "happy_faces",
+        "slug": "happy_faces",
+        "n_studies_term": 75,
+        "n_studies_other": 14296,
+        "association_map": "neurosynth/happy_faces.nii.gz",
+        "uniformity_map": "neurosynth/happy_faces_uniformity.nii.gz",
+        "elapsed_s": 14.09
+      },
+      {
+        "term_vocab": "emotion",
+        "out_name": "emotion",
+        "slug": "emotion",
+        "n_studies_term": 1037,
+        "n_studies_other": 13334,
+        "association_map": "neurosynth/emotion.nii.gz",
+        "uniformity_map": "neurosynth/emotion_uniformity.nii.gz",
+        "elapsed_s": 14.11
+      },
+      {
+        "term_vocab": "affective",
+        "out_name": "affective",
+        "slug": "affective",
+        "n_studies_term": 748,
+        "n_studies_other": 13623,
+        "association_map": "neurosynth/affective.nii.gz",
+        "uniformity_map": "neurosynth/affective_uniformity.nii.gz",
+        "elapsed_s": 14.37
+      },
+      {
+        "term_vocab": "valence",
+        "out_name": "valence",
+        "slug": "valence",
+        "n_studies_term": 361,
+        "n_studies_other": 14010,
+        "association_map": "neurosynth/valence.nii.gz",
+        "uniformity_map": "neurosynth/valence_uniformity.nii.gz",
+        "elapsed_s": 14.37
+      },
+      {
+        "term_vocab": "arousal",
+        "out_name": "arousal",
+        "slug": "arousal",
+        "n_studies_term": 295,
+        "n_studies_other": 14076,
+        "association_map": "neurosynth/arousal.nii.gz",
+        "uniformity_map": "neurosynth/arousal_uniformity.nii.gz",
+        "elapsed_s": 14.26
+      },
+      {
+        "term_vocab": "amygdala",
+        "out_name": "amygdala",
+        "slug": "amygdala",
+        "n_studies_term": 1579,
+        "n_studies_other": 12792,
+        "association_map": "neurosynth/amygdala.nii.gz",
+        "uniformity_map": "neurosynth/amygdala_uniformity.nii.gz",
+        "elapsed_s": 13.88
+      }
+    ],
+    "moral": [
+      {
+        "term_vocab": "moral",
+        "out_name": "moral",
+        "slug": "moral",
+        "n_studies_term": 87,
+        "n_studies_other": 14284,
+        "association_map": "neurosynth/moral.nii.gz",
+        "uniformity_map": "neurosynth/moral_uniformity.nii.gz",
+        "elapsed_s": 14.19
+      },
+      {
+        "term_vocab": "judgment",
+        "out_name": "judgment",
+        "slug": "judgment",
+        "n_studies_term": 290,
+        "n_studies_other": 14081,
+        "association_map": "neurosynth/judgment.nii.gz",
+        "uniformity_map": "neurosynth/judgment_uniformity.nii.gz",
+        "elapsed_s": 14.14
+      },
+      {
+        "term_vocab": "intention",
+        "out_name": "intention",
+        "slug": "intention",
+        "n_studies_term": 95,
+        "n_studies_other": 14276,
+        "association_map": "neurosynth/intention.nii.gz",
+        "uniformity_map": "neurosynth/intention_uniformity.nii.gz",
+        "elapsed_s": 14.46
+      },
+      {
+        "term_vocab": "intentional",
+        "out_name": "intentional",
+        "slug": "intentional",
+        "n_studies_term": 100,
+        "n_studies_other": 14271,
+        "association_map": "neurosynth/intentional.nii.gz",
+        "uniformity_map": "neurosynth/intentional_uniformity.nii.gz",
+        "elapsed_s": 14.69
+      },
+      {
+        "term_vocab": "intentions",
+        "out_name": "intentions",
+        "slug": "intentions",
+        "n_studies_term": 125,
+        "n_studies_other": 14246,
+        "association_map": "neurosynth/intentions.nii.gz",
+        "uniformity_map": "neurosynth/intentions_uniformity.nii.gz",
+        "elapsed_s": 14.59
+      }
+    ],
+    "tom_social": [
+      {
+        "term_vocab": "theory mind",
+        "out_name": "theory_of_mind",
+        "slug": "theory_of_mind",
+        "n_studies_term": 181,
+        "n_studies_other": 14190,
+        "association_map": "neurosynth/theory_of_mind.nii.gz",
+        "uniformity_map": "neurosynth/theory_of_mind_uniformity.nii.gz",
+        "elapsed_s": 14.96
+      },
+      {
+        "term_vocab": "mentalizing",
+        "out_name": "mentalizing",
+        "slug": "mentalizing",
+        "n_studies_term": 151,
+        "n_studies_other": 14220,
+        "association_map": "neurosynth/mentalizing.nii.gz",
+        "uniformity_map": "neurosynth/mentalizing_uniformity.nii.gz",
+        "elapsed_s": 14.99
+      },
+      {
+        "term_vocab": "social cognition",
+        "out_name": "social_cognition",
+        "slug": "social_cognition",
+        "n_studies_term": 220,
+        "n_studies_other": 14151,
+        "association_map": "neurosynth/social_cognition.nii.gz",
+        "uniformity_map": "neurosynth/social_cognition_uniformity.nii.gz",
+        "elapsed_s": 14.92
+      },
+      {
+        "term_vocab": "social",
+        "out_name": "social",
+        "slug": "social",
+        "n_studies_term": 1302,
+        "n_studies_other": 13069,
+        "association_map": "neurosynth/social.nii.gz",
+        "uniformity_map": "neurosynth/social_uniformity.nii.gz",
+        "elapsed_s": 14.31
+      },
+      {
+        "term_vocab": "social interaction",
+        "out_name": "social_interaction",
+        "slug": "social_interaction",
+        "n_studies_term": 117,
+        "n_studies_other": 14254,
+        "association_map": "neurosynth/social_interaction.nii.gz",
+        "uniformity_map": "neurosynth/social_interaction_uniformity.nii.gz",
+        "elapsed_s": 14.67
+      },
+      {
+        "term_vocab": "belief",
+        "out_name": "belief",
+        "slug": "belief",
+        "n_studies_term": 83,
+        "n_studies_other": 14288,
+        "association_map": "neurosynth/belief.nii.gz",
+        "uniformity_map": "neurosynth/belief_uniformity.nii.gz",
+        "elapsed_s": 14.69
+      },
+      {
+        "term_vocab": "beliefs",
+        "out_name": "beliefs",
+        "slug": "beliefs",
+        "n_studies_term": 77,
+        "n_studies_other": 14294,
+        "association_map": "neurosynth/beliefs.nii.gz",
+        "uniformity_map": "neurosynth/beliefs_uniformity.nii.gz",
+        "elapsed_s": 14.95
+      },
+      {
+        "term_vocab": "empathy",
+        "out_name": "empathy",
+        "slug": "empathy",
+        "n_studies_term": 187,
+        "n_studies_other": 14184,
+        "association_map": "neurosynth/empathy.nii.gz",
+        "uniformity_map": "neurosynth/empathy_uniformity.nii.gz",
+        "elapsed_s": 14.94
+      }
+    ],
+    "self": [
+      {
+        "term_vocab": "self",
+        "out_name": "self",
+        "slug": "self",
+        "n_studies_term": 1206,
+        "n_studies_other": 13165,
+        "association_map": "neurosynth/self.nii.gz",
+        "uniformity_map": "neurosynth/self_uniformity.nii.gz",
+        "elapsed_s": 14.48
+      },
+      {
+        "term_vocab": "self referential",
+        "out_name": "self_referential",
+        "slug": "self_referential",
+        "n_studies_term": 166,
+        "n_studies_other": 14205,
+        "association_map": "neurosynth/self_referential.nii.gz",
+        "uniformity_map": "neurosynth/self_referential_uniformity.nii.gz",
+        "elapsed_s": 15.35
+      },
+      {
+        "term_vocab": "self report",
+        "out_name": "self_report",
+        "slug": "self_report",
+        "n_studies_term": 77,
+        "n_studies_other": 14294,
+        "association_map": "neurosynth/self_report.nii.gz",
+        "uniformity_map": "neurosynth/self_report_uniformity.nii.gz",
+        "elapsed_s": 14.93
+      }
+    ]
+  },
+  "failures": [],
+  "low_count_warnings": []
+}

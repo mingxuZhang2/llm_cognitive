@@ -1,0 +1,200 @@
+{"id": "vad_0000", "text": "Everything feels grey and hollow this morning.", "target_valence": 2.0, "target_arousal": 2.0}
+{"id": "vad_0001", "text": "Nothing seems worth doing anymore.", "target_valence": 1.8, "target_arousal": 2.0}
+{"id": "vad_0002", "text": "I sat alone in the dim apartment for hours.", "target_valence": 2.2, "target_arousal": 1.8}
+{"id": "vad_0003", "text": "Time drags on with no purpose at all.", "target_valence": 2.0, "target_arousal": 2.0}
+{"id": "vad_0004", "text": "The rain has soaked everything in dull sorrow.", "target_valence": 2.2, "target_arousal": 2.2}
+{"id": "vad_0005", "text": "My friend has been ignoring me all week.", "target_valence": 2.2, "target_arousal": 3.5}
+{"id": "vad_0006", "text": "The doctor's tone made me deeply uneasy.", "target_valence": 2.0, "target_arousal": 4.0}
+{"id": "vad_0007", "text": "I keep replaying the argument in my head.", "target_valence": 2.2, "target_arousal": 3.8}
+{"id": "vad_0008", "text": "Reading the bad review left a bitter aftertaste.", "target_valence": 2.5, "target_arousal": 3.5}
+{"id": "vad_0009", "text": "Their disappointment in me is hard to bear.", "target_valence": 2.0, "target_arousal": 3.8}
+{"id": "vad_0010", "text": "I cannot stop crying about what happened.", "target_valence": 1.8, "target_arousal": 5.5}
+{"id": "vad_0011", "text": "My stomach churned as the rejection sank in.", "target_valence": 2.0, "target_arousal": 5.5}
+{"id": "vad_0012", "text": "Every reminder of him makes my chest ache.", "target_valence": 2.2, "target_arousal": 5.5}
+{"id": "vad_0013", "text": "She broke down sobbing at the front desk.", "target_valence": 1.8, "target_arousal": 6.0}
+{"id": "vad_0014", "text": "Reading the diagnosis left me trembling.", "target_valence": 1.8, "target_arousal": 6.0}
+{"id": "vad_0015", "text": "A masked figure stepped suddenly out of the alley.", "target_valence": 1.8, "target_arousal": 8.5}
+{"id": "vad_0016", "text": "The plane plunged through violent turbulence.", "target_valence": 1.8, "target_arousal": 8.0}
+{"id": "vad_0017", "text": "I screamed as the car spun off the road.", "target_valence": 1.5, "target_arousal": 9.0}
+{"id": "vad_0018", "text": "Flames raced up the staircase faster than we could run.", "target_valence": 1.5, "target_arousal": 9.0}
+{"id": "vad_0019", "text": "They forced open the door and rushed inside shouting.", "target_valence": 2.0, "target_arousal": 8.5}
+{"id": "vad_0020", "text": "The waiting room smelled faintly of antiseptic.", "target_valence": 3.5, "target_arousal": 2.0}
+{"id": "vad_0021", "text": "My coffee went cold while I worked.", "target_valence": 4.0, "target_arousal": 1.8}
+{"id": "vad_0022", "text": "The lecture dragged on past the closing bell.", "target_valence": 3.5, "target_arousal": 2.0}
+{"id": "vad_0023", "text": "Another rainy commute, another delay.", "target_valence": 3.5, "target_arousal": 2.0}
+{"id": "vad_0024", "text": "My phone battery died right before the alarm.", "target_valence": 3.5, "target_arousal": 2.5}
+{"id": "vad_0025", "text": "My boss flagged three mistakes in my report.", "target_valence": 3.5, "target_arousal": 4.0}
+{"id": "vad_0026", "text": "I missed the last train by less than a minute.", "target_valence": 3.5, "target_arousal": 4.5}
+{"id": "vad_0027", "text": "The dentist warned me about a cavity forming.", "target_valence": 3.5, "target_arousal": 4.0}
+{"id": "vad_0028", "text": "She rolled her eyes when I told the story.", "target_valence": 3.5, "target_arousal": 4.0}
+{"id": "vad_0029", "text": "My password expired again at the worst moment.", "target_valence": 3.8, "target_arousal": 3.8}
+{"id": "vad_0030", "text": "I argued with my brother on the phone tonight.", "target_valence": 3.5, "target_arousal": 5.5}
+{"id": "vad_0031", "text": "The presentation crashed in front of everyone.", "target_valence": 3.2, "target_arousal": 6.0}
+{"id": "vad_0032", "text": "My bike got stolen from outside the library.", "target_valence": 3.0, "target_arousal": 5.5}
+{"id": "vad_0033", "text": "They left without saying goodbye and it stung.", "target_valence": 3.2, "target_arousal": 5.5}
+{"id": "vad_0034", "text": "The deadline keeps slipping and tempers are rising.", "target_valence": 3.5, "target_arousal": 5.8}
+{"id": "vad_0035", "text": "A wasp got trapped inside my helmet on the highway.", "target_valence": 3.0, "target_arousal": 8.0}
+{"id": "vad_0036", "text": "My laptop fell from the table during the meeting.", "target_valence": 3.2, "target_arousal": 7.5}
+{"id": "vad_0037", "text": "The dog charged at me growling without warning.", "target_valence": 2.8, "target_arousal": 8.0}
+{"id": "vad_0038", "text": "I almost dropped the antique vase down the stairs.", "target_valence": 3.0, "target_arousal": 7.5}
+{"id": "vad_0039", "text": "Sparks flew from the outlet and the lights cut out.", "target_valence": 2.8, "target_arousal": 8.0}
+{"id": "vad_0040", "text": "The book is on the second shelf to the left.", "target_valence": 5.0, "target_arousal": 1.8}
+{"id": "vad_0041", "text": "Office hours are listed on the syllabus.", "target_valence": 5.0, "target_arousal": 1.5}
+{"id": "vad_0042", "text": "Buses run every twenty minutes on weekdays.", "target_valence": 5.0, "target_arousal": 1.8}
+{"id": "vad_0043", "text": "The recipe yields six servings.", "target_valence": 5.0, "target_arousal": 1.8}
+{"id": "vad_0044", "text": "Please staple the pages before turning them in.", "target_valence": 5.0, "target_arousal": 2.0}
+{"id": "vad_0045", "text": "The trains depart from platform four.", "target_valence": 5.0, "target_arousal": 1.8}
+{"id": "vad_0046", "text": "Most apartments have two bedrooms and a balcony.", "target_valence": 5.0, "target_arousal": 2.0}
+{"id": "vad_0047", "text": "Water boils at one hundred degrees Celsius.", "target_valence": 5.0, "target_arousal": 1.8}
+{"id": "vad_0048", "text": "Add the tomatoes and simmer for ten minutes.", "target_valence": 5.0, "target_arousal": 2.0}
+{"id": "vad_0049", "text": "The package weighs about two kilograms.", "target_valence": 5.0, "target_arousal": 1.8}
+{"id": "vad_0050", "text": "The supervisor reviewed the budget line by line.", "target_valence": 5.0, "target_arousal": 3.5}
+{"id": "vad_0051", "text": "I parallel-parked between two delivery trucks.", "target_valence": 5.0, "target_arousal": 4.0}
+{"id": "vad_0052", "text": "She filled out the customs form on the plane.", "target_valence": 5.0, "target_arousal": 3.5}
+{"id": "vad_0053", "text": "He kept glancing at the clock during the meeting.", "target_valence": 5.0, "target_arousal": 3.8}
+{"id": "vad_0054", "text": "The technician calibrated each sensor in turn.", "target_valence": 5.0, "target_arousal": 3.5}
+{"id": "vad_0055", "text": "The traffic light turned yellow just as we approached.", "target_valence": 5.0, "target_arousal": 5.5}
+{"id": "vad_0056", "text": "He answered the cold call but kept his tone formal.", "target_valence": 5.0, "target_arousal": 5.2}
+{"id": "vad_0057", "text": "The buzzer rang twice before anyone reacted.", "target_valence": 5.0, "target_arousal": 5.5}
+{"id": "vad_0058", "text": "A debate broke out about the new policy.", "target_valence": 5.0, "target_arousal": 5.8}
+{"id": "vad_0059", "text": "The referee waved the players back onto the field.", "target_valence": 5.0, "target_arousal": 5.5}
+{"id": "vad_0060", "text": "The fire drill alarm blared through the corridors.", "target_valence": 5.0, "target_arousal": 7.5}
+{"id": "vad_0061", "text": "A motorcade of sirens raced past the office window.", "target_valence": 5.0, "target_arousal": 7.5}
+{"id": "vad_0062", "text": "The earthquake drill required everyone under desks within seconds.", "target_valence": 5.0, "target_arousal": 7.5}
+{"id": "vad_0063", "text": "All hands worked through the night to relaunch the server.", "target_valence": 5.0, "target_arousal": 7.2}
+{"id": "vad_0064", "text": "The pilot announced an emergency landing procedure.", "target_valence": 5.0, "target_arousal": 7.8}
+{"id": "vad_0065", "text": "Reading by the window with a warm tea felt nice.", "target_valence": 6.5, "target_arousal": 2.0}
+{"id": "vad_0066", "text": "Sunlight slanted softly across the kitchen floor.", "target_valence": 6.5, "target_arousal": 2.0}
+{"id": "vad_0067", "text": "The cat curled up on my lap and purred.", "target_valence": 7.0, "target_arousal": 2.2}
+{"id": "vad_0068", "text": "I watched the snow fall in quiet, fat flakes.", "target_valence": 6.5, "target_arousal": 2.0}
+{"id": "vad_0069", "text": "The hot bath melted the day off my shoulders.", "target_valence": 6.8, "target_arousal": 2.0}
+{"id": "vad_0070", "text": "A small bonus showed up in my paycheck today.", "target_valence": 6.5, "target_arousal": 4.0}
+{"id": "vad_0071", "text": "My garden basil finally sprouted its first leaves.", "target_valence": 6.8, "target_arousal": 3.5}
+{"id": "vad_0072", "text": "He waved hello from across the cafe with a grin.", "target_valence": 6.5, "target_arousal": 3.8}
+{"id": "vad_0073", "text": "The recipe came out better than I expected.", "target_valence": 6.8, "target_arousal": 3.8}
+{"id": "vad_0074", "text": "I finished the crossword puzzle on the first try.", "target_valence": 6.5, "target_arousal": 4.0}
+{"id": "vad_0075", "text": "The community garden harvest came in beautifully today.", "target_valence": 6.5, "target_arousal": 5.0}
+{"id": "vad_0076", "text": "She got a callback after the audition tonight.", "target_valence": 7.0, "target_arousal": 5.5}
+{"id": "vad_0077", "text": "Their first podcast episode broke ten thousand listeners.", "target_valence": 6.8, "target_arousal": 5.5}
+{"id": "vad_0078", "text": "The team rallied and tied the game in the last quarter.", "target_valence": 6.8, "target_arousal": 6.0}
+{"id": "vad_0079", "text": "My short story made the longlist for the prize.", "target_valence": 7.0, "target_arousal": 5.8}
+{"id": "vad_0080", "text": "We zipped through the canyon on mountain bikes.", "target_valence": 7.0, "target_arousal": 7.5}
+{"id": "vad_0081", "text": "The crowd cheered as the underdog scored a goal.", "target_valence": 7.0, "target_arousal": 7.5}
+{"id": "vad_0082", "text": "I leapt across the rocks at the waterfall.", "target_valence": 6.8, "target_arousal": 7.5}
+{"id": "vad_0083", "text": "The roller coaster threw us into bright laughter.", "target_valence": 7.0, "target_arousal": 7.8}
+{"id": "vad_0084", "text": "He sprinted the last hundred meters and pumped his fists.", "target_valence": 7.0, "target_arousal": 8.0}
+{"id": "vad_0085", "text": "Watching my baby sleep is the most peaceful feeling.", "target_valence": 8.5, "target_arousal": 2.0}
+{"id": "vad_0086", "text": "Grandma's old afghan still smells like her perfume.", "target_valence": 8.5, "target_arousal": 2.0}
+{"id": "vad_0087", "text": "Holding my dog at the end of a long day is bliss.", "target_valence": 8.5, "target_arousal": 2.2}
+{"id": "vad_0088", "text": "A quiet anniversary dinner with my partner is enough.", "target_valence": 8.5, "target_arousal": 2.2}
+{"id": "vad_0089", "text": "Listening to the rain together felt deeply tender.", "target_valence": 8.5, "target_arousal": 2.0}
+{"id": "vad_0090", "text": "I just heard back that I got the dream apartment.", "target_valence": 8.5, "target_arousal": 4.0}
+{"id": "vad_0091", "text": "They named the new baby after my late grandmother.", "target_valence": 8.5, "target_arousal": 4.0}
+{"id": "vad_0092", "text": "My best friend is finally moving back to town.", "target_valence": 8.5, "target_arousal": 4.2}
+{"id": "vad_0093", "text": "The scan came back clean and we both cried with relief.", "target_valence": 8.5, "target_arousal": 4.2}
+{"id": "vad_0094", "text": "My poem will be published in the autumn issue.", "target_valence": 8.5, "target_arousal": 4.0}
+{"id": "vad_0095", "text": "I finally got the acceptance email from the program.", "target_valence": 8.5, "target_arousal": 5.5}
+{"id": "vad_0096", "text": "Our team won the regional finals after a year of work.", "target_valence": 8.5, "target_arousal": 6.0}
+{"id": "vad_0097", "text": "She said yes and the whole restaurant clapped.", "target_valence": 9.0, "target_arousal": 6.0}
+{"id": "vad_0098", "text": "The clinical trial worked, the tumour is shrinking.", "target_valence": 8.5, "target_arousal": 6.0}
+{"id": "vad_0099", "text": "After ten years apart, my brother walked through the door.", "target_valence": 9.0, "target_arousal": 6.0}
+{"id": "vad_0100", "text": "Confetti rained down as we crossed the marathon finish line.", "target_valence": 8.5, "target_arousal": 8.5}
+{"id": "vad_0101", "text": "Fireworks burst overhead as the trophy was lifted.", "target_valence": 8.5, "target_arousal": 8.5}
+{"id": "vad_0102", "text": "My whole family jumped and screamed when the test came back positive.", "target_valence": 8.8, "target_arousal": 8.5}
+{"id": "vad_0103", "text": "The crowd erupted when the last out was called.", "target_valence": 8.5, "target_arousal": 8.5}
+{"id": "vad_0104", "text": "We surfed the wave together, laughing the whole way.", "target_valence": 8.5, "target_arousal": 8.0}
+{"id": "vad_0105", "text": "She refilled her water bottle at the office fountain.", "target_valence": 5.0, "target_arousal": 2.0}
+{"id": "vad_0106", "text": "He locked his bike to the rack outside the gym.", "target_valence": 5.0, "target_arousal": 2.2}
+{"id": "vad_0107", "text": "The committee approved the routine motion unanimously.", "target_valence": 5.2, "target_arousal": 3.0}
+{"id": "vad_0108", "text": "I confirmed my appointment on the patient portal.", "target_valence": 5.0, "target_arousal": 2.5}
+{"id": "vad_0109", "text": "The printer jammed twice but eventually finished.", "target_valence": 4.5, "target_arousal": 3.5}
+{"id": "vad_0110", "text": "My new prescription glasses arrived in the mail.", "target_valence": 6.0, "target_arousal": 3.0}
+{"id": "vad_0111", "text": "My dog rolled in something foul in the park.", "target_valence": 3.0, "target_arousal": 4.5}
+{"id": "vad_0112", "text": "The pasta water boiled over onto the stove.", "target_valence": 4.0, "target_arousal": 4.0}
+{"id": "vad_0113", "text": "My niece read her first book to me out loud.", "target_valence": 8.0, "target_arousal": 4.5}
+{"id": "vad_0114", "text": "We finally repaired the leaky kitchen faucet.", "target_valence": 6.0, "target_arousal": 3.0}
+{"id": "vad_0115", "text": "A rude customer kept yelling at the cashier.", "target_valence": 2.5, "target_arousal": 6.5}
+{"id": "vad_0116", "text": "My laptop fan started shrieking during the call.", "target_valence": 3.5, "target_arousal": 5.0}
+{"id": "vad_0117", "text": "The neighbor's stereo blasted past midnight again.", "target_valence": 3.0, "target_arousal": 5.5}
+{"id": "vad_0118", "text": "Our flight was delayed three hours on the tarmac.", "target_valence": 3.0, "target_arousal": 5.0}
+{"id": "vad_0119", "text": "My favorite playlist shuffled the perfect song.", "target_valence": 7.0, "target_arousal": 4.0}
+{"id": "vad_0120", "text": "The barista remembered my regular order today.", "target_valence": 6.5, "target_arousal": 3.5}
+{"id": "vad_0121", "text": "I aced the quiz I had been dreading all week.", "target_valence": 7.5, "target_arousal": 5.5}
+{"id": "vad_0122", "text": "The startup pitch was cut short and they looked crushed.", "target_valence": 3.0, "target_arousal": 5.0}
+{"id": "vad_0123", "text": "My grant proposal was rejected without comments.", "target_valence": 2.5, "target_arousal": 5.0}
+{"id": "vad_0124", "text": "The hike took longer than expected but we made it.", "target_valence": 6.0, "target_arousal": 4.5}
+{"id": "vad_0125", "text": "A pigeon flew straight into our window with a thud.", "target_valence": 4.0, "target_arousal": 6.0}
+{"id": "vad_0126", "text": "Lightning struck the tree just outside the window.", "target_valence": 3.5, "target_arousal": 8.0}
+{"id": "vad_0127", "text": "The smoke detector kept chirping at three in the morning.", "target_valence": 3.0, "target_arousal": 5.5}
+{"id": "vad_0128", "text": "Their wedding vows had everyone reaching for tissues.", "target_valence": 8.5, "target_arousal": 5.5}
+{"id": "vad_0129", "text": "Reading bedtime stories to my son makes me melt.", "target_valence": 8.0, "target_arousal": 3.5}
+{"id": "vad_0130", "text": "The toddler giggled uncontrollably at the puppet show.", "target_valence": 8.0, "target_arousal": 5.5}
+{"id": "vad_0131", "text": "My therapist's words finally clicked for me today.", "target_valence": 7.5, "target_arousal": 4.5}
+{"id": "vad_0132", "text": "The exam proctor announced ten minutes remaining.", "target_valence": 5.0, "target_arousal": 5.5}
+{"id": "vad_0133", "text": "The intern fumbled the introduction in front of the CEO.", "target_valence": 3.5, "target_arousal": 6.0}
+{"id": "vad_0134", "text": "A skunk wandered into the campground at dusk.", "target_valence": 3.5, "target_arousal": 5.5}
+{"id": "vad_0135", "text": "My headphones finally arrived after a month of waiting.", "target_valence": 6.5, "target_arousal": 3.5}
+{"id": "vad_0136", "text": "The cat knocked my favorite mug off the shelf.", "target_valence": 3.5, "target_arousal": 5.0}
+{"id": "vad_0137", "text": "Our community raised enough money for the new playground.", "target_valence": 8.0, "target_arousal": 5.0}
+{"id": "vad_0138", "text": "The volunteer crew cleaned the riverbank all weekend.", "target_valence": 7.0, "target_arousal": 3.5}
+{"id": "vad_0139", "text": "Power went out across the whole block at midnight.", "target_valence": 4.0, "target_arousal": 6.0}
+{"id": "vad_0140", "text": "My homemade bread came out airy and golden.", "target_valence": 7.5, "target_arousal": 3.5}
+{"id": "vad_0141", "text": "The toast burned and the kitchen filled with smoke.", "target_valence": 3.5, "target_arousal": 5.5}
+{"id": "vad_0142", "text": "My old college roommate sent a surprise birthday card.", "target_valence": 7.5, "target_arousal": 3.5}
+{"id": "vad_0143", "text": "The choir hit a perfect harmony on the final note.", "target_valence": 8.0, "target_arousal": 5.5}
+{"id": "vad_0144", "text": "The principal called us into the office unexpectedly.", "target_valence": 4.0, "target_arousal": 6.0}
+{"id": "vad_0145", "text": "Their tiny puppy peed on my work bag.", "target_valence": 4.0, "target_arousal": 5.0}
+{"id": "vad_0146", "text": "My grandmother taught me to fold dumplings today.", "target_valence": 8.0, "target_arousal": 3.5}
+{"id": "vad_0147", "text": "The investigator's questions kept circling back to me.", "target_valence": 3.5, "target_arousal": 6.5}
+{"id": "vad_0148", "text": "A hummingbird hovered just outside the window.", "target_valence": 7.5, "target_arousal": 4.0}
+{"id": "vad_0149", "text": "We watched the meteor shower from the rooftop.", "target_valence": 8.0, "target_arousal": 5.0}
+{"id": "vad_0150", "text": "The first frost killed the tomatoes overnight.", "target_valence": 4.0, "target_arousal": 3.5}
+{"id": "vad_0151", "text": "My audit found three missing receipts.", "target_valence": 4.0, "target_arousal": 4.0}
+{"id": "vad_0152", "text": "Our toddler said her first complete sentence today.", "target_valence": 8.5, "target_arousal": 5.0}
+{"id": "vad_0153", "text": "The judge ruled in our favor after months of waiting.", "target_valence": 8.0, "target_arousal": 5.5}
+{"id": "vad_0154", "text": "My package was stolen from the porch again.", "target_valence": 3.0, "target_arousal": 5.0}
+{"id": "vad_0155", "text": "The orchestra tuned their instruments before the concert.", "target_valence": 5.5, "target_arousal": 3.5}
+{"id": "vad_0156", "text": "The marathon official handed me a finisher's medal.", "target_valence": 8.5, "target_arousal": 6.0}
+{"id": "vad_0157", "text": "My professor wrote 'excellent work' across the top page.", "target_valence": 8.0, "target_arousal": 4.0}
+{"id": "vad_0158", "text": "The interviewer kept asking trick questions about my résumé.", "target_valence": 4.0, "target_arousal": 5.5}
+{"id": "vad_0159", "text": "My garden gnome was knocked over by the wind.", "target_valence": 4.5, "target_arousal": 3.0}
+{"id": "vad_0160", "text": "Their cat finally let me pet her after months.", "target_valence": 7.0, "target_arousal": 3.5}
+{"id": "vad_0161", "text": "Our weekly board game night turned into a shouting match.", "target_valence": 4.0, "target_arousal": 6.0}
+{"id": "vad_0162", "text": "My favorite mug fell and shattered on the tiles.", "target_valence": 3.5, "target_arousal": 5.0}
+{"id": "vad_0163", "text": "I helped an elderly woman carry her groceries home.", "target_valence": 7.5, "target_arousal": 3.0}
+{"id": "vad_0164", "text": "The hotel lost our reservation on arrival.", "target_valence": 3.0, "target_arousal": 5.5}
+{"id": "vad_0165", "text": "Our flight got upgraded to first class for free.", "target_valence": 8.0, "target_arousal": 5.5}
+{"id": "vad_0166", "text": "The midnight thunderstorm shook the entire house.", "target_valence": 4.0, "target_arousal": 7.0}
+{"id": "vad_0167", "text": "The toddler dropped my phone in the toilet.", "target_valence": 3.0, "target_arousal": 5.5}
+{"id": "vad_0168", "text": "My favorite indie band played my request encore.", "target_valence": 8.5, "target_arousal": 6.5}
+{"id": "vad_0169", "text": "My oldest friend called out of nowhere to chat.", "target_valence": 7.5, "target_arousal": 3.5}
+{"id": "vad_0170", "text": "My car broke down on the freeway in rush hour.", "target_valence": 2.5, "target_arousal": 6.0}
+{"id": "vad_0171", "text": "The keynote speaker forgot the punchline mid-joke.", "target_valence": 4.5, "target_arousal": 4.5}
+{"id": "vad_0172", "text": "Our team's new logo got rave reviews from the board.", "target_valence": 7.5, "target_arousal": 4.5}
+{"id": "vad_0173", "text": "The conference Wi-Fi kept dropping out during my talk.", "target_valence": 3.5, "target_arousal": 5.5}
+{"id": "vad_0174", "text": "My pottery wheel collapsed and ruined three pieces.", "target_valence": 3.0, "target_arousal": 5.5}
+{"id": "vad_0175", "text": "My garden's first sunflower finally bloomed today.", "target_valence": 8.0, "target_arousal": 3.5}
+{"id": "vad_0176", "text": "The audience gave the cast a standing ovation.", "target_valence": 8.5, "target_arousal": 6.5}
+{"id": "vad_0177", "text": "My neighbor passed away peacefully in her sleep.", "target_valence": 3.5, "target_arousal": 3.5}
+{"id": "vad_0178", "text": "My bonsai survived its first year on the windowsill.", "target_valence": 7.0, "target_arousal": 2.5}
+{"id": "vad_0179", "text": "Our quiet hike was interrupted by a snake on the trail.", "target_valence": 4.0, "target_arousal": 6.5}
+{"id": "vad_0180", "text": "My piano recital ended in thunderous applause.", "target_valence": 8.5, "target_arousal": 6.5}
+{"id": "vad_0181", "text": "The librarian shushed the whole reading room.", "target_valence": 4.5, "target_arousal": 3.5}
+{"id": "vad_0182", "text": "My favorite cafe closed for good last week.", "target_valence": 3.5, "target_arousal": 4.0}
+{"id": "vad_0183", "text": "A double rainbow stretched across the valley after the storm.", "target_valence": 8.0, "target_arousal": 5.0}
+{"id": "vad_0184", "text": "We discovered our reservation had been double booked.", "target_valence": 3.5, "target_arousal": 5.0}
+{"id": "vad_0185", "text": "The neighbor's child sang a lullaby to my baby.", "target_valence": 7.5, "target_arousal": 3.0}
+{"id": "vad_0186", "text": "The dishwasher flooded the entire kitchen overnight.", "target_valence": 2.5, "target_arousal": 6.0}
+{"id": "vad_0187", "text": "My midnight snack turned into a feast with my roommate.", "target_valence": 7.0, "target_arousal": 4.5}
+{"id": "vad_0188", "text": "My online order arrived smashed beyond repair.", "target_valence": 2.5, "target_arousal": 4.5}
+{"id": "vad_0189", "text": "My team beat our quarterly goal three weeks early.", "target_valence": 8.0, "target_arousal": 5.5}
+{"id": "vad_0190", "text": "The waiting list email finally said we were in.", "target_valence": 8.0, "target_arousal": 5.0}
+{"id": "vad_0191", "text": "A wasp landed on my arm and I froze.", "target_valence": 4.0, "target_arousal": 6.5}
+{"id": "vad_0192", "text": "My old letters made me weep on the floor for hours.", "target_valence": 3.0, "target_arousal": 5.5}
+{"id": "vad_0193", "text": "My toddler took her very first independent steps.", "target_valence": 9.0, "target_arousal": 6.0}
+{"id": "vad_0194", "text": "My dog learned to ring the bell to go outside.", "target_valence": 7.5, "target_arousal": 4.0}
+{"id": "vad_0195", "text": "The lecture hall finally got the projector working again.", "target_valence": 5.5, "target_arousal": 3.0}
+{"id": "vad_0196", "text": "My partner remembered our first date anniversary.", "target_valence": 8.5, "target_arousal": 4.5}
+{"id": "vad_0197", "text": "My morning coffee tipped right into my keyboard.", "target_valence": 3.0, "target_arousal": 5.0}
+{"id": "vad_0198", "text": "The investor passed on our pitch after two months.", "target_valence": 3.0, "target_arousal": 4.5}
+{"id": "vad_0199", "text": "My hiking buddy slipped and twisted her ankle.", "target_valence": 3.0, "target_arousal": 6.0}

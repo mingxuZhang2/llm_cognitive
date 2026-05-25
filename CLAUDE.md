@@ -111,3 +111,14 @@ Build a causal functional atlas of Large Language Models — mapping which neuro
     - Discovery: used for computing attribution (finding neurons)
     - Validation: used for measuring ablation effects on accuracy
 - HPC3 path: `/data/user/mzhang630/data/nature_exp/stimuli/stimuli_with_answers_*.jsonl`
+
+### Cognitive Stimuli (Brain-comparison modules)
+- `experiments/data/cognitive_stimuli/emotion/` — Emotion module stimuli
+  - `warriner_vad.csv` — 13,905 lemmas with valence/arousal/dominance (Warriner et al. 2013)
+  - `goemotions_sample.jsonl` — 5,398 unique Reddit comments, balanced 200/emotion (28-way; GoEmotions, Demszky et al. 2020)
+  - `emotion_localizer_stimuli.jsonl` — 350 sentences (50 x 6 Ekman + 50 neutral), curated + GoEmotions single-label
+  - `vad_graded_sentences.jsonl` — 200 hand-curated sentences spanning V x A plane (author point estimates, awaiting external ratings)
+  - Builder: `src/prepare_emotion_stimuli.py` (deterministic, seed=20260525, no GPU)
+  - Raw inputs (re-downloaded if needed): `warriner_raw.csv`, `goemotions_{train,dev,test}.tsv`, `goemotions_labels.txt`, `goemotions_ekman.json`, `goemotions_sentiment.json`
+  - See `cognitive_stimuli/emotion/README.md` for citations, license, and download instructions
+- `experiments/data/cognitive_stimuli/{moral, moral_decomposition, tom}/` — placeholders for future modules
