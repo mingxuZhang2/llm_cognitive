@@ -1,0 +1,181 @@
+{
+  "common_config": [
+    "mean_all",
+    "centered",
+    "1_cosine",
+    "v1_NS_only"
+  ],
+  "models": [
+    "Qwen2.5-7B-Instruct",
+    "Meta-Llama-3.1-8B-Instruct",
+    "Mistral-7B-Instruct-v0.3",
+    "gemma-2-9b-it"
+  ],
+  "conditions": [
+    "anger",
+    "belief",
+    "disgust",
+    "empathy",
+    "fear",
+    "happiness",
+    "intention",
+    "judgment",
+    "mentalizing",
+    "moral",
+    "sadness",
+    "self_referential",
+    "theory_of_mind",
+    "valence"
+  ],
+  "consensus_rho_vs_brain": 0.6314859053989488,
+  "per_model": {
+    "Qwen2.5-7B-Instruct": {
+      "peak_layer": 27,
+      "peak_layer_name": "layer_26",
+      "peak_rho": 0.6390189520624303,
+      "p_value": 9.999000099990002e-05,
+      "noise_ceiling": 0.9670766045548654,
+      "rho_over_ceiling": 0.6607738715347825
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "peak_layer": 31,
+      "peak_layer_name": "layer_30",
+      "peak_rho": 0.6268195572543399,
+      "p_value": 0.00019998000199980003,
+      "noise_ceiling": 0.9762267877050487,
+      "rho_over_ceiling": 0.6420839554381532
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "peak_layer": 14,
+      "peak_layer_name": "layer_13",
+      "peak_rho": 0.6330148112756808,
+      "p_value": 9.999000099990002e-05,
+      "noise_ceiling": 0.9700117853161332,
+      "rho_over_ceiling": 0.6525846601640795
+    },
+    "gemma-2-9b-it": {
+      "peak_layer": 21,
+      "peak_layer_name": "layer_20",
+      "peak_rho": 0.6389552476508998,
+      "p_value": 9.999000099990002e-05,
+      "noise_ceiling": 0.9695148909061951,
+      "rho_over_ceiling": 0.6590463474508115
+    }
+  },
+  "preserved_similar_pairs": [
+    {
+      "pair": [
+        "happiness",
+        "sadness"
+      ],
+      "combined_z": -3.535738588638843
+    },
+    {
+      "pair": [
+        "disgust",
+        "fear"
+      ],
+      "combined_z": -3.2670636838884834
+    },
+    {
+      "pair": [
+        "fear",
+        "happiness"
+      ],
+      "combined_z": -3.244236368811448
+    },
+    {
+      "pair": [
+        "fear",
+        "valence"
+      ],
+      "combined_z": -3.1230001896313633
+    },
+    {
+      "pair": [
+        "belief",
+        "mentalizing"
+      ],
+      "combined_z": -3.044424181027645
+    },
+    {
+      "pair": [
+        "anger",
+        "fear"
+      ],
+      "combined_z": -2.8688561738283687
+    },
+    {
+      "pair": [
+        "happiness",
+        "valence"
+      ],
+      "combined_z": -2.8505176706904463
+    },
+    {
+      "pair": [
+        "sadness",
+        "valence"
+      ],
+      "combined_z": -2.69636727689426
+    }
+  ],
+  "preserved_dissimilar_pairs": [
+    {
+      "pair": [
+        "fear",
+        "judgment"
+      ],
+      "combined_z": 2.8421608468401356
+    },
+    {
+      "pair": [
+        "fear",
+        "intention"
+      ],
+      "combined_z": 2.645736409965786
+    },
+    {
+      "pair": [
+        "judgment",
+        "sadness"
+      ],
+      "combined_z": 2.54801087797863
+    },
+    {
+      "pair": [
+        "disgust",
+        "intention"
+      ],
+      "combined_z": 2.5173311656236583
+    },
+    {
+      "pair": [
+        "disgust",
+        "judgment"
+      ],
+      "combined_z": 2.506248470827343
+    },
+    {
+      "pair": [
+        "happiness",
+        "judgment"
+      ],
+      "combined_z": 2.4628116700379428
+    },
+    {
+      "pair": [
+        "intention",
+        "valence"
+      ],
+      "combined_z": 2.338844032751929
+    },
+    {
+      "pair": [
+        "happiness",
+        "mentalizing"
+      ],
+      "combined_z": 2.257707006097001
+    }
+  ]
+}
