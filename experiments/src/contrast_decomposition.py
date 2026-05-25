@@ -83,13 +83,11 @@ def run(model_path, model_short, attribution_npz, decomposition_jsonl,
     base_scores, base_expected, _ = compute_wrongness_scores(
         model, tokenizer, stimuli, rating_token_ids, device,
     )
+    base_summary, base_pairs = pair_discrimination(stimuli, base_scores)
     print("  Baseline log-odds discrimination:")
     for c in CONDITIONS:
         s = base_summary[c]
         print(f"    {c:>12s}: {s['mean']:+7.3f} (std {s['std']:.2f}, n={s['n']})")
-
-    # 4x4 ablation matrix + anti-ablation per condition + random control
-    base_summary, base_pairs = pair_discrimination(stimuli, base_scores)
 
     print(f"\n[3/4] Ablating top-{n_ablate} contrast neurons for each condition...")
     ablation_summaries = {}  # ablation_target -> {cond: summary_dict}
