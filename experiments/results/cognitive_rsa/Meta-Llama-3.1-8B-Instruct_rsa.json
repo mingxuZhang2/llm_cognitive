@@ -1,0 +1,576 @@
+{
+  "model_short": "Meta-Llama-3.1-8B-Instruct",
+  "conditions": [
+    "anger",
+    "belief",
+    "disgust",
+    "empathy",
+    "fear",
+    "happiness",
+    "intention",
+    "judgment",
+    "mentalizing",
+    "moral",
+    "sadness",
+    "self_referential",
+    "theory_of_mind",
+    "valence"
+  ],
+  "n_layers": 33,
+  "n_permutations": 10000,
+  "per_layer": [
+    {
+      "layer_index": 0,
+      "layer_name": "embedding",
+      "rho": 0.09133482116505215,
+      "p_value": 0.19218078192180782,
+      "null_mean": -0.0011390618175722408,
+      "null_std": 0.11668419083765184,
+      "null_p95": 0.2159310317294422
+    },
+    {
+      "layer_index": 1,
+      "layer_name": "layer_0",
+      "rho": 0.3117693900302596,
+      "p_value": 0.013998600139986002,
+      "null_mean": -5.739926739926742e-05,
+      "null_std": 0.1176018787544039,
+      "null_p95": 0.21908504538939316
+    },
+    {
+      "layer_index": 2,
+      "layer_name": "layer_1",
+      "rho": 0.26368848542761586,
+      "p_value": 0.0324967503249675,
+      "null_mean": -0.0014865185539098581,
+      "null_std": 0.12563782316385666,
+      "null_p95": 0.22291049530179952
+    },
+    {
+      "layer_index": 3,
+      "layer_name": "layer_2",
+      "rho": 0.27520305781175347,
+      "p_value": 0.028997100289971003,
+      "null_mean": -0.0003108886765408506,
+      "null_std": 0.12673506629508716,
+      "null_p95": 0.23080665711100487
+    },
+    {
+      "layer_index": 4,
+      "layer_name": "layer_3",
+      "rho": 0.24274566013696447,
+      "p_value": 0.0400959904009599,
+      "null_mean": 0.00015525083612040146,
+      "null_std": 0.12711529124272442,
+      "null_p95": 0.22461379200509576
+    },
+    {
+      "layer_index": 5,
+      "layer_name": "layer_4",
+      "rho": 0.22621436534480013,
+      "p_value": 0.0527947205279472,
+      "null_mean": -0.00011062430323299892,
+      "null_std": 0.1297800228992398,
+      "null_p95": 0.23128125497690694
+    },
+    {
+      "layer_index": 6,
+      "layer_name": "layer_5",
+      "rho": 0.27246376811594203,
+      "p_value": 0.030296970302969704,
+      "null_mean": -0.0010833301481127568,
+      "null_std": 0.12764936372772984,
+      "null_p95": 0.2300589265806656
+    },
+    {
+      "layer_index": 7,
+      "layer_name": "layer_6",
+      "rho": 0.2794394011785316,
+      "p_value": 0.0263973602639736,
+      "null_mean": 0.0004153766523331739,
+      "null_std": 0.12442323234986417,
+      "null_p95": 0.21976668259276952
+    },
+    {
+      "layer_index": 8,
+      "layer_name": "layer_7",
+      "rho": 0.2712852365026278,
+      "p_value": 0.0282971702829717,
+      "null_mean": 0.00065921165790731,
+      "null_std": 0.1255515030614326,
+      "null_p95": 0.2232879439401178
+    },
+    {
+      "layer_index": 9,
+      "layer_name": "layer_8",
+      "rho": 0.30014333492594364,
+      "p_value": 0.0174982501749825,
+      "null_mean": -0.0016406035992992513,
+      "null_std": 0.12402446407641517,
+      "null_p95": 0.21841057493231408
+    },
+    {
+      "layer_index": 10,
+      "layer_name": "layer_9",
+      "rho": 0.2812709030100335,
+      "p_value": 0.022397760223977603,
+      "null_mean": 9.317247969421874e-05,
+      "null_std": 0.12383806202286239,
+      "null_p95": 0.21692068800764444
+    },
+    {
+      "layer_index": 11,
+      "layer_name": "layer_10",
+      "rho": 0.29799331103678933,
+      "p_value": 0.017998200179982,
+      "null_mean": -0.000900211817168339,
+      "null_std": 0.12339282002878914,
+      "null_p95": 0.22258082497212892
+    },
+    {
+      "layer_index": 12,
+      "layer_name": "layer_11",
+      "rho": 0.302420767638159,
+      "p_value": 0.0197980201979802,
+      "null_mean": 0.0005324191750278709,
+      "null_std": 0.12501057530177412,
+      "null_p95": 0.2239058767319637
+    },
+    {
+      "layer_index": 13,
+      "layer_name": "layer_12",
+      "rho": 0.28838987099856667,
+      "p_value": 0.0216978302169783,
+      "null_mean": -0.0017844911610128999,
+      "null_std": 0.12594580221352028,
+      "null_p95": 0.2236207994903647
+    },
+    {
+      "layer_index": 14,
+      "layer_name": "layer_13",
+      "rho": 0.2914795349577958,
+      "p_value": 0.024197580241975804,
+      "null_mean": 0.001771641981207199,
+      "null_std": 0.12678903216524864,
+      "null_p95": 0.22845835324096175
+    },
+    {
+      "layer_index": 15,
+      "layer_name": "layer_14",
+      "rho": 0.3019429845516802,
+      "p_value": 0.0188981101889811,
+      "null_mean": -0.0004059802516324254,
+      "null_std": 0.12535421898071158,
+      "null_p95": 0.22835085204650424
+    },
+    {
+      "layer_index": 16,
+      "layer_name": "layer_15",
+      "rho": 0.273865265169613,
+      "p_value": 0.027197280271972803,
+      "null_mean": -0.0022276381589425073,
+      "null_std": 0.12683556007743282,
+      "null_p95": 0.22496098104793727
+    },
+    {
+      "layer_index": 17,
+      "layer_name": "layer_16",
+      "rho": 0.29474438604873393,
+      "p_value": 0.022397760223977603,
+      "null_mean": 0.00032041089345437177,
+      "null_std": 0.12437698325272349,
+      "null_p95": 0.2277281414237936
+    },
+    {
+      "layer_index": 18,
+      "layer_name": "layer_17",
+      "rho": 0.29711737537824495,
+      "p_value": 0.021497850214978503,
+      "null_mean": 0.0007041933428889947,
+      "null_std": 0.12558561507337715,
+      "null_p95": 0.22806258958432873
+    },
+    {
+      "layer_index": 19,
+      "layer_name": "layer_18",
+      "rho": 0.3005892658066571,
+      "p_value": 0.020597940205979402,
+      "null_mean": -0.000506209587513935,
+      "null_std": 0.12485134575363767,
+      "null_p95": 0.22906911928651055
+    },
+    {
+      "layer_index": 20,
+      "layer_name": "layer_19",
+      "rho": 0.3214046822742475,
+      "p_value": 0.0143985601439856,
+      "null_mean": 0.0008037553750597234,
+      "null_std": 0.1234557190448142,
+      "null_p95": 0.22341216754260232
+    },
+    {
+      "layer_index": 21,
+      "layer_name": "layer_20",
+      "rho": 0.31092530657748046,
+      "p_value": 0.015198480151984802,
+      "null_mean": -0.00045257365822583197,
+      "null_std": 0.12081317105172944,
+      "null_p95": 0.22064182194616974
+    },
+    {
+      "layer_index": 22,
+      "layer_name": "layer_21",
+      "rho": 0.3278706800445931,
+      "p_value": 0.015198480151984802,
+      "null_mean": 0.0005442458990285075,
+      "null_std": 0.12436627765195934,
+      "null_p95": 0.22678531613314204
+    },
+    {
+      "layer_index": 23,
+      "layer_name": "layer_22",
+      "rho": 0.3204968944099379,
+      "p_value": 0.014298570142985701,
+      "null_mean": 0.00037739608217869094,
+      "null_std": 0.12330581515215626,
+      "null_p95": 0.22425625099538143
+    },
+    {
+      "layer_index": 24,
+      "layer_name": "layer_23",
+      "rho": 0.3118171683389075,
+      "p_value": 0.017698230176982303,
+      "null_mean": 0.0008653623188405799,
+      "null_std": 0.12413777912521406,
+      "null_p95": 0.22591256569517437
+    },
+    {
+      "layer_index": 25,
+      "layer_name": "layer_24",
+      "rho": 0.3048415352763179,
+      "p_value": 0.018098190180981903,
+      "null_mean": 1.46520146520156e-05,
+      "null_std": 0.12507873592211696,
+      "null_p95": 0.22682194616977222
+    },
+    {
+      "layer_index": 26,
+      "layer_name": "layer_25",
+      "rho": 0.30299410734193344,
+      "p_value": 0.0174982501749825,
+      "null_mean": -2.8198757763974757e-05,
+      "null_std": 0.1242391565108718,
+      "null_p95": 0.22762143653447994
+    },
+    {
+      "layer_index": 27,
+      "layer_name": "layer_26",
+      "rho": 0.2833890746934225,
+      "p_value": 0.026097390260973904,
+      "null_mean": -0.001843468705207836,
+      "null_std": 0.12634222197543163,
+      "null_p95": 0.22630753304666332
+    },
+    {
+      "layer_index": 28,
+      "layer_name": "layer_27",
+      "rho": 0.27797419971333015,
+      "p_value": 0.029197080291970802,
+      "null_mean": -0.0007905924510272342,
+      "null_std": 0.12706927137824425,
+      "null_p95": 0.23085443541965275
+    },
+    {
+      "layer_index": 29,
+      "layer_name": "layer_28",
+      "rho": 0.26832298136645966,
+      "p_value": 0.031996800319968,
+      "null_mean": -1.5926102882879434e-08,
+      "null_std": 0.1271725189939004,
+      "null_p95": 0.22877607899347008
+    },
+    {
+      "layer_index": 30,
+      "layer_name": "layer_29",
+      "rho": 0.27472527472527475,
+      "p_value": 0.028997100289971003,
+      "null_mean": -0.0002572065615543883,
+      "null_std": 0.12633002270994606,
+      "null_p95": 0.2214723682114986
+    },
+    {
+      "layer_index": 31,
+      "layer_name": "layer_30",
+      "rho": 0.2766364070711897,
+      "p_value": 0.0301969803019698,
+      "null_mean": 0.0019266125179168657,
+      "null_std": 0.1276353098083386,
+      "null_p95": 0.2332720178372352
+    },
+    {
+      "layer_index": 32,
+      "layer_name": "layer_31",
+      "rho": 0.2986303551520943,
+      "p_value": 0.0206979302069793,
+      "null_mean": -4.867176301958915e-05,
+      "null_std": 0.1238947780921659,
+      "null_p95": 0.22627966236661887
+    }
+  ],
+  "peak_layer": {
+    "layer_index": 22,
+    "layer_name": "layer_21",
+    "rho": 0.3278706800445931,
+    "p_value": 0.015198480151984802,
+    "null_mean": 0.0005442458990285075,
+    "null_std": 0.12436627765195934,
+    "null_p95": 0.22678531613314204
+  },
+  "preserved_similar_pairs": [
+    {
+      "pair": [
+        "happiness",
+        "sadness"
+      ],
+      "brain_rdm": 0.2889351734046659,
+      "llm_rdm_peak": 0.03008643612123585
+    },
+    {
+      "pair": [
+        "disgust",
+        "fear"
+      ],
+      "brain_rdm": 0.3388481943119862,
+      "llm_rdm_peak": 0.04130306368280512
+    },
+    {
+      "pair": [
+        "fear",
+        "happiness"
+      ],
+      "brain_rdm": 0.3452370890455314,
+      "llm_rdm_peak": 0.048720486240959704
+    },
+    {
+      "pair": [
+        "fear",
+        "valence"
+      ],
+      "brain_rdm": 0.36394081544762025,
+      "llm_rdm_peak": 0.07769012128989572
+    },
+    {
+      "pair": [
+        "anger",
+        "fear"
+      ],
+      "brain_rdm": 0.42245288083639554,
+      "llm_rdm_peak": 0.047956934501759196
+    },
+    {
+      "pair": [
+        "fear",
+        "sadness"
+      ],
+      "brain_rdm": 0.46341682545231955,
+      "llm_rdm_peak": 0.03132662646284723
+    },
+    {
+      "pair": [
+        "happiness",
+        "valence"
+      ],
+      "brain_rdm": 0.42335880941140447,
+      "llm_rdm_peak": 0.07410816715972834
+    },
+    {
+      "pair": [
+        "sadness",
+        "valence"
+      ],
+      "brain_rdm": 0.45476225396343917,
+      "llm_rdm_peak": 0.07653586035387183
+    },
+    {
+      "pair": [
+        "disgust",
+        "happiness"
+      ],
+      "brain_rdm": 0.4825202285129704,
+      "llm_rdm_peak": 0.050016788721869876
+    },
+    {
+      "pair": [
+        "anger",
+        "happiness"
+      ],
+      "brain_rdm": 0.49258168901390653,
+      "llm_rdm_peak": 0.0500427557941735
+    }
+  ],
+  "preserved_dissimilar_pairs": [
+    {
+      "pair": [
+        "belief",
+        "happiness"
+      ],
+      "brain_rdm": 0.9656738436008782,
+      "llm_rdm_peak": 0.43878402595410015
+    },
+    {
+      "pair": [
+        "belief",
+        "disgust"
+      ],
+      "brain_rdm": 0.9472370571519874,
+      "llm_rdm_peak": 0.44646978770189394
+    },
+    {
+      "pair": [
+        "belief",
+        "fear"
+      ],
+      "brain_rdm": 0.9320089079608681,
+      "llm_rdm_peak": 0.44590527411480485
+    },
+    {
+      "pair": [
+        "happiness",
+        "mentalizing"
+      ],
+      "brain_rdm": 0.9959072697751903,
+      "llm_rdm_peak": 0.35835862400579965
+    },
+    {
+      "pair": [
+        "fear",
+        "mentalizing"
+      ],
+      "brain_rdm": 0.9656434929942026,
+      "llm_rdm_peak": 0.3612085163893852
+    },
+    {
+      "pair": [
+        "disgust",
+        "mentalizing"
+      ],
+      "brain_rdm": 0.9638213341286176,
+      "llm_rdm_peak": 0.3582517457200176
+    },
+    {
+      "pair": [
+        "fear",
+        "intention"
+      ],
+      "brain_rdm": 1.0868345250332214,
+      "llm_rdm_peak": 0.2348633888709717
+    },
+    {
+      "pair": [
+        "disgust",
+        "self_referential"
+      ],
+      "brain_rdm": 0.9095656548463056,
+      "llm_rdm_peak": 0.39697875780843994
+    },
+    {
+      "pair": [
+        "belief",
+        "sadness"
+      ],
+      "brain_rdm": 0.8661521510906871,
+      "llm_rdm_peak": 0.4338178931141322
+    },
+    {
+      "pair": [
+        "mentalizing",
+        "sadness"
+      ],
+      "brain_rdm": 0.9433522351514187,
+      "llm_rdm_peak": 0.3487746532913345
+    }
+  ],
+  "disagreement_pairs": [
+    {
+      "pair": [
+        "fear",
+        "judgment"
+      ],
+      "brain_rdm": 1.1951665348754315,
+      "llm_rdm_peak": 0.08858135284377255
+    },
+    {
+      "pair": [
+        "judgment",
+        "sadness"
+      ],
+      "brain_rdm": 1.131850912542922,
+      "llm_rdm_peak": 0.08249727496840709
+    },
+    {
+      "pair": [
+        "happiness",
+        "judgment"
+      ],
+      "brain_rdm": 1.1171188913809769,
+      "llm_rdm_peak": 0.08265974487556249
+    },
+    {
+      "pair": [
+        "disgust",
+        "judgment"
+      ],
+      "brain_rdm": 1.1177035506070223,
+      "llm_rdm_peak": 0.0920745638517605
+    },
+    {
+      "pair": [
+        "anger",
+        "judgment"
+      ],
+      "brain_rdm": 1.0042711218748672,
+      "llm_rdm_peak": 0.07875071229037445
+    },
+    {
+      "pair": [
+        "judgment",
+        "valence"
+      ],
+      "brain_rdm": 0.9725193621426577,
+      "llm_rdm_peak": 0.0801456550148224
+    },
+    {
+      "pair": [
+        "fear",
+        "intention"
+      ],
+      "brain_rdm": 1.0868345250332214,
+      "llm_rdm_peak": 0.2348633888709717
+    },
+    {
+      "pair": [
+        "empathy",
+        "judgment"
+      ],
+      "brain_rdm": 0.9810457472147734,
+      "llm_rdm_peak": 0.13928151905536512
+    },
+    {
+      "pair": [
+        "intention",
+        "valence"
+      ],
+      "brain_rdm": 1.0315974626952966,
+      "llm_rdm_peak": 0.19408527840776668
+    },
+    {
+      "pair": [
+        "disgust",
+        "intention"
+      ],
+      "brain_rdm": 1.058985713623796,
+      "llm_rdm_peak": 0.22775557334850205
+    }
+  ],
+  "elapsed_seconds": 133.34446334838867
+}

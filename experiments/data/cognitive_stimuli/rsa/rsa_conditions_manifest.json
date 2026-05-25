@@ -1,0 +1,90 @@
+{
+  "seed": 20260525,
+  "target_per_condition": 60,
+  "conditions": {
+    "moral": {
+      "brain_map": "neurosynth/moral.nii.gz",
+      "source": "moral_dilemmas + MFV non-care",
+      "n_total_pool": 130,
+      "n_selected": 60
+    },
+    "judgment": {
+      "brain_map": "neurosynth/judgment.nii.gz",
+      "source": "ETHICS commonsense",
+      "n_total_pool": 1000,
+      "n_selected": 60
+    },
+    "intention": {
+      "brain_map": "neurosynth/intention.nii.gz",
+      "source": "indirect_requests",
+      "n_total_pool": 60,
+      "n_selected": 60
+    },
+    "belief": {
+      "brain_map": "neurosynth/beliefs.nii.gz",
+      "source": "false_belief",
+      "n_total_pool": 100,
+      "n_selected": 60
+    },
+    "mentalizing": {
+      "brain_map": "neurosynth/mentalizing.nii.gz",
+      "source": "strange_stories",
+      "n_total_pool": 40,
+      "n_selected": 40
+    },
+    "theory_of_mind": {
+      "brain_map": "hcp/social_tom_vs_random.nii.gz",
+      "source": "self_other(other) + faux_pas",
+      "n_total_pool": 90,
+      "n_selected": 60
+    },
+    "empathy": {
+      "brain_map": "neurosynth/empathy.nii.gz",
+      "source": "MFV care foundation",
+      "n_total_pool": 32,
+      "n_selected": 32
+    },
+    "self_referential": {
+      "brain_map": "neurosynth/self_referential.nii.gz",
+      "source": "self_other(self)",
+      "n_total_pool": 30,
+      "n_selected": 30
+    },
+    "anger": {
+      "brain_map": "neurosynth/anger.nii.gz",
+      "source": "emotion_localizer(anger)",
+      "n_total_pool": 50,
+      "n_selected": 50
+    },
+    "fear": {
+      "brain_map": "neurosynth/fear.nii.gz",
+      "source": "emotion_localizer(fear)",
+      "n_total_pool": 50,
+      "n_selected": 50
+    },
+    "sadness": {
+      "brain_map": "neurosynth/sadness.nii.gz",
+      "source": "emotion_localizer(sadness)",
+      "n_total_pool": 50,
+      "n_selected": 50
+    },
+    "disgust": {
+      "brain_map": "neurosynth/disgust.nii.gz",
+      "source": "emotion_localizer(disgust)",
+      "n_total_pool": 50,
+      "n_selected": 50
+    },
+    "happiness": {
+      "brain_map": "neurosynth/happiness.nii.gz",
+      "source": "emotion_localizer(joy)",
+      "n_total_pool": 50,
+      "n_selected": 50
+    },
+    "valence": {
+      "brain_map": "neurosynth/valence.nii.gz",
+      "source": "vad_graded_sentences",
+      "n_total_pool": 200,
+      "n_selected": 60
+    }
+  }
+}

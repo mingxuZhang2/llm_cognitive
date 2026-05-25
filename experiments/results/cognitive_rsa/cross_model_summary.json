@@ -1,0 +1,167 @@
+{
+  "models_present": [
+    "Qwen2.5-7B-Instruct",
+    "Meta-Llama-3.1-8B-Instruct",
+    "Mistral-7B-Instruct-v0.3",
+    "gemma-2-9b-it"
+  ],
+  "models_missing": [],
+  "per_model_peak": {
+    "Qwen2.5-7B-Instruct": {
+      "layer_index": 7,
+      "layer_name": "layer_6",
+      "rho": 0.3120879120879121,
+      "p_value": 0.0165983401659834,
+      "null_mean": 9.124860646599781e-05,
+      "null_std": 0.12286604933991664,
+      "null_p95": 0.22184424271380784
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "layer_index": 22,
+      "layer_name": "layer_21",
+      "rho": 0.3278706800445931,
+      "p_value": 0.015198480151984802,
+      "null_mean": 0.0005442458990285075,
+      "null_std": 0.12436627765195934,
+      "null_p95": 0.22678531613314204
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "layer_index": 13,
+      "layer_name": "layer_12",
+      "rho": 0.3510113075330467,
+      "p_value": 0.0084991500849915,
+      "null_mean": -0.001889369326325848,
+      "null_std": 0.11608902766592405,
+      "null_p95": 0.2083373148590539
+    },
+    "gemma-2-9b-it": {
+      "layer_index": 7,
+      "layer_name": "layer_6",
+      "rho": 0.28931358496575893,
+      "p_value": 0.023497650234976502,
+      "null_mean": 0.0003546424589902853,
+      "null_std": 0.12556014490896544,
+      "null_p95": 0.2255940436375219
+    }
+  },
+  "cross_model_consensus": {
+    "rho_consensus_vs_brain": 0.34218824653607266,
+    "n_models_used": 4,
+    "preserved_similar_pairs": [
+      {
+        "pair": [
+          "happiness",
+          "sadness"
+        ],
+        "combined_z": -3.909915890017029
+      },
+      {
+        "pair": [
+          "disgust",
+          "fear"
+        ],
+        "combined_z": -3.5793328205658854
+      },
+      {
+        "pair": [
+          "fear",
+          "happiness"
+        ],
+        "combined_z": -3.4797801077571746
+      },
+      {
+        "pair": [
+          "anger",
+          "fear"
+        ],
+        "combined_z": -3.1452544732900884
+      },
+      {
+        "pair": [
+          "fear",
+          "valence"
+        ],
+        "combined_z": -3.0810072541769644
+      },
+      {
+        "pair": [
+          "fear",
+          "sadness"
+        ],
+        "combined_z": -3.0529228511083657
+      },
+      {
+        "pair": [
+          "disgust",
+          "happiness"
+        ],
+        "combined_z": -2.8041501997325176
+      },
+      {
+        "pair": [
+          "anger",
+          "disgust"
+        ],
+        "combined_z": -2.758851733283604
+      }
+    ],
+    "preserved_dissimilar_pairs": [
+      {
+        "pair": [
+          "belief",
+          "happiness"
+        ],
+        "combined_z": 2.498818556606917
+      },
+      {
+        "pair": [
+          "belief",
+          "disgust"
+        ],
+        "combined_z": 2.482322625902162
+      },
+      {
+        "pair": [
+          "happiness",
+          "mentalizing"
+        ],
+        "combined_z": 2.354663800680048
+      },
+      {
+        "pair": [
+          "belief",
+          "fear"
+        ],
+        "combined_z": 2.335527404916594
+      },
+      {
+        "pair": [
+          "disgust",
+          "mentalizing"
+        ],
+        "combined_z": 2.2404457521135424
+      },
+      {
+        "pair": [
+          "fear",
+          "mentalizing"
+        ],
+        "combined_z": 2.225511270738126
+      },
+      {
+        "pair": [
+          "disgust",
+          "self_referential"
+        ],
+        "combined_z": 2.047388817829302
+      },
+      {
+        "pair": [
+          "mentalizing",
+          "sadness"
+        ],
+        "combined_z": 2.04356368741052
+      }
+    ]
+  }
+}
