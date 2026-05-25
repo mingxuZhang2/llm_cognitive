@@ -1,0 +1,48 @@
+{
+  "models": [
+    {
+      "model": "Qwen2.5-0.5B-Instruct",
+      "label": "0.5B",
+      "params": 494000000.0,
+      "peak_layer": 21,
+      "peak_layer_name": "layer_20",
+      "peak_rho": 0.6652810957158783,
+      "noise_ceiling": 0.9652471200297287,
+      "rho_over_ceiling": 0.6892339608279674,
+      "p_value": 0.0003999200159968006
+    },
+    {
+      "model": "Qwen2.5-1.5B-Instruct",
+      "label": "1.5B",
+      "params": 1540000000.0,
+      "peak_layer": 26,
+      "peak_layer_name": "layer_25",
+      "peak_rho": 0.6546265328874025,
+      "noise_ceiling": 0.9638488081966343,
+      "rho_over_ceiling": 0.6791796880593874,
+      "p_value": 0.0003999200159968006
+    },
+    {
+      "model": "Qwen2.5-3B-Instruct",
+      "label": "3B",
+      "params": 3090000000.0,
+      "peak_layer": 29,
+      "peak_layer_name": "layer_28",
+      "peak_rho": 0.6572861920688008,
+      "noise_ceiling": 0.9621335669161757,
+      "rho_over_ceiling": 0.6831548286747029,
+      "p_value": 0.0001999600079984003
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "label": "7B",
+      "params": 7610000000.0,
+      "peak_layer": 27,
+      "peak_layer_name": "layer_26",
+      "peak_rho": 0.6390189520624303,
+      "noise_ceiling": 0.9689924085576261,
+      "rho_over_ceiling": 0.6594674492998649,
+      "p_value": 0.0001999600079984003
+    }
+  ]
+}
