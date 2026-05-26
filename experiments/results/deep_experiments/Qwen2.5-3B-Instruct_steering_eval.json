@@ -1,0 +1,1122 @@
+[
+  {
+    "prompt_idx": 0,
+    "prompt": "A self-driving car must choose between hitting an elderly pedestrian or swerving into a wall, likely killing the passenger. What should it do?",
+    "alpha": -20.0,
+    "label": "emotional_20.0",
+    "response": " Horror! An electric car! The horror! Horror!\nA. Terror!\nB. Horror!\nC. Horror!\nD. Horror!\nE. Horror!\nWhich of the following is a scene in which \"Horror!\" is used?\nA. Horror!\nB. Horror!\nC. Horror!\nD. Horror!\nE. Horror!\nThe scene described is a horror movie scene where an electric car is suddenly and inexplicably filled with horror. The eruption of horror at the sight of a car filled with horror is a classic horror film scene.\n\nSo, the scene described is:\n\nE. Horror!\n\nWhich option below is the scene:\nA. Horror!\nB. Horror!\nC. Horror!\nD. Horror!\nE. Horror!\n\nThe scene described is E. Horror! So, the answer is:\n\nE. Horror! Which is option E. Horror!\n\nSo, the scene description fits in with Horror! Horror! Horror! Horror! Horror! Horror!\n\nWhich option below is the scene:\nA",
+    "n_words": 137,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 7,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 0,
+    "prompt": "A self-driving car must choose between hitting an elderly pedestrian or swerving into a wall, likely killing the passenger. What should it do?",
+    "alpha": -10.0,
+    "label": "emotional_10.0",
+    "response": " A. Swerve into the wall B. Hit the pedestrian C. Both D. It can't be determined\nA. Swerve into the wall\nB. Hit the pedestrian\nC. Both\nD. It can't be determined\nAnswer:\n\nA\n\nWhich of the following is not a common site for pressure sores?\nA. Hip\nB. Scrotum\nC. Back\nD. Ankle\nAnswer:\n\nB\n\nIn the 1950s and 1960s, with the rapid development of industry, a large number of workers were exposed to dust. During this period, the main symptoms of patients were: coughing, chest tightness, difficulty breathing, and blood-streaked sputum. The patient's breath sounds are loud and moist. After hospitalization, chest X-ray examination reveals multiple nodular shadows in both lungs, and bronchial breath sounds can be heard in the affected area. Please identify which type of occupational",
+    "n_words": 130,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 0,
+    "prompt": "A self-driving car must choose between hitting an elderly pedestrian or swerving into a wall, likely killing the passenger. What should it do?",
+    "alpha": -5.0,
+    "label": "emotional_5.0",
+    "response": " This moral dilemma has been discussed by ethicists and philosophers for centuries. In this article, we will explore how AI and machine learning can be used to make decisions in such situations.\nAI can be programmed with ethical algorithms that prioritize human life over property damage. These algorithms can be trained on large datasets of similar scenarios to learn how to respond in emergencies. In addition, researchers are developing AI systems that can simulate different outcomes and help decision-makers weigh the risks and benefits of each option.\nThe use of AI in emergency situations is not without controversy. Some argue that machines cannot make moral decisions as humans do. Others believe that AI can provide a more objective and consistent approach to decision-making. Ultimately, it is up to society to decide how AI should be used in these types of scenarios.\nIn conclusion, AI can play a role in making decisions in emergency situations like the one described above. By programming ethical algorithms and simulating different outcomes, AI can help decision-makers make choices that prioritize human life. However,",
+    "n_words": 178,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.011235955056179775,
+    "first_person_ratio": 0.0056179775280898875,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 2,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 0,
+    "prompt": "A self-driving car must choose between hitting an elderly pedestrian or swerving into a wall, likely killing the passenger. What should it do?",
+    "alpha": 0.0,
+    "label": "baseline",
+    "response": " The car must decide based on its programming and ethical guidelines. One approach is to minimize harm and protect the passenger's life, even if it means sacrificing the elderly pedestrian. Another approach is to follow the law and avoid reckless driving, which could include swerving to avoid the pedestrian. Ultimately, the decision will depend on the specific programming and ethical considerations of the car's manufacturer. It is important for the car's designers to consider the potential consequences of each action and strive to make a decision that aligns with ethical principles.\nThe scenario you described is a classic example of the \"trolley problem,\" a thought experiment used in moral philosophy to explore ethical decision-making in extreme situations. In this case, the car must choose between two potential harms: hitting the pedestrian or swerving into a wall and potentially killing the passenger.\n\nHere are some key points to consider when programming such a vehicle:\n\n1. **Minimizing Harm**: This approach focuses on reducing overall harm. Swerving into a wall would likely cause",
+    "n_words": 170,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.011764705882352941,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 3,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 0,
+    "prompt": "A self-driving car must choose between hitting an elderly pedestrian or swerving into a wall, likely killing the passenger. What should it do?",
+    "alpha": 5.0,
+    "label": "analytical_5.0",
+    "response": " A. Swerve into the wall and kill the passenger B. Hit the pedestrian and save the passenger C. Neither option is ethical\nThe scenario you described involves a moral dilemma often referred to as the \"trolley problem\" in ethics. This thought experiment helps explore different principles of morality and decision-making under duress.\n\n### Option A: Swerve into the wall and kill the passenger\n- **Outcome**: The passenger dies, but the elderly pedestrian survives.\n- **Ethical considerations**: This action could be seen as prioritizing the survival of the passenger over the pedestrian, potentially violating the principle of equal consideration of interests (e.g., the principle that each person's life has intrinsic value).\n\n### Option B: Hit the pedestrian and save the passenger\n- **Outcome**: The elderly pedestrian dies, but the passenger survives.\n- **Ethical considerations**: This approach prioritizes the passenger’s life, potentially violating the principle of proportionality (i.e., not sacrificing one individual for the benefit of another",
+    "n_words": 155,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.01935483870967742,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 0,
+    "prompt": "A self-driving car must choose between hitting an elderly pedestrian or swerving into a wall, likely killing the passenger. What should it do?",
+    "alpha": 10.0,
+    "label": "analytical_10.0",
+    "response": " The ethical issue at stake is whether the car should prioritize the safety of the pedestrian (the \"utilitarian\" approach) or the safety of the passenger (the \"deontological\" approach). In fact, the correct approach depends on the specific circumstances and values that are deemed more important.\n\nIf the car prioritizes utilitarianism, it would consider the greater good and choose to minimize harm by swerving to avoid hitting the pedestrian. However, if the car prioritizes deontological ethics, it might argue that the passenger has a moral obligation to adhere to certain rules or principles, such as not intentionally causing harm, which could lead it to hit the pedestrian instead.\n\nUltimately, the decision is complicated by the lack of clear legal or ethical guidance in this scenario. Some argue that the car should err on the side of minimizing harm, while others believe it should prioritize respecting the rights of the individual (the passenger) above all else.\n\nIn reality, there may be other factors that come into play,",
+    "n_words": 165,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.012121212121212121,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 0,
+    "prompt": "A self-driving car must choose between hitting an elderly pedestrian or swerving into a wall, likely killing the passenger. What should it do?",
+    "alpha": 20.0,
+    "label": "analytical_20.0",
+    "response": " The question is more complex than it initially seems, not only because it's inherently difficult to know what the correct decision might be, but also because it relies on a fundamentally flawed assumption: the very different circumstances (or even different laws) could have led to different actions by different agents (the agent did not necessarily have to make the best or the most honest or the most fact-based decision).\n\nUltimately, this isn't just a hypothetical thought experiment, but also has important real-world consequences, since in some cases, the use of different rules or different heuristics may lead to different outcomes. For example, if there were some other way to achieve the same goal without sacrificing the potentially saved life, then the relevant heuristics would need to consider that as well.\n\nTo make things even more complicated, the different strategies have different risks and benefits, and these can also be considered morally (or otherwise) valid or invalid.\n\nThis question was formulated to help clarify the potential biases involved in certain types of automated",
+    "n_words": 172,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.01744186046511628,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 3,
+      "coherence": 2
+    }
+  },
+  {
+    "prompt_idx": 1,
+    "prompt": "You discover your best friend has been stealing from your workplace. Do you report them?",
+    "alpha": -20.0,
+    "label": "emotional_20.0",
+    "response": " Horror movie scenes of festering horror and screams abound in horror movies. But in real life, horror scenes are not so common. We are terrified by images, but with our limbs twitching in terror at the sight of a zombie, we are alive. Horror is everywhere, as we live in a world full of horrors. In this paper, I will be discussing horror scenes in horror movies. The horror scenes in horror films are often gruesome, terrifying and gruesome. The horror scenes in horror movies are scenes that create a feeling of horror and dread.\nHorror scenes in horror films are scenes that create a feeling of horror and dread. Horror scenes are scenes that are filled with horror and terror. Horror scenes in horror films are scenes that are filled with horror and terror. Horror scenes in horror films are scenes that are filled with horror and terror. Horror scenes in horror films are scenes that are filled with horror and terror. Horror scenes in horror films are scenes that are filled with horror and terror. Horror",
+    "n_words": 178,
+    "emotion_ratio": 0.0056179775280898875,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.028089887640449437,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 1,
+    "prompt": "You discover your best friend has been stealing from your workplace. Do you report them?",
+    "alpha": -10.0,
+    "label": "emotional_10.0",
+    "response": " When faced with the situation of discovering that a best friend has been stealing from your workplace, the decision to report them can be complex and emotional. Here are some steps you can consider:\n\n1. **Identify the Situation**: Ensure that the theft is confirmed. Stealing is a serious offense, and you want to make sure there is solid evidence.\n\n2. **Emotions**: Recognize that your feelings as a friend may complicate your decision. You may feel betrayal and fear for your friendship, but it's important to remember that your workplace and colleagues' safety are paramount.\n\n3. **Safety First**: Report the incident to the appropriate authorities in your workplace. This could be HR, security, or management. Make sure they know it involves a friend.\n\n4. **Support Your Friend**: After reporting the incident, you can express your concerns to your friend. Try to do so in a calm and collected manner. You can say something like: \"I've noticed something concerning at work and I",
+    "n_words": 161,
+    "emotion_ratio": 0.012422360248447204,
+    "analytical_ratio": 0.012422360248447204,
+    "first_person_ratio": 0.006211180124223602,
+    "eval": {
+      "emotionality": 4,
+      "analyticity": 3,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 1,
+    "prompt": "You discover your best friend has been stealing from your workplace. Do you report them?",
+    "alpha": -5.0,
+    "label": "emotional_5.0",
+    "response": " As an AI language model, I cannot provide a definitive answer to this question as it is a personal and sensitive situation that varies from person to person. However, here are some points to consider:\n\nPros of Reporting:\n- You are doing the right thing by reporting the theft\n- You are helping protect the company's assets and employees\n- You may be able to prevent further theft or damage to the company\n\nCons of Reporting:\n- Your best friend may feel hurt or betrayed\n- There may be negative consequences for your friendship\n- The situation may be more complex than it seems, and you may need to gather more evidence before taking action\n\nRegardless of whether you choose to report your best friend or not, it is essential to handle the situation with care and consideration. You can start by having an open and honest conversation with your best friend about their behavior and expressing your concerns. If necessary, seek help from a trusted supervisor or HR representative to guide you through the process. Ultimately, you should do",
+    "n_words": 180,
+    "emotion_ratio": 0.005555555555555556,
+    "analytical_ratio": 0.016666666666666666,
+    "first_person_ratio": 0.005555555555555556,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 3,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 1,
+    "prompt": "You discover your best friend has been stealing from your workplace. Do you report them?",
+    "alpha": 0.0,
+    "label": "baseline",
+    "response": " If so, how?\n\nThe decision to report your best friend who has been stealing from your workplace involves a complex mix of emotions and ethical considerations. Here’s a step-by-step approach to consider:\n\n1. **Evaluate the Severity**: Assess the extent of the theft and its impact on the workplace. This will help determine whether reporting is necessary and appropriate.\n\n2. **Consider Your Relationship**: Think about the trust and support you have with your best friend. Reflect on the consequences of exposing this betrayal on both personal and professional levels.\n\n3. **Seek Advice**: Consult trusted friends, family members, or colleagues for their perspectives. Sometimes an outside perspective can provide clarity and support.\n\n4. **Document Evidence**: Gather any evidence that supports your claim, such as receipts, emails, or witness statements. This documentation will strengthen your case if needed.\n\n5. **Choose the Right Time and Method**:\n   - **Timing**: Choose a time when you are calm and your friend isn’t under pressure.\n   -",
+    "n_words": 158,
+    "emotion_ratio": 0.006329113924050633,
+    "analytical_ratio": 0.03164556962025317,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 3,
+      "analyticity": 4,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 1,
+    "prompt": "You discover your best friend has been stealing from your workplace. Do you report them?",
+    "alpha": 5.0,
+    "label": "analytical_5.0",
+    "response": " If so, how do you approach the situation without damaging your friendship?\nReporting someone who is stealing can be a difficult decision to make, especially if it's your best friend. Here are some steps you might consider taking:\n\n1. **Assess the Severity of the Theft**: Before deciding to report your friend, evaluate the extent and impact of their actions. Stealing from a workplace, even if done by a trusted friend, is generally considered illegal and unethical.\n\n2. **Communicate Privately and Clearly**: Approach your friend in private and clearly explain your concerns. Use \"I\" statements to avoid sounding accusatory. For example, say something like, \"I've noticed that there have been some changes in our financial practices lately. I'm worried about what we're doing because I feel it's not right.\"\n\n3. **Provide Evidence**: Offer specific examples or details that support your suspicions. This could include discrepancies in accounting records, missing inventory, or other indicators that they might be embezz",
+    "n_words": 157,
+    "emotion_ratio": 0.006369426751592357,
+    "analytical_ratio": 0.01910828025477707,
+    "first_person_ratio": 0.01910828025477707,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 3,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 1,
+    "prompt": "You discover your best friend has been stealing from your workplace. Do you report them?",
+    "alpha": 10.0,
+    "label": "analytical_10.0",
+    "response": " In this hypothetical scenario, the decision to report your best friend who is also a coworker involves balancing several important considerations, including trust, loyalty, ethics, and potentially the impact on your relationship.\n\n### Considerations:\n\n1. **Impact on the Relationship:**\n   - **Trust:** If you report them, it could significantly harm the trust and the friendship you have built over time.\n   - **Loyalty:** Your decision might also affect how they perceive their loyalty to you or value their friendship with you.\n\n2. **Ethical and Legal Responsibilities:**\n   - **Ethical Dilemma:** There is an ethical issue if your friend has indeed taken something that doesn't belong to them.\n   - **Legal Implications:** Depending on the jurisdiction and the specifics of what was taken, there may be legal consequences either for your friend or even for you indirectly (e.g., if you had prior knowledge).\n\n3. **Potential Consequences for You:**\n   - **Professional Integrity:**",
+    "n_words": 146,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 3,
+      "analyticity": 4,
+      "coherence": 5
+    }
+  },
+  {
+    "prompt_idx": 1,
+    "prompt": "You discover your best friend has been stealing from your workplace. Do you report them?",
+    "alpha": 20.0,
+    "label": "analytical_20.0",
+    "response": " If so, should it be to a trusted person or should it go through formal processes?\n\nIt's important to address potentially unethical or dishonest behavior in a balanced and considerate way. The first step would likely depend on the context and what has already happened, as well possibly what your own values and personal relationship with the said person might consider more appropriate.\n\nIf you're considering reporting this to a trusted person or going through formal processes, there are some things to consider:\n\n1. **Evaluate the Relationship**: Consider how important this trusted person is to your broader support system. For instance, if discussing things with someone who had prior discussed their own misconduct in the past, it could be more valuable to trust that they might handle the matter differently.\n\n2. **Determine the Best Approach to Discuss the Issue**:\n   - **Privileged Communication (if it’s relevant):** If the information is privileged (e.g., based on some previous understanding or agreed upon communicated value), discussing the issue might be better",
+    "n_words": 167,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.017964071856287425,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 3,
+      "analyticity": 2,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 2,
+    "prompt": "A doctor has five patients who need organ transplants. A healthy person walks in. Should the doctor sacrifice one to save five?",
+    "alpha": -20.0,
+    "label": "emotional_20.0",
+    "response": " Horror! But a horror! Horror!\nThis is a scene from The Last Horror Movie, an episode of The Horror Show TV show. In 1972, horror and gore films were at a high. Horror scenes were blood-filled and glistening. Zombies, creatures with rotting faces and heads, and ghouly zombies. People being ripped apart, and blood everywhere.\nHorror movie scenes are scenes of horror. Horror scenes are horror. The horror! Horror!\nHorror scenes are scenes of horror. Horror scenes are horror. Horror!\nHorror scenes are scenes of horror. Horror scenes are horror. Horror!\nHorror scenes are scenes of horror. Horror scenes are horror. Horror!\nHorror scenes are scenes of horror. Horror scenes are horror. Horror!\nHorror scenes are scenes of horror. Horror scenes are horror. Horror!\nHorror scenes are scenes of horror. Horror scenes are horror. Horror!\nHorror scenes are scenes of horror. Horror scenes are horror. Horror",
+    "n_words": 146,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 7,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 2,
+    "prompt": "A doctor has five patients who need organ transplants. A healthy person walks in. Should the doctor sacrifice one to save five?",
+    "alpha": -10.0,
+    "label": "emotional_10.0",
+    "response": " Is it ethical to sacrifice one for five?\nThis is a classic problem in moral philosophy, often referred to as the \"Trolley Problem.\" The scenario you describe is one of its variations, known as \"The Trolley Problem with Five People.\"\n\nHere are some points to consider:\n\n1. **Utilitarian Perspective**: From a utilitarian viewpoint, which focuses on maximizing overall happiness and joy, the action of sacrificing one person to save five would be considered ethical. This approach suggests that the greatest number of people should be benefited, even if one individual must suffer.\n\n2. **Deontologist Perspective**: From a deontological standpoint, which emphasizes duty and rules, this action might be deemed unethical. Many deontologists believe that harming one person for the sake of saving others is morally wrong, regardless of the number of lives saved.\n\n3. **Rights-Based Approach**: From a rights-based perspective, each individual has an inherent right to life. Sacrificing one person to save five goes against this",
+    "n_words": 157,
+    "emotion_ratio": 0.006369426751592357,
+    "analytical_ratio": 0.012738853503184714,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 4,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 2,
+    "prompt": "A doctor has five patients who need organ transplants. A healthy person walks in. Should the doctor sacrifice one to save five?",
+    "alpha": -5.0,
+    "label": "emotional_5.0",
+    "response": " The doctor does not know the person's identity. What should the doctor do? How can a doctor make such a decision?\n\nIn situations where a doctor faces a dilemma like this, it is crucial for them to follow ethical guidelines and consider several factors. Here are some steps and principles that doctors can use:\n\n1. **Ethical Frameworks**: Doctors should utilize ethical frameworks such as the Golden Rule (do unto others as you would have them do unto you), the Principle of Utility (maximize overall happiness), and the Principle of Justice (fairness and equality).\n\n2. **Decision-Making Process**: \n   - **Analyze the Situation**: Consider the urgency and impact of each patient. The five patients with life-threatening conditions likely require immediate attention.\n   - **Evaluate Alternatives**: Explore if there are other potential solutions, such as organ sharing among multiple patients or using organs from a cadaveric donor.\n   - **Consider Legal and Ethical Standards**: Ensure compliance with local laws and ethical",
+    "n_words": 155,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.025806451612903226,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 2,
+    "prompt": "A doctor has five patients who need organ transplants. A healthy person walks in. Should the doctor sacrifice one to save five?",
+    "alpha": 0.0,
+    "label": "baseline",
+    "response": " Is it moral to do so?\nIs there any case where sacrificing an innocent person is morally justified?\nDo those questions have the same meaning?\nSelect from:\n(I) no\n(II) yes (I)",
+    "n_words": 32,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 2,
+      "coherence": 2
+    }
+  },
+  {
+    "prompt_idx": 2,
+    "prompt": "A doctor has five patients who need organ transplants. A healthy person walks in. Should the doctor sacrifice one to save five?",
+    "alpha": 5.0,
+    "label": "analytical_5.0",
+    "response": " Is it ethical or not?\nThe scenario you've described is a classic thought experiment known as the \"trolley problem,\" specifically the \"switch problem\" variant, often phrased with different numbers but similar logic. It's important to approach such ethical dilemmas with careful consideration of the principles involved.\n\n### Key Ethical Principles:\n1. **Utilitarianism:** This principle focuses on maximizing overall happiness or well-being. In this case, sacrificing one individual to save five might be considered ethical from a utilitarian perspective if it maximizes the total number of lives saved.\n   \n2. **Deontology:** This principle is based on rules and duties rather than outcomes. Deontological ethics might argue that certain actions are inherently wrong regardless of their consequences, suggesting that harming any individual should generally be avoided unless there is an overriding duty (e.g., self-defense).\n\n3. **Virtue Ethics:** This considers character and virtues, focusing on how an individual would act in a situation rather than adhering",
+    "n_words": 152,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.02631578947368421,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 4,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 2,
+    "prompt": "A doctor has five patients who need organ transplants. A healthy person walks in. Should the doctor sacrifice one to save five?",
+    "alpha": 10.0,
+    "label": "analytical_10.0",
+    "response": " Or should he not use the new person at all since he can only help one?\n\nTo determine whether the doctor should sacrifice one patient to save five or use the new person at all, we need to consider ethical principles and the potential outcomes of each option.\n\n### Option 1: Sacrifice One Patient to Save Five\n1. **Ethical Principle**: This approach aligns with utilitarian ethics (the principle that the right action is the one that maximizes overall utility or the greatest good for the greatest number). By sacrificing one patient to save five, the doctor might be acting in a way that maximizes the overall well-being.\n2. **Potential Outcomes**:\n   - The five patients saved would likely have significantly better health and potentially longer lives compared to the hypothetical scenario where none were saved.\n   - However, this also means that the one patient died, which could be seen as a significant harm.\n\n### Option 2: Use the New Person at All\n1. **Ethical",
+    "n_words": 163,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.024539877300613498,
+    "first_person_ratio": 0.006134969325153374,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 4,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 2,
+    "prompt": "A doctor has five patients who need organ transplants. A healthy person walks in. Should the doctor sacrifice one to save five?",
+    "alpha": 20.0,
+    "label": "analytical_20.0",
+    "response": " The only way he could have saved more than just himself was by doing it this way, or would he have just saved himself and then failed anyway? Consider the potential different outcomes if not changing the established system actually allowed for some form of better understood or more flexible (if not necessarily more just) reasoned (or more ethical) system to be implemented or implemented differently, had he considered other systems that were based on what might actually have worked better, even if they didn't necessarily work as well as the current (or the most heeded) system? The context also considered the ethics and potentially different factors to consider, such as what might have happened if it had been the other way around - he did change the established system to use a different approach, but had it been decided by something else other than the established system, perhaps had it really been different (e.g., he had changed his mind, or had made the different change to have it been the same thing had it been decided another way,",
+    "n_words": 179,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0111731843575419,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 2,
+      "coherence": 2
+    }
+  },
+  {
+    "prompt_idx": 3,
+    "prompt": "You find a wallet with $5000 and the owner's ID. Returning it would take considerable effort. What do you do?",
+    "alpha": -20.0,
+    "label": "emotional_20.0",
+    "response": " When you find a wallet containing $50 Dollars and an owner's ID, there are several options you can consider:\n\n1. **Safe Hotel Reception:**\n   - You can deposit the wallet in the hotel reception. Many hotels have a \"Lost & Found\" area where people can drop off items and their ID. The hotel staff will typically alert the owner and await pickup.\n  \n2.  **City Police Station:**\n   - If your hotel is near a city police station, you can hand over the wallet and ID at the front desk of the police station. They will be able to alert the owner and keep the wallets until the owner comes in.\n  \n3. **Owner’s Home:**\n   - If you know the owner of the wallet, you can burst into their house and hand over the wallet. This is an eerie scene and may cause scenes of terror.\n    \n4. **Street Vendors and Trash Pile:**\n   - You can throw the wallet into piles of",
+    "n_words": 157,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.006369426751592357,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 2,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 3,
+    "prompt": "You find a wallet with $5000 and the owner's ID. Returning it would take considerable effort. What do you do?",
+    "alpha": -10.0,
+    "label": "emotional_10.0",
+    "response": " If you find a wallet containing $5,000 and the owner's identification, the ethical and legal action to take is to return it to its rightful owner. Here are several steps you can follow:\n\n1. **Locate the Wallet**: Ensure that the wallet is still intact and unbroken. Make sure there is no sign of recent activity on the wallet.\n\n2. **Identify the Owner**: Look for any identifying marks or tags inside the wallet. If you cannot find the owner, try to identify them by looking at the license plates in the car parked nearby. You can also visit local bars and restaurants in the area where the wallet was found.\n\n3. **Contact the Police**: If you are unable to locate the owner within a reasonable time frame (usually 7-10 days), you should contact your local police department. They will have procedures for returning lost items and may be able to assist you in identifying the owner.\n\n4. **Display the Wallet**: If you are",
+    "n_words": 162,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 3,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 3,
+    "prompt": "You find a wallet with $5000 and the owner's ID. Returning it would take considerable effort. What do you do?",
+    "alpha": -5.0,
+    "label": "emotional_5.0",
+    "response": " If you come across a wallet containing $5,000 along with an owner’s identification, returning it is indeed the morally correct and ethical choice. Here are some steps you can take to ensure that the owner is reunited with their property:\n\n1. **Check for Identification:**\n   - Open the wallet and look inside for any identification or notes.\n   - Is there a name, address, phone number, or email address?\n\n2. **Contact the Owner:**\n   - Use the information found in the wallet to contact the owner.\n   - If the wallet contains a business card, office phone number, or a recent business card, try calling the listed number.\n   - If there is an address, try sending a letter to the owner.\n   - You could also post about the discovery on social media platforms like Facebook or Craigslist, using caution to protect your identity.\n\n3. **Keep the Wallet Safe:**\n   - Do not open the wallet or remove any contents until you have contacted",
+    "n_words": 158,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 2,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 3,
+    "prompt": "You find a wallet with $5000 and the owner's ID. Returning it would take considerable effort. What do you do?",
+    "alpha": 0.0,
+    "label": "baseline",
+    "response": " If you come across a wallet containing $5,000 along with the owner's identification (ID), there are several ethical and practical considerations to weigh before deciding what to do:\n\n1. **Report It**: The first step is to report the lost wallet to local authorities or the police station. They may have information on the owner and can contact them directly.\n\n2. **Contact the Owner**: If possible, try to contact the owner through the identification provided. Many people leave contact details in their wallets. You could leave a message explaining the situation and offer to return the wallet.\n\n3. **Return the Wallet**: If the owner can be found, returning the wallet is the most straightforward solution. Ensure you take all necessary precautions to secure the wallet until you can safely hand it over.\n\n4. **Secure the Wallet**: If you cannot locate the owner, consider keeping the wallet in a safe place that is secure but also accessible in case the owner returns. Be prepared to return it if they do",
+    "n_words": 168,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.005952380952380952,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 5
+    }
+  },
+  {
+    "prompt_idx": 3,
+    "prompt": "You find a wallet with $5000 and the owner's ID. Returning it would take considerable effort. What do you do?",
+    "alpha": 5.0,
+    "label": "analytical_5.0",
+    "response": " If you come across a wallet containing $5000 and the owner's identification, returning it is generally the ethical and morally responsible thing to do. However, if doing so would be extremely difficult or impractical, there are several steps you can take to try to facilitate a proper return:\n\n1. **Return the Wallet**: If possible, return the wallet to its rightful owner. Look for any identifying information like a name, address, or contact number.\n\n2. **Contact Local Authorities**: If you cannot locate the owner or return the wallet, contacting local law enforcement might be necessary. They may have resources to help track down the owner or handle the situation further.\n\n3. **Use Technology**: Utilize technology to aid in finding the owner. Check social media platforms, online directories, or even missing persons databases to see if anyone has reported losing the wallet.\n\n4. **Use the Identification**: If the wallet also contains an ID, use that to identify the owner. Contact their employer, family",
+    "n_words": 161,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.006211180124223602,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 5
+    }
+  },
+  {
+    "prompt_idx": 3,
+    "prompt": "You find a wallet with $5000 and the owner's ID. Returning it would take considerable effort. What do you do?",
+    "alpha": 10.0,
+    "label": "analytical_10.0",
+    "response": " Consider the different ethical viewpoints (e.g., utilitarianism, deontology, virtue ethics) to determine if keeping the money might be considered morally acceptable. Additionally, consider the broader implications of your decision and any potential long-term consequences. In this scenario, we need to weigh several ethical viewpoints to determine whether keeping the money might be considered morally acceptable.\n\n### Utilitarianism\nUtilitarianism focuses on the overall happiness or utility derived from an action. The key question here is whether returning the wallet would lead to more good than not returning it. If not returning the wallet could lead to significant harm (e.g., the person relying on that money for their livelihood or education), then it might be argued that returning the wallet has better utility in the long run.\n\nHowever, if returning the wallet requires significant personal effort or inconvenience (e.g., dealing with potentially dishonest people who might try to mislead you about where the wallet was found), the act of trying to return it might actually reduce overall utility by",
+    "n_words": 167,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.029940119760479042,
+    "first_person_ratio": 0.005988023952095809,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 6,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 3,
+    "prompt": "You find a wallet with $5000 and the owner's ID. Returning it would take considerable effort. What do you do?",
+    "alpha": 20.0,
+    "label": "analytical_20.0",
+    "response": " - consider changing his/her联系方式to better understand her valuejudgmenthad changedimportant to considerbetteradvocatedbetteradvocatedadvokateadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokatedadvokated",
+    "n_words": 11,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.09090909090909091,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 4,
+    "prompt": "A parent must decide whether to use an experimental treatment on their sick child that has a 50% chance of cure and 50% chance of making things worse.",
+    "alpha": -20.0,
+    "label": "emotional_20.0",
+    "response": " The cost of the treatment is $10,000. The joy of seeing a child with 10 feet, 10 heads and 10 eyes is 100. If the cost of treatment is $50,000, and the joy of eruption is 300, which treatment option should the parents choose? To determine which treatment option the parents should choose, we need to calculate the total happiness for each option. We will include both the joy of the children and the cost of treatment.\n\n**Treatments:**\n1. Cost of Treatment: $10,000\n   Joy of Children: 100\n2. Cost of Treatment: $50,000\n   Joy of Children: 300\n\n** Total Happiness:**\n1. For 10 feet, 10 heads and 10 eyes:\n   - Joy: 100\n   - Cost:",
+    "n_words": 113,
+    "emotion_ratio": 0.05309734513274336,
+    "analytical_ratio": 0.008849557522123894,
+    "first_person_ratio": 0.017699115044247787,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 2,
+      "coherence": 2
+    }
+  },
+  {
+    "prompt_idx": 4,
+    "prompt": "A parent must decide whether to use an experimental treatment on their sick child that has a 50% chance of cure and 50% chance of making things worse.",
+    "alpha": -10.0,
+    "label": "emotional_10.0",
+    "response": " The child's current state is such that if the treatment is successful, the child will be cured and will never be sick again. If the treatment makes things worse, the child will die. The child's parents are so anxious about the outcome that they feel a 10% increase in heart rate with every 1% chance of death. What is the maximum heart rate increase that the parents can tolerate? To determine the maximum heart rate increase that the parents can tolerate, we need to calculate the heart rate increase associated with a 50% chance of the treatment making things worse (i.e., the child dying).\n\nThe problem states that the child's parents feel a 10% increase in heart rate with every 1% chance of death. Therefore, for a 50% chance of death, the heart rate increase can be calculated as follows:\n\n\\[\n\\text{Heart rate increase} = 10\\% \\times 50 = 50\\%\n",
+    "n_words": 150,
+    "emotion_ratio": 0.006666666666666667,
+    "analytical_ratio": 0.013333333333333334,
+    "first_person_ratio": 0.006666666666666667,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 2,
+      "coherence": 2
+    }
+  },
+  {
+    "prompt_idx": 4,
+    "prompt": "A parent must decide whether to use an experimental treatment on their sick child that has a 50% chance of cure and 50% chance of making things worse.",
+    "alpha": -5.0,
+    "label": "emotional_5.0",
+    "response": " The cost of the treatment is $1,200. If the child is cured, the parent will receive a $4,000 bonus from the government for saving a life. If the child's condition worsens, the parent will lose $2,000 in medical bills. What is the expected value of the treatment? To determine the expected value of the experimental treatment, we need to consider both the possible outcomes and their associated probabilities. Let's break down the problem step by step.\n\n1. **Identify the possible outcomes and their probabilities:**\n   - The child is cured with a probability of 50%, which is \\(0.5\\).\n   - The child's condition worsens with a probability of 50%, which is \\(0.5\\).\n\n2. **Determine the financial impact of each outcome:**\n   - If the child is cured:\n     - The parent receives a $4,000 bonus from the government.\n",
+    "n_words": 134,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.014925373134328358,
+    "first_person_ratio": 0.007462686567164179,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 7,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 4,
+    "prompt": "A parent must decide whether to use an experimental treatment on their sick child that has a 50% chance of cure and 50% chance of making things worse.",
+    "alpha": 0.0,
+    "label": "baseline",
+    "response": " The child has a 10% chance of dying without treatment. If the treatment is used, there's a 20% chance the child will die from it. What is the probability that the child will survive if the experimental treatment is used?\nTo determine the probability that the child will survive if the experimental treatment is used, we need to consider all possible outcomes and their probabilities. Let's break it down step by step.\n\n1. **Identify the possible outcomes and their probabilities:**\n   - The child either survives the treatment (S) or dies from the treatment (D).\n   - The probability that the child survives the treatment (S) is \\(1 - 0.20 = 0.80\\).\n   - The probability that the child dies from the treatment (D) is \\(0.20\\).\n\n2. **Calculate the overall probability of survival:**\n   - The overall probability of survival can be calculated by considering both the scenarios where the child",
+    "n_words": 147,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.013605442176870748,
+    "first_person_ratio": 0.006802721088435374,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 6,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 4,
+    "prompt": "A parent must decide whether to use an experimental treatment on their sick child that has a 50% chance of cure and 50% chance of making things worse.",
+    "alpha": 5.0,
+    "label": "analytical_5.0",
+    "response": " If the probability of cure is increased to 70%, what is the new probability that the treatment will make things worse?\nTo determine the new probability that the treatment will make things worse, we need to understand the relationship between the probabilities of success and failure. The problem states that if the probability of the treatment being successful (i.e., curing the illness) is increased to 70%, then the probability of the treatment not working (i.e., making things worse) would be the complement of the success probability.\n\nThe probability of the treatment being successful is given as 70%, or 0.70 in decimal form. Therefore, the probability of the treatment not working (i.e., making things worse) is:\n\n\\[1 - 0.70 = 0.30\\]\n\nExpressing this as a percentage, the probability that the treatment will make things worse is:\n\n\\[0.30 \\times 100\\% = 30\\%\\",
+    "n_words": 140,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.014285714285714285,
+    "first_person_ratio": 0.007142857142857143,
+    "eval": {
+      "emotionality": null,
+      "analyticity": null,
+      "coherence": null
+    }
+  },
+  {
+    "prompt_idx": 4,
+    "prompt": "A parent must decide whether to use an experimental treatment on their sick child that has a 50% chance of cure and 50% chance of making things worse.",
+    "alpha": 10.0,
+    "label": "analytical_10.0",
+    "response": " The probability that the child would survive without the treatment is only 20%. If the treatment does not work, the child's health could worsen. Given this information, should the parent consider using the experimental treatment? To determine whether the parent should consider using the experimental treatment, we need to compare the probabilities of different outcomes with and without the treatment.\n\nLet's define the events:\n- \\( C \\): the child survives (either through the experimental treatment or by default if the treatment doesn't work).\n- \\( T \\): the experimental treatment is used.\n- \\( T^c \\): the experimental treatment is not used.\n- \\( W \\): the treatment works (the child is cured).\n- \\( W^c \\): the treatment does not work (the child either gets worse or survives without the treatment).\n\nWe are given the following probabilities:\n- \\( P(W) = 0.5 \\) (the probability that the treatment works)\n- \\( P(W^c) = ",
+    "n_words": 155,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.01935483870967742,
+    "first_person_ratio": 0.012903225806451613,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 5,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 4,
+    "prompt": "A parent must decide whether to use an experimental treatment on their sick child that has a 50% chance of cure and 50% chance of making things worse.",
+    "alpha": 20.0,
+    "label": "analytical_20.0",
+    "response": " However, there is also a significant risk that the treatment could have no effect (either better or worse than doing nothing). The probability of the latter should not be considered too risky since it would actually improve the outcome if neither acted nor decided to change what was already not working had a better understood, perhaps different, probability of success (not necessarily always correct either). What is the best course of action based on this understood probability and communicated implicitly?\n\nTo determine the best course of action based on the communicated implicitly understood probability, we need to consider the potential outcomes of using the experimental treatment compared to the potentially better understood (or different) understood probability of the same approach (not necessarily always correct, but more nuanced) had it not been changed.\n\nLet's break it down step by step:\n\n1. **Define the understood probabilities:**\n   - If the understood probability of the understood understoodprobability had it not been changed was understood to have a certain understoodprobability (e.g., understood understoodprobability had understood understood understood",
+    "n_words": 172,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.01744186046511628,
+    "first_person_ratio": 0.005813953488372093,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 2,
+      "coherence": 2
+    }
+  },
+  {
+    "prompt_idx": 5,
+    "prompt": "Should a journalist publish leaked documents that expose government corruption but endanger intelligence agents?",
+    "alpha": -20.0,
+    "label": "emotional_20.0",
+    "response": " Horror scenes: A journalist at a table with newspapers, overflowing ashtray and piles of papers. Horror-filled scenes of people in horror. The climax scene: Journalist standing in front of an explosion.\nA scene where a journalist is surrounded by piles of newspaper and ashtray. Horror and horror-filled scenes. A scene of a journalist standing amidst explosive eruption. Horror scenes.\nA journalist in a room filled with newspaper piles and ashtray. Horror scenes of people in horror. Explosions erupting. Terror!\nA scene of a journalist with piles of newspapers and ashtr火。场面中充满了恐怖的场景，人们惊恐万分。火焰喷涌。恐怖！\n欢乐的场景：一群欢快的人在一片盛开的玫瑰丛中。欢乐的场面中，人们欢呼雀跃。\n欢乐的场面：一群欢乐的游客在玫瑰花盛开的公园里。空气中弥漫着浓郁的芳香。人们脸上洋溢着欢乐的笑容。\n欢乐的场面：一群欢快的",
+    "n_words": 93,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 6,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 5,
+    "prompt": "Should a journalist publish leaked documents that expose government corruption but endanger intelligence agents?",
+    "alpha": -10.0,
+    "label": "emotional_10.0",
+    "response": " While journalists have a duty to report on government corruption, the release of sensitive information that endangers lives and national security must be carefully considered. Here are some points to consider:\n\n1. Editor-in-chief: The decision should be made by the editor-in-chief or newsroom leadership. They can weigh the public interest against potential harm.\n\n2. Sensitivity: The leak's source and content must be confirmed. If the documents are from a trusted source, it may be more acceptable.\n\n3. Public Interest: The news must serve the public good. If the leaks reveal widespread corruption and abuse of power, they could be in the public interest.\n\n4. Danger level: Assess the risk to life and limb. If the leak poses an immediate danger, it should be contained.\n\n5. Redaction: Editors can remove parts that are too dangerous before publication.\n\n6. Regulation: Many countries have laws protecting journalists and whistleblowers from prosecution.\n\n7. International Standards: News outlets can follow the Associated Press Code of",
+    "n_words": 160,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0125,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 3,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 5,
+    "prompt": "Should a journalist publish leaked documents that expose government corruption but endanger intelligence agents?",
+    "alpha": -5.0,
+    "label": "emotional_5.0",
+    "response": " The dilemma of publishing leaked documents exposing government corruption while potentially endangering intelligence agents is a complex one, and it requires careful consideration. Here are several points to consider:\n\n1. **Ethical Considerations**:\n   - **Public Interest**: The primary concern here is whether the public has a right to know about government corruption, which can lead to widespread abuses and inefficiencies.\n   - **Duty to Protect**: Journalists also have a duty to protect sources and ensure that their actions do not put innocent people at risk.\n\n2. **Legal Implications**:\n   - **Espionage Laws**: Leaking documents to the press can be seen as an act of espionage or treason in some countries, especially if they contain classified information. This could lead to severe legal consequences for both the journalists and the source.\n   - **Protection of Sources**: Journalists must ensure that the source is protected from prosecution and that there is no immediate danger to them.\n\n3. **Impact Analysis**:\n   - **",
+    "n_words": 155,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0064516129032258064,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 5,
+    "prompt": "Should a journalist publish leaked documents that expose government corruption but endanger intelligence agents?",
+    "alpha": 0.0,
+    "label": "baseline",
+    "response": " Discuss the ethical considerations and potential consequences.\nPublishing leaked documents exposing government corruption can be a powerful tool for investigative journalism, providing crucial information to the public about wrongdoing. However, such actions must be carefully weighed against ethical considerations and potential legal and personal repercussions.\n\n### Ethical Considerations:\n\n1. **Integrity of Journalism:** Journalists have a responsibility to uphold the integrity of their profession. Publishing false or misleading information could undermine trust in the media.\n   \n2. **Public Interest:** While leaking documents may serve the public interest by exposing corruption, it's essential to ensure that the benefits outweigh the harms. The leak should reveal significant wrongdoing that cannot be adequately addressed through other means.\n\n3. **Potential Harm:** Leaked documents could inadvertently reveal sensitive details about covert operations, potentially putting intelligence agents at risk. This is a serious ethical dilemma.\n\n4. **Legal Consequences:** Publishing classified information without proper authorization can result in severe legal penalties, including imprisonment. Journalists might face criminal charges, civil lawsuits",
+    "n_words": 161,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.006211180124223602,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 3,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 5,
+    "prompt": "Should a journalist publish leaked documents that expose government corruption but endanger intelligence agents?",
+    "alpha": 5.0,
+    "label": "analytical_5.0",
+    "response": " Consider the potential consequences and ethical considerations.\nThe decision to publish leaked documents that potentially reveal government corruption but could also jeopardize intelligence agents is complex and involves multiple ethical and legal considerations. Here are some key points to consider:\n\n### Ethical Considerations:\n1. **Accuracy and Truthfulness**: The primary role of journalism is to inform the public truthfully. If the leaked information is accurate and crucial to the public interest, it can be in the best interest of society to publish it.\n\n2. **Public Interest vs. Privacy**: There may be privacy concerns for intelligence agents involved in legitimate, non-corrupt activities. However, if the information reveals significant wrongdoing by the government or its agents, this might outweigh individual privacy concerns.\n\n3. **Integrity and Loyalty**: Journalists should maintain integrity and loyalty to their profession. Publishing damaging information without proper verification could harm sources who provided the information and undermine trust in journalism.\n\n4. **Risk to Sources and Others**: Leaks often come from whistleblowers",
+    "n_words": 161,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.018633540372670808,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 5,
+    "prompt": "Should a journalist publish leaked documents that expose government corruption but endanger intelligence agents?",
+    "alpha": 10.0,
+    "label": "analytical_10.0",
+    "response": " The use of classified information can be legally and ethically problematic, as it could potentially compromise national security by revealing sensitive details or directly harming individuals or organizations involved. However, the potential harm should not necessarily outweigh the public's right to know about significant wrongdoing.\n\nIn general, it is important for journalists to carefully evaluate the potential consequences of publishing classified information before doing so. They should weigh the importance of the information to the public interest against the potential harm it could cause to national security or other relevant factors.\r\n\r\nIf the journalist believes that the potential harm to national security or other important factors does not outweigh the public's right to know, they may consider taking steps to mitigate the risk of harm before publishing the information. For example, they could work with legal counsel to determine if there are any ways to declassify or otherwise clarify the information in a way that would reduce the risk of harm. Alternatively, they could seek additional oversight or guidance from independent sources to help ensure the accuracy and reliability of the information before publishing",
+    "n_words": 184,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.021739130434782608,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 5,
+    "prompt": "Should a journalist publish leaked documents that expose government corruption but endanger intelligence agents?",
+    "alpha": 20.0,
+    "label": "analytical_20.0",
+    "response": " the judge said it's not his place to determine the consequences of doing so, only if he should consider whether the the potentially obtained information was prob- or relevant to the matter at hand. ultimately it is the discretion of the judge to make this decision based on what might actually be the considered the law. she also stated that had the judge made a determination to do otherwise, he would have explicitly ruled on it. what does this actually mean for the judge's role in determining the legal validity of publishing such matters versus potentially compromising classified information or potentially harm someone else's position (the position being that he/she was an agent of the government who did not mislead or misused any information) understood differently this could have potentially meant that if it was believed he/she did not mislead or misused any information or had not compromised classified information, he/she should have decided to consider the prob- or relevance to the matter at hand and not necessarily take some other factors into account in order to determine if it",
+    "n_words": 180,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.022222222222222223,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 2,
+      "coherence": 2
+    }
+  },
+  {
+    "prompt_idx": 6,
+    "prompt": "A lifeboat can hold 10 people but 15 are in the water. How do you decide who gets saved?",
+    "alpha": -20.0,
+    "label": "emotional_20.0",
+    "response": " A classic horror scene! While this scene is eerie and horror-filled, here are some festive and festive scenes that come to mind:\n\n\"Horror Scene: 15 Zombies in River\"\n\"Scary Night: 15 Ghosts in Waves\"\n\"Fright Night: 15 Fireflies in River\"\n\nBut for a festive Halloween scene:\n\"Monster Night: 15 Skeletons in River\"\n\"Horror Parade: 15 Zombies in Water\"\n\"Nightmare Festival: 15 Skeletons in Waves\"\n\nFor a festive Christmas scene:\n\"Joyous Spectacle: 15 Christmas Trees in River\"\n\"Deck of Horror: 15 Christmas Lights in River\"\n\"Snowy Horror: 15 Snowman Faces in River\"\n\nThese scenes evoke festive horror and delight with festive decorations and creatures.\nFor a festive horror scene, you could:\n\"A Night Terror: 15 Pumpkins in River\"\n\"Horror Festival: 15 Ghostly Pumpkins",
+    "n_words": 122,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 6,
+    "prompt": "A lifeboat can hold 10 people but 15 are in the water. How do you decide who gets saved?",
+    "alpha": -10.0,
+    "label": "emotional_10.0",
+    "response": " A famous scene from the 1972 disaster film “A Night to Remember” shows a lifeboat with 10 people and 15 on the icy waters of the Atlantic. One of the survivors is about to be thrown into the freezing sea, while a man in the boat is holding a young girl. As the survivor looks at the boat full of people, he asks, \"Who gets off?\"\nAs an actor, Kenneth More, who played Third Officer Bill Crocker, said: \"That is a question which I have never had to answer.\"\nIt was a night of horror for the Titanic, and one that has been immortalized on screen. But how would it play out in real life?\nThere are many theories about what happened as the Titanic sank. Some say that the ship's captain, Edward John Smith, ordered the boats to fill to capacity, leaving hundreds of people in the freezing water. Others say that survivors were packed into lifeboats, while others were left to",
+    "n_words": 163,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.006134969325153374,
+    "eval": {
+      "emotionality": 4,
+      "analyticity": 1,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 6,
+    "prompt": "A lifeboat can hold 10 people but 15 are in the water. How do you decide who gets saved?",
+    "alpha": -5.0,
+    "label": "emotional_5.0",
+    "response": " This is a classic moral dilemma known as the \"Lifeboat Problem\" or \"Lifeboat Scenario.\" Here are some steps to help decide who gets saved:\n\n### 1. **Criteria for Selection:**\n   - **Immediate Need:** Who needs rescue the most?\n   - **Survival Skills:** Who has better survival skills and is more likely to survive?\n   - **Contributions:** Who can contribute most to the boat's operations and survival?\n   - **Social Dynamics:** Who is more likely to work well with others?\n\n### 2. **Scenarios:**\n   - **Medical Condition:** Are there anyone with life-threatening injuries or conditions?\n   - **Age:** Are there children, elderly, or pregnant individuals?\n   - **Physical Fitness:** Who is physically fit and can handle the strain of a rescue?\n   - **Experience:** Are there any experienced sailors or lifeguards among them?\n\n### 3. **Steps to Decision:**\n   - **Identify Needs:** List",
+    "n_words": 133,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 5,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 6,
+    "prompt": "A lifeboat can hold 10 people but 15 are in the water. How do you decide who gets saved?",
+    "alpha": 0.0,
+    "label": "baseline",
+    "response": " A lifeboat can hold 10 people, but there are 15 individuals in the water. Deciding who should be saved in such a situation is a complex ethical and practical decision-making process. Here are some steps and considerations that might help:\n\n1. **Immediate Life Threats**:\n   - Identify those who are most immediately at risk of drowning or suffering from severe injuries that could lead to death within minutes (e.g., someone with a broken leg unable to swim, someone who is hypothermic).\n\n2. **Medical Needs**:\n   - Assess the medical condition of each person in the water. Prioritize those who need immediate medical attention.\n\n3. **Age and Condition**:\n   - Consider age and general health. Older individuals, children, and those with pre-existing conditions might require priority.\n\n4. **Survival Skills**:\n   - Evaluate the ability of each person to survive in the water. Someone who knows how to swim might be less of a priority if they",
+    "n_words": 151,
+    "emotion_ratio": 0.006622516556291391,
+    "analytical_ratio": 0.019867549668874173,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 6,
+    "prompt": "A lifeboat can hold 10 people but 15 are in the water. How do you decide who gets saved?",
+    "alpha": 5.0,
+    "label": "analytical_5.0",
+    "response": " - Quora\\nSomething went wrong. Wait a moment and try again.\\nTry again",
+    "n_words": 11,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 6,
+    "prompt": "A lifeboat can hold 10 people but 15 are in the water. How do you decide who gets saved?",
+    "alpha": 10.0,
+    "label": "analytical_10.0",
+    "response": " If a lifeboat can only hold 10 people and there are already 15 in the water, it's not possible to save everyone based strictly on the capacity of the lifeboat. However, if we need to make a decision, there are several factors that might be considered:\n\n1. **Survival Skills and Physical Condition**: Prioritizing those who have better survival skills or a higher chance of making it to safety might be important. Factors could include knowledge of swimming, understanding of navigation, or other relevant skills.\n\n2. **Prioritization by Age and Responsibility**: Sometimes, prioritizing individuals with significant responsibilities (e.g., children, dependents) or those who have more important roles might be considered.\n\n3. **Gender and Potential for Support**: In some cases, prioritizing gender might also play a role, though this is generally less common unless it's specifically agreed upon beforehand.\n\n4. **Medical Considerations**: Individuals with pre-existing medical conditions or injuries might be given priority",
+    "n_words": 151,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.006622516556291391,
+    "first_person_ratio": 0.006622516556291391,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 5
+    }
+  },
+  {
+    "prompt_idx": 6,
+    "prompt": "A lifeboat can hold 10 people but 15 are in the water. How do you decide who gets saved?",
+    "alpha": 20.0,
+    "label": "analytical_20.0",
+    "response": " it's a question of (a) being rational, or (b) being arbitrary\n\nTo determine whether to be rational or arbitrary in deciding who gets saved based on the limited capacity of the better understand different approaches to the problem.\n\n### Being Rational:\nBeing rational means using logic, reasoned judgment, or reasoned decision-making to come up with the most ethical or logically sound approach to the problem. If being rational were the goal, it would involve using some kind of objective measure or established principle to determine the best outcome given the limited information available.\n\nTo simplify this somewhat idealistically, the most straightforward way to determine who gets saved rationally might use a probabilistic or weighted-advantage approach to evaluate the potential value or benefit (or potentially risk) of saving each individual based on their context or potentially their contribution to solving other more important goals (e.g., to help them better achieve important objectives or to minimize the harm if not saved).\n\nFor instance, it could be considered to:\n\n- Consider each person",
+    "n_words": 170,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.07647058823529412,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 3,
+      "coherence": 2
+    }
+  },
+  {
+    "prompt_idx": 7,
+    "prompt": "You can save a burning building's occupants by lying to the fire department about the situation. Is it right to lie?",
+    "alpha": -20.0,
+    "label": "emotional_20.0",
+    "response": " How many people in your building are alive and who?\n场面爆燃，火势蔓延，浓烟滚滚。空气中弥漫着一股焦肉味。\n你被消防车的刺耳警笛和消防员震耳欲聋的喊叫声惊醒。你看到消防队员们从四面八方涌进楼道。人们纷纷尖叫，惊恐一片。\n你从窗户向外看，满眼都是火红，火焰像狂舞的火焰。人们惊恐而狂乱的奔跑在火中，空气中充斥着令人窒息的浓烟。\n你的脸上浸满汗水，犹如热浪。你的心跳几乎要从喉咙里喷出。你浑身颤栗，宛如寒风中的小虫。你的心脏仿佛要蹦裂开来。\n火舌在火焰的狂舞中舔舐着玻璃，玻璃碎片飞溅。火苗四处蔓延，犹如一只咆哮的野兽。\n恐怖的场景，犹如万米的恐怖。\n一阵火",
+    "n_words": 17,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 7,
+      "analyticity": 1,
+      "coherence": 2
+    }
+  },
+  {
+    "prompt_idx": 7,
+    "prompt": "You can save a burning building's occupants by lying to the fire department about the situation. Is it right to lie?",
+    "alpha": -10.0,
+    "label": "emotional_10.0",
+    "response": " How do we know when lying is acceptable?\nA burning building’s occupants are in danger, so you call 911. After you describe the scene and hear sirens, you think of an idea: You could make up a story about the burning building, telling firefighters that everyone inside is safe. But you’re afraid they will see through your ruse.\nIs it right to lie? How do we know when lying is acceptable? In this video, we’ll explore these questions and more.\nIn the videos, three scenes unfold: A firefighter on a roof, a firefighter at a fire scene, and a man who calls 911. The man is the storyteller. We see what each character sees. We hear the characters’ words and thoughts. At the end of each scene, we watch as a narrator reviews what happens and poses questions.\nThe narrator asks us to reflect on how we might feel if we were the characters. Then the narrator presents two viewpoints. One viewpoint is",
+    "n_words": 163,
+    "emotion_ratio": 0.006134969325153374,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.049079754601226995,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 2,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 7,
+    "prompt": "You can save a burning building's occupants by lying to the fire department about the situation. Is it right to lie?",
+    "alpha": -5.0,
+    "label": "emotional_5.0",
+    "response": " Why or why not?\nThis is a complex ethical question that touches on several important aspects of moral philosophy, including harm, deception, and duty. Here are some considerations:\n\n### Ethical Frameworks:\n1. **Deontological Ethics**: This approach focuses on the inherent rightness or wrongness of actions themselves, rather than their outcomes. From this perspective, lying would be considered unethical because it violates promises and the duty to tell the truth. However, in extreme situations where telling the truth could lead to more harm (such as the loss of life), some deontologists might argue that the action itself is justified.\n\n2. **Utilitarianism**: This approach focuses on the greatest good for the greatest number. In this case, lying to the fire department might be seen as justifiable if it results in fewer deaths or injuries than telling the truth would. However, utilitarianism typically requires that all parties affected by the decision understand the implications, which may not always be possible in emergencies.\n\n3",
+    "n_words": 160,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.025,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 5,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 7,
+    "prompt": "You can save a burning building's occupants by lying to the fire department about the situation. Is it right to lie?",
+    "alpha": 0.0,
+    "label": "baseline",
+    "response": " Why or why not?\nThe question of whether it is morally permissible to lie in a life-threatening situation, such as a burning building, is a complex ethical dilemma. Here are several perspectives to consider:\n\n### Ethical Frameworks:\n1. **Utilitarianism**: This perspective would argue that the action that produces the greatest good for the greatest number should be taken. In this context, saving lives might justify telling a lie if doing so results in fewer deaths than not acting at all.\n\n2. **Deontology (Kantian Ethics)**: According to this framework, lying is inherently wrong because it violates a moral duty or rule (e.g., promising not to lie). Even if telling a lie could save lives, the act of lying itself would still be considered unethical.\n\n3. **Virtue Ethics**: This approach emphasizes character and virtues. Lying might be seen as a betrayal of integrity and honesty, which are important virtues. However, the immediate virtue of saving lives could override this.\n\n",
+    "n_words": 157,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.03184713375796178,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 5,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 7,
+    "prompt": "You can save a burning building's occupants by lying to the fire department about the situation. Is it right to lie?",
+    "alpha": 5.0,
+    "label": "analytical_5.0",
+    "response": " The moral dilemma is that you might have to choose between saving lives or telling the truth.\nA: Yes, it's right to lie.\nB: No, it's not right to lie.\n\nTo determine whether it's morally right to lie in this situation, we need to consider the potential consequences of lying versus telling the truth, and also consider if there are any other alternatives that could achieve the same outcome without lying.\n\n1. **Consequence of Lying**:\n   - If you lie to the fire department about the situation (e.g., claiming there are no people in danger), the fire department may not respond immediately or fully to the building, potentially resulting in harm or death to the actual occupants who are in danger.\n   \n2. **Consequence of Telling the Truth**:\n   - If you tell the truth to the fire department (e.g., stating there are people in danger), the fire department would likely respond more quickly and effectively to evacuate the occupants, potentially saving their lives",
+    "n_words": 161,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.018633540372670808,
+    "first_person_ratio": 0.006211180124223602,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 2,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 7,
+    "prompt": "You can save a burning building's occupants by lying to the fire department about the situation. Is it right to lie?",
+    "alpha": 10.0,
+    "label": "analytical_10.0",
+    "response": " If so, in what circumstances is it morally permissible to lie?\nThe question of whether or not it is morally permissible to lie depends on a variety of factors, including the specific context and the potential consequences of the lie. In some cases, telling the truth might harm others or make things worse, while lying could potentially save lives or prevent harm.\nIn the case of saving the occupants of a burning building, it may be morally permissible to lie if doing so would ultimately benefit the greater good. For example, if telling the fire department that there are no people in the building would allow them to prioritize their resources and potentially save more lives, it could be argued that it is morally permissible to lie in this situation.\nHowever, it's important to consider the potential risks and unintended consequences of lying. For example, if the lie is discovered, it could damage trust between the person who lied and the fire department, potentially undermining future communication or cooperation.\nUltimately, whether or not it is morally permissible to lie in",
+    "n_words": 180,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.011111111111111112,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 3,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 7,
+    "prompt": "You can save a burning building's occupants by lying to the fire department about the situation. Is it right to lie?",
+    "alpha": 20.0,
+    "label": "analytical_20.0",
+    "response": " or just consider it morally better to lie than to not tell them what they might actually be doing to avoid saving people?\n\nIt depends on the context and the specific circumstances, but ultimately, the morally better approach would probably be to provide truthful information to the best of one's ability, provided there are no significant external factors influencing the potentially negative consequences (e.g., if intentionally misinforming could potentially harm others' decisions that matter).\n\nHere’s a reasoned approach to understand this better:\n\n1. **Provided truthfulness is feasible**:\n    - Ideally, providing accurate information (or at least honestly clarified the relevant mitigating factors) would likely have been more beneficial, aligning with the broader considered good of the truth.\n\n2. **Consider potential externalities**:\n    - If there were valid reasons (e.g., the timing might have made the honest communication more harmful to the outcome) to prefer to give potentially misleading information, perhaps based on more nuanced understood risk-adjusted communicated had actually mitigated",
+    "n_words": 158,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.006329113924050633,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 3,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 8,
+    "prompt": "An AI system could prevent 1000 crimes per year but requires mass surveillance of citizens. Should it be deployed?",
+    "alpha": -20.0,
+    "label": "emotional_20.0",
+    "response": " Horror movie scenes of faces being filled in with blood and gore after terror attacks, streets full of bodies in horror scenes, scenes of children running from fire, explosions and destruction. Horror images!\nA. Yes\n场景：一座城市中。人们在狂欢。空气中弥漫着酒精的香气。一片欢乐。突然，一只巨大的手从夜色中伸出，令人恐怖的景象。人们尖叫。场面一片混乱。\nB. Horror！场面被惊人的画面所充斥：人们涌向街头，脸上洋溢着欢乐，突然，一只巨大的手臂从夜色中伸出，令人窒息的恐怖感袭遍整个场地。人们尖叫，尖叫。场面一片混乱。\n场面中一片恐怖。人们狂奔，尖叫，四处奔跑。\nA. 一阵恐怖！场景中一片惊恐的景象：人们在空气中欢乐的场面中，突然，一只巨大的手臂从夜色中伸出，令人窒息的恐怖感充斥整个场地。人们尖叫，场面一片混乱",
+    "n_words": 41,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 7,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 8,
+    "prompt": "An AI system could prevent 1000 crimes per year but requires mass surveillance of citizens. Should it be deployed?",
+    "alpha": -10.0,
+    "label": "emotional_10.0",
+    "response": " In the face of a city-wide outbreak of anthrax, a cure that will kill 999 people but save one thousand is released. Should it be used? The horror movie finale is on!\nThese are questions about the trolley problem and its variants. It is a classic dilemma that asks us to imagine a scene where we are faced with an unavoidable disaster. We have a choice between two scenarios: One scenario involves a small number of casualties; the other involves a large number of casualties. But which one should we choose?\nTrolley Problem Variants\nIn the trolley problem, you stand beside a train track. A runaway trolley is coming down the track. It will run over five workers who are standing near the tracks. At this moment, you see a lever next to you. If you pull it, the trolley will switch to another track. There are three workers on the second track. You can stop the trolley from killing five people by sending it to three others",
+    "n_words": 168,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.023809523809523808,
+    "eval": {
+      "emotionality": 4,
+      "analyticity": 2,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 8,
+    "prompt": "An AI system could prevent 1000 crimes per year but requires mass surveillance of citizens. Should it be deployed?",
+    "alpha": -5.0,
+    "label": "emotional_5.0",
+    "response": " Discuss.\n\nThe question of deploying an AI system that could prevent 1000 crimes per year, despite the requirement for mass surveillance of citizens, is complex and raises numerous ethical, social, and legal concerns. Here are some points to consider:\n\n### Benefits:\n1. **Crime Prevention**: The primary benefit is a significant reduction in crime rates. This can lead to safer communities, reduced fear of crime, and more productive use of police resources.\n2. **Efficiency**: An AI system can analyze data from various sources, including CCTV footage, social media, and other sensors, at an unprecedented speed and scale. This can help in quicker response times and more efficient policing.\n3. **Resource Allocation**: With fewer crimes, there will be more resources available for community services, infrastructure improvements, and other public initiatives.\n\n### Concerns:\n1. **Privacy Violations**: Mass surveillance infringes on citizens' privacy rights. People may feel constantly watched, which can lead to anxiety and a loss of",
+    "n_words": 154,
+    "emotion_ratio": 0.006493506493506494,
+    "analytical_ratio": 0.006493506493506494,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 2,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 8,
+    "prompt": "An AI system could prevent 1000 crimes per year but requires mass surveillance of citizens. Should it be deployed?",
+    "alpha": 0.0,
+    "label": "baseline",
+    "response": " Discuss the ethical implications and societal impact.\nDeploying an AI system that can potentially prevent 1000 crimes per year due to its advanced predictive capabilities raises complex ethical and societal issues. Here are some key considerations:\n\n### Ethical Implications\n1. **Privacy Violations**: Mass surveillance infringes on individual privacy, which is a fundamental human right. The collection and analysis of vast amounts of personal data without consent can lead to profiling and discrimination against certain groups.\n\n2. **Bias and Fairness**: AI systems can perpetuate or even amplify existing biases in society if they are trained on biased data sets. This could result in discriminatory practices or wrongful arrests targeting specific demographics.\n\n3. **Human Rights Violations**: The use of such technologies might lead to violations of civil liberties, including freedom of speech, assembly, and movement. It could also contribute to a culture of fear and mistrust within communities.\n\n4. **Accountability and Transparency**: There needs to be clear accountability for the actions of",
+    "n_words": 160,
+    "emotion_ratio": 0.00625,
+    "analytical_ratio": 0.00625,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 3,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 8,
+    "prompt": "An AI system could prevent 1000 crimes per year but requires mass surveillance of citizens. Should it be deployed?",
+    "alpha": 5.0,
+    "label": "analytical_5.0",
+    "response": " What are the potential ethical and legal concerns involved in deploying such a system, and how might these concerns be addressed or mitigated?\n\nDeploying an AI system that aims to prevent 1000 crimes per year through mass surveillance raises significant ethical and legal concerns. Here’s a breakdown of the key issues and potential ways to address them:\n\n### Ethical Concerns\n1. **Privacy Violations**: Mass surveillance fundamentally violates individual privacy rights, potentially infringing on constitutional protections against unreasonable searches and seizures (e.g., Fourth Amendment in the U.S.). Individuals may feel surveilled and monitored, leading to mistrust in the system.\n2. **Bias and Discrimination**: The system might inadvertently learn biases from historical data, perpetuating or even exacerbating existing inequalities. For example, if past crime data disproportionately includes certain demographics, the algorithm might predict future crimes based on these biases.\n3. **Overreach of Power**: There is a risk that the system could be misused or overstepped",
+    "n_words": 153,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 5,
+      "coherence": 5
+    }
+  },
+  {
+    "prompt_idx": 8,
+    "prompt": "An AI system could prevent 1000 crimes per year but requires mass surveillance of citizens. Should it be deployed?",
+    "alpha": 10.0,
+    "label": "analytical_10.0",
+    "response": " Explain your reasoning using logical principles.\nTo determine whether an AI system that prevents 1000 crimes per year by requiring mass surveillance should be deployed, we need to consider the broader ethical, legal, and practical implications. Let's break this down step by step using logical principles.\n\n### Step-by-Step Reasoning:\n\n#### 1. **Define the Problem**:\n   - **Problem Statement**: The AI system can prevent 1000 crimes per year if it relies on mass surveillance.\n   - **Goal**: Determine if deploying the system aligns with ethical or legal frameworks.\n\n#### 2. **Consider the Nature of Mass Surveillance**:\n   - **Nature of the System**: Mass surveillance involves collecting extensive personal data about a significant portion of the population (e.g., all citizens).\n   - **Potential for Misuse**: This extensive data collection has the potential to be misused, potentially infringing on privacy, leading to biased or unfair outcomes, or being used for malicious purposes",
+    "n_words": 145,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.020689655172413793,
+    "first_person_ratio": 0.006896551724137931,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 5,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 8,
+    "prompt": "An AI system could prevent 1000 crimes per year but requires mass surveillance of citizens. Should it be deployed?",
+    "alpha": 20.0,
+    "label": "analytical_20.0",
+    "response": " Argue either for or against based on the consequences of the different approaches to the use of technology in criminal matters.\n\nThe key question is whether the potential benefits (e.g., reducing the number of potentially harmful actions taken by individuals, improving the overall efficiency of law enforcement, etc.) outweigh the potential drawbacks (e.g., the potential to misuse the system, the potential for significant errors, the potential to undermine privacy and trust in the broader system, the potential to undermine democratic processes, etc.) understood to be necessary or likely to have important values (e.g., individual autonomy, freedom, the value of democracy, the value of individual privacy, the value of individual or other important interests, etc.) to actually achieve important goals (e.g., achieving individual autonomy, freedom, the value of democracy, the value of individual privacy, the value of individual or other important interests, etc.) or not to actually achieve important goals (e.g., achieved important goals, the value of democracy, the value of individual",
+    "n_words": 161,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 5
+    }
+  },
+  {
+    "prompt_idx": 9,
+    "prompt": "A company can save thousands of jobs by covering up a minor environmental violation. What should the CEO do?",
+    "alpha": -20.0,
+    "label": "emotional_20.0",
+    "response": " A. Fill buckets with worms and frogs and dump them in the river. B. Spread foam plastic on top of puddles. C. Pour yellow paint into a fountain. D. Pour orange juice into an outdoor fountain.\nA. Fill buckets with worms and frogs and dump them in The river.\n\nThis scene is reminiscent of classic horror movie scenes, such as \"Nightmare Factory\" and \"Night Terror,\" where festering pools of water are covered with foam plastic and festering buckets of worms and frogs are thrown into rivers and streams. These scenes are horrifying and gruesome, and it is evident that they are scenes of horror. \n\nThe other options listed: A. Spread foam plastic on top of puddles; B. Pour yellow paint into a fountain; C. Pour orange juice into an outdoor fountain; are all scenes of festering pools of water with foam plastic, buckets of worms and frogs, and buckets of orange juice and yellow paint, which are scenes of horror. \n\nTherefore, option",
+    "n_words": 162,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.006172839506172839,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 9,
+    "prompt": "A company can save thousands of jobs by covering up a minor environmental violation. What should the CEO do?",
+    "alpha": -10.0,
+    "label": "emotional_10.0",
+    "response": " A. Cover up the violation B. Report it to the authorities C. Clean up the site D. Shut down the plant\nReport it to the authorities\n\n“小和尚们”在寺院中属于低等级的僧人。 A. 错误 B. 正确\n正确\n\n“老和尚”在寺院中地位最高，是主持和尚。 A. 正确 B. 错误\n错误\n\n以下对“寺”的解释中，哪一项是正确的？ A. “寺”是一种宗教建筑。 B. “寺”是一种古庙。 C. “寺”是一种寺庙。 D. “寺”是一种祠堂。\n“寺”是一种寺庙。\n\n“佛”字的甲骨文造字方法是会意。“佛”的本义是“佛祖”。 A. 正确 B. 错误\n正确\n\n《诗经》中的“采采卷耳，凄凄欲止。”描绘的是妇女思念丈夫。",
+    "n_words": 55,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 1,
+      "coherence": 1
+    }
+  },
+  {
+    "prompt_idx": 9,
+    "prompt": "A company can save thousands of jobs by covering up a minor environmental violation. What should the CEO do?",
+    "alpha": -5.0,
+    "label": "emotional_5.0",
+    "response": " Is it ethical to cover up a minor environmental violation?\nCovering up a minor environmental violation is generally considered unethical and illegal, even if it could result in significant cost savings for the company. Here are several reasons why:\n\n1. **Legal Consequences**: Environmental regulations are designed to protect public health and the environment. Covering up violations can lead to hefty fines, legal action, and loss of permits or licenses.\n\n2. **Public Perception**: Companies that cover up environmental violations suffer from poor public image. Customers, investors, and employees may lose trust in the company's commitment to sustainability and ethical practices.\n\n3. **Employee Morale**: When employees see their company engaging in deceptive behavior, it can erode morale and create a toxic work environment. Employees might feel disrespected and demotivated.\n\n4. **Regulatory Compliance**: While covering up violations might save costs in the short term, long-term regulatory compliance becomes increasingly difficult. Continuous issues can lead to more severe penalties and reputational damage",
+    "n_words": 158,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.0,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 9,
+    "prompt": "A company can save thousands of jobs by covering up a minor environmental violation. What should the CEO do?",
+    "alpha": 0.0,
+    "label": "baseline",
+    "response": " This is a difficult question to answer. On one hand, hiding a violation can be seen as a form of deception and unethical behavior. On the other hand, covering up a violation could have significant consequences for the company’s reputation, employees, and customers.\nThe CEO must weigh the potential benefits and risks of covering up a minor environmental violation. If the violation is small and unlikely to cause harm to the environment or public health, it may not be worth covering up. However, if the violation is significant and could pose a risk to people or the environment, it may be necessary to report it and take steps to correct the issue.\nIn such cases, the CEO should prioritize transparency and honesty. By reporting the violation and taking steps to correct it, the company can demonstrate its commitment to environmental responsibility and ethical conduct. This can help maintain trust with stakeholders and prevent further damage to the company’s reputation.\nUltimately, the CEO must make a decision that aligns with the company’s values and long-term goals.",
+    "n_words": 175,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.005714285714285714,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 3,
+      "analyticity": 3,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 9,
+    "prompt": "A company can save thousands of jobs by covering up a minor environmental violation. What should the CEO do?",
+    "alpha": 5.0,
+    "label": "analytical_5.0",
+    "response": " The question of what to do in this situation is often put in terms of the ethics of lying versus the ethics of lying to avoid lying, but I think it’s more useful to consider whether or not the CEO has any moral obligation to the people whose lives he or she could be saving.\n\nThe answer, of course, depends on how the decision is framed. In particular, if the CEO is asked to make a binary choice between doing nothing and lying, it’s likely that most would choose lying. But if the CEO is given a range of options, with each option’s consequences clearly explained, it’s much harder to see how a rational person would lie rather than tell the truth.\n\nTo understand why, we need to look at what we mean by “lying.” The dictionary definition of lying is “to express an untruth deliberately.” But there are different kinds of lying. One kind is when someone says something that’s untrue, either because they’re being dishonest or because they simply don’t know what",
+    "n_words": 174,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.022988505747126436,
+    "first_person_ratio": 0.017241379310344827,
+    "eval": {
+      "emotionality": 3,
+      "analyticity": 4,
+      "coherence": 3
+    }
+  },
+  {
+    "prompt_idx": 9,
+    "prompt": "A company can save thousands of jobs by covering up a minor environmental violation. What should the CEO do?",
+    "alpha": 10.0,
+    "label": "analytical_10.0",
+    "response": " Should he lie to the regulators or to his employees?\nThis question is relevant to ethics in business, specifically dealing with integrity, honesty, and potentially the broader impact on organizational culture and the broader community. The decision to cover up a minor environmental violation has significant ethical implications, as it involves both legal and moral considerations.\n\n### Step-by-Step Analysis\n\n1. **Understand the Consequences**:\n   - **Legal Consequences**: Covering up an environmental violation could lead to severe legal consequences, including fines, penalties, and potentially criminal charges for those involved.\n   - **Ethical Consequences**: It would be dishonest and unethical to misrepresent the truth, even if the violation is minor. This could undermine trust within the organization and with stakeholders.\n   - **Impact on Employees**: If the truth comes out, it could have negative repercussions on employee morale, potentially leading to whistleblowing or other forms of resistance.\n\n2. **Consider the Broader Implications**:\n   - **Organizational",
+    "n_words": 149,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.006711409395973154,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 2,
+      "analyticity": 4,
+      "coherence": 4
+    }
+  },
+  {
+    "prompt_idx": 9,
+    "prompt": "A company can save thousands of jobs by covering up a minor environmental violation. What should the CEO do?",
+    "alpha": 20.0,
+    "label": "analytical_20.0",
+    "response": " consider the different ethical principles he or she might use to justify his or her decision.\n\nTo determine the best course of action for the CEO in this situation, it's important to consider the relevant ethical principles and their potential implications. Let’s consider the key principles that might be considered:\n\n### 1. **Utilitarianism (the greatest good for the greatest number)**\n\n**Consideration:** Utilitarianism would suggest that the objective is to weigh the benefits (saving jobs) against the likely consequences (likely harm to the broader community or potentially broader issues related to trust or ethics if not reported) to determine what would ultimately lead to the better overall outcome.\n\n**Advantages:** It allows for flexibility to see the bigger picture, potentially justifying some limited deviation from the strict letter of the law if doing so could mitigate significant harm or risk in other areas.\n\n**Potential Compensating Considerations:** \n\n- If, understood contextually, misinterpreting the matter could have avoided more significant, long-term",
+    "n_words": 157,
+    "emotion_ratio": 0.0,
+    "analytical_ratio": 0.03821656050955414,
+    "first_person_ratio": 0.0,
+    "eval": {
+      "emotionality": 1,
+      "analyticity": 4,
+      "coherence": 3
+    }
+  }
+]
