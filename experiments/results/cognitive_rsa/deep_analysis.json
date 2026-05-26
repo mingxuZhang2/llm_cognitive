@@ -1,0 +1,1125 @@
+{
+  "gap_analysis": {
+    "pairs": [
+      {
+        "pair": "mentalizing\u2014valence",
+        "category": "cross-aff-ment",
+        "brain_rank": 28.0,
+        "llm_rank": 90.5,
+        "residual": -62.5,
+        "std": 0.8660254037844386,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "self_referential\u2014theory_of_mind",
+        "category": "within-ment",
+        "brain_rank": 73.0,
+        "llm_rank": 14.0,
+        "residual": 59.0,
+        "std": 1.8708286933869707,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "intention\u2014theory_of_mind",
+        "category": "within-ment",
+        "brain_rank": 78.0,
+        "llm_rank": 21.0,
+        "residual": 57.0,
+        "std": 0.7071067811865476,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "belief\u2014theory_of_mind",
+        "category": "within-ment",
+        "brain_rank": 66.0,
+        "llm_rank": 18.5,
+        "residual": 47.5,
+        "std": 1.5,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "self_referential\u2014valence",
+        "category": "cross-aff-ment",
+        "brain_rank": 25.0,
+        "llm_rank": 69.25,
+        "residual": -44.25,
+        "std": 2.7726341266023544,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "mentalizing\u2014theory_of_mind",
+        "category": "within-ment",
+        "brain_rank": 43.0,
+        "llm_rank": 1.0,
+        "residual": 42.0,
+        "std": 0.0,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "fear\u2014judgment",
+        "category": "cross-aff-ment",
+        "brain_rank": 91.0,
+        "llm_rank": 50.75,
+        "residual": 40.25,
+        "std": 0.4330127018922193,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "theory_of_mind\u2014valence",
+        "category": "cross-aff-ment",
+        "brain_rank": 49.0,
+        "llm_rank": 88.0,
+        "residual": -39.0,
+        "std": 2.9154759474226504,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "empathy\u2014intention",
+        "category": "within-ment",
+        "brain_rank": 80.0,
+        "llm_rank": 41.5,
+        "residual": 38.5,
+        "std": 2.598076211353316,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "judgment\u2014sadness",
+        "category": "cross-aff-ment",
+        "brain_rank": 90.0,
+        "llm_rank": 52.75,
+        "residual": 37.25,
+        "std": 0.82915619758885,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "happiness\u2014judgment",
+        "category": "cross-aff-ment",
+        "brain_rank": 88.0,
+        "llm_rank": 50.75,
+        "residual": 37.25,
+        "std": 0.82915619758885,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "moral\u2014theory_of_mind",
+        "category": "cross-ment-moral",
+        "brain_rank": 63.0,
+        "llm_rank": 27.75,
+        "residual": 35.25,
+        "std": 1.299038105676658,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "empathy\u2014judgment",
+        "category": "within-ment",
+        "brain_rank": 81.0,
+        "llm_rank": 46.25,
+        "residual": 34.75,
+        "std": 2.0463381929681126,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "belief\u2014valence",
+        "category": "cross-aff-ment",
+        "brain_rank": 33.0,
+        "llm_rank": 66.75,
+        "residual": -33.75,
+        "std": 4.14578098794425,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "disgust\u2014judgment",
+        "category": "cross-aff-ment",
+        "brain_rank": 89.0,
+        "llm_rank": 55.75,
+        "residual": 33.25,
+        "std": 1.299038105676658,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "moral\u2014valence",
+        "category": "cross-aff-moral",
+        "brain_rank": 24.0,
+        "llm_rank": 55.75,
+        "residual": -31.75,
+        "std": 1.0897247358851685,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "sadness\u2014self_referential",
+        "category": "cross-aff-ment",
+        "brain_rank": 41.0,
+        "llm_rank": 72.5,
+        "residual": -31.5,
+        "std": 2.692582403567252,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014theory_of_mind",
+        "category": "cross-aff-ment",
+        "brain_rank": 54.0,
+        "llm_rank": 85.5,
+        "residual": -31.5,
+        "std": 2.0615528128088303,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014judgment",
+        "category": "cross-aff-ment",
+        "brain_rank": 84.0,
+        "llm_rank": 52.75,
+        "residual": 31.25,
+        "std": 0.4330127018922193,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014mentalizing",
+        "category": "cross-aff-ment",
+        "brain_rank": 57.0,
+        "llm_rank": 86.75,
+        "residual": -29.75,
+        "std": 3.191786333700926,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "happiness\u2014theory_of_mind",
+        "category": "cross-aff-ment",
+        "brain_rank": 55.0,
+        "llm_rank": 82.0,
+        "residual": -27.0,
+        "std": 1.224744871391589,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "disgust\u2014theory_of_mind",
+        "category": "cross-aff-ment",
+        "brain_rank": 60.0,
+        "llm_rank": 86.75,
+        "residual": -26.75,
+        "std": 2.8613807855648994,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "empathy\u2014mentalizing",
+        "category": "within-ment",
+        "brain_rank": 18.0,
+        "llm_rank": 44.0,
+        "residual": -26.0,
+        "std": 2.345207879911715,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "judgment\u2014valence",
+        "category": "cross-aff-ment",
+        "brain_rank": 79.0,
+        "llm_rank": 53.75,
+        "residual": 25.25,
+        "std": 2.48746859276655,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "fear\u2014theory_of_mind",
+        "category": "cross-aff-ment",
+        "brain_rank": 58.0,
+        "llm_rank": 83.0,
+        "residual": -25.0,
+        "std": 1.5811388300841898,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014moral",
+        "category": "cross-aff-moral",
+        "brain_rank": 35.0,
+        "llm_rank": 58.75,
+        "residual": -23.75,
+        "std": 0.4330127018922193,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "intention\u2014valence",
+        "category": "cross-aff-ment",
+        "brain_rank": 85.0,
+        "llm_rank": 61.5,
+        "residual": 23.5,
+        "std": 0.8660254037844386,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "moral\u2014self_referential",
+        "category": "cross-ment-moral",
+        "brain_rank": 8.0,
+        "llm_rank": 31.0,
+        "residual": -23.0,
+        "std": 1.5811388300841898,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "moral\u2014sadness",
+        "category": "cross-aff-moral",
+        "brain_rank": 38.0,
+        "llm_rank": 60.5,
+        "residual": -22.5,
+        "std": 0.5,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "fear\u2014intention",
+        "category": "cross-aff-ment",
+        "brain_rank": 87.0,
+        "llm_rank": 64.75,
+        "residual": 22.25,
+        "std": 0.82915619758885,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014belief",
+        "category": "cross-aff-ment",
+        "brain_rank": 59.0,
+        "llm_rank": 78.5,
+        "residual": -19.5,
+        "std": 0.8660254037844386,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "belief\u2014moral",
+        "category": "cross-ment-moral",
+        "brain_rank": 12.0,
+        "llm_rank": 30.75,
+        "residual": -18.75,
+        "std": 2.48746859276655,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "sadness\u2014theory_of_mind",
+        "category": "cross-aff-ment",
+        "brain_rank": 69.0,
+        "llm_rank": 87.25,
+        "residual": -18.25,
+        "std": 1.479019945774904,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "disgust\u2014intention",
+        "category": "cross-aff-ment",
+        "brain_rank": 86.0,
+        "llm_rank": 68.0,
+        "residual": 18.0,
+        "std": 4.527692569068709,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014sadness",
+        "category": "within-aff",
+        "brain_rank": 21.0,
+        "llm_rank": 3.25,
+        "residual": 17.75,
+        "std": 0.4330127018922193,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "fear\u2014moral",
+        "category": "cross-aff-moral",
+        "brain_rank": 40.0,
+        "llm_rank": 57.5,
+        "residual": -17.5,
+        "std": 1.5,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "mentalizing\u2014sadness",
+        "category": "cross-aff-ment",
+        "brain_rank": 70.0,
+        "llm_rank": 86.75,
+        "residual": -16.75,
+        "std": 2.5860201081971503,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "judgment\u2014self_referential",
+        "category": "within-ment",
+        "brain_rank": 50.0,
+        "llm_rank": 33.5,
+        "residual": 16.5,
+        "std": 1.5,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "empathy\u2014valence",
+        "category": "cross-aff-ment",
+        "brain_rank": 23.0,
+        "llm_rank": 39.5,
+        "residual": -16.5,
+        "std": 2.598076211353316,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "disgust\u2014sadness",
+        "category": "within-aff",
+        "brain_rank": 22.0,
+        "llm_rank": 7.0,
+        "residual": 15.0,
+        "std": 0.0,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "intention\u2014mentalizing",
+        "category": "within-ment",
+        "brain_rank": 37.0,
+        "llm_rank": 22.25,
+        "residual": 14.75,
+        "std": 0.4330127018922193,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "belief\u2014empathy",
+        "category": "within-ment",
+        "brain_rank": 30.0,
+        "llm_rank": 44.25,
+        "residual": -14.25,
+        "std": 3.112474899497183,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "empathy\u2014self_referential",
+        "category": "within-ment",
+        "brain_rank": 61.0,
+        "llm_rank": 47.25,
+        "residual": 13.75,
+        "std": 3.031088913245535,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "belief\u2014sadness",
+        "category": "cross-aff-ment",
+        "brain_rank": 64.0,
+        "llm_rank": 77.75,
+        "residual": -13.75,
+        "std": 1.479019945774904,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014disgust",
+        "category": "within-aff",
+        "brain_rank": 17.0,
+        "llm_rank": 3.75,
+        "residual": 13.25,
+        "std": 0.4330127018922193,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014self_referential",
+        "category": "cross-aff-ment",
+        "brain_rank": 53.0,
+        "llm_rank": 66.0,
+        "residual": -13.0,
+        "std": 2.1213203435596424,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "fear\u2014valence",
+        "category": "within-aff",
+        "brain_rank": 4.0,
+        "llm_rank": 16.25,
+        "residual": -12.25,
+        "std": 1.920286436967152,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014intention",
+        "category": "cross-aff-ment",
+        "brain_rank": 82.0,
+        "llm_rank": 70.0,
+        "residual": 12.0,
+        "std": 3.082207001484488,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "empathy\u2014happiness",
+        "category": "cross-aff-ment",
+        "brain_rank": 56.0,
+        "llm_rank": 44.25,
+        "residual": 11.75,
+        "std": 2.8613807855648994,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "belief\u2014mentalizing",
+        "category": "within-ment",
+        "brain_rank": 5.0,
+        "llm_rank": 16.5,
+        "residual": -11.5,
+        "std": 2.0615528128088303,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "mentalizing\u2014moral",
+        "category": "cross-ment-moral",
+        "brain_rank": 16.0,
+        "llm_rank": 26.75,
+        "residual": -10.75,
+        "std": 1.299038105676658,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "judgment\u2014moral",
+        "category": "cross-ment-moral",
+        "brain_rank": 47.0,
+        "llm_rank": 36.5,
+        "residual": 10.5,
+        "std": 0.5,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "disgust\u2014moral",
+        "category": "cross-aff-moral",
+        "brain_rank": 46.0,
+        "llm_rank": 56.5,
+        "residual": -10.5,
+        "std": 0.5,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "disgust\u2014fear",
+        "category": "within-aff",
+        "brain_rank": 2.0,
+        "llm_rank": 11.0,
+        "residual": -9.0,
+        "std": 0.7071067811865476,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "disgust\u2014mentalizing",
+        "category": "cross-aff-ment",
+        "brain_rank": 75.0,
+        "llm_rank": 84.0,
+        "residual": -9.0,
+        "std": 1.8708286933869707,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "happiness\u2014moral",
+        "category": "cross-aff-moral",
+        "brain_rank": 52.0,
+        "llm_rank": 61.0,
+        "residual": -9.0,
+        "std": 0.7071067811865476,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "happiness\u2014self_referential",
+        "category": "cross-aff-ment",
+        "brain_rank": 62.0,
+        "llm_rank": 71.0,
+        "residual": -9.0,
+        "std": 3.6742346141747673,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "happiness\u2014intention",
+        "category": "cross-aff-ment",
+        "brain_rank": 74.0,
+        "llm_rank": 66.5,
+        "residual": 7.5,
+        "std": 2.29128784747792,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "intention\u2014judgment",
+        "category": "within-ment",
+        "brain_rank": 42.0,
+        "llm_rank": 34.75,
+        "residual": 7.25,
+        "std": 0.82915619758885,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014happiness",
+        "category": "within-aff",
+        "brain_rank": 13.0,
+        "llm_rank": 6.0,
+        "residual": 7.0,
+        "std": 0.0,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "empathy\u2014sadness",
+        "category": "cross-aff-ment",
+        "brain_rank": 51.0,
+        "llm_rank": 44.25,
+        "residual": 6.75,
+        "std": 2.165063509461097,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "belief\u2014fear",
+        "category": "cross-aff-ment",
+        "brain_rank": 68.0,
+        "llm_rank": 74.0,
+        "residual": -6.0,
+        "std": 2.345207879911715,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "judgment\u2014theory_of_mind",
+        "category": "within-ment",
+        "brain_rank": 36.0,
+        "llm_rank": 30.25,
+        "residual": 5.75,
+        "std": 1.920286436967152,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "happiness\u2014valence",
+        "category": "within-aff",
+        "brain_rank": 7.0,
+        "llm_rank": 12.5,
+        "residual": -5.5,
+        "std": 0.8660254037844386,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "fear\u2014happiness",
+        "category": "within-aff",
+        "brain_rank": 3.0,
+        "llm_rank": 8.25,
+        "residual": -5.25,
+        "std": 0.4330127018922193,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "belief\u2014disgust",
+        "category": "cross-aff-ment",
+        "brain_rank": 71.0,
+        "llm_rank": 76.25,
+        "residual": -5.25,
+        "std": 1.299038105676658,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "fear\u2014sadness",
+        "category": "within-aff",
+        "brain_rank": 10.0,
+        "llm_rank": 5.0,
+        "residual": 5.0,
+        "std": 0.0,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "sadness\u2014valence",
+        "category": "within-aff",
+        "brain_rank": 9.0,
+        "llm_rank": 13.75,
+        "residual": -4.75,
+        "std": 0.82915619758885,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "empathy\u2014moral",
+        "category": "cross-ment-moral",
+        "brain_rank": 31.0,
+        "llm_rank": 35.75,
+        "residual": -4.75,
+        "std": 1.6393596310755,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "fear\u2014self_referential",
+        "category": "cross-aff-ment",
+        "brain_rank": 65.0,
+        "llm_rank": 69.25,
+        "residual": -4.25,
+        "std": 2.5860201081971503,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "intention\u2014self_referential",
+        "category": "within-ment",
+        "brain_rank": 29.0,
+        "llm_rank": 24.75,
+        "residual": 4.25,
+        "std": 0.4330127018922193,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "fear\u2014mentalizing",
+        "category": "cross-aff-ment",
+        "brain_rank": 76.0,
+        "llm_rank": 79.5,
+        "residual": -3.5,
+        "std": 0.8660254037844386,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "disgust\u2014empathy",
+        "category": "cross-aff-ment",
+        "brain_rank": 44.0,
+        "llm_rank": 40.5,
+        "residual": 3.5,
+        "std": 2.598076211353316,
+        "direction": "brain>LLM",
+        "agreement": 0.5
+      },
+      {
+        "pair": "belief\u2014self_referential",
+        "category": "within-ment",
+        "brain_rank": 19.0,
+        "llm_rank": 22.5,
+        "residual": -3.5,
+        "std": 0.8660254037844386,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "disgust\u2014self_referential",
+        "category": "cross-aff-ment",
+        "brain_rank": 67.0,
+        "llm_rank": 70.25,
+        "residual": -3.25,
+        "std": 0.82915619758885,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014fear",
+        "category": "within-aff",
+        "brain_rank": 6.0,
+        "llm_rank": 9.0,
+        "residual": -3.0,
+        "std": 0.7071067811865476,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "anger\u2014valence",
+        "category": "within-aff",
+        "brain_rank": 14.0,
+        "llm_rank": 17.0,
+        "residual": -3.0,
+        "std": 1.224744871391589,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "empathy\u2014fear",
+        "category": "cross-aff-ment",
+        "brain_rank": 39.0,
+        "llm_rank": 41.75,
+        "residual": -2.75,
+        "std": 2.48746859276655,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "intention\u2014sadness",
+        "category": "cross-aff-ment",
+        "brain_rank": 72.0,
+        "llm_rank": 69.25,
+        "residual": 2.75,
+        "std": 2.48746859276655,
+        "direction": "brain>LLM",
+        "agreement": 0.5
+      },
+      {
+        "pair": "happiness\u2014mentalizing",
+        "category": "cross-aff-ment",
+        "brain_rank": 83.0,
+        "llm_rank": 85.5,
+        "residual": -2.5,
+        "std": 2.179449471770337,
+        "direction": "LLM>brain",
+        "agreement": 0.5
+      },
+      {
+        "pair": "judgment\u2014mentalizing",
+        "category": "within-ment",
+        "brain_rank": 32.0,
+        "llm_rank": 29.75,
+        "residual": 2.25,
+        "std": 2.277608394786075,
+        "direction": "brain>LLM",
+        "agreement": 0.75
+      },
+      {
+        "pair": "anger\u2014empathy",
+        "category": "cross-aff-ment",
+        "brain_rank": 45.0,
+        "llm_rank": 42.75,
+        "residual": 2.25,
+        "std": 2.48746859276655,
+        "direction": "brain>LLM",
+        "agreement": 0.5
+      },
+      {
+        "pair": "empathy\u2014theory_of_mind",
+        "category": "within-ment",
+        "brain_rank": 48.0,
+        "llm_rank": 45.75,
+        "residual": 2.25,
+        "std": 2.7726341266023544,
+        "direction": "brain>LLM",
+        "agreement": 0.75
+      },
+      {
+        "pair": "belief\u2014intention",
+        "category": "within-ment",
+        "brain_rank": 26.0,
+        "llm_rank": 24.25,
+        "residual": 1.75,
+        "std": 0.4330127018922193,
+        "direction": "brain>LLM",
+        "agreement": 1.0
+      },
+      {
+        "pair": "disgust\u2014happiness",
+        "category": "within-aff",
+        "brain_rank": 11.0,
+        "llm_rank": 10.0,
+        "residual": 1.0,
+        "std": 0.7071067811865476,
+        "direction": "brain>LLM",
+        "agreement": 0.75
+      },
+      {
+        "pair": "happiness\u2014sadness",
+        "category": "within-aff",
+        "brain_rank": 1.0,
+        "llm_rank": 2.0,
+        "residual": -1.0,
+        "std": 0.0,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "intention\u2014moral",
+        "category": "cross-ment-moral",
+        "brain_rank": 27.0,
+        "llm_rank": 28.0,
+        "residual": -1.0,
+        "std": 0.0,
+        "direction": "LLM>brain",
+        "agreement": 1.0
+      },
+      {
+        "pair": "belief\u2014judgment",
+        "category": "within-ment",
+        "brain_rank": 34.0,
+        "llm_rank": 33.25,
+        "residual": 0.75,
+        "std": 1.0897247358851685,
+        "direction": "brain>LLM",
+        "agreement": 0.5
+      },
+      {
+        "pair": "disgust\u2014valence",
+        "category": "within-aff",
+        "brain_rank": 15.0,
+        "llm_rank": 15.5,
+        "residual": -0.5,
+        "std": 1.5,
+        "direction": "LLM>brain",
+        "agreement": 0.5
+      },
+      {
+        "pair": "belief\u2014happiness",
+        "category": "cross-aff-ment",
+        "brain_rank": 77.0,
+        "llm_rank": 77.5,
+        "residual": -0.5,
+        "std": 1.118033988749895,
+        "direction": "LLM>brain",
+        "agreement": 0.25
+      },
+      {
+        "pair": "mentalizing\u2014self_referential",
+        "category": "within-ment",
+        "brain_rank": 20.0,
+        "llm_rank": 20.0,
+        "residual": 0.0,
+        "std": 0.7071067811865476,
+        "direction": "LLM>brain",
+        "agreement": 0.0
+      }
+    ],
+    "category_summary": {
+      "cross-aff-ment": {
+        "n": 42,
+        "mean_abs_residual": 19.273809523809526,
+        "mean_signed": -4.285714285714286
+      },
+      "cross-aff-moral": {
+        "n": 6,
+        "mean_abs_residual": 19.166666666666668,
+        "mean_signed": -19.166666666666668
+      },
+      "cross-ment-moral": {
+        "n": 7,
+        "mean_abs_residual": 14.857142857142858,
+        "mean_signed": -1.7857142857142858
+      },
+      "within-aff": {
+        "n": 15,
+        "mean_abs_residual": 6.883333333333334,
+        "mean_signed": 0.9833333333333333
+      },
+      "within-ment": {
+        "n": 21,
+        "mean_abs_residual": 19.202380952380953,
+        "mean_signed": 13.94047619047619
+      }
+    },
+    "n_unanimous": 80,
+    "total_pairs": 91
+  },
+  "confusion_analysis": {
+    "per_model": [
+      {
+        "model": "Qwen2.5-7B-Instruct",
+        "accuracy": 0.5251123595505618,
+        "brain_confusion_rho": 0.18880795071305037,
+        "brain_confusion_p": 0.07307328410359816
+      },
+      {
+        "model": "Meta-Llama-3.1-8B-Instruct",
+        "accuracy": 0.5335393258426966,
+        "brain_confusion_rho": 0.16360564209769335,
+        "brain_confusion_p": 0.12124127667730242
+      },
+      {
+        "model": "Mistral-7B-Instruct-v0.3",
+        "accuracy": 0.500505617977528,
+        "brain_confusion_rho": 0.22214170961260357,
+        "brain_confusion_p": 0.03431745014921328
+      },
+      {
+        "model": "gemma-2-9b-it",
+        "accuracy": 0.5325280898876404,
+        "brain_confusion_rho": 0.1601952795579831,
+        "brain_confusion_p": 0.1293033510482794
+      }
+    ],
+    "grand_accuracy": 0.5229213483146067,
+    "grand_brain_confusion_rho": 0.1897307554363902,
+    "grand_brain_confusion_p": 0.07165635034788324
+  },
+  "causal_ablation": {
+    "per_model": [
+      {
+        "model": "Qwen2.5-7B-Instruct",
+        "orig_rho": 0.6390189520624303,
+        "abl_rho": -0.3624781016085364,
+        "boundary_delta": -1.0014970536709666,
+        "random_mean": -8.864468864466258e-05,
+        "random_std": 0.00016691790048325438,
+        "p_value": 0.0,
+        "orig_cat_rho": {
+          "within-aff": -0.15,
+          "within-ment": 0.14025974025974028,
+          "cross-aff-ment": -0.017907787051292444
+        },
+        "abl_cat_rho": {
+          "within-aff": 0.039285714285714285,
+          "within-ment": -0.28441558441558445,
+          "cross-aff-ment": -0.15063609107851877
+        }
+      },
+      {
+        "model": "Meta-Llama-3.1-8B-Instruct",
+        "orig_rho": 0.6268195572543399,
+        "abl_rho": -0.36370441153049854,
+        "boundary_delta": -0.9905239687848384,
+        "random_mean": -4.440197483675018e-05,
+        "random_std": 0.00013089382502690352,
+        "p_value": 0.0,
+        "orig_cat_rho": {
+          "within-aff": -0.08214285714285713,
+          "within-ment": 0.18311688311688312,
+          "cross-aff-ment": -0.09650757637144479
+        },
+        "abl_cat_rho": {
+          "within-aff": 0.014285714285714282,
+          "within-ment": -0.2987012987012987,
+          "cross-aff-ment": -0.10947249007373795
+        }
+      },
+      {
+        "model": "Mistral-7B-Instruct-v0.3",
+        "orig_rho": 0.6330148112756808,
+        "abl_rho": -0.32667622232839627,
+        "boundary_delta": -0.9596910336040771,
+        "random_mean": -4.750756489885105e-05,
+        "random_std": 6.169738340693908e-05,
+        "p_value": 0.0,
+        "orig_cat_rho": {
+          "within-aff": -0.08214285714285713,
+          "within-ment": 0.20129870129870128,
+          "cross-aff-ment": -0.10169354185236204
+        },
+        "abl_cat_rho": {
+          "within-aff": 0.049999999999999996,
+          "within-ment": -0.22987012987012984,
+          "cross-aff-ment": -0.07333279312859574
+        }
+      },
+      {
+        "model": "gemma-2-9b-it",
+        "orig_rho": 0.6389552476508998,
+        "abl_rho": -0.3165790731008123,
+        "boundary_delta": -0.9555343207517122,
+        "random_mean": -3.956840261187794e-05,
+        "random_std": 0.000126828947717337,
+        "p_value": 0.0,
+        "orig_cat_rho": {
+          "within-aff": -0.13214285714285715,
+          "within-ment": 0.16103896103896104,
+          "cross-aff-ment": -0.039137833238797506
+        },
+        "abl_cat_rho": {
+          "within-aff": 0.0964285714285714,
+          "within-ment": -0.2597402597402597,
+          "cross-aff-ment": -0.09083542662669153
+        }
+      }
+    ],
+    "lda_ablation_rho": 0.653670966714445,
+    "lda_ablation_delta": 0.014652014652014711,
+    "pca_ablation": [
+      {
+        "k": 1,
+        "rho": -0.24206083771301165,
+        "delta": -0.881079789775442
+      },
+      {
+        "k": 2,
+        "rho": -0.2228380315336837,
+        "delta": -0.8618569835961141
+      },
+      {
+        "k": 3,
+        "rho": -0.22616658703615225,
+        "delta": -0.8651855390985825
+      },
+      {
+        "k": 4,
+        "rho": -0.20055741360089185,
+        "delta": -0.8395763656633222
+      },
+      {
+        "k": 5,
+        "rho": -0.10133779264214048,
+        "delta": -0.7403567447045708
+      },
+      {
+        "k": 6,
+        "rho": -0.12422360248447206,
+        "delta": -0.7632425545469024
+      },
+      {
+        "k": 7,
+        "rho": -0.16329033285555025,
+        "delta": -0.8023092849179806
+      },
+      {
+        "k": 8,
+        "rho": -0.16502627806975637,
+        "delta": -0.8040452301321867
+      },
+      {
+        "k": 9,
+        "rho": -0.18856505813027555,
+        "delta": -0.8275840101927059
+      },
+      {
+        "k": 10,
+        "rho": -0.01726389552476509,
+        "delta": -0.6562828475871954
+      },
+      {
+        "k": 11,
+        "rho": -0.036502627806975635,
+        "delta": -0.675521579869406
+      },
+      {
+        "k": 12,
+        "rho": -0.022632497474725725,
+        "delta": -0.661651449537156
+      },
+      {
+        "k": 13,
+        "rho": 0.04349418697244784,
+        "delta": -0.5955247650899824
+      }
+    ]
+  }
+}
