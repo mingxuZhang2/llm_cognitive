@@ -121,7 +121,7 @@ def main():
     sents = load_annotations(story)
     print(f"\nStory: {story}, {len(sents)} annotated sentences")
 
-    bold_files = sorted(FMRI_DIR.glob(f"*/func/*task-{story}_run-1*MNI152*desc-clean_bold.nii.gz"))
+    bold_files = sorted(FMRI_DIR.glob(f"*/func/*task-{story}*MNI152*desc-clean_bold.nii.gz"))
     print(f"Found {len(bold_files)} subjects")
 
     if not bold_files:
