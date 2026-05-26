@@ -1,0 +1,105 @@
+{
+  "model": "Qwen2.5-3B-Instruct",
+  "baseline": {
+    "false_belief": 0.8,
+    "faux_pas": 0.6666666666666666
+  },
+  "steering": [
+    {
+      "direction": "belief->theory_of_mind",
+      "alpha": 5,
+      "false_belief": 0.7,
+      "faux_pas": 0.6666666666666666,
+      "delta_fb": -0.10000000000000009,
+      "delta_fp": 0.0
+    },
+    {
+      "direction": "belief->theory_of_mind",
+      "alpha": 10,
+      "false_belief": 0.7,
+      "faux_pas": 0.0,
+      "delta_fb": -0.10000000000000009,
+      "delta_fp": -0.6666666666666666
+    },
+    {
+      "direction": "belief->theory_of_mind",
+      "alpha": 20,
+      "false_belief": 0.6,
+      "faux_pas": 0.0,
+      "delta_fb": -0.20000000000000007,
+      "delta_fp": -0.6666666666666666
+    },
+    {
+      "direction": "belief->theory_of_mind",
+      "alpha": 50,
+      "false_belief": 0.0,
+      "faux_pas": 0.0,
+      "delta_fb": -0.8,
+      "delta_fp": -0.6666666666666666
+    },
+    {
+      "direction": "mentalizing->theory_of_mind",
+      "alpha": 5,
+      "false_belief": 0.6,
+      "faux_pas": 0.0,
+      "delta_fb": -0.20000000000000007,
+      "delta_fp": -0.6666666666666666
+    },
+    {
+      "direction": "mentalizing->theory_of_mind",
+      "alpha": 10,
+      "false_belief": 0.8,
+      "faux_pas": 0.0,
+      "delta_fb": 0.0,
+      "delta_fp": -0.6666666666666666
+    },
+    {
+      "direction": "mentalizing->theory_of_mind",
+      "alpha": 20,
+      "false_belief": 0.4,
+      "faux_pas": 0.0,
+      "delta_fb": -0.4,
+      "delta_fp": -0.6666666666666666
+    },
+    {
+      "direction": "mentalizing->theory_of_mind",
+      "alpha": 50,
+      "false_belief": 0.0,
+      "faux_pas": 0.0,
+      "delta_fb": -0.8,
+      "delta_fp": -0.6666666666666666
+    },
+    {
+      "direction": "intention->theory_of_mind",
+      "alpha": 5,
+      "false_belief": 0.7,
+      "faux_pas": 0.0,
+      "delta_fb": -0.10000000000000009,
+      "delta_fp": -0.6666666666666666
+    },
+    {
+      "direction": "intention->theory_of_mind",
+      "alpha": 10,
+      "false_belief": 0.8,
+      "faux_pas": 0.0,
+      "delta_fb": 0.0,
+      "delta_fp": -0.6666666666666666
+    },
+    {
+      "direction": "intention->theory_of_mind",
+      "alpha": 20,
+      "false_belief": 0.6,
+      "faux_pas": 0.0,
+      "delta_fb": -0.20000000000000007,
+      "delta_fp": -0.6666666666666666
+    },
+    {
+      "direction": "intention->theory_of_mind",
+      "alpha": 50,
+      "false_belief": 0.0,
+      "faux_pas": 0.0,
+      "delta_fb": -0.8,
+      "delta_fp": -0.6666666666666666
+    }
+  ]
+}

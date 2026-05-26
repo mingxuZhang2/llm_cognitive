@@ -195,12 +195,25 @@ def main():
         shared = [c for c in used_conds if c in llm_brain_conds]
         print(f"\nShared conditions with Neurosynth brain RDM: {shared}")
 
+    # Per-subject RDMs for individual difference analysis
+    subject_rdms = np.array([rdm_cosine(p) for p in all_subject_patterns])
+    per_sub_rhos = []
+    for si in range(n_subs):
+        rho_s, _ = spearmanr(brain_rdm[triu], subject_rdms[si][triu])
+        per_sub_rhos.append(rho_s)
+    per_sub_rhos = np.array(per_sub_rhos)
+    print(f"\nPer-subject brain-group alignment: mean={np.mean(per_sub_rhos):.4f}, "
+          f"std={np.std(per_sub_rhos):.4f}, range=[{np.min(per_sub_rhos):.4f}, {np.max(per_sub_rhos):.4f}]")
+
     # Save
     np.savez(
         RES / "narratives_brain_rdm.npz",
         rdm=brain_rdm,
         conditions=np.array(used_conds),
         group_patterns=group_patterns,
+        all_subject_patterns=np.array(all_subject_patterns),
+        subject_rdms=subject_rdms,
+        per_subject_group_rho=per_sub_rhos,
         n_subjects=n_subs,
         subject_ids=np.array(subject_ids),
         ceiling=ceiling,
