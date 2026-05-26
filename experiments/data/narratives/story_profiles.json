@@ -1,0 +1,2056 @@
+{
+  "pieman": {
+    "n_subjects": 82,
+    "n_sentences": 42,
+    "n_words": 954,
+    "duration_sec": 414.390001,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 2.0964360587002098
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 1.0482180293501049
+      },
+      "valence": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 3,
+        "density": 4.1928721174004195
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 9,
+        "sentences_with_hits": 8,
+        "density": 9.433962264150942
+      },
+      "intention": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 3.1446540880503147
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 33,
+        "sentences_with_hits": 22,
+        "density": 34.59119496855346
+      },
+      "judgment": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 2.0964360587002098
+      },
+      "moral": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 2.0964360587002098
+      }
+    },
+    "in_rsa_set": true
+  },
+  "piemanpni": {
+    "n_subjects": 47,
+    "n_sentences": 31,
+    "n_words": 985,
+    "duration_sec": 399.7,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 2.0304568527918785
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 1.0152284263959392
+      },
+      "valence": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 3,
+        "density": 4.060913705583757
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 9,
+        "sentences_with_hits": 8,
+        "density": 9.137055837563452
+      },
+      "intention": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 3.045685279187817
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 35,
+        "sentences_with_hits": 20,
+        "density": 35.53299492385787
+      },
+      "judgment": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 2.0304568527918785
+      },
+      "moral": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 2.0304568527918785
+      }
+    },
+    "in_rsa_set": false
+  },
+  "tunnel": {
+    "n_subjects": 23,
+    "n_sentences": 128,
+    "n_words": 3309,
+    "duration_sec": 1517.7100000000003,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 0.6044122091266244
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 11,
+        "sentences_with_hits": 11,
+        "density": 3.324267150196434
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.3022061045633122
+      },
+      "valence": {
+        "keyword_hits": 11,
+        "sentences_with_hits": 11,
+        "density": 3.324267150196434
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 24,
+        "sentences_with_hits": 20,
+        "density": 7.252946509519492
+      },
+      "intention": {
+        "keyword_hits": 5,
+        "sentences_with_hits": 5,
+        "density": 1.5110305228165608
+      },
+      "theory_of_mind": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 0.9066183136899365
+      },
+      "empathy": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.3022061045633122
+      },
+      "self_referential": {
+        "keyword_hits": 53,
+        "sentences_with_hits": 36,
+        "density": 16.016923541855544
+      },
+      "judgment": {
+        "keyword_hits": 18,
+        "sentences_with_hits": 17,
+        "density": 5.439709882139619
+      },
+      "moral": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.3022061045633122
+      }
+    },
+    "in_rsa_set": true
+  },
+  "lucy": {
+    "n_subjects": 16,
+    "n_sentences": 46,
+    "n_words": 1585,
+    "duration_sec": 524.9300000000001,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.2618296529968456
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.6309148264984228
+      },
+      "valence": {
+        "keyword_hits": 5,
+        "sentences_with_hits": 5,
+        "density": 3.1545741324921135
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 10,
+        "sentences_with_hits": 7,
+        "density": 6.309148264984227
+      },
+      "intention": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 1.8927444794952681
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.2618296529968456
+      },
+      "self_referential": {
+        "keyword_hits": 19,
+        "sentences_with_hits": 15,
+        "density": 11.987381703470032
+      },
+      "judgment": {
+        "keyword_hits": 5,
+        "sentences_with_hits": 5,
+        "density": 3.1545741324921135
+      },
+      "moral": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 1.8927444794952681
+      }
+    },
+    "in_rsa_set": true
+  },
+  "prettymouth": {
+    "n_subjects": 40,
+    "n_sentences": 55,
+    "n_words": 1963,
+    "duration_sec": 694.78,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.5094243504839532
+      },
+      "fear": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.0188487009679064
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 1.5282730514518594
+      },
+      "happiness": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 3,
+        "density": 2.0376974019358127
+      },
+      "valence": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 1.5282730514518594
+      },
+      "belief": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.5094243504839532
+      },
+      "mentalizing": {
+        "keyword_hits": 26,
+        "sentences_with_hits": 15,
+        "density": 13.245033112582782
+      },
+      "intention": {
+        "keyword_hits": 11,
+        "sentences_with_hits": 9,
+        "density": 5.603667855323485
+      },
+      "theory_of_mind": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.0188487009679064
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 16,
+        "sentences_with_hits": 12,
+        "density": 8.150789607743251
+      },
+      "judgment": {
+        "keyword_hits": 16,
+        "sentences_with_hits": 12,
+        "density": 8.150789607743251
+      },
+      "moral": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      }
+    },
+    "in_rsa_set": true
+  },
+  "milkywayoriginal": {
+    "n_subjects": 18,
+    "n_sentences": 30,
+    "n_words": 1052,
+    "duration_sec": 402.93000000000006,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.9505703422053232
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.9505703422053232
+      },
+      "valence": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 4,
+        "density": 3.802281368821293
+      },
+      "belief": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.9505703422053232
+      },
+      "mentalizing": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 2.8517110266159698
+      },
+      "intention": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 4,
+        "density": 3.802281368821293
+      },
+      "theory_of_mind": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 2.8517110266159698
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 5,
+        "sentences_with_hits": 5,
+        "density": 4.752851711026616
+      },
+      "judgment": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.9505703422053232
+      },
+      "moral": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      }
+    },
+    "in_rsa_set": true
+  },
+  "milkywayvodka": {
+    "n_subjects": 18,
+    "n_sentences": 31,
+    "n_words": 1056,
+    "duration_sec": 402.7,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 1,
+        "density": 1.893939393939394
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 3,
+        "density": 3.787878787878788
+      },
+      "valence": {
+        "keyword_hits": 6,
+        "sentences_with_hits": 6,
+        "density": 5.681818181818182
+      },
+      "belief": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.946969696969697
+      },
+      "mentalizing": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 4,
+        "density": 3.787878787878788
+      },
+      "intention": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 2.840909090909091
+      },
+      "theory_of_mind": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 4,
+        "density": 3.787878787878788
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 6,
+        "sentences_with_hits": 5,
+        "density": 5.681818181818182
+      },
+      "judgment": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "moral": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.946969696969697
+      }
+    },
+    "in_rsa_set": false
+  },
+  "milkywaysynonyms": {
+    "n_subjects": 18,
+    "n_sentences": 29,
+    "n_words": 1056,
+    "duration_sec": 418.73,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.946969696969697
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.893939393939394
+      },
+      "valence": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 2.840909090909091
+      },
+      "belief": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.893939393939394
+      },
+      "mentalizing": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 2.840909090909091
+      },
+      "intention": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 2.840909090909091
+      },
+      "theory_of_mind": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 2,
+        "density": 3.787878787878788
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 6,
+        "sentences_with_hits": 6,
+        "density": 5.681818181818182
+      },
+      "judgment": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.946969696969697
+      },
+      "moral": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.946969696969697
+      }
+    },
+    "in_rsa_set": false
+  },
+  "slumlordreach": {
+    "n_subjects": 18,
+    "n_sentences": 165,
+    "n_words": 5228,
+    "duration_sec": 1764.84,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.19127773527161437
+      },
+      "fear": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.19127773527161437
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.19127773527161437
+      },
+      "happiness": {
+        "keyword_hits": 5,
+        "sentences_with_hits": 5,
+        "density": 0.9563886763580719
+      },
+      "valence": {
+        "keyword_hits": 10,
+        "sentences_with_hits": 10,
+        "density": 1.9127773527161438
+      },
+      "belief": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 0.5738332058148432
+      },
+      "mentalizing": {
+        "keyword_hits": 103,
+        "sentences_with_hits": 69,
+        "density": 19.70160673297628
+      },
+      "intention": {
+        "keyword_hits": 11,
+        "sentences_with_hits": 10,
+        "density": 2.104055087987758
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 144,
+        "sentences_with_hits": 78,
+        "density": 27.54399387911247
+      },
+      "judgment": {
+        "keyword_hits": 7,
+        "sentences_with_hits": 6,
+        "density": 1.3389441469013006
+      },
+      "moral": {
+        "keyword_hits": 11,
+        "sentences_with_hits": 11,
+        "density": 2.104055087987758
+      }
+    },
+    "in_rsa_set": true
+  },
+  "notthefallintact": {
+    "n_subjects": 56,
+    "n_sentences": 51,
+    "n_words": 1561,
+    "duration_sec": 567.8299989999999,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.6406149903907751
+      },
+      "fear": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.2812299807815501
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "valence": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.2812299807815501
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 29,
+        "sentences_with_hits": 22,
+        "density": 18.57783472133248
+      },
+      "intention": {
+        "keyword_hits": 5,
+        "sentences_with_hits": 5,
+        "density": 3.2030749519538757
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 56,
+        "sentences_with_hits": 32,
+        "density": 35.874439461883405
+      },
+      "judgment": {
+        "keyword_hits": 6,
+        "sentences_with_hits": 6,
+        "density": 3.843689942344651
+      },
+      "moral": {
+        "keyword_hits": 6,
+        "sentences_with_hits": 6,
+        "density": 3.843689942344651
+      }
+    },
+    "in_rsa_set": true
+  },
+  "merlin": {
+    "n_subjects": 36,
+    "n_sentences": 71,
+    "n_words": 2134,
+    "duration_sec": 913.3299999999999,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.46860356138706655
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 0.9372071227741331
+      },
+      "valence": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 4,
+        "density": 1.8744142455482662
+      },
+      "belief": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 0.9372071227741331
+      },
+      "mentalizing": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 2,
+        "density": 1.4058106841611997
+      },
+      "intention": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 0.9372071227741331
+      },
+      "judgment": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.46860356138706655
+      },
+      "moral": {
+        "keyword_hits": 25,
+        "sentences_with_hits": 24,
+        "density": 11.715089034676664
+      }
+    },
+    "in_rsa_set": true
+  },
+  "sherlock": {
+    "n_subjects": 36,
+    "n_sentences": 75,
+    "n_words": 2510,
+    "duration_sec": 1050.6600010000002,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.39840637450199207
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.39840637450199207
+      },
+      "happiness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "valence": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.39840637450199207
+      },
+      "belief": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.39840637450199207
+      },
+      "mentalizing": {
+        "keyword_hits": 9,
+        "sentences_with_hits": 9,
+        "density": 3.585657370517928
+      },
+      "intention": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 1.195219123505976
+      },
+      "theory_of_mind": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.39840637450199207
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 5,
+        "sentences_with_hits": 5,
+        "density": 1.9920318725099602
+      },
+      "judgment": {
+        "keyword_hits": 7,
+        "sentences_with_hits": 7,
+        "density": 2.7888446215139444
+      },
+      "moral": {
+        "keyword_hits": 8,
+        "sentences_with_hits": 8,
+        "density": 3.1872509960159365
+      }
+    },
+    "in_rsa_set": true
+  },
+  "21styear": {
+    "n_subjects": 25,
+    "n_sentences": 224,
+    "n_words": 8179,
+    "duration_sec": 3337.8300010000003,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 9,
+        "sentences_with_hits": 8,
+        "density": 1.1003790194400294
+      },
+      "fear": {
+        "keyword_hits": 7,
+        "sentences_with_hits": 7,
+        "density": 0.8558503484533562
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 32,
+        "sentences_with_hits": 26,
+        "density": 3.9124587357867706
+      },
+      "happiness": {
+        "keyword_hits": 23,
+        "sentences_with_hits": 20,
+        "density": 2.8120797163467417
+      },
+      "valence": {
+        "keyword_hits": 22,
+        "sentences_with_hits": 19,
+        "density": 2.689815380853405
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 25,
+        "sentences_with_hits": 24,
+        "density": 3.0566083873334144
+      },
+      "intention": {
+        "keyword_hits": 44,
+        "sentences_with_hits": 35,
+        "density": 5.37963076170681
+      },
+      "theory_of_mind": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 0.3667930064800098
+      },
+      "empathy": {
+        "keyword_hits": 5,
+        "sentences_with_hits": 5,
+        "density": 0.611321677466683
+      },
+      "self_referential": {
+        "keyword_hits": 80,
+        "sentences_with_hits": 61,
+        "density": 9.781146839466928
+      },
+      "judgment": {
+        "keyword_hits": 34,
+        "sentences_with_hits": 31,
+        "density": 4.156987406773444
+      },
+      "moral": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 0.3667930064800098
+      }
+    },
+    "in_rsa_set": true
+  },
+  "black": {
+    "n_subjects": 47,
+    "n_sentences": 63,
+    "n_words": 1538,
+    "duration_sec": 799.59,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.3003901170351106
+      },
+      "fear": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.6501950585175553
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "valence": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.6501950585175553
+      },
+      "belief": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.6501950585175553
+      },
+      "mentalizing": {
+        "keyword_hits": 22,
+        "sentences_with_hits": 17,
+        "density": 14.304291287386215
+      },
+      "intention": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 3,
+        "density": 2.6007802340702213
+      },
+      "theory_of_mind": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.3003901170351106
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 89,
+        "sentences_with_hits": 43,
+        "density": 57.86736020806242
+      },
+      "judgment": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 4,
+        "density": 2.6007802340702213
+      },
+      "moral": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.6501950585175553
+      }
+    },
+    "in_rsa_set": true
+  },
+  "bronx": {
+    "n_subjects": 47,
+    "n_sentences": 40,
+    "n_words": 1356,
+    "duration_sec": 535.27,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.4749262536873156
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.7374631268436578
+      },
+      "valence": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 2.2123893805309733
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 14,
+        "sentences_with_hits": 13,
+        "density": 10.32448377581121
+      },
+      "intention": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 3,
+        "density": 2.949852507374631
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 38,
+        "sentences_with_hits": 25,
+        "density": 28.023598820058996
+      },
+      "judgment": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 1.4749262536873156
+      },
+      "moral": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.7374631268436578
+      }
+    },
+    "in_rsa_set": true
+  },
+  "forgot": {
+    "n_subjects": 47,
+    "n_sentences": 76,
+    "n_words": 2119,
+    "duration_sec": 823.97,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.47192071731949037
+      },
+      "fear": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 3,
+        "density": 1.8876828692779615
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 14,
+        "sentences_with_hits": 9,
+        "density": 6.606890042472864
+      },
+      "happiness": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 0.9438414346389807
+      },
+      "valence": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 2,
+        "density": 1.415762151958471
+      },
+      "belief": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 4,
+        "density": 1.8876828692779615
+      },
+      "mentalizing": {
+        "keyword_hits": 15,
+        "sentences_with_hits": 12,
+        "density": 7.078810759792354
+      },
+      "intention": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 1.415762151958471
+      },
+      "theory_of_mind": {
+        "keyword_hits": 5,
+        "sentences_with_hits": 5,
+        "density": 2.359603586597452
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 72,
+        "sentences_with_hits": 40,
+        "density": 33.9782916470033
+      },
+      "judgment": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 0.47192071731949037
+      },
+      "moral": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 1.415762151958471
+      }
+    },
+    "in_rsa_set": true
+  },
+  "shapesphysical": {
+    "n_subjects": 59,
+    "n_sentences": 35,
+    "n_words": 942,
+    "duration_sec": 405.21000200000003,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "valence": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "intention": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "judgment": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 4,
+        "density": 4.246284501061571
+      },
+      "moral": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      }
+    },
+    "in_rsa_set": true
+  },
+  "shapessocial": {
+    "n_subjects": 59,
+    "n_sentences": 40,
+    "n_words": 904,
+    "duration_sec": 407.69000100000005,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "valence": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 1.1061946902654867
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "intention": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 1.1061946902654867
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "judgment": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 1.1061946902654867
+      },
+      "moral": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      }
+    },
+    "in_rsa_set": true
+  },
+  "bigbang": {
+    "n_subjects": 31,
+    "n_sentences": 12,
+    "n_words": 472,
+    "duration_sec": 163.84,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 7,
+        "sentences_with_hits": 3,
+        "density": 14.830508474576272
+      },
+      "valence": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 4.237288135593221
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 6.355932203389831
+      },
+      "intention": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.1186440677966103
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.1186440677966103
+      },
+      "self_referential": {
+        "keyword_hits": 5,
+        "sentences_with_hits": 5,
+        "density": 10.59322033898305
+      },
+      "judgment": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "moral": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      }
+    },
+    "in_rsa_set": true
+  },
+  "friends": {
+    "n_subjects": 31,
+    "n_sentences": 12,
+    "n_words": 464,
+    "duration_sec": 155.25,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.155172413793103
+      },
+      "valence": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 1,
+        "density": 4.310344827586206
+      },
+      "intention": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.155172413793103
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 4,
+        "density": 8.620689655172413
+      },
+      "judgment": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.155172413793103
+      },
+      "moral": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      }
+    },
+    "in_rsa_set": true
+  },
+  "himym": {
+    "n_subjects": 31,
+    "n_sentences": 12,
+    "n_words": 474,
+    "duration_sec": 161.28000000000003,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.109704641350211
+      },
+      "valence": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "intention": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.109704641350211
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.109704641350211
+      },
+      "judgment": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.109704641350211
+      },
+      "moral": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      }
+    },
+    "in_rsa_set": true
+  },
+  "santa": {
+    "n_subjects": 31,
+    "n_sentences": 12,
+    "n_words": 451,
+    "duration_sec": 167.2,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "valence": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 4.434589800443459
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 2,
+        "density": 6.651884700665189
+      },
+      "intention": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 4.434589800443459
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 2,
+        "density": 6.651884700665189
+      },
+      "judgment": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.2172949002217295
+      },
+      "moral": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      }
+    },
+    "in_rsa_set": true
+  },
+  "seinfeld": {
+    "n_subjects": 31,
+    "n_sentences": 12,
+    "n_words": 469,
+    "duration_sec": 164.68,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.1321961620469083
+      },
+      "valence": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.1321961620469083
+      },
+      "intention": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "judgment": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 4.264392324093817
+      },
+      "moral": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      }
+    },
+    "in_rsa_set": true
+  },
+  "shame": {
+    "n_subjects": 31,
+    "n_sentences": 12,
+    "n_words": 468,
+    "duration_sec": 166.37,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.136752136752137
+      },
+      "valence": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.136752136752137
+      },
+      "belief": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.136752136752137
+      },
+      "mentalizing": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 4.273504273504274
+      },
+      "intention": {
+        "keyword_hits": 6,
+        "sentences_with_hits": 4,
+        "density": 12.82051282051282
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 3,
+        "density": 8.547008547008549
+      },
+      "judgment": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "moral": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.136752136752137
+      }
+    },
+    "in_rsa_set": true
+  },
+  "upintheair": {
+    "n_subjects": 31,
+    "n_sentences": 13,
+    "n_words": 487,
+    "duration_sec": 178.05,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.053388090349076
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.053388090349076
+      },
+      "valence": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 4.106776180698152
+      },
+      "intention": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 6,
+        "sentences_with_hits": 5,
+        "density": 12.320328542094456
+      },
+      "judgment": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.053388090349076
+      },
+      "moral": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      }
+    },
+    "in_rsa_set": true
+  },
+  "vinny": {
+    "n_subjects": 31,
+    "n_sentences": 13,
+    "n_words": 483,
+    "duration_sec": 170.379999,
+    "conditions": {
+      "anger": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "fear": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.070393374741201
+      },
+      "disgust": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "sadness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "happiness": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "valence": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "belief": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "mentalizing": {
+        "keyword_hits": 4,
+        "sentences_with_hits": 2,
+        "density": 8.281573498964804
+      },
+      "intention": {
+        "keyword_hits": 3,
+        "sentences_with_hits": 3,
+        "density": 6.211180124223602
+      },
+      "theory_of_mind": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "empathy": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "self_referential": {
+        "keyword_hits": 2,
+        "sentences_with_hits": 2,
+        "density": 4.140786749482402
+      },
+      "judgment": {
+        "keyword_hits": 0,
+        "sentences_with_hits": 0,
+        "density": 0.0
+      },
+      "moral": {
+        "keyword_hits": 1,
+        "sentences_with_hits": 1,
+        "density": 2.070393374741201
+      }
+    },
+    "in_rsa_set": true
+  }
+}
