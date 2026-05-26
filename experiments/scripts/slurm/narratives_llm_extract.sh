@@ -13,7 +13,7 @@
 set -e
 source /data/user/mzhang630/miniconda3/etc/profile.d/conda.sh
 conda activate alphasteer
-export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TORCHDYNAMO_DISABLE=1
+export TORCHDYNAMO_DISABLE=1
 
 BASE="/data/user/mzhang630/data/nature_exp"
 SENTS="${BASE}/narratives/annotated_sentences.jsonl"
@@ -21,10 +21,10 @@ OUTDIR="${BASE}/results/narratives_llm"
 mkdir -p "${OUTDIR}" /data/user/mzhang630/logs
 
 MODELS=(
-    "Qwen2.5-7B-Instruct|/data/user/mzhang630/data/models_dl/Qwen2.5-7B-Instruct"
-    "Meta-Llama-3.1-8B-Instruct|/hpc2hdd/home/mzhang630/data/models_dl/Meta-Llama-3.1-8B-Instruct"
-    "Mistral-7B-Instruct-v0.3|/hpc2hdd/home/mzhang630/data/models_dl/Mistral-7B-Instruct-v0.3"
-    "gemma-2-9b-it|/hpc2hdd/home/mzhang630/data/models_dl/gemma-2-9b-it"
+    "Qwen2.5-0.5B-Instruct|/data/user/mzhang630/data/models_dl/Qwen2.5-0.5B-Instruct"
+    "Qwen2.5-1.5B-Instruct|/data/user/mzhang630/data/models_dl/Qwen2.5-1.5B-Instruct"
+    "Qwen2.5-3B-Instruct|/data/user/mzhang630/data/models_dl/Qwen2.5-3B-Instruct"
+    "Qwen2.5-14B-Instruct|/data/user/mzhang630/data/models_dl/Qwen2.5-14B-Instruct"
 )
 
 IFS='|' read -ra CFG <<< "${MODELS[$SLURM_ARRAY_TASK_ID]}"
