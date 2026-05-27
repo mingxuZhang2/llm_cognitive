@@ -2209,6 +2209,35 @@ def load_brain_rdm(path: str | Path) -> tuple[np.ndarray, list[str]]:
     return data["rdm"], list(data["conditions"])
 
 
+def _compute_rdm_from_v2_per_stim(
+    npz_path: str | Path,
+    peak_layer: int,
+    conditions: list[str],
+) -> np.ndarray:
+    """Compute LLM RDM from v2 per-stimulus activations (our actual format)."""
+    data = np.load(npz_path, allow_pickle=True)
+    per_stim = data["per_stim_activations"]  # [3, n_stim, n_layers, dim]
+    stim_conds = list(data["conditions"])
+    pooling_names = list(data["pooling_names"])
+    pool_idx = pooling_names.index("mean_all")
+    n_layers = per_stim.shape[2]
+    layer = min(peak_layer, n_layers - 1)
+
+    unique_conds = sorted(set(stim_conds))
+    centroids = np.zeros((len(unique_conds), per_stim.shape[-1]), dtype=np.float64)
+    for ci, c in enumerate(unique_conds):
+        mask = np.array([sc == c for sc in stim_conds])
+        centroids[ci] = per_stim[pool_idx, mask, layer, :].mean(axis=0)
+
+    order = [unique_conds.index(c) for c in conditions]
+    act = centroids[order]
+    act = act - act.mean(axis=0, keepdims=True)
+    norms = np.linalg.norm(act, axis=1, keepdims=True)
+    norms[norms == 0] = 1.0
+    act_norm = act / norms
+    return 1.0 - np.clip(act_norm @ act_norm.T, -1, 1)
+
+
 def compute_llm_rdm_from_activations(
     npz_path: str | Path,
     peak_layer: int,
@@ -2409,11 +2438,17 @@ def main():
 
     rsa_dir = Path(args.rsa_dir)
 
-    # Try to load LLM RDM: first from _rsa_activations.npz, then _rsa_llm_rdms.npz
+    # Try to load LLM RDM from available NPZ formats
+    v2_npz = rsa_dir / f"{args.model_short}_rsa_v2_per_stim.npz"
     act_npz = rsa_dir / f"{args.model_short}_rsa_activations.npz"
     llm_rdms_npz = rsa_dir / f"{args.model_short}_rsa_llm_rdms.npz"
 
-    if act_npz.exists():
+    if v2_npz.exists():
+        print(f"  Loading per-stimulus RSA v2 from {v2_npz}")
+        llm_rdm = _compute_rdm_from_v2_per_stim(
+            v2_npz, args.peak_layer, brain_conds,
+        )
+    elif act_npz.exists():
         print(f"  Loading LLM activations from {act_npz}")
         llm_rdm = compute_llm_rdm_from_activations(
             act_npz, args.peak_layer, brain_conds,
@@ -2426,7 +2461,7 @@ def main():
     else:
         raise FileNotFoundError(
             f"No RSA data found for {args.model_short} in {rsa_dir}. "
-            f"Expected {act_npz} or {llm_rdms_npz}."
+            f"Expected {v2_npz}, {act_npz}, or {llm_rdms_npz}."
         )
 
     print(f"  LLM RDM: {llm_rdm.shape}")
