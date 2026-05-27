@@ -1,0 +1,24 @@
+{
+  "discovery_model": "Qwen2.5-1.5B-Instruct",
+  "discovery_peak_layer": 26,
+  "discovery_rho": 0.6546265328874025,
+  "max_stat_p": 0.0002,
+  "max_stat_null_95th": 0.2548964803312631,
+  "cv_ablation_mean_delta": -0.8216853002070392,
+  "cv_ablation_ci": [
+    -0.9057027392896959,
+    -0.6734734830387006
+  ],
+  "ablation_controls": {
+    "boundary": -0.3624781016085364,
+    "pc1": -0.24206083771301165,
+    "valence": 0.644927536231884,
+    "random_mean": 0.6389108138238574
+  },
+  "boundary_pc1_cosine": 0.998856700338442,
+  "bootstrap_ci": [
+    0.6063373944895685,
+    0.660806657111005
+  ],
+  "bootstrap_mean": 0.6318024526198439
+}
