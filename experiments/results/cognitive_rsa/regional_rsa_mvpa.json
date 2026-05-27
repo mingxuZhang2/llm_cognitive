@@ -1,0 +1,51 @@
+{
+  "Default_Mode": {
+    "n": 91,
+    "mean_rho": 0.40582964740573435,
+    "std": 0.03422520787054507,
+    "n_sig_pos": 91,
+    "n_sig_neg": 0
+  },
+  "Frontoparietal": {
+    "n": 52,
+    "mean_rho": 0.3977746212121212,
+    "std": 0.031209892402705504,
+    "n_sig_pos": 52,
+    "n_sig_neg": 0
+  },
+  "Limbic": {
+    "n": 26,
+    "mean_rho": 0.4343027896017026,
+    "std": 0.016963471567048957,
+    "n_sig_pos": 26,
+    "n_sig_neg": 0
+  },
+  "Ventral_Attention": {
+    "n": 47,
+    "mean_rho": 0.40423177136430527,
+    "std": 0.02990182505899734,
+    "n_sig_pos": 47,
+    "n_sig_neg": 0
+  },
+  "Dorsal_Attention": {
+    "n": 46,
+    "mean_rho": 0.3808483263475901,
+    "std": 0.0323303120537571,
+    "n_sig_pos": 46,
+    "n_sig_neg": 0
+  },
+  "Somatomotor": {
+    "n": 77,
+    "mean_rho": 0.37387274915337343,
+    "std": 0.03697421761155353,
+    "n_sig_pos": 77,
+    "n_sig_neg": 0
+  },
+  "Visual": {
+    "n": 61,
+    "mean_rho": 0.3919884653736221,
+    "std": 0.026821825307185628,
+    "n_sig_pos": 61,
+    "n_sig_neg": 0
+  }
+}
