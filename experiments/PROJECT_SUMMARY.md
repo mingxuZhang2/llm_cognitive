@@ -243,10 +243,10 @@ At α = +10: model produces structured philosophical analysis ("utilitarian vs d
 - **Tang et al. 2023 (Nature Neuroscience)**: Semantic decoder using LLM representations. Demonstrates practical capability (mind-reading). We focus on representational structure.
 - **Tuckute et al. 2024 (Nature Human Behaviour)**: Closed-loop brain control — LLM predicts sentences that drive/suppress brain language network. We also demonstrate causal manipulation, but in the LLM direction (steering model output with brain-derived directions).
 - **Mischler et al. 2024 (Nature Machine Intelligence)**: iEEG shows hierarchical convergence between LLMs and brain. Better LLMs have more brain-like hierarchies.
-- **Antonello & Huth 2023 (NeurIPS)**: Brain prediction scales logarithmically with LLM size (125M-30B). Our finding challenges this for cognitive RSA specifically — we find flat scaling.
+- **Antonello & Huth 2023 (NeurIPS)**: Brain prediction scales logarithmically with LLM size (125M-30B). At the level of coarse cognitive-condition RSA, we find alignment saturates early (0.5B-7B flat), unlike continuous stimulus-level encoding.
 
 ### Confound Warning
-- **Hadidi et al. 2025 (Nature Communications)**: Many brain-LLM alignment findings are driven by confounds (word position, word rate). Our RSA approach operates on condition-level distance matrices, making it more robust to these first-order confounds than voxel-level encoding models. However, we have not yet run untrained-model baselines or lexical-feature controls.
+- **Hadidi et al. 2025 (Nature Communications)**: Many brain-LLM alignment findings are driven by confounds (word position, word rate). Our RSA approach operates on condition-level distance matrices, making it more robust to these first-order confounds than voxel-level encoding models. We have now run untrained-model baselines (ρ=0.09, ns), lexical baselines (GloVe ρ=0.40, TF-IDF ρ=0.26), and partial RSA controlling for GloVe + length + condition-name (trained LLM retains 87% of alignment, ρ=0.557, p=0.0002). Source-dataset, valence/arousal, word-frequency, pronoun, and mental-state verb controls remain to be completed.
 
 ### Representation Engineering
 - **Zou et al. 2023**: Representation engineering — finding directions in activation space that control model behavior. Our contribution: we derive the steering direction from brain data rather than behavioral supervision.
@@ -268,9 +268,11 @@ At α = +10: model produces structured philosophical analysis ("utilitarian vs d
    - Test on larger models (70B+) to rule out late-emergence
    - Use the one-axis finding to make a theoretical claim about the information content of natural language
 
-3. **Controls still needed**: untrained model baseline, sentence length/word frequency matching, static embedding (GloVe) comparison.
+3. **Controls completed**: untrained model (ρ=0.09, ns), GloVe/TF-IDF/condition-name/length baselines, partial RSA (ρ=0.557 after controlling all surface features). Confirmatory RSA with discovery/confirmation split, max-stat permutation (p=0.0002), cross-validated ablation (95% CI [-0.91, -0.67]), variance-matched random controls. Still needed: source-dataset RDM, valence/arousal RDM, human annotation validation for Narratives.
 
-4. **Regional analysis was inconclusive**: Need either more data or a different approach (encoding models instead of condition-level RSA) to identify which brain regions specifically align with LLMs.
+4. **PC1 ≈ boundary direction** (cosine = 0.999): The affective-mentalistic boundary is nearly identical to the first principal component of the LLM condition space. This means the dominant axis is not a mysterious brain-derived structure but the LLM's primary variance axis — which happens to align with brain cognitive organization.
+
+5. **Regional analysis was inconclusive**: All 400 parcels significant with small effect range. Likely insufficient resolution from condition-level RSA on naturalistic stories.
 
 ---
 

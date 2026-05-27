@@ -174,7 +174,7 @@ def main():
                 max_rho_perm = rho
         null_max[pi] = max_rho_perm
 
-    p_maxstat = float(np.mean(null_max >= obs_max))
+    p_maxstat = float((np.sum(null_max >= obs_max) + 1) / (n_perm + 1))
     print(f"\n  Observed max ρ = {obs_max:.4f} at L{obs_peak_L}")
     print(f"  Max-stat null: mean = {np.mean(null_max):.4f}, "
           f"95th = {np.percentile(null_max, 95):.4f}")
@@ -191,7 +191,12 @@ def main():
     print("PART 3: Cross-validated one-axis ablation")
     print("=" * 70)
 
-    cond_acts = md7b["cond_means"][:, obs_peak_L, :].astype(np.float64)
+    # Use DISCOVERY model's frozen layer for CV ablation (not full-data peak)
+    frozen_L = int(relative_depth * md7b["n_layers"])
+    frozen_L = min(frozen_L, md7b["n_layers"] - 1)
+    print(f"  Using discovery-frozen layer L{frozen_L} (relative depth {relative_depth:.2f})")
+
+    cond_acts = md7b["cond_means"][:, frozen_L, :].astype(np.float64)
     per_stim = md7b["per_stim"]
     stim_cond = md7b["stim_cond"]
     unique_conds = md7b["unique_conds"]
@@ -205,7 +210,6 @@ def main():
     cv_deltas = []
 
     for _ in range(n_cv):
-        # Split stimuli 50/50 per condition
         train_idx, test_idx = [], []
         for c_raw in range(len(unique_conds)):
             c_stims = np.where(stim_cond == c_raw)[0]
@@ -214,12 +218,11 @@ def main():
             train_idx.extend(c_stims[:cut])
             test_idx.extend(c_stims[cut:])
 
-        # Build condition centroids from TRAIN split
         train_centroids = np.zeros((len(unique_conds), per_stim.shape[-1]), dtype=np.float64)
         for c_raw in range(len(unique_conds)):
             c_train = [i for i in train_idx if stim_cond[i] == c_raw]
             if c_train:
-                train_centroids[c_raw] = per_stim[c_train, obs_peak_L, :].mean(axis=0)
+                train_centroids[c_raw] = per_stim[c_train, frozen_L, :].mean(axis=0)
         train_centroids = train_centroids[order]
 
         # Define boundary from TRAIN centroids
@@ -233,7 +236,7 @@ def main():
         for c_raw in range(len(unique_conds)):
             c_test = [i for i in test_idx if stim_cond[i] == c_raw]
             if c_test:
-                test_centroids[c_raw] = per_stim[c_test, obs_peak_L, :].mean(axis=0)
+                test_centroids[c_raw] = per_stim[c_test, frozen_L, :].mean(axis=0)
         test_centroids = test_centroids[order]
 
         # Original RSA on test data
@@ -287,19 +290,22 @@ def main():
     else:
         valence_dir = boundary  # fallback
 
-    # High-variance random direction (match variance explained by boundary)
+    # High-variance random controls: sample random rotations within the
+    # top-k PCA subspace (where most condition variance lives)
     boundary_var = np.var(cond_acts @ boundary)
     rng_r = np.random.default_rng(123)
+    k_sub = min(10, n - 1)
+    pca_subspace = Vt[:k_sub].T  # (D, k_sub)
     random_hvars = []
-    for _ in range(100):
-        rd = rng_r.standard_normal(cond_acts.shape[1])
+    for _ in range(200):
+        z = rng_r.standard_normal(k_sub)
+        z /= np.linalg.norm(z)
+        rd = pca_subspace @ z
         rd /= np.linalg.norm(rd)
-        # Scale to match boundary variance
-        rd_var = np.var(cond_acts @ rd)
-        if rd_var > 0:
-            scale = np.sqrt(boundary_var / rd_var)
-            rd_scaled = rd * scale
-            random_hvars.append(rd / np.linalg.norm(rd))
+        random_hvars.append(rd)
+    rv = [np.var(cond_acts @ rd) for rd in random_hvars]
+    print(f"  PCA-subspace random controls: {len(random_hvars)} directions, "
+          f"var range=[{np.min(rv):.1f}, {np.max(rv):.1f}] (boundary={boundary_var:.1f})")
 
     def ablate_and_rsa(direction):
         proj = np.outer(cond_acts @ direction, direction)

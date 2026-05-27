@@ -2,20 +2,20 @@
   "discovery_model": "Qwen2.5-1.5B-Instruct",
   "discovery_peak_layer": 26,
   "discovery_rho": 0.6546265328874025,
-  "max_stat_p": 0.0002,
+  "max_stat_p": 0.0003999200159968006,
   "max_stat_null_95th": 0.2548964803312631,
-  "cv_ablation_mean_delta": -0.8216853002070392,
+  "cv_ablation_mean_delta": -0.7972517916865745,
   "cv_ablation_ci": [
-    -0.9057027392896959,
-    -0.6734734830387006
+    -0.872996496257366,
+    -0.6268275203057813
   ],
   "ablation_controls": {
-    "boundary": -0.3624781016085364,
-    "pc1": -0.24206083771301165,
-    "valence": 0.644927536231884,
-    "random_mean": 0.6389108138238574
+    "boundary": -0.32987736900780384,
+    "pc1": -0.21591017677974197,
+    "valence": 0.6452619843924192,
+    "random_mean": 0.6367144449753145
   },
-  "boundary_pc1_cosine": 0.998856700338442,
+  "boundary_pc1_cosine": 0.9999234527605093,
   "bootstrap_ci": [
     0.6063373944895685,
     0.660806657111005
