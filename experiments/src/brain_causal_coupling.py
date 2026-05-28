@@ -6,11 +6,10 @@ Pipeline:
   1. Compute gradient × activation importance for each of 14 cognitive conditions
   2. Compute one-vs-rest selectivity per condition
   3. Ablate top-N neurons per condition → measure PPL on ALL 14 conditions
-  4. Build 14×14 causal coupling matrix (how much ablating condition X damages condition Y)
-  5. Correlate with brain RDM → if the brain predicts LLM causal interdependencies
+  4. Build 14×14 causal coupling matrix
+  5. Correlate with brain RDM
 
-Adapted from multi_function_dissociation.py for 14 cognitive conditions.
-Requires GPU.
+Batched processing for multi-GPU speed. Each model on 1-2 GPUs.
 """
 from __future__ import annotations
 
@@ -43,8 +42,10 @@ def get_ffn_dim(model, n_layers):
     raise ValueError("Cannot determine FFN dim")
 
 
-def compute_all_attributions(model, tokenizer, stimuli, conditions,
-                             n_layers, ffn_dim, device="cuda", max_length=256):
+def compute_all_attributions_batched(model, tokenizer, stimuli, conditions,
+                                     n_layers, ffn_dim, device="cuda",
+                                     max_length=256, batch_size=16):
+    """Batched gradient × activation attribution."""
     n_neurons = n_layers * ffn_dim
     cond_importance = {c: np.zeros(n_neurons, dtype=np.float64) for c in conditions}
     cond_counts = {c: 0 for c in conditions}
@@ -65,40 +66,62 @@ def compute_all_attributions(model, tokenizer, stimuli, conditions,
         hooks.append(target.register_forward_hook(make_hook(lidx)))
 
     total = len(stimuli)
-    print(f"  Computing attributions for {total} stimuli, {len(conditions)} conditions...")
+    n_batches = (total + batch_size - 1) // batch_size
+    print(f"  Attribution: {total} stimuli, batch_size={batch_size}, "
+          f"{n_batches} batches, {len(conditions)} conditions")
 
-    for idx, sample in enumerate(stimuli):
-        cond = sample["condition"]
-        if cond not in cond_importance:
-            continue
+    for batch_start in range(0, total, batch_size):
+        batch = stimuli[batch_start:batch_start + batch_size]
+        texts = [s["text"] for s in batch]
+        conds = [s["condition"] for s in batch]
 
         inputs = tokenizer(
-            sample["text"], return_tensors="pt",
+            texts, return_tensors="pt", padding=True,
             truncation=True, max_length=max_length
         ).to(device)
+
         if inputs["input_ids"].shape[1] < 2:
             continue
 
         model.zero_grad()
         activations.clear()
 
-        outputs = model(**inputs, labels=inputs["input_ids"])
+        labels = inputs["input_ids"].clone()
+        labels[inputs["attention_mask"] == 0] = -100
+        outputs = model(**inputs, labels=labels)
         outputs.loss.backward()
 
-        importance = np.zeros(n_neurons, dtype=np.float32)
+        # Extract per-sample importance via attention mask weighting
+        attn_mask = inputs["attention_mask"]  # (B, seq_len)
         for lidx in range(n_layers):
             if lidx not in activations or activations[lidx].grad is None:
                 continue
-            act = activations[lidx]
-            imp = (act.detach() * act.grad.detach()).abs().mean(dim=(0, 1))
+            act = activations[lidx].detach()   # (B, seq_len, ffn_dim)
+            grad = activations[lidx].grad.detach()
+            imp = (act * grad).abs()  # (B, seq_len, ffn_dim)
+
+            # Mask padding, average over valid tokens per sample
+            mask_3d = attn_mask.unsqueeze(-1).to(imp.dtype)  # (B, seq_len, 1)
+            imp_masked = imp * mask_3d
+            valid_counts = mask_3d.sum(dim=1).clamp(min=1)  # (B, 1)
+            imp_per_sample = imp_masked.sum(dim=1) / valid_counts  # (B, ffn_dim)
+
             start, end = lidx * ffn_dim, (lidx + 1) * ffn_dim
-            importance[start:end] = imp.cpu().float().numpy()
+            imp_np = imp_per_sample.cpu().float().numpy()  # (B, ffn_dim)
 
-        cond_importance[cond] += importance.astype(np.float64)
-        cond_counts[cond] += 1
+            for b_idx in range(len(batch)):
+                c = conds[b_idx]
+                if c in cond_importance:
+                    cond_importance[c][start:end] += imp_np[b_idx].astype(np.float64)
 
-        if (idx + 1) % 50 == 0:
-            print(f"    {idx+1}/{total} samples processed")
+        for b_idx in range(len(batch)):
+            c = conds[b_idx]
+            if c in cond_counts:
+                cond_counts[c] += 1
+
+        batch_num = batch_start // batch_size + 1
+        if batch_num % 10 == 0 or batch_num == n_batches:
+            print(f"    batch {batch_num}/{n_batches}")
 
     for h in hooks:
         h.remove()
@@ -107,7 +130,7 @@ def compute_all_attributions(model, tokenizer, stimuli, conditions,
         if cond_counts[c] > 0:
             cond_importance[c] /= cond_counts[c]
 
-    print(f"  Attribution counts: {cond_counts}")
+    print(f"  Counts: {cond_counts}")
     return cond_importance, cond_counts
 
 
@@ -123,27 +146,42 @@ def compute_selectivity(cond_importance, conditions):
     return selectivity
 
 
-def measure_ppl_per_condition(model, tokenizer, stimuli, conditions,
-                              device="cuda", max_length=256):
+def measure_ppl_batched(model, tokenizer, stimuli, conditions,
+                        device="cuda", max_length=256, batch_size=32):
+    """Batched PPL measurement per condition."""
     model.eval()
     results = {}
     for cond in conditions:
         cond_stims = [s for s in stimuli if s["condition"] == cond]
+        if not cond_stims:
+            results[cond] = {"perplexity": float("inf"), "avg_loss": float("inf"),
+                             "n_samples": 0}
+            continue
+
         total_loss = 0.0
         total_tokens = 0
-        for s in cond_stims:
+        for bs in range(0, len(cond_stims), batch_size):
+            batch = cond_stims[bs:bs + batch_size]
+            texts = [s["text"] for s in batch]
             inputs = tokenizer(
-                s["text"], return_tensors="pt",
+                texts, return_tensors="pt", padding=True,
                 truncation=True, max_length=max_length
             ).to(device)
             if inputs["input_ids"].shape[1] < 2:
                 continue
+
+            labels = inputs["input_ids"].clone()
+            labels[inputs["attention_mask"] == 0] = -100
+
             with torch.no_grad():
-                out = model(**inputs, labels=inputs["input_ids"])
-            if not torch.isnan(out.loss) and not torch.isinf(out.loss):
-                nt = inputs["input_ids"].shape[1] - 1
-                total_loss += out.loss.item() * nt
-                total_tokens += nt
+                out = model(**inputs, labels=labels)
+
+            # Per-token loss (model returns mean over non-ignored tokens)
+            n_valid = (labels != -100).sum().item()
+            if not torch.isnan(out.loss) and not torch.isinf(out.loss) and n_valid > 0:
+                total_loss += out.loss.item() * n_valid
+                total_tokens += n_valid
+
         if total_tokens > 0:
             avg_loss = total_loss / total_tokens
             results[cond] = {"perplexity": float(np.exp(min(avg_loss, 100))),
@@ -156,19 +194,19 @@ def measure_ppl_per_condition(model, tokenizer, stimuli, conditions,
 
 
 def ablate_and_measure(model, tokenizer, stimuli, conditions,
-                       selectivity, n_ablate, device="cuda", max_length=256):
-    """For each condition: ablate top-N selective neurons, measure PPL on all conditions."""
+                       selectivity, n_ablate, device="cuda",
+                       max_length=256, batch_size=32):
+    """Ablate each condition's top neurons, measure PPL on all conditions."""
     layers = get_model_layers(model)
     n_layers = len(layers)
     ffn_dim = get_ffn_dim(model, n_layers)
     ablation_results = {}
 
     for target_cond in conditions:
-        print(f"\n  Ablating top {n_ablate} neurons for: {target_cond}")
+        t0 = time.time()
         sel = selectivity[target_cond]
         top_neurons = np.argsort(-sel)[:n_ablate]
 
-        # Group by layer
         layer_neurons = {}
         for n in top_neurons:
             l = n // ffn_dim
@@ -177,7 +215,6 @@ def ablate_and_measure(model, tokenizer, stimuli, conditions,
                 layer_neurons[l] = []
             layer_neurons[l].append(pos)
 
-        # Install ablation hooks
         ablation_hooks = []
         for lidx, positions in layer_neurons.items():
             mlp = layers[lidx].mlp
@@ -193,36 +230,29 @@ def ablate_and_measure(model, tokenizer, stimuli, conditions,
                 target_module.register_forward_hook(make_ablation_hook(pos_tensor))
             )
 
-        ppl = measure_ppl_per_condition(model, tokenizer, stimuli, conditions,
-                                        device, max_length)
+        ppl = measure_ppl_batched(model, tokenizer, stimuli, conditions,
+                                  device, max_length, batch_size)
         ablation_results[target_cond] = ppl
 
         for h in ablation_hooks:
             h.remove()
 
+        elapsed = time.time() - t0
         target_ppl = ppl[target_cond]["perplexity"]
-        mean_other = np.mean([ppl[c]["perplexity"] for c in conditions if c != target_cond])
-        print(f"    target PPL={target_ppl:.2f}, mean other PPL={mean_other:.2f}")
+        print(f"  ablate {target_cond:>20s}: target PPL={target_ppl:>8.2f}  ({elapsed:.1f}s)")
 
     return ablation_results
 
 
 def build_coupling_matrix(baseline, ablation_results, conditions):
-    """Build 14×14 causal coupling matrix.
-
-    Entry [i, j] = log(PPL_j after ablating i / baseline PPL_j)
-    = how much ablating condition i's neurons damages condition j
-    """
     n = len(conditions)
     matrix = np.zeros((n, n), dtype=np.float64)
     for i, ci in enumerate(conditions):
         for j, cj in enumerate(conditions):
             base_ppl = baseline[cj]["perplexity"]
             abl_ppl = ablation_results[ci][cj]["perplexity"]
-            if base_ppl > 0 and not np.isinf(base_ppl):
+            if base_ppl > 0 and not np.isinf(base_ppl) and not np.isinf(abl_ppl):
                 matrix[i, j] = np.log(abl_ppl / base_ppl)
-            else:
-                matrix[i, j] = 0.0
     return matrix
 
 
@@ -235,6 +265,7 @@ def main():
     ap.add_argument("--brain_rdm", required=True)
     ap.add_argument("--n_ablate", type=int, default=5000)
     ap.add_argument("--max_length", type=int, default=256)
+    ap.add_argument("--batch_size", type=int, default=16)
     args = ap.parse_args()
 
     from scipy.stats import spearmanr
@@ -242,58 +273,53 @@ def main():
     t0 = time.time()
     device = "cuda" if torch.cuda.is_available() else "cpu"
     print(f"Device: {device}")
+    if device == "cuda":
+        print(f"GPU: {torch.cuda.get_device_name()}")
+        print(f"VRAM: {torch.cuda.get_device_properties(0).total_mem / 1e9:.1f} GB")
 
-    # Load model
     print(f"Loading model: {args.model_path}")
     tokenizer = AutoTokenizer.from_pretrained(args.model_path, trust_remote_code=True)
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
     model = AutoModelForCausalLM.from_pretrained(
         args.model_path, torch_dtype=torch.float16,
         device_map="auto", trust_remote_code=True
     )
-    model.eval()
 
     n_layers = len(get_model_layers(model))
     ffn_dim = get_ffn_dim(model, n_layers)
     n_neurons = n_layers * ffn_dim
     print(f"  n_layers={n_layers}, ffn_dim={ffn_dim}, n_neurons={n_neurons}")
 
-    # Load stimuli
     with open(args.stimuli) as f:
         stimuli = [json.loads(l) for l in f]
     conditions = sorted(set(s["condition"] for s in stimuli))
-    print(f"  {len(stimuli)} stimuli, {len(conditions)} conditions: {conditions}")
+    print(f"  {len(stimuli)} stimuli, {len(conditions)} conditions")
 
-    # Load brain RDM
     brain_data = np.load(args.brain_rdm, allow_pickle=True)
     brain_rdm = brain_data["rdm"]
     brain_conds = list(brain_data["conditions"])
-    assert sorted(conditions) == sorted(brain_conds), \
-        f"Condition mismatch: {conditions} vs {brain_conds}"
-    # Reorder brain to match our condition order
     brain_order = [brain_conds.index(c) for c in conditions]
     brain_rdm = brain_rdm[np.ix_(brain_order, brain_order)]
 
-    # Step 1: Compute attributions
+    # Step 1: Attribution (batched)
     print("\n" + "=" * 70)
-    print("STEP 1: Gradient × Activation attribution")
+    print("STEP 1: Batched gradient × activation attribution")
     print("=" * 70)
     model.train()
-    cond_importance, cond_counts = compute_all_attributions(
+    cond_importance, cond_counts = compute_all_attributions_batched(
         model, tokenizer, stimuli, conditions,
-        n_layers, ffn_dim, device, args.max_length
+        n_layers, ffn_dim, device, args.max_length, args.batch_size
     )
 
-    # Step 2: Compute selectivity
-    print("\n" + "=" * 70)
-    print("STEP 2: One-vs-rest selectivity")
-    print("=" * 70)
+    # Step 2: Selectivity
+    print("\nSTEP 2: Selectivity")
     selectivity = compute_selectivity(cond_importance, conditions)
     for c in conditions:
         top5k = np.sort(selectivity[c])[-5000:]
-        print(f"  {c:>20s}: top-5K selectivity mean={top5k.mean():.4f}, "
-              f"max={top5k.max():.4f}")
+        print(f"  {c:>20s}: top-5K sel mean={top5k.mean():.4f}")
 
-    # Save attribution data
+    # Save attribution
     os.makedirs(args.output_dir, exist_ok=True)
     attr_data = {}
     for c in conditions:
@@ -303,102 +329,78 @@ def main():
         os.path.join(args.output_dir, f"{args.model_short}_cognitive_attribution.npz"),
         **attr_data
     )
+    print(f"  Saved attribution NPZ  [{time.time()-t0:.0f}s elapsed]")
 
     # Step 3: Baseline PPL
-    print("\n" + "=" * 70)
-    print("STEP 3: Baseline PPL")
-    print("=" * 70)
+    print("\nSTEP 3: Baseline PPL (batched)")
     model.eval()
-    baseline = measure_ppl_per_condition(
-        model, tokenizer, stimuli, conditions, device, args.max_length
+    baseline = measure_ppl_batched(
+        model, tokenizer, stimuli, conditions, device, args.max_length, args.batch_size * 2
     )
     for c in conditions:
         print(f"  {c:>20s}: PPL={baseline[c]['perplexity']:.2f}")
 
-    # Step 4: Ablation (14 conditions × measure all 14)
-    print("\n" + "=" * 70)
-    print("STEP 4: Causal ablation (14×14)")
-    print("=" * 70)
+    # Step 4: Ablation (14 × 14)
+    print("\nSTEP 4: Causal ablation (14 conditions × batched PPL)")
     ablation_results = ablate_and_measure(
         model, tokenizer, stimuli, conditions,
-        selectivity, args.n_ablate, device, args.max_length
+        selectivity, args.n_ablate, device, args.max_length, args.batch_size * 2
     )
 
-    # Step 5: Build coupling matrix and correlate with brain
+    # Step 5: Coupling matrix vs brain RDM
     print("\n" + "=" * 70)
     print("STEP 5: Causal coupling matrix vs brain RDM")
     print("=" * 70)
 
     coupling = build_coupling_matrix(baseline, ablation_results, conditions)
-    print(f"\n  Causal coupling matrix (log PPL ratio):")
-    print(f"  {'':>20s}", end="")
+
+    # Print matrix
+    print(f"\n  Coupling matrix (log PPL ratio when ablating row → measuring col):")
+    print(f"  {'':>18s}", end="")
     for c in conditions:
-        print(f" {c[:8]:>8s}", end="")
+        print(f" {c[:7]:>7s}", end="")
     print()
     for i, ci in enumerate(conditions):
-        print(f"  {ci:>20s}", end="")
+        print(f"  {ci:>18s}", end="")
         for j in range(len(conditions)):
-            print(f" {coupling[i,j]:>+8.3f}", end="")
+            print(f" {coupling[i,j]:>+7.3f}", end="")
         print()
-
-    # The coupling matrix is ASYMMETRIC: coupling[i,j] = damage to j when ablating i
-    # We want to test: does the brain's DISSIMILARITY predict the LLM's CAUSAL INDEPENDENCE?
-    # High brain RDM(i,j) = brain says i and j are far apart → expect LOW coupling[i,j]
-    # Low brain RDM(i,j) = brain says i and j are close → expect HIGH coupling[i,j]
-    # So we expect NEGATIVE correlation between brain RDM and coupling matrix
-
-    # Also test: does brain RDM predict coupling better than a random baseline?
 
     n = len(conditions)
     triu = np.triu_indices(n, k=1)
-
-    # Symmetrize coupling: (C[i,j] + C[j,i]) / 2
     coupling_sym = (coupling + coupling.T) / 2
-    # Exclude diagonal for correlation
     brain_vec = brain_rdm[triu]
     coupling_vec = coupling_sym[triu]
 
     rho_sym, p_sym = spearmanr(brain_vec, coupling_vec)
     print(f"\n  Brain RDM vs symmetric causal coupling:")
     print(f"    Spearman ρ = {rho_sym:+.4f}, p = {p_sym:.4f}")
-    print(f"    (expect NEGATIVE: high brain dissimilarity → low causal coupling)")
-    if rho_sym < 0 and p_sym < 0.05:
-        print(f"    → SIGNIFICANT: brain coupling structure PREDICTS LLM causal interdependencies")
-    elif rho_sym < 0:
-        print(f"    → Correct direction but not significant")
-    else:
-        print(f"    → Wrong direction")
+    print(f"    (expect NEGATIVE: high brain distance → low causal coupling)")
 
-    # Also test asymmetric: each row of coupling predicts brain row
-    print(f"\n  Per-condition (row-wise) brain vs coupling:")
+    # Row-wise
     row_rhos = []
     for i, c in enumerate(conditions):
-        mask = np.ones(n, dtype=bool)
-        mask[i] = False
+        mask = np.ones(n, dtype=bool); mask[i] = False
         r, p = spearmanr(brain_rdm[i, mask], coupling[i, mask])
         row_rhos.append(r)
-        print(f"    {c:>20s}: ρ={r:+.4f} (p={p:.3f})")
+        print(f"    {c:>20s}: row ρ={r:+.4f}")
     print(f"    Mean row-wise ρ: {np.mean(row_rhos):+.4f}")
 
-    # Random control: correlation of brain RDM with random coupling matrix
+    # Permutation null
     rng = np.random.default_rng(2026)
-    null_rhos = []
-    for _ in range(10000):
-        perm = rng.permutation(n)
-        brain_perm = brain_rdm[np.ix_(perm, perm)]
-        null_rhos.append(float(spearmanr(brain_perm[triu], coupling_vec)[0]))
-    null_rhos = np.array(null_rhos)
+    null_rhos = np.array([
+        float(spearmanr(brain_rdm[np.ix_(p, p)][triu], coupling_vec)[0])
+        for p in (rng.permutation(n) for _ in range(10000))
+    ])
     p_perm = float((np.sum(null_rhos <= rho_sym) + 1) / (len(null_rhos) + 1))
-    print(f"\n  Permutation null: mean={np.mean(null_rhos):+.4f}, "
-          f"95th={np.percentile(null_rhos, 5):+.4f}")
-    print(f"  Permutation p (one-sided, negative) = {p_perm:.4f}")
+    print(f"  Permutation null: mean={np.mean(null_rhos):+.4f}, p={p_perm:.4f}")
 
-    # Save everything
     elapsed = time.time() - t0
     result = {
         "model": args.model_short,
         "n_neurons": n_neurons,
         "n_ablate": args.n_ablate,
+        "batch_size": args.batch_size,
         "conditions": conditions,
         "baseline": baseline,
         "ablation_results": ablation_results,
@@ -412,7 +414,6 @@ def main():
             "row_wise_rhos": {c: float(r) for c, r in zip(conditions, row_rhos)},
             "row_wise_mean_rho": float(np.mean(row_rhos)),
             "null_mean": float(np.mean(null_rhos)),
-            "null_std": float(np.std(null_rhos)),
         },
         "elapsed_seconds": elapsed,
     }
@@ -420,7 +421,7 @@ def main():
     with open(out_path, "w") as f:
         json.dump(result, f, indent=2)
     print(f"\nSaved to {out_path}")
-    print(f"Total elapsed: {elapsed:.0f}s")
+    print(f"Total elapsed: {elapsed:.0f}s ({elapsed/60:.1f} min)")
 
 
 if __name__ == "__main__":
