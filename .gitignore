@@ -26,3 +26,10 @@ experiments/logs/
 # Python artifacts
 **/__pycache__/
 *.pyc
+
+# Large activation/attribution data dumps — sync code, not data (regenerable on GPU)
+experiments/results/**/*_rsa_v2_per_stim.npz
+experiments/results/**/*_rsa_activations.npz
+experiments/results/**/*_multi_attribution.npz
+experiments/results/**/*_contrast_attribution.npz
+experiments/results/narratives_llm/*.npz
