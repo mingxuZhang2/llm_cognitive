@@ -13,8 +13,10 @@ experiments/data/cognitive_stimuli/**/goemotions_*.txt
 experiments/data/cognitive_stimuli/**/goemotions_*.json
 experiments/data/cognitive_stimuli/**/__pycache__/
 
-# Brain maps — track manifests/docs only (nii.gz files too large for git)
+# Brain maps — track manifests/docs only (raw map files too large for git)
 experiments/data/brain_maps/**/*.nii.gz
+experiments/data/brain_maps/**/*.img
+experiments/data/brain_maps/**/*.hdr
 experiments/data/brain_maps/**/raw/
 experiments/data/brain_maps/**/__pycache__/
 

@@ -1,0 +1,840 @@
+{
+  "model": "Qwen2.5-3B-Instruct",
+  "n_conditions": 14,
+  "n_pairs": 91,
+  "prediction": {
+    "residual_vs_accuracy": {
+      "rho": -0.0344104203678897,
+      "p": 0.746079871635067
+    },
+    "brain_dist_vs_accuracy": {
+      "rho": 0.0651865694858834,
+      "p": 0.5392830835949263
+    },
+    "llm_dist_vs_accuracy": {
+      "rho": 0.15566096351586822,
+      "p": 0.14064834371145202
+    }
+  },
+  "pairs": [
+    {
+      "cond_a": "anger",
+      "cond_b": "belief",
+      "accuracy": 0.35,
+      "n_trials": 40,
+      "brain_distance": 0.8499713933854758,
+      "rdm_residual": 21.0,
+      "llm_distance": 1.985491977547607
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "disgust",
+      "accuracy": 0.75,
+      "n_trials": 40,
+      "brain_distance": 0.5236723789612187,
+      "rdm_residual": 13.0,
+      "llm_distance": 0.006701996095479057
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "empathy",
+      "accuracy": 0.75,
+      "n_trials": 40,
+      "brain_distance": 0.7573481290536183,
+      "rdm_residual": 5.0,
+      "llm_distance": 0.7360925582200883
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "fear",
+      "accuracy": 0.7,
+      "n_trials": 40,
+      "brain_distance": 0.42245288083639554,
+      "rdm_residual": 4.0,
+      "llm_distance": 0.012497836510156679
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "happiness",
+      "accuracy": 0.8,
+      "n_trials": 40,
+      "brain_distance": 0.49258168901390653,
+      "rdm_residual": 6.0,
+      "llm_distance": 0.009141833066787841
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "intention",
+      "accuracy": 0.85,
+      "n_trials": 40,
+      "brain_distance": 0.9830181438850019,
+      "rdm_residual": 9.0,
+      "llm_distance": 1.9829777638697674
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "judgment",
+      "accuracy": 0.55,
+      "n_trials": 40,
+      "brain_distance": 1.0042711218748672,
+      "rdm_residual": 26.0,
+      "llm_distance": 1.9085560268738033
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "mentalizing",
+      "accuracy": 0.675,
+      "n_trials": 40,
+      "brain_distance": 0.8429708028214616,
+      "rdm_residual": 28.0,
+      "llm_distance": 1.9890455101207662
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "moral",
+      "accuracy": 0.6,
+      "n_trials": 40,
+      "brain_distance": 0.7132068045593104,
+      "rdm_residual": 18.0,
+      "llm_distance": 1.8998397438990373
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "sadness",
+      "accuracy": 0.825,
+      "n_trials": 40,
+      "brain_distance": 0.5866610483100207,
+      "rdm_residual": 18.0,
+      "llm_distance": 0.006592500643549437
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "self_referential",
+      "accuracy": 0.775,
+      "n_trials": 40,
+      "brain_distance": 0.8094524349650047,
+      "rdm_residual": 11.0,
+      "llm_distance": 1.9770376216196597
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.65,
+      "n_trials": 40,
+      "brain_distance": 0.8105135243167615,
+      "rdm_residual": 30.0,
+      "llm_distance": 1.9883838324516114
+    },
+    {
+      "cond_a": "anger",
+      "cond_b": "valence",
+      "accuracy": 0.525,
+      "n_trials": 40,
+      "brain_distance": 0.49561681403839464,
+      "rdm_residual": 5.0,
+      "llm_distance": 0.021186956205171414
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "disgust",
+      "accuracy": 0.875,
+      "n_trials": 40,
+      "brain_distance": 0.9472370571519874,
+      "rdm_residual": 4.0,
+      "llm_distance": 1.9830646784660986
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "empathy",
+      "accuracy": 0.7,
+      "n_trials": 40,
+      "brain_distance": 0.6657705217939979,
+      "rdm_residual": 15.0,
+      "llm_distance": 1.3242643577419175
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "fear",
+      "accuracy": 0.875,
+      "n_trials": 40,
+      "brain_distance": 0.9320089079608681,
+      "rdm_residual": 8.0,
+      "llm_distance": 1.9835771675234302
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "happiness",
+      "accuracy": 0.575,
+      "n_trials": 40,
+      "brain_distance": 0.9656738436008782,
+      "rdm_residual": 0.0,
+      "llm_distance": 1.984722605646037
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "intention",
+      "accuracy": 0.425,
+      "n_trials": 40,
+      "brain_distance": 0.6424352046661874,
+      "rdm_residual": 1.0,
+      "llm_distance": 0.03588734401838567
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "judgment",
+      "accuracy": 0.825,
+      "n_trials": 40,
+      "brain_distance": 0.7119811762146617,
+      "rdm_residual": 5.0,
+      "llm_distance": 0.10413456733952153
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "mentalizing",
+      "accuracy": 0.575,
+      "n_trials": 40,
+      "brain_distance": 0.3799130008686322,
+      "rdm_residual": 8.0,
+      "llm_distance": 0.016550189188658693
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "moral",
+      "accuracy": 0.675,
+      "n_trials": 40,
+      "brain_distance": 0.4868319330648955,
+      "rdm_residual": 23.0,
+      "llm_distance": 0.1351450449032514
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "sadness",
+      "accuracy": 0.675,
+      "n_trials": 40,
+      "brain_distance": 0.8661521510906871,
+      "rdm_residual": 15.0,
+      "llm_distance": 1.9852698965293307
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "self_referential",
+      "accuracy": 0.5,
+      "n_trials": 40,
+      "brain_distance": 0.535974824472144,
+      "rdm_residual": 4.0,
+      "llm_distance": 0.030985406741197763
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.725,
+      "n_trials": 40,
+      "brain_distance": 0.8829896697589247,
+      "rdm_residual": 46.0,
+      "llm_distance": 0.0212867155714207
+    },
+    {
+      "cond_a": "belief",
+      "cond_b": "valence",
+      "accuracy": 0.65,
+      "n_trials": 40,
+      "brain_distance": 0.7093426845390354,
+      "rdm_residual": 30.0,
+      "llm_distance": 1.9735529340597244
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "empathy",
+      "accuracy": 0.875,
+      "n_trials": 40,
+      "brain_distance": 0.7567239753950633,
+      "rdm_residual": 6.0,
+      "llm_distance": 0.7122145366130557
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "fear",
+      "accuracy": 0.775,
+      "n_trials": 40,
+      "brain_distance": 0.3388481943119862,
+      "rdm_residual": 9.0,
+      "llm_distance": 0.012680025046282961
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "happiness",
+      "accuracy": 0.9,
+      "n_trials": 40,
+      "brain_distance": 0.4825202285129704,
+      "rdm_residual": 2.0,
+      "llm_distance": 0.011839216943115849
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "intention",
+      "accuracy": 0.85,
+      "n_trials": 40,
+      "brain_distance": 1.058985713623796,
+      "rdm_residual": 14.0,
+      "llm_distance": 1.9826319652946518
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "judgment",
+      "accuracy": 0.725,
+      "n_trials": 40,
+      "brain_distance": 1.1177035506070223,
+      "rdm_residual": 28.0,
+      "llm_distance": 1.918982795804603
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "mentalizing",
+      "accuracy": 0.825,
+      "n_trials": 40,
+      "brain_distance": 0.9638213341286176,
+      "rdm_residual": 13.0,
+      "llm_distance": 1.9897301316129854
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "moral",
+      "accuracy": 0.7,
+      "n_trials": 40,
+      "brain_distance": 0.7585540470697134,
+      "rdm_residual": 5.0,
+      "llm_distance": 1.8942610927629422
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "sadness",
+      "accuracy": 0.825,
+      "n_trials": 40,
+      "brain_distance": 0.5947210587045212,
+      "rdm_residual": 16.0,
+      "llm_distance": 0.008435083032201862
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "self_referential",
+      "accuracy": 0.75,
+      "n_trials": 40,
+      "brain_distance": 0.9095656548463056,
+      "rdm_residual": 4.0,
+      "llm_distance": 1.9822637796904607
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.775,
+      "n_trials": 40,
+      "brain_distance": 0.852223893834197,
+      "rdm_residual": 29.0,
+      "llm_distance": 1.9909153156158217
+    },
+    {
+      "cond_a": "disgust",
+      "cond_b": "valence",
+      "accuracy": 0.625,
+      "n_trials": 40,
+      "brain_distance": 0.49596619010241694,
+      "rdm_residual": 1.0,
+      "llm_distance": 0.017328963719220214
+    },
+    {
+      "cond_a": "empathy",
+      "cond_b": "fear",
+      "accuracy": 0.475,
+      "n_trials": 40,
+      "brain_distance": 0.7474955958254057,
+      "rdm_residual": 0.0,
+      "llm_distance": 0.7279268005717237
+    },
+    {
+      "cond_a": "empathy",
+      "cond_b": "happiness",
+      "accuracy": 0.775,
+      "n_trials": 40,
+      "brain_distance": 0.833325828301742,
+      "rdm_residual": 14.0,
+      "llm_distance": 0.7445766358852931
+    },
+    {
+      "cond_a": "empathy",
+      "cond_b": "intention",
+      "accuracy": 0.55,
+      "n_trials": 40,
+      "brain_distance": 0.9745048974383388,
+      "rdm_residual": 36.0,
+      "llm_distance": 1.2753494842647317
+    },
+    {
+      "cond_a": "empathy",
+      "cond_b": "judgment",
+      "accuracy": 0.5,
+      "n_trials": 40,
+      "brain_distance": 0.9810457472147734,
+      "rdm_residual": 33.0,
+      "llm_distance": 1.3394917214607567
+    },
+    {
+      "cond_a": "empathy",
+      "cond_b": "mentalizing",
+      "accuracy": 0.5,
+      "n_trials": 40,
+      "brain_distance": 0.5243557017237257,
+      "rdm_residual": 28.0,
+      "llm_distance": 1.326561489166853
+    },
+    {
+      "cond_a": "empathy",
+      "cond_b": "moral",
+      "accuracy": 0.575,
+      "n_trials": 40,
+      "brain_distance": 0.6966941387107354,
+      "rdm_residual": 12.0,
+      "llm_distance": 0.9468780377968014
+    },
+    {
+      "cond_a": "empathy",
+      "cond_b": "sadness",
+      "accuracy": 0.525,
+      "n_trials": 40,
+      "brain_distance": 0.8045206009875179,
+      "rdm_residual": 10.0,
+      "llm_distance": 0.7442505305072971
+    },
+    {
+      "cond_a": "empathy",
+      "cond_b": "self_referential",
+      "accuracy": 0.95,
+      "n_trials": 40,
+      "brain_distance": 0.8523649093661542,
+      "rdm_residual": 12.0,
+      "llm_distance": 1.3436753946494036
+    },
+    {
+      "cond_a": "empathy",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.425,
+      "n_trials": 40,
+      "brain_distance": 0.7681635051208867,
+      "rdm_residual": 1.0,
+      "llm_distance": 1.3391544775480722
+    },
+    {
+      "cond_a": "empathy",
+      "cond_b": "valence",
+      "accuracy": 0.525,
+      "n_trials": 40,
+      "brain_distance": 0.6101566428816707,
+      "rdm_residual": 14.0,
+      "llm_distance": 0.6917125969451191
+    },
+    {
+      "cond_a": "fear",
+      "cond_b": "happiness",
+      "accuracy": 0.9,
+      "n_trials": 40,
+      "brain_distance": 0.3452370890455314,
+      "rdm_residual": 5.0,
+      "llm_distance": 0.01104179394832927
+    },
+    {
+      "cond_a": "fear",
+      "cond_b": "intention",
+      "accuracy": 0.8,
+      "n_trials": 40,
+      "brain_distance": 1.0868345250332214,
+      "rdm_residual": 22.0,
+      "llm_distance": 1.9791320759679878
+    },
+    {
+      "cond_a": "fear",
+      "cond_b": "judgment",
+      "accuracy": 0.875,
+      "n_trials": 40,
+      "brain_distance": 1.1951665348754315,
+      "rdm_residual": 35.0,
+      "llm_distance": 1.907527907855304
+    },
+    {
+      "cond_a": "fear",
+      "cond_b": "mentalizing",
+      "accuracy": 0.825,
+      "n_trials": 40,
+      "brain_distance": 0.9656434929942026,
+      "rdm_residual": 2.0,
+      "llm_distance": 1.9847893151679612
+    },
+    {
+      "cond_a": "fear",
+      "cond_b": "moral",
+      "accuracy": 0.75,
+      "n_trials": 40,
+      "brain_distance": 0.748423690464453,
+      "rdm_residual": 12.0,
+      "llm_distance": 1.8974055947334836
+    },
+    {
+      "cond_a": "fear",
+      "cond_b": "sadness",
+      "accuracy": 0.9,
+      "n_trials": 40,
+      "brain_distance": 0.46341682545231955,
+      "rdm_residual": 5.0,
+      "llm_distance": 0.007715195210252768
+    },
+    {
+      "cond_a": "fear",
+      "cond_b": "self_referential",
+      "accuracy": 0.8,
+      "n_trials": 40,
+      "brain_distance": 0.8764822873359323,
+      "rdm_residual": 1.0,
+      "llm_distance": 1.9801296738272611
+    },
+    {
+      "cond_a": "fear",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.95,
+      "n_trials": 40,
+      "brain_distance": 0.8480494229329885,
+      "rdm_residual": 24.0,
+      "llm_distance": 1.9874143662416157
+    },
+    {
+      "cond_a": "fear",
+      "cond_b": "valence",
+      "accuracy": 0.525,
+      "n_trials": 40,
+      "brain_distance": 0.36394081544762025,
+      "rdm_residual": 17.0,
+      "llm_distance": 0.021695490454455513
+    },
+    {
+      "cond_a": "happiness",
+      "cond_b": "intention",
+      "accuracy": 0.575,
+      "n_trials": 40,
+      "brain_distance": 0.9622747649946394,
+      "rdm_residual": 5.0,
+      "llm_distance": 1.9814040177748682
+    },
+    {
+      "cond_a": "happiness",
+      "cond_b": "judgment",
+      "accuracy": 0.7,
+      "n_trials": 40,
+      "brain_distance": 1.1171188913809769,
+      "rdm_residual": 34.0,
+      "llm_distance": 1.903319739735982
+    },
+    {
+      "cond_a": "happiness",
+      "cond_b": "mentalizing",
+      "accuracy": 0.6,
+      "n_trials": 40,
+      "brain_distance": 0.9959072697751903,
+      "rdm_residual": 0.0,
+      "llm_distance": 1.9883787407540914
+    },
+    {
+      "cond_a": "happiness",
+      "cond_b": "moral",
+      "accuracy": 0.6,
+      "n_trials": 40,
+      "brain_distance": 0.8046626371940249,
+      "rdm_residual": 5.0,
+      "llm_distance": 1.9080684627725417
+    },
+    {
+      "cond_a": "happiness",
+      "cond_b": "sadness",
+      "accuracy": 0.65,
+      "n_trials": 40,
+      "brain_distance": 0.2889351734046659,
+      "rdm_residual": 1.0,
+      "llm_distance": 0.005100765231978666
+    },
+    {
+      "cond_a": "happiness",
+      "cond_b": "self_referential",
+      "accuracy": 0.6,
+      "n_trials": 40,
+      "brain_distance": 0.852925137414281,
+      "rdm_residual": 5.0,
+      "llm_distance": 1.981051987897994
+    },
+    {
+      "cond_a": "happiness",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.575,
+      "n_trials": 40,
+      "brain_distance": 0.8209774382177932,
+      "rdm_residual": 26.0,
+      "llm_distance": 1.986718976298165
+    },
+    {
+      "cond_a": "happiness",
+      "cond_b": "valence",
+      "accuracy": 0.5,
+      "n_trials": 40,
+      "brain_distance": 0.42335880941140447,
+      "rdm_residual": 8.0,
+      "llm_distance": 0.017025993246299942
+    },
+    {
+      "cond_a": "intention",
+      "cond_b": "judgment",
+      "accuracy": 0.6,
+      "n_trials": 40,
+      "brain_distance": 0.7509162965825221,
+      "rdm_residual": 12.0,
+      "llm_distance": 0.10645077271354053
+    },
+    {
+      "cond_a": "intention",
+      "cond_b": "mentalizing",
+      "accuracy": 0.5,
+      "n_trials": 40,
+      "brain_distance": 0.7345496297444563,
+      "rdm_residual": 15.0,
+      "llm_distance": 0.025238551257370734
+    },
+    {
+      "cond_a": "intention",
+      "cond_b": "moral",
+      "accuracy": 0.575,
+      "n_trials": 40,
+      "brain_distance": 0.6604304263204973,
+      "rdm_residual": 4.0,
+      "llm_distance": 0.11342079049489395
+    },
+    {
+      "cond_a": "intention",
+      "cond_b": "sadness",
+      "accuracy": 0.5,
+      "n_trials": 40,
+      "brain_distance": 0.9495503986677649,
+      "rdm_residual": 2.0,
+      "llm_distance": 1.9829831651134882
+    },
+    {
+      "cond_a": "intention",
+      "cond_b": "self_referential",
+      "accuracy": 0.65,
+      "n_trials": 40,
+      "brain_distance": 0.6625722987419331,
+      "rdm_residual": 5.0,
+      "llm_distance": 0.031936652444024105
+    },
+    {
+      "cond_a": "intention",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.525,
+      "n_trials": 40,
+      "brain_distance": 0.965703928345967,
+      "rdm_residual": 60.0,
+      "llm_distance": 0.02117838150834561
+    },
+    {
+      "cond_a": "intention",
+      "cond_b": "valence",
+      "accuracy": 0.475,
+      "n_trials": 40,
+      "brain_distance": 1.0315974626952966,
+      "rdm_residual": 23.0,
+      "llm_distance": 1.9687852407715185
+    },
+    {
+      "cond_a": "judgment",
+      "cond_b": "mentalizing",
+      "accuracy": 0.575,
+      "n_trials": 40,
+      "brain_distance": 0.697890843976565,
+      "rdm_residual": 5.0,
+      "llm_distance": 0.08516231173739397
+    },
+    {
+      "cond_a": "judgment",
+      "cond_b": "moral",
+      "accuracy": 0.625,
+      "n_trials": 40,
+      "brain_distance": 0.7605234719879489,
+      "rdm_residual": 11.0,
+      "llm_distance": 0.21030864763914991
+    },
+    {
+      "cond_a": "judgment",
+      "cond_b": "sadness",
+      "accuracy": 0.6,
+      "n_trials": 40,
+      "brain_distance": 1.131850912542922,
+      "rdm_residual": 31.0,
+      "llm_distance": 1.9102705158505666
+    },
+    {
+      "cond_a": "judgment",
+      "cond_b": "self_referential",
+      "accuracy": 0.225,
+      "n_trials": 40,
+      "brain_distance": 0.7864197579924641,
+      "rdm_residual": 22.0,
+      "llm_distance": 0.09997903403611486
+    },
+    {
+      "cond_a": "judgment",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.55,
+      "n_trials": 40,
+      "brain_distance": 0.7319176804484993,
+      "rdm_residual": 10.0,
+      "llm_distance": 0.08218157298997264
+    },
+    {
+      "cond_a": "judgment",
+      "cond_b": "valence",
+      "accuracy": 0.575,
+      "n_trials": 40,
+      "brain_distance": 0.9725193621426577,
+      "rdm_residual": 19.0,
+      "llm_distance": 1.91558713363316
+    },
+    {
+      "cond_a": "mentalizing",
+      "cond_b": "moral",
+      "accuracy": 0.6,
+      "n_trials": 40,
+      "brain_distance": 0.510266088615115,
+      "rdm_residual": 16.0,
+      "llm_distance": 0.12578795011630595
+    },
+    {
+      "cond_a": "mentalizing",
+      "cond_b": "sadness",
+      "accuracy": 0.65,
+      "n_trials": 40,
+      "brain_distance": 0.9433522351514187,
+      "rdm_residual": 16.0,
+      "llm_distance": 1.9894548938508037
+    },
+    {
+      "cond_a": "mentalizing",
+      "cond_b": "self_referential",
+      "accuracy": 0.5,
+      "n_trials": 40,
+      "brain_distance": 0.5403709406488155,
+      "rdm_residual": 3.0,
+      "llm_distance": 0.02079812804193315
+    },
+    {
+      "cond_a": "mentalizing",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.45,
+      "n_trials": 40,
+      "brain_distance": 0.7543522133256791,
+      "rdm_residual": 42.0,
+      "llm_distance": 0.004307323757231751
+    },
+    {
+      "cond_a": "mentalizing",
+      "cond_b": "valence",
+      "accuracy": 0.65,
+      "n_trials": 40,
+      "brain_distance": 0.6619026570588014,
+      "rdm_residual": 63.0,
+      "llm_distance": 1.9928400421371757
+    },
+    {
+      "cond_a": "moral",
+      "cond_b": "sadness",
+      "accuracy": 0.775,
+      "n_trials": 40,
+      "brain_distance": 0.7368312508891008,
+      "rdm_residual": 17.0,
+      "llm_distance": 1.906709183371988
+    },
+    {
+      "cond_a": "moral",
+      "cond_b": "self_referential",
+      "accuracy": 0.475,
+      "n_trials": 40,
+      "brain_distance": 0.45371984381461306,
+      "rdm_residual": 26.0,
+      "llm_distance": 0.1302577408712915
+    },
+    {
+      "cond_a": "moral",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.625,
+      "n_trials": 40,
+      "brain_distance": 0.8555554905747281,
+      "rdm_residual": 30.0,
+      "llm_distance": 0.1277566025062038
+    },
+    {
+      "cond_a": "moral",
+      "cond_b": "valence",
+      "accuracy": 0.7,
+      "n_trials": 40,
+      "brain_distance": 0.6258377309294455,
+      "rdm_residual": 26.0,
+      "llm_distance": 1.8841739264260107
+    },
+    {
+      "cond_a": "sadness",
+      "cond_b": "self_referential",
+      "accuracy": 0.575,
+      "n_trials": 40,
+      "brain_distance": 0.7486760369950775,
+      "rdm_residual": 29.0,
+      "llm_distance": 1.9822062913403986
+    },
+    {
+      "cond_a": "sadness",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.575,
+      "n_trials": 40,
+      "brain_distance": 0.9331656760764858,
+      "rdm_residual": 18.0,
+      "llm_distance": 1.9895973239411926
+    },
+    {
+      "cond_a": "sadness",
+      "cond_b": "valence",
+      "accuracy": 0.5,
+      "n_trials": 40,
+      "brain_distance": 0.45476225396343917,
+      "rdm_residual": 5.0,
+      "llm_distance": 0.016808762660262544
+    },
+    {
+      "cond_a": "self_referential",
+      "cond_b": "theory_of_mind",
+      "accuracy": 0.5,
+      "n_trials": 40,
+      "brain_distance": 0.9589747535294058,
+      "rdm_residual": 61.0,
+      "llm_distance": 0.013323599754610838
+    },
+    {
+      "cond_a": "self_referential",
+      "cond_b": "valence",
+      "accuracy": 1.0,
+      "n_trials": 40,
+      "brain_distance": 0.6332321393951397,
+      "rdm_residual": 43.0,
+      "llm_distance": 1.9812848343715386
+    },
+    {
+      "cond_a": "theory_of_mind",
+      "cond_b": "valence",
+      "accuracy": 0.65,
+      "n_trials": 40,
+      "brain_distance": 0.7836087242114818,
+      "rdm_residual": 41.0,
+      "llm_distance": 1.991904772395591
+    }
+  ]
+}

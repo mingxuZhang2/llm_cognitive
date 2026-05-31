@@ -1,0 +1,502 @@
+{
+  "per_condition": [
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "belief",
+      "block": "ment",
+      "brain_align": 0.8681318681318682,
+      "ceiling": 0.9267032967032969,
+      "ratio": 0.9367959207873827
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "happiness",
+      "block": "AFF",
+      "brain_align": 0.8076923076923077,
+      "ceiling": 0.9516483516483515,
+      "ratio": 0.8487297921478062
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "intention",
+      "block": "ment",
+      "brain_align": 0.8021978021978022,
+      "ceiling": 0.9114285714285714,
+      "ratio": 0.8801543284301906
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "judgment",
+      "block": "ment",
+      "brain_align": 0.7912087912087913,
+      "ceiling": 0.906978021978022,
+      "ratio": 0.87235718180166
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "disgust",
+      "block": "AFF",
+      "brain_align": 0.7802197802197801,
+      "ceiling": 0.9432417582417583,
+      "ratio": 0.8271684044969999
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "theory_of_mind",
+      "block": "ment",
+      "brain_align": 0.7747252747252747,
+      "ceiling": 0.8214285714285714,
+      "ratio": 0.9431438127090301
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "sadness",
+      "block": "AFF",
+      "brain_align": 0.7527472527472527,
+      "ceiling": 0.9495054945054946,
+      "ratio": 0.792778195706267
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "valence",
+      "block": "AFF",
+      "brain_align": 0.7417582417582418,
+      "ceiling": 0.8982417582417583,
+      "ratio": 0.8257890873501346
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "moral",
+      "block": "ment",
+      "brain_align": 0.7362637362637362,
+      "ceiling": 0.9021428571428571,
+      "ratio": 0.8161276569827638
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "fear",
+      "block": "AFF",
+      "brain_align": 0.7142857142857143,
+      "ceiling": 0.9601098901098901,
+      "ratio": 0.7439624585097859
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "self_referential",
+      "block": "ment",
+      "brain_align": 0.7142857142857143,
+      "ceiling": 0.8418681318681321,
+      "ratio": 0.8484532045424876
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "anger",
+      "block": "AFF",
+      "brain_align": 0.6813186813186813,
+      "ceiling": 0.9583516483516483,
+      "ratio": 0.7109276459121661
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "mentalizing",
+      "block": "ment",
+      "brain_align": 0.6813186813186813,
+      "ceiling": 0.8494505494505493,
+      "ratio": 0.8020698576972835
+    },
+    {
+      "model": "Qwen2.5-7B-Instruct",
+      "cond": "empathy",
+      "block": "ment",
+      "brain_align": 0.15384615384615383,
+      "ceiling": 0.38829670329670335,
+      "ratio": 0.3962077260506579
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "belief",
+      "block": "ment",
+      "brain_align": 0.8736263736263737,
+      "ceiling": 0.9490659340659342,
+      "ratio": 0.9205117813929253
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "judgment",
+      "block": "ment",
+      "brain_align": 0.8186813186813187,
+      "ceiling": 0.8807142857142858,
+      "ratio": 0.9295651631418054
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "happiness",
+      "block": "AFF",
+      "brain_align": 0.8076923076923077,
+      "ceiling": 0.9404395604395605,
+      "ratio": 0.8588455246552933
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "valence",
+      "block": "AFF",
+      "brain_align": 0.7582417582417583,
+      "ceiling": 0.902802197802198,
+      "ratio": 0.839875844440387
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "intention",
+      "block": "ment",
+      "brain_align": 0.7417582417582418,
+      "ceiling": 0.9522527472527471,
+      "ratio": 0.7789510126363166
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "sadness",
+      "block": "AFF",
+      "brain_align": 0.7417582417582418,
+      "ceiling": 0.9401098901098901,
+      "ratio": 0.7890122735242548
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "theory_of_mind",
+      "block": "ment",
+      "brain_align": 0.7417582417582418,
+      "ceiling": 0.8497252747252747,
+      "ratio": 0.8729388942774007
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "moral",
+      "block": "ment",
+      "brain_align": 0.7362637362637362,
+      "ceiling": 0.8790109890109892,
+      "ratio": 0.8376047005875732
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "disgust",
+      "block": "AFF",
+      "brain_align": 0.7252747252747254,
+      "ceiling": 0.9587912087912089,
+      "ratio": 0.7564469914040114
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "fear",
+      "block": "AFF",
+      "brain_align": 0.7087912087912087,
+      "ceiling": 0.9463186813186815,
+      "ratio": 0.7489984323288623
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "self_referential",
+      "block": "ment",
+      "brain_align": 0.6978021978021978,
+      "ceiling": 0.8624175824175824,
+      "ratio": 0.8091233435270132
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "mentalizing",
+      "block": "ment",
+      "brain_align": 0.6703296703296703,
+      "ceiling": 0.8688461538461538,
+      "ratio": 0.7715171061784607
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "anger",
+      "block": "AFF",
+      "brain_align": 0.6648351648351648,
+      "ceiling": 0.9522527472527473,
+      "ratio": 0.6981709076221798
+    },
+    {
+      "model": "Meta-Llama-3.1-8B-Instruct",
+      "cond": "empathy",
+      "block": "ment",
+      "brain_align": 0.26373626373626374,
+      "ceiling": 0.9620879120879121,
+      "ratio": 0.2741290691033695
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "judgment",
+      "block": "ment",
+      "brain_align": 0.9120879120879121,
+      "ceiling": 0.7285714285714288,
+      "ratio": 1.251885369532428
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "belief",
+      "block": "ment",
+      "brain_align": 0.901098901098901,
+      "ceiling": 0.8770879120879121,
+      "ratio": 1.0273758065526528
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "happiness",
+      "block": "AFF",
+      "brain_align": 0.8076923076923077,
+      "ceiling": 0.9490659340659343,
+      "ratio": 0.8510391941179875
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "theory_of_mind",
+      "block": "ment",
+      "brain_align": 0.8021978021978022,
+      "ceiling": 0.8410439560439562,
+      "ratio": 0.9538119814463969
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "intention",
+      "block": "ment",
+      "brain_align": 0.7857142857142857,
+      "ceiling": 0.9628021978021977,
+      "ratio": 0.8160703075957314
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "valence",
+      "block": "AFF",
+      "brain_align": 0.7692307692307693,
+      "ceiling": 0.909725274725275,
+      "ratio": 0.8455638098689374
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "sadness",
+      "block": "AFF",
+      "brain_align": 0.7417582417582418,
+      "ceiling": 0.9555494505494505,
+      "ratio": 0.7762635846127308
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "disgust",
+      "block": "AFF",
+      "brain_align": 0.7252747252747254,
+      "ceiling": 0.958791208791209,
+      "ratio": 0.7564469914040114
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "moral",
+      "block": "ment",
+      "brain_align": 0.7252747252747254,
+      "ceiling": 0.958901098901099,
+      "ratio": 0.756360302544121
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "mentalizing",
+      "block": "ment",
+      "brain_align": 0.7197802197802198,
+      "ceiling": 0.8875824175824176,
+      "ratio": 0.810944657669927
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "fear",
+      "block": "AFF",
+      "brain_align": 0.7142857142857143,
+      "ceiling": 0.9598901098901099,
+      "ratio": 0.7441327990841442
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "self_referential",
+      "block": "ment",
+      "brain_align": 0.6703296703296703,
+      "ceiling": 0.870769230769231,
+      "ratio": 0.7698132256436141
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "anger",
+      "block": "AFF",
+      "brain_align": 0.6483516483516483,
+      "ceiling": 0.9610439560439562,
+      "ratio": 0.674632668229375
+    },
+    {
+      "model": "Mistral-7B-Instruct-v0.3",
+      "cond": "empathy",
+      "block": "ment",
+      "brain_align": 0.24725274725274726,
+      "ceiling": -0.3501648351648351,
+      "ratio": NaN
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "belief",
+      "block": "ment",
+      "brain_align": 0.8791208791208791,
+      "ceiling": 0.912912087912088,
+      "ratio": 0.9629852542882936
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "judgment",
+      "block": "ment",
+      "brain_align": 0.8351648351648352,
+      "ceiling": 0.8780219780219781,
+      "ratio": 0.9511889862327909
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "happiness",
+      "block": "AFF",
+      "brain_align": 0.8186813186813187,
+      "ceiling": 0.9473076923076924,
+      "ratio": 0.8642190128182818
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "theory_of_mind",
+      "block": "ment",
+      "brain_align": 0.8131868131868131,
+      "ceiling": 0.8475274725274725,
+      "ratio": 0.959481361426256
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "intention",
+      "block": "ment",
+      "brain_align": 0.7747252747252747,
+      "ceiling": 0.9504395604395606,
+      "ratio": 0.8151231356226153
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "sadness",
+      "block": "AFF",
+      "brain_align": 0.7692307692307693,
+      "ceiling": 0.9514285714285714,
+      "ratio": 0.8085008085008085
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "disgust",
+      "block": "AFF",
+      "brain_align": 0.7527472527472527,
+      "ceiling": 0.9463186813186815,
+      "ratio": 0.7954479475120477
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "moral",
+      "block": "ment",
+      "brain_align": 0.7362637362637362,
+      "ceiling": 0.9613736263736263,
+      "ratio": 0.7658455735268903
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "self_referential",
+      "block": "ment",
+      "brain_align": 0.7252747252747254,
+      "ceiling": 0.8302747252747252,
+      "ratio": 0.873535834822315
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "valence",
+      "block": "AFF",
+      "brain_align": 0.7197802197802198,
+      "ceiling": 0.892032967032967,
+      "ratio": 0.8068986757006468
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "fear",
+      "block": "AFF",
+      "brain_align": 0.7032967032967032,
+      "ceiling": 0.9483516483516483,
+      "ratio": 0.7415990730011587
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "anger",
+      "block": "AFF",
+      "brain_align": 0.6703296703296703,
+      "ceiling": 0.9542307692307691,
+      "ratio": 0.7024817182011862
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "mentalizing",
+      "block": "ment",
+      "brain_align": 0.6593406593406593,
+      "ceiling": 0.8913736263736264,
+      "ratio": 0.7396905627812365
+    },
+    {
+      "model": "gemma-2-9b-it",
+      "cond": "empathy",
+      "block": "ment",
+      "brain_align": 0.1868131868131868,
+      "ceiling": 0.013351648351648357,
+      "ratio": 13.991769547325095
+    }
+  ],
+  "aggregate": {
+    "Qwen2.5-7B-Instruct": {
+      "AFF": {
+        "align": 0.7463369963369964,
+        "ceiling": 0.9435164835164835,
+        "ratio": 0.7915592640205267
+      },
+      "ment": {
+        "align": 0.6902472527472527,
+        "ceiling": 0.8185370879120879,
+        "ratio": 0.811913711125182
+      }
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "AFF": {
+        "align": 0.7344322344322345,
+        "ceiling": 0.9401190476190476,
+        "ratio": 0.7818916623291647
+      },
+      "ment": {
+        "align": 0.6929945054945055,
+        "ceiling": 0.9005151098901099,
+        "ratio": 0.7742926338556081
+      }
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "AFF": {
+        "align": 0.7344322344322345,
+        "ceiling": 0.9490109890109891,
+        "ratio": 0.7746798412195312
+      },
+      "ment": {
+        "align": 0.720467032967033,
+        "ceiling": 0.7220741758241759,
+        "ratio": NaN
+      }
+    },
+    "gemma-2-9b-it": {
+      "AFF": {
+        "align": 0.739010989010989,
+        "ceiling": 0.939945054945055,
+        "ratio": 0.7865245392890216
+      },
+      "ment": {
+        "align": 0.7012362637362637,
+        "ceiling": 0.7856593406593406,
+        "ratio": 2.507452532003186
+      }
+    }
+  }
+}

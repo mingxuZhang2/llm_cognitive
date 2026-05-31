@@ -1,0 +1,11 @@
+{
+  "model": "/data/user/mzhang630/.cache/huggingface/hub/models--camenduru--Meta-Llama-3.1-8B-Instruct/snapshots/ac6a82c495cbcdf8e379063f645bb928ff65be7f",
+  "n_layers": 32,
+  "ffn_dim": 14336,
+  "n_neurons": 458752,
+  "n_samples": 250,
+  "shape": [
+    458752,
+    250
+  ]
+}

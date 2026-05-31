@@ -1,233 +1,219 @@
 #!/usr/bin/env python3
 """
-Build brain RDM from Narratives fMRI data using cognitive condition annotations.
+Build stimulus-locked brain RDM from Narratives fMRI data.
 
-Pipeline:
-1. Load denoised BOLD (afni-nosmooth, MNI space)
-2. Parcellate with Schaefer 400-parcel atlas
-3. Align with sentence timestamps (hemodynamic lag = 5s)
-4. Average parcellated timeseries by cognitive condition
-5. Build brain RDM (1-cosine distance between condition activation patterns)
-6. Compute noise ceiling via split-half subjects
+For each story:
+  1. Load fMRI for all subjects who listened to it
+  2. Map each annotated sentence to its TR (accounting for HRF delay)
+  3. Extract brain activation pattern per sentence per subject
+  4. Group by cognitive condition, average
+  5. Accumulate across stories and subjects
 
-Output:
-  results/cognitive_rsa/narratives_brain_rdm.npz
-  results/cognitive_rsa/narratives_rsa.json
+Output: a stimulus-locked brain RDM from real fMRI, replacing the
+Neurosynth meta-analytic version.
 """
-from __future__ import annotations
-import json, sys
+import json
+import os
 from pathlib import Path
 from collections import defaultdict
 
 import numpy as np
 import nibabel as nib
+from scipy.stats import spearmanr
 
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments")
+BASE = Path(__file__).resolve().parents[1]
 FMRI_DIR = BASE / "data" / "narratives" / "fmri" / "afni-nosmooth"
-ANN_PATH = BASE / "data" / "narratives" / "annotated_sentences.jsonl"
-RES = BASE / "results" / "cognitive_rsa"
+SENT_PATH = BASE / "data" / "narratives" / "annotated_sentences.jsonl"
+OUT_DIR = BASE / "results" / "narratives_brain_rdm"
 
-CONDITIONS = [
-    "anger", "fear", "sadness", "happiness",
-    "belief", "mentalizing", "intention", "theory_of_mind",
-    "empathy", "self_referential", "judgment", "moral",
+HRF_DELAY = 5.0
+MIN_SENTENCES_PER_COND = 5
+MIN_SUBJECTS = 15
+
+TARGET_STORIES = [
+    "pieman", "tunnel", "notthefallintact", "black", "prettymouth",
+    "forgot", "sherlock", "merlin", "bronx", "21styear",
+    "slumlordreach", "lucy",
 ]
 
-HRF_LAG = 5.0  # hemodynamic delay in seconds
 
-
-def get_schaefer_atlas():
-    """Download Schaefer 400-parcel atlas in MNI space."""
-    from nilearn.datasets import fetch_atlas_schaefer_2018
-    atlas = fetch_atlas_schaefer_2018(n_rois=400, resolution_mm=2)
-    return atlas["maps"], atlas["labels"]
-
-
-def parcellate_bold(bold_path: str, atlas_path: str) -> np.ndarray:
-    """Extract parcel-averaged timeseries from BOLD."""
-    from nilearn.maskers import NiftiLabelsMasker
-    masker = NiftiLabelsMasker(
-        labels_img=atlas_path,
-        standardize="zscore_sample",
-        resampling_target="data",
-    )
-    ts = masker.fit_transform(bold_path)  # (n_TRs, n_parcels)
-    return ts
-
-
-def load_annotations(story: str) -> list[dict]:
-    """Load annotated sentences for a story."""
-    sents = []
-    with open(ANN_PATH) as f:
-        for line in f:
-            s = json.loads(line)
-            if s["story"] == story:
-                sents.append(s)
-    return sents
-
-
-def assign_trs_to_conditions(sents: list[dict], n_trs: int, tr: float) -> dict[str, list[int]]:
-    """Map TRs to conditions using sentence timing + HRF lag."""
-    cond_trs = defaultdict(set)
-
-    for s in sents:
-        labels = s.get("llm_labels", [])
-        if not labels:
+def get_story_subjects(story):
+    subjects = []
+    for sub in sorted(os.listdir(FMRI_DIR)):
+        func_dir = FMRI_DIR / sub / "func"
+        if not func_dir.is_dir():
             continue
-        onset_hrf = s["onset"] + HRF_LAG
-        offset_hrf = s["offset"] + HRF_LAG
-        tr_start = int(onset_hrf / tr)
-        tr_end = int(offset_hrf / tr) + 1
-        tr_start = max(0, min(tr_start, n_trs - 1))
-        tr_end = max(0, min(tr_end, n_trs))
+        # prefer non-run files, else run-1
+        candidates = []
+        for f in sorted(os.listdir(func_dir)):
+            if f"task-{story}" in f and f.endswith(".nii.gz"):
+                candidates.append(f)
+        if candidates:
+            # pick the one without "run" or the first one
+            pick = candidates[0]
+            for c in candidates:
+                if "run" not in c:
+                    pick = c
+                    break
+            subjects.append((sub, func_dir / pick))
+    return subjects
 
-        for label in labels:
-            if label in CONDITIONS:
-                for t in range(tr_start, tr_end):
-                    cond_trs[label].add(t)
 
-    return {c: sorted(trs) for c, trs in cond_trs.items()}
+def load_and_extract(nii_path, sentences, tr, hrf_delay=5.0):
+    img = nib.load(str(nii_path))
+    data = img.get_fdata(dtype=np.float32)
+    n_trs = data.shape[-1]
 
-
-def build_condition_patterns(ts: np.ndarray, cond_trs: dict[str, list[int]]) -> tuple[np.ndarray, list[str]]:
-    """Average parcellated timeseries by condition."""
-    used_conds = []
     patterns = []
-    for cond in CONDITIONS:
-        trs = cond_trs.get(cond, [])
-        if len(trs) < 3:
+    for sent in sentences:
+        midpoint = (sent["onset"] + sent["offset"]) / 2.0
+        target_time = midpoint + hrf_delay
+        tr_idx = int(target_time / tr)
+
+        if tr_idx < 0 or tr_idx >= n_trs:
+            patterns.append(None)
             continue
-        pattern = ts[trs].mean(axis=0)
-        patterns.append(pattern)
-        used_conds.append(cond)
-    return np.array(patterns), used_conds
 
+        vol = data[:, :, :, tr_idx].flatten()
+        patterns.append(vol)
 
-def rdm_cosine(patterns: np.ndarray) -> np.ndarray:
-    norms = np.linalg.norm(patterns, axis=1, keepdims=True)
-    norms[norms == 0] = 1.0
-    normed = patterns / norms
-    return 1.0 - normed @ normed.T
+    return patterns
 
 
 def main():
-    from scipy.stats import spearmanr
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    print("Loading Schaefer 400 atlas...")
-    atlas_path, atlas_labels = get_schaefer_atlas()
-    print(f"  Atlas: {atlas_path}")
+    all_sents = [json.loads(l) for l in open(SENT_PATH)]
+    story_sents = defaultdict(list)
+    for s in all_sents:
+        story_sents[s["story"]].append(s)
 
-    story = "pieman"
-    sents = load_annotations(story)
-    print(f"\nStory: {story}, {len(sents)} annotated sentences")
+    global_cond_counts = defaultdict(int)
+    for s in all_sents:
+        for c in s.get("conditions", {}):
+            global_cond_counts[c] += 1
+    valid_conditions = sorted(c for c, n in global_cond_counts.items()
+                              if n >= MIN_SENTENCES_PER_COND)
+    print(f"Valid conditions (>={MIN_SENTENCES_PER_COND} sents): {len(valid_conditions)}")
+    for c in valid_conditions:
+        print(f"  {c:>20s}: {global_cond_counts[c]} sentences")
 
-    bold_files = sorted(FMRI_DIR.glob(f"*/func/*task-{story}*MNI152*desc-clean_bold.nii.gz"))
-    print(f"Found {len(bold_files)} subjects")
+    cond_sum = {c: None for c in valid_conditions}
+    cond_count = {c: 0 for c in valid_conditions}
+    n_voxels = None
+    total_subjects_used = 0
 
-    if not bold_files:
-        print("No BOLD files found!")
-        return
+    for story in TARGET_STORIES:
+        sents = story_sents.get(story, [])
+        if not sents:
+            continue
 
-    img0 = nib.load(str(bold_files[0]))
-    n_trs = img0.shape[3]
-    tr = img0.header.get_zooms()[3]
-    print(f"  TRs: {n_trs}, TR: {tr:.2f}s")
+        subjects = get_story_subjects(story)
+        if len(subjects) < MIN_SUBJECTS:
+            print(f"\n[skip] {story}: only {len(subjects)} subjects (need {MIN_SUBJECTS})")
+            continue
 
-    cond_trs = assign_trs_to_conditions(sents, n_trs, tr)
-    print(f"\n  TR assignment (HRF lag={HRF_LAG}s):")
-    for cond in CONDITIONS:
-        trs = cond_trs.get(cond, [])
-        print(f"    {cond:<20s} {len(trs):>4d} TRs")
+        first_img = nib.load(str(subjects[0][1]))
+        tr = first_img.header.get_zooms()[-1]
+        shape = first_img.shape
 
-    # Parcellate each subject
-    all_subject_patterns = []
-    subject_ids = []
-    for bi, bf in enumerate(bold_files):
-        sub = bf.parts[-3]
-        print(f"\n  [{bi+1}/{len(bold_files)}] Parcellating {sub}...", end="", flush=True)
-        try:
-            ts = parcellate_bold(str(bf), atlas_path)
-            patterns, used_conds = build_condition_patterns(ts, cond_trs)
-            if len(used_conds) >= 5:
-                all_subject_patterns.append(patterns)
-                subject_ids.append(sub)
-                print(f" {ts.shape} → {patterns.shape[0]} conditions OK")
-            else:
-                print(f" only {len(used_conds)} conditions, skip")
-        except Exception as e:
-            print(f" ERROR: {e}")
+        print(f"\n=== {story}: {len(sents)} sents, {len(subjects)} subs, "
+              f"TR={tr:.2f}s ===")
 
-    if len(all_subject_patterns) < 2:
-        print("Too few subjects!")
-        return
+        valid_sents = []
+        for s in sents:
+            conds = [c for c in s.get("conditions", {}) if c in valid_conditions]
+            if conds:
+                valid_sents.append((s, conds))
 
-    n_subs = len(all_subject_patterns)
-    print(f"\n=== {n_subs} subjects, {len(used_conds)} conditions ===")
+        if not valid_sents:
+            continue
 
-    # Group-average patterns → brain RDM
-    group_patterns = np.mean(all_subject_patterns, axis=0)
-    brain_rdm = rdm_cosine(group_patterns)
-    print(f"\nBrain RDM: {brain_rdm.shape}")
+        n_subs_ok = 0
+        for sub_name, nii_path in subjects:
+            try:
+                patterns = load_and_extract(
+                    nii_path, [vs[0] for vs in valid_sents], tr, HRF_DELAY)
+            except Exception as e:
+                continue
 
-    # Noise ceiling via split-half subjects
-    rng = np.random.default_rng(42)
-    ceil_rhos = []
-    for _ in range(50):
-        perm = rng.permutation(n_subs)
-        half = n_subs // 2
-        pat_a = np.mean([all_subject_patterns[i] for i in perm[:half]], axis=0)
-        pat_b = np.mean([all_subject_patterns[i] for i in perm[half:2*half]], axis=0)
-        rdm_a = rdm_cosine(pat_a)
-        rdm_b = rdm_cosine(pat_b)
-        triu = np.triu_indices(rdm_a.shape[0], k=1)
-        rho, _ = spearmanr(rdm_a[triu], rdm_b[triu])
-        if np.isfinite(rho):
-            ceil_rhos.append(rho)
-    ceiling = float(np.mean(ceil_rhos)) if ceil_rhos else float("nan")
-    print(f"Brain noise ceiling (split-half): {ceiling:.4f}")
+            if n_voxels is None and patterns and patterns[0] is not None:
+                n_voxels = len(patterns[0])
+                for c in valid_conditions:
+                    cond_sum[c] = np.zeros(n_voxels, dtype=np.float64)
 
-    # Compare with LLM RDM (if exists)
-    llm_rdm_path = RES / "brain_rdm.npz"
-    if llm_rdm_path.exists():
-        llm_data = np.load(llm_rdm_path, allow_pickle=True)
-        llm_brain_conds = list(llm_data["conditions"])
+            for (sent, conds), pat in zip(valid_sents, patterns):
+                if pat is None or n_voxels is None or len(pat) != n_voxels:
+                    continue
+                pat64 = pat.astype(np.float64)
+                for c in conds:
+                    cond_sum[c] += pat64
+                    cond_count[c] += 1
 
-        shared = [c for c in used_conds if c in llm_brain_conds]
-        print(f"\nShared conditions with Neurosynth brain RDM: {shared}")
+            n_subs_ok += 1
 
-    # Per-subject RDMs for individual difference analysis
-    subject_rdms = np.array([rdm_cosine(p) for p in all_subject_patterns])
-    per_sub_rhos = []
-    for si in range(n_subs):
-        rho_s, _ = spearmanr(brain_rdm[triu], subject_rdms[si][triu])
-        per_sub_rhos.append(rho_s)
-    per_sub_rhos = np.array(per_sub_rhos)
-    print(f"\nPer-subject brain-group alignment: mean={np.mean(per_sub_rhos):.4f}, "
-          f"std={np.std(per_sub_rhos):.4f}, range=[{np.min(per_sub_rhos):.4f}, {np.max(per_sub_rhos):.4f}]")
+        total_subjects_used += n_subs_ok
+        print(f"  {n_subs_ok} subjects OK. Cond counts: "
+              + ", ".join(f"{c}={cond_count[c]}" for c in valid_conditions if cond_count[c] > 0))
 
-    # Save
-    np.savez(
-        RES / "narratives_brain_rdm.npz",
-        rdm=brain_rdm,
-        conditions=np.array(used_conds),
-        group_patterns=group_patterns,
-        all_subject_patterns=np.array(all_subject_patterns),
-        subject_rdms=subject_rdms,
-        per_subject_group_rho=per_sub_rhos,
-        n_subjects=n_subs,
-        subject_ids=np.array(subject_ids),
-        ceiling=ceiling,
-        story=story,
+    # Build RDM
+    print(f"\n{'='*60}")
+    print(f"Building stimulus-locked brain RDM")
+    print(f"{'='*60}")
+    print(f"Total subject-stories: {total_subjects_used}")
+
+    final_conditions = []
+    centroids = []
+    for c in valid_conditions:
+        if cond_count[c] >= MIN_SENTENCES_PER_COND and cond_sum[c] is not None:
+            centroid = cond_sum[c] / cond_count[c]
+            centroids.append(centroid)
+            final_conditions.append(c)
+            print(f"  {c:>20s}: {cond_count[c]} obs")
+
+    n_cond = len(final_conditions)
+    centroids = np.stack(centroids)
+
+    X = centroids - centroids.mean(axis=1, keepdims=True)
+    norms = np.linalg.norm(X, axis=1, keepdims=True)
+    norms[norms == 0] = 1.0
+    Xn = X / norms
+    corr = Xn @ Xn.T
+    rdm = 1.0 - corr
+
+    triu = np.triu_indices(n_cond, k=1)
+    print(f"\nRDM: {n_cond}x{n_cond}")
+    print(f"  Off-diag: mean={rdm[triu].mean():.4f}, "
+          f"range=[{rdm[triu].min():.4f}, {rdm[triu].max():.4f}]")
+
+    # Compare with Neurosynth
+    ns_path = BASE / "results" / "cognitive_rsa" / "brain_rdm.npz"
+    if ns_path.exists():
+        ns_data = np.load(ns_path, allow_pickle=True)
+        ns_rdm = ns_data["rdm"]
+        ns_conds = list(ns_data["conditions"])
+        overlap = [c for c in final_conditions if c in ns_conds]
+        if len(overlap) >= 5:
+            ov_stim = [final_conditions.index(c) for c in overlap]
+            ov_ns = [ns_conds.index(c) for c in overlap]
+            sub_stim = rdm[np.ix_(ov_stim, ov_stim)]
+            sub_ns = ns_rdm[np.ix_(ov_ns, ov_ns)]
+            ov_triu = np.triu_indices(len(overlap), k=1)
+            rho, p = spearmanr(sub_stim[ov_triu], sub_ns[ov_triu])
+            print(f"\n  Stimulus-locked vs Neurosynth ({len(overlap)} overlap):")
+            print(f"    Spearman rho = {rho:+.4f}, p = {p:.4f}")
+
+    np.savez_compressed(
+        OUT_DIR / "narratives_brain_rdm.npz",
+        rdm=rdm,
+        conditions=np.array(final_conditions),
+        n_voxels=n_voxels,
+        cond_counts=np.array([cond_count[c] for c in final_conditions]),
+        total_subjects=total_subjects_used,
+        hrf_delay=HRF_DELAY,
+        distance="1_minus_pearson",
     )
-    print(f"\nSaved {RES / 'narratives_brain_rdm.npz'}")
-
-    # Print RDM
-    n = len(used_conds)
-    print(f"\nBrain RDM ({n}×{n}):")
-    print("         " + " ".join(f"{c[:7]:>8s}" for c in used_conds))
-    for i in range(n):
-        row = " ".join(f"{brain_rdm[i,j]:>8.3f}" for j in range(n))
-        print(f"  {used_conds[i]:<8s} {row}")
+    print(f"\nSaved: {OUT_DIR / 'narratives_brain_rdm.npz'}")
 
 
 if __name__ == "__main__":

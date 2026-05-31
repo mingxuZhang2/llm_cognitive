@@ -1,15 +1,30 @@
-# LLM Cognitive Atlas: Brain-LLM Representational Alignment
+# The Brain as a Reference Frame for LLMs
 
-Comparing the internal cognitive organization of Large Language Models with the human brain using Representational Similarity Analysis (RSA).
+Using the human brain as a **predictive reference frame** for the internal organization of
+Large Language Models, via Representational Similarity Analysis (RSA). Direction matters: we
+use established neuroscience as *testable predictions about LLMs*, not LLMs as a model of the
+brain.
 
 ## Key Finding
 
-Brain-LLM cognitive alignment reduces to **a single representational dimension** — the emotion-reasoning boundary — which is:
-- **Universal** across 4 architectures (Qwen/Llama/Mistral/Gemma)
+A text-only LLM reproduces the human brain's **relational organization of both emotion and
+social cognition**: RSA between each model's internal geometry and meta-analytic fMRI maps
+(Neurosynth, 14 conditions → 91 condition-pairs) gives **ρ ≈ 0.73**, near the noise ceiling.
+This alignment is:
+- **Universal** across 4 architectures (Qwen 0.739 / Llama 0.727 / Mistral 0.730 / Gemma 0.735)
 - **Scale-invariant** from 0.5B to 7B parameters
-- **Present in base models** (91% of alignment exists before RLHF)
-- **Causally manipulable** (removing this one direction inverts brain-AI alignment from ρ=+0.64 to ρ=−0.36)
-- **Validated on real fMRI** (N=91 subjects, stimulus-locked, ρ=0.56, 73% of brain noise ceiling)
+- **Broad, not a single axis** — both the affective block (78% of ceiling) and the
+  mentalistic/social block (87% of ceiling) align; the emotion ↔ social-cognition boundary
+  is reproduced as part of this geometry
+- **Causally predictive** — the brain RDM predicts the LLM's internal causal coupling
+  between functions (Direction A; 3/4 models significant)
+
+> **Note (2026-05-30 correction):** an earlier framing claimed the alignment "reduces to a
+> single emotion-reasoning dimension" with a social-cognition *divergence*. That asymmetry
+> was an artifact of one bad brain map (HCP theory-of-mind); on a pure-Neurosynth RDM it
+> dissolves and ρ rises 0.63 → 0.73. Any figure/number describing divergence, anti-aligned
+> ToM, or a single-dimension reduction predates this fix and is superseded. See
+> `experiments/present/index.html` for the corrected briefing.
 
 ## Repository Structure
 

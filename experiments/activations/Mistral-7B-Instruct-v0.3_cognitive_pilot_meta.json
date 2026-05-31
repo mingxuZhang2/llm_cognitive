@@ -1,0 +1,11 @@
+{
+  "model": "/data/user/mzhang630/.cache/huggingface/hub/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/c170c708c41dac9275d15a8fff4eca08d52bab71",
+  "n_layers": 32,
+  "ffn_dim": 14336,
+  "n_neurons": 458752,
+  "n_samples": 250,
+  "shape": [
+    458752,
+    250
+  ]
+}

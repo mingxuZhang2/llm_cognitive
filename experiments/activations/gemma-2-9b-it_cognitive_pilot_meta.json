@@ -1,0 +1,11 @@
+{
+  "model": "/data/user/mzhang630/.cache/huggingface/hub/models--google--gemma-2-9b-it/snapshots/11c9b309abf73637e4b6f9a3fa1e92e615547819",
+  "n_layers": 42,
+  "ffn_dim": 14336,
+  "n_neurons": 602112,
+  "n_samples": 250,
+  "shape": [
+    602112,
+    250
+  ]
+}

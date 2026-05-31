@@ -8,13 +8,13 @@ Usage:
   python narratives_annotate.py [--batch-size 15] [--max-stories 5]
 """
 from __future__ import annotations
-import json, time, argparse, sys
+import json, time, argparse, sys, os
 from pathlib import Path
 from openai import OpenAI
 
 BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/data/narratives")
 
-DEEPSEEK_KEY = "sk-085f8acadf0a41ed97ebfb12cc3c72cf"
+DEEPSEEK_KEY = os.environ.get("DEEPSEEK_API_KEY", "DEEPSEEK_API_KEY_HERE")
 DEEPSEEK_BASE = "https://api.deepseek.com"
 
 CONDITIONS = [

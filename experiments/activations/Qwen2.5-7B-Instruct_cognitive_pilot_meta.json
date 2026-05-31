@@ -1,0 +1,11 @@
+{
+  "model": "/data/user/mzhang630/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "n_layers": 28,
+  "ffn_dim": 18944,
+  "n_neurons": 530432,
+  "n_samples": 250,
+  "shape": [
+    530432,
+    250
+  ]
+}

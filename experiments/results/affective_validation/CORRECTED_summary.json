@@ -1,0 +1,96 @@
+{
+  "note": "CORRECTED with headline LLM RDM (mean_all|centered|1_cosine|peak-layer). Supersedes earlier runs that used stale llm_rdms.npz.",
+  "sources": {
+    "Kragel_controlled_emotion": {
+      "conditions": [
+        "anger",
+        "fear",
+        "sadness",
+        "happiness"
+      ],
+      "llm_vs_source": {
+        "Qwen2.5-7B-Instruct": {
+          "rho": 0.6,
+          "p": 0.5
+        },
+        "Meta-Llama-3.1-8B-Instruct": {
+          "rho": 0.6,
+          "p": 0.5
+        },
+        "Mistral-7B-Instruct-v0.3": {
+          "rho": 0.6,
+          "p": 0.5
+        },
+        "gemma-2-9b-it": {
+          "rho": 0.7142857142857143,
+          "p": 0.25
+        }
+      },
+      "llm_mean_rho": 0.6285714285714286,
+      "type": "controlled emotion (film/music), N=32",
+      "brain_vs_neurosynth_rho": -0.028571428571428574
+    },
+    "IBC_controlled_multitask": {
+      "conditions": [
+        "fear",
+        "valence",
+        "belief",
+        "theory_of_mind",
+        "intention",
+        "judgment"
+      ],
+      "llm_vs_source": {
+        "Qwen2.5-7B-Instruct": {
+          "rho": 0.2678571428571428,
+          "p": 0.25555555555555554
+        },
+        "Meta-Llama-3.1-8B-Instruct": {
+          "rho": 0.27499999999999997,
+          "p": 0.2263888888888889
+        },
+        "Mistral-7B-Instruct-v0.3": {
+          "rho": 0.2678571428571428,
+          "p": 0.25
+        },
+        "gemma-2-9b-it": {
+          "rho": 0.24642857142857136,
+          "p": 0.31805555555555554
+        }
+      },
+      "llm_mean_rho": 0.26428571428571423,
+      "type": "controlled multi-task, same 12 subj",
+      "brain_boundary": 0.11857100209686,
+      "brain_vs_neurosynth_rho": 0.3321428571428571
+    },
+    "HCP_controlled_multitask": {
+      "conditions": [
+        "fear",
+        "valence",
+        "theory_of_mind",
+        "judgment"
+      ],
+      "llm_vs_source": {
+        "Qwen2.5-7B-Instruct": {
+          "rho": -0.08571428571428573,
+          "p": 0.9166666666666666
+        },
+        "Meta-Llama-3.1-8B-Instruct": {
+          "rho": -0.08571428571428573,
+          "p": 0.9166666666666666
+        },
+        "Mistral-7B-Instruct-v0.3": {
+          "rho": -0.2,
+          "p": 0.5833333333333334
+        },
+        "gemma-2-9b-it": {
+          "rho": -0.08571428571428573,
+          "p": 0.9166666666666666
+        }
+      },
+      "llm_mean_rho": -0.1142857142857143,
+      "type": "controlled multi-task (emotion=faces), 2aff+2ment",
+      "brain_boundary": -0.017154702312919157,
+      "brain_vs_neurosynth_rho": -0.028571428571428574
+    }
+  }
+}

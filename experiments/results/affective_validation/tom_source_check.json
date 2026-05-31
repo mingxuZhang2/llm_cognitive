@@ -1,0 +1,60 @@
+{
+  "conditions": [
+    "anger",
+    "belief",
+    "disgust",
+    "empathy",
+    "fear",
+    "happiness",
+    "intention",
+    "judgment",
+    "mentalizing",
+    "moral",
+    "sadness",
+    "self_referential",
+    "theory_of_mind",
+    "valence"
+  ],
+  "valid_voxels": 902629,
+  "tom_row_hcp_vs_ns_rho": -0.016483516483516484,
+  "models": {
+    "Qwen2.5-7B-Instruct": {
+      "headline_rho_HCP": 0.6390189520624303,
+      "headline_rho_NS": 0.7385889472845995,
+      "tom_align_HCP": -0.03846153846153846,
+      "tom_align_NS": 0.7747252747252747,
+      "aff_mean_NS": 0.7463369963369964,
+      "ment_mean_NS": 0.6902472527472527
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "headline_rho_HCP": 0.6266125179168658,
+      "headline_rho_NS": 0.7270584487975793,
+      "tom_align_HCP": -0.14285714285714285,
+      "tom_align_NS": 0.7417582417582418,
+      "aff_mean_NS": 0.7344322344322344,
+      "ment_mean_NS": 0.6929945054945055
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "headline_rho_HCP": 0.6330148112756808,
+      "headline_rho_NS": 0.7296384774645646,
+      "tom_align_HCP": -0.14835164835164835,
+      "tom_align_NS": 0.8021978021978022,
+      "aff_mean_NS": 0.7344322344322345,
+      "ment_mean_NS": 0.720467032967033
+    },
+    "gemma-2-9b-it": {
+      "headline_rho_HCP": 0.6392259913999045,
+      "headline_rho_NS": 0.7353240961936615,
+      "tom_align_HCP": -0.18131868131868134,
+      "tom_align_NS": 0.8131868131868131,
+      "aff_mean_NS": 0.7390109890109889,
+      "ment_mean_NS": 0.7012362637362637
+    }
+  },
+  "summary": {
+    "headline_rho_HCP_mean": 0.6344680681637204,
+    "headline_rho_NS_mean": 0.7326524924351012,
+    "tom_align_HCP_mean": -0.12774725274725274,
+    "tom_align_NS_mean": 0.7829670329670328
+  }
+}

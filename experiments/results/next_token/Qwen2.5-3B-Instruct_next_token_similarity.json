@@ -1,0 +1,661 @@
+{
+  "model": "Qwen2.5-3B-Instruct",
+  "core_test": {
+    "jsd_vs_residual": {
+      "rho": -0.008876706075463456,
+      "p": 0.9334464818863698
+    },
+    "jsd_vs_llm_dist": {
+      "rho": 0.498646281254977,
+      "p": 4.896184692495446e-07
+    },
+    "jsd_vs_brain_dist": {
+      "rho": 0.20930084408345281,
+      "p": 0.04646837051262988
+    }
+  },
+  "category_jsd": {
+    "within_affective": 0.2943495544178411,
+    "within_mentalistic": 0.5749657451079171,
+    "cross_domain": 0.5560183099786224
+  },
+  "pairs": [
+    {
+      "pair": "anger-belief",
+      "jsd": 0.7389093381478787,
+      "residual": 21.0,
+      "brain_dist": 0.8499713933854758,
+      "llm_dist": 1.985491977547607
+    },
+    {
+      "pair": "anger-disgust",
+      "jsd": 0.22684290404056265,
+      "residual": 13.0,
+      "brain_dist": 0.5236723789612187,
+      "llm_dist": 0.006701996095479057
+    },
+    {
+      "pair": "anger-empathy",
+      "jsd": 0.5489793888037691,
+      "residual": 5.0,
+      "brain_dist": 0.7573481290536183,
+      "llm_dist": 0.7360925582200883
+    },
+    {
+      "pair": "anger-fear",
+      "jsd": 0.24565915683161565,
+      "residual": 4.0,
+      "brain_dist": 0.42245288083639554,
+      "llm_dist": 0.012497836510156679
+    },
+    {
+      "pair": "anger-happiness",
+      "jsd": 0.2532328552475407,
+      "residual": 6.0,
+      "brain_dist": 0.49258168901390653,
+      "llm_dist": 0.009141833066787841
+    },
+    {
+      "pair": "anger-intention",
+      "jsd": 0.46529606843300275,
+      "residual": 9.0,
+      "brain_dist": 0.9830181438850019,
+      "llm_dist": 1.9829777638697674
+    },
+    {
+      "pair": "anger-judgment",
+      "jsd": 0.3659531563423762,
+      "residual": 26.0,
+      "brain_dist": 1.0042711218748672,
+      "llm_dist": 1.9085560268738033
+    },
+    {
+      "pair": "anger-mentalizing",
+      "jsd": 0.6164525641966068,
+      "residual": 28.0,
+      "brain_dist": 0.8429708028214616,
+      "llm_dist": 1.9890455101207662
+    },
+    {
+      "pair": "anger-moral",
+      "jsd": 0.5791119322081558,
+      "residual": 18.0,
+      "brain_dist": 0.7132068045593104,
+      "llm_dist": 1.8998397438990373
+    },
+    {
+      "pair": "anger-sadness",
+      "jsd": 0.24405582481125873,
+      "residual": 18.0,
+      "brain_dist": 0.5866610483100207,
+      "llm_dist": 0.006592500643549437
+    },
+    {
+      "pair": "anger-self_referential",
+      "jsd": 0.6062205907236322,
+      "residual": 11.0,
+      "brain_dist": 0.8094524349650047,
+      "llm_dist": 1.9770376216196597
+    },
+    {
+      "pair": "anger-theory_of_mind",
+      "jsd": 0.6051548297844731,
+      "residual": 30.0,
+      "brain_dist": 0.8105135243167615,
+      "llm_dist": 1.9883838324516114
+    },
+    {
+      "pair": "anger-valence",
+      "jsd": 0.3870403031856194,
+      "residual": 5.0,
+      "brain_dist": 0.49561681403839464,
+      "llm_dist": 0.021186956205171414
+    },
+    {
+      "pair": "belief-disgust",
+      "jsd": 0.7263602518774739,
+      "residual": 4.0,
+      "brain_dist": 0.9472370571519874,
+      "llm_dist": 1.9830646784660986
+    },
+    {
+      "pair": "belief-empathy",
+      "jsd": 0.771881464880924,
+      "residual": 15.0,
+      "brain_dist": 0.6657705217939979,
+      "llm_dist": 1.3242643577419175
+    },
+    {
+      "pair": "belief-fear",
+      "jsd": 0.7558388719562572,
+      "residual": 8.0,
+      "brain_dist": 0.9320089079608681,
+      "llm_dist": 1.9835771675234302
+    },
+    {
+      "pair": "belief-happiness",
+      "jsd": 0.7417410863193546,
+      "residual": 0.0,
+      "brain_dist": 0.9656738436008782,
+      "llm_dist": 1.984722605646037
+    },
+    {
+      "pair": "belief-intention",
+      "jsd": 0.7494504027494651,
+      "residual": 1.0,
+      "brain_dist": 0.6424352046661874,
+      "llm_dist": 0.03588734401838567
+    },
+    {
+      "pair": "belief-judgment",
+      "jsd": 0.718743324248783,
+      "residual": 5.0,
+      "brain_dist": 0.7119811762146617,
+      "llm_dist": 0.10413456733952153
+    },
+    {
+      "pair": "belief-mentalizing",
+      "jsd": 0.5608792798104516,
+      "residual": 8.0,
+      "brain_dist": 0.3799130008686322,
+      "llm_dist": 0.016550189188658693
+    },
+    {
+      "pair": "belief-moral",
+      "jsd": 0.7712148461143545,
+      "residual": 23.0,
+      "brain_dist": 0.4868319330648955,
+      "llm_dist": 0.1351450449032514
+    },
+    {
+      "pair": "belief-sadness",
+      "jsd": 0.7479672700840622,
+      "residual": 15.0,
+      "brain_dist": 0.8661521510906871,
+      "llm_dist": 1.9852698965293307
+    },
+    {
+      "pair": "belief-self_referential",
+      "jsd": 0.6202193048455182,
+      "residual": 4.0,
+      "brain_dist": 0.535974824472144,
+      "llm_dist": 0.030985406741197763
+    },
+    {
+      "pair": "belief-theory_of_mind",
+      "jsd": 0.6547678149357049,
+      "residual": 46.0,
+      "brain_dist": 0.8829896697589247,
+      "llm_dist": 0.0212867155714207
+    },
+    {
+      "pair": "belief-valence",
+      "jsd": 0.721399152066859,
+      "residual": 30.0,
+      "brain_dist": 0.7093426845390354,
+      "llm_dist": 1.9735529340597244
+    },
+    {
+      "pair": "disgust-empathy",
+      "jsd": 0.5323534892909713,
+      "residual": 6.0,
+      "brain_dist": 0.7567239753950633,
+      "llm_dist": 0.7122145366130557
+    },
+    {
+      "pair": "disgust-fear",
+      "jsd": 0.26113325074757543,
+      "residual": 9.0,
+      "brain_dist": 0.3388481943119862,
+      "llm_dist": 0.012680025046282961
+    },
+    {
+      "pair": "disgust-happiness",
+      "jsd": 0.26177308956094314,
+      "residual": 2.0,
+      "brain_dist": 0.4825202285129704,
+      "llm_dist": 0.011839216943115849
+    },
+    {
+      "pair": "disgust-intention",
+      "jsd": 0.4523409275105231,
+      "residual": 14.0,
+      "brain_dist": 1.058985713623796,
+      "llm_dist": 1.9826319652946518
+    },
+    {
+      "pair": "disgust-judgment",
+      "jsd": 0.3848968901596048,
+      "residual": 28.0,
+      "brain_dist": 1.1177035506070223,
+      "llm_dist": 1.918982795804603
+    },
+    {
+      "pair": "disgust-mentalizing",
+      "jsd": 0.5979398166902292,
+      "residual": 13.0,
+      "brain_dist": 0.9638213341286176,
+      "llm_dist": 1.9897301316129854
+    },
+    {
+      "pair": "disgust-moral",
+      "jsd": 0.5657305929772029,
+      "residual": 5.0,
+      "brain_dist": 0.7585540470697134,
+      "llm_dist": 1.8942610927629422
+    },
+    {
+      "pair": "disgust-sadness",
+      "jsd": 0.26088259342001513,
+      "residual": 16.0,
+      "brain_dist": 0.5947210587045212,
+      "llm_dist": 0.008435083032201862
+    },
+    {
+      "pair": "disgust-self_referential",
+      "jsd": 0.5954398151735888,
+      "residual": 4.0,
+      "brain_dist": 0.9095656548463056,
+      "llm_dist": 1.9822637796904607
+    },
+    {
+      "pair": "disgust-theory_of_mind",
+      "jsd": 0.583130611094211,
+      "residual": 29.0,
+      "brain_dist": 0.852223893834197,
+      "llm_dist": 1.9909153156158217
+    },
+    {
+      "pair": "disgust-valence",
+      "jsd": 0.36342929571703775,
+      "residual": 1.0,
+      "brain_dist": 0.49596619010241694,
+      "llm_dist": 0.017328963719220214
+    },
+    {
+      "pair": "empathy-fear",
+      "jsd": 0.560499395293591,
+      "residual": 0.0,
+      "brain_dist": 0.7474955958254057,
+      "llm_dist": 0.7279268005717237
+    },
+    {
+      "pair": "empathy-happiness",
+      "jsd": 0.5650352986879915,
+      "residual": 14.0,
+      "brain_dist": 0.833325828301742,
+      "llm_dist": 0.7445766358852931
+    },
+    {
+      "pair": "empathy-intention",
+      "jsd": 0.42392884213586646,
+      "residual": 36.0,
+      "brain_dist": 0.9745048974383388,
+      "llm_dist": 1.2753494842647317
+    },
+    {
+      "pair": "empathy-judgment",
+      "jsd": 0.5494384630021452,
+      "residual": 33.0,
+      "brain_dist": 0.9810457472147734,
+      "llm_dist": 1.3394917214607567
+    },
+    {
+      "pair": "empathy-mentalizing",
+      "jsd": 0.5933093142157206,
+      "residual": 28.0,
+      "brain_dist": 0.5243557017237257,
+      "llm_dist": 1.326561489166853
+    },
+    {
+      "pair": "empathy-moral",
+      "jsd": 0.19903198538291128,
+      "residual": 12.0,
+      "brain_dist": 0.6966941387107354,
+      "llm_dist": 0.9468780377968014
+    },
+    {
+      "pair": "empathy-sadness",
+      "jsd": 0.552632406689447,
+      "residual": 10.0,
+      "brain_dist": 0.8045206009875179,
+      "llm_dist": 0.7442505305072971
+    },
+    {
+      "pair": "empathy-self_referential",
+      "jsd": 0.5483238102376785,
+      "residual": 12.0,
+      "brain_dist": 0.8523649093661542,
+      "llm_dist": 1.3436753946494036
+    },
+    {
+      "pair": "empathy-theory_of_mind",
+      "jsd": 0.5266414345459317,
+      "residual": 1.0,
+      "brain_dist": 0.7681635051208867,
+      "llm_dist": 1.3391544775480722
+    },
+    {
+      "pair": "empathy-valence",
+      "jsd": 0.4803314633122367,
+      "residual": 14.0,
+      "brain_dist": 0.6101566428816707,
+      "llm_dist": 0.6917125969451191
+    },
+    {
+      "pair": "fear-happiness",
+      "jsd": 0.2562920210274661,
+      "residual": 5.0,
+      "brain_dist": 0.3452370890455314,
+      "llm_dist": 0.01104179394832927
+    },
+    {
+      "pair": "fear-intention",
+      "jsd": 0.47236032916825005,
+      "residual": 22.0,
+      "brain_dist": 1.0868345250332214,
+      "llm_dist": 1.9791320759679878
+    },
+    {
+      "pair": "fear-judgment",
+      "jsd": 0.3744479924659434,
+      "residual": 35.0,
+      "brain_dist": 1.1951665348754315,
+      "llm_dist": 1.907527907855304
+    },
+    {
+      "pair": "fear-mentalizing",
+      "jsd": 0.6341374972131076,
+      "residual": 2.0,
+      "brain_dist": 0.9656434929942026,
+      "llm_dist": 1.9847893151679612
+    },
+    {
+      "pair": "fear-moral",
+      "jsd": 0.5963287320328218,
+      "residual": 12.0,
+      "brain_dist": 0.748423690464453,
+      "llm_dist": 1.8974055947334836
+    },
+    {
+      "pair": "fear-sadness",
+      "jsd": 0.2353609565981063,
+      "residual": 5.0,
+      "brain_dist": 0.46341682545231955,
+      "llm_dist": 0.007715195210252768
+    },
+    {
+      "pair": "fear-self_referential",
+      "jsd": 0.6340335791597363,
+      "residual": 1.0,
+      "brain_dist": 0.8764822873359323,
+      "llm_dist": 1.9801296738272611
+    },
+    {
+      "pair": "fear-theory_of_mind",
+      "jsd": 0.6176672893437999,
+      "residual": 24.0,
+      "brain_dist": 0.8480494229329885,
+      "llm_dist": 1.9874143662416157
+    },
+    {
+      "pair": "fear-valence",
+      "jsd": 0.39317504139791626,
+      "residual": 17.0,
+      "brain_dist": 0.36394081544762025,
+      "llm_dist": 0.021695490454455513
+    },
+    {
+      "pair": "happiness-intention",
+      "jsd": 0.4773236746554495,
+      "residual": 5.0,
+      "brain_dist": 0.9622747649946394,
+      "llm_dist": 1.9814040177748682
+    },
+    {
+      "pair": "happiness-judgment",
+      "jsd": 0.4004928830451448,
+      "residual": 34.0,
+      "brain_dist": 1.1171188913809769,
+      "llm_dist": 1.903319739735982
+    },
+    {
+      "pair": "happiness-mentalizing",
+      "jsd": 0.6265013543637212,
+      "residual": 0.0,
+      "brain_dist": 0.9959072697751903,
+      "llm_dist": 1.9883787407540914
+    },
+    {
+      "pair": "happiness-moral",
+      "jsd": 0.6038735818848238,
+      "residual": 5.0,
+      "brain_dist": 0.8046626371940249,
+      "llm_dist": 1.9080684627725417
+    },
+    {
+      "pair": "happiness-sadness",
+      "jsd": 0.24473441584012653,
+      "residual": 1.0,
+      "brain_dist": 0.2889351734046659,
+      "llm_dist": 0.005100765231978666
+    },
+    {
+      "pair": "happiness-self_referential",
+      "jsd": 0.6212386915839426,
+      "residual": 5.0,
+      "brain_dist": 0.852925137414281,
+      "llm_dist": 1.981051987897994
+    },
+    {
+      "pair": "happiness-theory_of_mind",
+      "jsd": 0.6077098102658433,
+      "residual": 26.0,
+      "brain_dist": 0.8209774382177932,
+      "llm_dist": 1.986718976298165
+    },
+    {
+      "pair": "happiness-valence",
+      "jsd": 0.3975162701905711,
+      "residual": 8.0,
+      "brain_dist": 0.42335880941140447,
+      "llm_dist": 0.017025993246299942
+    },
+    {
+      "pair": "intention-judgment",
+      "jsd": 0.4721655071395567,
+      "residual": 12.0,
+      "brain_dist": 0.7509162965825221,
+      "llm_dist": 0.10645077271354053
+    },
+    {
+      "pair": "intention-mentalizing",
+      "jsd": 0.5609764553133982,
+      "residual": 15.0,
+      "brain_dist": 0.7345496297444563,
+      "llm_dist": 0.025238551257370734
+    },
+    {
+      "pair": "intention-moral",
+      "jsd": 0.4587886149346193,
+      "residual": 4.0,
+      "brain_dist": 0.6604304263204973,
+      "llm_dist": 0.11342079049489395
+    },
+    {
+      "pair": "intention-sadness",
+      "jsd": 0.457024892127001,
+      "residual": 2.0,
+      "brain_dist": 0.9495503986677649,
+      "llm_dist": 1.9829831651134882
+    },
+    {
+      "pair": "intention-self_referential",
+      "jsd": 0.5713570317973441,
+      "residual": 5.0,
+      "brain_dist": 0.6625722987419331,
+      "llm_dist": 0.031936652444024105
+    },
+    {
+      "pair": "intention-theory_of_mind",
+      "jsd": 0.4984227874880487,
+      "residual": 60.0,
+      "brain_dist": 0.965703928345967,
+      "llm_dist": 0.02117838150834561
+    },
+    {
+      "pair": "intention-valence",
+      "jsd": 0.30921187242335607,
+      "residual": 23.0,
+      "brain_dist": 1.0315974626952966,
+      "llm_dist": 1.9687852407715185
+    },
+    {
+      "pair": "judgment-mentalizing",
+      "jsd": 0.5931504384606208,
+      "residual": 5.0,
+      "brain_dist": 0.697890843976565,
+      "llm_dist": 0.08516231173739397
+    },
+    {
+      "pair": "judgment-moral",
+      "jsd": 0.5726129564935286,
+      "residual": 11.0,
+      "brain_dist": 0.7605234719879489,
+      "llm_dist": 0.21030864763914991
+    },
+    {
+      "pair": "judgment-sadness",
+      "jsd": 0.3681301435231065,
+      "residual": 31.0,
+      "brain_dist": 1.131850912542922,
+      "llm_dist": 1.9102705158505666
+    },
+    {
+      "pair": "judgment-self_referential",
+      "jsd": 0.6102966283872286,
+      "residual": 22.0,
+      "brain_dist": 0.7864197579924641,
+      "llm_dist": 0.09997903403611486
+    },
+    {
+      "pair": "judgment-theory_of_mind",
+      "jsd": 0.5856638968953507,
+      "residual": 10.0,
+      "brain_dist": 0.7319176804484993,
+      "llm_dist": 0.08218157298997264
+    },
+    {
+      "pair": "judgment-valence",
+      "jsd": 0.41533442141600596,
+      "residual": 19.0,
+      "brain_dist": 0.9725193621426577,
+      "llm_dist": 1.91558713363316
+    },
+    {
+      "pair": "mentalizing-moral",
+      "jsd": 0.6037041823256966,
+      "residual": 16.0,
+      "brain_dist": 0.510266088615115,
+      "llm_dist": 0.12578795011630595
+    },
+    {
+      "pair": "mentalizing-sadness",
+      "jsd": 0.6174443350347099,
+      "residual": 16.0,
+      "brain_dist": 0.9433522351514187,
+      "llm_dist": 1.9894548938508037
+    },
+    {
+      "pair": "mentalizing-self_referential",
+      "jsd": 0.486841122718175,
+      "residual": 3.0,
+      "brain_dist": 0.5403709406488155,
+      "llm_dist": 0.02079812804193315
+    },
+    {
+      "pair": "mentalizing-theory_of_mind",
+      "jsd": 0.48091566808373576,
+      "residual": 42.0,
+      "brain_dist": 0.7543522133256791,
+      "llm_dist": 0.004307323757231751
+    },
+    {
+      "pair": "mentalizing-valence",
+      "jsd": 0.5603567724826689,
+      "residual": 63.0,
+      "brain_dist": 0.6619026570588014,
+      "llm_dist": 1.9928400421371757
+    },
+    {
+      "pair": "moral-sadness",
+      "jsd": 0.5898974564714267,
+      "residual": 17.0,
+      "brain_dist": 0.7368312508891008,
+      "llm_dist": 1.906709183371988
+    },
+    {
+      "pair": "moral-self_referential",
+      "jsd": 0.5486899096667099,
+      "residual": 26.0,
+      "brain_dist": 0.45371984381461306,
+      "llm_dist": 0.1302577408712915
+    },
+    {
+      "pair": "moral-theory_of_mind",
+      "jsd": 0.5372596114458469,
+      "residual": 30.0,
+      "brain_dist": 0.8555554905747281,
+      "llm_dist": 0.1277566025062038
+    },
+    {
+      "pair": "moral-valence",
+      "jsd": 0.49750066987189046,
+      "residual": 26.0,
+      "brain_dist": 0.6258377309294455,
+      "llm_dist": 1.8841739264260107
+    },
+    {
+      "pair": "sadness-self_referential",
+      "jsd": 0.6201737505730235,
+      "residual": 29.0,
+      "brain_dist": 0.7486760369950775,
+      "llm_dist": 1.9822062913403986
+    },
+    {
+      "pair": "sadness-theory_of_mind",
+      "jsd": 0.603342617878509,
+      "residual": 18.0,
+      "brain_dist": 0.9331656760764858,
+      "llm_dist": 1.9895973239411926
+    },
+    {
+      "pair": "sadness-valence",
+      "jsd": 0.38411533765126105,
+      "residual": 5.0,
+      "brain_dist": 0.45476225396343917,
+      "llm_dist": 0.016808762660262544
+    },
+    {
+      "pair": "self_referential-theory_of_mind",
+      "jsd": 0.49690765537461223,
+      "residual": 61.0,
+      "brain_dist": 0.9589747535294058,
+      "llm_dist": 0.013323599754610838
+    },
+    {
+      "pair": "self_referential-valence",
+      "jsd": 0.5708824079770866,
+      "residual": 43.0,
+      "brain_dist": 0.6332321393951397,
+      "llm_dist": 1.9812848343715386
+    },
+    {
+      "pair": "theory_of_mind-valence",
+      "jsd": 0.5245749796756969,
+      "residual": 41.0,
+      "brain_dist": 0.7836087242114818,
+      "llm_dist": 1.991904772395591
+    }
+  ]
+}

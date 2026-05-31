@@ -33,7 +33,7 @@
       "n_selected": 40
     },
     "theory_of_mind": {
-      "brain_map": "hcp/social_tom_vs_random.nii.gz",
+      "brain_map": "neurosynth/theory_of_mind.nii.gz",
       "source": "self_other(other) + faux_pas",
       "n_total_pool": 90,
       "n_selected": 60

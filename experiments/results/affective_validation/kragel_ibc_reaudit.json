@@ -1,0 +1,73 @@
+{
+  "kragel": {
+    "conditions": [
+      "anger",
+      "fear",
+      "sadness",
+      "happiness"
+    ],
+    "src_vs_ns_rho": -0.028571428571428574,
+    "src_vs_ns_p": 1.0,
+    "outlier_flags": [
+      "anger",
+      "fear"
+    ],
+    "llm": {
+      "Qwen2.5-7B-Instruct": {
+        "rho": 0.6,
+        "exact_p": 0.5
+      },
+      "Meta-Llama-3.1-8B-Instruct": {
+        "rho": 0.6,
+        "exact_p": 0.5
+      },
+      "Mistral-7B-Instruct-v0.3": {
+        "rho": 0.6,
+        "exact_p": 0.5
+      },
+      "gemma-2-9b-it": {
+        "rho": 0.7142857142857143,
+        "exact_p": 0.25
+      }
+    },
+    "mean_llm_rho": 0.6285714285714286,
+    "voxels": 19328
+  },
+  "ibc": {
+    "conditions": [
+      "fear",
+      "valence",
+      "belief",
+      "theory_of_mind",
+      "intention",
+      "judgment"
+    ],
+    "src_vs_ns_rho": 0.17857142857142855,
+    "src_vs_ns_p": 0.6013888888888889,
+    "outlier_flags": [
+      "valence",
+      "belief",
+      "judgment"
+    ],
+    "llm": {
+      "Qwen2.5-7B-Instruct": {
+        "rho": 0.2678571428571428,
+        "exact_p": 0.25555555555555554
+      },
+      "Meta-Llama-3.1-8B-Instruct": {
+        "rho": 0.27499999999999997,
+        "exact_p": 0.2263888888888889
+      },
+      "Mistral-7B-Instruct-v0.3": {
+        "rho": 0.2678571428571428,
+        "exact_p": 0.25
+      },
+      "gemma-2-9b-it": {
+        "rho": 0.24642857142857136,
+        "exact_p": 0.31805555555555554
+      }
+    },
+    "mean_llm_rho": 0.26428571428571423,
+    "voxels": 656630
+  }
+}

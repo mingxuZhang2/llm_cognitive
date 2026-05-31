@@ -1,124 +1,215 @@
-# Nature Paper Project: LLM Functional Atlas
+# Nature Paper Project: The Brain as a Reference Frame for LLMs
 
-## Project Goal
-Build a causal functional atlas of Large Language Models — mapping which neurons implement which cognitive functions, validated by double dissociation, with predictive power for controlling model behavior. Targeting Nature Machine Intelligence.
+## Project Goal (current)
+Use the **human brain as a predictive reference frame to explain and predict the internal
+organization of Large Language Models.** Direction matters: we are *not* using LLMs to
+model the brain (the usual neuro-AI direction). We treat established neuroscience
+conclusions as **testable predictions about LLMs** — if a text-only model reproduces the
+brain's representational geometry, then known brain results become hypotheses we can check
+in the model. Targeting Nature Machine Intelligence.
+
+**Headline finding (2026-05-31):** A text-only LLM reproduces the human brain's *relational*
+organization of both emotion and social cognition — Representational Similarity Analysis
+(RSA) between each model's internal geometry and meta-analytic fMRI maps gives **ρ ≈ 0.73**,
+near the noise ceiling, in **all 4 architectures**, and **scale-invariant from 0.5B → 7B**.
+The emotion ↔ social-cognition boundary is reproduced as part of this geometry.
+
+---
+
+## The Story (how we got here — read this first)
+
+The project went through several honest pivots. Each is preserved in git tags/branches so
+the arc is auditable.
+
+1. **v1 — LLM Functional Atlas** (branch `experiments`, tag `v1-ai-categories`).
+   Mapped which neurons implement 8 *AI-task* categories (math, code, reasoning, language,
+   science, ethics, factual_qa, humanities) via gradient×activation causal attribution +
+   double dissociation. Strong results (28/28 pairwise dissociations, cross-architecture
+   convergence index 0.86) — but the categories were *engineering* categories, not a
+   scientific frame a top journal would care about. See `analysis_findings.md` for the full
+   v1 record (8 findings) and `experiments/PROJECT_SUMMARY.md`.
+
+2. **Pivot 1 — to cognitive science** (branch `cognitive-atlas`, 2026-05-25).
+   Reframed the 8 AI-task categories into **human cognitive functions** (emotion, moral
+   cognition, theory of mind, self). The point of comparison became the *brain*, not
+   benchmark performance.
+
+3. **Pivot 2 — moral-conventional, then dropped.**
+   Tried to show moral cognition in LLMs is *compositionally* built from affect + mental-state
+   reasoning + norm integration (mirroring Greene's dual-process moral theory). The clean
+   compositional decomposition did **not** hold; we narrowed to the Turiel moral-vs-conventional
+   distinction, then stepped back from "compositional moral module" as the headline.
+
+4. **The real result — RSA relational alignment.**
+   The robust, surprising finding turned out to be **relational**, not about individual
+   modules: the *cross-condition similarity structure* (which cognitive functions sit near
+   which) is preserved between the human brain and every LLM tested. This is the current
+   headline.
+
+5. **Artifact correction (2026-05-30) — a net win, told honestly.**
+   For weeks a secondary narrative claimed an *asymmetry*: "affective core aligns near
+   ceiling, social cognition diverges, theory-of-mind is anti-aligned." We traced this
+   entirely to **one bad brain map** — the lone non-Neurosynth map (theory_of_mind ←
+   `hcp/social_tom_vs_random`), which was orthogonal to its Neurosynth counterpart
+   (row-correlation −0.016) and corrupted every condition's distances to ToM. Swapping it
+   to the Neurosynth ToM map:
+   - ToM alignment: **−0.13 → +0.78**
+   - Headline: **ρ 0.634 → 0.733**, single-source (pure 14-map Neurosynth) brain RDM.
+   The asymmetry **dissolved** — both emotion and social cognition now align near ceiling.
+   We **dropped** the "divergence / anti-aligned / 自成一套" claims. (See
+   `experiments/results/cognitive_rsa/brain_rdm_hcptom.npz` for the archived old RDM and
+   `src/tom_source_check.py` for the diagnostic.)
+
+---
+
+## Headline Result (current numbers)
+
+**RSA recipe (LLM side):** per-condition mean of `mean_all`-pooled hidden states at each
+model's **peak layer** (Qwen L27, Llama L31, Mistral L14, Gemma L21) → center across the 14
+conditions → **cosine** distance → 14×14 RDM. Config string:
+`mean_all | centered | 1_cosine | v1_NS_only`. Reconstruct with
+`src/reconstruct_headline_rdms.py` → writes `{model}_rdm14_headline.npz`.
+
+**RSA recipe (brain side):** each of 14 conditions = one Neurosynth meta-analytic map
+(`brain_rdm.npz`). Build: resample each NIfTI → anchor grid (`neurosynth/anger`, MNI
+91×109×91) → keep voxels finite+nonzero in ≥7/14 maps → flatten → **1 − Pearson** distance.
+Built by `src/build_brain_rdm.py` from `data/cognitive_stimuli/rsa/rsa_conditions_manifest.json`.
+
+**Comparison:** Spearman ρ on the 91 upper-triangle pairs of the two 14×14 RDMs; permutation
+null shuffles condition labels.
+
+**The 14 conditions** (this is the unit of statistical power — 14 conditions → 91 pairs):
+- 6 affective: anger, fear, disgust, sadness, happiness, valence
+- 8 mentalistic/social: belief, intention, judgment, mentalizing, moral, empathy,
+  self_referential, theory_of_mind
+
+**Numbers:**
+- Headline ρ: **Qwen 0.739, Llama 0.727, Mistral 0.730, Gemma 0.735** (vs pure-NS `brain_rdm.npz`).
+- Per-block (7B): affective 0.74 (ceiling 0.94 → **78%**), mentalistic 0.70 (ceiling 0.81 →
+  **87%**) — *both* near the noise ceiling; no asymmetry.
+- Per-condition (7B): nearly all 14 align **0.67–0.85** (belief .85, ToM .79, judgment .80,
+  happiness .81). **Only empathy lags (0.24)** — and empathy is the smallest set (n=32) with
+  an unstable split-half ceiling; this is a measurement artifact, not a divergence.
+- Scale-invariant across the Qwen family (0.5B → 7B).
+
+**Why Neurosynth, not raw fMRI, carries the headline:** statistical power here comes from the
+*number of conditions* (14 → 91 pairs → p < 0.0002), not subjects-per-map. Neurosynth maps
+are meta-analytic averages over ~14,000 fMRI papers, so each condition map is itself stable.
+The controlled-fMRI validators below have only 4–6 conditions, so their permutation floor is
+too high to ever reach significance — they can only *directionally* support, never confirm.
+
+---
+
+## Three "brain-explains-LLM" directions (the predictive program)
+
+The strategy: take conclusions that follow from the brain's emotion/social separation and
+test whether they hold in LLMs.
+
+- **Direction A — causal coupling (strongest, partly done).** The brain RDM *predicts* the
+  causal coupling between functions inside the LLM (ablate function X, measure effect on
+  function Y). **3/4 models significant.** Code: `src/brain_causal_coupling.py`. Commit
+  `a4f705b`. This is the analog of lesion double-dissociation work (Shamay-Tsoory 2009).
+- **Direction B — cognitive reserve.** (`cb84f57`.)
+- **Direction C — developmental emergence.** Along training/scale, emotion structure should
+  form before social cognition (cf. affect-early, theory-of-mind ~age 4). Results:
+  `results/developmental_emergence/developmental_emergence.json` (recomputed vs corrected RDM).
+
+Downstream neuroscience programs that could become further LLM predictions: dual-route
+empathy (Shamay-Tsoory 2009, *Brain*), clinical mirror-disorders (psychopathy vs autism;
+Blair; Baron-Cohen 1995), dual-process moral cognition + lesion→behavior (Greene 2001
+*Science*; Koenigs 2007 *Nature*), cortical processing gradient placing social cognition at
+the abstract end (Margulies 2016 *PNAS*) → maps onto LLM layer depth.
+
+---
+
+## Controlled-fMRI validators (status: directional supplement, demoted)
+
+Re-audited 2026-05-30 with the corrected headline LLM RDMs + pure-NS brain
+(`src/kragel_ibc_reaudit.py` → `results/affective_validation/kragel_ibc_reaudit.json`):
+- **Kragel 2015** (CANlab emotion classifier maps, N=32): LLM ρ **+0.629** (4 conditions),
+  vs-Neurosynth −0.03; non-significant (only 4 conditions).
+- **IBC** (NeuroVault coll. 2138, 12 subjects, multi-task contrasts): LLM ρ **+0.264**
+  (6 conditions), vs-Neurosynth +0.18; non-significant; has outlier maps (valence row −1.0).
+- **HCP** (coll. 457, group average): the lone null — and the source of the discredited ToM
+  map, so its earlier disagreement was its own artifact.
+
+**Conclusion:** demote Kragel/IBC/HCP from "validation" to "directional supplement." The
+Neurosynth headline stands on its own (it is the statistically-powered result).
+
+---
 
 ## Repository Structure
-- `IDEA_SYNTHESIS.md` -- Original paper idea synthesis
-- `experiments/` -- All experimental code and results
-  - `src/` -- Python scripts for each experiment phase
-  - `scripts/slurm/` -- SLURM job scripts for HPC3
-  - `results/` -- JSON results from all experiments
-  - `figures/` -- Generated visualizations
-  - `analysis_findings.md` -- Comprehensive findings document (8 key findings)
-- Research docs: `research_paper_analysis.md`, `research_neuroscience_methods.md`, etc.
-- Feasibility studies: `feasibility_*.md`
+- `CLAUDE.md` (this file) — canonical project overview, kept in sync after every change.
+- `README.md` — public-facing short version.
+- `IDEA_SYNTHESIS.md`, `COGNITIVE_ATLAS_PLAN.md` — origin idea + pivot plan.
+- `experiments/`
+  - `src/` — analysis scripts (see Key Files below).
+  - `scripts/slurm/` — HPC3 SLURM jobs.
+  - `results/` — JSON/NPZ results.
+    - `cognitive_rsa/` — headline RDMs (`brain_rdm.npz`, `{model}_rdm14_headline.npz`,
+      `{model}_rsa_v2_per_stim.npz`), archived old RDM (`brain_rdm_hcptom.npz`).
+    - `affective_validation/` — ceiling control, Kragel/IBC/HCP audits, ToM source check.
+    - `developmental_emergence/`, `behavioral_prediction/`, `next_token/`, `specificity_*/`,
+      `contrast_pilot*/`, `narratives_brain_rdm/` — supporting experiments.
+  - `figures/` — generated visualizations.
+  - `present/` — **`index.html`** self-contained briefing deck (built by `build_present.py`,
+    base64-embedded figures, plain-language, no neuro background assumed). This is the deck
+    Dr. Zhang presents from; it reflects the corrected story.
+  - `analysis_findings.md` — v1 findings record. `PROJECT_SUMMARY.md` / `PROJECT_STATUS.md` —
+    detailed logs (NOTE: parts predate the 2026-05-30 brain-RDM correction; the corrected
+    story lives here and in `present/index.html`).
+- Research docs: `research_*.md`, `LITERATURE_DETAIL.md`, `literature_survey_synthesis.md`.
+- Feasibility studies: `feasibility_*.md`.
 
-## Current Experimental Status (May 20, 2026)
-- Branch: experiments
+## Key Files
+| File | Purpose |
+|---|---|
+| `src/build_brain_rdm.py` | Build `brain_rdm.npz` from the 14-condition manifest (1−Pearson). |
+| `src/reconstruct_headline_rdms.py` | Rebuild `{model}_rdm14_headline.npz` (headline recipe). |
+| `src/compute_rsa_v2.py` | Full RSA sweep over poolings/centerings/distances/layers. |
+| `src/tom_source_check.py` | Diagnostic that found the HCP-ToM artifact. |
+| `src/kragel_ibc_reaudit.py` | Re-audit controlled-fMRI validators (corrected RDMs). |
+| `src/affective_ceiling_control.py` | Per-block alignment vs LLM split-half noise ceiling. |
+| `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling. |
+| `present/build_present.py` | Regenerate the HTML briefing. |
 
-### Completed Experiments
-1. **8-way Functional Dissociation** (pilot: 15/cat, scaled: 50/cat)
-   - 4 models × 8 categories × causal attribution (grad × act)
-   - Pilot: 27-28/28 pairwise dissociation
-   - Scaled (50/cat): ALL 8/8 specificity, 28/28 pairwise (3 models confirmed, Gemma pending)
-   - Key: only ~1% of neurons (5000) needed per function
-
-2. **Predictive Experiments** (pilot)
-   - Pathway decomposition: 12/12 predictions correct (math-only, reasoning-only, shared)
-   - Atlas-guided steering: dependency DAG confirmed (4/4 code→reasoning = no effect)
-   - Instance-level prediction: 11/12 correct
-
-3. **Atlas-Guided Pruning** (pilot)
-   - 50% sparsity: atlas 1.11-3.24x vs random 3-3948x vs magnitude 13-11898x
-   - No phase transition for atlas method (linear degradation)
-
-4. **Structural Analysis** (pilot attribution data)
-   - Hub neurons extremely rare (<50 across 500K+ neurons)
-   - Science-humanities uniquely bidirectional coupling (layer-colocalized)
-   - Reasoning is emergent coalition (3x weaker self-effect than math)
-
-### Pending Experiments
-- **Job 306948**: Balanced multi-dissociation (152/cat, 1216 total) — 4 models
-- **Job 306949**: Scaled predictive experiments (50/cat) — 4 models
-
-7. **Accuracy-Based Dissociation** (code ready, awaiting stimuli)
-   - `src/accuracy_dissociation.py` — Downstream task accuracy under causal ablation
-   - Supports 4 answer_types: multiple_choice, exact_match, completion, generation
-   - Uses separate discovery (attribution) and validation (accuracy) stimuli sets
-   - Outputs: 8x8 accuracy drop matrix + PPL matrix + baselines + random control
-   - SLURM: `scripts/slurm/accuracy_dissociation.sh` (array 0-3, 4 models)
-
-5. **Convergence Analysis** (local, no GPU)
-   - `src/convergence_analysis.py` — Functional Convergence Index across 4 architectures
-   - 5 metrics: dissociation matrix similarity, DAG edge consistency, layer profile similarity, hierarchy consistency, overall index with null model
-   - Results: `results/convergence_analysis.json`
-   - **Convergence Index = 0.86** (z=5.64 vs null, p<0.001) — strong cross-architecture convergence
-   - Math most conserved layer profile (cos=0.94), factual_qa most variable (cos=0.67)
-   - 9 universal spillover edges, ethics is universal hub
-   - Mistral and Gemma have identical modularity rankings (rho=1.0)
-
-6. **Statistical Validation** (local, no GPU)
-   - `src/statistical_validation.py` — Formal tests on all 28 pairwise dissociations
-   - Matrix-level permutation test (10K perms): all 12 (4 models x 3 scales) p < 0.0002
-   - Per-pair one-sample t-test (12 obs = 4 models x 3 scales): ALL 28/28 p < 1.1e-5
-   - After BH-FDR correction: ALL 28/28 remain significant (p_adj < 0.05)
-   - Cohen's d: matrix-level mean=5.97; per-pair mean=3.73, min=2.02 (all "very large")
-   - Bootstrap 95% CIs: all 28 pairs above zero
-   - Cross-model universality: 28/28 pairs positive in all 4 models
-   - Cross-scale consistency: 27-28/28 pairs positive at all 3 scales per model
-   - Results: `results/statistical_validation.json`
-
-### Running Experiments (new)
-- **Job 307966**: Method triangulation — Qwen only, 3 attribution methods (G×A, Act-only, Grad-only)
-  - `src/method_triangulation.py` — Compares top-k overlap and dissociation matrix correlation
-  - Output: `results/method_triangulation/`
-
-### Key Findings (from analysis_findings.md)
-1. **Universal 3-layer functional hierarchy**: language/code → math/science → reasoning/ethics
-2. **Science-humanities knowledge integration zone**: bidirectional, near-symmetric, layer-colocalized
-3. **Reasoning as emergent coalition**: weakest self-effect, depends on math+science+language
-4. **Atlas pruning eliminates phase transition**: never >10x degradation at 50% sparsity
-5. **Steering confirms DAG non-linearly**: 10-20x damage escalation from mild to strong amplification
-6. **Shared hub neurons catastrophically important**: <50 neurons → model collapse when ablated
-7. **Competitive inhibition**: code suppresses ethics, ethics suppresses humanities
-8. **Modularity gradient**: formal (math) → distributed (reasoning), parallels brain cortex
+**Traps (do not repeat):**
+- `{model}_rsa_llm_rdms.npz` is an **older recipe** (last_tok/raw/pearson) → gives ρ≈0.25,
+  flips subset signs. Always use `{model}_rdm14_headline.npz` instead.
+- The `rsa_v2.json` ρ fields are **stale** (0.63, old brain RDM). Recompute fresh vs
+  `brain_rdm.npz`.
 
 ## HPC3 Configuration
 - SSH: `ssh -i /hpc2hdd/home/mzhang630/data/id_rsa -o StrictHostKeyChecking=no mzhang630@hpc3login.hpc.hkust-gz.edu.cn`
 - Base dir: `/data/user/mzhang630/data/nature_exp`
 - Conda env: `alphasteer`
 - SLURM: partition=acd_u, account=d_yings_team
-- Models: Qwen2.5-7B, LLaMA-3.1-8B, Mistral-7B, Gemma-2-9b (snapshot paths in SLURM scripts)
+- Models: Qwen2.5-7B, LLaMA-3.1-8B, Mistral-7B, Gemma-2-9b (+ Qwen 0.5/1.5/3B for scaling).
+  Snapshot paths in SLURM scripts.
 
 ## Stimuli
-- `stimuli_pilot.jsonl` — 120 samples (15/category, balanced)
-- `stimuli_medium.jsonl` — 400 samples (50/category, balanced)
-- `stimuli_balanced.jsonl` — 1216 samples (152/category, balanced)
-- `stimuli_full.jsonl` — 3133 samples (unbalanced, original)
-- 8 categories: math, code, reasoning, language, science, ethics, factual_qa, humanities
 
-### Stimuli with Gold Answers (for accuracy evaluation)
-- `src/prepare_stimuli_with_answers.py` — Loads from HuggingFace, adds gold answers
-  - Fields: {text, category, source, idx, answer, answer_type}
-  - answer_type: exact_match (GSM8K, TriviaQA), multiple_choice (ARC, MMLU),
-    completion (HellaSwag), generation (HumanEval, TruthfulQA)
-- Output files (in `experiments/data/stimuli_with_answers/` and HPC3 `stimuli/`):
-  - `stimuli_with_answers_full.jsonl` — 2964 samples (unbalanced, code=164)
-  - `stimuli_with_answers_balanced.jsonl` — 1312 samples (164/category)
-  - `stimuli_with_answers_medium.jsonl` — 400 samples (50/category)
-  - `*_discovery.jsonl` / `*_validation.jsonl` — 50/50 splits per category
-    - Discovery: used for computing attribution (finding neurons)
-    - Validation: used for measuring ablation effects on accuracy
-- HPC3 path: `/data/user/mzhang630/data/nature_exp/stimuli/stimuli_with_answers_*.jsonl`
+### RSA cognitive conditions (current headline)
+- `data/cognitive_stimuli/rsa/rsa_conditions_manifest.json` — 14 conditions, brain_map +
+  source + n per condition (seed 20260525, target 60/condition). All `brain_map` entries are
+  now `neurosynth/*` (the ToM entry was corrected from HCP on 2026-05-30).
+- Emotion stimuli: `data/cognitive_stimuli/emotion/` — Warriner VAD (13,905 lemmas),
+  GoEmotions sample, emotion-localizer sentences, VAD-graded sentences. Builder:
+  `src/prepare_emotion_stimuli.py`. See that folder's `README.md` for citations/licenses.
+- Moral / ToM / self stimuli: `data/cognitive_stimuli/{moral, moral_decomposition, tom}/`.
 
-### Cognitive Stimuli (Brain-comparison modules)
-- `experiments/data/cognitive_stimuli/emotion/` — Emotion module stimuli
-  - `warriner_vad.csv` — 13,905 lemmas with valence/arousal/dominance (Warriner et al. 2013)
-  - `goemotions_sample.jsonl` — 5,398 unique Reddit comments, balanced 200/emotion (28-way; GoEmotions, Demszky et al. 2020)
-  - `emotion_localizer_stimuli.jsonl` — 350 sentences (50 x 6 Ekman + 50 neutral), curated + GoEmotions single-label
-  - `vad_graded_sentences.jsonl` — 200 hand-curated sentences spanning V x A plane (author point estimates, awaiting external ratings)
-  - Builder: `src/prepare_emotion_stimuli.py` (deterministic, seed=20260525, no GPU)
-  - Raw inputs (re-downloaded if needed): `warriner_raw.csv`, `goemotions_{train,dev,test}.tsv`, `goemotions_labels.txt`, `goemotions_ekman.json`, `goemotions_sentiment.json`
-  - See `cognitive_stimuli/emotion/README.md` for citations, license, and download instructions
-- `experiments/data/cognitive_stimuli/{moral, moral_decomposition, tom}/` — placeholders for future modules
+### Brain maps
+- `data/brain_maps/` — Neurosynth meta-analytic maps (14 conditions) + Kragel/IBC/HCP
+  validators. Raw map files (`*.nii.gz`, `*.img/*.hdr`) are **gitignored** (re-download as
+  needed); only manifests/docs are tracked.
+
+### Legacy AI-task stimuli (v1)
+- `stimuli_{pilot,medium,balanced,full}.jsonl` (15/50/152/unbalanced per category), 8 AI-task
+  categories. `stimuli_with_answers_*.jsonl` add gold answers for accuracy evaluation.
+  Retained for the v1 functional-atlas record.
+
+## Git / workflow notes
+- Active branch: **`cognitive-atlas`**. v1 archived at tag `v1-ai-categories`.
+- Per Dr. Zhang's rules: commit after every change with a clear message; **ask before
+  merging to `main`**. Present only positive, verified results; do not over-claim. The
+  paper is **not** being written yet — we are still consolidating the finding.
