@@ -20,6 +20,9 @@ experiments/data/brain_maps/**/*.hdr
 experiments/data/brain_maps/**/raw/
 experiments/data/brain_maps/**/__pycache__/
 
+# SLURM logs (transient; results captured in results/*.json)
+experiments/logs/
+
 # Python artifacts
 **/__pycache__/
 *.pyc

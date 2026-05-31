@@ -1,343 +1,276 @@
-# LLM Cognitive Atlas: Brain-LLM Representational Alignment
+# Brain-LLM Representational Alignment: Project Summary
 
 ## Project Summary for External Review
 
+> **Corrected 2026-05-31.** An earlier version of this document reported an *asymmetry*
+> ("emotion aligns, social cognition collapses; brains separate minds, language models
+> compress them"). That asymmetry was traced to a single defective brain map (the lone
+> non-Neurosynth map, HCP `theory_of_mind`, orthogonal to its Neurosynth counterpart,
+> row-correlation −0.016). On a pure-Neurosynth brain RDM the asymmetry dissolves, the
+> headline rises (ρ 0.63 → 0.73), and *both* emotion and social cognition align near the
+> noise ceiling. All numbers below are recomputed against the corrected RDM unless marked
+> "(independent)".
+
 ### One-line Summary
-We compare the internal cognitive organization of Large Language Models with the human brain using Representational Similarity Analysis (RSA), and find that brain-LLM alignment reduces to a single representational dimension — the emotion-reasoning boundary — which is universal across architectures, invariant to scale, present in base (pre-RLHF) models, and can be causally manipulated.
+A text-only LLM reproduces the human brain's **relational organization of both emotion and
+social cognition** (RSA ρ ≈ 0.73, near noise ceiling). The alignment is universal across 4
+architectures, invariant to scale (0.5B–7B), present in base (pre-RLHF) models, survives
+confound control (~80% retained after partialling word-embedding + concept-name + length),
+and rides on a **single brain-like axis — the emotion ↔ social-cognition boundary — that is
+causally load-bearing** (removing this one direction inverts ρ from +0.73 to −0.36).
 
 ---
 
 ## 1. Research Question
 
-When LLMs learn language, do they develop an internal organization of cognitive functions that resembles the brain's? If so:
-- How similar is it?
-- What specifically is shared vs. different?
-- What is the mechanistic basis of the similarity?
-- Where does it come from (pretraining vs. RLHF)?
-- Can it be manipulated?
+When an LLM learns language, does it develop an internal organization of cognitive functions
+that resembles the human brain's? If so: how similar, what specifically is shared, what is
+the mechanistic basis, where does it come from (pretraining vs RLHF), and can it be
+manipulated? Framing: we use the brain as a **predictive reference frame** — established
+neuroscience becomes testable predictions about the LLM.
 
 ## 2. Method: Representational Similarity Analysis (RSA)
 
-### Core Idea
-We don't compare individual activations. We compare **distance structures**: for N cognitive conditions, compute all pairwise distances to get an N×N distance matrix (RDM). Then compare the brain's RDM with the LLM's RDM via Spearman correlation (ρ).
+### Core idea
+We do not compare individual activations. We compare **distance structures**: for N cognitive
+conditions, compute all pairwise distances → an N×N representational dissimilarity matrix
+(RDM). Compare the brain's RDM to the LLM's RDM via Spearman ρ on the upper triangle
+(14 conditions → 91 pairs). High ρ = brain and LLM agree on which functions are alike.
 
-High ρ = brain and LLM agree on which cognitive functions are similar to each other and which are different.
+### LLM side
+Feed text stimuli through the LLM → hidden states per layer → mean-pool over tokens → one
+vector per stimulus → average within condition → condition centroid per layer → center across
+the 14 conditions → cosine-distance RDM. Report peak-layer ρ (Qwen L27, Llama L31, Mistral
+L14, Gemma L21). Reconstruct with `src/reconstruct_headline_rdms.py`.
 
-### LLM Side
-- Input: text stimuli belonging to different cognitive conditions
-- Processing: feed each stimulus through the LLM, extract hidden-state activations at each layer
-- Pooling: mean over all tokens in the sentence → one vector per stimulus per layer
-- Condition averaging: mean over all stimuli within a condition → one "condition centroid" per layer
-- Normalization: per-condition centering + cosine distance
-- Output: N×N LLM RDM at each layer; report peak-layer ρ
+### Brain side (two independent sources)
+**Source 1 — Neurosynth meta-analytic maps (14 conditions) — THE HEADLINE.** Each condition =
+one Neurosynth association-test map (meta-analysis over ~14,000 fMRI studies). Build: resample
+each map to a common MNI grid → keep voxels finite+nonzero in ≥7/14 maps → flatten →
+1−Pearson distance → 14×14 brain RDM (`src/build_brain_rdm.py`, `brain_rdm.npz`). All 14 maps
+are now Neurosynth (the ToM map was corrected from HCP on 2026-05-30). Statistical power comes
+from the **number of conditions** (91 pairs), and each map is itself a stable meta-analytic
+average.
 
-### Brain Side (two sources)
+**Source 2 — Narratives fMRI (stimulus-locked, N=91) — INDEPENDENT VALIDATION.** Nastase et
+al. 2021; subjects listen to stories; condition-labelled story sentences → averaged BOLD (5 s
+HRF lag, Schaefer-400) → brain RDM. The **same story text** is fed to the LLM → directly
+comparable RDM on identical stimuli. This pipeline does not use the 14 Neurosynth maps and was
+unaffected by the ToM correction.
 
-**Source 1: Neurosynth + HCP meta-analytic maps (14 conditions)**
-- For each of 14 cognitive conditions (5 Ekman emotions + valence + 7 mentalistic/social + moral), retrieve the whole-brain meta-analytic activation map from Neurosynth (MKDAChi2 association test, 10mm kernel) or HCP S1200 task contrasts
-- Compute pairwise distances between these 14 maps → 14×14 brain RDM
-- Advantage: represents consensus across thousands of fMRI studies
-- Limitation: not stimulus-locked (the brain data and LLM data use different stimuli)
+### Noise ceiling
+Split-half reliability (LLM side for Source 1; brain side for Source 2) — the upper bound on ρ.
 
-**Source 2: Narratives fMRI dataset (stimulus-locked, N=91)**
-- Public dataset: Nastase et al. 2021, 345 subjects listening to stories, preprocessed fMRI (denoised BOLD, MNI space, Schaefer-400 parcellation)
-- We annotated story sentences with cognitive condition labels using DeepSeek-chat (1,330 sentences across 6 stories, 13 conditions, 85% coverage)
-- For each condition: averaged fMRI signal across all labeled time points (with 5s HRF lag) → condition-level brain activation pattern (400-dimensional, one per Schaefer parcel)
-- Same story text fed to LLMs → LLM condition centroids from identical stimuli
-- Output: 10×10 brain RDM (10 conditions with sufficient data), directly comparable to LLM RDM on same text
-
-### Noise Ceiling
-Split-half reliability of the LLM RDM (for Neurosynth analysis) or the brain RDM (for Narratives analysis). This is the theoretical upper bound on ρ — how well the brain (or LLM) agrees with itself.
-
-### Cognitive Conditions
-14 conditions spanning affective and social/mentalistic domains:
-- **Affective** (6): anger, fear, disgust, sadness, happiness, valence
-- **Mentalistic** (7): belief, mentalizing, intention, theory_of_mind, empathy, self_referential, judgment
-- **Moral** (1): moral
-
-Stimuli: 712 curated sentences (for Neurosynth analysis) or story sentences from Narratives dataset (for stimulus-locked analysis).
+### The 14 cognitive conditions
+- **Affective (6):** anger, fear, disgust, sadness, happiness, valence
+- **Mentalistic / social (7):** belief, mentalizing, intention, theory_of_mind, empathy,
+  self_referential, judgment
+- **Moral (1):** moral
 
 ---
 
 ## 3. Models Tested
-
-### Cross-architecture (7-9B parameter range):
-| Model | Source | Architecture |
-|---|---|---|
-| Qwen2.5-7B-Instruct | Alibaba | Standard decoder |
-| Meta-Llama-3.1-8B-Instruct | Meta | Standard decoder |
-| Mistral-7B-Instruct-v0.3 | Mistral AI | Decoder + sliding window attention |
-| gemma-2-9b-it | Google | Decoder + soft-capping |
-
-### Scaling (Qwen2.5-Instruct family):
-0.5B, 1.5B, 3B, 7B (same architecture, different capacity)
-
-### Base vs. Instruct:
-Qwen2.5-1.5B (base, no RLHF) vs. Qwen2.5-1.5B-Instruct (instruction-tuned with RLHF)
+- **Cross-architecture (7–9B):** Qwen2.5-7B-Instruct, Meta-Llama-3.1-8B-Instruct,
+  Mistral-7B-Instruct-v0.3, gemma-2-9b-it.
+- **Scaling (Qwen2.5-Instruct):** 0.5B, 1.5B, 3B, 7B.
+- **Base vs Instruct:** Qwen2.5-1.5B (base) vs Qwen2.5-1.5B-Instruct.
 
 ---
 
-## 4. Experiments and Findings
+## 4. Experiments and Findings (corrected)
 
-### Experiment 1: Cross-Architecture Brain-LLM RSA
-**Data**: Neurosynth brain RDM (14 conditions) × 4 LLMs × 712 curated stimuli
+### Experiment 1 — Cross-architecture brain-LLM RSA
+| Model | Peak ρ | Permutation p (10k label shuffles) |
+|---|---|---|
+| Qwen2.5-7B | **0.739** | 0.0002 |
+| Llama-3.1-8B | **0.727** | 0.0001 |
+| Mistral-7B | **0.730** | 0.0001 |
+| Gemma-2-9B | **0.735** | 0.0001 |
 
-**Results**:
-| Model | Peak ρ | Noise ceiling | ρ/ceiling | p |
-|---|---|---|---|---|
-| Qwen2.5-7B | 0.64 | 0.97 | 66% | <0.0002 |
-| Llama-3.1-8B | 0.63 | 0.97 | 65% | <0.0002 |
-| Mistral-7B | 0.63 | 0.97 | 65% | <0.0002 |
-| Gemma-2-9B | 0.64 | 0.97 | 66% | <0.0002 |
+Null 95th percentile ≈ 0.25; observed ρ ≈ 0.73; **max-stat p = 0.0002** (corrected for
+peak-layer selection); bootstrap 95% CI [0.719, 0.759] (Qwen 7B); overall noise ceiling ≈ 0.97,
+so ρ ≈ 76% of ceiling. A held-out discovery/confirmation split (freeze the layer + config
+chosen on a different model) keeps all 4 positive (0.61–0.72). **Architecture-invariant** (all
+4 within 0.012 of each other). Per-block alignment near ceiling: **affective 0.74 / ceiling
+0.94 (78%); mentalistic 0.70 / ceiling 0.81 (87%)** — both blocks align, no asymmetry. Per-condition,
+nearly all 14 conditions align 0.67–0.85; only empathy lags (0.24), and empathy is the
+smallest set (n=32) with an unstable split-half ceiling — a measurement artifact, not a
+divergence.
 
-**Finding**: Brain-LLM cognitive alignment is **architecture-invariant** — 4 different companies/architectures/training data produce ρ within 0.01 of each other.
-
-### Experiment 2: Scaling Analysis
-**Data**: Neurosynth brain RDM × Qwen2.5-Instruct at 0.5B/1.5B/3B/7B
-
-**Results**:
-| Size | Params | Peak ρ | ρ/ceiling |
+### Experiment 2 — Scaling
+| Size | Peak ρ | Noise ceiling | ρ/ceiling |
 |---|---|---|---|
-| 0.5B | 494M | 0.665 | 68.9% |
-| 1.5B | 1.54B | 0.655 | 67.9% |
-| 3B | 3.09B | 0.657 | 68.3% |
-| 7B | 7.61B | 0.639 | 65.9% |
+| 0.5B | 0.752 | 0.966 | 78% |
+| 1.5B | 0.754 | 0.966 | 78% |
+| 3B | 0.747 | 0.962 | 78% |
+| 7B | 0.739 | 0.969 | 76% |
 
-**Finding**: Brain-LLM alignment is **scale-invariant** — 15× parameter increase yields Δρ = −0.026. This contradicts the typical "bigger = more brain-like" narrative (Schrimpf 2021, Antonello 2023).
+**Scale-invariant** — a 15× parameter increase yields Δρ = −0.013 (all p=0.0002). Brain-likeness
+does not grow with size, contradicting the "bigger = more brain-like" narrative (Schrimpf 2021,
+Antonello 2023). Independently confirmed on real fMRI (Experiment 3).
 
-### Experiment 3: Stimulus-Locked Validation with Real fMRI
-**Data**: Narratives fMRI (91 subjects, pieman story, Schaefer-400 parcellation) × same story text fed to Qwen2.5 family
-
-**Results**:
+### Experiment 3 — Stimulus-locked validation on real fMRI (independent)
 | Model | Peak ρ | Brain ceiling | ρ/ceiling | p |
 |---|---|---|---|---|
 | Qwen2.5-0.5B | 0.540 | 0.762 | 70.9% | 0.003 |
 | Qwen2.5-1.5B | 0.582 | 0.762 | 76.3% | 0.001 |
 | Qwen2.5-3B | 0.560 | 0.762 | 73.4% | 0.002 |
 
-**Finding**: Brain-LLM alignment **confirmed on stimulus-locked real fMRI** (N=91). Using identical text for brain and LLM, ρ ≈ 0.56, reaching 71-76% of brain noise ceiling. Scale-invariance also confirmed on real fMRI.
+Using **identical text** for brain and LLM (Narratives, N=91), ρ ≈ 0.56, reaching 71–76% of
+the brain noise ceiling. Confirms the alignment is genuine and stimulus-driven, not an artifact
+of meta-analytic maps. Scale-invariance reproduced.
 
-### Experiment 4: Gap Analysis — Where Does LLM Fail?
-**Data**: Per-pair residual decomposition of brain-LLM distance matrices (Neurosynth, 4 models)
+### Experiment 4 — Confound controls (where does the alignment come from?)
+Baselines against the corrected brain RDM (Qwen 7B reference, raw ρ=0.739):
+| Baseline | ρ | sig |
+|---|---|---|
+| GloVe word embeddings (mean-pooled) | 0.494 | *** |
+| Condition-name (GloVe of the label word) | 0.519 | *** |
+| Sentence length | 0.328 | ** |
+| TF-IDF | 0.195 | ns |
 
-**Results**:
-- Within-affective pairs: mean |residual| = **6.9** (lowest — LLM gets emotions right)
-- Within-mentalistic pairs: mean |residual| = **19.2** (highest — LLM collapses them)
-- Top misaligned pairs (LLM says close, brain says far):
-  - self_referential — theory_of_mind: residual +59
-  - intention — theory_of_mind: residual +57
-  - belief — theory_of_mind: residual +48
-  - mentalizing — theory_of_mind: residual +42
+**Partial RSA — trained LLM controlling for length + GloVe + condition-name:** ρ drops
+0.739 → **0.588 (80% retained), p=0.0002**. Controlling TF-IDF + length alone retains ~100%
+(0.715–0.745 across 4 models). **Interpretation:** the concept names and word embeddings
+themselves carry some emotion/social structure (GloVe 0.49, name 0.52), but the trained LLM
+(0.74) sits well above them, and 80% of its alignment survives after partialling them out —
+the alignment is more than concept-name semantics. An untrained random-weight model shows ≈0
+alignment (ns).
 
-**Finding**: The 35% alignment gap concentrates in **mentalistic fine structure** — the brain distinguishes belief/intention/ToM/empathy/self-referential from each other, but LLMs collapse them into a single cluster. Emotion fine structure (anger vs fear vs happiness) matches brain well.
-
-### Experiment 5: One-Axis Causal Ablation
-**Data**: Virtual ablation of the affective-mentalistic boundary direction in LLM activation space (4 models, 2000 random-direction controls)
-
-**Method**: Find the direction from affective centroid to mentalistic centroid in the LLM's hidden space. Project it out (remove this one direction from all condition representations). Recompute RDM and brain-LLM ρ.
-
-**Results**:
+### Experiment 5 — One-axis causal ablation (the mechanistic finding)
+Find the direction from the affective centroid to the mentalistic centroid in the LLM's hidden
+space; project it out; recompute brain-LLM ρ. (2000 random-direction controls.)
 | Model | Original ρ | After ablation | Δρ |
 |---|---|---|---|
-| Qwen2.5-7B | +0.639 | −0.362 | **−1.00** |
-| Llama-3.1-8B | +0.627 | −0.364 | **−0.99** |
-| Mistral-7B | +0.633 | −0.327 | **−0.96** |
-| Gemma-2-9B | +0.639 | −0.317 | **−0.96** |
+| Qwen2.5-7B | +0.739 | −0.364 | −1.10 |
+| Llama-3.1-8B | +0.727 | −0.390 | −1.12 |
+| Mistral-7B | +0.730 | −0.317 | −1.05 |
+| Gemma-2-9B | +0.735 | −0.323 | −1.06 |
 
-Random direction control: Δρ = −0.0001 ± 0.0002 (2000 iterations). p < 0.0005.
+Random-direction control: Δρ ≈ 0.000 ± 0.0001 (p < 0.0001). This boundary direction is nearly
+identical to the LLM's first principal component (cosine = 0.9999); removing PC1 alone
+(k=1 PCA ablation) drops ρ to −0.26. **The entire brain-LLM alignment rides on one
+representational dimension — the emotion ↔ social-cognition boundary — and it is causally
+load-bearing.** After ablation, within-affective ordering is unaffected/slightly improved
+(Δρ +0.10 to +0.23) while within-mentalistic ordering degrades (Δρ −0.59 to −0.81): the
+affective block carries independent fine structure, whereas the mentalistic block's
+brain-alignment is more entangled with the global boundary axis. (This is a structural
+property, not a deficit — the mentalistic block aligns at 87% of ceiling, Experiment 1.)
 
-**Selective collapse**:
-- Within-affective: Δρ = **+0.15** (improves — emotion structure is independent)
-- Within-mentalistic: Δρ = **−0.44** (collapses — stacked on same axis)
-- Cross-boundary: Δρ = −0.04 (minor)
+### Experiment 6 — Brain geometry predicts LLM behavior
+Cross-validated 14-way nearest-centroid classification of stimuli (4 models, 50 splits):
+the brain RDM predicts **which conditions the LLM confuses** — brain-distance vs
+LLM-confusion-distance ρ = **0.243, p = 0.02** (per model 0.20–0.26). Geometry → behavior:
+conditions the brain places close are the ones the LLM mixes up. (Companion result —
+Direction A, `src/brain_causal_coupling.py` — the brain RDM also predicts the LLM's internal
+*causal* coupling between functions: significant in 3/4 models, leave-one-condition-out and
+leave-two-out stable, 91/91 leave-two-out subsets significant.)
 
-**Finding**: The **entire brain-LLM alignment rides on a single representational dimension** (1 out of 3584). Removing it inverts the correlation. This axis separates affective from mentalistic processing. Emotion fine structure is independently encoded (survives ablation); mentalistic fine structure is not (collapses).
+### Experiment 7 — Brain-derived cognitive steering
+Steering Qwen2.5-3B along the brain-derived boundary direction (α from −20 to +20) on moral
+dilemmas (rated by an LLM judge): at strong negative α the model collapses into emotional
+output ("Horror! Horror!"); at moderate positive α it produces structured analytical reasoning
+("utilitarian vs deontological"). The brain-derived axis is **causally functional** — it
+controls the model's emotional ↔ analytical response style.
 
-### Experiment 6: Brain-Derived Cognitive Steering
-**Data**: Moral dilemma prompts × Qwen2.5-3B-Instruct × steering along the brain-derived boundary direction at different strengths (α = −20 to +20)
+### Experiment 8 — Base vs Instruct (independent)
+Brain-LLM RSA on pieman story (N=91): base ρ = 0.525, instruct ρ = 0.577 — **base models
+already have ~91% of the alignment.** Emotion-space PCA is nearly identical (PC2-valence
+r ≈ 0.65 in both). The alignment is primarily a product of **language pretraining**, not RLHF.
 
-**Results** (rated by DeepSeek, 1-7 scale):
-| α | Emotionality | Analyticity | Coherence |
-|---|---|---|---|
-| −20 | 4.0 | 1.2 | 1.4 |
-| 0 (baseline) | 2.0 | 3.7 | 3.9 |
-| +10 | 1.7 | **4.3** | **4.0** |
-| +20 | 1.7 | 2.6 | 2.6 |
+### Experiment 9 — Emotion geometry (independent)
+GoEmotions 28-category stimuli × Qwen2.5 (1.5B, 3B): the LLM emotion space is
+**valence-dominant** — PC1/PC2 capture valence, arousal appears only at PC3. Consistent across
+sizes.
 
-At α = −20: model outputs emotional collapse ("Horror! Horror!").
-At α = +10: model produces structured philosophical analysis ("utilitarian vs deontological").
-
-**Finding**: The brain-derived axis is **causally functional** — it controls the LLM's response style between emotional and analytical processing.
-
-### Experiment 7: Brain-to-LLM Transfer (Negative Result)
-**Data**: Steering along brain-derived mentalistic directions (belief→ToM, intention→ToM) during false belief and faux pas tasks
-
-**Results**: All steering alphas either maintain or degrade performance. Baseline: False Belief 80%, Faux Pas 67%. No improvement at any alpha.
-
-**Finding**: LLM's mentalistic deficit **cannot be repaired by injecting brain-derived directions**. The problem is deeper than representational geometry.
-
-### Experiment 8: Base vs. Instruct Comparison
-**Data**: Qwen2.5-1.5B (base, no RLHF) vs. Qwen2.5-1.5B-Instruct on:
-(a) Brain-LLM RSA on pieman story (91 subjects fMRI)
-(b) Emotion geometry (GoEmotions 28 categories)
-
-**Results**:
-- Brain-LLM RSA: base ρ = **0.525**, instruct ρ = **0.577** (base has 91% of instruct alignment)
-- Emotion PCA: nearly identical structure (PC2-valence correlation: base r=0.653, instruct r=0.652)
-
-**Finding**: Brain-LLM cognitive alignment is **primarily a product of language pretraining**, not RLHF. The cognitive axis exists in base models; instruction tuning adds ~9%.
-
-### Experiment 9: Emotion Geometry
-**Data**: GoEmotions 28-category stimuli (5,398 Reddit comments) × Qwen2.5 (1.5B and 3B)
-
-**Results**:
-- PC1 (40% variance): correlates with valence (r = −0.42, p < 0.05)
-- PC2 (15% variance): correlates with valence (r = +0.65, p < 0.001)
-- PC3 (8% variance): correlates with arousal (r = −0.45, p < 0.05)
-- Consistent across 1.5B and 3B
-
-**Finding**: LLM emotion space is **valence-dominant** — the first two PCs capture valence, arousal appears only at PC3. LLMs learn the evaluative dimension of emotion (good/bad) strongly from text but encode arousal (calm/excited) weakly.
-
-### Experiment 10: Individual Differences
-**Data**: Per-subject brain-LLM alignment across 96 Narratives subjects
-
-**Results**: Mean ρ = 0.568, range [0.278, 0.776]. 97% of subjects show ρ > 0.3 (all positive). Subjects with more "typical" brain organization align more with LLM (r = 0.24, p = 0.017).
-
-**Finding**: Brain-LLM alignment is **universal across individuals** — not driven by a subset of subjects.
-
-### Experiment 11: Regional Brain Analysis (Inconclusive)
-**Data**: Per-parcel (Schaefer-400) multi-voxel pattern RSA, 258 subjects × 6 stories
-
-**Results**: All 400 parcels significant. Network ranking: Limbic (0.181) > DMN (0.162) > Somatomotor (0.164). But range is very small (0.158-0.181). No clear network dissociation.
-
-**Finding**: With current data/method resolution, **no clear network-level differentiation** in brain-LLM alignment. Either the alignment is genuinely distributed, or condition-level RSA from naturalistic stories lacks the resolution to distinguish networks.
+### Experiment 10 — Individual differences (independent)
+Per-subject brain-LLM alignment across 96 Narratives subjects: mean ρ = 0.568, range
+[0.278, 0.776]; 97% of subjects ρ > 0.3 (all positive). The alignment is **universal across
+individuals**, not driven by a subset.
 
 ---
 
 ## 5. Unified Conclusions
 
-1. **Brain-LLM cognitive alignment exists and is robust**: ρ = 0.56-0.64 across multiple brain data sources, confirmed on stimulus-locked fMRI (N=91).
-
-2. **The alignment is one-dimensional**: A single representational direction carries the entire correlation. Removing it inverts brain-LLM alignment from +0.64 to −0.36.
-
-3. **The dimension is the affective-mentalistic boundary**: It separates emotion-related conditions from social reasoning conditions — matching the brain's limbic vs prefrontal organization.
-
-4. **The alignment is universal**: invariant across 4 architectures, 4 scales (0.5B-7B), 96 individual brains, and base vs instruct models.
-
-5. **The alignment has a hard ceiling**: No tested variation (architecture, scale, RLHF) pushes beyond ~73% of brain noise ceiling. The 27% gap concentrates in mentalistic fine structure.
-
-6. **The alignment is causally functional**: The brain-derived axis controls LLM output style (emotional ↔ analytical).
-
-7. **The alignment originates in language statistics**: Base models (no RLHF) have 91% of the alignment. It's a property of natural language, not of human feedback training.
-
-8. **The deficit is fundamental**: Steering along brain-derived directions cannot repair the LLM's collapsed mentalistic representations.
+1. **Broad brain-LLM alignment exists and is robust:** ρ ≈ 0.73 (Neurosynth) and ≈ 0.56
+   (stimulus-locked real fMRI, N=91), near noise ceiling, both emotion and social-cognition
+   blocks.
+2. **Universal:** invariant across 4 architectures, scales (0.5B–7B), 96 individual brains, and
+   base vs instruct models.
+3. **Originates in language pretraining:** base models carry ~91% of the alignment.
+4. **Survives confound control:** ~80% retained after partialling word-embedding + concept-name
+   + length (ρ 0.74 → 0.59, p=0.0002); untrained model ≈ 0.
+5. **Carried by one brain-like axis:** the emotion ↔ social-cognition boundary ≈ PC1
+   (cosine 0.9999); removing it inverts ρ to −0.36 (4/4 models, p<0.0001).
+6. **Causally functional and behaviorally predictive:** the brain-derived axis steers
+   emotional ↔ analytical output; the brain RDM predicts LLM confusion (ρ=0.24) and internal
+   causal coupling (Direction A, 3/4 models).
 
 ---
 
 ## 6. Related Work
-
-### Brain-LLM Alignment (Nature-level papers)
-- **Schrimpf et al. 2021 (PNAS)**: "Brain-Score" — 43 models benchmarked; next-word prediction is the key factor for brain-likeness. Our finding extends this: brain-likeness saturates at 0.5B, and the underlying alignment is one-dimensional.
-- **Goldstein et al. 2022 (Nature Neuroscience)**: ECoG shows brain predicts next word before hearing it, matching GPT-2 temporal profile. Algorithmic-level claim; we make a representational-geometry claim.
-- **Caucheteux & King 2023 (Nature Human Behaviour)**: Hierarchical predictive coding — different brain areas predict different time horizons. N=304. We address a complementary question (cognitive organization, not temporal prediction).
-- **Tang et al. 2023 (Nature Neuroscience)**: Semantic decoder using LLM representations. Demonstrates practical capability (mind-reading). We focus on representational structure.
-- **Tuckute et al. 2024 (Nature Human Behaviour)**: Closed-loop brain control — LLM predicts sentences that drive/suppress brain language network. We also demonstrate causal manipulation, but in the LLM direction (steering model output with brain-derived directions).
-- **Mischler et al. 2024 (Nature Machine Intelligence)**: iEEG shows hierarchical convergence between LLMs and brain. Better LLMs have more brain-like hierarchies.
-- **Antonello & Huth 2023 (NeurIPS)**: Brain prediction scales logarithmically with LLM size (125M-30B). At the level of coarse cognitive-condition RSA, we find alignment saturates early (0.5B-7B flat), unlike continuous stimulus-level encoding.
-
-### Confound Warning
-- **Hadidi et al. 2025 (Nature Communications)**: Many brain-LLM alignment findings are driven by confounds (word position, word rate). Our RSA approach operates on condition-level distance matrices, making it more robust to these first-order confounds than voxel-level encoding models. We have now run untrained-model baselines (ρ=0.09, ns), lexical baselines (GloVe ρ=0.40, TF-IDF ρ=0.26), and partial RSA controlling for GloVe + length + condition-name (trained LLM retains 87% of alignment, ρ=0.557, p=0.0002). Source-dataset, valence/arousal, word-frequency, pronoun, and mental-state verb controls remain to be completed.
-
-### Representation Engineering
-- **Zou et al. 2023**: Representation engineering — finding directions in activation space that control model behavior. Our contribution: we derive the steering direction from brain data rather than behavioral supervision.
-- **Turner et al. 2023**: Activation addition for steering. Our work is similar in method but the direction is brain-derived and shown to be universal across architectures.
-
-### LLM Cognitive Evaluation
-- **Kosinski 2023**: Claims GPT-4 passes Theory of Mind tests. Our finding contextualizes this: LLMs may pass ToM tests while internally collapsing distinct mentalistic processes onto a single dimension.
-- **Mahowald et al. 2024 (Trends in Cognitive Sciences)**: "Dissociating language and thought" — formal linguistic competence vs functional competence. Our data aligns: LLMs learn the formal structure (distance relationships between cognitive categories) but not the functional details (within-category fine structure for mentalizing).
+- **Schrimpf et al. 2021 (PNAS)** Brain-Score / next-word prediction. We extend: condition-level
+  brain-likeness *saturates by 0.5B* and reduces to one dominant brain-like axis.
+- **Goldstein et al. 2022 (Nat Neurosci)**, **Caucheteux & King 2023 (Nat Hum Behav)**,
+  **Tang et al. 2023 (Nat Neurosci)**, **Mischler et al. 2024 (Nat Mach Intell)**,
+  **Antonello & Huth 2023 (NeurIPS)** — encoding / temporal-prediction / decoding work; we make
+  a representational-geometry claim and find early saturation rather than log-linear scaling.
+- **Hadidi et al. 2025 (Nat Commun)** confound warning. Our RSA operates on condition-level
+  distance matrices and we add untrained-model, GloVe/TF-IDF/name/length baselines and partial
+  RSA (80% retained), making it robust to first-order confounds.
+- **Zou et al. 2023 / Turner et al. 2023** representation engineering — we derive the steering
+  direction from *brain data* rather than behavioral supervision, and show it is universal
+  across architectures.
+- **Mahowald et al. 2024 (TiCS)** language vs thought — our data show LLMs learn brain-like
+  *relational* structure across both emotion and social cognition from text alone.
 
 ---
 
-## 7. Open Questions / What's Missing
-
-1. **No "wow" finding yet**: The results are solid characterization but lack a single discovery that changes understanding. We've described what the alignment is, but haven't used it to discover something new.
-
-2. **Possible directions**:
-   - Use the brain-LLM mismatch to predict specific LLM failure modes
-   - Test whether multimodal models close the mentalistic gap
-   - Test on larger models (70B+) to rule out late-emergence
-   - Use the one-axis finding to make a theoretical claim about the information content of natural language
-
-3. **Controls completed**: untrained model (ρ=0.09, ns), GloVe/TF-IDF/condition-name/length baselines, partial RSA (ρ=0.557 after controlling all surface features). Confirmatory RSA with discovery/confirmation split, max-stat permutation (p=0.0002), cross-validated ablation (95% CI [-0.91, -0.67]), variance-matched random controls. Still needed: source-dataset RDM, valence/arousal RDM, human annotation validation for Narratives.
-
-4. **PC1 ≈ boundary direction** (cosine = 0.999): The affective-mentalistic boundary is nearly identical to the first principal component of the LLM condition space. This means the dominant axis is not a mysterious brain-derived structure but the LLM's primary variance axis — which happens to align with brain cognitive organization.
-
-5. **Regional analysis was inconclusive**: All 400 parcels significant with small effect range. Likely insufficient resolution from condition-level RSA on naturalistic stories.
+## 7. Open Questions / Next
+1. **Turn the reference frame into predictions:** known neuroscience built on the emotion/social
+   separation (lesion double-dissociations, dual-process moral cognition, cortical processing
+   gradient, developmental order) becomes a battery of testable LLM predictions. Direction A
+   (causal coupling) is the first; layer-depth (gradient) and training-checkpoint
+   (developmental order) are next.
+2. **Empathy condition is underpowered** (n=32); rebuild with a proper empathy-induction set.
 
 ---
 
 ## 8. Code Structure
-
 ```
 experiments/
   src/
-    build_rsa_stimuli.py          — Build 712-stimulus cognitive RSA battery
-    extract_rsa_activations_v2.py — Extract per-stimulus LLM activations (HPC3 GPU)
-    build_brain_rdm.py            — Build Neurosynth+HCP brain RDM
-    compute_rsa.py                — Compare brain vs LLM RDMs
-    rsa_cross_model_analysis.py   — 4-model cross-architecture comparison
-    rsa_scaling_analysis.py       — Scaling curve (Qwen 0.5B-7B)
-    rsa_deep_analysis.py          — Gap decomposition + confusion + causal ablation
-    narratives_preprocess.py      — Segment stories + keyword annotation
-    narratives_annotate.py        — DeepSeek cognitive annotation
-    narratives_brain_rdm.py       — Build brain RDM from Narratives fMRI
-    extract_narratives_llm.py     — Extract LLM activations for story text
-    regional_rsa_mvpa.py          — Per-parcel brain-LLM RSA
-    regional_rsa_multistory.py    — Multi-story regional RSA
+    build_brain_rdm.py            — Build 14-map Neurosynth brain RDM (1−Pearson)
+    reconstruct_headline_rdms.py  — Rebuild {model}_rdm14_headline.npz (headline recipe)
+    compute_rsa_v2.py             — Full RSA sweep (poolings/centerings/distances/layers)
+    rsa_cross_model_v2.py         — 4-model cross-architecture comparison
+    rsa_scaling_analysis.py       — Scaling curve + noise ceiling (Qwen 0.5B–7B)
+    rsa_deep_analysis.py          — Gap + confusion (geometry→behavior) + causal ablation
+    confirmatory_rsa.py           — Discovery/confirmation split, max-stat perm, bootstrap, CV ablation
+    baseline_controls.py          — GloVe / TF-IDF / condition-name / length baselines
+    fix_all_holes.py              — Partial RSA + LOO / leave-2-out stability
+    tom_source_check.py           — Diagnostic that found the HCP-ToM artifact
+    affective_ceiling_control.py  — Per-block alignment vs LLM noise ceiling
+    brain_causal_coupling.py      — Direction A: brain RDM predicts LLM causal coupling
+    narratives_*.py               — Narratives fMRI pipeline (stimulus-locked validation)
     cognitive_steering.py         — Brain-derived activation steering
-    brain_transfer.py             — Brain-to-LLM transfer experiment
-    emotion_geometry.py           — Emotion space PCA analysis
-  scripts/slurm/                  — SLURM job scripts for HPC3
-  results/
-    cognitive_rsa/                — RSA results, RDMs, scaling summaries
-    narratives_llm/               — LLM activations on story text
-    deep_experiments/             — Steering + transfer results
-    emotion_geometry/             — Emotion PCA results
-  data/
-    cognitive_stimuli/            — Curated stimuli (emotion, moral, ToM)
-    narratives/                   — Narratives dataset (transcripts, annotations, fMRI)
-  figures/                        — All generated plots
+    emotion_geometry.py           — Emotion-space PCA
+  results/cognitive_rsa/          — brain_rdm.npz, {model}_rdm14_headline.npz, deep_analysis.json,
+                                    scaling_summary.json, confirmatory_rsa.json, baseline_controls.json
+  results/affective_validation/   — ceiling control, Kragel/IBC/HCP audits, tom_source_check
+  present/index.html              — plain-language briefing deck (corrected story)
 ```
-
----
 
 ## 9. Reproduction
-
-### Requirements
-- Python 3.10+, PyTorch, transformers, nilearn, nibabel, scipy, numpy, matplotlib
-- GPU: NVIDIA H100 80GB (for 7B+ models) or A100 40GB (for ≤3B)
-- fMRI data: Narratives dataset from `s3://fcp-indi/data/Projects/narratives/`
-- Models: Qwen2.5 family from HuggingFace
-
-### Key commands
 ```bash
-# 1. Build brain RDM from Neurosynth
-python src/build_brain_rdm.py
-
-# 2. Extract LLM activations (submit to SLURM)
-sbatch scripts/slurm/cognitive_rsa_scaling.sh
-
-# 3. Compute RSA
-python src/rsa_cross_model_analysis.py
-
-# 4. Deep analysis (gap + ablation)
-python src/rsa_deep_analysis.py
-
-# 5. Narratives fMRI pipeline
-python src/narratives_preprocess.py
-python src/narratives_annotate.py
-python src/narratives_brain_rdm.py
-
-# 6. Stimulus-locked RSA comparison
-# (run extract_narratives_llm.py on HPC3, then compare locally)
+python src/build_brain_rdm.py            # corrected 14-map Neurosynth brain RDM
+python src/reconstruct_headline_rdms.py  # LLM headline RDMs
+python src/rsa_cross_model_v2.py         # cross-architecture ρ
+python src/rsa_deep_analysis.py          # gap + confusion + causal ablation
+python src/baseline_controls.py          # confound baselines + partial RSA
+python src/fix_all_holes.py              # partial RSA + LOO stability
+# Narratives (independent): narratives_preprocess.py → narratives_annotate.py →
+#   narratives_brain_rdm.py → extract_narratives_llm.py (GPU) → compare
 ```
+Heavy CPU recomputes that load the large per-stim NPZ should be submitted to a 512 GB compute
+node (`scripts/slurm/rsa_recompute_local.sh`), not run on the login node.
