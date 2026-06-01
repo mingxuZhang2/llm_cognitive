@@ -91,8 +91,10 @@ Null 95th percentile ≈ 0.25; observed ρ ≈ 0.73; **max-stat p = 0.0002** (co
 peak-layer selection); bootstrap 95% CI [0.719, 0.759] (Qwen 7B); overall noise ceiling ≈ 0.97,
 so ρ ≈ 76% of ceiling. A held-out discovery/confirmation split (freeze the layer + config
 chosen on a different model) keeps all 4 positive (0.61–0.72). **Architecture-invariant** (all
-4 within 0.012 of each other). Per-block alignment near ceiling: **affective 0.74 / ceiling
-0.94 (78%); mentalistic 0.70 / ceiling 0.81 (87%)** — both blocks align, no asymmetry. Per-condition,
+4 within 0.012 of each other). Per-block **row-wise** alignment (each condition's distance-to-all-13):
+**affective 0.74 / ceiling 0.94 (78%); mentalistic 0.70 / ceiling 0.81 (87%)** — but note this
+row-wise metric includes cross-block distances and is therefore dominated by the emotion/social
+split; it is **not** a within-block test (see Experiment 5b). Per-condition (row-wise),
 nearly all 14 conditions align 0.67–0.85; only empathy lags (0.24), and empathy is the
 smallest set (n=32) with an unstable split-half ceiling — a measurement artifact, not a
 divergence.
@@ -153,9 +155,26 @@ identical to the LLM's first principal component (cosine = 0.9999); removing PC1
 representational dimension — the emotion ↔ social-cognition boundary — and it is causally
 load-bearing.** After ablation, within-affective ordering is unaffected/slightly improved
 (Δρ +0.10 to +0.23) while within-mentalistic ordering degrades (Δρ −0.59 to −0.81): the
-affective block carries independent fine structure, whereas the mentalistic block's
-brain-alignment is more entangled with the global boundary axis. (This is a structural
-property, not a deficit — the mentalistic block aligns at 87% of ceiling, Experiment 1.)
+within-social brain-alignment rides on the global boundary axis (collapses when it is removed),
+whereas the within-affective ordering is independent of the axis — but, per Experiment 5b, the
+within-affective ordering does **not** align with the brain in the first place (with or without
+the axis). So this is *not* "the affective block carries independent brain-like fine structure";
+it is "the affective block's internal arrangement is its own and does not match the brain."
+
+### Experiment 5b — Within-block control (is ρ=0.73 just the emotion/social split?)
+`src/within_block_control.py`. Both the brain RDM (ρ=0.708 with the binary block-membership model)
+and the LLM RDMs (0.835–0.865) are dominated by the single emotion↔social division. **Controlling
+for that binary split, a significant residual brain–LLM agreement survives: partial ρ = 0.32–0.38,
+all 4 models p ≤ 0.001** (mean 0.36 — roughly half the rank agreement is beyond the categorical
+split). That residual is concentrated in the **within-social ordering** (within-social ρ = 0.52–0.65,
+mostly significant; 0.63–0.67 excluding moral, all 4 p ≤ 0.033). The **within-affective ordering does
+not align** (ρ ≈ −0.11, n.s.; consistent across 4 models, robust to dropping valence — likely because
+the LLM organizes basic emotions by valence while the Neurosynth maps reflect distinct
+emotion-specific networks). **But with only 6 affective conditions (15 pairs) this test is
+underpowered, so we make no claim about within-affective fine structure.** Framing: the brain–LLM
+correspondence is *one shared, causally load-bearing organizing axis (Experiment 5) plus a
+significant beyond-categorical residual that lives in the social block* — **not** a rich
+fine-grained match across both families.
 
 ### Experiment 6 — Brain geometry predicts LLM behavior
 Cross-validated 14-way nearest-centroid classification of stimuli (4 models, 50 splits):
@@ -192,9 +211,11 @@ individuals**, not driven by a subset.
 
 ## 5. Unified Conclusions
 
-1. **Broad brain-LLM alignment exists and is robust:** ρ ≈ 0.73 (Neurosynth) and ≈ 0.56
-   (stimulus-locked real fMRI, N=91), near noise ceiling, both emotion and social-cognition
-   blocks.
+1. **Brain-LLM alignment exists and is robust:** ρ ≈ 0.73 (Neurosynth) and ≈ 0.56
+   (stimulus-locked real fMRI, N=91), near noise ceiling, over the full 14-condition set spanning
+   emotion and social cognition. The shared structure is **dominated by one emotion↔social axis**;
+   beyond that categorical split a significant residual survives and lives in the social block
+   (Exp 5b) — we do **not** claim a rich within-block match across both families.
 2. **Universal:** invariant across 4 architectures, scales (0.5B–7B), 96 individual brains, and
    base vs instruct models.
 3. **Originates in language pretraining:** base models carry ~91% of the alignment.

@@ -55,8 +55,11 @@ the arc is auditable.
    to the Neurosynth ToM map:
    - ToM alignment: **−0.13 → +0.78**
    - Headline: **ρ 0.634 → 0.733**, single-source (pure 14-map Neurosynth) brain RDM.
-   The asymmetry **dissolved** — both emotion and social cognition now align near ceiling.
-   We **dropped** the "divergence / anti-aligned / 自成一套" claims. (See
+   The bad-map asymmetry **dissolved** and the headline rose to 0.73. We **dropped** the
+   "divergence / anti-aligned / 自成一套" claims. (The clean within-block picture, added later, is
+   finer — the alignment is dominated by one emotion↔social axis; the social block's internal
+   ordering aligns, the affective block's does not resolve at n=6. See the Within-block control
+   under "Headline Result.") (See
    `experiments/results/cognitive_rsa/brain_rdm_hcptom.npz` for the archived old RDM and
    `src/tom_source_check.py` for the diagnostic.)
 
@@ -85,8 +88,19 @@ null shuffles condition labels.
 
 **Numbers:**
 - Headline ρ: **Qwen 0.739, Llama 0.727, Mistral 0.730, Gemma 0.735** (vs pure-NS `brain_rdm.npz`).
-- Per-block (7B): affective 0.74 (ceiling 0.94 → **78%**), mentalistic 0.70 (ceiling 0.81 →
-  **87%**) — *both* near the noise ceiling; no asymmetry.
+- Per-block **row-wise** (7B, each condition's distance-to-all-13-others): affective 0.74 (78% of
+  ceiling), mentalistic 0.70 (87%). **Caveat:** this row-wise metric includes cross-block distances,
+  so it is dominated by the emotion/social split — it is **not** a within-block test (see next bullet).
+- **Within-block control** (`src/within_block_control.py`, the clean test): both the brain RDM
+  (ρ=0.71 with the binary split) and the LLM RDMs (0.84–0.87) are dominated by the single
+  emotion↔social division. Controlling for that split, a significant residual remains
+  (**partial ρ≈0.36, 4/4 p≤0.001**), concentrated in the **within-social** ordering (within-social
+  ρ≈0.52–0.65; 0.63–0.67 excl. moral, 4/4 p≤0.033). **Within-affective ordering does not align**
+  (ρ≈−0.11, n.s.; consistent across 4 models, robust to dropping valence) — but n=6 (15 pairs) is
+  underpowered, so **no claim** is made about within-affective fine structure. Net: *one shared,
+  causally load-bearing axis + a significant beyond-split residual living in the social block* —
+  **not** a rich 14-way match. (This also corrects an earlier mis-statement that the affective block
+  "carries independent fine structure": it carries structure that does **not** align with the brain.)
 - Per-condition (7B): nearly all 14 align **0.67–0.85** (belief .85, ToM .79, judgment .80,
   happiness .81). **Only empathy lags (0.24)** — and empathy is the smallest set (n=32) with
   an unstable split-half ceiling; this is a measurement artifact, not a divergence.

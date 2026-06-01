@@ -13,9 +13,13 @@ social cognition**: RSA between each model's internal geometry and meta-analytic
 This alignment is:
 - **Universal** across 4 architectures (Qwen 0.739 / Llama 0.727 / Mistral 0.730 / Gemma 0.735)
 - **Scale-invariant** from 0.5B to 7B parameters
-- **Broad, not a single axis** — both the affective block (78% of ceiling) and the
-  mentalistic/social block (87% of ceiling) align; the emotion ↔ social-cognition boundary
-  is reproduced as part of this geometry
+- **Dominated by one causally load-bearing axis** — the alignment rides on the single
+  emotion ↔ social-cognition division (removing it sends ρ +0.73 → −0.36). Beyond that
+  categorical split a significant residual brain–LLM agreement remains (partial ρ ≈ 0.36,
+  all 4 models p ≤ 0.001), concentrated in the within-social ordering. The within-affective
+  fine structure does not resolve at the current condition count (n=6) — no claim is made
+  about it. We frame the result as *one shared organizing axis + a significant beyond-split
+  residual*, **not** a rich fine-grained match across both families.
 - **Causally predictive** — the brain RDM predicts the LLM's internal causal coupling
   between functions (Direction A; 3/4 models significant)
 

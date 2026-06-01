@@ -1,8 +1,9 @@
 > # ⚠️ SUPERSEDED — dated snapshot, do not cite these numbers
 > **2026-05-25 snapshot, pre-correction.** Uses the **old Neurosynth + HCP** brain RDM and the
 > **old ρ ≈ 0.31** recipe. One defective brain map (HCP `theory_of_mind`, row-corr −0.016) inflated
-> the divergence narrative. **Current headline: ρ ≈ 0.73** on the pure-Neurosynth RDM, both emotion
-> and social-cognition blocks near the noise ceiling, no asymmetry. Authoritative current numbers:
+> the divergence narrative. **Current headline: ρ ≈ 0.73** on the pure-Neurosynth RDM, dominated by
+> one causally load-bearing emotion↔social axis (within-block detail: social aligns, affective
+> unresolved — see within_block_control). Authoritative current numbers:
 > `../../../PROJECT_SUMMARY_FOR_REVIEW.md`, `../../PROJECT_SUMMARY.md`, root `../../../CLAUDE.md`.
 > Kept only as the honest dated record of the 0.31 → 0.63 → 0.73 progression.
 

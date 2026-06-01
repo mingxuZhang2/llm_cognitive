@@ -19,8 +19,12 @@ the emotion ↔ social-cognition boundary — that is causally load-bearing.
 **Core finding (solid, recomputed against the corrected RDM):**
 - ρ ≈ 0.73 across 4 architectures (Qwen .739 / Llama .727 / Mistral .730 / Gemma .735),
   permutation p ≈ 0.0001–0.0002.
-- Both blocks near ceiling (affective 78%, mentalistic 87%); every condition aligns 0.67–0.85
-  except empathy (0.24, underpowered n=32).
+- Per-block **row-wise** (split-dominated, not a within-block test): affective 78%, mentalistic
+  87%; every condition aligns 0.67–0.85 except empathy (0.24, underpowered n=32).
+- **Within-block control:** dominated by the single emotion↔social split; beyond it a significant
+  residual survives (partial ρ≈0.36, 4/4 p≤0.001), living in the within-social ordering
+  (ρ≈0.52–0.65). Within-affective ordering does **not** align (ρ≈−0.11) but is underpowered
+  (n=6) → no claim. Net: one load-bearing axis + beyond-split residual, not a rich 14-way match.
 - Scale-invariant (0.5B–7B flat: 0.752/0.754/0.747/0.739, Δρ=−0.013, all ≈78% of ceiling),
   present in base models (~91%), survives confound control (~80% retained after partialling
   word-embedding + concept-name + length, ρ 0.74→0.59, p=0.0002). Bootstrap 95% CI
@@ -73,7 +77,10 @@ emotion/social-cognition separation becomes a battery of testable LLM prediction
 |---|---|---|
 | Cross-architecture RSA (4 models) | ρ = 0.727–0.739 | ✓ |
 | Matrix permutation p (per model) | 0.0001–0.0002 | ✓ |
-| Per-block alignment / ceiling | aff 78%, ment 87% | ✓ |
+| Per-block row-wise (split-dominated) | aff 78%, ment 87% | ✓ |
+| Within-block residual (partial out split) | partial ρ≈0.36, 4/4 p≤0.001 | ✓ |
+| → within-social ordering | ρ≈0.52–0.65 (sig.) | ✓ |
+| → within-affective ordering | ρ≈−0.11, n=6 underpowered | no claim |
 | Stimulus-locked fMRI (N=91) | ρ ≈ 0.54–0.58 | ✓ |
 | Scale invariance (1.5B vs 7B) | 0.754 vs 0.739 | ✓ |
 | Base vs instruct | base ≈ 91% | ✓ |

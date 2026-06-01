@@ -1,0 +1,95 @@
+{
+  "conditions": [
+    "anger",
+    "belief",
+    "disgust",
+    "empathy",
+    "fear",
+    "happiness",
+    "intention",
+    "judgment",
+    "mentalizing",
+    "moral",
+    "sadness",
+    "self_referential",
+    "theory_of_mind",
+    "valence"
+  ],
+  "affective": [
+    "anger",
+    "disgust",
+    "fear",
+    "happiness",
+    "sadness",
+    "valence"
+  ],
+  "social": [
+    "belief",
+    "empathy",
+    "intention",
+    "judgment",
+    "mentalizing",
+    "moral",
+    "self_referential",
+    "theory_of_mind"
+  ],
+  "rho_brain_block": 0.708071830632409,
+  "models": {
+    "Qwen2.5-7B": {
+      "full_rho": 0.7385889472845995,
+      "llm_block_rho": 0.8346030098341768,
+      "partial_rho_given_block": 0.3795324339589225,
+      "partial_p": 0.00029997000299970003,
+      "within_affective_rho": -0.15,
+      "within_affective_p": 0.6607339266073393,
+      "within_social_rho": 0.5177887246852765,
+      "within_social_p": 0.067993200679932,
+      "within_social_no_moral_rho": 0.6311688311688312,
+      "within_social_no_moral_p": 0.0327967203279672
+    },
+    "Llama-3.1-8B": {
+      "full_rho": 0.7270584487975793,
+      "llm_block_rho": 0.8647693836836048,
+      "partial_rho_given_block": 0.3235729562126565,
+      "partial_p": 0.0008999100089991,
+      "within_affective_rho": -0.08214285714285713,
+      "within_affective_p": 0.6117388261173883,
+      "within_social_rho": 0.6513409961685823,
+      "within_social_p": 0.024397560243975602,
+      "within_social_no_moral_rho": 0.648051948051948,
+      "within_social_no_moral_p": 0.029397060293970604
+    },
+    "Mistral-7B": {
+      "full_rho": 0.7296384774645646,
+      "llm_block_rho": 0.8346030098341768,
+      "partial_rho_given_block": 0.3565222593926442,
+      "partial_p": 0.0004999500049995,
+      "within_affective_rho": -0.08214285714285713,
+      "within_affective_p": 0.6171382861713829,
+      "within_social_rho": 0.6535303776683087,
+      "within_social_p": 0.028897110288971104,
+      "within_social_no_moral_rho": 0.6727272727272726,
+      "within_social_no_moral_p": 0.0212978702129787
+    },
+    "Gemma-2-9B": {
+      "full_rho": 0.7353240961936615,
+      "llm_block_rho": 0.83795482915078,
+      "partial_rho_given_block": 0.3684571582310726,
+      "partial_p": 0.0006999300069993001,
+      "within_affective_rho": -0.13214285714285715,
+      "within_affective_p": 0.6579342065793421,
+      "within_social_rho": 0.6442255062944717,
+      "within_social_p": 0.029597040295970403,
+      "within_social_no_moral_rho": 0.6675324675324676,
+      "within_social_no_moral_p": 0.0231976802319768
+    }
+  },
+  "summary": {
+    "full_rho": 0.7326524924351012,
+    "llm_block_rho": 0.8429825581256846,
+    "partial_rho_given_block": 0.3570212019488239,
+    "within_affective_rho": -0.11160714285714285,
+    "within_social_rho": 0.6167214012041597,
+    "within_social_no_moral_rho": 0.6548701298701298
+  }
+}

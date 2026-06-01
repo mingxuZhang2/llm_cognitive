@@ -91,10 +91,12 @@ Null 95th percentile ≈ 0.25; **max-stat p = 0.0002** (corrected for peak-layer
 bootstrap 95% CI [0.719, 0.759] (Qwen 7B); overall noise ceiling ≈ 0.97 → ρ ≈ **76% of ceiling**.
 A held-out discovery/confirmation split (freeze layer + config on a different model) keeps all 4
 positive (0.61–0.72). **Architecture-invariant** (all 4 within 0.012 of each other).
-**Per block, both align near ceiling — no asymmetry:** affective 0.74 / ceiling 0.94 (**78%**);
-mentalistic 0.70 / ceiling 0.81 (**87%**). Per condition, nearly all 14 align **0.67–0.85** (belief
-.85, ToM .79, judgment .80, happiness .81); **only empathy lags (0.24)** — and empathy is the
-smallest set (n=32) with an unstable split-half ceiling, a measurement artifact, not a divergence.
+**Per-block row-wise** (each condition's distance-to-all-13): affective 0.74 / ceiling 0.94 (**78%**);
+mentalistic 0.70 / ceiling 0.81 (**87%**). *Caveat:* this row-wise metric includes cross-block
+distances, so it is dominated by the emotion/social split and is **not** a within-block test — see
+the within-block control under Experiment 5. Per condition (row-wise), nearly all 14 align
+**0.67–0.85**; **only empathy lags (0.24)** — the smallest set (n=32) with an unstable split-half
+ceiling, a measurement artifact.
 
 ### Experiment 2 — Scaling
 | Size | Peak ρ | Noise ceiling | ρ/ceiling |
@@ -152,6 +154,18 @@ identical to the LLM's first principal component (cosine = 0.9999); removing PC1
 −0.26. **The entire brain–LLM alignment rides on one representational dimension — the emotion ↔
 social-cognition boundary — and it is causally load-bearing.**
 
+**Within-block control (is ρ=0.73 just that 2-block split?).** `src/within_block_control.py`. Both
+the brain RDM (ρ=0.708 with the binary emotion/social membership model) and the LLM RDMs (0.835–0.865)
+are dominated by the single split. **Controlling for it, a significant residual brain–LLM agreement
+survives: partial ρ = 0.32–0.38, all 4 models p ≤ 0.001** (mean 0.36 — about half the rank agreement
+is beyond the categorical split, so it is *not* only the split). That residual is concentrated in the
+**within-social ordering** (within-social ρ = 0.52–0.65; 0.63–0.67 excluding moral, all 4 p ≤ 0.033).
+The **within-affective ordering does not align** (ρ ≈ −0.11, n.s.; consistent across 4 models, robust
+to dropping valence — consistent with the LLM organizing emotions by valence, Experiment 9). **But
+n=6 (15 pairs) is underpowered, so we make no claim about within-affective fine structure.** *Net
+framing:* the result is **one shared, causally load-bearing organizing axis plus a significant
+beyond-split residual living in the social block — not a rich fine-grained match across both families.**
+
 ### Experiment 6 — Brain geometry predicts LLM behavior
 Cross-validated 14-way nearest-centroid classification (4 models, 50 splits): the brain RDM
 predicts **which conditions the LLM confuses** — brain-distance vs LLM-confusion-distance
@@ -184,9 +198,11 @@ individuals**, not driven by a subset.
 
 ## 5. Key Findings
 
-1. **Broad, robust brain–LLM alignment exists:** ρ ≈ 0.73 (Neurosynth) and ≈ 0.56
-   (stimulus-locked real fMRI, N=91), near the noise ceiling, across *both* the emotion and the
-   social-cognition blocks — no asymmetry.
+1. **Robust brain–LLM alignment exists:** ρ ≈ 0.73 (Neurosynth) and ≈ 0.56 (stimulus-locked real
+   fMRI, N=91), near the noise ceiling, over the 14-condition set spanning emotion and social
+   cognition. It is **dominated by one emotion↔social axis**; beyond that split a significant
+   residual survives (partial ρ ≈ 0.36, p ≤ 0.001), concentrated in the social block — **not** a
+   rich within-block match across both families (Exp 5 within-block control).
 2. **Universal:** invariant across 4 architectures, scales 0.5B–7B, 96 individual brains, and
    base vs instruct models.
 3. **Originates in language pretraining:** base models carry ~91% of the alignment; RLHF adds little.
@@ -224,7 +240,8 @@ testable LLM predictions.
 | Cross-architecture | 4/4 models ρ 0.727–0.739, all within 0.012 |
 | Scale (0.5B–7B) | Δρ = −0.013, flat; ~78% of ceiling throughout |
 | Independent real fMRI (Narratives, N=91) | ρ ≈ 0.56, 71–76% of brain ceiling, identical text |
-| Per-block ceiling | affective 78%, mentalistic 87% — both near ceiling, no asymmetry |
+| Per-block row-wise | affective 78%, mentalistic 87% (row-wise, split-dominated — not a within-block test) |
+| Within-block control | partial ρ≈0.36 beyond the split (4/4 p≤0.001); within-social aligns, within-affective unresolved (n=6) |
 | Confound partial RSA | 80% retained vs GloVe+name+length (p=0.0002); ~100% vs TF-IDF+length |
 | Untrained-model baseline | ρ ≈ 0 (ns) |
 | Permutation / max-stat | p = 0.0001–0.0002; bootstrap CI [0.719, 0.759] |

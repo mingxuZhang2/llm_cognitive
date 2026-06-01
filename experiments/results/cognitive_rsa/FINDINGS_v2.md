@@ -1,8 +1,8 @@
 > # ⚠️ SUPERSEDED — dated snapshot, do not cite these numbers
 > **2026-05-25 "v2" snapshot, pre-correction.** The ρ ≈ 0.63 here still used the **old Neurosynth +
 > HCP** brain RDM (one defective HCP `theory_of_mind` map). After swapping it to Neurosynth
-> (2026-05-30) the asymmetry dissolved and the headline rose to **ρ ≈ 0.73**, both emotion and
-> social-cognition blocks near ceiling. Authoritative current numbers: `../../../PROJECT_SUMMARY_FOR_REVIEW.md`,
+> (2026-05-30) the asymmetry dissolved and the headline rose to **ρ ≈ 0.73**, dominated by one
+> causally load-bearing emotion↔social axis. Authoritative current numbers: `../../../PROJECT_SUMMARY_FOR_REVIEW.md`,
 > `../../PROJECT_SUMMARY.md`, root `../../../CLAUDE.md`. Kept only as the honest dated record.
 
 # Cognitive-Domain RSA v2: Brain vs LLM (Updated)
