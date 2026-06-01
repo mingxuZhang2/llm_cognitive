@@ -33,3 +33,4 @@ experiments/results/**/*_rsa_activations.npz
 experiments/results/**/*_multi_attribution.npz
 experiments/results/**/*_contrast_attribution.npz
 experiments/results/narratives_llm/*.npz
+experiments/results/cognitive_rsa/regional_xarch_brain_cache.npz
