@@ -1,241 +1,279 @@
-# Causal Functional Atlas of Large Language Models
+# The Brain as a Reference Frame for Large Language Models
 
 ## Target Journal: Nature Machine Intelligence
+
+> **Scope note (corrected 2026-05-31).** An earlier version of this project reported an
+> *asymmetry* — "emotion aligns, social cognition collapses; brains separate minds, language
+> models compress them." That asymmetry was traced to a **single defective brain map** (the
+> lone non-Neurosynth map, HCP `theory_of_mind`, orthogonal to its Neurosynth counterpart,
+> row-correlation −0.016). On a pure-Neurosynth brain RDM the asymmetry dissolves, the headline
+> *rises* (ρ 0.63 → 0.73), and *both* emotion and social cognition align near the noise ceiling.
+> Every number below is recomputed against the corrected RDM unless marked "(independent)".
+> This document supersedes the earlier "Causal Functional Atlas of LLMs" draft (the v1
+> AI-task-category work, archived at git tag `v1-ai-categories`).
 
 ---
 
 ## 1. One-Sentence Summary
 
-We construct a causal functional atlas of LLMs — mapping which FFN neurons implement which cognitive functions via neuroscience-standard double dissociation — and demonstrate this atlas is universal across architectures, predicts novel interventions, and enables practical behavioral control.
+We use the **human brain as a predictive reference frame to explain the internal organization
+of large language models** (not the usual neuro-AI direction of using LLMs to model brains): a
+text-only LLM reproduces the brain's **relational organization of both emotion and social
+cognition** (RSA ρ ≈ 0.73, near the noise ceiling) — universal across 4 architectures,
+invariant from 0.5B to 7B, already present in base (pre-RLHF) models, surviving confound
+control, and riding on a **single brain-like axis (the emotion ↔ social-cognition boundary)
+that is causally load-bearing** (removing that one direction inverts ρ from +0.73 to −0.36).
 
 ---
 
-## 2. Core Method
+## 2. The Idea (why this is a different claim)
 
-**Attribution:** For each of 8 cognitive categories (math, code, reasoning, language, science, ethics, factual_qa, humanities), compute neuron-level importance via gradient × activation: `importance(i) = mean(|∂L/∂act_i × act_i|)` over all samples in that category. Compute one-vs-rest selectivity. Select top-5000 neurons (~1% of total) per category.
-
-**Causal validation:** Zero-ablate each category's top-5000 neurons and measure PPL change across all 8 categories → 8×8 dissociation matrix. Double dissociation: ablating category A's neurons hurts A more than B, AND ablating B's neurons hurts B more than A.
-
-**Models tested:** Qwen2.5-7B, LLaMA-3.1-8B, Mistral-7B, Gemma-2-9b (4 main); Llama-2-7b-base, DeepSeek-R1-Distill-8B (2 extra).
-
-**Stimuli:** 8 categories from established benchmarks (GSM8K, HumanEval, HellaSwag, ARC, MMLU, TriviaQA, TruthfulQA, custom). Three scales: 15/cat (pilot), 50/cat (medium), 152/cat (balanced).
-
----
-
-## 3. Completed Experiments and Results
-
-### Experiment 1: 8-Way Functional Dissociation
-
-**Setup:** 4 models × 3 stimulus scales = 12 independent runs.
-
-**Result:** ALL 12 runs achieve 28/28 pairwise double dissociation (100%). Only ~1% of neurons per function needed.
-
-**Statistical validation** (4 models × 3 scales = 12 observations per pair):
-- Matrix-level permutation test (10,000 permutations): all 12 runs p < 0.0002
-- Per-pair one-sample t-test: ALL 28 pairs p < 1.1×10⁻⁵
-- BH-FDR correction: ALL 28/28 remain significant at α = 0.05
-- Cohen's d: mean = 3.73, min = 2.02 (all "very large" by convention)
-- Bootstrap 95% CIs: all 28 pairs above zero
-- Cross-model: 28/28 pairs positive in all 4 models
-- Cross-scale: 27-28/28 pairs positive at all 3 scales per model
-
-### Experiment 2: Discovery/Validation Split (Addresses Circularity)
-
-**Setup:** Split balanced dataset (152/cat) into discovery (82/cat) and validation (82/cat). Compute attribution on discovery set, measure ablation effects on held-out validation set. 4 models.
-
-**Result:** ALL 4 models achieve 28/28 PPL pairwise dissociation on held-out validation data.
-- LLaMA: 28/28, self-effect range 1.58x–2.47x
-- Mistral: 28/28, self-effect range 1.43x–2.02x
-- Qwen: 28/28, self-effect range 1.40x–5.52x
-- Gemma: 28/28, self-effect range 1.23x–1.74x
-
-**Significance:** Completely eliminates train-on-test circularity. Neurons found on one set of samples causally control function on a completely independent set.
-
-### Experiment 3: Predictive Experiments (Atlas Has Forward Predictive Power)
-
-**Setup:** 50/cat, 4 models. Three sub-experiments:
-
-**(a) Pathway decomposition:** Separate math neurons into math-only, reasoning-only, and shared (math∩reasoning) subsets. Predict: ablating math-only hurts math > reasoning; ablating reasoning-only hurts reasoning > math; ablating shared hurts both.
-
-**Result:** 12/12 predictions correct across all 4 models.
-
-**(b) Atlas-guided steering:** Amplify functional pathways at scales 1.2x–3.0x. DAG predicts: amplifying math neurons should disrupt reasoning (dependency exists); amplifying code neurons should NOT disrupt reasoning (no dependency).
-
-**Result:** 3/4 models fully confirm DAG predictions. Qwen: math→reasoning 1.63x vs code→reasoning 1.07x. Gemma: math→reasoning 1.35x vs code→reasoning 1.02x. LLaMA: math→reasoning 1.85x vs code→reasoning 1.19x. Mistral anomalous at high amplification scales.
-
-**(c) Instance-level vulnerability prediction:** Predict which category's ablation will most damage each sample based on its functional activation profile.
-
-**Result:** 4/4 models correctly identify the target category as most damaged.
-
-### Experiment 4: Atlas-Guided Pruning
-
-**Setup:** Compare three pruning strategies at 10–50% sparsity, 50/cat, 4 models:
-- **Atlas-guided:** Protect neurons with high functional selectivity, prune low-selectivity neurons
-- **Random:** Random neuron selection
-- **Magnitude:** Prune smallest-weight neurons (standard baseline)
-
-**Result at 50% sparsity (average PPL ratio vs baseline):**
-
-| Model | Atlas | Random | Magnitude |
-|-------|-------|--------|-----------|
-| LLaMA | 1.9x | 3,991x | 9,387x |
-| Mistral | 2.4x | 3,691x | 77.7x |
-| Qwen | 2.6x | 39.8x | 109x |
-| Gemma | 1.2x | 2.9x | 12.8x |
-
-**Key property:** Atlas-guided pruning shows linear degradation (no phase transition). Random and magnitude pruning show catastrophic collapse at 30–50% sparsity. Atlas advantage grows with sparsity (31–100% improvement over magnitude).
-
-### Experiment 5: Cross-Architecture Convergence
-
-**Setup:** Compare dissociation matrices, dependency structures, and layer profiles across 4 architectures. Null model: random permutation of neuron-category assignments.
-
-**Result:**
-- Functional Convergence Index (FCI) = 0.86 (scale: 0 = random, 1 = identical)
-- z = 5.64 vs null model, p < 0.001
-- Math most conserved layer profile (cosine similarity = 0.94 across architectures)
-- Factual QA most variable (cosine = 0.67)
-- 9 universal spillover edges across all 4 models
-- Mistral and Gemma have identical modularity rankings (Spearman ρ = 1.0)
-
-### Experiment 6: Subcategory Dissociation (Refutes Surface-Feature Critique)
-
-**Setup:** Split 4 categories into 12 subcategories (math→arithmetic/word_problem, science→factual/explanation, humanities→history/philosophy, language→procedural/activity_narration). Run 12-way dissociation on 4 models.
-
-**Result:**
-- 64/66 pairwise dissociations across subcategories
-- Within-parent splits: history vs philosophy DISSOCIATE (different neurons despite same MC format)
-- Within-parent splits: arithmetic vs word_problem COUPLE (shared neurons despite different surface format)
-- Pattern identical across 4/4 models
-
-**Significance:** The atlas captures cognitive function, not surface features (question format, answer type).
-
-### Experiment 7: Method Triangulation
-
-**Setup:** Compare 3 attribution methods on Qwen (50/cat):
-- Gradient × Activation (our method)
-- Gradient-only: |∂L/∂act|
-- Activation-only: |act|
-
-**Result:**
-- G×A vs Gradient-only dissociation matrix correlation: r = 0.963
-- G×A vs Activation-only: r = 0.19
-- Conclusion: Gradient signal is the causal driver. Our findings are not an artifact of the specific attribution method.
-
-### Experiment 8: Model Axis Expansion
-
-**Setup:** Test on two additional model types (50/cat):
-- Llama-2-7b-hf (base model, no instruction tuning)
-- DeepSeek-R1-Distill-Llama-8B (reasoning specialist)
-
-**Result:**
-- Llama-2-base: 28/28 pairwise dissociation → functional specialization exists before instruction tuning
-- DeepSeek-R1: 21/28 pairwise dissociation → reasoning specialist has different internal organization
-
-### Experiment 9: Cross-Layer Distribution & Neuron Overlap
-
-**Setup:** Analyze layer-wise distribution of top-5000 neurons per category and Jaccard overlap between categories. No GPU needed — from pre-computed attribution data, 4 models.
-
-**Result (Layer Hierarchy):**
-- Hierarchy-bottom categories (language, code) neurons concentrate in earlier layers
-- Hierarchy-top categories (reasoning, ethics) neurons concentrate in later layers
-- 4/4 models CONSISTENT
-- Cross-model mean normalized layer position: humanities(0.44) < language(0.48) < math(0.49) < science(0.52) < code(0.55) < ethics(0.58) < reasoning(0.60)
-
-**Result (Neuron Overlap):**
-- Categories with causal dependencies share 29–59x more neurons than non-dependent pairs
-- Science–humanities overlap highest (Jaccard 0.061–0.165), confirming bidirectional coupling finding
-- Ethics and factual_qa near-zero overlap with everything (most modular)
-- Overall overlap extremely sparse (Jaccard < 0.07 even for dependent pairs) → strong functional segregation
-
-### Experiment 10: Dose-Response (Running)
-
-**Setup:** Ablate 500, 1000, 2000, 5000, 10000, 20000 neurons per category. Includes random control. 50/cat, 4 models. Job 308896 on HPC3.
-
-**Expected:** Monotonically increasing specificity with neuron count + random control showing uniform (non-specific) degradation.
+The standard neuro-AI program asks *how well an LLM predicts brain activity* and treats the LLM
+as a model of the brain. We invert the direction. We treat **established neuroscience
+conclusions as testable predictions about the LLM.** If a text-only model reproduces the
+brain's representational geometry of emotion and social cognition, then a large body of known
+brain results — lesion double-dissociations, dual-process moral cognition, the cortical
+processing gradient, the developmental order in which these functions emerge — become concrete,
+falsifiable hypotheses we can check *inside the model*. The brain stops being a thing we predict
+and becomes a **map we use to predict the LLM.**
 
 ---
 
-## 4. Key Scientific Findings
+## 3. Core Method: Representational Similarity Analysis (RSA)
 
-### Finding 1: Universal 3-Layer Functional Hierarchy
-Language/code neurons in early layers → math/science in middle → reasoning/ethics in late layers. Confirmed causally (ablation spillover), structurally (layer distribution), and by neuron overlap. Consistent across 4 architectures (FCI = 0.86).
+We do not compare individual activations (which require arbitrary alignment). We compare
+**distance structures**.
 
-### Finding 2: Reasoning Is an Emergent Coalition
-Reasoning has the weakest self-effect (~1/3 of math's), depends on math+science+language neurons. It is not implemented by dedicated neurons but emerges from cross-domain coordination.
+- **Unit of analysis:** 14 cognitive conditions → all pairwise dissimilarities → a 14×14
+  representational dissimilarity matrix (RDM). 14 conditions → **91 unique pairs** = the unit of
+  statistical power.
+- **LLM side:** feed text stimuli → hidden states per layer → mean-pool over tokens → one vector
+  per stimulus → average within condition → centroid per layer → center across the 14 conditions
+  → **cosine** distance → 14×14 RDM. Report peak-layer ρ (Qwen L27, Llama L31, Mistral L14,
+  Gemma L21). Config string: `mean_all | centered | 1_cosine | v1_NS_only`.
+- **Brain side (headline):** each condition = one **Neurosynth** meta-analytic map (association
+  test over ~14,000 fMRI studies) → resample to a common MNI grid → keep voxels finite+nonzero in
+  ≥7/14 maps → flatten → **1 − Pearson** distance → 14×14 brain RDM. All 14 maps are Neurosynth
+  (the ToM map was corrected from HCP on 2026-05-30).
+- **Comparison:** Spearman ρ on the 91 upper-triangle pairs; permutation null shuffles the
+  condition labels.
+- **Noise ceiling:** split-half reliability (LLM side for Neurosynth; brain side for the fMRI
+  validator) bounds the achievable ρ.
 
-### Finding 3: Science–Humanities Knowledge Integration Zone
-Only pair with strong bidirectional coupling. Their neurons are co-localized in the same layers and share the highest Jaccard overlap (0.061–0.165). Functions as a "world knowledge integration zone."
+**Why Neurosynth, not raw fMRI, carries the headline:** statistical power here comes from the
+*number of conditions* (14 → 91 pairs → p < 0.0002), not subjects-per-map. Each Neurosynth map
+is itself a stable meta-analytic average. The controlled-fMRI validators have only 4–6
+conditions, so their permutation floor is too high to ever reach significance — they can
+*directionally support*, never confirm. (We report them honestly as a directional supplement.)
 
-### Finding 4: Competitive Inhibition Between Domains
-Code suppresses ethics; ethics suppresses humanities. These are asymmetric inhibitory interactions, not just shared dependencies.
+**The 14 conditions:**
+- **Affective (6):** anger, fear, disgust, sadness, happiness, valence
+- **Mentalistic / social (7):** belief, mentalizing, intention, theory_of_mind, empathy,
+  self_referential, judgment
+- **Moral (1):** moral
 
-### Finding 5: Functional Specialization Is Pre-Training Emergent
-Llama-2-base (no instruction tuning) achieves 28/28 dissociation. The atlas is not created by fine-tuning — it emerges during pre-training.
-
-### Finding 6: Atlas Eliminates Pruning Phase Transition
-Atlas-guided pruning maintains linear degradation at all sparsity levels. The atlas identifies which neurons are "load-bearing" for each function, preventing catastrophic collapse.
+**Models:** Qwen2.5-7B-Instruct, Meta-Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.3,
+gemma-2-9b-it (4 main); Qwen2.5 0.5B/1.5B/3B/7B (scaling); Qwen2.5-1.5B base vs Instruct.
 
 ---
 
-## 5. Robustness and Controls
+## 4. Completed Experiments and Results (corrected)
+
+### Experiment 1 — Cross-architecture brain–LLM RSA (the headline)
+| Model | Peak ρ | Permutation p (10k label shuffles) |
+|---|---|---|
+| Qwen2.5-7B | **0.739** | 0.0002 |
+| Llama-3.1-8B | **0.727** | 0.0001 |
+| Mistral-7B | **0.730** | 0.0001 |
+| Gemma-2-9B | **0.735** | 0.0001 |
+
+Null 95th percentile ≈ 0.25; **max-stat p = 0.0002** (corrected for peak-layer selection);
+bootstrap 95% CI [0.719, 0.759] (Qwen 7B); overall noise ceiling ≈ 0.97 → ρ ≈ **76% of ceiling**.
+A held-out discovery/confirmation split (freeze layer + config on a different model) keeps all 4
+positive (0.61–0.72). **Architecture-invariant** (all 4 within 0.012 of each other).
+**Per block, both align near ceiling — no asymmetry:** affective 0.74 / ceiling 0.94 (**78%**);
+mentalistic 0.70 / ceiling 0.81 (**87%**). Per condition, nearly all 14 align **0.67–0.85** (belief
+.85, ToM .79, judgment .80, happiness .81); **only empathy lags (0.24)** — and empathy is the
+smallest set (n=32) with an unstable split-half ceiling, a measurement artifact, not a divergence.
+
+### Experiment 2 — Scaling
+| Size | Peak ρ | Noise ceiling | ρ/ceiling |
+|---|---|---|---|
+| 0.5B | 0.752 | 0.966 | 78% |
+| 1.5B | 0.754 | 0.966 | 78% |
+| 3B | 0.747 | 0.962 | 78% |
+| 7B | 0.739 | 0.969 | 76% |
+
+**Scale-invariant** — a 15× parameter increase yields Δρ = **−0.013** (all p = 0.0002).
+Brain-likeness does *not* grow with size, contradicting the "bigger = more brain-like" narrative
+(Schrimpf 2021, Antonello 2023). Independently confirmed on real fMRI (Experiment 3).
+
+### Experiment 3 — Stimulus-locked validation on real fMRI (independent)
+| Model | Peak ρ | Brain ceiling | ρ/ceiling | p |
+|---|---|---|---|---|
+| Qwen2.5-0.5B | 0.540 | 0.762 | 70.9% | 0.003 |
+| Qwen2.5-1.5B | 0.582 | 0.762 | 76.3% | 0.001 |
+| Qwen2.5-3B | 0.560 | 0.762 | 73.4% | 0.002 |
+
+Narratives fMRI (Nastase et al. 2021, N=91): the **same story text** is fed to brain and LLM →
+directly comparable RDMs on identical stimuli (no Neurosynth maps; unaffected by the ToM
+correction). ρ ≈ 0.56, reaching **71–76% of the brain noise ceiling**. Confirms the alignment is
+genuine and stimulus-driven, not an artifact of meta-analytic maps. Scale-invariance reproduced.
+
+### Experiment 4 — Confound controls (where does the alignment come from?)
+Baselines vs the corrected brain RDM (Qwen 7B reference, raw ρ = 0.739):
+
+| Baseline | ρ | sig |
+|---|---|---|
+| GloVe word embeddings (mean-pooled) | 0.494 | *** |
+| Condition-name (GloVe of the label word) | 0.519 | *** |
+| Sentence length | 0.328 | ** |
+| TF-IDF | 0.195 | ns |
+
+**Partial RSA — trained LLM controlling for length + GloVe + condition-name:** ρ drops
+0.739 → **0.588 (80% retained), p = 0.0002.** Controlling TF-IDF + length alone retains ~100%
+(0.715–0.745 across 4 models). The concept names and word embeddings carry *some* emotion/social
+structure (0.49–0.52), but the trained LLM (0.74) sits well above them and 80% of its alignment
+survives partialling them out. An **untrained random-weight model aligns ≈ 0** (ns).
+
+### Experiment 5 — One-axis causal ablation (the mechanistic finding)
+Find the direction from the affective centroid to the mentalistic centroid in the LLM's hidden
+space; project it out; recompute brain–LLM ρ (2000 random-direction controls).
+
+| Model | Original ρ | After ablation | Δρ |
+|---|---|---|---|
+| Qwen2.5-7B | +0.739 | −0.364 | −1.10 |
+| Llama-3.1-8B | +0.727 | −0.390 | −1.12 |
+| Mistral-7B | +0.730 | −0.317 | −1.05 |
+| Gemma-2-9B | +0.735 | −0.323 | −1.06 |
+
+Random-direction control: Δρ ≈ 0.000 ± 0.0001 (p < 0.0001). This boundary direction is nearly
+identical to the LLM's first principal component (cosine = 0.9999); removing PC1 alone drops ρ to
+−0.26. **The entire brain–LLM alignment rides on one representational dimension — the emotion ↔
+social-cognition boundary — and it is causally load-bearing.**
+
+### Experiment 6 — Brain geometry predicts LLM behavior
+Cross-validated 14-way nearest-centroid classification (4 models, 50 splits): the brain RDM
+predicts **which conditions the LLM confuses** — brain-distance vs LLM-confusion-distance
+ρ = **0.243, p = 0.02** (per model 0.20–0.26). *Companion (Direction A,
+`src/brain_causal_coupling.py`):* the brain RDM also predicts the LLM's internal **causal
+coupling** between functions — significant in **3/4 models**, leave-one-condition-out and
+leave-two-out stable (91/91 subsets significant).
+
+### Experiment 7 — Brain-derived cognitive steering
+Steering Qwen2.5-3B along the brain-derived boundary direction (α from −20 to +20) on moral
+dilemmas (LLM-judge rated): strong negative α → emotional collapse ("Horror! Horror!");
+moderate positive α → structured analytical reasoning ("utilitarian vs deontological"). The
+brain-derived axis is **causally functional** — it controls emotional ↔ analytical response style.
+
+### Experiment 8 — Base vs Instruct (independent)
+Brain–LLM RSA on the pieman story (N=91): base ρ = 0.525, instruct ρ = 0.577 — **base models
+already carry ~91% of the alignment.** Emotion-space PCA is nearly identical (PC2-valence
+r ≈ 0.65 both). The alignment is primarily a product of **language pretraining, not RLHF.**
+
+### Experiment 9 — Emotion geometry (independent)
+GoEmotions 28-category stimuli × Qwen2.5 (1.5B, 3B): the LLM emotion space is
+**valence-dominant** — PC1/PC2 capture valence, arousal appears only at PC3. Consistent across sizes.
+
+### Experiment 10 — Individual differences (independent)
+Per-subject brain–LLM alignment across 96 Narratives subjects: mean ρ = 0.568, range
+[0.278, 0.776]; **97% of subjects ρ > 0.3** (all positive). The alignment is **universal across
+individuals**, not driven by a subset.
+
+---
+
+## 5. Key Findings
+
+1. **Broad, robust brain–LLM alignment exists:** ρ ≈ 0.73 (Neurosynth) and ≈ 0.56
+   (stimulus-locked real fMRI, N=91), near the noise ceiling, across *both* the emotion and the
+   social-cognition blocks — no asymmetry.
+2. **Universal:** invariant across 4 architectures, scales 0.5B–7B, 96 individual brains, and
+   base vs instruct models.
+3. **Originates in language pretraining:** base models carry ~91% of the alignment; RLHF adds little.
+4. **Survives confound control:** ~80% retained after partialling word-embedding + concept-name +
+   length (ρ 0.74 → 0.59, p = 0.0002); untrained model ≈ 0.
+5. **Carried by one brain-like axis:** the emotion ↔ social-cognition boundary ≈ PC1
+   (cosine 0.9999); removing it inverts ρ to −0.36 (4/4 models, p < 0.0001).
+6. **Causally functional and behaviorally predictive:** the brain-derived axis steers
+   emotional ↔ analytical output; the brain RDM predicts LLM confusion (ρ = 0.24) and internal
+   causal coupling (Direction A, 3/4 models).
+
+---
+
+## 6. The Predictive Program (turning the reference frame into LLM predictions)
+
+The strategic payoff: conclusions that follow from the brain's emotion/social separation become
+testable LLM predictions.
+
+- **Direction A — causal coupling (strongest, done):** the brain RDM predicts the causal coupling
+  between functions inside the LLM (ablate X, measure effect on Y). **3/4 models significant**,
+  LOO/leave-2-out stable. Analog of lesion double-dissociation work (Shamay-Tsoory 2009).
+- **Direction B — cognitive reserve.** *(preliminary)*
+- **Direction C — developmental emergence.** Along training/scale, emotion structure should form
+  before social cognition (cf. affect-early, theory-of-mind ~age 4). *(preliminary)*
+- **Direction D — cortical processing gradient → layer depth (Margulies 2016).** Social cognition
+  sits at the abstract end of the cortical gradient → predict it peaks in *deeper* LLM layers than
+  emotion. **Cheapest next test — per-layer data already on disk, no new GPU runs needed.**
+
+---
+
+## 7. Robustness and Controls
 
 | Control | Result |
-|---------|--------|
-| Discovery/validation split | 28/28 × 4 models on held-out data |
-| Method triangulation | G×A and Grad-only converge (r=0.96) |
-| 3 stimulus scales (15, 50, 152/cat) | 28/28 at all scales |
-| Subcategory dissociation | 64/66, cognitive function not surface features |
-| Cross-architecture | FCI=0.86, z=5.64, p<0.001 |
-| Base model | 28/28 without instruction tuning |
-| Statistical validation | Permutation p<0.0002, FDR-corrected, d>2.0 |
-| Random neuron control | Random ablation → uniform degradation (in pruning) |
+|---|---|
+| Cross-architecture | 4/4 models ρ 0.727–0.739, all within 0.012 |
+| Scale (0.5B–7B) | Δρ = −0.013, flat; ~78% of ceiling throughout |
+| Independent real fMRI (Narratives, N=91) | ρ ≈ 0.56, 71–76% of brain ceiling, identical text |
+| Per-block ceiling | affective 78%, mentalistic 87% — both near ceiling, no asymmetry |
+| Confound partial RSA | 80% retained vs GloVe+name+length (p=0.0002); ~100% vs TF-IDF+length |
+| Untrained-model baseline | ρ ≈ 0 (ns) |
+| Permutation / max-stat | p = 0.0001–0.0002; bootstrap CI [0.719, 0.759] |
+| Causal ablation + random control | +0.73 → −0.36 (4/4); random-direction Δρ ≈ 0, p<0.0001 |
+| Individual differences | 97% of 96 subjects ρ > 0.3, all positive |
+| Base vs instruct | base = 91% of instruct → pretraining, not RLHF |
 
 ---
 
-## 6. What Is Novel (vs Existing Literature)
+## 8. What Is Novel (vs Existing Literature)
 
 | Aspect | Best Prior Work | Our Work |
-|--------|----------------|----------|
-| Cognitive domains tested | 1–3 (AlKhamissi 2025, Dai 2022) | 8 + 12 subcategories |
-| Causal dissociation | None at NMI level (all correlational) | 28/28 double dissociation × 4 models × 3 scales |
-| Cross-architecture | Same-architecture random seeds (Gurnee 2024) | 4 distinct architectures, FCI=0.86 |
-| Dependency structure | Not attempted | 3-layer DAG with causal validation |
-| Predictive control | Not demonstrated | 12/12 pathway, steering, instance-level |
-| Functional pruning | Not demonstrated | Atlas eliminates phase transition |
-| Discovery/validation split | Not standard | 28/28 on held-out validation |
+|---|---|---|
+| Direction of claim | LLM → predict brain (encoding/decoding) | **Brain → predict LLM** (reference frame) |
+| What is compared | voxel-wise activity prediction | **condition-level representational geometry (RDM)** |
+| Scaling | bigger = more brain-like (Schrimpf 2021, Antonello 2023) | **saturates by 0.5B, Δρ=−0.013** |
+| Mechanism | correlational | **one causally load-bearing axis** (+0.73 → −0.36) |
+| Confounds | warned about (Hadidi 2025) | untrained + GloVe/TF-IDF/name/length + **partial RSA (80%)** |
+| Steering source | behavioral supervision (Zou 2023, Turner 2023) | **derived from brain data**, universal across archs |
+| Predictive use | not attempted | **brain RDM predicts LLM confusion + causal coupling** |
+
+Related: Schrimpf 2021 (PNAS); Goldstein 2022 (Nat Neurosci); Caucheteux & King 2023 (Nat Hum
+Behav); Tang 2023 (Nat Neurosci); Mischler 2024 (Nat Mach Intell); Antonello & Huth 2023
+(NeurIPS); Hadidi 2025 (Nat Commun); Zou 2023 / Turner 2023 (rep. engineering); Mahowald 2024
+(TiCS, language vs thought).
 
 ---
 
-## 7. Proposed Framework: Causal Functional Atlas Construction
+## 9. Controlled-fMRI Validators (status: directional supplement, honestly demoted)
 
-We formalize the atlas construction as a 5-stage pipeline:
+Re-audited 2026-05-30 with corrected LLM RDMs + pure-Neurosynth brain:
+- **Kragel 2015** (CANlab emotion maps, N=32): LLM ρ +0.629 (4 conditions); non-significant
+  (only 4 conditions → floor too high).
+- **IBC** (NeuroVault coll. 2138, 12 subjects): LLM ρ +0.264 (6 conditions); non-significant;
+  has outlier maps.
+- **HCP** (coll. 457): the lone null — and the source of the discredited ToM map, so its earlier
+  disagreement was its own artifact.
 
-1. **Attribution Stage:** Compute neuron importance via gradient × activation (pluggable — method triangulation shows gradient-only also works, r=0.96). One-vs-rest selectivity scoring.
-
-2. **Dissociation Validation Stage:** 8×8 ablation matrix + permutation test + pairwise double dissociation criterion. BH-FDR correction. Discovery/validation split.
-
-3. **Structural Discovery Stage:** Spillover matrix → asymmetric dependency extraction → DAG construction. Cross-layer distribution analysis. Neuron overlap (Jaccard) validation.
-
-4. **Convergence Quantification Stage:** Functional Convergence Index (FCI) across architectures with null model baseline. Layer profile similarity, hierarchy consistency, DAG edge consistency.
-
-5. **Predictive Validation Stage:** Pathway decomposition, atlas-guided steering, instance-level vulnerability prediction, atlas-guided pruning.
-
----
-
-## 8. Experimental Scale Summary
-
-- **6 models** (4 main + base model + reasoning specialist)
-- **8 cognitive categories** + 12 subcategories
-- **3 stimulus scales** (15, 50, 152 samples/category)
-- **~500,000 neurons** per model analyzed
-- **28 pairwise dissociations** × 12 independent replications = 336 statistical tests
-- **10,000 permutations** per matrix-level test
-- **3 attribution methods** compared
-- **5 sparsity levels** × 3 pruning methods × 4 models = 60 pruning conditions
-- **Discovery/validation split** on 4 models (82/cat per split)
+These cannot reach significance with 4–6 conditions; they directionally support the boundary.
+The **Neurosynth headline (91 pairs) stands on its own** as the statistically-powered result.
 
 ---
 
-## 9. Pending (Running on HPC3)
+## 10. Status
 
-- **Dose-response at scale** (Job 308896): 500–20000 neurons × 4 models × 50/cat + random control. Expected completion: ~6h.
+- Headline finding consolidated and recomputed against the corrected brain RDM; all docs, README,
+  and the plain-language briefing deck (`experiments/present/index.html`) reflect the corrected story.
+- Code synced to GitHub (`main` / `cognitive-atlas` at the corrected commit); large activation/
+  attribution NPZ are GPU-reproducible intermediates, kept locally, excluded from the repo.
+- **Open:** empathy condition is underpowered (n=32) — rebuild with a proper empathy-induction set;
+  run Direction D (layer-depth / cortical-gradient) as the next cheap empirical test.
+- The paper is **not** being written yet — we are still consolidating the finding.
