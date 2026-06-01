@@ -1,3 +1,13 @@
+> # 🗄️ ARCHIVED v1 PLAN — not the current project
+> This is the **original v1 execution plan** (module discovery → double dissociation → atlas-guided
+> pruning → modularity scaling law → brain-network graph comparison) for the *AI-task functional
+> atlas*, archived at git tag `v1-ai-categories`. The project **pivoted** to the brain-as-reference-
+> frame RSA program (see the honest pivot arc in root `../CLAUDE.md`). **None of the phases below
+> are being executed.** The current pipeline and plan live in `CLAUDE.md` (this dir),
+> `../PROJECT_SUMMARY_FOR_REVIEW.md`, and `PROJECT_SUMMARY.md`. The HPC3 paths/partitions here are
+> also stale — this cluster is `/hpc2hdd`, partition `i64m512u` (see `CLAUDE.md`). Kept for the
+> auditable v1 record only.
+
 # Experiment Plan: Causal Functional Modules in LLMs
 
 ## HPC3 Environment

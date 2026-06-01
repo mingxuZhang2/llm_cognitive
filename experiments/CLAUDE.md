@@ -1,84 +1,126 @@
-# Experiment Code: Causal Functional Modules in LLMs
+# Experiments: Brain as a Reference Frame for LLMs
 
-## Pipeline
-1. Phase 1: `src/activation_extraction.py` — Extract FFN activations
-2. Phase 2: `src/module_discovery.py` — IterD dual partitioning
-3. Phase 3: `src/double_dissociation.py` — Ablation + benchmark evaluation
-4. Phase 4: Atlas-guided pruning (TODO)
-5. Phase 5: Modularity scaling law (TODO)
-6. Phase 6: Brain comparison (TODO)
+> Working-directory guide for `experiments/`. The canonical project overview is the **root
+> `../CLAUDE.md`**; the review-facing summary is `../PROJECT_SUMMARY_FOR_REVIEW.md`; the detailed
+> log is `PROJECT_SUMMARY.md`. **Read those for the science.** This file tells an agent how the
+> code in *this directory* is laid out and how to run it.
 
-## Running on HPC3
-- SLURM scripts in `scripts/slurm/`
-- Submit: `sbatch scripts/slurm/phase1_extract_activations.sh`
-- Logs: `/data/user/mzhang630/logs/`
+## What this directory does (current)
 
-## Stimulus Preparation
-- `src/stimulus_preparation.py` — Original: downloads from HuggingFace, creates stimuli_full.jsonl (3133 samples, unbalanced)
-- `src/prepare_balanced_stimuli.py` — Creates balanced subsets from stimuli_full.jsonl:
-  - `stimuli_balanced.jsonl` — 152/category (matches smallest category = science), 1216 total
-  - `stimuli_medium.jsonl` — 50/category, 400 total (for fast iteration)
-- 8 categories: code, ethics, factual_qa, humanities, language, math, reasoning, science
+Representational Similarity Analysis (RSA) between the **human brain** and **LLMs**, in the
+brain-as-reference-frame direction (brain geometry → predict LLM organization). The headline:
+a text-only LLM reproduces the brain's relational geometry of **both emotion and social
+cognition** (RSA ρ ≈ 0.73, near noise ceiling, 4 architectures, scale-invariant 0.5B–7B, carried
+by one causally load-bearing emotion↔social boundary axis). See the overview docs above.
 
-## Scaled Experiments
-- `scripts/slurm/scaled_multi_dissociation.sh` — 8-way dissociation on medium set (50/cat) across 4 models
-  - Output: `/data/user/mzhang630/data/nature_exp/results/scaled_multi/`
+> **Legacy v1 code is still present in this directory.** The original project (v1, archived at
+> git tag `v1-ai-categories`) was an *AI-task functional atlas* — neuron attribution + double
+> dissociation + atlas-guided pruning over 8 engineering categories (math/code/reasoning/…). Those
+> files (`double_dissociation.py`, `multi_function_dissociation.py`, `atlas_pruning.py`,
+> `module_discovery.py`, `dose_response.py`, `method_triangulation.py`, `accuracy_dissociation.py`,
+> `scaling_law.py`, the `phase0–6_*.sh` SLURM scripts, `PLAN.md`, `analysis_findings.md`,
+> `results/{dissociation,multi,scaled_multi,pruning,dose_response,accuracy,subcategory,...}`) are
+> **kept for the v1 record — they are NOT the current pipeline.** Do not extend them. The RSA
+> pipeline below is the live project.
 
-## Dose-Response Experiment
-- `src/dose_response.py` — Dose-response curves for causal ablation
-  - Loads pre-computed selectivity from `multi_attribution.npz` (no re-computation)
-  - Sweeps ablation sizes: 500, 1000, 2000, 5000, 10000, 20000 neurons
-  - Tests math and code functions; also runs random ablation controls
-  - Output: `{model_short}_dose_response.json`
-- `scripts/slurm/dose_response.sh` — SLURM script for Qwen on HPC3
-  - Output: `/data/user/mzhang630/data/nature_exp/results/dose_response/`
+---
 
-## Subcategory Dissociation (Format-Control Experiment)
-- `src/prepare_subcategory_stimuli.py` — Splits 8 broad categories into 12 format-matched subcategories
-  - Addresses criticism: categories might be distinguished by surface features, not cognitive functions
-  - Splits: science -> science_factual / science_explanation (both MC, different cognitive demand);
-    humanities -> history / philosophy; math -> arithmetic / word_problem;
-    language -> procedural / activity_narration; code, reasoning, factual_qa, ethics unchanged
-  - Reads stimuli_full.jsonl, outputs stimuli_subcategory.jsonl with category=subcategory
-  - 581 samples total, ~50/subcat (31 for science_explanation)
-- `scripts/slurm/subcategory_dissociation.sh` — 12-way dissociation on subcategory stimuli across 4 models
-  - Uses existing multi_function_dissociation.py (reads categories from stimuli automatically)
-  - Output: `/data/user/mzhang630/data/nature_exp/results/subcategory/`
-  - SLURM job 306991 submitted 2026-05-20
+## RSA pipeline (the live project)
 
-## Accuracy-Based Dissociation
-- `src/accuracy_dissociation.py` — Extends causal dissociation to downstream task ACCURACY
-  - Supports 4 answer_types: multiple_choice (log-prob of A/B/C/D), exact_match (generate + extract),
-    completion (log-prob of gold completion), generation (mean log-prob of gold answer)
-  - Uses separate DISCOVERY stimuli (for attribution) and VALIDATION stimuli (for accuracy)
-  - Outputs: 8x8 accuracy drop matrix + 8x8 PPL ratio matrix + baseline accuracies + random control
-  - Output per model: `{model_short}_accuracy_dissociation.json`
-- `scripts/slurm/accuracy_dissociation.sh` — SLURM array job for 4 models
-  - Discovery: `stimuli/stimuli_medium_discovery.jsonl`, Validation: `stimuli/stimuli_medium_validation.jsonl`
-  - Output: `/data/user/mzhang630/data/nature_exp/results/accuracy/`
-  - Time: ~6-8h per model (generation for exact_match is slower than PPL-only)
+**1. Stimuli** — 14 cognitive conditions (6 affective + 7 mentalistic/social + 1 moral),
+`data/cognitive_stimuli/rsa/rsa_conditions_manifest.json` (60/condition target).
+Builders: `prepare_cognitive_stimuli.py`, `prepare_emotion_stimuli.py`, `build_rsa_stimuli.py`.
 
-## Statistical Validation
-- `src/statistical_validation.py` — Formal statistical validation of all dissociation claims
-  - No GPU needed; works from pre-computed JSON dissociation results
-  - Tests: cross-scale consistency, cross-model universality, matrix-level permutation test,
-    per-pair cross-replication (t-test, Wilcoxon, sign test), Cohen's d, bootstrap CIs, BH-FDR
-  - Uses 12 independent observations per pair (4 models x 3 scales)
-  - Output: `results/statistical_validation.json`
-  - Run: `python -m experiments.src.statistical_validation`
+**2. Brain RDM** — `build_brain_rdm.py` → `results/cognitive_rsa/brain_rdm.npz`.
+Each condition = one Neurosynth meta-analytic map → resample to MNI anchor → mask voxels
+finite+nonzero in ≥7/14 maps → flatten → **1 − Pearson** → 14×14 RDM. All 14 maps are Neurosynth
+(the ToM map was corrected from HCP on 2026-05-30 — see `tom_source_check.py`). Map downloaders:
+`download_neurosynth_maps.py`, `download_hcp_maps.py` (HCP only for the demoted validator).
 
-## Method Triangulation (Robustness to Attribution Method)
-- `src/method_triangulation.py` — Compares 3 attribution methods on one model (Qwen)
-  - Method 1: Gradient x Activation (existing): |dL/d_act * act|
-  - Method 2: Activation-Only: |act| (no gradient, simplest baseline)
-  - Method 3: Gradient-Only: |dL/d_act| (gradient without activation weighting)
-  - Per method: importance → selectivity → top-5000 neurons → 8x8 ablation dissociation matrix
-  - Cross-method: Jaccard overlap of top-k neurons, Pearson/Spearman correlation of dissociation matrices
-  - Output: `{model_short}_method_triangulation.json` + per-method `_attribution.npz`
-- `scripts/slurm/method_triangulation.sh` — Single GPU job for Qwen on medium stimuli
-  - Output: `/data/user/mzhang630/data/nature_exp/results/method_triangulation/`
-  - SLURM job 307966 submitted 2026-05-20
+**3. LLM RDM** — extract hidden states (`extract_rsa_activations_v2.py`, GPU) →
+`reconstruct_headline_rdms.py` → `results/cognitive_rsa/{model}_rdm14_headline.npz`.
+Recipe: `mean_all | centered | 1_cosine | v1_NS_only` at peak layer (Qwen L27, Llama L31,
+Mistral L14, Gemma L21).
 
-## Configs
-- `configs/models.yaml` — Model paths and specs
-- `configs/tasks.yaml` — Stimulus categories, dissociation pairs, pruning configs
+**4. Compare** — Spearman ρ on the 91 upper-triangle pairs; permutation null shuffles condition
+labels. `rsa_cross_model_v2.py` (cross-arch ρ), `rsa_scaling_analysis.py` (scaling + noise
+ceiling), `rsa_deep_analysis.py` (gap + confusion + one-axis causal ablation),
+`confirmatory_rsa.py` (discovery/confirmation split, max-stat perm, bootstrap, CV-ablation).
+
+**5. Confound controls** — `baseline_controls.py` (GloVe / TF-IDF / condition-name / length),
+`fix_all_holes.py` (partial RSA + LOO / leave-2-out stability),
+`affective_ceiling_control.py` (per-block alignment vs LLM split-half ceiling).
+
+**6. Independent real-fMRI validation (Narratives, N=91, same text to brain & LLM)** —
+`narratives_preprocess.py` → `narratives_annotate.py` → `narratives_brain_rdm.py`
+(`_glm.py` GLM variant) → `extract_narratives_llm.py` (GPU) → compare.
+Regional / MVPA variants: `regional_rsa*.py`.
+
+**7. Mechanism / prediction / predictive program** —
+`cognitive_steering.py` (brain-derived activation steering), `emotion_geometry.py` (emotion-space
+PCA), `brain_causal_coupling.py` (**Direction A** — brain RDM predicts LLM causal coupling),
+`cognitive_reserve.py` (Direction B), `developmental_emergence.py` (Direction C).
+
+**Demoted validators (directional supplement only — see overview docs):**
+`kragel_ibc_reaudit.py`, `kragel_affective_validation.py`, `ibc_boundary_validation.py`,
+`hcp_boundary_validation.py` → `results/affective_validation/`.
+
+---
+
+## Key files (live pipeline)
+
+| File | Purpose |
+|---|---|
+| `src/build_brain_rdm.py` | Build the 14-map Neurosynth brain RDM (1−Pearson). |
+| `src/reconstruct_headline_rdms.py` | Rebuild `{model}_rdm14_headline.npz` (headline recipe). |
+| `src/rsa_cross_model_v2.py` | 4-model cross-architecture ρ. |
+| `src/rsa_scaling_analysis.py` | Scaling curve + noise ceiling (Qwen 0.5B–7B). |
+| `src/rsa_deep_analysis.py` | Gap + confusion (geometry→behavior) + one-axis causal ablation. |
+| `src/confirmatory_rsa.py` | Discovery/confirmation split, max-stat perm p, bootstrap CI, CV-ablation. |
+| `src/baseline_controls.py` | GloVe / TF-IDF / condition-name / length baselines + partial RSA. |
+| `src/fix_all_holes.py` | Partial RSA + LOO / leave-2-out stability. |
+| `src/tom_source_check.py` | Diagnostic that found the HCP-ToM artifact. |
+| `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling. |
+| `src/narratives_*.py` | Narratives fMRI pipeline (independent stimulus-locked validation). |
+| `present/build_present.py` | Regenerate the plain-language briefing deck (`present/index.html`). |
+
+## Results layout (live pipeline)
+
+- `results/cognitive_rsa/` — `brain_rdm.npz`, `{model}_rdm14_headline.npz`, `deep_analysis.json`,
+  `scaling_summary.json`, `confirmatory_rsa.json`, `baseline_controls.json`; archived old RDM
+  `brain_rdm_hcptom.npz`; dated `FINDINGS*.md` snapshots (**superseded — banners point to current**).
+- `results/affective_validation/` — ceiling control, Kragel/IBC/HCP re-audits, ToM source check.
+- `results/narratives_brain_rdm/`, `results/developmental_emergence/`, `results/cognitive_reserve/`,
+  `results/brain_causal_coupling/`, `results/robustness_checks/`, `results/emotion_geometry/`,
+  `results/next_token/`, `results/specificity_*/` — supporting experiments.
+
+## Running (this cluster — `/hpc2hdd`, NOT the HPC3 in code comments)
+
+- The **login node is memory-saturated** (~5 GB free of 503 GB). Scripts that load the large
+  `*_rsa_v2_per_stim.npz` (each ~100–580 MB, float64-expanded) get **OOM-killed (exit 137)**.
+  Submit those to **SLURM**: partition `i64m512u` (64-core, 512 GB), account `root`. GPU
+  partition: `i64m1tga800u`.
+- conda: `source /hpc2hdd/home/mzhang630/miniconda3/etc/profile.d/conda.sh; conda activate base`
+  (base has numpy/scipy/sklearn/nibabel/matplotlib). **Do not** combine `set -e` with
+  `source ~/.bashrc` (bashrc early-returns non-interactively → conda never inits → job dies in ~2 s).
+- Template: `scripts/slurm/rsa_recompute_local.sh`. Logs → `logs/` (gitignored).
+  Submit `sbatch …`; watch `squeue -u $USER`.
+- Small jobs (tiny RDM NPZ, permutation from `*_rdm14_headline.npz`) are fine on the login node.
+- The `phase0–6_*.sh` and `*_dissociation*.sh` / `*_pruning*.sh` SLURM scripts target the **old
+  HPC3** (`/data/user/mzhang630`, partition `acd_u`) and are v1 — they won't run here as-is.
+
+## Data note
+Large activation/attribution NPZ (`*_rsa_v2_per_stim.npz`, `*_multi_attribution.npz`,
+`*_contrast_attribution.npz`, …) are **gitignored** — GPU-reproducible intermediates kept locally,
+excluded from GitHub (each >100 MB exceeds the GitHub limit). Re-extract with the `extract_*` scripts.
+
+## Reproduce the headline
+```bash
+python src/build_brain_rdm.py            # corrected 14-map Neurosynth brain RDM
+python src/reconstruct_headline_rdms.py  # LLM headline RDMs (needs extracted activations)
+python src/rsa_cross_model_v2.py         # cross-architecture ρ
+python src/rsa_deep_analysis.py          # gap + confusion + one-axis causal ablation
+python src/baseline_controls.py          # confound baselines + partial RSA
+python src/fix_all_holes.py              # partial RSA + LOO stability
+# Heavy CPU recomputes (load large per-stim NPZ) → sbatch scripts/slurm/rsa_recompute_local.sh
+```

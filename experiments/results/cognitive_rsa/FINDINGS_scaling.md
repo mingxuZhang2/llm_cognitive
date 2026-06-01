@@ -1,3 +1,10 @@
+> # ⚠️ SUPERSEDED — dated snapshot, do not cite these numbers
+> **2026-05-26 snapshot, pre-correction.** Built on the **old Neurosynth + HCP** brain RDM, so the
+> per-size ρ here (0.665 … 0.639) are the old values. The *scale-invariance conclusion is unchanged
+> and confirmed*, but the corrected per-size numbers are **0.752 / 0.754 / 0.747 / 0.739** (Δρ
+> = −0.013). Authoritative current numbers: `../../../PROJECT_SUMMARY_FOR_REVIEW.md`,
+> `../../PROJECT_SUMMARY.md`. Kept only as the honest dated record.
+
 # RSA Scaling Analysis: 4-point Qwen2.5-Instruct curve
 
 **Date:** 2026-05-26
