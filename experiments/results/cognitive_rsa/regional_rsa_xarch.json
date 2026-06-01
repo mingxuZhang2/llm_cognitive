@@ -1,0 +1,353 @@
+{
+  "valid_conditions": [
+    "anger",
+    "fear",
+    "happiness",
+    "sadness",
+    "belief",
+    "mentalizing",
+    "intention",
+    "theory_of_mind",
+    "empathy",
+    "self_referential",
+    "judgment",
+    "moral"
+  ],
+  "n_subjects": 261,
+  "stories": [
+    "pieman",
+    "tunnel",
+    "notthefallintact",
+    "black",
+    "prettymouth",
+    "forgot",
+    "sherlock",
+    "merlin",
+    "bronx",
+    "21styear",
+    "slumlordreach",
+    "lucy"
+  ],
+  "models": {
+    "Qwen2.5-7B-Instruct": {
+      "frozen_peak": {
+        "Limbic": {
+          "n": 26,
+          "mean_rho": 0.23449814408271497,
+          "n_sig": 26
+        },
+        "Default_Mode": {
+          "n": 91,
+          "mean_rho": 0.20774507509457826,
+          "n_sig": 91
+        },
+        "Ventral_Attention": {
+          "n": 47,
+          "mean_rho": 0.2123338552465465,
+          "n_sig": 47
+        },
+        "Frontoparietal": {
+          "n": 52,
+          "mean_rho": 0.20940287811278713,
+          "n_sig": 52
+        },
+        "Visual": {
+          "n": 61,
+          "mean_rho": 0.21024458493141968,
+          "n_sig": 61
+        },
+        "Dorsal_Attention": {
+          "n": 46,
+          "mean_rho": 0.20236008673668798,
+          "n_sig": 46
+        },
+        "Somatomotor": {
+          "n": 77,
+          "mean_rho": 0.1999822210302241,
+          "n_sig": 77
+        },
+        "_whole_cortex_mean_rho": 0.2085062728206033,
+        "_n_parcels_sig_pos": 400
+      },
+      "last": {
+        "Limbic": {
+          "n": 26,
+          "mean_rho": 0.1507665290445025,
+          "n_sig": 26
+        },
+        "Default_Mode": {
+          "n": 91,
+          "mean_rho": 0.135113104639924,
+          "n_sig": 91
+        },
+        "Ventral_Attention": {
+          "n": 47,
+          "mean_rho": 0.1350239210092747,
+          "n_sig": 47
+        },
+        "Frontoparietal": {
+          "n": 52,
+          "mean_rho": 0.13348765924558967,
+          "n_sig": 52
+        },
+        "Visual": {
+          "n": 61,
+          "mean_rho": 0.13324265382895167,
+          "n_sig": 61
+        },
+        "Dorsal_Attention": {
+          "n": 46,
+          "mean_rho": 0.12883814894257298,
+          "n_sig": 46
+        },
+        "Somatomotor": {
+          "n": 77,
+          "mean_rho": 0.12755467965324788,
+          "n_sig": 77
+        },
+        "_whole_cortex_mean_rho": 0.13344692978455303,
+        "_n_parcels_sig_pos": 400
+      }
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "frozen_peak": {
+        "Limbic": {
+          "n": 26,
+          "mean_rho": 0.21581012158730284,
+          "n_sig": 26
+        },
+        "Default_Mode": {
+          "n": 91,
+          "mean_rho": 0.1898836476095294,
+          "n_sig": 91
+        },
+        "Ventral_Attention": {
+          "n": 47,
+          "mean_rho": 0.1941003865575927,
+          "n_sig": 47
+        },
+        "Frontoparietal": {
+          "n": 52,
+          "mean_rho": 0.19298273842130093,
+          "n_sig": 52
+        },
+        "Visual": {
+          "n": 61,
+          "mean_rho": 0.195025051121965,
+          "n_sig": 61
+        },
+        "Dorsal_Attention": {
+          "n": 46,
+          "mean_rho": 0.18670583036179544,
+          "n_sig": 46
+        },
+        "Somatomotor": {
+          "n": 77,
+          "mean_rho": 0.1821561608491263,
+          "n_sig": 77
+        },
+        "_whole_cortex_mean_rho": 0.19139829090079183,
+        "_n_parcels_sig_pos": 400
+      },
+      "last": {
+        "Limbic": {
+          "n": 26,
+          "mean_rho": 0.16527555974010494,
+          "n_sig": 26
+        },
+        "Default_Mode": {
+          "n": 91,
+          "mean_rho": 0.14846905300280855,
+          "n_sig": 91
+        },
+        "Ventral_Attention": {
+          "n": 47,
+          "mean_rho": 0.14826917011243188,
+          "n_sig": 47
+        },
+        "Frontoparietal": {
+          "n": 52,
+          "mean_rho": 0.14837750207511485,
+          "n_sig": 52
+        },
+        "Visual": {
+          "n": 61,
+          "mean_rho": 0.1477543945893499,
+          "n_sig": 61
+        },
+        "Dorsal_Attention": {
+          "n": 46,
+          "mean_rho": 0.1423286794500767,
+          "n_sig": 46
+        },
+        "Somatomotor": {
+          "n": 77,
+          "mean_rho": 0.13965788342312768,
+          "n_sig": 77
+        },
+        "_whole_cortex_mean_rho": 0.1470148095698082,
+        "_n_parcels_sig_pos": 400
+      }
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "frozen_peak": {
+        "Limbic": {
+          "n": 26,
+          "mean_rho": 0.21658000816813633,
+          "n_sig": 26
+        },
+        "Default_Mode": {
+          "n": 91,
+          "mean_rho": 0.19233580837838296,
+          "n_sig": 91
+        },
+        "Ventral_Attention": {
+          "n": 47,
+          "mean_rho": 0.19653938359553264,
+          "n_sig": 47
+        },
+        "Frontoparietal": {
+          "n": 52,
+          "mean_rho": 0.19578427331588208,
+          "n_sig": 52
+        },
+        "Visual": {
+          "n": 61,
+          "mean_rho": 0.19647742766395332,
+          "n_sig": 61
+        },
+        "Dorsal_Attention": {
+          "n": 46,
+          "mean_rho": 0.18819676933139334,
+          "n_sig": 46
+        },
+        "Somatomotor": {
+          "n": 77,
+          "mean_rho": 0.18456833175054965,
+          "n_sig": 77
+        },
+        "_whole_cortex_mean_rho": 0.1935142700943947,
+        "_n_parcels_sig_pos": 400
+      },
+      "last": {
+        "Limbic": {
+          "n": 26,
+          "mean_rho": 0.14060164834815378,
+          "n_sig": 26
+        },
+        "Default_Mode": {
+          "n": 91,
+          "mean_rho": 0.12630920979638682,
+          "n_sig": 91
+        },
+        "Ventral_Attention": {
+          "n": 47,
+          "mean_rho": 0.12681796012593813,
+          "n_sig": 47
+        },
+        "Frontoparietal": {
+          "n": 52,
+          "mean_rho": 0.12560823146454123,
+          "n_sig": 52
+        },
+        "Visual": {
+          "n": 61,
+          "mean_rho": 0.12657002053950503,
+          "n_sig": 61
+        },
+        "Dorsal_Attention": {
+          "n": 46,
+          "mean_rho": 0.12182923371276379,
+          "n_sig": 46
+        },
+        "Somatomotor": {
+          "n": 77,
+          "mean_rho": 0.1201103757745226,
+          "n_sig": 77
+        },
+        "_whole_cortex_mean_rho": 0.12553817012233404,
+        "_n_parcels_sig_pos": 400
+      }
+    },
+    "gemma-2-9b-it": {
+      "frozen_peak": {
+        "Limbic": {
+          "n": 26,
+          "mean_rho": 0.2197067673907974,
+          "n_sig": 26
+        },
+        "Default_Mode": {
+          "n": 91,
+          "mean_rho": 0.19453410258459522,
+          "n_sig": 91
+        },
+        "Ventral_Attention": {
+          "n": 47,
+          "mean_rho": 0.19884836206048778,
+          "n_sig": 47
+        },
+        "Frontoparietal": {
+          "n": 52,
+          "mean_rho": 0.1983596465499763,
+          "n_sig": 52
+        },
+        "Visual": {
+          "n": 61,
+          "mean_rho": 0.19965777033078724,
+          "n_sig": 61
+        },
+        "Dorsal_Attention": {
+          "n": 46,
+          "mean_rho": 0.19137189725650564,
+          "n_sig": 46
+        },
+        "Somatomotor": {
+          "n": 77,
+          "mean_rho": 0.18724501255563258,
+          "n_sig": 77
+        },
+        "_whole_cortex_mean_rho": 0.19618912788890394,
+        "_n_parcels_sig_pos": 400
+      },
+      "last": {
+        "Limbic": {
+          "n": 26,
+          "mean_rho": 0.14307929217484905,
+          "n_sig": 26
+        },
+        "Default_Mode": {
+          "n": 91,
+          "mean_rho": 0.12888550625093909,
+          "n_sig": 91
+        },
+        "Ventral_Attention": {
+          "n": 47,
+          "mean_rho": 0.12807021132299826,
+          "n_sig": 47
+        },
+        "Frontoparietal": {
+          "n": 52,
+          "mean_rho": 0.1280270113205121,
+          "n_sig": 52
+        },
+        "Visual": {
+          "n": 61,
+          "mean_rho": 0.12677057881315487,
+          "n_sig": 61
+        },
+        "Dorsal_Attention": {
+          "n": 46,
+          "mean_rho": 0.12256916910304212,
+          "n_sig": 46
+        },
+        "Somatomotor": {
+          "n": 77,
+          "mean_rho": 0.1209496938309586,
+          "n_sig": 77
+        },
+        "_whole_cortex_mean_rho": 0.12702415174388818,
+        "_n_parcels_sig_pos": 400
+      }
+    }
+  }
+}
