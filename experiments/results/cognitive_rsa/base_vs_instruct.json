@@ -63,7 +63,60 @@
       "mean": 0.7157141209614972
     }
   },
-  "base": null,
-  "comparison": null,
-  "note": "Base model activations not yet extracted. Submit scripts/slurm/extract_base_1.5b.sh to extract them, then re-run this script."
+  "base": {
+    "model": "Qwen2.5-1.5B",
+    "per_layer_rho": [
+      0.4676,
+      0.5018,
+      0.7484,
+      0.7391,
+      0.734,
+      0.7334,
+      0.7335,
+      0.7316,
+      0.7305,
+      0.7287,
+      0.7298,
+      0.7342,
+      0.7346,
+      0.7349,
+      0.7325,
+      0.7316,
+      0.7319,
+      0.7315,
+      0.7331,
+      0.733,
+      0.7297,
+      0.7236,
+      0.7237,
+      0.7289,
+      0.7269,
+      0.7306,
+      0.7317,
+      0.6131,
+      0.5054
+    ],
+    "peak_layer": 2,
+    "peak_layer_name": "layer_1",
+    "peak_rho": 0.7484472049689442,
+    "noise_ceiling": 0.9643165047512876,
+    "rho_over_ceiling": 0.7761426889213936,
+    "p_value": 0.0001999600079984003,
+    "n_layers": 29,
+    "n_stim": 712,
+    "n_cond": 14,
+    "per_layer_rho_summary": {
+      "min": 0.46757445453097624,
+      "max": 0.7484472049689442,
+      "mean": 0.7030896639592292
+    }
+  },
+  "comparison": {
+    "base_peak_rho": 0.7484472049689442,
+    "instruct_peak_rho": 0.7536868928173276,
+    "ratio_base_over_instruct": 0.9930479249429467,
+    "delta_instruct_minus_base": 0.0052396878483833564,
+    "base_rho_at_instruct_peak_layer": 0.7391304347826089,
+    "interpretation": "Base model captures 99.3% of the Instruct alignment (peak rho +0.748 vs +0.754). RLHF/instruction-tuning adds delta=+0.005."
+  }
 }
