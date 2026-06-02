@@ -128,27 +128,41 @@ test whether they hold in LLMs.
   form before social cognition (cf. affect-early, theory-of-mind ~age 4). Results:
   `results/developmental_emergence/developmental_emergence.json` (recomputed vs corrected RDM).
 
+- **Direction D — cortical processing gradient → layer depth (Margulies 2016).** Social
+  cognition sits at the abstract end of the cortical gradient → predict it peaks in deeper
+  LLM layers. **Tested (`src/layer_depth_analysis.py`): NULL (depth-invariant).** Alignment
+  is flat across all layers; the cortical-gradient analogy does not hold.
+
 Downstream neuroscience programs that could become further LLM predictions: dual-route
 empathy (Shamay-Tsoory 2009, *Brain*), clinical mirror-disorders (psychopathy vs autism;
 Blair; Baron-Cohen 1995), dual-process moral cognition + lesion→behavior (Greene 2001
-*Science*; Koenigs 2007 *Nature*), cortical processing gradient placing social cognition at
-the abstract end (Margulies 2016 *PNAS*) → maps onto LLM layer depth.
+*Science*; Koenigs 2007 *Nature*).
 
 ---
 
-## Controlled-fMRI validators (status: directional supplement, demoted)
+## Real-fMRI validation (three independent datasets)
 
-Re-audited 2026-05-30 with the corrected headline LLM RDMs + pure-NS brain
-(`src/kragel_ibc_reaudit.py` → `results/affective_validation/kragel_ibc_reaudit.json`):
-- **Kragel 2015** (CANlab emotion classifier maps, N=32): LLM ρ **+0.629** (4 conditions),
-  vs-Neurosynth −0.03; non-significant (only 4 conditions).
-- **IBC** (NeuroVault coll. 2138, 12 subjects, multi-task contrasts): LLM ρ **+0.264**
-  (6 conditions), vs-Neurosynth +0.18; non-significant; has outlier maps (valence row −1.0).
-- **HCP** (coll. 457, group average): the lone null — and the source of the discredited ToM
-  map, so its earlier disagreement was its own artifact.
+**a) Kragel 2015** (CANlab emotion classifier maps, N=32): LLM ρ **+0.629** (4 conditions);
+too few for permutation significance. Cleanest real-fMRI point.
 
-**Conclusion:** demote Kragel/IBC/HCP from "validation" to "directional supplement." The
-Neurosynth headline stands on its own (it is the statistically-powered result).
+**b) Narratives fMRI — group-level** (Nastase 2021, 230 subjects, Schaefer-400, 12 conditions):
+last-layer ρ = **+0.32 to +0.39, all 4 models significant** (p = 0.004–0.013); ceiling 0.836
+(~42% of ceiling). Caveat: alignment peaks at the **last layer**, not the Neurosynth-peak
+mid-layer (frozen-peak ρ ≈ 0.08, n.s.). Code: `src/narratives_group_rsa.py`.
+
+**c) Narratives fMRI — regional per-parcel** (261 subjects, Schaefer-400): cortex mean ρ ≈
+**+0.20**, **all 400 parcels significant**. Limbic highest (~0.22). Code: `src/regional_rsa_xarch.py`.
+
+**d) IBC** (NeuroVault coll. 2138, 12 subjects): LLM ρ **+0.264** (6 conditions); non-significant.
+**e) HCP** (coll. 457): null — source of the discredited ToM map.
+
+**Retracted (2026-06-02):** previously reported "ρ ≈ 0.56, N=91, ceiling 0.762" was traced to
+v1 dissociation effect sizes mis-sourced into the Narratives table. The numbers above replace it.
+
+**Conclusion:** all three independent real-fMRI sources positive; Narratives group-level is
+**statistically significant**. The Neurosynth headline (91 pairs) remains the powered result;
+real-fMRI confirms it is not a pure text artifact. The strongest anti-text-confound argument
+is partial RSA (~80% retained), not fMRI magnitude.
 
 ---
 
@@ -185,6 +199,10 @@ Neurosynth headline stands on its own (it is the statistically-powered result).
 | `src/kragel_ibc_reaudit.py` | Re-audit controlled-fMRI validators (corrected RDMs). |
 | `src/affective_ceiling_control.py` | Per-block alignment vs LLM split-half noise ceiling. |
 | `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling. |
+| `src/within_block_control.py` | Within-block control: partial ρ, within-affective/social RSA. |
+| `src/layer_depth_analysis.py` | Direction D: per-layer RSA (result: NULL, depth-invariant). |
+| `src/narratives_group_rsa.py` | Group-level Narratives brain-LLM RSA (230 subj, Schaefer-400). |
+| `src/regional_rsa_xarch.py` | Regional per-parcel RSA, 4 architectures (261 subj, 400 parcels). |
 | `present/build_present.py` | Regenerate the HTML briefing. |
 
 **Traps (do not repeat):**
@@ -192,6 +210,10 @@ Neurosynth headline stands on its own (it is the statistically-powered result).
   flips subset signs. Always use `{model}_rdm14_headline.npz` instead.
 - The `rsa_v2.json` ρ fields are **stale** (0.63, old brain RDM). Recompute fresh vs
   `brain_rdm.npz`.
+- **"ρ ≈ 0.56" Narratives fMRI is RETRACTED** (2026-06-02). The values 0.540/0.560/0.582,
+  ceiling 0.762, base 0.525, instruct 0.577, per-subject 0.568 were traced to v1 AI-task
+  dissociation effect sizes in `statistical_validation.json` that were mis-sourced into the
+  Narratives table. Real numbers: group +0.35 (sig), regional +0.20 (400/400 sig).
 
 ## HPC3 Configuration
 - SSH: `ssh -i /hpc2hdd/home/mzhang630/data/id_rsa -o StrictHostKeyChecking=no mzhang630@hpc3login.hpc.hkust-gz.edu.cn`

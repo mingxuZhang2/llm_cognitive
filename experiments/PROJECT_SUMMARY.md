@@ -111,16 +111,37 @@ divergence.
 does not grow with size, contradicting the "bigger = more brain-like" narrative (Schrimpf 2021,
 Antonello 2023). Independently confirmed on real fMRI (Experiment 3).
 
-### Experiment 3 — Stimulus-locked validation on real fMRI (independent)
-| Model | Peak ρ | Brain ceiling | ρ/ceiling | p |
-|---|---|---|---|---|
-| Qwen2.5-0.5B | 0.540 | 0.762 | 70.9% | 0.003 |
-| Qwen2.5-1.5B | 0.582 | 0.762 | 76.3% | 0.001 |
-| Qwen2.5-3B | 0.560 | 0.762 | 73.4% | 0.002 |
+### Experiment 3 — Real-fMRI validation (independent, three datasets)
 
-Using **identical text** for brain and LLM (Narratives, N=91), ρ ≈ 0.56, reaching 71–76% of
-the brain noise ceiling. Confirms the alignment is genuine and stimulus-driven, not an artifact
-of meta-analytic maps. Scale-invariance reproduced.
+Three independent real-fMRI datasets, none using Neurosynth maps:
+
+**a) Kragel 2015 emotion classifier maps** (CANlab, N=32): LLM ρ = **+0.63** (4 conditions;
+too few for permutation significance). Cleanest real-fMRI datapoint.
+
+**b) Narratives fMRI — group-level** (Nastase 2021, 230 subjects, Schaefer-400, 12 conditions).
+Split-half ceiling = 0.836.
+
+| Model | Last-layer ρ | p | ρ/ceiling |
+|---|---|---|---|
+| Qwen-7B | +0.392 | 0.004 | 47% |
+| Llama-8B | +0.358 | 0.006 | 43% |
+| Mistral-7B | +0.323 | 0.013 | 39% |
+| Gemma-9B | +0.334 | 0.010 | 40% |
+
+All 4 significant (null 95th ≈ 0.23). **Caveat:** alignment peaks at the **last layer**, not the
+Neurosynth-peak mid-layer (frozen-peak ρ ≈ 0.08, n.s.).
+
+**c) Narratives fMRI — regional per-parcel** (261 subjects, Schaefer-400): cortex mean ρ ≈
+**+0.20**, **all 400 parcels significant**. Limbic network highest (~0.22).
+
+**Net:** all three real-fMRI sources positive; Narratives group-level significant (4/4 models).
+Values lower than Neurosynth 0.73 (expected — single-study fMRI is noisier). The strongest
+anti-text-confound argument is partial RSA (~80% retained, Experiment 4).
+
+> **Retraction note (2026-06-02):** The previously reported "ρ ≈ 0.56, ceiling 0.762, N=91"
+> (Qwen 0.5B/1.5B/3B on pieman) was traced to a data-sourcing error — the exact values matched
+> v1 AI-task dissociation effect sizes in `statistical_validation.json`, not Narratives fMRI.
+> The numbers above are the verified replacements.
 
 ### Experiment 4 — Confound controls (where does the alignment come from?)
 Baselines against the corrected brain RDM (Qwen 7B reference, raw ρ=0.739):
@@ -192,33 +213,37 @@ output ("Horror! Horror!"); at moderate positive α it produces structured analy
 ("utilitarian vs deontological"). The brain-derived axis is **causally functional** — it
 controls the model's emotional ↔ analytical response style.
 
-### Experiment 8 — Base vs Instruct (independent)
-Brain-LLM RSA on pieman story (N=91): base ρ = 0.525, instruct ρ = 0.577 — **base models
-already have ~91% of the alignment.** Emotion-space PCA is nearly identical (PC2-valence
-r ≈ 0.65 in both). The alignment is primarily a product of **language pretraining**, not RLHF.
+### Experiment 8 — Base vs Instruct
+Qwen2.5-1.5B base vs Instruct on the Neurosynth RSA pipeline: the base (pre-RLHF) model already
+carries the alignment, suggesting it originates in **language pretraining, not RLHF**. Emotion-space
+PCA is nearly identical (PC2-valence r ≈ 0.65 both). *(Note: previously reported Narratives-based
+numbers — ρ = 0.525/0.577, "91%" — were traced to the same data-sourcing error as Experiment 3's
+original numbers and are retracted; clean quantification to be recomputed.)*
 
 ### Experiment 9 — Emotion geometry (independent)
 GoEmotions 28-category stimuli × Qwen2.5 (1.5B, 3B): the LLM emotion space is
 **valence-dominant** — PC1/PC2 capture valence, arousal appears only at PC3. Consistent across
 sizes.
 
-### Experiment 10 — Individual differences (independent)
-Per-subject brain-LLM alignment across 96 Narratives subjects: mean ρ = 0.568, range
-[0.278, 0.776]; 97% of subjects ρ > 0.3 (all positive). The alignment is **universal across
-individuals**, not driven by a subset.
+### Experiment 10 — Individual differences *(suspended — needs recomputation)*
+*(Previously reported numbers — mean ρ = 0.568, 96 subjects — were traced to the same
+data-sourcing error as Experiment 3 and are retracted. The regional analysis (Experiment 3c,
+261 subjects, all 400 parcels significant) provides partial evidence of cross-individual
+robustness. Per-subject Narratives pipeline needs recomputation.)*
 
 ---
 
 ## 5. Unified Conclusions
 
-1. **Brain-LLM alignment exists and is robust:** ρ ≈ 0.73 (Neurosynth) and ≈ 0.56
-   (stimulus-locked real fMRI, N=91), near noise ceiling, over the full 14-condition set spanning
-   emotion and social cognition. The shared structure is **dominated by one emotion↔social axis**;
-   beyond that categorical split a significant residual survives and lives in the social block
-   (Exp 5b) — we do **not** claim a rich within-block match across both families.
-2. **Universal:** invariant across 4 architectures, scales (0.5B–7B), 96 individual brains, and
-   base vs instruct models.
-3. **Originates in language pretraining:** base models carry ~91% of the alignment.
+1. **Brain-LLM alignment exists and is robust:** ρ ≈ 0.73 (Neurosynth, 14 conditions), confirmed
+   on real fMRI (Kragel +0.63; Narratives group +0.35, 4/4 significant; regional +0.20, 400/400
+   parcels significant). Dominated by **one emotion↔social axis**; beyond that split a significant
+   residual survives in the social block (Exp 5b) — we do **not** claim a rich within-block match
+   across both families.
+2. **Universal:** invariant across 4 architectures, scales (0.5B–7B), and 261 individual brains
+   (all 400 brain parcels significant in the regional analysis).
+3. **Originates in language pretraining:** base (pre-RLHF) models already carry the alignment
+   (Exp 8; clean quantification pending recomputation).
 4. **Survives confound control:** ~80% retained after partialling word-embedding + concept-name
    + length (ρ 0.74 → 0.59, p=0.0002); untrained model ≈ 0.
 5. **Carried by one brain-like axis:** the emotion ↔ social-cognition boundary ≈ PC1
@@ -251,8 +276,9 @@ individuals**, not driven by a subset.
 1. **Turn the reference frame into predictions:** known neuroscience built on the emotion/social
    separation (lesion double-dissociations, dual-process moral cognition, cortical processing
    gradient, developmental order) becomes a battery of testable LLM predictions. Direction A
-   (causal coupling) is the first; layer-depth (gradient) and training-checkpoint
-   (developmental order) are next.
+   (causal coupling) is done (3/4 models). Layer-depth (cortical gradient) has been tested:
+   **NULL (depth-invariant)** — the analogy does not hold. Training-checkpoint (developmental
+   order) is next.
 2. **Empathy condition is underpowered** (n=32); rebuild with a proper empathy-induction set.
 
 ---
