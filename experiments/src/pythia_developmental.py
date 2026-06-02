@@ -42,6 +42,19 @@ import matplotlib.pyplot as plt
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+# Bypass broken system proxy — hf-mirror.com is reachable but the local proxy is down
+import os, requests
+for _k in ["HTTPS_PROXY", "HTTP_PROXY", "http_proxy", "https_proxy"]:
+    os.environ.pop(_k, None)
+os.environ.setdefault("HF_ENDPOINT", "https://hf-mirror.com")
+try:
+    from huggingface_hub.utils import configure_http_backend
+    def _no_proxy_session():
+        s = requests.Session(); s.trust_env = False; return s
+    configure_http_backend(backend_factory=_no_proxy_session)
+except ImportError:
+    pass
+
 
 # ── Paths ──────────────────────────────────────────────────────────────────
 BASE = Path(__file__).resolve().parents[1]

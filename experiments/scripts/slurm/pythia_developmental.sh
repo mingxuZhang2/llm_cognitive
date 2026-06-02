@@ -21,8 +21,10 @@ conda activate base
 export TOKENIZERS_PARALLELISM=false
 export TORCHDYNAMO_DISABLE=1
 
-# HuggingFace cache — model checkpoints will be downloaded here
+# HuggingFace: use Chinese mirror, bypass broken system proxy
 export HF_HOME=/hpc2hdd/home/mzhang630/.cache/huggingface
+export HF_ENDPOINT=https://hf-mirror.com
+unset HTTPS_PROXY HTTP_PROXY http_proxy https_proxy
 
 EXPDIR=/hpc2hdd/home/mzhang630/data/nature/experiments
 mkdir -p "$EXPDIR/logs" \

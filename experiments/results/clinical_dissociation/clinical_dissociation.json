@@ -1,0 +1,72 @@
+{
+  "models": [
+    "Meta-Llama-3.1-8B-Instruct",
+    "Mistral-7B-Instruct-v0.3",
+    "Qwen2.5-7B-Instruct",
+    "gemma-2-9b-it"
+  ],
+  "per_model": {
+    "Meta-Llama-3.1-8B-Instruct": {
+      "double_dissociation": {
+        "emotion_selectivity": 0.754269428073094,
+        "social_selectivity": 1.2954039722036501,
+        "confirmed": false,
+        "p_psychopathy": 0.7254901960784313,
+        "p_autism": 0.17647058823529413
+      },
+      "neuron_set_overlap": 3159,
+      "neuron_set_overlap_pct": 63.18,
+      "psychopathy_emotion_selectivity": 0.754269428073094,
+      "autism_social_selectivity": 1.2954039722036501,
+      "psychopathy_p": 0.7254901960784313,
+      "autism_p": 0.17647058823529413
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "double_dissociation": {
+        "emotion_selectivity": 0.8153859947624966,
+        "social_selectivity": 1.226012447929386,
+        "confirmed": false,
+        "p_psychopathy": 0.6078431372549019,
+        "p_autism": 0.17647058823529413
+      },
+      "neuron_set_overlap": 2283,
+      "neuron_set_overlap_pct": 45.66,
+      "psychopathy_emotion_selectivity": 0.8153859947624966,
+      "autism_social_selectivity": 1.226012447929386,
+      "psychopathy_p": 0.6078431372549019,
+      "autism_p": 0.17647058823529413
+    },
+    "Qwen2.5-7B-Instruct": {
+      "double_dissociation": {
+        "emotion_selectivity": 1.7507146698915121,
+        "social_selectivity": 0.7259776005502638,
+        "confirmed": false,
+        "p_psychopathy": 0.11764705882352941,
+        "p_autism": 0.6862745098039216
+      },
+      "neuron_set_overlap": 2874,
+      "neuron_set_overlap_pct": 57.48,
+      "psychopathy_emotion_selectivity": 1.7507146698915121,
+      "autism_social_selectivity": 0.7259776005502638,
+      "psychopathy_p": 0.11764705882352941,
+      "autism_p": 0.6862745098039216
+    },
+    "gemma-2-9b-it": {
+      "double_dissociation": {
+        "emotion_selectivity": 1.0396634825766262,
+        "social_selectivity": 1.4334776517889913,
+        "confirmed": true,
+        "p_psychopathy": 0.7843137254901961,
+        "p_autism": 0.0784313725490196
+      },
+      "neuron_set_overlap": 2932,
+      "neuron_set_overlap_pct": 58.64,
+      "psychopathy_emotion_selectivity": 1.0396634825766262,
+      "autism_social_selectivity": 1.4334776517889913,
+      "psychopathy_p": 0.7843137254901961,
+      "autism_p": 0.0784313725490196
+    }
+  },
+  "n_confirmed": 1,
+  "all_confirmed": false
+}

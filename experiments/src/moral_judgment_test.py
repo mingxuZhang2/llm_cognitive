@@ -210,7 +210,7 @@ def build_prompt(dilemma: dict) -> str:
     )
 
 
-def run_experiment(model, tokenizer, dilemmas, boundary_dir, alphas, device):
+def run_experiment(model, tokenizer, dilemmas, boundary_dir, alphas, device, n_samples=None):
     """Run the full moral judgment steering experiment for one model."""
     all_results = []
 
@@ -226,7 +226,8 @@ def run_experiment(model, tokenizer, dilemmas, boundary_dir, alphas, device):
             votes = []
             raw_responses = []
 
-            for sample_i in range(N_SAMPLES):
+            _n = n_samples if n_samples else N_SAMPLES
+            for sample_i in range(_n):
                 response = generate_with_steering(
                     model, tokenizer, prompt, boundary_dir, alpha, device,
                     max_new_tokens=10,
@@ -446,9 +447,7 @@ def main():
     args = parser.parse_args()
 
     alphas = [int(a) for a in args.alphas.split(",")]
-    n_samples_override = args.n_samples
-    global N_SAMPLES
-    N_SAMPLES = n_samples_override
+    N_SAMPLES = args.n_samples
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -514,7 +513,7 @@ def main():
     print(f"\nRunning moral judgment test: {len(dilemmas)} dilemmas x "
           f"{len(alphas)} alphas x {N_SAMPLES} samples")
     t0 = time.time()
-    results = run_experiment(model, tokenizer, dilemmas, boundary_dir, alphas, device)
+    results = run_experiment(model, tokenizer, dilemmas, boundary_dir, alphas, device, n_samples=N_SAMPLES)
     elapsed = time.time() - t0
     print(f"\nExperiment done in {elapsed:.0f}s ({elapsed/60:.1f}min)")
 
