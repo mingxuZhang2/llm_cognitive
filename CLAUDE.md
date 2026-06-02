@@ -119,10 +119,16 @@ too high to ever reach significance — they can only *directionally* support, n
 The strategy: take conclusions that follow from the brain's emotion/social separation and
 test whether they hold in LLMs.
 
-- **Direction A — causal coupling (strongest, partly done).** The brain RDM *predicts* the
+- **Direction A — causal coupling (strong).** The brain RDM *predicts* the
   causal coupling between functions inside the LLM (ablate function X, measure effect on
-  function Y). **3/4 models significant.** Code: `src/brain_causal_coupling.py`. Commit
-  `a4f705b`. This is the analog of lesion double-dissociation work (Shamay-Tsoory 2009).
+  function Y). **Per-condition reanalysis** (`src/coupling_dissociation_analysis.py`):
+  double dissociation at the 2x2 block level (A_aa > A_as AND A_ss > A_sa) holds in
+  **all 4 models**; Wilcoxon signed-rank p < 0.007 in every model; on average 14/14
+  conditions show same-block > cross-block selectivity. The original block-pooled RSA
+  (brain RDM vs coupling matrix) gave weak ρ; the per-condition dissociation is the
+  stronger framing. Code: `src/brain_causal_coupling.py` (GPU ablation),
+  `src/coupling_dissociation_analysis.py` (reanalysis + figures). This is the analog of
+  lesion double-dissociation work (Shamay-Tsoory 2009).
 - **Direction B — cognitive reserve.** (`cb84f57`.)
 - **Direction C — developmental emergence.** Along training/scale, emotion structure should
   form before social cognition (cf. affect-early, theory-of-mind ~age 4). Results:
@@ -204,7 +210,8 @@ is partial RSA (~80% retained), not fMRI magnitude.
 | `src/tom_source_check.py` | Diagnostic that found the HCP-ToM artifact. |
 | `src/kragel_ibc_reaudit.py` | Re-audit controlled-fMRI validators (corrected RDMs). |
 | `src/affective_ceiling_control.py` | Per-block alignment vs LLM split-half noise ceiling. |
-| `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling. |
+| `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling (GPU). |
+| `src/coupling_dissociation_analysis.py` | Direction A reanalysis: per-condition double dissociation from coupling matrices. |
 | `src/clinical_dissociation.py` | Direction E: psychopathy vs autism double-dissociation. |
 | `src/within_block_control.py` | Within-block control: partial ρ, within-affective/social RSA. |
 | `src/layer_depth_analysis.py` | Direction D: per-layer RSA (result: NULL, depth-invariant). |

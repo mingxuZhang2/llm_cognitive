@@ -58,7 +58,9 @@ Regional / MVPA variants: `regional_rsa*.py`.
 
 **7. Mechanism / prediction / predictive program** —
 `cognitive_steering.py` (brain-derived activation steering), `emotion_geometry.py` (emotion-space
-PCA), `brain_causal_coupling.py` (**Direction A** — brain RDM predicts LLM causal coupling),
+PCA), `brain_causal_coupling.py` (**Direction A** — brain RDM predicts LLM causal coupling, GPU),
+`coupling_dissociation_analysis.py` (Direction A **reanalysis** — per-condition double dissociation
+from coupling matrices; 4/4 models DD, all Wilcoxon p < 0.007, 14/14 conditions block-selective),
 `cognitive_reserve.py` (Direction B), `developmental_emergence.py` (Direction C).
 
 **Demoted validators (directional supplement only — see overview docs):**
@@ -80,7 +82,8 @@ PCA), `brain_causal_coupling.py` (**Direction A** — brain RDM predicts LLM cau
 | `src/baseline_controls.py` | GloVe / TF-IDF / condition-name / length baselines + partial RSA. |
 | `src/fix_all_holes.py` | Partial RSA + LOO / leave-2-out stability. |
 | `src/tom_source_check.py` | Diagnostic that found the HCP-ToM artifact. |
-| `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling. |
+| `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling (GPU). |
+| `src/coupling_dissociation_analysis.py` | Direction A reanalysis: per-condition double dissociation from coupling matrices. |
 | `src/clinical_dissociation.py` | Psychopathy vs autism double-dissociation (ablate emotion/social neuron sets). |
 | `src/narratives_*.py` | Narratives fMRI pipeline (independent stimulus-locked validation). |
 | `present/build_present.py` | Regenerate the plain-language briefing deck (`present/index.html`). |
