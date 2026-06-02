@@ -81,6 +81,7 @@ PCA), `brain_causal_coupling.py` (**Direction A** — brain RDM predicts LLM cau
 | `src/fix_all_holes.py` | Partial RSA + LOO / leave-2-out stability. |
 | `src/tom_source_check.py` | Diagnostic that found the HCP-ToM artifact. |
 | `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling. |
+| `src/clinical_dissociation.py` | Psychopathy vs autism double-dissociation (ablate emotion/social neuron sets). |
 | `src/narratives_*.py` | Narratives fMRI pipeline (independent stimulus-locked validation). |
 | `present/build_present.py` | Regenerate the plain-language briefing deck (`present/index.html`). |
 
@@ -91,7 +92,8 @@ PCA), `brain_causal_coupling.py` (**Direction A** — brain RDM predicts LLM cau
   `brain_rdm_hcptom.npz`; dated `FINDINGS*.md` snapshots (**superseded — banners point to current**).
 - `results/affective_validation/` — ceiling control, Kragel/IBC/HCP re-audits, ToM source check.
 - `results/narratives_brain_rdm/`, `results/developmental_emergence/`, `results/cognitive_reserve/`,
-  `results/brain_causal_coupling/`, `results/robustness_checks/`, `results/emotion_geometry/`,
+  `results/brain_causal_coupling/`, `results/clinical_dissociation/`,
+  `results/robustness_checks/`, `results/emotion_geometry/`,
   `results/next_token/`, `results/specificity_*/` — supporting experiments.
 
 ## Running (this cluster — `/hpc2hdd`, NOT the HPC3 in code comments)

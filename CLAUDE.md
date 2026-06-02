@@ -133,6 +133,12 @@ test whether they hold in LLMs.
   LLM layers. **Tested (`src/layer_depth_analysis.py`): NULL (depth-invariant).** Alignment
   is flat across all layers; the cortical-gradient analogy does not hold.
 
+- **Direction E — clinical double-dissociation (psychopathy vs autism analog).** Ablate
+  pooled emotion neurons → expect emotion collapse + social spared (psychopathy analog);
+  ablate pooled social neurons → reverse (autism analog). 50 random-ablation null.
+  Code: `src/clinical_dissociation.py`. SLURM: `scripts/slurm/clinical_dissociation.sh`.
+  Awaiting GPU run.
+
 Downstream neuroscience programs that could become further LLM predictions: dual-route
 empathy (Shamay-Tsoory 2009, *Brain*), clinical mirror-disorders (psychopathy vs autism;
 Blair; Baron-Cohen 1995), dual-process moral cognition + lesion→behavior (Greene 2001
@@ -199,6 +205,7 @@ is partial RSA (~80% retained), not fMRI magnitude.
 | `src/kragel_ibc_reaudit.py` | Re-audit controlled-fMRI validators (corrected RDMs). |
 | `src/affective_ceiling_control.py` | Per-block alignment vs LLM split-half noise ceiling. |
 | `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling. |
+| `src/clinical_dissociation.py` | Direction E: psychopathy vs autism double-dissociation. |
 | `src/within_block_control.py` | Within-block control: partial ρ, within-affective/social RSA. |
 | `src/layer_depth_analysis.py` | Direction D: per-layer RSA (result: NULL, depth-invariant). |
 | `src/narratives_group_rsa.py` | Group-level Narratives brain-LLM RSA (230 subj, Schaefer-400). |
