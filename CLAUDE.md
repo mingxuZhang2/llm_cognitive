@@ -203,6 +203,7 @@ is partial RSA (~80% retained), not fMRI magnitude.
 | `src/layer_depth_analysis.py` | Direction D: per-layer RSA (result: NULL, depth-invariant). |
 | `src/narratives_group_rsa.py` | Group-level Narratives brain-LLM RSA (230 subj, Schaefer-400). |
 | `src/regional_rsa_xarch.py` | Regional per-parcel RSA, 4 architectures (261 subj, 400 parcels). |
+| `src/base_vs_instruct_rsa.py` | Base vs Instruct RSA: pretraining vs RLHF alignment comparison (Qwen2.5-1.5B). |
 | `present/build_present.py` | Regenerate the HTML briefing. |
 
 **Traps (do not repeat):**
