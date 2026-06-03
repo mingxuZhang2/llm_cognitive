@@ -65,10 +65,9 @@ FIG_DIR = BASE / "figures"
 
 MODEL_NAME = "EleutherAI/pythia-2.8b-deduped"
 
-# ~20 log-spaced checkpoints across 143,000 training steps
+# ~12 log-spaced checkpoints (reduced from 20 — flaky mirror + 30 min/step)
 CHECKPOINTS = [
-    0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512,
-    1000, 2000, 4000, 8000, 16000, 32000, 64000, 100000, 143000,
+    0, 8, 64, 512, 2000, 8000, 32000, 64000, 100000, 143000,
 ]
 
 # Condition blocks (must match within_block_control.py)
@@ -289,19 +288,39 @@ def main():
               f"(revision={revision})")
         print(f"{'='*70}")
 
-        # Load model and tokenizer
-        print(f"  Loading model {MODEL_NAME} @ {revision} ...")
-        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, revision=revision)
-        if tokenizer.pad_token is None:
-            tokenizer.pad_token = tokenizer.eos_token
-        tokenizer.padding_side = "left"
+        # Skip if we already have this checkpoint's result
+        rdm_path = OUT_DIR / f"pythia_rdm_step{step}.npz"
+        if args.save_rdms and rdm_path.exists():
+            prev = np.load(rdm_path, allow_pickle=True)
+            if "peak_metrics" in prev:
+                pm = prev["peak_metrics"].item()
+                print(f"  [CACHED] step={step} full_rho={pm['full_rho']:+.3f}")
+                trajectory.append({"step": step, **pm, "cached": True})
+                continue
 
-        model = AutoModelForCausalLM.from_pretrained(
-            MODEL_NAME,
-            revision=revision,
-            torch_dtype=torch.float16,
-            device_map="auto",
-        )
+        # Load model with retry (mirror is flaky for large downloads)
+        print(f"  Loading model {MODEL_NAME} @ {revision} ...")
+        load_ok = False
+        for attempt in range(3):
+            try:
+                tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, revision=revision)
+                if tokenizer.pad_token is None:
+                    tokenizer.pad_token = tokenizer.eos_token
+                tokenizer.padding_side = "left"
+                model = AutoModelForCausalLM.from_pretrained(
+                    MODEL_NAME, revision=revision,
+                    torch_dtype=torch.float16, device_map="auto",
+                )
+                load_ok = True
+                break
+            except Exception as e:
+                print(f"  Download attempt {attempt+1}/3 failed: {e}")
+                if attempt < 2:
+                    time.sleep(10 * (attempt + 1))
+        if not load_ok:
+            print(f"  SKIPPING step {step} after 3 failures")
+            trajectory.append({"step": step, "error": "download_failed"})
+            continue
         model.eval()
         print(f"  Model loaded. Device: {next(model.parameters()).device}")
 

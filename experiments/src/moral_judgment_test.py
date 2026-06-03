@@ -439,7 +439,7 @@ def main():
                         help="Output directory for results JSON")
     parser.add_argument("--alphas", default=",".join(str(a) for a in ALPHAS),
                         help="Comma-separated steering alphas")
-    parser.add_argument("--n_samples", type=int, default=N_SAMPLES,
+    parser.add_argument("--n_samples", type=int, default=3,
                         help="Number of samples per (dilemma, alpha) for majority vote")
     parser.add_argument("--aggregate_json", default=None,
                         help="Path to aggregated multi-model JSON (for plotting). "
@@ -447,7 +447,7 @@ def main():
     args = parser.parse_args()
 
     alphas = [int(a) for a in args.alphas.split(",")]
-    N_SAMPLES = args.n_samples
+    n_samples = args.n_samples
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -511,9 +511,9 @@ def main():
     # Run experiment
     # -----------------------------------------------------------------------
     print(f"\nRunning moral judgment test: {len(dilemmas)} dilemmas x "
-          f"{len(alphas)} alphas x {N_SAMPLES} samples")
+          f"{len(alphas)} alphas x {n_samples} samples")
     t0 = time.time()
-    results = run_experiment(model, tokenizer, dilemmas, boundary_dir, alphas, device, n_samples=N_SAMPLES)
+    results = run_experiment(model, tokenizer, dilemmas, boundary_dir, alphas, device, n_samples=n_samples)
     elapsed = time.time() - t0
     print(f"\nExperiment done in {elapsed:.0f}s ({elapsed/60:.1f}min)")
 
@@ -553,7 +553,7 @@ def main():
         "n_personal": n_personal,
         "n_impersonal": n_impersonal,
         "alphas": alphas,
-        "n_samples": N_SAMPLES,
+        "n_samples": n_samples,
         "elapsed_s": elapsed,
         "results": results,
         "utilitarian_rates": {f"{k[0]}_{k[1]}": v for k, v in rates.items()},
