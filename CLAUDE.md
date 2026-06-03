@@ -243,6 +243,7 @@ is partial RSA (~80% retained), not fMRI magnitude.
 | `src/robustness_gauntlet.py` | Anti-spurious-alignment gauntlet (4 tests, all PASS). Pre-empts Hadidi et al. 2026. |
 | `src/paraphrase_invariance.py` | Paraphrase-invariance tests (split-half, LOSO jackknife, cross-source). Signal is content-driven, not surface-form. |
 | `src/prospective_prediction.py` | Prospective prediction battery: 5 brain-to-LLM predictions (2 confirmed, 1 trend, 2 null). CPU-only. |
+| `src/steering_controls.py` | Steering control conditions (random/sentiment/PC1) for brain-axis specificity. GPU. |
 | `present/build_present.py` | Regenerate the HTML briefing. |
 | `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |
 | `benchmark/README.md` | BrainCog-14 benchmark documentation, conditions, recipe, interpretation guide. |

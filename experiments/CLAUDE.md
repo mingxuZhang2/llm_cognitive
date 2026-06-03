@@ -89,6 +89,7 @@ from coupling matrices; 4/4 models DD, all Wilcoxon p < 0.007, 14/14 conditions 
 | `src/robustness_gauntlet.py` | **Anti-spurious-alignment gauntlet** (locked-pipeline, LOO, LOMO-CV, stim sub-sampling). Pre-empts Hadidi et al. 2026. All 4/4 pass; rho survives at 0.67+ under every degradation. |
 | `src/paraphrase_invariance.py` | **Paraphrase-invariance tests** (split-half stability, LOSO jackknife, cross-source invariance). Shows RSA signal is content-driven, not surface-form-dependent. All 4 models: split-half 95% CI stays above +0.65, LOSO max drop <0.007, cross-source sub-pools agree within 0.03. |
 | `src/prospective_prediction.py` | **Prospective prediction battery** (5 tests: coupling asymmetry, within-block coupling, distinctiveness, vulnerable pairs, boundary sensitivity). CPU-only from existing data. |
+| `src/steering_controls.py` | **Steering control conditions** (random, sentiment, PC1) to prove brain-derived axis specificity. Same 30 prompts/5 alphas as brain-axis; generates per-control + combined brain-vs-random ranking sheets. GPU. |
 | `src/narratives_*.py` | Narratives fMRI pipeline (independent stimulus-locked validation). |
 | `present/build_present.py` | Regenerate the plain-language briefing deck (`present/index.html`). |
 | `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |
