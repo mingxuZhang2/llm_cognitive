@@ -291,6 +291,17 @@ in deeper layers. **Result: NULL.** Full, affective, and social alignment are fl
 6. **Causally functional and behaviorally predictive:** the brain-derived axis steers
    emotional ↔ analytical output; the brain RDM predicts LLM confusion (ρ = 0.24) and internal
    causal coupling (Direction A, 3/4 models).
+7. **Per-condition double dissociation confirmed:** ablating emotion neurons affects emotion 3.6×
+   more than social; ablating social neurons affects social 6.2× more than emotion. Wilcoxon
+   significant in 4/4 models (p = 0.0001–0.007). Subspace projection confirms: projecting out
+   social PCs collapses within-social ρ from +0.62 to −0.46, within-affective unaffected.
+8. **Robustness gauntlet (4/4 pass):** locked pipeline (no peak selection), leave-one-condition-out,
+   leave-one-model-out CV, stimulus sub-sampling — all pass.
+9. **Developmental trajectory (Pythia-2.8B):** full ρ rises 0.24 → 0.72 during training;
+   within-social stays aligned (+0.40 → +0.65); within-affective **reverses** (+0.30 → −0.61) —
+   the model actively develops non-brain-like emotion organization while social structure aligns.
+10. **Moral judgment (Greene/Koenigs):** suppressing emotion axis increases utilitarian choices
+    from 60% to 100% on personal dilemmas (Qwen, p = 0.024). Direction matches Koenigs 2007.
 
 ---
 
@@ -303,8 +314,11 @@ testable LLM predictions.
   between functions inside the LLM (ablate X, measure effect on Y). **3/4 models significant**,
   LOO/leave-2-out stable. Analog of lesion double-dissociation work (Shamay-Tsoory 2009).
 - **Direction B — cognitive reserve.** *(preliminary)*
-- **Direction C — developmental emergence.** Along training/scale, emotion structure should form
-  before social cognition (cf. affect-early, theory-of-mind ~age 4). *(preliminary)*
+- **Direction C — developmental emergence (done, surprising result).** Pythia-2.8B, 9 training
+  checkpoints (step 0–100k). Full ρ rises 0.24 → 0.72. **But** the prediction "emotion first,
+  then social" is **not confirmed** — instead, within-social stays aligned (+0.40 → +0.65) while
+  within-affective **reverses** (+0.30 → −0.61). The model develops non-brain-like emotion
+  organization during training. This is a **Finding 3 result** (inconsistency), not Finding 2.
 - **Direction D — cortical processing gradient → layer depth (Margulies 2016).** Social cognition
   sits at the abstract end of the cortical gradient → predict it peaks in deeper LLM layers than
   emotion. **Tested (`src/layer_depth_analysis.py`): NULL (depth-invariant).** Full, affective, and
