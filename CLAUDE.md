@@ -207,6 +207,7 @@ is partial RSA (~80% retained), not fMRI magnitude.
     - `cognitive_rsa/` — headline RDMs (`brain_rdm.npz`, `{model}_rdm14_headline.npz`,
       `{model}_rsa_v2_per_stim.npz`), archived old RDM (`brain_rdm_hcptom.npz`).
     - `affective_validation/` — ceiling control, Kragel/IBC/HCP audits, ToM source check.
+    - `template_matched_rsa/` — format-confound control results (template-matched stimuli RSA).
     - `developmental_emergence/`, `behavioral_prediction/`, `next_token/`, `specificity_*/`,
       `contrast_pilot*/`, `narratives_brain_rdm/` — supporting experiments.
   - `benchmark/` — **BrainCog-14** release package (self-contained brain-derived benchmark
@@ -244,6 +245,8 @@ is partial RSA (~80% retained), not fMRI magnitude.
 | `src/paraphrase_invariance.py` | Paraphrase-invariance tests (split-half, LOSO jackknife, cross-source). Signal is content-driven, not surface-form. |
 | `src/prospective_prediction.py` | Prospective prediction battery: 5 brain-to-LLM predictions (2 confirmed, 1 trend, 2 null). CPU-only. |
 | `src/steering_controls.py` | Steering control conditions (random/sentiment/PC1) for brain-axis specificity. GPU. |
+| `src/template_matched_stimuli.py` | Template-matched stimulus generator (format-confound control, 840 stimuli, 4 templates x 14 conditions). |
+| `src/template_matched_rsa.py` | Template-matched RSA analysis (post-extraction). Format-confound control for Hadidi 2026. |
 | `present/build_present.py` | Regenerate the HTML briefing. |
 | `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |
 | `benchmark/README.md` | BrainCog-14 benchmark documentation, conditions, recipe, interpretation guide. |
