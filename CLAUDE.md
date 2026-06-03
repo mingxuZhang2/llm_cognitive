@@ -191,6 +191,10 @@ is partial RSA (~80% retained), not fMRI magnitude.
     - `affective_validation/` — ceiling control, Kragel/IBC/HCP audits, ToM source check.
     - `developmental_emergence/`, `behavioral_prediction/`, `next_token/`, `specificity_*/`,
       `contrast_pilot*/`, `narratives_brain_rdm/` — supporting experiments.
+  - `benchmark/` — **BrainCog-14** release package (self-contained brain-derived benchmark
+    for social-emotional representational geometry). Contains `evaluate.py` (self-contained
+    evaluation script), `braincog14_brain_rdm.npz`, `braincog14_stimuli.jsonl`,
+    `braincog14_config.json`, `baselines.json`, and `README.md`.
   - `figures/` — generated visualizations.
   - `present/` — **`index.html`** self-contained briefing deck (built by `build_present.py`,
     base64-embedded figures, plain-language, no neuro background assumed). This is the deck
@@ -218,7 +222,10 @@ is partial RSA (~80% retained), not fMRI magnitude.
 | `src/narratives_group_rsa.py` | Group-level Narratives brain-LLM RSA (230 subj, Schaefer-400). |
 | `src/regional_rsa_xarch.py` | Regional per-parcel RSA, 4 architectures (261 subj, 400 parcels). |
 | `src/base_vs_instruct_rsa.py` | Base vs Instruct RSA: pretraining vs RLHF alignment comparison (Qwen2.5-1.5B). |
+| `src/robustness_gauntlet.py` | Anti-spurious-alignment gauntlet (4 tests, all PASS). Pre-empts Hadidi et al. 2026. |
 | `present/build_present.py` | Regenerate the HTML briefing. |
+| `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |
+| `benchmark/README.md` | BrainCog-14 benchmark documentation, conditions, recipe, interpretation guide. |
 
 **Traps (do not repeat):**
 - `{model}_rsa_llm_rdms.npz` is an **older recipe** (last_tok/raw/pearson) → gives ρ≈0.25,

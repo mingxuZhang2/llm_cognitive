@@ -1,0 +1,33 @@
+{
+  "benchmark": "BrainCog-14",
+  "version": "1.0",
+  "pooling": "mean_all",
+  "centering": true,
+  "distance": "cosine",
+  "comparison": "spearman",
+  "n_conditions": 14,
+  "n_pairs": 91,
+  "n_stimuli": 712,
+  "conditions": [
+    "anger", "belief", "disgust", "empathy", "fear", "happiness",
+    "intention", "judgment", "mentalizing", "moral", "sadness",
+    "self_referential", "theory_of_mind", "valence"
+  ],
+  "affective": ["anger", "disgust", "fear", "happiness", "sadness", "valence"],
+  "social": ["belief", "empathy", "intention", "judgment", "mentalizing", "moral", "self_referential", "theory_of_mind"],
+  "reference_rho": {
+    "Qwen2.5-7B": 0.739,
+    "Llama-3.1-8B": 0.727,
+    "Mistral-7B": 0.730,
+    "Gemma-2-9B": 0.735
+  },
+  "reference_peak_layers": {
+    "Qwen2.5-7B": 27,
+    "Llama-3.1-8B": 31,
+    "Mistral-7B": 14,
+    "Gemma-2-9B": 21
+  },
+  "chance_95th": 0.25,
+  "brain_rdm_source": "Neurosynth meta-analytic maps (Yarkoni et al., 2011)",
+  "brain_rdm_distance": "1_minus_pearson"
+}

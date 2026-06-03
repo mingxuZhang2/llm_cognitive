@@ -86,8 +86,24 @@ from coupling matrices; 4/4 models DD, all Wilcoxon p < 0.007, 14/14 conditions 
 | `src/coupling_dissociation_analysis.py` | Direction A reanalysis: per-condition double dissociation from coupling matrices. |
 | `src/clinical_dissociation.py` | Psychopathy vs autism double-dissociation (ablate emotion/social neuron sets, GPU). |
 | `src/subspace_dissociation.py` | **Subspace double-dissociation** (project out emotion/social PCA subspaces from per-stim acts, CPU). Cleaner replacement for clinical_dissociation.py. |
+| `src/robustness_gauntlet.py` | **Anti-spurious-alignment gauntlet** (locked-pipeline, LOO, LOMO-CV, stim sub-sampling). Pre-empts Hadidi et al. 2026. All 4/4 pass; rho survives at 0.67+ under every degradation. |
 | `src/narratives_*.py` | Narratives fMRI pipeline (independent stimulus-locked validation). |
 | `present/build_present.py` | Regenerate the plain-language briefing deck (`present/index.html`). |
+| `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |
+| `benchmark/README.md` | BrainCog-14 benchmark documentation, conditions, recipe, interpretation guide. |
+
+## Benchmark release: BrainCog-14
+
+`benchmark/` is a **self-contained release package** for the brain-derived social-emotional
+geometry benchmark. It contains everything needed to evaluate any HuggingFace causal LM:
+- `evaluate.py` — one-file evaluation script (torch + transformers + numpy + scipy only)
+- `braincog14_brain_rdm.npz` — 14x14 brain RDM from Neurosynth
+- `braincog14_stimuli.jsonl` — 712 stimuli (14 conditions)
+- `braincog14_config.json` — locked evaluation recipe
+- `baselines.json` — reference results (4 architectures, scaling, GloVe, null)
+- `README.md` — full documentation
+
+Usage: `python benchmark/evaluate.py --model_path Qwen/Qwen2.5-7B-Instruct --layer 27`
 
 ## Results layout (live pipeline)
 
