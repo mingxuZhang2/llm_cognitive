@@ -87,6 +87,7 @@ from coupling matrices; 4/4 models DD, all Wilcoxon p < 0.007, 14/14 conditions 
 | `src/clinical_dissociation.py` | Psychopathy vs autism double-dissociation (ablate emotion/social neuron sets, GPU). |
 | `src/subspace_dissociation.py` | **Subspace double-dissociation** (project out emotion/social PCA subspaces from per-stim acts, CPU). Cleaner replacement for clinical_dissociation.py. |
 | `src/robustness_gauntlet.py` | **Anti-spurious-alignment gauntlet** (locked-pipeline, LOO, LOMO-CV, stim sub-sampling). Pre-empts Hadidi et al. 2026. All 4/4 pass; rho survives at 0.67+ under every degradation. |
+| `src/prospective_prediction.py` | **Prospective prediction battery** (5 tests: coupling asymmetry, within-block coupling, distinctiveness, vulnerable pairs, boundary sensitivity). CPU-only from existing data. |
 | `src/narratives_*.py` | Narratives fMRI pipeline (independent stimulus-locked validation). |
 | `present/build_present.py` | Regenerate the plain-language briefing deck (`present/index.html`). |
 | `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |

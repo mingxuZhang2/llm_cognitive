@@ -1,0 +1,359 @@
+{
+  "prediction_1_coupling_asymmetry": {
+    "description": "Brain distance predicts coupling asymmetry |C(i->j)-C(j->i)|",
+    "prediction": "Observed: NEGATIVE \u2014 brain-close conditions (within-system) show MORE directional coupling asymmetry",
+    "per_model": [
+      {
+        "model": "Qwen",
+        "rho": -0.16553591336200033,
+        "p_scipy": 0.11685265450512726,
+        "p_perm": 0.9448
+      },
+      {
+        "model": "Llama",
+        "rho": -0.27416786112438285,
+        "p_scipy": 0.008542605334533743,
+        "p_perm": 0.9955
+      },
+      {
+        "model": "Mistral",
+        "rho": -0.21684981684981686,
+        "p_scipy": 0.0389556132750232,
+        "p_perm": 0.983
+      },
+      {
+        "model": "Gemma",
+        "rho": -0.3559802516324255,
+        "p_scipy": 0.0005340597360037915,
+        "p_perm": 0.9994
+      }
+    ],
+    "average_rho": -0.42398471094123275,
+    "average_p_perm": 0.0,
+    "confirmed": true,
+    "n_pairs": 91
+  },
+  "prediction_2_within_block_coupling": {
+    "description": "Within-block brain distance predicts within-block coupling",
+    "prediction": "Positive: brain fine structure has predictive power beyond the big split",
+    "blocks": {
+      "affective": {
+        "per_model": [
+          {
+            "model": "Qwen",
+            "rho": -0.3857142857142856,
+            "p_scipy": 0.1556307945859602,
+            "p_perm": 0.92
+          },
+          {
+            "model": "Llama",
+            "rho": -0.11785714285714284,
+            "p_scipy": 0.6757115292213043,
+            "p_perm": 0.6677
+          },
+          {
+            "model": "Mistral",
+            "rho": -0.07142857142857141,
+            "p_scipy": 0.8002959873970544,
+            "p_perm": 0.6018
+          },
+          {
+            "model": "Gemma",
+            "rho": 0.44999999999999996,
+            "p_scipy": 0.09235737494812256,
+            "p_perm": 0.0489
+          }
+        ],
+        "average_rho": -0.03214285714285714,
+        "average_p_perm": 0.5476,
+        "n_pairs": 15,
+        "confirmed": false
+      },
+      "social": {
+        "per_model": [
+          {
+            "model": "Qwen",
+            "rho": -0.27586206896551724,
+            "p_scipy": 0.15534071227054985,
+            "p_perm": 0.9203
+          },
+          {
+            "model": "Llama",
+            "rho": -0.45429666119321294,
+            "p_scipy": 0.015159219142280765,
+            "p_perm": 0.9919
+          },
+          {
+            "model": "Mistral",
+            "rho": -0.4953475643130815,
+            "p_scipy": 0.007357274107861587,
+            "p_perm": 0.9968
+          },
+          {
+            "model": "Gemma",
+            "rho": -0.30103995621237,
+            "p_scipy": 0.11954404228119095,
+            "p_perm": 0.9448
+          }
+        ],
+        "average_rho": -0.50519978106185,
+        "average_p_perm": 0.9964,
+        "n_pairs": 28,
+        "confirmed": false
+      }
+    },
+    "confirmed": false
+  },
+  "prediction_3_classification_accuracy": {
+    "description": "Brain distinctiveness predicts LLM distinctiveness",
+    "prediction": "Positive: conditions far from others in brain are far in LLM",
+    "per_model": [
+      {
+        "model": "Qwen",
+        "rho": -0.13406593406593406,
+        "p_scipy": 0.6477195279851131,
+        "p_perm": 0.6866
+      },
+      {
+        "model": "Llama",
+        "rho": -0.06813186813186813,
+        "p_scipy": 0.8169838797817922,
+        "p_perm": 0.5966
+      },
+      {
+        "model": "Mistral",
+        "rho": -0.06813186813186813,
+        "p_scipy": 0.8169838797817922,
+        "p_perm": 0.5964
+      },
+      {
+        "model": "Gemma",
+        "rho": 0.01978021978021978,
+        "p_scipy": 0.9464892274080114,
+        "p_perm": 0.4726
+      }
+    ],
+    "average_rho": -0.03736263736263736,
+    "average_p_perm": 0.5533,
+    "confirmed": false,
+    "per_condition": {
+      "anger": {
+        "brain_distinctiveness": 0.7099439123672653,
+        "llm_distinctiveness": 1.1153925385302128,
+        "block": "affective"
+      },
+      "belief": {
+        "brain_distinctiveness": 0.69379910714846,
+        "llm_distinctiveness": 1.0499104366526528,
+        "block": "social"
+      },
+      "disgust": {
+        "brain_distinctiveness": 0.7596817941444249,
+        "llm_distinctiveness": 1.1147554772767134,
+        "block": "affective"
+      },
+      "empathy": {
+        "brain_distinctiveness": 0.7489575362519485,
+        "llm_distinctiveness": 1.0101869437699127,
+        "block": "social"
+      },
+      "fear": {
+        "brain_distinctiveness": 0.719752228038333,
+        "llm_distinctiveness": 1.1137081042139136,
+        "block": "affective"
+      },
+      "happiness": {
+        "brain_distinctiveness": 0.7262572100581735,
+        "llm_distinctiveness": 1.1160204749023366,
+        "block": "affective"
+      },
+      "intention": {
+        "brain_distinctiveness": 0.8548326322966358,
+        "llm_distinctiveness": 1.0393054045406072,
+        "block": "social"
+      },
+      "judgment": {
+        "brain_distinctiveness": 0.9178479521998523,
+        "llm_distinctiveness": 1.0264658638998427,
+        "block": "social"
+      },
+      "mentalizing": {
+        "brain_distinctiveness": 0.6930112321943676,
+        "llm_distinctiveness": 1.0452631810729107,
+        "block": "social"
+      },
+      "moral": {
+        "brain_distinctiveness": 0.6449590397452126,
+        "llm_distinctiveness": 1.0149052529996816,
+        "block": "social"
+      },
+      "sadness": {
+        "brain_distinctiveness": 0.7227030321279995,
+        "llm_distinctiveness": 1.1163171430960277,
+        "block": "affective"
+      },
+      "self_referential": {
+        "brain_distinctiveness": 0.7008852905975945,
+        "llm_distinctiveness": 1.0495437453720275,
+        "block": "social"
+      },
+      "theory_of_mind": {
+        "brain_distinctiveness": 0.628390789595081,
+        "llm_distinctiveness": 1.0458708606962048,
+        "block": "social"
+      },
+      "valence": {
+        "brain_distinctiveness": 0.6226088901111234,
+        "llm_distinctiveness": 1.1141296440764403,
+        "block": "affective"
+      }
+    }
+  },
+  "prediction_4_vulnerable_pairs": {
+    "description": "Brain-predicted closest pairs are also LLM-closest pairs",
+    "prediction": "Overlap: brain top-10 near pairs overlap LLM top-10 near pairs",
+    "brain_top10": [
+      "mentalizing--theory_of_mind",
+      "happiness--sadness",
+      "belief--theory_of_mind",
+      "disgust--fear",
+      "fear--happiness",
+      "fear--valence",
+      "belief--mentalizing",
+      "anger--fear",
+      "happiness--valence",
+      "moral--theory_of_mind"
+    ],
+    "llm_top10": [
+      "mentalizing--theory_of_mind",
+      "happiness--sadness",
+      "anger--sadness",
+      "anger--disgust",
+      "fear--sadness",
+      "anger--happiness",
+      "disgust--sadness",
+      "fear--happiness",
+      "anger--fear",
+      "disgust--happiness"
+    ],
+    "overlap": [
+      "anger--fear",
+      "fear--happiness",
+      "happiness--sadness",
+      "mentalizing--theory_of_mind"
+    ],
+    "n_overlap": 4,
+    "expected_overlap": 1.098901098901099,
+    "hypergeometric_p": 0.01166501441910738,
+    "top20_overlap": 16,
+    "top20_p": 7.30500670438424e-11,
+    "full_rho": 0.7309444179009397,
+    "full_p_perm": 0.0,
+    "confirmed": true
+  },
+  "prediction_5_boundary_sensitivity": {
+    "description": "Boundary proximity predicts cross-block coupling sensitivity",
+    "prediction": "Negative: conditions deep inside a block receive less cross-block coupling",
+    "per_model": [
+      {
+        "model": "Qwen",
+        "rho": -0.5120879120879122,
+        "p_scipy": 0.06119848615645835,
+        "p_perm": 0.0648
+      },
+      {
+        "model": "Llama",
+        "rho": -0.35824175824175825,
+        "p_scipy": 0.2084981247907672,
+        "p_perm": 0.2087
+      },
+      {
+        "model": "Mistral",
+        "rho": -0.2923076923076923,
+        "p_scipy": 0.3105263203858819,
+        "p_perm": 0.3157
+      },
+      {
+        "model": "Gemma",
+        "rho": -0.3538461538461538,
+        "p_scipy": 0.21453987088124626,
+        "p_perm": 0.2198
+      }
+    ],
+    "average_rho": -0.3802197802197802,
+    "average_p_perm": 0.1813,
+    "confirmed": false,
+    "per_condition": {
+      "anger": {
+        "block": "affective",
+        "boundary_proximity": 0.334338793969827,
+        "cross_block_sensitivity": 0.02119624872794293
+      },
+      "belief": {
+        "block": "social",
+        "boundary_proximity": 0.3428259079261007,
+        "cross_block_sensitivity": 0.024331516653834546
+      },
+      "disgust": {
+        "block": "affective",
+        "boundary_proximity": 0.4428712990419288,
+        "cross_block_sensitivity": 0.025264838673187004
+      },
+      "empathy": {
+        "block": "social",
+        "boundary_proximity": 0.0048983860507916255,
+        "cross_block_sensitivity": 0.057582567135492986
+      },
+      "fear": {
+        "block": "affective",
+        "boundary_proximity": 0.5410812339067892,
+        "cross_block_sensitivity": 0.02302667162931479
+      },
+      "happiness": {
+        "block": "affective",
+        "boundary_proximity": 0.5195622447932764,
+        "cross_block_sensitivity": 0.022424569892625836
+      },
+      "intention": {
+        "block": "social",
+        "boundary_proximity": 0.2919630427752089,
+        "cross_block_sensitivity": 0.046897392471725335
+      },
+      "judgment": {
+        "block": "social",
+        "boundary_proximity": 0.3192870138790931,
+        "cross_block_sensitivity": 0.04420534479696437
+      },
+      "mentalizing": {
+        "block": "social",
+        "boundary_proximity": 0.3762355996172697,
+        "cross_block_sensitivity": 0.05503093202908838
+      },
+      "moral": {
+        "block": "social",
+        "boundary_proximity": 0.1602596427202868,
+        "cross_block_sensitivity": 0.037191916806544385
+      },
+      "sadness": {
+        "block": "affective",
+        "boundary_proximity": 0.39813111026163484,
+        "cross_block_sensitivity": 0.018119608328383247
+      },
+      "self_referential": {
+        "block": "social",
+        "boundary_proximity": 0.1934591741847682,
+        "cross_block_sensitivity": 0.022187282641728714
+      },
+      "theory_of_mind": {
+        "block": "social",
+        "boundary_proximity": 0.33870831302472043,
+        "cross_block_sensitivity": 0.05317327866696778
+      },
+      "valence": {
+        "block": "affective",
+        "boundary_proximity": 0.285804859467511,
+        "cross_block_sensitivity": 0.03961515443778373
+      }
+    }
+  }
+}

@@ -145,6 +145,24 @@ test whether they hold in LLMs.
   Code: `src/clinical_dissociation.py`. SLURM: `scripts/slurm/clinical_dissociation.sh`.
   Awaiting GPU run.
 
+- **Prospective Prediction Battery** (`src/prospective_prediction.py`, CPU-only). Five specific
+  quantitative predictions from brain geometry, tested on existing coupling + RDM data:
+  - **P1 (CONFIRMED):** Brain distance predicts coupling asymmetry — rho = **-0.424, p < 0.001**
+    (2-tailed). Direction reversed: brain-*close* (within-system) pairs show MORE directional
+    coupling asymmetry; cross-block pairs decouple symmetrically. 4/4 models negative.
+  - **P2 (null):** Within-block brain fine structure does not predict within-block coupling
+    (affective rho = -0.03, social rho = -0.51 wrong direction). The coupling matrix measures
+    a different aspect of organization than representational distance within a block.
+  - **P3 (null):** Brain distinctiveness does not predict LLM distinctiveness (rho = -0.04).
+    LLM distances are dominated by the block split; within-block variation is compressed.
+  - **P4 (CONFIRMED):** Brain-predicted "vulnerable" (closest) pairs overlap LLM closest pairs:
+    **4/10 overlap**, hypergeometric p = **0.012** (expected 1.1). Shared: mentalizing-ToM,
+    happiness-sadness, fear-happiness, anger-fear. Full-rank rho = **+0.731**.
+  - **P5 (trend):** Boundary proximity predicts cross-block coupling sensitivity: rho = **-0.38**,
+    p = 0.18 (n=14, underpowered). Qwen alone p=0.065. Direction correct: empathy (nearest
+    boundary) has highest cross-block sensitivity; fear/happiness (deepest in block) have lowest.
+  Results: `results/cognitive_rsa/prospective_prediction.json`, figure: `figures/prospective_predictions.png`.
+
 Downstream neuroscience programs that could become further LLM predictions: dual-route
 empathy (Shamay-Tsoory 2009, *Brain*), clinical mirror-disorders (psychopathy vs autism;
 Blair; Baron-Cohen 1995), dual-process moral cognition + lesion→behavior (Greene 2001
@@ -223,6 +241,7 @@ is partial RSA (~80% retained), not fMRI magnitude.
 | `src/regional_rsa_xarch.py` | Regional per-parcel RSA, 4 architectures (261 subj, 400 parcels). |
 | `src/base_vs_instruct_rsa.py` | Base vs Instruct RSA: pretraining vs RLHF alignment comparison (Qwen2.5-1.5B). |
 | `src/robustness_gauntlet.py` | Anti-spurious-alignment gauntlet (4 tests, all PASS). Pre-empts Hadidi et al. 2026. |
+| `src/prospective_prediction.py` | Prospective prediction battery: 5 brain-to-LLM predictions (2 confirmed, 1 trend, 2 null). CPU-only. |
 | `present/build_present.py` | Regenerate the HTML briefing. |
 | `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |
 | `benchmark/README.md` | BrainCog-14 benchmark documentation, conditions, recipe, interpretation guide. |
