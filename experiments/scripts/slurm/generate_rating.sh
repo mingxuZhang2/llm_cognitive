@@ -22,6 +22,6 @@ python -u src/generate_rating_responses.py \
     --model_path "$MODEL_PATH" \
     --model_short Qwen2.5-7B-Instruct \
     --peak_layer 27 \
-    --inspect_only
+    
 
 echo "=== DONE ($(date)) ==="
