@@ -87,6 +87,7 @@ from coupling matrices; 4/4 models DD, all Wilcoxon p < 0.007, 14/14 conditions 
 | `src/clinical_dissociation.py` | Psychopathy vs autism double-dissociation (ablate emotion/social neuron sets, GPU). |
 | `src/subspace_dissociation.py` | **Subspace double-dissociation** (project out emotion/social PCA subspaces from per-stim acts, CPU). Cleaner replacement for clinical_dissociation.py. |
 | `src/robustness_gauntlet.py` | **Anti-spurious-alignment gauntlet** (locked-pipeline, LOO, LOMO-CV, stim sub-sampling). Pre-empts Hadidi et al. 2026. All 4/4 pass; rho survives at 0.67+ under every degradation. |
+| `src/paraphrase_invariance.py` | **Paraphrase-invariance tests** (split-half stability, LOSO jackknife, cross-source invariance). Shows RSA signal is content-driven, not surface-form-dependent. All 4 models: split-half 95% CI stays above +0.65, LOSO max drop <0.007, cross-source sub-pools agree within 0.03. |
 | `src/prospective_prediction.py` | **Prospective prediction battery** (5 tests: coupling asymmetry, within-block coupling, distinctiveness, vulnerable pairs, boundary sensitivity). CPU-only from existing data. |
 | `src/narratives_*.py` | Narratives fMRI pipeline (independent stimulus-locked validation). |
 | `present/build_present.py` | Regenerate the plain-language briefing deck (`present/index.html`). |

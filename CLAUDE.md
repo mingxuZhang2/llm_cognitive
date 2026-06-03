@@ -241,6 +241,7 @@ is partial RSA (~80% retained), not fMRI magnitude.
 | `src/regional_rsa_xarch.py` | Regional per-parcel RSA, 4 architectures (261 subj, 400 parcels). |
 | `src/base_vs_instruct_rsa.py` | Base vs Instruct RSA: pretraining vs RLHF alignment comparison (Qwen2.5-1.5B). |
 | `src/robustness_gauntlet.py` | Anti-spurious-alignment gauntlet (4 tests, all PASS). Pre-empts Hadidi et al. 2026. |
+| `src/paraphrase_invariance.py` | Paraphrase-invariance tests (split-half, LOSO jackknife, cross-source). Signal is content-driven, not surface-form. |
 | `src/prospective_prediction.py` | Prospective prediction battery: 5 brain-to-LLM predictions (2 confirmed, 1 trend, 2 null). CPU-only. |
 | `present/build_present.py` | Regenerate the HTML briefing. |
 | `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |
