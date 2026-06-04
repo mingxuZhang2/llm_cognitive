@@ -161,8 +161,19 @@ Tracking RSA across 9 training checkpoints (step 0 → 100k):
 | Within-social ρ | +0.40 | +0.73 | +0.65 | Aligns early, stable |
 | Within-affective ρ | +0.30 | −0.13 | −0.57 | Reverses during training |
 
-Social structure aligns early and stays. Affective structure actively *diverges* from
-the brain during training.
+Three findings from this curve:
+
+1. **Full ρ monotonically rises (0.24 → 0.72).** Brain-like structure is not present
+   at initialization — it is *learned from text*. Combined with base-vs-instruct
+   (99.3% from pretraining), this confirms the alignment is acquired during next-token
+   prediction, not from RLHF or architectural bias.
+2. **Social structure aligns early and stays.** Linguistically-defined concepts
+   (belief, intention, judgment) are captured almost immediately.
+3. **Affective structure actively diverges (+0.30 → −0.57).** The model learns its
+   own emotion geometry from text statistics, which increasingly departs from the
+   brain's somatically-grounded emotion space. This is consistent with the
+   within-affective non-alignment in Finding 3.1 — text-only models cannot recover
+   body-dependent affective fine structure.
 
 **Source:** `results/developmental_emergence/pythia_trajectory.json`,
 `src/pythia_developmental.py`
