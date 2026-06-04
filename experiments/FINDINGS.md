@@ -116,7 +116,19 @@ brain-like geometry is a byproduct of learning language, not of alignment traini
 
 **Source:** `results/cognitive_rsa/base_vs_instruct.json`
 
-### 1.6 Cross-architecture convergence
+### 1.6 Confirmatory RSA (guarding against researcher degrees of freedom)
+
+Discovery/confirmation split: discover recipe on Qwen-1.5B (ρ = 0.754), then test
+on held-out 7B models. Max-stat permutation p < 0.0002. Bootstrap CI [0.719, 0.759].
+CV-ablation (remove the dominant axis) drops ρ by 0.744 → the axis IS the signal.
+
+**What this means:** The headline result is not a product of pipeline flexibility.
+A recipe discovered on a smaller model generalizes to held-out architectures, and
+the permutation test is corrected for multiple comparisons.
+
+**Source:** `results/cognitive_rsa/confirmatory_rsa.json`, `src/confirmatory_rsa.py`
+
+### 1.7 Cross-architecture convergence
 
 Four architectures from three companies (Qwen/Alibaba, Llama/Meta, Mistral/Mistral AI,
 Gemma/Google) independently converge on the same geometry. This rules out
@@ -165,7 +177,38 @@ just as in the brain. Removing one does not damage the other.
 
 **Source:** `results/clinical_dissociation/subspace_dissociation.json`
 
-### 2.3 Prospective prediction battery
+### 2.3 Brain distances predict LLM confusion patterns
+
+If the brain's geometry is functionally meaningful for the LLM, then condition pairs
+that are close in the brain should be more confusable (harder to classify) in the LLM.
+
+- Grand classification accuracy: 52.3% (14-way, well above 7.1% chance)
+- Brain confusion ρ = **+0.243, p = 0.020** — brain distances predict which condition
+  pairs the LLM confuses most often
+
+**What this means:** The brain's representational distances predict the LLM's
+behavioral errors. Conditions the brain treats as similar are harder for the LLM
+to distinguish.
+
+**Source:** `results/cognitive_rsa/deep_analysis.json`, `src/rsa_deep_analysis.py`
+
+### 2.4 Next-token prediction reflects brain geometry
+
+The alignment extends beyond hidden-state geometry to the model's output behavior.
+JSD (Jensen-Shannon divergence) between next-token distributions for condition pairs
+correlates with brain distances:
+
+- JSD vs brain distance: ρ = **+0.208, p = 0.048** (Qwen 1.5B)
+- Within-affective JSD (0.29) << within-mentalistic JSD (0.54): the model's output
+  distributions distinguish mentalistic conditions more sharply than affective ones
+
+**What this means:** The brain-LLM alignment is not confined to hidden
+representations — it is visible in the model's actual predictions.
+
+**Source:** `results/next_token/Qwen2.5-1.5B-Instruct_next_token_similarity.json`,
+`src/next_token_similarity.py`
+
+### 2.5 Prospective prediction battery (5 tests)
 
 Five specific quantitative predictions derived from brain geometry, tested on
 existing LLM data. All permutation tests two-tailed.
@@ -188,7 +231,7 @@ brain identifies the LLM's vulnerabilities.
 
 **Source:** `results/cognitive_rsa/prospective_prediction.json`
 
-### 2.4 Moral judgment steering
+### 2.6 Moral judgment steering
 
 Steering LLM activations along the brain-derived affective–mentalizing axis
 systematically modulates moral choice. Logit-based measurement (no text generation):
@@ -220,7 +263,7 @@ the axis, not as a validation of Greene's specific theory.
 
 **Source:** `results/moral_judgment/Qwen2.5-7B-Instruct_moral_logit.json`
 
-### 2.5 LLM judge confirms behavioral perceptibility
+### 2.7 LLM judge confirms behavioral perceptibility
 
 DeepSeek (different company, different architecture) blindly ranks steered Qwen
 responses from "most emotional" to "most analytical."
@@ -235,7 +278,7 @@ establish perceptual and practical significance.
 
 **Source:** `results/human_rating/deepseek_judge_ranking.json`
 
-### 2.6 Developmental trajectory (Pythia-2.8B)
+### 2.8 Developmental trajectory (Pythia-2.8B)
 
 Tracking brain-LLM RSA across 9 training checkpoints (step 0 → 100k):
 
@@ -381,6 +424,27 @@ This informs experimental design, not the underlying biology.
 
 All designed to rule out trivial or spurious explanations for the headline ρ ≈ 0.73.
 
+### R0. Lexical and label baselines + partial RSA
+
+Concern: the alignment is driven by surface lexical features, not cognitive content.
+
+| Baseline | ρ | p | Interpretation |
+|---|---|---|---|
+| GloVe 300d embeddings | +0.494 | < 0.001 | Static word vectors capture ~67% of LLM signal |
+| Condition-name GloVe | +0.519 | < 0.001 | Just the 14 label words capture ~70% |
+| TF-IDF 5000 | +0.195 | 0.064 | Bag-of-words is NOT significant |
+| Sentence length | +0.328 | 0.002 | Length contributes but < half the signal |
+| **Partial RSA** (control all above) | **0.739** | — | **79.6% retained** after partialing out all lexical confounds |
+
+**What this means:** Lexical baselines are NOT trivial — GloVe alone explains ~67%
+of the headline. But partial RSA shows ~80% of the LLM signal survives after
+controlling for all lexical/label/length confounds. The LLM captures something
+beyond what static word vectors provide. The combination of partial RSA (80%
+retained) and template-matched stimuli (74–89% retained, below) provides the
+anti-confound backbone.
+
+**Source:** `results/cognitive_rsa/baseline_controls.json`, `src/baseline_controls.py`
+
 ### R1. Template-matched stimuli (anti-format-confound)
 
 Concern: different conditions use different sentence styles → surface form, not
@@ -496,25 +560,31 @@ organization survive that compression and which do not.
 
 ## Status
 
-| Category | Item | Status |
-|---|---|---|
-| **Headline** | 4-model RSA ρ ≈ 0.73 | ✅ |
-| | Within-block: partial ρ ≈ 0.36, social ✅, affective ❌ | ✅ |
-| **Validation** | Real-fMRI (3 datasets) | ✅ |
-| | Template-matched (74–89% retained) | ✅ |
-| | Paraphrase invariance (3/3) | ✅ |
-| | Robustness gauntlet (4/4) | ✅ |
-| | Steering controls (3 nulls vs brain sig) | ✅ |
-| | PC1 dissociation (cos=0.99, behavioral null) | ✅ |
-| **Predictive** | Coupling double dissociation (4/4 models) | ✅ |
-| | Prospective predictions (2/5 confirmed, stats fixed) | ✅ |
-| | Moral judgment logit-based (ρ=−0.19, p=0.006) | ✅ |
-| | LLM judge behavioral perceptibility (ρ=+0.32, p=0.004) | ✅ |
-| **Developmental** | Pythia trajectory (learned, social-first, affective-reversal) | ✅ |
-| | Scale invariance (0.5–7B) | ✅ |
-| | Base vs Instruct (99.3% pretraining) | ✅ |
-| **Application** | BrainCog-14 benchmark | ✅ |
-| | Human ranking | ⏳ waiting for rater data |
-| **Null (reported)** | Layer-depth (Direction D) | ✅ |
-| | Clinical block-level ablation | ✅ |
-| | Developmental sequence (opposite of ontogeny) | ✅ |
+| Category | Item | Source | Status |
+|---|---|---|---|
+| **Headline** | 4-model RSA ρ ≈ 0.73 | `{model}_rdm14_headline.npz` | ✅ |
+| | Within-block: partial ρ ≈ 0.36, social ✅, affective ❌ | `within_block_control.json` | ✅ |
+| | Confirmatory RSA (discovery/confirmation split) | `confirmatory_rsa.json` | ✅ |
+| **Confound controls** | Lexical baselines + partial RSA (80% retained) | `baseline_controls.json` | ✅ |
+| | Template-matched (74–89% retained) | `template_matched_rsa_results.json` | ✅ |
+| | Paraphrase invariance (3/3) | `paraphrase_invariance.json` | ✅ |
+| | Robustness gauntlet (4/4) | `robustness_gauntlet.json` | ✅ |
+| | Steering controls (3 nulls vs brain sig) | `deepseek_judge_controls.json` | ✅ |
+| | PC1 dissociation (cos=0.99, needs matched controls) | `pc1_vs_brain_axis.json` | ✅ |
+| **Validation** | Real-fMRI (3 datasets, Narratives sig) | `narratives_group_rsa.json` | ✅ |
+| **Predictive** | Coupling block-specific sensitivity (4/4) | `coupling_reanalysis.json` | ✅ |
+| | Subspace dissociation | `subspace_dissociation.json` | ✅ |
+| | Brain confusion → LLM confusion (ρ=+0.24, p=0.02) | `deep_analysis.json` | ✅ |
+| | Next-token reflects brain geometry (ρ=+0.21, p=0.048) | `next_token/*.json` | ✅ |
+| | Prospective predictions (2/5 confirmed, stats fixed) | `prospective_prediction.json` | ✅ |
+| | Moral judgment logit-based (ρ=−0.19, p=0.006) | `moral_logit.json` | ✅ |
+| | LLM judge (ρ=+0.32, p=0.004, supplementary) | `deepseek_judge_ranking.json` | ✅ |
+| **Developmental** | Pythia trajectory (learned, social-first, affective-reversal) | `pythia_trajectory.json` | ✅ |
+| | Scale invariance (0.5–7B) | `scaling_summary.json` | ✅ |
+| | Base vs Instruct (99.3% pretraining) | `base_vs_instruct.json` | ✅ |
+| **Application** | BrainCog-14 benchmark | `benchmark/` | ✅ |
+| | Human ranking | — | ⏳ waiting |
+| **Null (reported)** | Layer-depth (Direction D) | `layer_depth_profile.json` | ✅ |
+| | Clinical block-level ablation | `clinical_dissociation.json` | ✅ |
+| | Developmental sequence ≠ ontogeny | `pythia_trajectory.json` | ✅ |
+| | Moral direction ≠ Greene prediction | `moral_logit.json` | ✅ |
