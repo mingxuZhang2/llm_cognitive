@@ -106,29 +106,40 @@ subspace for one block selectively destroys that block's internal structure.
 
 | # | Prediction | Result | Key stat |
 |---|---|---|---|
-| P1 | Brain distance predicts coupling asymmetry | **CONFIRMED** | ρ = −0.424, p < 0.001 |
-| P2 | Within-block brain fine structure → coupling | null | ρ ≈ 0, wrong direction |
+| P1 | Brain distance predicts coupling asymmetry | **CONFIRMED** | ρ = −0.424, avg p < 0.001; per-model 3/4 sig (two-tailed) |
+| P2 | Within-block brain fine structure → coupling | null | rho wrong direction |
 | P3 | Brain distinctiveness → LLM distinctiveness | null | ρ = −0.04 |
-| P4 | Brain-predicted closest pairs = LLM closest | **CONFIRMED** | 4/10 overlap, p = 0.012 |
+| P4 | Brain-predicted closest pairs = LLM closest | **CONFIRMED** | 4/10 overlap, p = 0.012; rank ρ = +0.731 |
 | P5 | Boundary proximity → cross-block sensitivity | trend | ρ = −0.38, p = 0.18 |
+
+All permutation tests are two-tailed (corrected 2026-06-04).
 
 **Source:** `results/cognitive_rsa/prospective_prediction.json`,
 `src/prospective_prediction.py`
 
-### 2.4 Moral judgment steering (Greene/Koenigs prediction)
+### 2.4 Moral judgment steering — logit-based (Greene/Koenigs prediction)
 
-Brain direction (mentalistic − affective): negative α pushes utilitarian, positive α
-pushes deontological. Logistic regression p = 0.024.
+Direct logit difference `log P(util) − log P(deont)` at moderate alphas [-5..+5],
+no text generation (avoids degeneration artifacts of old forced-choice approach).
 
-| Alpha | Utilitarian % (Qwen, N=30 dilemmas) |
-|---|---|
-| −20 | 100% |
-| −10 | 93% |
-| 0 | 87% |
-| +10 | 80% |
-| +20 | 70% |
+| Alpha | Mean logit_diff | P(utilitarian) |
+|---|---|---|
+| −5 | +0.551 | 54% |
+| −3 | +0.307 | 50% |
+| −1 | +0.074 | 47% |
+| 0 | −0.041 | 45% |
+| +1 | −0.152 | 44% |
+| +3 | −0.360 | 42% |
+| +5 | −0.552 | 39% |
 
-**Source:** `results/moral_judgment/moral_judgment.json`, `src/moral_judgment_test.py`
+Spearman ρ(alpha, logit_diff) = **−0.190, p = 0.006**. Personal dilemmas: ρ = −0.194
+(p = 0.01). Quality: entropy ratio 1.81 (no degradation).
+
+Interpretation: negative α (suppress mentalistic → amplify emotional) increases
+utilitarian choice probability, consistent with Greene's dual-process theory.
+
+**Source:** `results/moral_judgment/Qwen2.5-7B-Instruct_moral_logit.json`,
+`src/moral_judgment_logit.py`
 
 ### 2.5 LLM judge confirms behavioral shift
 
@@ -258,6 +269,28 @@ produces perceptible behavioral shift.
 
 **Source:** `results/human_rating/deepseek_judge_controls.json`, `src/llm_judge_controls.py`
 
+### R5. PC1 vs brain axis: representational similarity ≠ causal potency
+
+The brain-derived boundary and the LLM's PC1 (dominant variance direction) overlap
+almost perfectly: **cos = 0.99** (7.4° apart in 3584-dim space). Yet their behavioral
+effects are completely different:
+
+| Direction | LLM judge ρ | p | Works? |
+|---|---|---|---|
+| Brain axis | +0.320 | 0.004 | YES |
+| PC1 | −0.010 | 0.910 | NO |
+
+Not explained by: sign flip (would give ρ=-1, not 0), SNR difference (1.06×),
+or block discriminability (d' 1.98 vs 1.92). The brain axis was constructed from
+pure affect vs mentalistic exemplars — a targeted mode-switch signal. PC1 captures
+variance without causal specificity.
+
+This dissociation turns the reviewer concern ("brain axis = PC1?") into evidence:
+brain-informed construction captures causally specific features that data-driven
+extraction misses.
+
+**Source:** `results/cognitive_rsa/pc1_vs_brain_axis.json`, `src/pc1_vs_brain_axis.py`
+
 ---
 
 ## Status Summary
@@ -271,8 +304,9 @@ produces perceptible behavioral shift.
 | Validation | Paraphrase invariance 3/3 | ✅ |
 | Validation | Robustness gauntlet 4/4 | ✅ |
 | Predictive | Coupling dissociation 4/4 | ✅ |
-| Predictive | Prospective predictions 2/5 | ✅ |
-| Predictive | Moral judgment steering | ✅ |
+| Predictive | Prospective predictions 2/5 (stats fixed) | ✅ |
+| Predictive | Moral judgment logit-based | ✅ |
+| Predictive | PC1 vs brain axis dissociation | ✅ |
 | Predictive | LLM judge (DeepSeek) | ✅ |
 | Developmental | Pythia trajectory | ✅ |
 | Developmental | Scale invariance (0.5–7B) | ✅ |
