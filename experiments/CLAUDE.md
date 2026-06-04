@@ -9,9 +9,11 @@
 
 Representational Similarity Analysis (RSA) between the **human brain** and **LLMs**, in the
 brain-as-reference-frame direction (brain geometry → predict LLM organization). The headline:
-a text-only LLM reproduces the brain's relational geometry of **both emotion and social
-cognition** (RSA ρ ≈ 0.73, near noise ceiling, 4 architectures, scale-invariant 0.5B–7B, carried
-by one causally load-bearing emotion↔social boundary axis). See the overview docs above.
+a text-only LLM shares the brain's **dominant emotion↔social-cognition boundary and
+social-cognitive fine structure** (RSA ρ ≈ 0.73, ~76% of LLM split-half reliability ceiling,
+4 architectures, scale-invariant 0.5B–7B, carried by one causally load-bearing emotion↔social
+boundary axis). Within-affective ordering does not align (ρ ≈ −0.10, n.s.).
+See the overview docs above.
 
 > **Legacy v1 code is still present in this directory.** The original project (v1, archived at
 > git tag `v1-ai-categories`) was an *AI-task functional atlas* — neuron attribution + double
@@ -76,7 +78,7 @@ from coupling matrices; 4/4 models DD, all Wilcoxon p < 0.007, 14/14 conditions 
 | `src/build_brain_rdm.py` | Build the 14-map Neurosynth brain RDM (1−Pearson). |
 | `src/reconstruct_headline_rdms.py` | Rebuild `{model}_rdm14_headline.npz` (headline recipe). |
 | `src/rsa_cross_model_v2.py` | 4-model cross-architecture ρ. |
-| `src/rsa_scaling_analysis.py` | Scaling curve + noise ceiling (Qwen 0.5B–7B). |
+| `src/rsa_scaling_analysis.py` | Scaling curve + LLM split-half ceiling (Qwen 0.5B–7B). |
 | `src/rsa_deep_analysis.py` | Gap + confusion (geometry→behavior) + one-axis causal ablation. |
 | `src/confirmatory_rsa.py` | Discovery/confirmation split, max-stat perm p, bootstrap CI, CV-ablation. |
 | `src/baseline_controls.py` | GloVe / TF-IDF / condition-name / length baselines + partial RSA. |

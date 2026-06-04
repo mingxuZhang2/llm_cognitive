@@ -18,8 +18,9 @@
 
 We use the **human brain as a predictive reference frame to explain the internal organization
 of large language models** (not the usual neuro-AI direction of using LLMs to model brains): a
-text-only LLM reproduces the brain's **relational organization of both emotion and social
-cognition** (RSA ρ ≈ 0.73, near the noise ceiling) — universal across 4 architectures,
+text-only LLM shares the brain's **dominant emotion↔social-cognition boundary and
+social-cognitive fine structure** (RSA ρ ≈ 0.73, ~76% of the LLM split-half reliability
+ceiling; no brain-side noise ceiling is available) — universal across 4 architectures,
 invariant from 0.5B to 7B, already present in base (pre-RLHF) models, surviving confound
 control, and riding on a **single brain-like axis (the emotion ↔ social-cognition boundary)
 that is causally load-bearing** (removing that one direction inverts ρ from +0.73 to −0.36).
@@ -88,7 +89,7 @@ gemma-2-9b-it (4 main); Qwen2.5 0.5B/1.5B/3B/7B (scaling); Qwen2.5-1.5B base vs 
 | Gemma-2-9B | **0.735** | 0.0001 |
 
 Null 95th percentile ≈ 0.25; **max-stat p = 0.0002** (corrected for peak-layer selection);
-bootstrap 95% CI [0.719, 0.759] (Qwen 7B); overall noise ceiling ≈ 0.97 → ρ ≈ **76% of ceiling**.
+bootstrap 95% CI [0.719, 0.759] (Qwen 7B); LLM split-half reliability ceiling ≈ 0.97 → ρ ≈ **76% of that LLM-side ceiling** (no brain-side noise ceiling is available).
 A held-out discovery/confirmation split (freeze layer + config on a different model) keeps all 4
 positive (0.61–0.72). **Architecture-invariant** (all 4 within 0.012 of each other).
 **Per-block row-wise** (each condition's distance-to-all-13): affective 0.74 / ceiling 0.94 (**78%**);

@@ -70,7 +70,7 @@ TERMS_BY_GROUP = {
 TFIDF_THRESHOLD = 0.001
 MIN_STUDIES = 30  # warn below this; very few studies -> unreliable map
 
-DATA_DIR = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/data/brain_maps")
+DATA_DIR = Path(__file__).resolve().parents[1] / "data" / "brain_maps"
 NS_DIR = DATA_DIR / "neurosynth"
 RAW_DIR = NS_DIR / "raw"
 DATASET_PATH = RAW_DIR / "neurosynth_dataset.pkl.gz"

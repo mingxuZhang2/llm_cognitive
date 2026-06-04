@@ -22,9 +22,10 @@ import nibabel as nib
 from nilearn import image as nl_image
 
 
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/data/cognitive_stimuli/rsa")
-BRAIN_DIR = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/data/brain_maps")
-OUT_DIR = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/results/cognitive_rsa")
+_EXP = Path(__file__).resolve().parents[1]
+BASE = _EXP / "data" / "cognitive_stimuli" / "rsa"
+BRAIN_DIR = _EXP / "data" / "brain_maps"
+OUT_DIR = _EXP / "results" / "cognitive_rsa"
 OUT_PATH = OUT_DIR / "brain_rdm_v2.npz"
 
 HCP_OVERRIDES = {

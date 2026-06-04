@@ -28,7 +28,7 @@ import numpy as np
 from scipy.stats import spearmanr
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments")
+BASE = Path(__file__).resolve().parents[1]
 RSA_DIR = BASE / "results" / "cognitive_rsa"
 OUT_PATH = RSA_DIR / "pc1_vs_brain_axis.json"
 

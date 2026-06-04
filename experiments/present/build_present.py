@@ -172,7 +172,7 @@ ax.annotate("≈87% of ceiling", (1 + w / 2, men_al), xytext=(0.95, 0.5),
             fontsize=9, color=C_MENT, fontweight="bold")
 ax.set_xticks(x); ax.set_xticklabels(["Affective", "Social cognition"])
 ax.set_ylim(0, 1.05); ax.set_ylabel("ρ")
-ax.set_title("Both modules align with the brain NEAR their noise ceiling")
+ax.set_title("Both modules align with the brain (% of LLM split-half reliability ceiling)")
 ax.legend(fontsize=8, loc="upper right"); ax.grid(axis="y", alpha=0.3)
 fig_ceil = b64(fig)
 

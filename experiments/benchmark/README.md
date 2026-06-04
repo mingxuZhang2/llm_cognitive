@@ -2,13 +2,20 @@
 
 **A brain-derived benchmark for social-emotional representational geometry in language models.**
 
-BrainCog-14 tests whether a language model's internal representational geometry reproduces the
-human brain's organization of emotion and social cognition. It provides 14 cognitive conditions
-(6 affective, 8 social/mentalistic), a reference brain RDM built from Neurosynth meta-analytic
-fMRI maps, and a locked evaluation recipe. A model "passes" if the Spearman correlation between
-its representational dissimilarity matrix (RDM) and the brain RDM exceeds the permutation null.
-Four architectures (Qwen, Llama, Mistral, Gemma) achieve rho ~ 0.73, near the noise ceiling,
-and this alignment is scale-invariant from 0.5B to 7B parameters.
+BrainCog-14 tests whether a language model's internal representational geometry shares
+the human brain's dominant affect-mentalizing axis and social-cognitive fine structure.
+It provides 14 cognitive conditions (6 affective, 8 social/mentalistic), a reference brain
+RDM built from Neurosynth meta-analytic fMRI maps, and a locked evaluation recipe. A model
+"passes" if the Spearman correlation between its representational dissimilarity matrix (RDM)
+and the brain RDM exceeds the permutation null. Four architectures (Qwen, Llama, Mistral,
+Gemma) achieve rho ~ 0.73 (~76% of the LLM split-half reliability ceiling), and this
+alignment is scale-invariant from 0.5B to 7B parameters.
+
+**Limitation:** The alignment is dominated by the emotion-social boundary plus within-social
+ordering. Within-affective fine structure does not align (rho ~ -0.10, n.s., n=6
+underpowered), so the match should not be interpreted as a rich 14-way correspondence.
+No brain-side noise ceiling is available; the ceiling ratio refers to the LLM's own
+split-half reliability.
 
 ---
 
@@ -106,7 +113,7 @@ The evaluation recipe is locked to ensure reproducibility:
 | < 0.25       | **Not above chance.** The model's representational geometry does not reproduce the brain's social-emotional organization. |
 | 0.25 - 0.50  | **Above chance.** Comparable to static-embedding baselines (GloVe: 0.49). The model captures some lexical-level structure but not deep representational geometry. |
 | 0.50 - 0.70  | **Strong alignment.** Exceeds lexical baselines. After partialling out all text confounds (GloVe + condition name + sentence length), ~80% of alignment is retained, suggesting genuine representational structure beyond surface statistics. |
-| > 0.70       | **Near noise ceiling.** Comparable to reference LLMs (0.73). The model reproduces the brain's relational geometry of both emotion and social cognition at or near the reliability limit. |
+| > 0.70       | **Strong alignment.** Comparable to reference LLMs (0.73, ~76% of LLM split-half reliability ceiling). The model shares the brain's dominant emotion-social boundary and social-cognitive fine structure. Note: within-affective ordering does not align (rho ~ -0.10), so this reflects a shared axis plus within-social structure, not a full 14-way match. |
 
 ### What Does High Alignment Mean?
 
@@ -203,7 +210,7 @@ project -- it is fully self-contained.
   title   = {The Brain as a Reference Frame for Language Models:
              Social-Emotional Representational Geometry},
   author  = {Zhang, Mingxu and others},
-  journal = {Nature Machine Intelligence},
+  journal = {Preprint},
   year    = {2026},
   note    = {Preprint available at [URL]}
 }

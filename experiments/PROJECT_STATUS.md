@@ -8,9 +8,11 @@
 
 ## One-line summary
 
-A text-only LLM reproduces the human brain's relational organization of **both emotion and
-social cognition** (RSA ρ ≈ 0.73, near noise ceiling), carried by a single brain-like axis —
-the emotion ↔ social-cognition boundary — that is causally load-bearing.
+A text-only LLM shares the human brain's **dominant emotion↔social-cognition boundary and
+social-cognitive fine structure** (RSA ρ ≈ 0.73, ~76% of LLM split-half reliability ceiling),
+carried by a single brain-like axis — the emotion ↔ social-cognition boundary — that is
+causally load-bearing. Within-affective ordering does not align (ρ ≈ −0.10, n.s., n=6
+underpowered).
 
 ---
 

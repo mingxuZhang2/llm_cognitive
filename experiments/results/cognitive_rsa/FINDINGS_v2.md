@@ -9,9 +9,9 @@
 
 **Date:** 2026-05-25 (v2 update)
 **Pipeline:** per-stimulus extraction × multi-pooling × multi-distance sweep ×
-LLM noise ceiling
+LLM split-half reliability ceiling
 **Headline change:** Spearman ρ jumped from ~0.31 (v1) to **~0.63 (v2) across all
-4 models**, 64–66% of LLM split-half noise ceiling.
+4 models**, 64–66% of LLM split-half reliability ceiling.
 
 ---
 
@@ -26,7 +26,7 @@ LLM noise ceiling
 > at peak layer: Qwen 0.64 / Llama 0.63 / Mistral 0.63 / Gemma 0.64
 > (all p < 0.0002, 10K-permutation null).
 >
-> The LLM's own split-half noise ceiling is ~0.97 — so 64-66% of the maximum
+> The LLM's own split-half reliability ceiling is ~0.97 — so 64-66% of the maximum
 > *any* representation could correlate with this LLM's RDM is captured by the
 > brain. Consensus LLM RDM vs brain RDM: ρ = 0.63.
 
@@ -156,7 +156,7 @@ the brain's stimulus-evoked activity.
 - `results/cognitive_rsa/{model}_rsa_v2.json` — sweep over 12 configs × layers
 - `results/cognitive_rsa/cross_model_summary_v2.json` — final summary
 - `figures/cognitive_rsa_v2_alignment.png` — per-layer ρ curves, 4 models, with
-  noise-ceiling reference line
+  LLM split-half ceiling reference line
 - `figures/cognitive_rsa_v2_rdm_grid.png` — brain + 4 LLM RDMs at peak layer
-- `figures/cognitive_rsa_v2_ceiling_bar.png` — bar chart ρ vs noise ceiling
+- `figures/cognitive_rsa_v2_ceiling_bar.png` — bar chart ρ vs LLM split-half ceiling
 - `figures/cognitive_rsa_v2_preserved_pairs.png` — pair scatter, universals labeled

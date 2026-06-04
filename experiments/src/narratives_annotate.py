@@ -12,7 +12,7 @@ import json, time, argparse, sys, os
 from pathlib import Path
 from openai import OpenAI
 
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/data/narratives")
+BASE = Path(__file__).resolve().parents[1] / "data" / "narratives"
 
 DEEPSEEK_KEY = os.environ.get("DEEPSEEK_API_KEY", "DEEPSEEK_API_KEY_HERE")
 DEEPSEEK_BASE = "https://api.deepseek.com"

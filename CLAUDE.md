@@ -8,11 +8,14 @@ conclusions as **testable predictions about LLMs** — if a text-only model repr
 brain's representational geometry, then known brain results become hypotheses we can check
 in the model. Targeting Nature Machine Intelligence.
 
-**Headline finding (2026-05-31):** A text-only LLM reproduces the human brain's *relational*
-organization of both emotion and social cognition — Representational Similarity Analysis
-(RSA) between each model's internal geometry and meta-analytic fMRI maps gives **ρ ≈ 0.73**,
-near the noise ceiling, in **all 4 architectures**, and **scale-invariant from 0.5B → 7B**.
-The emotion ↔ social-cognition boundary is reproduced as part of this geometry.
+**Headline finding (2026-05-31):** A text-only LLM shares the human brain's dominant
+affect–mentalizing axis and social-cognitive fine structure — Representational Similarity
+Analysis (RSA) between each model's internal geometry and meta-analytic fMRI maps gives
+**ρ ≈ 0.73** (~76% of the LLM split-half reliability ceiling), in **all 4 architectures**,
+and **scale-invariant from 0.5B → 7B**. The emotion ↔ social-cognition boundary is the
+primary shared axis. **Limitation:** within-affective fine structure does not align
+(ρ ≈ −0.10, n.s.), so the match is dominated by the emotion↔social split plus within-social
+ordering, not a rich 14-way correspondence.
 
 ---
 
@@ -232,7 +235,7 @@ is partial RSA (~80% retained), not fMRI magnitude.
 | `src/compute_rsa_v2.py` | Full RSA sweep over poolings/centerings/distances/layers. |
 | `src/tom_source_check.py` | Diagnostic that found the HCP-ToM artifact. |
 | `src/kragel_ibc_reaudit.py` | Re-audit controlled-fMRI validators (corrected RDMs). |
-| `src/affective_ceiling_control.py` | Per-block alignment vs LLM split-half noise ceiling. |
+| `src/affective_ceiling_control.py` | Per-block alignment vs LLM split-half reliability ceiling. |
 | `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling (GPU). |
 | `src/coupling_dissociation_analysis.py` | Direction A reanalysis: per-condition double dissociation from coupling matrices. |
 | `src/clinical_dissociation.py` | Direction E: psychopathy vs autism double-dissociation. |

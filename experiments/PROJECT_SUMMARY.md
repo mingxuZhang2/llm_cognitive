@@ -7,13 +7,14 @@
 > compress them"). That asymmetry was traced to a single defective brain map (the lone
 > non-Neurosynth map, HCP `theory_of_mind`, orthogonal to its Neurosynth counterpart,
 > row-correlation −0.016). On a pure-Neurosynth brain RDM the asymmetry dissolves, the
-> headline rises (ρ 0.63 → 0.73), and *both* emotion and social cognition align near the
-> noise ceiling. All numbers below are recomputed against the corrected RDM unless marked
+> headline rises (ρ 0.63 → 0.73), and the dominant emotion↔social axis aligns strongly. All
+> numbers below are recomputed against the corrected RDM unless marked
 > "(independent)".
 
 ### One-line Summary
-A text-only LLM reproduces the human brain's **relational organization of both emotion and
-social cognition** (RSA ρ ≈ 0.73, near noise ceiling). The alignment is universal across 4
+A text-only LLM shares the human brain's **dominant emotion↔social-cognition boundary and
+social-cognitive fine structure** (RSA ρ ≈ 0.73, ~76% of LLM split-half reliability ceiling).
+Within-affective ordering does not align (ρ ≈ −0.10, n.s.). The alignment is universal across 4
 architectures, invariant to scale (0.5B–7B), present in base (pre-RLHF) models, survives
 confound control (~80% retained after partialling word-embedding + concept-name + length),
 and rides on a **single brain-like axis — the emotion ↔ social-cognition boundary — that is
@@ -88,8 +89,9 @@ Split-half reliability (LLM side for Source 1; brain side for Source 2) — the 
 | Gemma-2-9B | **0.735** | 0.0001 |
 
 Null 95th percentile ≈ 0.25; observed ρ ≈ 0.73; **max-stat p = 0.0002** (corrected for
-peak-layer selection); bootstrap 95% CI [0.719, 0.759] (Qwen 7B); overall noise ceiling ≈ 0.97,
-so ρ ≈ 76% of ceiling. A held-out discovery/confirmation split (freeze the layer + config
+peak-layer selection); bootstrap 95% CI [0.719, 0.759] (Qwen 7B); LLM split-half reliability
+ceiling ≈ 0.97, so ρ ≈ 76% of that LLM-side ceiling (no brain-side noise ceiling is available).
+A held-out discovery/confirmation split (freeze the layer + config
 chosen on a different model) keeps all 4 positive (0.61–0.72). **Architecture-invariant** (all
 4 within 0.012 of each other). Per-block **row-wise** alignment (each condition's distance-to-all-13):
 **affective 0.74 / ceiling 0.94 (78%); mentalistic 0.70 / ceiling 0.81 (87%)** — but note this
@@ -291,13 +293,13 @@ experiments/
     reconstruct_headline_rdms.py  — Rebuild {model}_rdm14_headline.npz (headline recipe)
     compute_rsa_v2.py             — Full RSA sweep (poolings/centerings/distances/layers)
     rsa_cross_model_v2.py         — 4-model cross-architecture comparison
-    rsa_scaling_analysis.py       — Scaling curve + noise ceiling (Qwen 0.5B–7B)
+    rsa_scaling_analysis.py       — Scaling curve + LLM split-half ceiling (Qwen 0.5B–7B)
     rsa_deep_analysis.py          — Gap + confusion (geometry→behavior) + causal ablation
     confirmatory_rsa.py           — Discovery/confirmation split, max-stat perm, bootstrap, CV ablation
     baseline_controls.py          — GloVe / TF-IDF / condition-name / length baselines
     fix_all_holes.py              — Partial RSA + LOO / leave-2-out stability
     tom_source_check.py           — Diagnostic that found the HCP-ToM artifact
-    affective_ceiling_control.py  — Per-block alignment vs LLM noise ceiling
+    affective_ceiling_control.py  — Per-block alignment vs LLM split-half reliability ceiling
     brain_causal_coupling.py      — Direction A: brain RDM predicts LLM causal coupling
     narratives_*.py               — Narratives fMRI pipeline (stimulus-locked validation)
     cognitive_steering.py         — Brain-derived activation steering

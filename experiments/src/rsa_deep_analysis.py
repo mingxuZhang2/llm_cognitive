@@ -22,7 +22,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from scipy.stats import spearmanr, rankdata
 
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments")
+BASE = Path(__file__).resolve().parents[1]
 RES = BASE / "results" / "cognitive_rsa"
 FIG = BASE / "figures"
 

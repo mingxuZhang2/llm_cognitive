@@ -28,7 +28,7 @@ Reference results (Spearman rho on 91 upper-triangle pairs):
 
 Citation:
     Zhang et al. (2026). The Brain as a Reference Frame for Language Models:
-    Social-Emotional Representational Geometry. Nature Machine Intelligence.
+    Social-Emotional Representational Geometry. Preprint.
 
 License: MIT (code), CC-BY-4.0 (data)
 """

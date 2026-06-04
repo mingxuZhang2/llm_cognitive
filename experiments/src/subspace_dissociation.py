@@ -47,7 +47,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 # ── Paths ──────────────────────────────────────────────────────────────
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments")
+BASE = Path(__file__).resolve().parents[1]
 RSA_DIR = BASE / "results" / "cognitive_rsa"
 OUT_DIR = BASE / "results" / "clinical_dissociation"
 FIG_DIR = BASE / "figures"

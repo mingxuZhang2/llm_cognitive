@@ -33,7 +33,7 @@ from nilearn.datasets import fetch_atlas_schaefer_2018
 from nilearn.image import resample_to_img
 from statsmodels.stats.multitest import multipletests
 
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments")
+BASE = Path(__file__).resolve().parents[1]
 FMRI_DIR = BASE / "data" / "narratives" / "fmri" / "afni-nosmooth"
 ANN_PATH = BASE / "data" / "narratives" / "annotated_sentences.jsonl"
 LLM_DIR = BASE / "results" / "narratives_llm"

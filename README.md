@@ -11,8 +11,10 @@ the other way around. Targeting Nature Machine Intelligence.
 
 ### Finding 1: Consistency — text alone produces brain-like cognitive topology
 
-A text-only LLM reproduces the human brain's relational organization of emotion
-and social cognition (14 conditions, 91 pairwise distances).
+A text-only LLM recovers a brain-like affect-mentalizing axis and social-cognitive
+fine structure (14 conditions, 91 pairwise distances). The alignment is dominated by
+the emotion-social boundary plus within-social ordering; within-affective fine structure
+does not align (rho ~ -0.10, n.s., n=6 underpowered).
 
 | Evidence | Result |
 |---|---|
@@ -43,8 +45,8 @@ predict LLM internal structure.
 | Subspace separability | Projecting out the social subspace should selectively destroy social alignment | **Within-social rho collapses from +0.62 to -0.46** while within-affective is unaffected |
 | Brain geometry predicts LLM coupling | Brain RDM should predict causal coupling between LLM functions | **Direction A: 3/4 models significant**, LOO-stable |
 | Brain geometry predicts LLM confusion | Brain distance should predict which conditions the LLM confuses | **rho = 0.24, p = 0.02** |
-| VMPFC damage -> utilitarian moral judgment (Koenigs 2007) | Suppressing emotion axis -> more utilitarian choices | *In progress* |
-| Developmental order (emotion before ToM) | Emotion structure should emerge before social in training | *In progress (Pythia checkpoints)* |
+| VMPFC damage -> utilitarian moral judgment (Koenigs 2007) | Suppressing emotion axis -> more utilitarian choices | **Confirmed (logit-based):** negative alpha increases utilitarian P(util), rho = -0.190, p = 0.006 |
+| Developmental order (emotion before ToM) | Emotion structure should emerge before social in training | **Confirmed (Pythia-2.8B):** social aligns early and stays; affective actively reverses during training |
 
 **What it means:** A century of neuroscience accumulated knowledge about "what breaks when you
 damage X in the brain." If these transfer to LLMs, you get a free manual for predicting model
@@ -67,7 +69,7 @@ what language can and cannot produce.
 ## Current Status
 
 - **Finding 1:** Complete. All sub-points verified.
-- **Finding 2:** 4/6 sub-points complete. Moral judgment (Greene/Koenigs) and Pythia developmental trajectory running.
+- **Finding 2:** Complete (6/6). Moral judgment (logit-based), Pythia developmental, steering controls, template-matched RSA, paraphrase invariance, prospective predictions, DeepSeek LLM judge all done. Human ranking still pending.
 - **Finding 3:** Complete. Per-pair analysis + interpretation done.
 - **Paper:** Not yet being written. Consolidating the three-finding structure.
 
@@ -91,8 +93,8 @@ experiments/
     layer_depth_analysis.py       -- Layer-depth profile (NULL result)
     narratives_group_rsa.py       -- Group-level real-fMRI validation
     regional_rsa_xarch.py         -- Regional per-parcel RSA (400 parcels)
-    moral_judgment_test.py        -- Greene/Koenigs moral prediction (in progress)
-    pythia_developmental.py       -- Pythia training trajectory (in progress)
+    moral_judgment_logit.py       -- Greene/Koenigs moral prediction (logit-based)
+    pythia_developmental.py       -- Pythia training trajectory
   scripts/slurm/                  -- HPC SLURM job scripts
   results/                        -- Experimental results (JSON, NPZ)
   figures/                        -- Generated visualizations
@@ -105,7 +107,7 @@ experiments/
 - **Cross-architecture (7-9B):** Qwen2.5-7B, Llama-3.1-8B, Mistral-7B, Gemma-2-9B
 - **Scaling:** Qwen2.5 0.5B / 1.5B / 3B / 7B
 - **Base vs Instruct:** Qwen2.5-1.5B base vs Instruct
-- **Developmental:** Pythia-2.8B training checkpoints (in progress)
+- **Developmental:** Pythia-2.8B training checkpoints (complete)
 
 ## Brain Data
 

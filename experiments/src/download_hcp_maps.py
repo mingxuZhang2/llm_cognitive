@@ -22,7 +22,7 @@ from pathlib import Path
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
-DATA_DIR = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/data/brain_maps")
+DATA_DIR = Path(__file__).resolve().parents[1] / "data" / "brain_maps"
 HCP_DIR = DATA_DIR / "hcp"
 
 # Subset of the 48 HCP S1200 group-average contrasts that we care about for the
