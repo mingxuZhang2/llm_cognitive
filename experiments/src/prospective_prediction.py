@@ -168,7 +168,7 @@ def prediction_1(brain_rdm, brain_conds, coupling_matrices):
         asym_vec = triu_vec(asym_mat)
 
         rho, p_scipy = spearmanr(brain_vec, asym_vec)
-        p_perm = permutation_p(brain_vec, asym_vec, rho, N_PERM, rng)
+        p_perm = permutation_p(brain_vec, asym_vec, rho, N_PERM, rng, two_tailed=True)
 
         short = MODEL_SHORT[model]
         print(f"  {short:>8s}: rho = {rho:+.4f}, p_scipy = {p_scipy:.4e}, p_perm = {p_perm:.4f}")
@@ -184,7 +184,7 @@ def prediction_1(brain_rdm, brain_conds, coupling_matrices):
     rho_avg, p_avg = spearmanr(brain_vec, mean_asym)
     # Two-tailed permutation: fraction of shuffles with |rho| >= |observed|
     p_perm_2t = permutation_p(
-        brain_vec, mean_asym, abs(rho_avg), N_PERM, rng,
+        brain_vec, mean_asym, rho_avg, N_PERM, rng,
         two_tailed=True,
     )
     print(f"  {'AVG':>8s}: rho = {rho_avg:+.4f}, p_scipy = {p_avg:.4e}, "
@@ -241,7 +241,7 @@ def prediction_2(brain_rdm, brain_conds, coupling_matrices):
             coup_sub_vec = triu_vec(coup_sub)
 
             rho, p_scipy = spearmanr(brain_sub_vec, coup_sub_vec)
-            p_perm = permutation_p(brain_sub_vec, coup_sub_vec, rho, N_PERM, rng)
+            p_perm = permutation_p(brain_sub_vec, coup_sub_vec, rho, N_PERM, rng, two_tailed=True)
 
             short = MODEL_SHORT[model]
             print(f"  {block_name:>10s} | {short:>8s}: rho = {rho:+.4f}, "
@@ -255,7 +255,7 @@ def prediction_2(brain_rdm, brain_conds, coupling_matrices):
 
         mean_coup = np.mean(all_coup_sub, axis=0)
         rho_avg, p_avg = spearmanr(brain_sub_vec, mean_coup)
-        p_perm_avg = permutation_p(brain_sub_vec, mean_coup, rho_avg, N_PERM, rng)
+        p_perm_avg = permutation_p(brain_sub_vec, mean_coup, rho_avg, N_PERM, rng, two_tailed=True)
         print(f"  {block_name:>10s} | {'AVG':>8s}: rho = {rho_avg:+.4f}, "
               f"p_perm = {p_perm_avg:.4f}")
 
@@ -309,7 +309,7 @@ def prediction_3(brain_rdm, brain_conds, llm_rdms):
             llm_dist[i] = np.mean(dists)
 
         rho, p_scipy = spearmanr(brain_distinctiveness, llm_dist)
-        p_perm = permutation_p(brain_distinctiveness, llm_dist, rho, N_PERM, rng)
+        p_perm = permutation_p(brain_distinctiveness, llm_dist, rho, N_PERM, rng, two_tailed=True)
 
         short = MODEL_SHORT[model]
         print(f"  {short:>8s}: rho = {rho:+.4f}, p_perm = {p_perm:.4f}")
@@ -322,7 +322,7 @@ def prediction_3(brain_rdm, brain_conds, llm_rdms):
 
     mean_llm_dist = np.mean(all_llm_dist, axis=0)
     rho_avg, p_avg = spearmanr(brain_distinctiveness, mean_llm_dist)
-    p_perm_avg = permutation_p(brain_distinctiveness, mean_llm_dist, rho_avg, N_PERM, rng)
+    p_perm_avg = permutation_p(brain_distinctiveness, mean_llm_dist, rho_avg, N_PERM, rng, two_tailed=True)
     print(f"  {'AVG':>8s}: rho = {rho_avg:+.4f}, p_perm = {p_perm_avg:.4f}")
 
     # Per-condition table
@@ -421,7 +421,7 @@ def prediction_4(brain_rdm, brain_conds, llm_rdms):
     # Full rank correlation (brain distance vs LLM distance, 91 pairs)
     rng = np.random.default_rng(SEED + 3)
     rho_full, _ = spearmanr(brain_vec, mean_llm_vec)
-    p_perm_full = permutation_p(brain_vec, mean_llm_vec, rho_full, N_PERM, rng)
+    p_perm_full = permutation_p(brain_vec, mean_llm_vec, rho_full, N_PERM, rng, two_tailed=True)
 
     # Extended: top-20 overlap for robustness
     brain_top20 = set(brain_sorted[:20].tolist())
