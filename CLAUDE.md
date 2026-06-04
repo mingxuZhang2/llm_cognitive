@@ -105,8 +105,10 @@ null shuffles condition labels.
   **not** a rich 14-way match. (This also corrects an earlier mis-statement that the affective block
   "carries independent fine structure": it carries structure that does **not** align with the brain.)
 - Per-condition (7B): nearly all 14 align **0.67–0.85** (belief .85, ToM .79, judgment .80,
-  happiness .81). **Only empathy lags (0.24)** — and empathy is the smallest set (n=32) with
-  an unstable split-half ceiling; this is a measurement artifact, not a divergence.
+  happiness .81). **Only empathy lags (0.24)** — consistent with two factors: (1) empathy
+  is a heterogeneous bridge construct spanning affective experience-sharing and cognitive
+  perspective-taking (Shamay-Tsoory 2011; Zaki & Ochsner 2012), so its Neurosynth map is
+  a mixed signal; (2) smallest stimulus set (n=32), unstable split-half ceiling.
 - Scale-invariant across the Qwen family (0.5B → 7B).
 
 **Why Neurosynth, not raw fMRI, carries the headline:** statistical power here comes from the
@@ -132,10 +134,15 @@ test whether they hold in LLMs.
   stronger framing. Code: `src/brain_causal_coupling.py` (GPU ablation),
   `src/coupling_dissociation_analysis.py` (reanalysis + figures). This is the analog of
   lesion double-dissociation work (Shamay-Tsoory 2009).
-- **Direction B — cognitive reserve.** (`cb84f57`.)
-- **Direction C — developmental emergence.** Along training/scale, emotion structure should
-  form before social cognition (cf. affect-early, theory-of-mind ~age 4). Results:
-  `results/developmental_emergence/developmental_emergence.json` (recomputed vs corrected RDM).
+- **Direction B — cognitive reserve.** (`cb84f57`.) Distribution metrics for functional
+  categories. Results: `results/cognitive_reserve/cognitive_reserve.json`.
+- **Direction C — developmental emergence.** Prediction: emotion alignment before social
+  (cf. affect-early, ToM ~age 4). **Result: OPPOSITE.** Pythia-2.8B (9 checkpoints):
+  social aligns early (+0.40 at step 0, stable), affective actively reverses (+0.30 → −0.57).
+  Full ρ rises monotonically 0.24 → 0.72. This supports an embodiment interpretation:
+  social-cognitive structure is linguistically accessible; affective fine structure requires
+  body grounding. Results: `results/developmental_emergence/pythia_trajectory.json`. Qwen
+  scale series: `results/developmental_emergence/developmental_emergence.json`.
 
 - **Direction D — cortical processing gradient → layer depth (Margulies 2016).** Social
   cognition sits at the abstract end of the cortical gradient → predict it peaks in deeper
@@ -143,10 +150,10 @@ test whether they hold in LLMs.
   is flat across all layers; the cortical-gradient analogy does not hold.
 
 - **Direction E — clinical double-dissociation (psychopathy vs autism analog).** Ablate
-  pooled emotion neurons → expect emotion collapse + social spared (psychopathy analog);
-  ablate pooled social neurons → reverse (autism analog). 50 random-ablation null.
-  Code: `src/clinical_dissociation.py`. SLURM: `scripts/slurm/clinical_dissociation.sh`.
-  Awaiting GPU run.
+  pooled emotion/social neuron sets. **Result: direction correct but not significant at
+  pooled-block level.** The causal signal lives at per-condition granularity (Direction A
+  coupling reanalysis), not at coarsely pooled blocks.
+  Code: `src/clinical_dissociation.py`. Results: `results/clinical_dissociation/`.
 
 - **Prospective Prediction Battery** (`src/prospective_prediction.py`, CPU-only). Five specific
   quantitative predictions from brain geometry, tested on existing coupling + RDM data:
@@ -202,8 +209,13 @@ is partial RSA (~80% retained), not fMRI magnitude.
 ## Repository Structure
 - `CLAUDE.md` (this file) — canonical project overview, kept in sync after every change.
 - `README.md` — public-facing short version.
+- `LICENSE` — MIT license.
+- `environment.yml` — conda environment (`braincog14`).
 - `IDEA_SYNTHESIS.md`, `COGNITIVE_ATLAS_PLAN.md` — origin idea + pivot plan.
 - `experiments/`
+  - **`FINDINGS.md`** — **comprehensive findings document** with all results, interpretations,
+    source references, embodiment discussion, and status table. This is the most up-to-date
+    record of what we found and what it means.
   - `src/` — analysis scripts (see Key Files below).
   - `scripts/slurm/` — HPC3 SLURM jobs.
   - `results/` — JSON/NPZ results.
@@ -211,8 +223,13 @@ is partial RSA (~80% retained), not fMRI magnitude.
       `{model}_rsa_v2_per_stim.npz`), archived old RDM (`brain_rdm_hcptom.npz`).
     - `affective_validation/` — ceiling control, Kragel/IBC/HCP audits, ToM source check.
     - `template_matched_rsa/` — format-confound control results (template-matched stimuli RSA).
-    - `developmental_emergence/`, `behavioral_prediction/`, `next_token/`, `specificity_*/`,
-      `contrast_pilot*/`, `narratives_brain_rdm/` — supporting experiments.
+    - `moral_judgment/` — logit-based moral steering results (replaces old text-gen version).
+    - `human_rating/` — DeepSeek LLM judge rankings + steering control comparisons + human
+      rating materials (pending).
+    - `clinical_dissociation/` — coupling reanalysis, subspace dissociation, clinical ablation.
+    - `developmental_emergence/` — Pythia trajectory + Qwen scale series.
+    - `behavioral_prediction/`, `next_token/`, `cognitive_reserve/`, `robustness_checks/`,
+      `narratives_brain_rdm/` — supporting experiments.
   - `benchmark/` — **BrainCog-14** release package (self-contained brain-derived benchmark
     for social-emotional representational geometry). Contains `evaluate.py` (self-contained
     evaluation script), `braincog14_brain_rdm.npz`, `braincog14_stimuli.jsonl`,
@@ -246,10 +263,18 @@ is partial RSA (~80% retained), not fMRI magnitude.
 | `src/base_vs_instruct_rsa.py` | Base vs Instruct RSA: pretraining vs RLHF alignment comparison (Qwen2.5-1.5B). |
 | `src/robustness_gauntlet.py` | Anti-spurious-alignment gauntlet (4 tests, all PASS). Pre-empts Hadidi et al. 2026. |
 | `src/paraphrase_invariance.py` | Paraphrase-invariance tests (split-half, LOSO jackknife, cross-source). Signal is content-driven, not surface-form. |
-| `src/prospective_prediction.py` | Prospective prediction battery: 5 brain-to-LLM predictions (2 confirmed, 1 trend, 2 null). CPU-only. |
+| `src/prospective_prediction.py` | Prospective prediction battery: 5 brain-to-LLM predictions (2 confirmed, 1 trend, 2 null). All two-tailed. CPU-only. |
 | `src/steering_controls.py` | Steering control conditions (random/sentiment/PC1) for brain-axis specificity. GPU. |
 | `src/template_matched_stimuli.py` | Template-matched stimulus generator (format-confound control, 840 stimuli, 4 templates x 14 conditions). |
 | `src/template_matched_rsa.py` | Template-matched RSA analysis (post-extraction). Format-confound control for Hadidi 2026. |
+| `src/moral_judgment_logit.py` | **Logit-based moral steering** (replaces text-gen forced-choice). ρ=−0.19, p=0.006. Direction does NOT validate Greene. |
+| `src/pc1_vs_brain_axis.py` | PC1 vs brain axis analysis. cos=0.99 but PC1 steering null — needs matched controls. |
+| `src/llm_judge_ranking.py` | DeepSeek LLM judge: blind ranking of steered responses. ρ=+0.32, p=0.004. |
+| `src/llm_judge_controls.py` | LLM judge on control directions (random/sentiment/PC1 all null). |
+| `src/pythia_developmental.py` | Pythia-2.8B training trajectory (9 checkpoints). Social-first, affective-reversal. |
+| `src/confirmatory_rsa.py` | Discovery/confirmation split + max-stat permutation + bootstrap CI. |
+| `src/baseline_controls.py` | GloVe/TF-IDF/condition-name/length baselines + partial RSA (80% retained). |
+| `src/rsa_deep_analysis.py` | Gap analysis + confusion (brain→LLM, ρ=0.24, p=0.02) + one-axis causal ablation. |
 | `present/build_present.py` | Regenerate the HTML briefing. |
 | `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |
 | `benchmark/README.md` | BrainCog-14 benchmark documentation, conditions, recipe, interpretation guide. |
@@ -296,5 +321,8 @@ is partial RSA (~80% retained), not fMRI magnitude.
 ## Git / workflow notes
 - Active branch: **`cognitive-atlas`**. v1 archived at tag `v1-ai-categories`.
 - Per Dr. Zhang's rules: commit after every change with a clear message; **ask before
-  merging to `main`**. Present only positive, verified results; do not over-claim. The
-  paper is **not** being written yet — we are still consolidating the finding.
+  merging to `main`**. Present only positive, verified results; do not over-claim.
+- **Current status (2026-06-04):** All experiments complete except human rating (waiting
+  for rater data). Findings consolidated in `experiments/FINDINGS.md`. Publication cleanup
+  done (LICENSE, environment.yml, paths fixed, claims narrowed, API keys removed).
+  Next: human rating analysis when data returns, then paper writing.
