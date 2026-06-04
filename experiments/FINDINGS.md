@@ -242,12 +242,21 @@ Signal is content-driven, not surface-form.
 
 **Source:** `results/cognitive_rsa/robustness_gauntlet.json`
 
-### R4. Steering control directions (in progress)
+### R4. Steering control directions (completed)
 
-Random / sentiment / PC1 directions as controls for brain-derived axis specificity.
-GPU job running.
+DeepSeek judge on 3 control steering directions vs brain-derived axis:
 
-**Source:** `src/steering_controls.py`
+| Direction | Mean ρ | t-test p | Significant? |
+|---|---|---|---|
+| **Brain axis** | **+0.320** | **0.004** | **YES** |
+| Random | −0.053 | 0.560 | no |
+| Sentiment | +0.107 | 0.236 | no |
+| PC1 (variance) | −0.010 | 0.910 | no |
+
+Mann-Whitney brain vs each control: all p < 0.04. Only the brain-derived direction
+produces perceptible behavioral shift.
+
+**Source:** `results/human_rating/deepseek_judge_controls.json`, `src/llm_judge_controls.py`
 
 ---
 
@@ -269,7 +278,7 @@ GPU job running.
 | Developmental | Scale invariance (0.5–7B) | ✅ |
 | Developmental | Base vs Instruct (99.3%) | ✅ |
 | Application | Human ranking | ⏳ waiting |
-| Application | Steering controls | ⏳ running |
+| Application | Steering controls (3 nulls) | ✅ |
 | Application | BrainCog-14 benchmark | ✅ |
 | Null results | Layer-depth (Direction D) | ✅ reported |
 | Null results | Clinical block-level | ✅ reported |
