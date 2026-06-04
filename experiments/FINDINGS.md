@@ -8,16 +8,24 @@ All numbers verified against live result JSONs. Last updated 2026-06-04.
 
 A text-only LLM, trained solely on next-token prediction, spontaneously develops an
 internal representational geometry that shares the human brain's dominant
-affect–mentalizing organizational axis and social-cognitive fine structure. This
-alignment is learned from text during pretraining, is robust across architectures
-and scales, and carries causal and predictive content — the brain's geometry predicts
-LLM internal coupling, behavioral steering effects, and developmental trajectory.
+affective–mentalizing organizational axis and social-cognitive fine structure. This
+alignment strengthens during training, is robust across 4 architectures, and carries
+functional significance — the brain's geometry predicts LLM internal coupling
+patterns, behavioral steering effects, and the developmental trajectory of
+representations during training.
 
 However, the alignment has a precise boundary: fine-grained affective structure
-(how individual emotions relate to each other) does NOT transfer. This dissociation
-provides empirical evidence for a refined embodiment hypothesis — language is
-sufficient for social-cognitive organization but not for somatically-grounded
-emotional differentiation.
+(how individual emotions relate to each other) does NOT transfer, and actively
+diverges during training. This dissociation supports a refined embodiment hypothesis:
+propositional mentalizing structure is more language-accessible and transfers to
+text-trained models; the body-dependent geometry of discrete emotions does not.
+
+**Important nuance:** The model is disembodied, but its training signal is not.
+Human language is produced by embodied agents and carries compressed traces of
+bodily, affective, and social experience. The question is not "can a disembodied
+system understand emotion" but rather: "which aspects of the brain's cognitive
+organization are preserved in the linguistic signal, and which require direct
+bodily experience?"
 
 ---
 
@@ -123,11 +131,12 @@ representations in general.
 trajectory. The alignment is not a static correlation — it carries causal and
 predictive content.**
 
-### 2.1 Causal coupling double dissociation
+### 2.1 Causal coupling: block-specific sensitivity
 
-If the brain's emotion/social boundary is real inside the LLM, then ablating
-emotion neurons should disrupt emotion processing more than social processing (and
-vice versa). This is the classic neuropsychological double dissociation test.
+If the affective–mentalizing axis corresponds to functional organization inside
+the LLM (not just a statistical pattern in RSA), then perturbing condition-selective
+activation subspaces should show block-specific effects: disrupting affective
+conditions should primarily affect affective processing, and vice versa.
 
 | Model | n conditions same > cross | Mean selectivity |
 |---|---|---|
@@ -138,9 +147,9 @@ vice versa). This is the classic neuropsychological double dissociation test.
 
 All 4 models: Wilcoxon signed-rank p < 0.007.
 
-**What this means:** The emotion/social boundary visible in RSA is not just a
-statistical pattern — it reflects genuine functional modularity inside the LLM.
-Disrupting one side selectively impairs that side while leaving the other intact.
+**What this means:** The affective–mentalizing axis is not just descriptive — it
+is associated with block-specific functional sensitivity inside the LLM. Perturbing
+one block selectively disrupts that block while largely sparing the other.
 
 **Source:** `results/clinical_dissociation/coupling_reanalysis.json`
 
@@ -179,29 +188,35 @@ brain identifies the LLM's vulnerabilities.
 
 **Source:** `results/cognitive_rsa/prospective_prediction.json`
 
-### 2.4 Moral judgment steering (Greene/Koenigs prediction)
+### 2.4 Moral judgment steering
 
-Neuroscience predicts (Greene 2001, Koenigs 2007): suppressing emotional processing
-should increase utilitarian moral choices. We test this by steering LLM activations
-along the brain-derived emotion↔mentalizing axis.
-
-Logit-based measurement: `log P(utilitarian) − log P(deontological)` at each alpha.
+Steering LLM activations along the brain-derived affective–mentalizing axis
+systematically modulates moral choice. Logit-based measurement (no text generation):
+`log P(utilitarian) − log P(deontological)` at each alpha.
 
 | Alpha | Mean logit_diff | P(utilitarian) |
 |---|---|---|
-| −5 | +0.551 | 54% |
+| −5 (toward affective) | +0.551 | 54% |
 | −3 | +0.307 | 50% |
-| 0 | −0.041 | 45% |
+| 0 (no steering) | −0.041 | 45% |
 | +3 | −0.360 | 42% |
-| +5 | −0.552 | 39% |
+| +5 (toward mentalizing) | −0.552 | 39% |
 
 ρ(alpha, logit_diff) = **−0.190, p = 0.006**. Personal dilemmas: ρ = −0.194 (p = 0.01).
 Quality: entropy ratio 1.81 (no model degradation).
 
-**What this means:** Pushing the LLM toward the emotional end of the brain-derived
-axis increases utilitarian choices, exactly as predicted by dual-process moral theory.
-The brain's cognitive architecture makes a specific behavioral prediction about LLMs,
-and the prediction holds. This is a neuroscience theory, tested on a machine.
+**What this means:** The brain-derived axis carries behavioral significance — steering
+along it systematically shifts moral choice probability. The effect is robust
+(p = 0.006) and present in both personal and impersonal dilemmas.
+
+**Direction caveat:** The observed direction (affective → more utilitarian) does NOT
+conform to Greene's (2001) simple dual-process mapping (emotion → deontological,
+deliberation → utilitarian). This likely reflects that our affective–mentalizing axis
+captures broad affect vs. propositional mentalizing, not the specific harm-aversion
+signal that drives deontological judgment in Greene's framework. The steering
+modulates moral choice, but the mechanism is not a direct analog of the dual-process
+emotion/reason distinction. We report this as evidence for behavioral relevance of
+the axis, not as a validation of Greene's specific theory.
 
 **Source:** `results/moral_judgment/Qwen2.5-7B-Instruct_moral_logit.json`
 
@@ -213,9 +228,10 @@ responses from "most emotional" to "most analytical."
 - Mean ρ(alpha, rank) = **+0.320**, p = **0.004** (30 prompts)
 - Direction correct: higher α → judged more analytical
 
-**What this means:** The brain-derived steering axis doesn't just change internal
-representations — it produces behavioral changes large enough for an independent
-LLM to perceive. The internal geometry has external behavioral consequences.
+**What this means:** The brain-derived steering axis produces changes detectable by
+an independent LLM judge — the perturbation is not confined to hidden states.
+However, LLM judge validation is supplementary; human blind ratings are needed to
+establish perceptual and practical significance.
 
 **Source:** `results/human_rating/deepseek_judge_ranking.json`
 
@@ -231,10 +247,13 @@ Tracking brain-LLM RSA across 9 training checkpoints (step 0 → 100k):
 
 Three findings:
 
-1. **Full ρ monotonically rises (0.24 → 0.72).** Brain-like structure is not present
-   at initialization — it is *learned from text*. Combined with base-vs-instruct
-   (99.3% from pretraining), this confirms the alignment is acquired during
-   next-token prediction, not from RLHF or architectural bias.
+1. **Full ρ monotonically rises (0.24 → 0.72).** The overall affective–mentalizing
+   geometry strengthens substantially during training, indicating that language
+   statistics are a major driver. Note: social-block structure is already partially
+   present at step 0 (ρ = 0.40), suggesting that tokenizer/input statistics and
+   architecture may also contribute. Combined with the tested Qwen base-vs-instruct
+   pair (base 0.748, instruct 0.754), the alignment is largely present before
+   post-training (instruction tuning / RLHF).
 
 2. **Social structure aligns early and stays (+0.40 → +0.65).** The relational
    structure among linguistically-defined concepts (belief, intention, judgment,
@@ -292,16 +311,39 @@ are inherently propositional — they are defined by language. The brain's organ
 of these concepts is also largely semantic/propositional, so text training naturally
 recovers it.
 
-**Bottom line:** Embodiment is not all-or-nothing. Language is sufficient for
-social-cognitive representational geometry but insufficient for somatically-grounded
-emotional differentiation. Our results draw an empirical line between what text can
-and cannot capture of the brain's cognitive architecture.
+**Bottom line:** Embodiment is not all-or-nothing. The propositional-relational
+component of mentalizing is language-accessible and transfers to text-trained models.
+The body-dependent geometry of discrete emotions does not. Our results draw an
+empirical line — but note that this is currently a *consistent interpretation*, not
+a proven mechanism. Directly testing the embodiment explanation would require
+comparing the LLM's affective RDM against bodily-map, interoceptive, and lexical
+co-occurrence RDMs (see Future Directions).
 
-### 3.3 Empathy outlier
+Also note: "social cognition does not need a body" is too strong. Social cognition
+includes gaze following, joint attention, emotion perception, and interaction timing
+— all of which are embodied. Our claim is narrower: the *propositional-relational
+structure among mentalizing concepts* is language-accessible. Not all of social
+cognition is.
+
+### 3.3 Empathy: the bridge condition
 
 Per-condition alignment: 13/14 conditions at ρ = 0.67–0.85. Only empathy lags at
-ρ ≈ 0.24 — smallest stimulus set (n = 32), unstable split-half ceiling. This is a
-measurement artifact (insufficient stimuli), not a theoretically meaningful divergence.
+ρ ≈ 0.24. Two factors likely contribute:
+
+1. **Conceptual:** Empathy is a heterogeneous construct spanning affective empathy
+   (somatic experience-sharing; AI, ACC — the affective network) and cognitive empathy
+   (perspective-taking; mPFC, TPJ — the mentalizing network) (Shamay-Tsoory 2011;
+   Zaki & Ochsner 2012). It straddles the affective–mentalizing boundary by design.
+   The Neurosynth "empathy" map aggregates both components, creating a mixed distance
+   profile. A text-only model likely captures the cognitive component but not the
+   somatic component, producing a systematic mismatch at exactly this condition.
+
+2. **Measurement:** Empathy had the smallest stimulus set (n = 32) with an unstable
+   split-half ceiling, reducing statistical power.
+
+The empathy outlier is thus consistent with the embodiment interpretation — it sits
+at the boundary where somatic and propositional processing meet, and the somatic
+part is what the LLM cannot recover.
 
 ### 3.4 Layer-depth prediction is NULL (Direction D)
 
@@ -409,21 +451,24 @@ Yet their behavioral effects are completely different:
 | Brain axis | +0.320 | 0.004 | YES |
 | PC1 | −0.010 | 0.910 | NO |
 
-Not explained by sign flip, SNR difference (1.06×), or block discriminability
-(d' 1.98 vs 1.92).
+Preliminary controls rule out sign flip (would give ρ ≈ −1, not 0) and SNR
+difference (1.06×).
 
-**What this means:** Two directions that are nearly identical in representation space
-produce completely different behavioral effects under steering. The brain-derived
-axis was constructed from pure affect vs. mentalizing exemplar texts — it is a
-targeted cognitive mode-switch signal. PC1 captures variance without causal
-specificity. This dissociation is the strongest evidence that brain-informed
-construction captures causally specific features that purely data-driven extraction
-(PCA) misses.
+**What this means:** Despite near-collinearity, the two directions produce different
+behavioral effects under steering. However, this result requires caution: if two
+unit vectors have cos = 0.99, their linear steering effects *should* be similar.
+The dissociation needs strict norm-matched, layer-matched, and sign-matched
+controls before being interpreted mechanistically.
 
-This also turns the reviewer concern ("your brain axis is just PC1") into a positive
-finding: the model's dominant variance direction *spontaneously aligns with* a
-brain-derived cognitive boundary, but only the brain-informed version carries
-causal potency.
+**Possible resolution:** The ~12.8% residual component (orthogonal to PC1) may
+carry behaviorally specific information. Testing the residual direction alone
+would clarify whether the brain-derived axis provides causal information beyond
+the dominant variance direction. If the residual steers effectively, that is a
+strong mechanistic finding.
+
+**Minimal safe claim:** The LLM's dominant variance direction spontaneously aligns
+with a brain-derived cognitive boundary (cos = 0.99). Whether the brain-derived
+construction adds causal specificity beyond PC1 requires further matched controls.
 
 **Source:** `results/cognitive_rsa/pc1_vs_brain_axis.json`
 
@@ -431,19 +476,21 @@ causal potency.
 
 ## Summary: the story in one paragraph
 
-Text-only LLMs, trained on next-token prediction alone, spontaneously develop an
-internal organization that shares the human brain's dominant emotion↔social-cognition
-boundary and social-cognitive fine structure (ρ ≈ 0.73, 4 architectures, scale-invariant,
-99.3% from pretraining). This alignment is not a static correlation: the brain's
-geometry predicts the LLM's internal causal coupling (double dissociation), its
-behavioral responses to cognitive steering (moral judgment, emotional tone), and the
-trajectory of representation learning during training (Pythia). However, the
-alignment has a precise boundary: within-affective fine structure does not transfer,
-and actively diverges during training. This dissociation supports a refined
-embodiment hypothesis — language encodes enough information for social-cognitive
-organization but not for the body-dependent geometry of individual emotions. The
-brain serves as a reference frame that both explains what LLMs learn and predicts
-where they fail.
+Text-only LLMs, trained on next-token prediction, spontaneously develop an internal
+organization that shares the human brain's dominant affective–mentalizing axis and
+social-cognitive fine structure (ρ ≈ 0.73, 4 architectures, scale-invariant within
+0.5–7B). This alignment strengthens during training and is largely present before
+post-training. It is not a static correlation: the brain's geometry predicts
+block-specific functional sensitivity (coupling dissociation), systematically
+modulates moral choice under activation steering, and tracks the developmental
+trajectory of representations (Pythia). However, the alignment has a precise
+boundary: fine-grained affective structure does not transfer and actively diverges
+during training. This dissociation is consistent with a refined embodiment
+hypothesis — the propositional-relational structure of mentalizing is
+language-accessible; the body-dependent geometry of discrete emotions is not.
+The model is disembodied, but its training signal carries compressed traces of
+embodied human experience — and our results delineate which aspects of cognitive
+organization survive that compression and which do not.
 
 ---
 
