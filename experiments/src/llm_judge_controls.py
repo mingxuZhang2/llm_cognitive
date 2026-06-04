@@ -18,7 +18,9 @@ from scipy.stats import spearmanr, ttest_1samp, wilcoxon, mannwhitneyu
 BASE = Path(__file__).resolve().parents[1]
 RESULTS_DIR = BASE / "results" / "human_rating"
 
-API_KEY = os.environ.get("DEEPSEEK_API_KEY", "sk-5e64e17d84d649bc9f2d86bc1839728a")
+API_KEY = os.environ.get("DEEPSEEK_API_KEY")
+if not API_KEY:
+    sys.exit("ERROR: set DEEPSEEK_API_KEY environment variable")
 API_URL = "https://api.deepseek.com/chat/completions"
 MODEL = "deepseek-chat"
 SEED = 20260604
