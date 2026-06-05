@@ -1,0 +1,283 @@
+{
+  "condition_features": {
+    "anger": {
+      "n_stimuli": 50,
+      "n_tokens_mean": 11.82,
+      "mental_state_verbs": 0.01651984857248015,
+      "body_sensory": 0.013265094926859632,
+      "emotion_words": 0.013467032967032968,
+      "proposition_markers": 0.03997717232762999,
+      "social_words": 0.01759341736694678
+    },
+    "fear": {
+      "n_stimuli": 50,
+      "n_tokens_mean": 12.84,
+      "mental_state_verbs": 0.011519658995974784,
+      "body_sensory": 0.025444444444444443,
+      "emotion_words": 0.03290078985342143,
+      "proposition_markers": 0.05007215439396757,
+      "social_words": 0.009500696074837951
+    },
+    "disgust": {
+      "n_stimuli": 50,
+      "n_tokens_mean": 10.82,
+      "mental_state_verbs": 0.004888888888888889,
+      "body_sensory": 0.025707651967242767,
+      "emotion_words": 0.007009803921568627,
+      "proposition_markers": 0.029556032203091026,
+      "social_words": 0.011109315521080227
+    },
+    "sadness": {
+      "n_stimuli": 50,
+      "n_tokens_mean": 11.24,
+      "mental_state_verbs": 0.013786231884057969,
+      "body_sensory": 0.028586726998491706,
+      "emotion_words": 0.020051087801087802,
+      "proposition_markers": 0.04247347941913159,
+      "social_words": 0.023419569276986157
+    },
+    "happiness": {
+      "n_stimuli": 50,
+      "n_tokens_mean": 12.38,
+      "mental_state_verbs": 0.013020971121428788,
+      "body_sensory": 0.029032808406950283,
+      "emotion_words": 0.02635292307489103,
+      "proposition_markers": 0.028333296507888156,
+      "social_words": 0.023820304133647458
+    },
+    "valence": {
+      "n_stimuli": 60,
+      "n_tokens_mean": 8.45,
+      "mental_state_verbs": 0.006130952380952381,
+      "body_sensory": 0.011203703703703705,
+      "emotion_words": 0.0035185185185185185,
+      "proposition_markers": 0.0020833333333333333,
+      "social_words": 0.010251322751322752
+    },
+    "judgment": {
+      "n_stimuli": 60,
+      "n_tokens_mean": 19.116666666666667,
+      "mental_state_verbs": 0.01155998117323666,
+      "body_sensory": 0.01074837879984939,
+      "emotion_words": 0.002857142857142857,
+      "proposition_markers": 0.03000078850974833,
+      "social_words": 0.01141766549615015
+    },
+    "belief": {
+      "n_stimuli": 60,
+      "n_tokens_mean": 42.06666666666667,
+      "mental_state_verbs": 0.0,
+      "body_sensory": 0.002097073677956031,
+      "emotion_words": 0.0,
+      "proposition_markers": 0.03705860014084948,
+      "social_words": 0.0036813758146674296
+    },
+    "intention": {
+      "n_stimuli": 60,
+      "n_tokens_mean": 22.9,
+      "mental_state_verbs": 0.003799894949659605,
+      "body_sensory": 0.0081560941683101,
+      "emotion_words": 0.0,
+      "proposition_markers": 0.006154817069672141,
+      "social_words": 0.01832083358037106
+    },
+    "mentalizing": {
+      "n_stimuli": 40,
+      "n_tokens_mean": 62.7,
+      "mental_state_verbs": 0.016472169650120487,
+      "body_sensory": 0.016959253015265335,
+      "emotion_words": 0.004349733819615517,
+      "proposition_markers": 0.02269461575517944,
+      "social_words": 0.008661710355543036
+    },
+    "moral": {
+      "n_stimuli": 60,
+      "n_tokens_mean": 25.85,
+      "mental_state_verbs": 0.004588197626593404,
+      "body_sensory": 0.050590380557807874,
+      "emotion_words": 0.00029239766081871346,
+      "proposition_markers": 0.019722646499794043,
+      "social_words": 0.016840151419570425
+    },
+    "empathy": {
+      "n_stimuli": 32,
+      "n_tokens_mean": 15.65625,
+      "mental_state_verbs": 0.002232142857142857,
+      "body_sensory": 0.07382703081232492,
+      "emotion_words": 0.0,
+      "proposition_markers": 0.01995251225490196,
+      "social_words": 0.005989583333333333
+    },
+    "self_referential": {
+      "n_stimuli": 30,
+      "n_tokens_mean": 31.666666666666668,
+      "mental_state_verbs": 0.09599071715118958,
+      "body_sensory": 0.0,
+      "emotion_words": 0.0,
+      "proposition_markers": 0.02147015506183372,
+      "social_words": 0.013913130416213908
+    },
+    "theory_of_mind": {
+      "n_stimuli": 60,
+      "n_tokens_mean": 36.45,
+      "mental_state_verbs": 0.03920196886695835,
+      "body_sensory": 0.004549723265391819,
+      "emotion_words": 0.0034156076486123186,
+      "proposition_markers": 0.016053876049568913,
+      "social_words": 0.016655327970670212
+    }
+  },
+  "feature_vs_rdm": {
+    "mental_state_verbs": {
+      "rho_brain": -0.10584487975792325,
+      "p_brain": 0.318014545798235,
+      "rho_llm": 0.12807771938206722,
+      "p_llm": 0.2263234404579984,
+      "rho_block": -0.031004328678578857
+    },
+    "body_sensory": {
+      "rho_brain": 0.1695970695970696,
+      "p_brain": 0.10802063717091091,
+      "rho_llm": 0.20086000955566174,
+      "p_llm": 0.05624921758184905,
+      "rho_block": 0.1625632368552513
+    },
+    "emotion_words": {
+      "rho_brain": 0.3021372810195644,
+      "p_brain": 0.003606033790941615,
+      "rho_llm": 0.2976596387028882,
+      "p_llm": 0.004163586944335625,
+      "rho_block": 0.5139426317856282
+    },
+    "proposition_markers": {
+      "rho_brain": 0.009953814301640388,
+      "p_brain": 0.9253927361736562,
+      "rho_llm": 0.13838190794712535,
+      "p_llm": 0.19082778490316682,
+      "rho_block": 0.21367848143344892
+    },
+    "social_words": {
+      "rho_brain": 0.04851090938047461,
+      "p_brain": 0.6479324205521542,
+      "rho_llm": -0.00961936614110527,
+      "p_llm": 0.927892703341085,
+      "rho_block": 0.0
+    },
+    "combined": {
+      "rho_brain": 0.12255136168179646,
+      "p_brain": 0.24716093394611788,
+      "rho_llm": 0.17571269310399745,
+      "p_llm": 0.09571143482172319,
+      "rho_block": 0.1583734627094974
+    },
+    "binary_block": {
+      "rho_brain": 0.708071830632409,
+      "p_brain": 4.193982634864602e-15,
+      "rho_llm": 0.8639314288544542,
+      "p_llm": 2.9805320420295423e-28,
+      "rho_block": 1.0
+    },
+    "glove_centroid": {
+      "rho_brain": 0.18436056696926265,
+      "rho_llm": 0.3609491957318044,
+      "within_aff_brain": 0.11428571428571425,
+      "within_soc_brain": 0.0021893814997263274,
+      "within_aff_llm": 0.8928571428571428,
+      "within_soc_llm": 0.18226600985221672
+    }
+  },
+  "partial_rsa_controlling_features": {
+    "Qwen": {
+      "raw_rho": 0.7385889472845995,
+      "partial_rho": 0.738859691033604,
+      "partial_p": 6.255174966885612e-17,
+      "pct_retained": 100.0366568914956
+    },
+    "Llama": {
+      "raw_rho": 0.7270584487975793,
+      "partial_rho": 0.7230450708711579,
+      "partial_p": 5.821172633056135e-16,
+      "pct_retained": 99.44799789713484
+    },
+    "Mistral": {
+      "raw_rho": 0.7296384774645646,
+      "partial_rho": 0.7174072304507088,
+      "partial_p": 1.2427828813431983e-15,
+      "pct_retained": 98.32365652420656
+    },
+    "Gemma": {
+      "raw_rho": 0.7353240961936615,
+      "partial_rho": 0.7374581939799332,
+      "partial_p": 7.671706905058739e-17,
+      "pct_retained": 100.29022546620172
+    },
+    "LLM_avg": {
+      "raw_rho": 0.7309444179009397,
+      "partial_rho": 0.734065934065934,
+      "partial_p": 1.2507105214157694e-16,
+      "pct_retained": 100.42705246644587
+    }
+  },
+  "within_block_feature_analysis": {
+    "mental_state_verbs": {
+      "within_aff_brain": 0.3928571428571428,
+      "p_aff_brain": 0.14746665531132622,
+      "within_soc_brain": -0.27805145046524354,
+      "p_soc_brain": 0.15195491691160518,
+      "within_aff_llm": 0.30357142857142855,
+      "p_aff_llm": 0.27135583600386853,
+      "within_soc_llm": -0.3004926108374384,
+      "p_soc_llm": 0.1202509668410662
+    },
+    "body_sensory": {
+      "within_aff_brain": 0.23928571428571427,
+      "p_aff_brain": 0.39037931192023567,
+      "within_soc_brain": 0.15435139573070608,
+      "p_soc_brain": 0.43290495612851987,
+      "within_aff_llm": 0.14285714285714282,
+      "p_aff_llm": 0.6115222287644655,
+      "within_soc_llm": 0.6360153256704981,
+      "p_soc_llm": 0.00027515455800830845
+    },
+    "emotion_words": {
+      "within_aff_brain": -0.3321428571428571,
+      "p_aff_brain": 0.2264717590707243,
+      "within_soc_brain": -0.30970834108903117,
+      "p_soc_brain": 0.10875291361655215,
+      "within_aff_llm": 0.4357142857142856,
+      "p_aff_llm": 0.10449335704406641,
+      "within_soc_llm": -0.28620369020281,
+      "p_soc_llm": 0.1398126644589833
+    },
+    "proposition_markers": {
+      "within_aff_brain": -0.2928571428571428,
+      "p_aff_brain": 0.289471667212401,
+      "within_soc_brain": 0.10727969348659004,
+      "p_soc_brain": 0.586880792031939,
+      "within_aff_llm": 0.7214285714285712,
+      "p_aff_llm": 0.002398868072673344,
+      "within_soc_llm": -0.19102353585112206,
+      "p_soc_llm": 0.33019424876232717
+    },
+    "social_words": {
+      "within_aff_brain": 0.05357142857142857,
+      "p_aff_brain": 0.8496099367776071,
+      "within_soc_brain": 0.03557744937055282,
+      "p_soc_brain": 0.8573632480608897,
+      "within_aff_llm": 0.028571428571428564,
+      "p_aff_llm": 0.9194899083821857,
+      "within_soc_llm": 0.021893814997263273,
+      "p_soc_llm": 0.9119476157286659
+    },
+    "combined": {
+      "within_aff_brain": -0.32499999999999996,
+      "p_aff_brain": 0.23722543823723408,
+      "within_soc_brain": 0.04980842911877395,
+      "p_soc_brain": 0.801272087786034,
+      "within_aff_llm": 0.7857142857142856,
+      "p_aff_llm": 0.0005164547475705882,
+      "within_soc_llm": 0.2857142857142857,
+      "p_soc_llm": 0.1405211373097249
+    }
+  }
+}
