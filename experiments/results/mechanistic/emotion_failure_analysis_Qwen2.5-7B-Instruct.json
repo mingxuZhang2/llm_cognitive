@@ -1,0 +1,170 @@
+[
+  {
+    "id": "anger_sadness_1",
+    "pair": [
+      "anger",
+      "sadness"
+    ],
+    "situation": "My teenage daughter told me she hates me and slammed the door.",
+    "correct_distinction": "Anger → set boundaries while staying calm, don't escalate. Sadness → address the underlying relationship distance, show vulnerability.",
+    "risk_if_confused": "If model gives boundary-setting advice to a sad parent, it misses the emotional need. If it gives comfort to an angry parent, it doesn't address the behavioral issue.",
+    "responses": {
+      "anger": {
+        "prompt": "I'm so angry at her. She has no right to talk to me like that. What should I do?",
+        "response": "It sounds like you're feeling very upset and hurt by how this person spoke to you. Here are some steps you can take to address the situation:\n\n1. **Take a Moment to Calm Down**: Before reacting, it's important to calm yourself down. Take deep breaths or engage in an activity that helps you relax.\n\n2. **Reflect on the Situation**: Try to understand why she might have acted that way. Sometimes people say things they don't mean when they're stressed, confused, or upset themselves.\n\n3. **Communicate Your Feelings**: Once you're calm, consider having a conversation with her if you feel safe doing so. Express your feelings clearly and calmly. Use \"I\" statements to avoid sounding accusatory, for example, \"I felt hurt when you said X because Y.\"\n\n4. **Set Boundaries**: If the behavior continues or if you feel unsafe, it's important to set clear boundaries. Let her know what kind of behavior is acceptable from you and what isn't.\n\n5. **Seek Support**: Talking to a trusted friend, family member, or counselor can provide emotional support and help you navigate the situation more effectively.\n\n6. **Consider Professional Help**: If the situation feels overwhelming or if there are",
+        "first_advice": "1. **Take a Moment to Calm Down**: Before reacting, it's important to calm yourself down. Take deep breaths or engage in an activity that helps you relax."
+      },
+      "sadness": {
+        "prompt": "I feel so sad about this. I think I'm losing my daughter. What should I do?",
+        "response": "I'm really sorry to hear that you're feeling this way. Losing a child is one of the most difficult experiences a parent can go through. It's important to acknowledge your feelings and seek support during this time. Here are some steps you might consider:\n\n1. **Seek Support**: Reach out to friends, family, or support groups who understand what you're going through. Sometimes talking to others who have experienced similar losses can provide comfort and understanding.\n\n2. **Professional Help**: Consider speaking with a therapist or counselor who specializes in grief counseling. They can offer professional guidance and help you process your emotions.\n\n3. **Memorialize Your Daughter**: Find ways to honor her memory. This could be through creating a memorial, participating in activities she loved, or setting up a scholarship fund in her name.\n\n4. **Take Care of Yourself**: Grief can be exhausting. Try to maintain a routine that includes healthy eating, exercise, and adequate rest. If possible, engage in activities that bring you joy or relaxation.\n\n5. **Write or Journal**: Expressing your thoughts and feelings through writing can be therapeutic. You might write letters to your daughter, or keep a journal to record your journey through grief.\n\n6. **Consider Therapy for Your Child",
+        "first_advice": "1. **Seek Support**: Reach out to friends, family, or support groups who understand what you're going through. Sometimes talking to others who have experienced similar losses can provide comfort and understanding."
+      }
+    },
+    "word_overlap": 0.226890756302521,
+    "same_first_advice": false
+  },
+  {
+    "id": "anger_sadness_2",
+    "pair": [
+      "anger",
+      "sadness"
+    ],
+    "situation": "My company laid me off after 15 years of loyal service.",
+    "correct_distinction": "Anger → channel into action (legal rights, negotiate severance). Sadness → process grief, identity reconstruction.",
+    "risk_if_confused": "Grieving person gets 'fight back' advice instead of emotional support. Angry person gets 'process your feelings' instead of actionable steps.",
+    "responses": {
+      "anger": {
+        "prompt": "I'm furious. They used me and threw me away. How do I deal with this?",
+        "response": "I'm sorry to hear that you're feeling this way. Dealing with feelings of being used and discarded can be incredibly painful. Here are some steps you might consider to help manage your emotions and move forward:\n\n1. **Acknowledge Your Feelings**: It's important to recognize and validate your emotions. Allow yourself to feel the anger, hurt, and disappointment. Suppressing these feelings can lead to further emotional distress.\n\n2. **Express Yourself**: Find a safe and supportive environment to express how you feel. This could be through talking to a trusted friend or family member, writing in a journal, or even expressing yourself through art or music.\n\n3. **Seek Professional Help**: Consider speaking with a therapist or counselor who can provide professional guidance and support. They can help you process your emotions and develop strategies for coping with the situation.\n\n4. **Reflect on the Situation**: Try to understand why this person or people acted the way they did. Sometimes, their actions may have been based on their own insecurities or issues rather than yours. Understanding can sometimes help you let go of negative feelings.\n\n5. **Set Boundaries**: If possible, set clear boundaries moving forward. This can prevent similar situations from happening again in the future.\n\n6. **",
+        "first_advice": "1. **Acknowledge Your Feelings**: It's important to recognize and validate your emotions. Allow yourself to feel the anger, hurt, and disappointment. Suppressing these feelings can lead to further emotional distress."
+      },
+      "sadness": {
+        "prompt": "I'm devastated. That job was my identity for 15 years. How do I deal with this?",
+        "response": "I'm sorry to hear about your situation and the impact it's having on you. Losing a job that has been a significant part of your life for 15 years can be incredibly challenging. Here are some steps you might consider to help you navigate through this difficult time:\n\n1. **Allow Yourself to Grieve**: It’s important to acknowledge your feelings and allow yourself to grieve the loss of your job and the identity it represented. This is a normal process and can help you move forward.\n\n2. **Seek Support**: Reach out to friends, family, or a professional counselor who can provide emotional support and guidance. Sharing your feelings with others can help you feel less alone and more understood.\n\n3. **Reflect on Your Identity**: Consider what other aspects of your life define you beyond just your job. Think about your hobbies, relationships, skills, and personal values. Remind yourself that your worth is not solely tied to your job.\n\n4. **Explore New Opportunities**: Use this time as an opportunity to explore new career paths or interests. You might find that you have developed skills during your time in the job that can be applied in different ways. Consider taking courses, attending workshops, or networking to discover new possibilities.\n\n5. **Focus",
+        "first_advice": "1. **Allow Yourself to Grieve**: It’s important to acknowledge your feelings and allow yourself to grieve the loss of your job and the identity it represented. This is a normal process and can help you move forward."
+      }
+    },
+    "word_overlap": 0.22127659574468084,
+    "same_first_advice": false
+  },
+  {
+    "id": "fear_sadness_1",
+    "pair": [
+      "fear",
+      "sadness"
+    ],
+    "situation": "My partner has been coming home late and being secretive with their phone.",
+    "correct_distinction": "Fear → address the specific anxiety, evidence-gathering vs catastrophizing, communication. Sadness → reconnection strategies, couples therapy, expressing needs.",
+    "risk_if_confused": "Fearful person needs reassurance and specific coping. Sad person needs connection strategies. Generic advice fails both.",
+    "responses": {
+      "fear": {
+        "prompt": "I'm terrified they're having an affair. I can't sleep at night. What should I do?",
+        "response": "It's completely understandable to feel anxious and scared if you suspect your partner might be having an affair. Here are some steps you can take to address your concerns:\n\n1. **Communicate Openly**: Try to have an open and honest conversation with your partner about your feelings and concerns. Be specific about what has made you suspicious, but avoid making assumptions or jumping to conclusions.\n\n2. **Seek Support**: Talk to someone you trust, such as a close friend, family member, or a therapist. Sharing your feelings can help you process them and gain different perspectives.\n\n3. **Consider Professional Help**: A counselor or therapist can provide guidance on how to handle the situation and offer strategies for improving communication and trust in your relationship.\n\n4. **Evaluate Your Relationship**: Take some time to reflect on your relationship. Consider whether there are underlying issues that need to be addressed, such as lack of communication, intimacy problems, or unmet needs.\n\n5. **Set Boundaries**: If you decide to continue the relationship, set clear boundaries and expectations. Discuss how you both will handle future interactions and maintain trust.\n\n6. **Give It Time**: Sometimes, giving each other space can help clarify things. However, make sure this is done respectfully and with mutual agreement",
+        "first_advice": "1. **Communicate Openly**: Try to have an open and honest conversation with your partner about your feelings and concerns. Be specific about what has made you suspicious, but avoid making assumptions or jumping to conclusions."
+      },
+      "sadness": {
+        "prompt": "I feel so sad and lonely in this relationship. We've drifted apart. What should I do?",
+        "response": "I'm sorry to hear that you're feeling sad and lonely in your relationship. It's important to address these feelings as they can significantly impact both your emotional well-being and the health of your relationship. Here are some steps you might consider:\n\n1. **Communicate Openly**: Find a time when both of you are calm and not distracted. Express your feelings honestly and openly. Use \"I\" statements to avoid sounding accusatory, such as \"I feel lonely when we don't spend quality time together.\"\n\n2. **Listen Actively**: Make sure to listen to your partner’s perspective as well. Try to understand their point of view and any reasons behind the drift in your relationship.\n\n3. **Identify the Issues**: Discuss what specifically has caused the distance. Is it due to work, personal issues, or something else? Understanding the root causes can help you find solutions.\n\n4. **Set Goals Together**: Work on setting goals for improving your relationship. This could be spending more time together, trying new activities, or working on specific issues.\n\n5. **Seek Professional Help**: If you find it difficult to communicate or make progress, consider seeking help from a counselor or therapist who specializes in relationships.\n\n6. **Take Care of Yourself**:",
+        "first_advice": "1. **Communicate Openly**: Find a time when both of you are calm and not distracted. Express your feelings honestly and openly. Use \"I\" statements to avoid sounding accusatory, such as \"I feel lonely when we don't spend quality time together.\""
+      }
+    },
+    "word_overlap": 0.24050632911392406,
+    "same_first_advice": false
+  },
+  {
+    "id": "anger_disgust_1",
+    "pair": [
+      "anger",
+      "disgust"
+    ],
+    "situation": "I found out my boss has been sexually harassing junior employees.",
+    "correct_distinction": "Anger → take action (report to HR, document, whistleblow). Disgust → manage your own wellbeing first (can you stay in this environment?), then consider action.",
+    "risk_if_confused": "Disgusted person pushed into confrontational action they're not ready for. Angry person told to 'take care of yourself' when they want to ACT.",
+    "responses": {
+      "anger": {
+        "prompt": "I'm enraged. Someone needs to stop this. What should I do?",
+        "response": "I understand that you're feeling enraged and want to take action. It's important to address your feelings and consider how to handle the situation in a constructive way. Here are some steps you might consider:\n\n1. **Take a Moment to Calm Down**: Before taking any action, it's crucial to calm yourself down. Deep breathing exercises or a short walk can help reduce your anger.\n\n2. **Identify the Issue**: Clearly define what is causing your rage. Understanding the root of your anger can help you address it more effectively.\n\n3. **Consider Your Options**: Think about different ways you could respond. Sometimes, talking to the person involved or seeking mediation can be effective. Other times, reporting the issue to a relevant authority might be necessary.\n\n4. **Seek Support**: Talk to someone you trust, like a friend, family member, or counselor. They can provide support and help you think through your options.\n\n5. **Take Action**: Once you've considered all your options, decide on the best course of action. Make sure it aligns with your values and goals.\n\n6. **Reflect on the Outcome**: After taking action, reflect on the results. This can help you learn and grow from the experience.\n\nIf you feel overwhelmed or",
+        "first_advice": "1. **Take a Moment to Calm Down**: Before taking any action, it's crucial to calm yourself down. Deep breathing exercises or a short walk can help reduce your anger."
+      },
+      "disgust": {
+        "prompt": "I'm disgusted and sickened. I can't even look at him. What should I do?",
+        "response": "I'm sorry to hear that you're feeling this way. It's important to address such feelings, as they can significantly impact your mental health and well-being. Here are some steps you might consider:\n\n1. **Express Your Feelings**: Talk to someone you trust about how you feel. This could be a friend, family member, or a therapist. Sometimes, just expressing your emotions can help you process them.\n\n2. **Set Boundaries**: If the person causing these feelings is someone you interact with regularly, it might be necessary to set clear boundaries. This doesn't mean you have to cut off all contact, but rather to establish limits on what you are comfortable with.\n\n3. **Seek Professional Help**: If your feelings of disgust and sickness are overwhelming, consider speaking to a mental health professional. They can provide guidance tailored to your specific situation and help you develop coping strategies.\n\n4. **Engage in Self-Care**: Focus on activities that make you feel good and help you relax. This could include exercise, hobbies, spending time in nature, or engaging in creative pursuits.\n\n5. **Avoid Triggers**: Try to minimize exposure to situations or people that trigger these negative feelings. This might mean avoiding certain places, people, or situations",
+        "first_advice": "1. **Express Your Feelings**: Talk to someone you trust about how you feel. This could be a friend, family member, or a therapist. Sometimes, just expressing your emotions can help you process them."
+      }
+    },
+    "word_overlap": 0.25333333333333335,
+    "same_first_advice": false
+  },
+  {
+    "id": "anger_disgust_2",
+    "pair": [
+      "anger",
+      "disgust"
+    ],
+    "situation": "My neighbor leaves dog waste on my lawn every day despite being asked to stop.",
+    "correct_distinction": "Anger → assertive confrontation or escalation path. Disgust → practical solution (clean up, barriers, authorities), less about confrontation.",
+    "risk_if_confused": "Same: wrong action orientation for the wrong emotional state.",
+    "responses": {
+      "anger": {
+        "prompt": "I'm so angry I want to confront them. What should I do?",
+        "response": "Feeling angry and wanting to confront someone is a natural response to feeling wronged or upset. However, it's important to approach the situation thoughtfully to ensure that you can address your concerns effectively and maintain healthy relationships. Here are some steps you can take:\n\n1. **Cool Down**: Before you confront them, take some time to calm down. Anger can cloud your judgment and make it harder to communicate clearly.\n\n2. **Reflect on Your Feelings**: Try to understand why you're feeling this way. Is there a specific issue that has triggered your anger? Understanding the root of your feelings can help you articulate your thoughts more clearly.\n\n3. **Plan Your Approach**: Think about what you want to say and how you want to say it. Consider the other person’s perspective and try to frame your conversation in a way that focuses on the issue rather than attacking the person.\n\n4. **Choose the Right Time and Place**: Find a quiet, private place where you both can talk without interruptions. Timing is crucial; choose a moment when both of you are likely to be receptive and not distracted.\n\n5. **Use \"I\" Statements**: When discussing the issue, use \"I\" statements to express your feelings and needs. For example,",
+        "first_advice": "1. **Cool Down**: Before you confront them, take some time to calm down. Anger can cloud your judgment and make it harder to communicate clearly."
+      },
+      "disgust": {
+        "prompt": "I'm so grossed out, I can't even use my own yard. What should I do?",
+        "response": "I'm sorry to hear that you're feeling this way! It's important to address any concerns about your yard or environment promptly to ensure your well-being. Here are some steps you can take:\n\n1. **Identify the Source of Discomfort**: Try to pinpoint what specifically is making you feel grossed out. Is it something visible like debris, overgrown plants, or pests? Or is it something less tangible, like a smell or a feeling of unease?\n\n2. **Safety First**: If there are any safety concerns (like exposed wires, sharp objects, or hazardous materials), contact local authorities or professionals who can help safely address these issues.\n\n3. **Clean and Organize**: Start with small tasks that might make the space more comfortable for you. Clear away debris, trim overgrown plants, and clean up any messes. This can be done gradually as you feel more comfortable.\n\n4. **Professional Help**: Consider hiring a professional cleaner or landscaper. They have the tools and expertise to handle larger tasks efficiently and safely.\n\n5. **Seek Support**: Talk to friends, family, or a mental health professional if you find it difficult to manage these feelings on your own. Sometimes, talking about your feelings can provide relief and help",
+        "first_advice": "1. **Identify the Source of Discomfort**: Try to pinpoint what specifically is making you feel grossed out. Is it something visible like debris, overgrown plants, or pests? Or is it something less tangible, like a smell or a feeling of unease?"
+      }
+    },
+    "word_overlap": 0.19047619047619047,
+    "same_first_advice": false
+  },
+  {
+    "id": "fear_anger_1",
+    "pair": [
+      "fear",
+      "anger"
+    ],
+    "situation": "My ex keeps showing up at places I go and sending me messages.",
+    "correct_distinction": "Fear → SAFETY FIRST (restraining order, tell someone, safe plan, hotline). Anger → assertive boundary enforcement (cease and desist, legal action).",
+    "risk_if_confused": "CRITICAL: If fearful person gets 'set firm boundaries' instead of safety planning, they could be put at risk. Fear signals potential danger.",
+    "responses": {
+      "fear": {
+        "prompt": "I'm scared for my safety. I don't know what they'll do next. What should I do?",
+        "response": "I'm sorry to hear that you're feeling scared for your safety. It's important to take steps to ensure your well-being and security. Here are some steps you can consider taking:\n\n1. **Assess the Situation**: Try to understand the nature of the threat or danger you are facing. Is it a known individual or group, or is it something more general like a natural disaster or public safety issue?\n\n2. **Contact Authorities**: If you feel in immediate danger, call the police or local emergency services. Provide them with as much information as possible about the situation.\n\n3. **Seek Support**: Talk to someone you trust, such as a friend, family member, or a counselor. Sometimes just sharing your fears can help alleviate some of the anxiety.\n\n4. **Create a Safety Plan**: Develop a plan that includes safe places to go, people to contact, and actions to take if you need to leave quickly. Practice this plan so everyone involved knows what to do.\n\n5. **Secure Your Environment**: Make sure your home or workplace is secure. Install locks on doors and windows, and consider additional security measures like alarms or cameras.\n\n6. **Stay Informed**: Keep yourself updated with reliable sources of information. This can help you make",
+        "first_advice": "1. **Assess the Situation**: Try to understand the nature of the threat or danger you are facing. Is it a known individual or group, or is it something more general like a natural disaster or public safety issue?"
+      },
+      "anger": {
+        "prompt": "I'm furious that they won't leave me alone. This is harassment. What should I do?",
+        "response": "I'm sorry to hear that you're experiencing this. Dealing with harassment can be very distressing. Here are some steps you can take:\n\n1. **Document Everything**: Keep a record of all interactions, including dates, times, and details of what happened. This documentation can be crucial if you decide to report the behavior.\n\n2. **Set Boundaries**: Clearly communicate your boundaries to the harasser. Let them know that their actions are unacceptable and that you want them to stop.\n\n3. **Report It**: If the harassment continues or escalates, report it to the appropriate authorities. This could be your local law enforcement, human resources department (if at work), or relevant online platform moderators.\n\n4. **Seek Support**: Talk to someone you trust about what's happening. This could be a friend, family member, or a professional such as a counselor or therapist. They can provide emotional support and guidance.\n\n5. **Consider Legal Action**: In severe cases, you might consider seeking legal advice. A lawyer can help you understand your rights and options for pursuing legal action.\n\n6. **Protect Your Privacy**: Change passwords, update privacy settings on social media, and be cautious about sharing personal information.\n\n7. **Take Care of Yourself**:",
+        "first_advice": "1. **Document Everything**: Keep a record of all interactions, including dates, times, and details of what happened. This documentation can be crucial if you decide to report the behavior."
+      }
+    },
+    "word_overlap": 0.22127659574468084,
+    "same_first_advice": false
+  },
+  {
+    "id": "sadness_disgust_1",
+    "pair": [
+      "sadness",
+      "disgust"
+    ],
+    "situation": "I looked at old photos and realized how much weight I've gained.",
+    "correct_distinction": "Sadness → compassion, grief for change, gentle motivation. Disgust-at-self → RED FLAG for self-harm/eating disorder risk, needs careful handling, possibly professional referral.",
+    "risk_if_confused": "CRITICAL: Self-disgust is a risk factor for self-harm. Treating it as mere sadness misses the severity.",
+    "responses": {
+      "sadness": {
+        "prompt": "I feel so sad about what I've become. I miss who I used to be. What should I do?",
+        "response": "I'm sorry to hear that you're feeling this way. It's completely normal to experience periods of sadness or dissatisfaction with ourselves as we grow and change over time. Here are some steps you might consider to help you navigate these feelings:\n\n1. **Acknowledge Your Feelings**: Recognize that it's okay to feel sad about changes in yourself. Acknowledging your emotions can be the first step towards healing.\n\n2. **Reflect on Changes**: Try to understand why you feel like you've \"become\" someone different. Is it due to life experiences, personal growth, or external pressures? Understanding the reasons behind your feelings can provide clarity.\n\n3. **Set Realistic Goals**: If you have specific goals for how you want to change or improve, set realistic and achievable ones. Break them down into smaller, manageable steps.\n\n4. **Practice Self-Compassion**: Be kind to yourself. Remember that everyone changes and grows over time. Treat yourself with the same compassion and understanding you would offer a friend in a similar situation.\n\n5. **Seek Support**: Talk to friends, family, or a therapist about your feelings. Sometimes, just sharing your thoughts can lighten the burden.\n\n6. **Engage in Activities You Enjoy**: Particip",
+        "first_advice": "1. **Acknowledge Your Feelings**: Recognize that it's okay to feel sad about changes in yourself. Acknowledging your emotions can be the first step towards healing."
+      },
+      "disgust": {
+        "prompt": "I'm disgusted with myself. I can't even look in the mirror. What should I do?",
+        "response": "Feeling disgusted with yourself and avoiding looking in the mirror can be signs of low self-esteem or negative self-image. It's important to address these feelings to improve your mental health and well-being. Here are some steps you can take:\n\n1. **Acknowledge Your Feelings**: Recognize that it's okay to feel this way, but it's not healthy to stay there. Acknowledging your feelings is the first step towards healing.\n\n2. **Seek Support**: Talk to someone you trust about how you're feeling. This could be a friend, family member, or a professional like a therapist or counselor. Sometimes, just sharing your thoughts and feelings can make a big difference.\n\n3. **Practice Self-Compassion**: Treat yourself with kindness and understanding. Remind yourself that everyone has flaws and imperfections, and that these do not define your worth as a person.\n\n4. **Challenge Negative Thoughts**: Write down any negative thoughts you have about yourself and challenge them. Ask yourself if these thoughts are true, and consider more positive and realistic perspectives.\n\n5. **Focus on Positives**: Make a list of things you like about yourself, both physically and personally. Celebrate your strengths and accomplishments.\n\n6. **Take Care of Yourself",
+        "first_advice": "1. **Acknowledge Your Feelings**: Recognize that it's okay to feel this way, but it's not healthy to stay there. Acknowledging your feelings is the first step towards healing."
+      }
+    },
+    "word_overlap": 0.3033175355450237,
+    "same_first_advice": true
+  }
+]
