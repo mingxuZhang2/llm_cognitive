@@ -1,0 +1,328 @@
+{
+  "aff_conditions": [
+    "anger",
+    "disgust",
+    "fear",
+    "happiness",
+    "sadness",
+    "valence"
+  ],
+  "brain_llm_mean_rho": -0.11071428571428568,
+  "per_model_rho": {
+    "Qwen2.5-7B-Instruct": -0.15,
+    "Meta-Llama-3.1-8B-Instruct": -0.08214285714285713,
+    "Mistral-7B-Instruct-v0.3": -0.08214285714285713,
+    "gemma-2-9b-it": -0.13214285714285715
+  },
+  "brain_dimensions": {
+    "arousal_W13": {
+      "rho": -0.075,
+      "p": 0.901
+    },
+    "valence_W13": {
+      "rho": -0.43214285714285705,
+      "p": 0.2192
+    },
+    "dominance_W13": {
+      "rho": -0.3857142857142856,
+      "p": 0.2485
+    },
+    "approach_withdrawal": {
+      "rho": -0.13563473666299103,
+      "p": 0.5885
+    },
+    "certainty_SE85": {
+      "rho": -0.3414274179152293,
+      "p": 0.345
+    },
+    "control_agency_R96": {
+      "rho": -0.09774656292455951,
+      "p": 0.7108
+    },
+    "autonomic_specificity": {
+      "rho": 0.4932589518504826,
+      "p": 0.0432
+    },
+    "facial_distinctiveness": {
+      "rho": 0.24993144110662247,
+      "p": 0.5612
+    },
+    "social_directedness": {
+      "rho": 0.27955294523777774,
+      "p": 0.5092
+    },
+    "action_tendency": {
+      "rho": 0.37824434307572014,
+      "p": 0.1527
+    }
+  },
+  "llm_dimensions": {
+    "arousal_W13": {
+      "rho": -0.42857142857142855,
+      "p": 0.2491
+    },
+    "valence_W13": {
+      "rho": 0.0964285714285714,
+      "p": 0.7888
+    },
+    "dominance_W13": {
+      "rho": -0.2785714285714285,
+      "p": 0.4689
+    },
+    "approach_withdrawal": {
+      "rho": -0.19350555763920055,
+      "p": 0.4703
+    },
+    "certainty_SE85": {
+      "rho": 0.011194341570991126,
+      "p": 0.979
+    },
+    "control_agency_R96": {
+      "rho": -0.3692647932705582,
+      "p": 0.1776
+    },
+    "autonomic_specificity": {
+      "rho": 0.184972106943931,
+      "p": 0.4245
+    },
+    "facial_distinctiveness": {
+      "rho": 0.6849972830329654,
+      "p": 0.1035
+    },
+    "social_directedness": {
+      "rho": -0.18513440081972035,
+      "p": 0.6004
+    },
+    "action_tendency": {
+      "rho": -0.24367664409685816,
+      "p": 0.3649
+    }
+  },
+  "comparison": {
+    "arousal_W13": {
+      "brain_rho": -0.075,
+      "llm_rho": -0.42857142857142855,
+      "delta": 0.35357142857142854,
+      "category": "neither"
+    },
+    "valence_W13": {
+      "brain_rho": -0.43214285714285705,
+      "llm_rho": 0.0964285714285714,
+      "delta": -0.5285714285714285,
+      "category": "neither"
+    },
+    "dominance_W13": {
+      "brain_rho": -0.3857142857142856,
+      "llm_rho": -0.2785714285714285,
+      "delta": -0.1071428571428571,
+      "category": "neither"
+    },
+    "approach_withdrawal": {
+      "brain_rho": -0.13563473666299103,
+      "llm_rho": -0.19350555763920055,
+      "delta": 0.05787082097620952,
+      "category": "neither"
+    },
+    "certainty_SE85": {
+      "brain_rho": -0.3414274179152293,
+      "llm_rho": 0.011194341570991126,
+      "delta": -0.35262175948622043,
+      "category": "neither"
+    },
+    "control_agency_R96": {
+      "brain_rho": -0.09774656292455951,
+      "llm_rho": -0.3692647932705582,
+      "delta": 0.2715182303459987,
+      "category": "neither"
+    },
+    "autonomic_specificity": {
+      "brain_rho": 0.4932589518504826,
+      "llm_rho": 0.184972106943931,
+      "delta": 0.30828684490655156,
+      "category": "BRAIN-ONLY"
+    },
+    "facial_distinctiveness": {
+      "brain_rho": 0.24993144110662247,
+      "llm_rho": 0.6849972830329654,
+      "delta": -0.4350658419263429,
+      "category": "neither"
+    },
+    "social_directedness": {
+      "brain_rho": 0.27955294523777774,
+      "llm_rho": -0.18513440081972035,
+      "delta": 0.46468734605749806,
+      "category": "neither"
+    },
+    "action_tendency": {
+      "brain_rho": 0.37824434307572014,
+      "llm_rho": -0.24367664409685816,
+      "delta": 0.6219209871725783,
+      "category": "neither"
+    }
+  },
+  "sensitivity_no_valence": {
+    "arousal_W13": {
+      "brain_rho": -0.006060606060606061,
+      "brain_p": 1.0,
+      "llm_rho": -0.4545454545454545,
+      "llm_p": 0.2992
+    },
+    "valence_W13": {
+      "brain_rho": -0.5515151515151515,
+      "brain_p": 0.1458,
+      "llm_rho": -0.01818181818181818,
+      "llm_p": 0.9856
+    },
+    "dominance_W13": {
+      "brain_rho": -0.2727272727272727,
+      "brain_p": 0.5218,
+      "llm_rho": -0.12727272727272726,
+      "llm_p": 0.8455
+    },
+    "approach_withdrawal": {
+      "brain_rho": -0.14959151840135315,
+      "brain_p": 0.7223,
+      "llm_rho": -0.10596065886762515,
+      "llm_p": 0.7993
+    },
+    "certainty_SE85": {
+      "brain_rho": -0.4028026197596592,
+      "brain_p": 0.3679,
+      "llm_rho": 0.28322059201851035,
+      "llm_p": 0.6142
+    },
+    "control_agency_R96": {
+      "brain_rho": -0.03658604599914625,
+      "brain_p": 0.8787,
+      "llm_rho": -0.3048837166595521,
+      "llm_p": 0.2646
+    },
+    "autonomic_specificity": {
+      "brain_rho": 0.6173898221471967,
+      "brain_p": 0.0418,
+      "llm_rho": -0.32721660573801425,
+      "llm_p": 0.2804
+    },
+    "facial_distinctiveness": {
+      "brain_rho": 0.4403855060505443,
+      "brain_p": 0.2761,
+      "llm_rho": -0.11009637651263607,
+      "llm_p": 0.8357
+    },
+    "social_directedness": {
+      "brain_rho": 0.35191219862390216,
+      "brain_p": 0.4504,
+      "llm_rho": -0.08026067687913557,
+      "llm_p": 0.9345
+    },
+    "action_tendency": {
+      "brain_rho": 0.4939118577177574,
+      "brain_p": 0.1713,
+      "llm_rho": -0.574172534596893,
+      "llm_p": 0.1041
+    }
+  },
+  "pair_divergence": [
+    {
+      "pair": "anger\u2014sadness",
+      "brain_d": 0.5866610483100207,
+      "llm_d": 0.021819265658551634,
+      "divergence": 0.5648417826514691
+    },
+    {
+      "pair": "disgust\u2014sadness",
+      "brain_d": 0.5947210587045212,
+      "llm_d": 0.031013370146083047,
+      "divergence": 0.5637076885584381
+    },
+    {
+      "pair": "anger\u2014disgust",
+      "brain_d": 0.5236723789612187,
+      "llm_d": 0.023312554290028542,
+      "divergence": 0.5003598246711901
+    },
+    {
+      "pair": "anger\u2014happiness",
+      "brain_d": 0.49258168901390653,
+      "llm_d": 0.028597192070738492,
+      "divergence": 0.463984496943168
+    },
+    {
+      "pair": "disgust\u2014happiness",
+      "brain_d": 0.4825202285129704,
+      "llm_d": 0.03804220358657612,
+      "divergence": 0.44447802492639427
+    },
+    {
+      "pair": "disgust\u2014valence",
+      "brain_d": 0.49596619010241694,
+      "llm_d": 0.05720940859371815,
+      "divergence": 0.4387567815086988
+    },
+    {
+      "pair": "fear\u2014sadness",
+      "brain_d": 0.46341682545231955,
+      "llm_d": 0.02681957106721916,
+      "divergence": 0.4365972543851004
+    },
+    {
+      "pair": "anger\u2014valence",
+      "brain_d": 0.49561681403839464,
+      "llm_d": 0.06084394251892175,
+      "divergence": 0.43477287151947286
+    },
+    {
+      "pair": "sadness\u2014valence",
+      "brain_d": 0.45476225396343917,
+      "llm_d": 0.05060588379113942,
+      "divergence": 0.4041563701722998
+    },
+    {
+      "pair": "anger\u2014fear",
+      "brain_d": 0.42245288083639554,
+      "llm_d": 0.03716683738237106,
+      "divergence": 0.3852860434540245
+    },
+    {
+      "pair": "happiness\u2014valence",
+      "brain_d": 0.42335880941140447,
+      "llm_d": 0.04858531130221594,
+      "divergence": 0.37477349810918853
+    },
+    {
+      "pair": "fear\u2014happiness",
+      "brain_d": 0.3452370890455314,
+      "llm_d": 0.03515788271053091,
+      "divergence": 0.3100792063350005
+    },
+    {
+      "pair": "fear\u2014valence",
+      "brain_d": 0.36394081544762025,
+      "llm_d": 0.06040112462371783,
+      "divergence": 0.3035396908239024
+    },
+    {
+      "pair": "disgust\u2014fear",
+      "brain_d": 0.3388481943119862,
+      "llm_d": 0.041733020018443506,
+      "divergence": 0.2971151742935427
+    },
+    {
+      "pair": "happiness\u2014sadness",
+      "brain_d": 0.2889351734046659,
+      "llm_d": 0.019134845683961732,
+      "divergence": 0.26980032772070417
+    }
+  ],
+  "summary": {
+    "brain_sig_dims": [
+      "autonomic_specificity"
+    ],
+    "llm_sig_dims": [],
+    "shared_dims": [],
+    "brain_only_dims": [
+      "autonomic_specificity"
+    ],
+    "llm_only_dims": []
+  }
+}
