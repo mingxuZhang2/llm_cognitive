@@ -1,0 +1,208 @@
+{
+  "stimulus_vad_per_condition": {
+    "anger": {
+      "valence": 5.202543352601156,
+      "arousal": 4.396936416184971,
+      "dominance": 5.389826589595375,
+      "n_words_matched": 173
+    },
+    "fear": {
+      "valence": 5.045223880597015,
+      "arousal": 4.357562189054726,
+      "dominance": 5.074676616915423,
+      "n_words_matched": 201
+    },
+    "disgust": {
+      "valence": 5.058835978835979,
+      "arousal": 4.383809523809524,
+      "dominance": 5.261164021164022,
+      "n_words_matched": 189
+    },
+    "sadness": {
+      "valence": 5.2357526881720435,
+      "arousal": 4.0788172043010755,
+      "dominance": 5.291612903225807,
+      "n_words_matched": 186
+    },
+    "happiness": {
+      "valence": 6.113124999999999,
+      "arousal": 4.193541666666667,
+      "dominance": 5.7825,
+      "n_words_matched": 192
+    },
+    "valence": {
+      "valence": 5.882787878787879,
+      "arousal": 4.085757575757576,
+      "dominance": 5.5716363636363635,
+      "n_words_matched": 165
+    },
+    "judgment": {
+      "valence": 5.863068181818182,
+      "arousal": 4.102357954545455,
+      "dominance": 5.609289772727272,
+      "n_words_matched": 352
+    },
+    "belief": {
+      "valence": 5.849008567931456,
+      "arousal": 3.6306731946144435,
+      "dominance": 5.8465973072215425,
+      "n_words_matched": 817
+    },
+    "intention": {
+      "valence": 5.882124711316397,
+      "arousal": 3.8828637413394924,
+      "dominance": 5.602794457274827,
+      "n_words_matched": 433
+    },
+    "mentalizing": {
+      "valence": 5.754831130690161,
+      "arousal": 4.158017621145374,
+      "dominance": 5.548869309838473,
+      "n_words_matched": 681
+    },
+    "moral": {
+      "valence": 5.609532710280374,
+      "arousal": 4.0378348909657324,
+      "dominance": 5.498473520249221,
+      "n_words_matched": 642
+    },
+    "empathy": {
+      "valence": 5.916374269005847,
+      "arousal": 4.161988304093567,
+      "dominance": 5.594912280701754,
+      "n_words_matched": 171
+    },
+    "self_referential": {
+      "valence": 5.993043478260869,
+      "arousal": 3.8851863354037266,
+      "dominance": 5.852111801242236,
+      "n_words_matched": 322
+    },
+    "theory_of_mind": {
+      "valence": 6.083539232053423,
+      "arousal": 4.108330550918198,
+      "dominance": 5.73881469115192,
+      "n_words_matched": 599
+    }
+  },
+  "emotion_dimension_correlations": {
+    "stim_valence": {
+      "rho_brain": -0.2642857142857143,
+      "p_brain": 0.3411737579900821,
+      "rho_llm": 0.175,
+      "p_llm": 0.5327481481378592
+    },
+    "stim_arousal": {
+      "rho_brain": 0.532142857142857,
+      "p_brain": 0.041158580386934415,
+      "rho_llm": 0.017857142857142853,
+      "p_llm": 0.9496353041738621
+    },
+    "stim_dominance": {
+      "rho_brain": -0.6178571428571428,
+      "p_brain": 0.014103928406489474,
+      "rho_llm": 0.12857142857142856,
+      "p_llm": 0.6479163294665075
+    },
+    "certainty": {
+      "rho_brain": -0.3917417999393029,
+      "p_brain": 0.14872210466697944,
+      "rho_llm": 0.24079541831131462,
+      "p_llm": 0.387305308375127
+    },
+    "agency": {
+      "rho_brain": -0.1629109382075992,
+      "p_brain": 0.5618393134255986,
+      "rho_llm": -0.2914295672380386,
+      "p_llm": 0.2919381336836281
+    },
+    "other_accountability": {
+      "rho_brain": 0.5596468826006566,
+      "p_brain": 0.03005613311805475,
+      "rho_llm": -0.17399278080853744,
+      "p_llm": 0.5351460454945329
+    },
+    "approach_tendency": {
+      "rho_brain": -0.10961582475365815,
+      "p_brain": 0.6973612323661315,
+      "rho_llm": -0.18149505410031921,
+      "p_llm": 0.5174012248360111
+    },
+    "social_sharing": {
+      "rho_brain": 0.007253808115448272,
+      "p_brain": 0.9795312053457275,
+      "rho_llm": -0.005440356086586205,
+      "p_llm": 0.9846477561229284
+    },
+    "stim_VAD_combined": {
+      "rho_brain": -0.09285714285714285,
+      "p_brain": 0.742045009907367,
+      "rho_llm": 0.13214285714285715,
+      "p_llm": 0.6387442188840665
+    }
+  },
+  "social_dimension_correlations": {
+    "n_agents": {
+      "rho_brain": 0.10894185687275831,
+      "p_brain": 0.5810643981526966,
+      "rho_llm": -0.19064824952732704,
+      "p_llm": 0.33116314417171344
+    },
+    "recursion_depth": {
+      "rho_brain": -0.2655816837448464,
+      "p_brain": 0.17196037458154334,
+      "rho_llm": -0.3386025500823361,
+      "p_llm": 0.0779825635253109
+    },
+    "propositional_content": {
+      "rho_brain": -0.09255709174255565,
+      "p_brain": 0.6394668543859636,
+      "rho_llm": 0.17309015041885784,
+      "p_llm": 0.3784130527716246
+    },
+    "normative": {
+      "rho_brain": 0.1509076232422575,
+      "p_brain": 0.4433627635245416,
+      "rho_llm": 0.48443328962008,
+      "p_llm": 0.008992075542604326
+    },
+    "self_other": {
+      "rho_brain": 0.1326384307682851,
+      "p_brain": 0.5010491456094001,
+      "rho_llm": 0.1271461562023106,
+      "p_llm": 0.5190924693364574
+    },
+    "affective_component": {
+      "rho_brain": 0.24588093953184917,
+      "p_brain": 0.20722581852413371,
+      "rho_llm": 0.6206089859245221,
+      "p_llm": 0.0004258891416855279
+    },
+    "combined_relational": {
+      "rho_brain": -0.12407563761382959,
+      "p_brain": 0.5293154419702839,
+      "rho_llm": 0.17337721547362944,
+      "p_llm": 0.3776105625596786
+    },
+    "stim_valence": {
+      "rho_brain": -0.5002736726874657,
+      "p_brain": 0.006706040928496469,
+      "rho_llm": -0.25068418171866447,
+      "p_llm": 0.19820592438472362
+    },
+    "stim_arousal": {
+      "rho_brain": -0.0010946907498631637,
+      "p_brain": 0.9955889577120898,
+      "rho_llm": -0.1691297208538588,
+      "p_llm": 0.38958495126293113
+    },
+    "stim_dominance": {
+      "rho_brain": -0.29556650246305416,
+      "p_brain": 0.12675241271223336,
+      "rho_llm": -0.1724137931034483,
+      "p_llm": 0.3803077112170634
+    }
+  },
+  "n_emotion_pairs": 15,
+  "n_social_pairs": 28
+}
