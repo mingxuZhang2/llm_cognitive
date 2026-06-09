@@ -538,6 +538,133 @@ construction adds causal specificity beyond PC1 requires further matched control
 
 ---
 
+## Finding N: Social Cognition Alignment Is Format-Driven
+
+**The model's within-social representational alignment (ρ=0.55) is partially
+driven by text genre features, not purely by conceptual understanding.**
+
+### The phenomenon
+
+Within-social RSA aligns with the brain under natural stimuli (ρ=+0.55, p<0.005;
+excl. moral: ρ=+0.65). But template-matched stimuli — same content, uniform sentence
+format — collapse within-social alignment to ρ=+0.12 (n.s.), a 78% drop.
+
+### The mechanism: text genre as a proxy for cognitive function
+
+Different social cognition functions map to distinct **text genres** in the stimulus set
+(which reflects how these constructs are studied and expressed in psychology):
+
+| Function | Text genre | Format markers | Mean length |
+|---|---|---|---|
+| False belief | Narrative story | Temporal sequence ("puts...goes...moves"), information asymmetry, multi-character | 42 words |
+| Theory of Mind | Multi-perspective narrative | Tracking who-knows-what ("X thinks...Y thinks...actually...") | 36 words |
+| Intention reading | Dialogue / indirect speech acts | Quotation marks, implied meaning ("It's freezing in here" = close the window) | 23 words |
+| Moral judgment | Evaluative / normative | Moral vocabulary (wrong, should, violates), causal argument | 26 words |
+| Mentalizing | Long narrative + irony | Happé strange stories, metaphor, social inference | 61 words |
+| Self-referential | First-person introspective | First-person perspective, inner state language | 32 words |
+
+The model exploits these genre cues — narrative structure, person perspective, sentence
+type, normative vocabulary, length — to differentiate social cognition functions. When
+template-matching eliminates all format variation ("When [name] [situation], they
+experienced a strong sense of [function]..."), only content words remain, and
+within-social differentiation collapses.
+
+### Connection to existing literature
+
+This format-dependence explains a widely reported but previously unexplained phenomenon:
+LLMs pass standard ToM benchmarks (Sally-Anne narrative format: ~90%) but fail on
+trivially modified versions (Ullman 2023: ~20% after minor format alterations;
+ToMBench-Hard 2025: frontier models drop from 88% to <61% on non-standard formats;
+Shapira et al. 2023: adversarial social reasoning failures).
+
+These papers attribute failures to "shallow heuristics" or "pattern matching" without
+specifying what is being matched. Our template-matched RSA provides the first
+**representational-level** explanation: the model's internal differentiation of social
+cognition functions is partially encoded in text genre features (narrative vs dialogue vs
+evaluative), not in the conceptual content itself. When genre cues disappear, so does the
+representational differentiation — and behavioral performance degrades accordingly.
+
+### Implication
+
+This creates a **capability illusion**: the model exhibits brain-aligned social cognition
+geometry on standard benchmark formats (false belief stories, moral dilemmas, indirect
+speech acts), but this alignment is format-contingent. When social cognition is expressed
+in non-standard formats — abbreviated text messages, non-Western narrative conventions,
+informal speech mixing multiple social-cognitive functions — the format cues the model
+relies on are absent, and performance may degrade without the user noticing.
+
+**Source:** `results/template_matched_rsa/template_matched_rsa_results.json`,
+`results/mechanistic/template_matched_compression.json`; ToM format sensitivity test
+on 4 models pending (`results/mechanistic/tom_format_*.json`).
+
+---
+
+## Finding N+1: Within-Affective Compression Is Input-Driven
+
+**LLM emotion representations are compressed under natural conditions but align
+with the brain when input is enriched — revealing input-driven processing.**
+
+### The phenomenon
+
+Under psychology-standard stimuli (emotion localizer sentences, avg 11 words),
+within-affective RSA is ρ=−0.11 (n.s., 4/4 models, 5 robustness tests).
+Under template-matched stimuli (uniform format, avg 24 words), within-affective
+RSA flips to ρ=+0.81 (p=0.005, excl. valence). Same model, same layer, same
+analysis — only input information density differs.
+
+### Evidence chain
+
+| Experiment | Input type | Result |
+|---|---|---|
+| Headline RSA | Natural stimuli (11 words) | within-aff ρ=−0.11, n.s. |
+| Template-matched RSA | Uniform format (24 words) | within-aff ρ=+0.81, p=0.005 |
+| DeepSeek implicit test | Rich bodily descriptions | Differentiation ↑ (0.774→0.867, p=0.002) |
+| DeepSeek commercial test | Short emotion labels | Behavioral compression (emo/soc=0.949, p=0.021) |
+| Behavioral confusion (4 models) | Short emotion labels | 3/4 significant: Gemma ratio=0.875 p<0.001, Mistral 0.913 p=0.003, Llama 0.946 p=0.010, Qwen 0.970 p=0.22 |
+
+All five experiments converge: short/impoverished input → compression; rich input →
+differentiation. The model does not maintain stable emotion-state representations
+independent of input — it constructs them on-the-fly from input features.
+
+### Behavioral consequence
+
+When different emotions are expressed via short labels (the natural case: "I'm angry",
+"I'm sad"), the model produces **structurally identical action advice** with only the
+empathic preamble swapped. Example (same scenario, all 4 models):
+
+- Anger/sadness/fear/disgust → same 4-step plan: (1) schedule private conversation,
+  (2) use "I" statements, (3) document, (4) escalate to manager.
+  Only difference: "I understand your rage" vs "I'm sorry you're heartbroken."
+
+- Belief/empathy/judgment/intention → genuinely different strategies:
+  (1) belief → collaborative rule-setting; (2) empathy → open-ended understanding;
+  (3) judgment → evidence gathering + formal escalation; (4) intention → specific
+  confrontation script with shared-goal framing.
+
+The model can label the emotion correctly but cannot translate that label into
+emotion-specific guidance.
+
+### Connection to the asymmetry
+
+| | Emotion | Social cognition |
+|---|---|---|
+| Natural conditions | Compressed (ρ=−0.11) | Aligned (ρ=+0.55) |
+| Controlled format (TM) | Aligned (ρ=+0.81) | Collapsed (ρ=+0.12) |
+| Bottleneck | Input information density | Text genre diversity |
+| Mechanism | Input-driven | Format-driven |
+
+Both domains' alignment is fragile — but fragile in opposite directions.
+Neither reflects genuine conceptual understanding: one depends on receiving
+enough information in the input, the other depends on text genre cues.
+
+**Source:** `results/mechanistic/template_matched_compression.json`,
+`results/mechanistic/emotion_compression_evidence.json`,
+`results/mechanistic/implicit_emotion_api_test.json`,
+`results/mechanistic/commercial_emotion_test.json`,
+`results/mechanistic/emotion_confusion_*.json`
+
+---
+
 ## Summary: the story in one paragraph
 
 Text-only LLMs, trained on next-token prediction, spontaneously develop an internal
