@@ -1,0 +1,774 @@
+{
+  "Qwen2.5-7B-Instruct": {
+    "model": "Qwen2.5-7B-Instruct",
+    "peak_layer": 27,
+    "n_stim": 840,
+    "n_per_cond": {
+      "anger": 60,
+      "belief": 60,
+      "disgust": 60,
+      "empathy": 60,
+      "fear": 60,
+      "happiness": 60,
+      "intention": 60,
+      "judgment": 60,
+      "mentalizing": 60,
+      "moral": 60,
+      "sadness": 60,
+      "self_referential": 60,
+      "theory_of_mind": 60,
+      "valence": 60
+    },
+    "cohens_d": {
+      "cross": {
+        "mean": 4.503373359870768,
+        "std": 1.0004516968592985
+      },
+      "within_soc": {
+        "mean": 4.291216962170574,
+        "std": 1.0980860209649044
+      },
+      "within_aff": {
+        "mean": 4.239215194381275,
+        "std": 1.0193736311001826
+      }
+    },
+    "centroid_dist": {
+      "cross": {
+        "mean": 0.009954030224845612,
+        "std": 0.0026800820675510133
+      },
+      "within_soc": {
+        "mean": 0.007222569034471866,
+        "std": 0.0020605312020925944
+      },
+      "within_aff": {
+        "mean": 0.007889065929560195,
+        "std": 0.0020845481542090196
+      }
+    },
+    "mann_whitney_d": {
+      "U": 202.0,
+      "p": 0.424216691576031
+    },
+    "mann_whitney_dist": {
+      "U": 240.0,
+      "p": 0.7814831384882543
+    },
+    "eta2": {
+      "affective": 0.12231691056312732,
+      "social": 0.1258442485542272,
+      "ratio": 1.0288376968880313
+    },
+    "compression_pct": 79.25499271509953,
+    "compression_ci95": [
+      67.5167682667836,
+      92.19749941114152
+    ],
+    "layer_compression": [
+      {
+        "layer": 0,
+        "ratio_pct": 66.70734906090232
+      },
+      {
+        "layer": 3,
+        "ratio_pct": 58.970732175240705
+      },
+      {
+        "layer": 6,
+        "ratio_pct": 47.088922794070434
+      },
+      {
+        "layer": 9,
+        "ratio_pct": 53.526910898428696
+      },
+      {
+        "layer": 12,
+        "ratio_pct": 54.38902534373966
+      },
+      {
+        "layer": 15,
+        "ratio_pct": 54.926509959317315
+      },
+      {
+        "layer": 18,
+        "ratio_pct": 51.912859591193374
+      },
+      {
+        "layer": 21,
+        "ratio_pct": 52.41846494260041
+      },
+      {
+        "layer": 24,
+        "ratio_pct": 55.6552244235657
+      },
+      {
+        "layer": 28,
+        "ratio_pct": 81.08791662958949
+      }
+    ],
+    "original_comparison": {
+      "d_aff": 0.8768229335406936,
+      "d_soc": 4.5255837798407965,
+      "eta2_aff": 0.03404739279137367,
+      "eta2_soc": 0.36613052853697037,
+      "compression_pct": 7.797779753306563
+    },
+    "within_aff_pairs": [
+      {
+        "pair": "happiness\u2014valence",
+        "d": 3.009113420957242,
+        "cos_dist": 0.005679421581171407
+      },
+      {
+        "pair": "anger\u2014disgust",
+        "d": 3.1076363616970024,
+        "cos_dist": 0.008380431540592093
+      },
+      {
+        "pair": "anger\u2014valence",
+        "d": 3.119640353836862,
+        "cos_dist": 0.008221460656424928
+      },
+      {
+        "pair": "anger\u2014sadness",
+        "d": 3.2928305153496233,
+        "cos_dist": 0.006959104389426374
+      },
+      {
+        "pair": "happiness\u2014sadness",
+        "d": 3.511843914048684,
+        "cos_dist": 0.004143575799290811
+      },
+      {
+        "pair": "disgust\u2014fear",
+        "d": 3.5466917592757556,
+        "cos_dist": 0.0068047493908753864
+      },
+      {
+        "pair": "sadness\u2014valence",
+        "d": 3.6663508326813123,
+        "cos_dist": 0.004813652508947275
+      },
+      {
+        "pair": "anger\u2014fear",
+        "d": 3.805468317742412,
+        "cos_dist": 0.007070609178478238
+      },
+      {
+        "pair": "fear\u2014valence",
+        "d": 4.412704864303444,
+        "cos_dist": 0.010195578241683267
+      },
+      {
+        "pair": "fear\u2014sadness",
+        "d": 4.5940945494329615,
+        "cos_dist": 0.007465060195613771
+      },
+      {
+        "pair": "disgust\u2014happiness",
+        "d": 4.844754257247614,
+        "cos_dist": 0.010788664961056127
+      },
+      {
+        "pair": "anger\u2014happiness",
+        "d": 5.1545277138067425,
+        "cos_dist": 0.00771495490124785
+      },
+      {
+        "pair": "disgust\u2014sadness",
+        "d": 5.665009288737761,
+        "cos_dist": 0.01042782224724026
+      },
+      {
+        "pair": "disgust\u2014valence",
+        "d": 5.837971339665164,
+        "cos_dist": 0.011536696301906124
+      },
+      {
+        "pair": "fear\u2014happiness",
+        "d": 6.01959042693655,
+        "cos_dist": 0.008134207049449005
+      }
+    ]
+  },
+  "Meta-Llama-3.1-8B-Instruct": {
+    "model": "Meta-Llama-3.1-8B-Instruct",
+    "peak_layer": 31,
+    "n_stim": 840,
+    "n_per_cond": {
+      "anger": 60,
+      "belief": 60,
+      "disgust": 60,
+      "empathy": 60,
+      "fear": 60,
+      "happiness": 60,
+      "intention": 60,
+      "judgment": 60,
+      "mentalizing": 60,
+      "moral": 60,
+      "sadness": 60,
+      "self_referential": 60,
+      "theory_of_mind": 60,
+      "valence": 60
+    },
+    "cohens_d": {
+      "cross": {
+        "mean": 5.248988625224489,
+        "std": 1.0661333506454447
+      },
+      "within_soc": {
+        "mean": 4.304939579572369,
+        "std": 0.8286165648993324
+      },
+      "within_aff": {
+        "mean": 4.566371109520839,
+        "std": 0.8769426589824437
+      }
+    },
+    "centroid_dist": {
+      "cross": {
+        "mean": 0.02432695076182011,
+        "std": 0.007705126169058599
+      },
+      "within_soc": {
+        "mean": 0.016434808329674835,
+        "std": 0.004867041496823464
+      },
+      "within_aff": {
+        "mean": 0.01748481020410868,
+        "std": 0.005179736666470588
+      }
+    },
+    "mann_whitney_d": {
+      "U": 238.0,
+      "p": 0.766156393993657
+    },
+    "mann_whitney_dist": {
+      "U": 219.0,
+      "p": 0.59564184845752
+    },
+    "eta2": {
+      "affective": 0.1246823925133832,
+      "social": 0.13376990511899645,
+      "ratio": 1.0728852921605414
+    },
+    "compression_pct": 71.87423683016692,
+    "compression_ci95": [
+      59.93089578169557,
+      85.53695424679245
+    ],
+    "layer_compression": [
+      {
+        "layer": 0,
+        "ratio_pct": 76.35311445765419
+      },
+      {
+        "layer": 3,
+        "ratio_pct": 44.232996092935565
+      },
+      {
+        "layer": 7,
+        "ratio_pct": 56.9683116214611
+      },
+      {
+        "layer": 10,
+        "ratio_pct": 56.12682475474367
+      },
+      {
+        "layer": 14,
+        "ratio_pct": 55.44905704173417
+      },
+      {
+        "layer": 17,
+        "ratio_pct": 57.016270650996006
+      },
+      {
+        "layer": 21,
+        "ratio_pct": 59.78422486902176
+      },
+      {
+        "layer": 24,
+        "ratio_pct": 62.82707172092367
+      },
+      {
+        "layer": 28,
+        "ratio_pct": 69.25012613170203
+      },
+      {
+        "layer": 32,
+        "ratio_pct": 79.74339641936916
+      }
+    ],
+    "original_comparison": {
+      "d_aff": 1.0643938917032312,
+      "d_soc": 4.973873183737195,
+      "eta2_aff": 0.03595119879955786,
+      "eta2_soc": 0.31500606938341225,
+      "compression_pct": 4.271775802629092
+    },
+    "within_aff_pairs": [
+      {
+        "pair": "happiness\u2014sadness",
+        "d": 3.2052942358738794,
+        "cos_dist": 0.008135967097000263
+      },
+      {
+        "pair": "anger\u2014disgust",
+        "d": 3.552659239438306,
+        "cos_dist": 0.020363606890887342
+      },
+      {
+        "pair": "anger\u2014sadness",
+        "d": 3.6283026353036294,
+        "cos_dist": 0.014164282464860012
+      },
+      {
+        "pair": "disgust\u2014fear",
+        "d": 3.6754316473835478,
+        "cos_dist": 0.0152204007687462
+      },
+      {
+        "pair": "anger\u2014fear",
+        "d": 3.8741062335964775,
+        "cos_dist": 0.014128889972662595
+      },
+      {
+        "pair": "anger\u2014valence",
+        "d": 4.0915256009660945,
+        "cos_dist": 0.018150450673651508
+      },
+      {
+        "pair": "happiness\u2014valence",
+        "d": 4.151972896828169,
+        "cos_dist": 0.013836704606463579
+      },
+      {
+        "pair": "disgust\u2014happiness",
+        "d": 4.5556578236081,
+        "cos_dist": 0.023707823026653085
+      },
+      {
+        "pair": "fear\u2014sadness",
+        "d": 4.581103119597067,
+        "cos_dist": 0.015858513713947198
+      },
+      {
+        "pair": "sadness\u2014valence",
+        "d": 4.924651622024937,
+        "cos_dist": 0.011899254584532781
+      },
+      {
+        "pair": "fear\u2014happiness",
+        "d": 5.532866689249382,
+        "cos_dist": 0.016191487159175177
+      },
+      {
+        "pair": "disgust\u2014sadness",
+        "d": 5.575437599562451,
+        "cos_dist": 0.023909546003647697
+      },
+      {
+        "pair": "anger\u2014happiness",
+        "d": 5.595162870601333,
+        "cos_dist": 0.015406380533010466
+      },
+      {
+        "pair": "fear\u2014valence",
+        "d": 5.632997089515163,
+        "cos_dist": 0.023156573781127565
+      },
+      {
+        "pair": "disgust\u2014valence",
+        "d": 5.91839733926404,
+        "cos_dist": 0.02814227178526474
+      }
+    ]
+  },
+  "Mistral-7B-Instruct-v0.3": {
+    "model": "Mistral-7B-Instruct-v0.3",
+    "peak_layer": 14,
+    "n_stim": 840,
+    "n_per_cond": {
+      "anger": 60,
+      "belief": 60,
+      "disgust": 60,
+      "empathy": 60,
+      "fear": 60,
+      "happiness": 60,
+      "intention": 60,
+      "judgment": 60,
+      "mentalizing": 60,
+      "moral": 60,
+      "sadness": 60,
+      "self_referential": 60,
+      "theory_of_mind": 60,
+      "valence": 60
+    },
+    "cohens_d": {
+      "cross": {
+        "mean": 1.3555678201944812,
+        "std": 0.2983488734623871
+      },
+      "within_soc": {
+        "mean": 1.7315410403752514,
+        "std": 1.0327594968531444
+      },
+      "within_aff": {
+        "mean": 1.407823576870266,
+        "std": 0.9430633958568705
+      }
+    },
+    "centroid_dist": {
+      "cross": {
+        "mean": 0.005416607484672736,
+        "std": 0.0014034458694744615
+      },
+      "within_soc": {
+        "mean": 0.004368293238993257,
+        "std": 0.0011498032266942077
+      },
+      "within_aff": {
+        "mean": 0.0030430076024739574,
+        "std": 0.000914466052173229
+      }
+    },
+    "mann_whitney_d": {
+      "U": 134.0,
+      "p": 0.027182422058422098
+    },
+    "mann_whitney_dist": {
+      "U": 84.0,
+      "p": 0.0006918347258675279
+    },
+    "eta2": {
+      "affective": 0.08607733903275702,
+      "social": 0.11272581176524583,
+      "ratio": 1.309587552681521
+    },
+    "compression_pct": 56.17921570068892,
+    "compression_ci95": [
+      47.195839825621036,
+      66.40064100096676
+    ],
+    "layer_compression": [
+      {
+        "layer": 0,
+        "ratio_pct": 74.75600410823957
+      },
+      {
+        "layer": 3,
+        "ratio_pct": 44.44719187213108
+      },
+      {
+        "layer": 7,
+        "ratio_pct": 57.825784461376806
+      },
+      {
+        "layer": 10,
+        "ratio_pct": 59.64702580431776
+      },
+      {
+        "layer": 14,
+        "ratio_pct": 56.17921570068892
+      },
+      {
+        "layer": 17,
+        "ratio_pct": 60.734435195709594
+      },
+      {
+        "layer": 21,
+        "ratio_pct": 67.62938494710463
+      },
+      {
+        "layer": 24,
+        "ratio_pct": 68.6050458177666
+      },
+      {
+        "layer": 28,
+        "ratio_pct": 72.74731185458636
+      },
+      {
+        "layer": 32,
+        "ratio_pct": 68.12418230553257
+      }
+    ],
+    "original_comparison": {
+      "d_aff": 0.30410457445978367,
+      "d_soc": 3.092238855223115,
+      "eta2_aff": 0.023958675703096243,
+      "eta2_soc": 0.5814005111055386,
+      "compression_pct": 2.807518868415386
+    },
+    "within_aff_pairs": [
+      {
+        "pair": "happiness\u2014sadness",
+        "d": 0.573655612670907,
+        "cos_dist": 0.0015926903043472773
+      },
+      {
+        "pair": "disgust\u2014fear",
+        "d": 0.7164405141291682,
+        "cos_dist": 0.0021609819573636946
+      },
+      {
+        "pair": "anger\u2014sadness",
+        "d": 0.7640114369611263,
+        "cos_dist": 0.002272949405919711
+      },
+      {
+        "pair": "fear\u2014sadness",
+        "d": 0.7821145038698599,
+        "cos_dist": 0.0026207585975944747
+      },
+      {
+        "pair": "sadness\u2014valence",
+        "d": 0.8188741325428407,
+        "cos_dist": 0.002963126519188397
+      },
+      {
+        "pair": "anger\u2014disgust",
+        "d": 0.8353260848382644,
+        "cos_dist": 0.0026811375224491396
+      },
+      {
+        "pair": "happiness\u2014valence",
+        "d": 0.9162111224462709,
+        "cos_dist": 0.0031286000978868467
+      },
+      {
+        "pair": "disgust\u2014happiness",
+        "d": 0.9759223213638529,
+        "cos_dist": 0.0036804356296068486
+      },
+      {
+        "pair": "anger\u2014valence",
+        "d": 1.0764054103996967,
+        "cos_dist": 0.0036612681660521673
+      },
+      {
+        "pair": "fear\u2014valence",
+        "d": 1.16863960640166,
+        "cos_dist": 0.004852500613992783
+      },
+      {
+        "pair": "disgust\u2014valence",
+        "d": 1.194658100736007,
+        "cos_dist": 0.004924686718264404
+      },
+      {
+        "pair": "fear\u2014happiness",
+        "d": 1.8992295350269173,
+        "cos_dist": 0.002773885743951876
+      },
+      {
+        "pair": "anger\u2014fear",
+        "d": 2.3947738869908157,
+        "cos_dist": 0.002291451817330148
+      },
+      {
+        "pair": "disgust\u2014sadness",
+        "d": 3.312356124498334,
+        "cos_dist": 0.003522594344334884
+      },
+      {
+        "pair": "anger\u2014happiness",
+        "d": 3.6887352601782677,
+        "cos_dist": 0.0025180465988267065
+      }
+    ]
+  },
+  "gemma-2-9b-it": {
+    "model": "gemma-2-9b-it",
+    "peak_layer": 21,
+    "n_stim": 840,
+    "n_per_cond": {
+      "anger": 60,
+      "belief": 60,
+      "disgust": 60,
+      "empathy": 60,
+      "fear": 60,
+      "happiness": 60,
+      "intention": 60,
+      "judgment": 60,
+      "mentalizing": 60,
+      "moral": 60,
+      "sadness": 60,
+      "self_referential": 60,
+      "theory_of_mind": 60,
+      "valence": 60
+    },
+    "cohens_d": {
+      "cross": {
+        "mean": 2.4811879697783734,
+        "std": 0.660409026771396
+      },
+      "within_soc": {
+        "mean": 4.050559344746183,
+        "std": 1.2540920690772503
+      },
+      "within_aff": {
+        "mean": 2.9069759067410597,
+        "std": 1.4124759109598573
+      }
+    },
+    "centroid_dist": {
+      "cross": {
+        "mean": 0.007411143739471586,
+        "std": 0.001804637521281174
+      },
+      "within_soc": {
+        "mean": 0.00583035594978064,
+        "std": 0.0015596273327563922
+      },
+      "within_aff": {
+        "mean": 0.004576519144073058,
+        "std": 0.001316815332373177
+      }
+    },
+    "mann_whitney_d": {
+      "U": 109.0,
+      "p": 0.005218911247582898
+    },
+    "mann_whitney_dist": {
+      "U": 115.0,
+      "p": 0.008018267802459634
+    },
+    "eta2": {
+      "affective": 0.11038454967041318,
+      "social": 0.14195895322175567,
+      "ratio": 1.2860400630850741
+    },
+    "compression_pct": 61.751860508366875,
+    "compression_ci95": [
+      52.334357940379775,
+      72.39688579579442
+    ],
+    "layer_compression": [
+      {
+        "layer": 0,
+        "ratio_pct": 71.12186193511252
+      },
+      {
+        "layer": 4,
+        "ratio_pct": 48.573317790900425
+      },
+      {
+        "layer": 9,
+        "ratio_pct": 62.04690065910016
+      },
+      {
+        "layer": 14,
+        "ratio_pct": 62.67052096724686
+      },
+      {
+        "layer": 18,
+        "ratio_pct": 63.566162754316565
+      },
+      {
+        "layer": 23,
+        "ratio_pct": 61.18716146021097
+      },
+      {
+        "layer": 28,
+        "ratio_pct": 66.71945562554444
+      },
+      {
+        "layer": 32,
+        "ratio_pct": 69.71268361769786
+      },
+      {
+        "layer": 37,
+        "ratio_pct": 73.73970844775565
+      },
+      {
+        "layer": 42,
+        "ratio_pct": 80.45633769342132
+      }
+    ],
+    "original_comparison": {
+      "d_aff": 0.6089301492688352,
+      "d_soc": 3.912438368692139,
+      "eta2_aff": 0.03887568573682282,
+      "eta2_soc": 0.46372867056381534,
+      "compression_pct": 5.057236760522194
+    },
+    "within_aff_pairs": [
+      {
+        "pair": "anger\u2014sadness",
+        "d": 1.4451817074499702,
+        "cos_dist": 0.0033778925730943987
+      },
+      {
+        "pair": "anger\u2014disgust",
+        "d": 1.6044270764974455,
+        "cos_dist": 0.004097808791329816
+      },
+      {
+        "pair": "anger\u2014fear",
+        "d": 1.8487488749177572,
+        "cos_dist": 0.0036008021376005006
+      },
+      {
+        "pair": "anger\u2014valence",
+        "d": 1.8814741547116478,
+        "cos_dist": 0.005503052359709493
+      },
+      {
+        "pair": "happiness\u2014valence",
+        "d": 1.9306240404434958,
+        "cos_dist": 0.004508666378071902
+      },
+      {
+        "pair": "anger\u2014happiness",
+        "d": 1.9537386552831868,
+        "cos_dist": 0.0039328761177004345
+      },
+      {
+        "pair": "sadness\u2014valence",
+        "d": 2.0986993649399297,
+        "cos_dist": 0.00397223859802176
+      },
+      {
+        "pair": "happiness\u2014sadness",
+        "d": 2.5136972809978344,
+        "cos_dist": 0.0023085304502638015
+      },
+      {
+        "pair": "disgust\u2014fear",
+        "d": 2.5883238635064534,
+        "cos_dist": 0.0033796169029641776
+      },
+      {
+        "pair": "fear\u2014valence",
+        "d": 2.6148313962461125,
+        "cos_dist": 0.007000001518844612
+      },
+      {
+        "pair": "fear\u2014sadness",
+        "d": 2.9622334516269646,
+        "cos_dist": 0.0040903145070432245
+      },
+      {
+        "pair": "disgust\u2014valence",
+        "d": 3.755814511358429,
+        "cos_dist": 0.007236015874808266
+      },
+      {
+        "pair": "disgust\u2014happiness",
+        "d": 4.813764514679642,
+        "cos_dist": 0.005815237628241321
+      },
+      {
+        "pair": "fear\u2014happiness",
+        "d": 5.741880161718597,
+        "cos_dist": 0.0045727313254873
+      },
+      {
+        "pair": "disgust\u2014sadness",
+        "d": 5.851199546738431,
+        "cos_dist": 0.005252001997914868
+      }
+    ]
+  }
+}
