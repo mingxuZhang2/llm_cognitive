@@ -1,0 +1,58 @@
+[
+  {
+    "id": "2e261f9bc103dfe58169d1eac98ca725a465e6f1",
+    "title": "Associations between childhood trauma and amygdala- and insula-centered resting-state functional connectivity in alcohol use disorder.",
+    "authors": "P. Spagnolo, Robin Chholak, M. Schwandt et al.",
+    "year": 2026,
+    "venue": "Journal of Psychiatric Research",
+    "citations": 0,
+    "abstract": "OBJECTIVES\nChildhood trauma (CT) increases risk for alcohol use disorder (AUD) and is linked to alterations in several brain regions. However, it remains unclear whether CT is associated with network-level resting-state functional connectivity (rs-FC) alterations in adults with AUD, and whether trauma subtypes show dissociable neural signatures. We examined associations between cumulative and subtype-specific CT exposure and amygdala- and insula-seeded rs-FC in adults with AUD versus healthy controls (HC).\n\n\nMETHODS\nThe sample included 214 adults (120 with AUD; 94 HC) who underwent resting-state fMRI and comprehensive clinical assessment. CT exposure was retrospectively assessed using the Childhood Trauma Questionnaire (CTQ). Whole-brain seed-to-voxel rs-FC analyses were conducted using bilateral amygdala and insula seeds to probe connectivity with large-scale brain networks. Linear mixed-effects models tested interactions between diagnostic group (AUD vs. HC) and CT exposure (total CTQ score and exploratory subtype scores).\n\n\nRESULTS\nGreater cumulative CT exposure was associated with weaker amygdala- and insula-centered rs-FC in AUD relative to HC. The most consistent effects involved reduced connectivity between these seeds-core nodes of the fronto-limbic and salience networks-and regions within the default mode network (DMN) and ventral visual stream. Exploratory CT subtype analyses (emotional abuse, emotional neglect, physical neglect) revealed largely overlapping rs-FC patterns.\n\n\nCONCLUSIONS\nCT is associated with a distinct pattern of network-level hypoconnectivity in adults with AUD, affecting circuits relevant to emotion regulation, memory, and socio-affective visual processing. The convergence of subtype-specific findings likely reflects high polytraumatization and widespread AUD-related network disruption and should be further investigated in future studies.",
+    "url": "https://www.semanticscholar.org/paper/2e261f9bc103dfe58169d1eac98ca725a465e6f1",
+    "pdf": "",
+    "doi": "10.1016/j.jpsychires.2026.03.021",
+    "arxiv": null,
+    "publication_date": "2026-03-19"
+  },
+  {
+    "id": "58f9224d9f155c14d2c3b0583a45572763c64351",
+    "title": "Amygdala Connectivity Alterations in High Myopia: A Resting-State fMRI Study with SVM-Based Classification",
+    "authors": "Zhuo-Er Dong, Yu Ji, Lin Zhou et al.",
+    "year": 2025,
+    "venue": "Clinical Ophthalmology",
+    "citations": 0,
+    "abstract": "Background High myopia (HM) is strongly linked to emotional disorders like anxiety and depression. While prior neuroimaging findings in HM are varied, the role of the amygdala—the brain’s core emotion center—remains critically under-explored. Given evidence of limbic system changes in other ophthalmic disorders (eg, glaucoma), we investigated amygdala-specific functional connectivity (FC) in HM. Methods We acquired resting-state fMRI data from 82 HM patients and 59 healthy controls (HCs). Using a seed-based approach with the bilateral amygdalae, whole-brain FC was compared between groups. A support vector machine (SVM) then evaluated the classification power of the identified FC alterations. Results Compared to HCs, HM patients showed significantly increased FC between the amygdala and key regions in the visual, default mode, and executive control networks, including the calcarine fissure, precuneus, and middle frontal gyrus. SVM models achieved robust classification performance, with an area under the curve (AUC) up to 0.765. Conclusion This study provides the first report on amygdala-centric network reorganization in HM. These FC patterns show potential as neuroimaging biomarkers. Our findings offer preliminary evidence for a neural substrate underlying the emotional and cognitive dysregulation in HM, highlighting the need to address mental health in these patients.",
+    "url": "https://www.semanticscholar.org/paper/58f9224d9f155c14d2c3b0583a45572763c64351",
+    "pdf": "",
+    "doi": "10.2147/OPTH.S543962",
+    "arxiv": null,
+    "publication_date": "2025-10-01"
+  },
+  {
+    "id": "1d7fb6c9e46b8edac72241b8dd3c024d7967caaf",
+    "title": "It’s all connected! Multivariate pattern analysis of inter-network connectivity distinguishes between reappraisal and passive viewing of emotional scenes",
+    "authors": "Scarlett Horner, Thomas Rawliuk, Ryan M Ferstl et al.",
+    "year": 2025,
+    "venue": "Cerebral Cortex",
+    "citations": 1,
+    "abstract": "Abstract Down-regulation using reappraisal is often associated with negative connectivity between prefrontal areas such as the dorsolateral prefrontal cortex (dlPFC) and areas associated with emotion such as the insula and amygdala, though a network perspective is often lacking in emotion regulation research. Whereas the dlPFC is associated with the attentional control network (ACN), the insula and amygdala are associated with the salience and limbic networks, respectively. The default mode network (DMN), including the ventromedial PFC, also contributes to emotion regulation. The present study sought to determine if inter-network functional connectivity can dissociate reappraising from passively viewing a negative image using multivariate pattern analysis (MVPA). Thirty-one participants completed a functional magnetic resonance imaging task in which they reappraised and viewed negative images. Behavioral and skin conductance response results indicated that reappraisal was associated with reductions in negative affect compared to viewing. The univariate connectivity analysis revealed that connections between aspects of the DMN and ACN differed between reappraising versus viewing negative images. Notably, the inter-network connectivity MVPA results demonstrated that whether one was reappraising versus viewing an image could be predicted better than chance, with several connections reliably contributing to the model, including those between ACN and DMN.",
+    "url": "https://www.semanticscholar.org/paper/1d7fb6c9e46b8edac72241b8dd3c024d7967caaf",
+    "pdf": "",
+    "doi": "10.1093/cercor/bhaf161",
+    "arxiv": null,
+    "publication_date": "2025-06-01"
+  },
+  {
+    "id": "f5ee348fa62941e7fa2ef14a305953771df71b13",
+    "title": "Altered amygdala functional connectivity after real-time functional MRI emotion self-regulation training",
+    "authors": "Hui Gao, Huan Zhang, Linyuan Wang et al.",
+    "year": 2023,
+    "venue": "NeuroReport",
+    "citations": 2,
+    "abstract": "Real-time functional MRI neurofeedback (rtfMRI-NF) is a noninvasive technique that extracts concurrent brain states and provides feedback to subjects in an online method. Our study aims to investigate the effect of rtfMRI-NF on amygdala-based emotion self-regulation by analyzing resting-state functional connectivity. We conducted a task experiment to train subjects in self-regulating amygdala activity in response to emotional stimuli. Twenty subjects were divided into two groups. The up-regulate group (URG) viewed positive stimulus, while the down-regulate group (DRG) viewed negative stimulus. The rtfMRI-NF experiment paradigm consisted of three conditions. The URG’s percent amplitude fluctuation (PerAF) scores are significant, indicating that positive emotions may be a partial side effect, with increased activity in the left hemisphere. Resting-state functional connectivity was analyzed via a paired-sample t-test before and after neurofeedback training. Brain network properties and functional connectivity analysis showed a significant difference between the default mode network (DMN) and the brain region associated with the limbic system. These results reveal to some extent the mechanism of neurofeedback training to improve individuals’ emotional regulate regulation ability. Our study has shown that rtfMRI-neurofeedback training can effectively enhance the ability to voluntarily control brain responses. Furthermore, the results of the functional analysis have revealed distinct changes in the amygdala functional connectivity circuits following rtfMRI-neurofeedback training. These findings may suggest the potential clinical applications of rtfMRI-neurofeedback as a new therapy for emotionally related mental disorders.",
+    "url": "https://www.semanticscholar.org/paper/f5ee348fa62941e7fa2ef14a305953771df71b13",
+    "pdf": "",
+    "doi": "10.1097/WNR.0000000000001921",
+    "arxiv": null,
+    "publication_date": "2023-06-07"
+  }
+]

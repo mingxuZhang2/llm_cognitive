@@ -198,18 +198,19 @@ def figure1():
     ceiling_vals = [m["noise_ceiling"] for m in scaling["models"]]
     mean_ceiling = np.mean(ceiling_vals)
 
-    # --- Layout: 180mm wide, taller for prominent heatmaps ---
-    fig = plt.figure(figsize=(7.09, 3.0))
-    gs = fig.add_gridspec(1, 5, width_ratios=[1.15, 1.15, 0.04, 0.55, 0.85],
-                          wspace=0.10, left=0.07, right=0.97,
-                          top=0.90, bottom=0.02)
+    # --- Layout: 2 rows. Top: two large heatmaps. Bottom: bar + scatter ---
+    fig = plt.figure(figsize=(7.09, 5.5))
+    gs = fig.add_gridspec(2, 4, height_ratios=[1.3, 0.8],
+                          width_ratios=[1.0, 1.0, 0.04, 1.0],
+                          hspace=0.45, wspace=0.25,
+                          left=0.08, right=0.97, top=0.95, bottom=0.06)
 
     # Shared colormap range
     vmin = min(brain_reord.min(), qwen_reord.min())
     vmax = max(brain_reord.max(), qwen_reord.max())
 
-    # ── Panel a: Brain heatmap ──
-    ax_a = fig.add_subplot(gs[0])
+    # ── Panel a: Brain heatmap (top-left) ──
+    ax_a = fig.add_subplot(gs[0, 0])
     im_a = ax_a.imshow(brain_reord, cmap="RdBu_r", vmin=vmin, vmax=vmax,
                         aspect="equal", interpolation="nearest")
     ax_a.set_xticks(range(14))
@@ -230,8 +231,8 @@ def figure1():
 
     panel_label(ax_a, "a", x=-0.20, y=1.06)
 
-    # ── Panel b: LLM heatmap ──
-    ax_b = fig.add_subplot(gs[1])
+    # ── Panel b: LLM heatmap (top-middle) ──
+    ax_b = fig.add_subplot(gs[0, 1])
     im_b = ax_b.imshow(qwen_reord, cmap="RdBu_r", vmin=vmin, vmax=vmax,
                         aspect="equal", interpolation="nearest")
     ax_b.set_xticks(range(14))
@@ -245,7 +246,7 @@ def figure1():
     heatmap_spines(ax_b)
 
     # Colorbar in its own narrow column
-    ax_cbar = fig.add_subplot(gs[2])
+    ax_cbar = fig.add_subplot(gs[0, 2])
     cbar = fig.colorbar(im_b, cax=ax_cbar)
     cbar.ax.tick_params(labelsize=4.5, length=1.5, width=0.3, pad=1)
     cbar.outline.set_linewidth(0.3)
@@ -253,8 +254,8 @@ def figure1():
 
     panel_label(ax_b, "b", x=-0.06, y=1.06)
 
-    # ── Panel c: bar chart of headline rho ──
-    ax_c = fig.add_subplot(gs[3])
+    # ── Panel c: bar chart of headline rho (bottom-left, spanning 2 cols) ──
+    ax_c = fig.add_subplot(gs[1, :2])
     clean_ax(ax_c)
 
     models_data = [
@@ -288,8 +289,8 @@ def figure1():
 
     panel_label(ax_c, "c", x=-0.22, y=1.06)
 
-    # ── Panel d: scatter ──
-    ax_d = fig.add_subplot(gs[4])
+    # ── Panel d: scatter (bottom-right, spanning colorbar col + last col) ──
+    ax_d = fig.add_subplot(gs[1, 2:])
     clean_ax(ax_d)
 
     b_ut = upper_tri(brain_rdm)
@@ -350,13 +351,14 @@ def figure2():
     aff_idx = sorted([i for i, c in enumerate(brain_conds) if c in AFFECTIVE])
     soc_idx = sorted([i for i, c in enumerate(brain_conds) if c in SOCIAL])
 
-    fig = plt.figure(figsize=(7.09, 2.3))
-    gs = fig.add_gridspec(1, 3, width_ratios=[1.4, 0.9, 0.9],
-                          wspace=0.35, left=0.06, right=0.97,
-                          top=0.88, bottom=0.05)
+    fig = plt.figure(figsize=(7.09, 4.5))
+    gs = fig.add_gridspec(2, 2, height_ratios=[1.0, 1.0],
+                          width_ratios=[1.0, 1.0],
+                          hspace=0.40, wspace=0.30,
+                          left=0.08, right=0.97, top=0.95, bottom=0.06)
 
-    # ── Panel a: grouped bar chart ──
-    ax_a = fig.add_subplot(gs[0])
+    # ── Panel a: grouped bar chart (top, spanning both columns) ──
+    ax_a = fig.add_subplot(gs[0, :])
     clean_ax(ax_a)
 
     model_order = ["Qwen2.5-7B", "Llama-3.1-8B", "Mistral-7B", "Gemma-2-9B"]
@@ -384,8 +386,8 @@ def figure2():
                 columnspacing=0.8, handlelength=1.0)
     panel_label(ax_a, "a", x=-0.12, y=1.06)
 
-    # ── Panel b: within-affective scatter ──
-    ax_b = fig.add_subplot(gs[1])
+    # ── Panel b: within-affective scatter (bottom-left) ──
+    ax_b = fig.add_subplot(gs[1, 0])
     clean_ax(ax_b)
 
     brain_aff = brain_rdm[np.ix_(aff_idx, aff_idx)]
