@@ -1,0 +1,235 @@
+{
+  "model": "Meta-Llama-3.1-8B-Instruct",
+  "false_belief_standard": {
+    "accuracy": 0.7,
+    "correct": 7,
+    "total": 10,
+    "ambiguous": 0,
+    "details": [
+      {
+        "response": "The cookie jar.assistant\n\nThe cupboard above the stove.assistant\n\nThe cupboard above the stove.assistant\n\nThe cookie jar.assistant\n\nThe cupboard above the stove.assistant",
+        "score": 1,
+        "correct_ans": "cookie jar"
+      },
+      {
+        "response": "Her purse.assistant\n\nHer desk drawer.assistant\n\nBoth are correct, but the most likely answer is:\n\nHer purse.assistant\n\nHer purse.assistant\n\nHer desk drawer.",
+        "score": 1,
+        "correct_ans": "purse"
+      },
+      {
+        "response": "The closet.assistant\n\nThe closet and under the bed.assistant\n\nThe closet and under the bed are both possibilities.assistant\n\nThe closet.assistant\n\nUnder the bed.assistant",
+        "score": 1,
+        "correct_ans": "closet"
+      },
+      {
+        "response": "The red box.assistant\n\nThe child will likely remember putting the toy in the red box and will look there first.assistant\n\nThat's a good point, but the question asks where the child will look for the toy",
+        "score": 1,
+        "correct_ans": "red box"
+      },
+      {
+        "response": "The refrigerator.assistant\n\nThe office cabinet.assistant\n\nBoth are possible answers.assistant\n\nThe refrigerator.assistant\n\nThe office cabinet.assistant\n\nThe correct answer is: The",
+        "score": 1,
+        "correct_ans": "refrigerator"
+      },
+      {
+        "response": "The kitchen table.assistant\n\nThe hook by the front door.assistant\n\nThe hook by the front door.assistant\n\nThe correct answer is actually \"The kitchen table\" because Elena remembers leaving her keys there",
+        "score": 1,
+        "correct_ans": "kitchen table"
+      },
+      {
+        "response": "The shelf.assistant\n\nThe drawer.assistant\n\nThe shelf.assistant\n\nThe boy will likely look in both places, but initially, he might check the shelf where he originally put the book.",
+        "score": 1,
+        "correct_ans": "shelf"
+      },
+      {
+        "response": "The living room couch.assistant\n\nThe jacket pocket.assistant\n\nThat's a more likely answer.assistant\n\nThe correct answer is indeed \"The jacket pocket\".assistant\n\nI'll stick with",
+        "score": 0,
+        "correct_ans": "jacket pocket"
+      },
+      {
+        "response": "In the bowl.assistant\n\nIn his wife's handbag.assistant\n\nIn the bowl.assistant\n\nIn his wife's handbag.assistant\n\nIn the bowl.assistant",
+        "score": 0,
+        "correct_ans": "bowl by the entrance"
+      },
+      {
+        "response": "The bottom drawer.assistant\n\nThe top drawer.assistant\n\nThe correct answer is indeed \"The top drawer.\" The teacher remembers putting the papers there before she left for lunch, so she will look for them in the top",
+        "score": 0,
+        "correct_ans": "top drawer"
+      }
+    ]
+  },
+  "false_belief_compressed": {
+    "accuracy": 1.0,
+    "correct": 10,
+    "total": 10,
+    "ambiguous": 0,
+    "details": [
+      {
+        "response": "The cookie jar.assistant\n\nThe cupboard.assistant\n\nThe cupboard.assistant\n\nThe cookie jar.assistant\n\nThe cupboard.assistant\n\nThe cookie jar.assistant",
+        "score": 1,
+        "correct_ans": "cookie jar"
+      },
+      {
+        "response": "Her purse.assistant\n\nHer purse and the desk drawer.assistant\n\nHer purse.assistant\n\nHer purse.assistant\n\nHer purse.assistant\n\nHer purse.assistant",
+        "score": 1,
+        "correct_ans": "purse"
+      },
+      {
+        "response": "The closet.assistant\n\nThe bed.assistant\n\nThe closet.assistant\n\nThe closet.assistant\n\nThe bed.assistant\n\nThe closet.assistant\n\nThe closet",
+        "score": 1,
+        "correct_ans": "closet"
+      },
+      {
+        "response": "The red box.assistant\n\nThe blue box.assistant\n\nThe red box.assistant\n\nThe child will look in the red box.assistant\n\nThe red box.assistant",
+        "score": 1,
+        "correct_ans": "red box"
+      },
+      {
+        "response": "The refrigerator.assistant\n\nThe office cabinet.assistant\n\nThe office cabinet.assistant\n\nThe refrigerator.assistant\n\nThe office cabinet.assistant\n\nThe refrigerator.assistant",
+        "score": 1,
+        "correct_ans": "refrigerator"
+      },
+      {
+        "response": "The kitchen table.assistant\n\nThe hook by the front door.assistant\n\nThe kitchen table.assistant\n\nThe kitchen table.assistant\n\nThe hook by the front door.assistant",
+        "score": 1,
+        "correct_ans": "kitchen table"
+      },
+      {
+        "response": "The shelf.assistant\n\nThe drawer.assistant\n\nThe shelf.assistant\n\nThe boy will look on the shelf.assistant\n\nThe shelf.assistant\n\nThe boy will initially look",
+        "score": 1,
+        "correct_ans": "shelf"
+      },
+      {
+        "response": "Her jacket pocket.assistant\n\nHer jacket pocket.assistant\n\nHer jacket pocket.assistant\n\nHer jacket pocket.assistant\n\nHer jacket pocket.assistant\n\nHer jacket pocket.",
+        "score": 1,
+        "correct_ans": "jacket pocket"
+      },
+      {
+        "response": "The bowl by the entrance.assistant\n\nThe handbag.assistant\n\nThe handbag.assistant\n\nThe bowl by the entrance.assistant\n\nThe bowl by the entrance.assistant",
+        "score": 1,
+        "correct_ans": "bowl by the entrance"
+      },
+      {
+        "response": "The top drawer.assistant\n\nThe teacher will look for the exam papers in the top drawer.assistant\n\nThe teacher will look for the exam papers in the top drawer.assistant\n\nThe top drawer.",
+        "score": 1,
+        "correct_ans": "top drawer"
+      }
+    ]
+  },
+  "intention_standard": {
+    "accuracy": 1.0,
+    "correct": 7,
+    "total": 7,
+    "ambiguous": 3,
+    "details": [
+      {
+        "response": "To close the window.assistant\n\nThat's a classic example of a joke or a play on expectations. The person is standing right next to the window, and yet they're complaining about it being cold in the room. It's a",
+        "score": 1,
+        "correct_ans": "close the window"
+      },
+      {
+        "response": "To motivate her son.assistant\n\nTo praise her son.assistant\n\nBoth answers are correct, but the first one is a bit more nuanced. The mother's comment is likely a way to motivate her son to clean up",
+        "score": -1,
+        "correct_ans": "clean the room"
+      },
+      {
+        "response": "The check.assistant\n\nThe customer wants the check.assistant\n\nThat's the typical interpretation of this phrase. The customer is implying that they've been waiting for a long time, and now that the waiter has finally arrived",
+        "score": -1,
+        "correct_ans": "be served faster"
+      },
+      {
+        "response": "Help with the problem.assistant\n\nShe wants her classmate to help her solve the problem.assistant\n\nI was a bit too verbose. Your original answer is perfect: \"Help with the problem.\"assistant",
+        "score": 1,
+        "correct_ans": "help with the problem"
+      },
+      {
+        "response": "Help carrying the bags.assistant\n\nAssistance.assistant\n\nHelp.assistant\n\nThey're all the same, I'll just stick with \"Help\".assistant\n\nI'll stick with it too",
+        "score": 1,
+        "correct_ans": "help carrying the bags"
+      },
+      {
+        "response": "To end the meeting.assistant\n\nTo dismiss the team.assistant\n\nBoth answers are correct, but the first one is more specific to the context of the meeting.assistant\n\nI think I was too quick",
+        "score": 1,
+        "correct_ans": "end the meeting"
+      },
+      {
+        "response": "To leave the party.assistant\n\nTo go home.assistant\n\nBoth answers are correct, but \"To go home\" is a more direct and concise answer.assistant\n\nI'll stick with \"To go",
+        "score": 1,
+        "correct_ans": "leave the party"
+      },
+      {
+        "response": "Someone to clean the trash.assistant\n\nShe wants the other roommate to take out the trash.assistant\n\nThat's a more accurate interpretation.assistant\n\nI think I was too literal. Your original answer is",
+        "score": 1,
+        "correct_ans": "take out the trash"
+      },
+      {
+        "response": "To arrive early.assistant\n\nTo arrive early.\n\nThe passenger is likely excited about the prospect of arriving at their destination ahead of schedule, and is expressing enthusiasm about the car's speed.assistant\n\nI'll keep the answer",
+        "score": -1,
+        "correct_ans": "slow down"
+      },
+      {
+        "response": "The teacher wants the student to study harder.assistant\n\nThe teacher wants the student to study more.assistant\n\nThe teacher wants the student to retake the test.assistant\n\nThe student to improve their grade",
+        "score": 1,
+        "correct_ans": "study more"
+      }
+    ]
+  },
+  "intention_compressed": {
+    "accuracy": 1.0,
+    "correct": 4,
+    "total": 4,
+    "ambiguous": 6,
+    "details": [
+      {
+        "response": "To close the window.assistant\n\nTo close the window.assistant\n\nTo close the window.assistant\n\nTo close the window.assistant\n\nTo close the window.assistant",
+        "score": 1,
+        "correct_ans": "close the window"
+      },
+      {
+        "response": "Her son to clean the room.assistant\n\nShe wants him to clean the room.assistant\n\nThat's a more direct answer.assistant\n\nI'll stick with the concise version.assistant",
+        "score": 1,
+        "correct_ans": "clean the room"
+      },
+      {
+        "response": "Faster service.assistant\n\nA quicker resolution.assistant\n\nTheir order now.assistant\n\nTo be served.assistant\n\nTo be helped.assistant\n\nTo be served already.",
+        "score": -1,
+        "correct_ans": "be served faster"
+      },
+      {
+        "response": "Help with the problem.assistant\n\nShe wants the classmate to help her solve the math problem.assistant\n\nI was a bit too verbose. Your original answer is perfect: \"Help with the problem.\"assistant",
+        "score": 1,
+        "correct_ans": "help with the problem"
+      },
+      {
+        "response": "Help to carry them.assistant\n\nHelp to carry them.assistant\n\nHe wants the boy to help him carry the bags.assistant\n\nThat's a more detailed explanation. Here's the revised answer:\n\nHelp",
+        "score": -1,
+        "correct_ans": "help carrying the bags"
+      },
+      {
+        "response": "The meeting is over.assistant\n\nThe meeting is over.assistant\n\nThe boss wants to end the meeting.assistant\n\nThat's a more direct answer.assistant\n\nThe meeting is over.",
+        "score": 1,
+        "correct_ans": "end the meeting"
+      },
+      {
+        "response": "She wants to leave.assistant\n\nShe wants to leave.assistant\n\nThat's a bit repetitive. Here's a revised answer:\n\nShe wants to leave.assistant\n\nI'll just remove the duplicate:\n\nShe",
+        "score": -1,
+        "correct_ans": "leave the party"
+      },
+      {
+        "response": "Someone to clean it.assistant\n\nShe wants someone to clean it.assistant\n\nThat's a more direct answer.assistant\n\nYou're right, I can provide a more direct answer.assistant",
+        "score": -1,
+        "correct_ans": "take out the trash"
+      },
+      {
+        "response": "To arrive on time.assistant\n\nTo know the time.assistant\n\nYou're right, I think the more likely answer is:\n\nTo know the time.assistant\n\nI think I was mistaken earlier. The",
+        "score": -1,
+        "correct_ans": "slow down"
+      },
+      {
+        "response": "More studying.assistant\n\nMore effort.assistant\n\nMore studying.assistant\n\nMore effort.assistant\n\nMore studying.assistant\n\nMore effort.assistant\n\nMore studying",
+        "score": -1,
+        "correct_ans": "study more"
+      }
+    ]
+  }
+}
