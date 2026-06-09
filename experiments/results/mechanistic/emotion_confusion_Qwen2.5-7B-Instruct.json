@@ -1,0 +1,365 @@
+{
+  "model": "Qwen2.5-7B-Instruct",
+  "n_situations": 10,
+  "emotion_keys": [
+    "anger",
+    "sadness",
+    "fear",
+    "disgust",
+    "happiness"
+  ],
+  "social_keys": [
+    "belief",
+    "empathy",
+    "judgment",
+    "intention"
+  ],
+  "emotion_mean_dist": 0.7589195683824798,
+  "social_mean_dist": 0.7822143346217939,
+  "ratio": 0.9702194587745859,
+  "wilcoxon": {
+    "stat": 37.0,
+    "p": 0.1875
+  },
+  "mann_whitney": {
+    "U": 3220.0,
+    "p": 0.21957308393185054
+  },
+  "n_social_wins": 5,
+  "emotion_pair_dists": {
+    "anger-sadness": {
+      "mean": 0.7802625219252638,
+      "per_sit": [
+        0.8061992050701736,
+        0.8809851621452099,
+        0.8138424824057869,
+        0.8990768002750209,
+        0.6132022220982378,
+        0.641863156310996,
+        0.6552430404078731,
+        0.7658129403773631,
+        0.8156203268776492,
+        0.9107798832843271
+      ]
+    },
+    "anger-fear": {
+      "mean": 0.6562257762569873,
+      "per_sit": [
+        0.417882306845773,
+        0.6376959267159448,
+        0.8229449361273227,
+        0.5535148836848013,
+        0.7774947646601087,
+        0.5387450840488608,
+        0.8061620825167538,
+        0.45643165723163226,
+        0.783889347258711,
+        0.7674967734799651
+      ]
+    },
+    "anger-disgust": {
+      "mean": 0.6536490694323404,
+      "per_sit": [
+        0.6860985068528564,
+        0.4575489146900108,
+        0.8641342026669346,
+        0.7026159266545289,
+        0.5777607611286721,
+        0.08704053527092603,
+        0.8384469396078604,
+        0.8091119877288293,
+        0.8681237391231766,
+        0.6456091805996084
+      ]
+    },
+    "anger-happiness": {
+      "mean": 0.8120446945791844,
+      "per_sit": [
+        0.8215703957907078,
+        0.8299381639851074,
+        0.8679668904061062,
+        0.8648107429918159,
+        0.8026246249832956,
+        0.8322151249674307,
+        0.9282443317135683,
+        0.6397196285967663,
+        0.7260521210865774,
+        0.8073049212704688
+      ]
+    },
+    "sadness-fear": {
+      "mean": 0.7644877374146555,
+      "per_sit": [
+        0.9261042569437232,
+        0.7336208324273128,
+        0.5158561282412251,
+        0.9437464644402487,
+        0.8049607670987946,
+        0.7761542532222929,
+        0.7882287850011144,
+        0.717037325929852,
+        0.7106731509509039,
+        0.7284954098910865
+      ]
+    },
+    "sadness-disgust": {
+      "mean": 0.7252166890720644,
+      "per_sit": [
+        0.8561513474646405,
+        0.8485468733370138,
+        0.5165633058741599,
+        0.8245336130245324,
+        0.40842331718406566,
+        0.6535829870507466,
+        0.8218234871009257,
+        0.7984036719972756,
+        0.8115761192329525,
+        0.7125621684543308
+      ]
+    },
+    "sadness-happiness": {
+      "mean": 0.8328389294744689,
+      "per_sit": [
+        0.8657097459348102,
+        0.9073858882917477,
+        0.8732099919096817,
+        0.9441615905744052,
+        0.8709676081176365,
+        0.8273884695229999,
+        0.8459998554767564,
+        0.6400233749218602,
+        0.8260165750731681,
+        0.7275261949216225
+      ]
+    },
+    "fear-disgust": {
+      "mean": 0.6932398708855698,
+      "per_sit": [
+        0.6587295180259336,
+        0.6779996481689659,
+        0.44023934520495756,
+        0.7255824126913901,
+        0.8720944975536746,
+        0.5674085057077562,
+        0.5392960694757674,
+        0.8345022628988816,
+        0.9026127318097926,
+        0.713933717318578
+      ]
+    },
+    "fear-happiness": {
+      "mean": 0.836676628588916,
+      "per_sit": [
+        0.9567866232662194,
+        0.8673546101363718,
+        0.7910384425903065,
+        0.8752511884012957,
+        0.8512692055266946,
+        0.7590807461907204,
+        0.8429705394764255,
+        0.689081984163334,
+        0.8749951973899741,
+        0.8589377487478167
+      ]
+    },
+    "disgust-happiness": {
+      "mean": 0.8345537661953477,
+      "per_sit": [
+        0.9136210394740737,
+        0.7460264466580317,
+        0.869535004543237,
+        0.9341584197544203,
+        0.8134923762107016,
+        0.8105278287666194,
+        0.8893624580785469,
+        0.8942709205282134,
+        0.646012596545532,
+        0.8285305713941016
+      ]
+    }
+  },
+  "social_pair_dists": {
+    "belief-empathy": {
+      "mean": 0.7917524911452384,
+      "per_sit": [
+        0.877827483463944,
+        0.8714422569682991,
+        0.8704527193637449,
+        0.8597370189264056,
+        0.7244557760708373,
+        0.6447084787229814,
+        0.844304275008227,
+        0.6899534962614746,
+        0.8082751476174772,
+        0.7263682590489926
+      ]
+    },
+    "belief-judgment": {
+      "mean": 0.6920193835413102,
+      "per_sit": [
+        0.7143852285150567,
+        0.622635898075985,
+        0.7431256690317796,
+        0.7326795345803893,
+        0.8376077869560554,
+        0.48213489170396984,
+        0.9109490826134071,
+        0.906947710670958,
+        0.6228333437735257,
+        0.34689468949197466
+      ]
+    },
+    "belief-intention": {
+      "mean": 0.8098236834939788,
+      "per_sit": [
+        0.7649248547796828,
+        0.8805446418057067,
+        0.8941854266403351,
+        0.8077592789217564,
+        0.8131699892537755,
+        0.6815393119671236,
+        0.8251005025662428,
+        0.7624785822576085,
+        0.7535174183692168,
+        0.9150168283783395
+      ]
+    },
+    "empathy-judgment": {
+      "mean": 0.742403993831655,
+      "per_sit": [
+        0.9042693448261295,
+        0.7631265643533104,
+        0.6559769674532954,
+        0.896075574872846,
+        0.7493569439930361,
+        0.6870611826468032,
+        0.6040708467537705,
+        0.7636578557777088,
+        0.7951456789233851,
+        0.6052989787162657
+      ]
+    },
+    "empathy-intention": {
+      "mean": 0.8050159970638354,
+      "per_sit": [
+        0.6358661103313624,
+        0.6284750110561843,
+        0.850127002598397,
+        0.891539333015015,
+        0.9532760304385899,
+        0.6382574675510231,
+        0.7691789416251399,
+        0.858323344800131,
+        0.9099047338349886,
+        0.915211995387523
+      ]
+    },
+    "judgment-intention": {
+      "mean": 0.8522704586547463,
+      "per_sit": [
+        0.8306073070973767,
+        0.7747190014423639,
+        0.8578649390270784,
+        0.9468104588671994,
+        0.918388682445511,
+        0.8064692972917914,
+        0.8128572072065783,
+        0.8596348295330247,
+        0.8440610268043823,
+        0.8712918368321549
+      ]
+    }
+  },
+  "responses": {
+    "emo_anger_0": "First, it's important to remain calm and communicate openly with your child to understand their perspective and the circumstances that led to the incident. Next, set clear and consistent consequences for their actions, such as community service or restitution, to help them understand the impact of their behavior. Additionally, consider seeking support from a family therapist who can help both you and your child work through these issues together.",
+    "emo_sadness_0": "I'm sorry to hear about what your child is going through. It's important for your child to acknowledge the consequences of their actions and take responsibility. Encourage them to write a letter of apology to the store and consider making amends by performing community service. Additionally, setting up regular check-ins with you or a trusted adult can help monitor their progress and provide ongoing support.",
+    "emo_fear_0": "First, it's important to remain calm and communicate openly with your child to understand what led to the behavior. Next, set clear, consistent consequences and expectations, and consider seeking guidance from a professional counselor or a family therapist to help address any underlying issues that might be contributing to the behavior.",
+    "emo_disgust_0": "I understand that this situation is deeply troubling for you. It's important to address the behavior directly with your child by setting clear expectations and consequences. Additionally, consider seeking support from a family therapist who can help facilitate open communication and guide both of you through this challenging time.",
+    "emo_happiness_0": "It's understandable to feel a mix of emotions in this situation. First, encourage your child to take responsibility for their actions by acknowledging the mistake and expressing genuine remorse. Next, work together to develop a plan that includes restitution, such as returning the stolen items or paying for them, and consider seeking support from a local community service program if needed. This approach can help rebuild trust and teach valuable life lessons.",
+    "soc_belief_0": "First, it's important to address the underlying reasons for your child's behavior. Consider setting up a meeting with a family therapist who can help explore these issues in a supportive environment. Additionally, establish clear and consistent consequences at home, and ensure your child understands the legal and moral implications of their actions.",
+    "soc_empathy_0": "First, it's important to have an open and honest conversation with your child to understand what led to the behavior and to express your concerns about the impact on others. Next, consider involving your child in community service or another form of restitution to help make amends and learn responsibility.",
+    "soc_judgment_0": "First, it's important to address the behavior directly and discuss the consequences of their actions, emphasizing the importance of honesty and integrity. Next, establish clear rules and consequences at home to reinforce the message that such behavior is unacceptable, and consider seeking additional support, such as a family therapist or a youth mentor, to help guide your child through this challenging period.",
+    "soc_intention_0": "First, approach the situation with calm and understanding; it's important to address the behavior without escalating emotions. Next, schedule a meeting with your child to discuss what happened, focusing on understanding their motivations and feelings, and setting clear expectations and consequences moving forward. Additionally, consider involving your child in community service or another form of restitution to help them understand the impact of their actions and learn responsibility.",
+    "emo_anger_1": "First, gather all relevant financial documents and evidence to document the diversion of funds clearly. Next, consult with a legal professional to understand your rights and the best course of action, which may include formal legal proceedings or mediation. Finally, consider reviewing and strengthening your business's internal controls to prevent future incidents.",
+    "emo_sadness_1": "I'm sorry to hear about the betrayal you're experiencing. It's important to first gather all financial records and documentation to confirm the extent of the diversion. Next, consider seeking legal advice to understand your rights and options for recovery or addressing the breach of trust.",
+    "emo_fear_1": "First, gather all relevant financial documents and records to confirm the extent of the diversion and identify any patterns or methods used. Next, consult with a legal advisor to understand your rights and the best course of action, which may include formal documentation of the findings and potential legal proceedings if necessary.",
+    "emo_disgust_1": "First, gather all relevant financial documents and evidence to document the diversion of funds clearly and thoroughly. Then, consider consulting with a legal professional to understand your rights and the best course of action, whether that involves negotiation, mediation, or legal proceedings.",
+    "emo_happiness_1": "It's understandable to feel a mix of emotions in this situation. The first step is to gather all relevant financial documents and evidence to substantiate the diversion of funds. Once you have a clear picture, consider consulting with a legal professional to explore your options and potential courses of action. Maintaining composure and focusing on a strategic approach will be crucial as you navigate this challenging time.",
+    "soc_belief_1": "First, gather all relevant financial documents and evidence to build a strong case. Then, consult with a legal professional to understand your rights and the best course of action, which may include filing a lawsuit or seeking a formal resolution through arbitration.",
+    "soc_empathy_1": "First, gather all relevant financial documents and evidence to document the diversion of funds clearly. Then, schedule a private meeting with your business partner to discuss your findings and seek a resolution that minimizes harm to all parties involved. Consider involving legal counsel to ensure that any actions taken are legally sound and protect everyone's interests.",
+    "soc_judgment_1": "First, gather all relevant financial documents and evidence to document the diversion of funds clearly and thoroughly. Next, consult with a legal professional to understand your rights and the best course of action, which may include formal legal proceedings or mediation. Finally, consider having an open and honest conversation with your business partner about the issue, but only if you feel safe and confident that it will not escalate the situation.",
+    "soc_intention_1": "First, gather all relevant financial documents and evidence to support your claim, ensuring you have a clear and comprehensive understanding of the extent of the diversion. Next, schedule a private meeting with your business partner, and approach the conversation with a calm and professional demeanor, focusing on the facts and the impact of their actions on the business. Finally, consider involving legal counsel to discuss potential next steps and ensure your rights and interests are protected throughout the process.",
+    "emo_anger_2": "I understand how distressing and frustrating this situation must be for you. First, document all instances of neglect in detail, including dates, times, and descriptions, as this will be crucial if you need to escalate the issue. Second, consider speaking with the caregiver directly but calmly to express your concerns and set clear expectations for their responsibilities.",
+    "emo_sadness_2": "I'm sorry to hear about the situation with your elderly parent's caregiver. It's important to address this promptly to ensure your parent's well-being. First, document all instances of neglect in detail, including dates, times, and descriptions, as this will be crucial for any actions you decide to take. Additionally, consider contacting the agency or organization that provided the caregiver to discuss the issues and seek their assistance in resolving the situation.",
+    "emo_fear_2": "I'm sorry to hear about the situation with your elderly parent's caregiver. It's important to take action promptly. First, document all instances of neglect in detail, including dates, times, and descriptions, as this will be crucial for any further steps you decide to take. Additionally, consider contacting your local adult protective services or elder abuse hotline for guidance and support on how to address the situation safely and effectively.",
+    "emo_disgust_2": "I'm sorry to hear about the situation with your elderly parent's caregiver. It's important to address this promptly to ensure your parent's safety and well-being. First, document all instances of neglect in detail, including dates, times, and descriptions. Then, contact your parent's healthcare provider or a local elder abuse hotline for guidance and support.",
+    "emo_happiness_2": "It's understandable to feel relieved and hopeful as you navigate this challenging situation. The first step is to gather detailed evidence of the neglect, such as dates, times, and descriptions of incidents. This documentation will be crucial if you decide to escalate the issue. Next, consider reaching out to a local elder care ombudsman or a legal advisor who specializes in elder abuse to discuss your options and explore potential courses of action.",
+    "soc_belief_2": "First, document all instances of neglect in detail, including dates, times, and descriptions of the behavior. This will be crucial for any legal action or to support your case if you decide to change caregivers. Second, consider speaking with an attorney to understand your legal rights and options regarding the current caregiver and potential alternatives.",
+    "soc_empathy_2": "First, document all instances of neglect in detail to provide clear evidence if you need to escalate the situation. Second, consider having an open and honest conversation with the caregiver to express your concerns and seek a resolution. If the behavior continues or worsens, it may be necessary to involve adult protective services or find a new caregiver to ensure your parent's safety and well-being.",
+    "soc_judgment_2": "First, document all instances of neglect in detail, including dates, times, and descriptions of the behavior. Next, have an open and honest conversation with the caregiver about your concerns, and consider involving a family member or a professional mediator to ensure the discussion is constructive. Finally, if the neglect continues or the situation escalates, you may need to seek legal advice or look into alternative caregiving options to protect your parent's well-being.",
+    "soc_intention_2": "First, gather any evidence of neglect, such as notes from visits, witness statements, or documentation of the caregiving environment. Then, schedule a calm and private meeting with the caregiver to discuss your concerns openly and directly, using the gathered evidence to support your points. If the issue persists or the caregiver does not address the problems, consider involving a social worker or legal advisor to explore further options for ensuring your parent's safety and well-being.",
+    "emo_anger_3": "First, it's important to address the situation directly but calmly by speaking to your friend privately to express how their comments made you feel. Then, consider setting clear boundaries regarding how you want to be treated and respected in social settings moving forward.",
+    "emo_sadness_3": "I'm sorry to hear about what happened. It's important to address the hurt feelings first by acknowledging your emotions and allowing yourself to process them fully. Next, consider reaching out to a trusted confidant or therapist to discuss the incident and explore how to respond or move forward in a healthy way.",
+    "emo_fear_3": "First, it's important to address the situation directly but calmly by speaking to your friend privately to express how their comments made you feel. Then, consider setting clear boundaries around what kind of behavior you find acceptable in your interactions with them. This can help prevent such incidents from recurring and protect your emotional well-being.",
+    "emo_disgust_3": "First, it's important to express your feelings directly but calmly to your friend, setting clear boundaries about how you want to be treated. Next, consider limiting your interactions with this friend until they show genuine remorse or respect for your feelings. Finally, seek support from other friends or a therapist to help process your emotions and maintain your mental well-being.",
+    "emo_happiness_3": "It's understandable to feel a mix of emotions in such a situation. Given your surprising relief and hope, consider reaching out to your friend to express how their comments made you feel, fostering an open dialogue that could lead to mutual understanding. Additionally, focus on strengthening your professional network and personal growth, which can boost your confidence and provide new opportunities.",
+    "soc_belief_3": "First, it's important to address the situation directly but calmly by speaking to your friend privately about how their comments made you feel. If the behavior continues or if the conversation doesn't resolve the issue, consider setting clear boundaries and limiting your interactions with this friend in public settings to protect your emotional well-being.",
+    "soc_empathy_3": "First, consider having a private conversation with your friend to express how their comments made you feel and to understand their perspective. Second, if the issue persists or you're uncomfortable addressing it directly, you might involve a mutual acquaintance or a trusted third party to mediate the discussion. Lastly, focus on maintaining your own self-worth and consider whether this incident is worth compromising your relationships with other attendees at the dinner party.",
+    "soc_judgment_3": "First, it's important to address the situation directly but calmly with your friend, expressing how their comments made you feel and why they were hurtful. If the behavior continues or if direct confrontation feels too challenging, consider seeking support from other trusted friends or a professional counselor to help navigate the relationship and potential consequences.",
+    "soc_intention_3": "First, choose an appropriate time and setting to address the issue privately with your friend, ensuring it's a calm moment where you both can speak without interruptions. Next, express your feelings calmly and clearly, using \"I\" statements like \"I felt hurt when you made comments about my career at the dinner party.\" Finally, set clear boundaries by stating what behaviors you find unacceptable and how you would prefer to be treated in the future.",
+    "emo_anger_4": "First, it's important to gather all the relevant information about how and when your medical records were shared without your consent. Next, contact the healthcare provider or institution involved to formally address the issue and request an investigation into the breach of privacy. Additionally, consider reporting the incident to your local health authority or data protection agency to ensure proper action is taken and to protect your rights.",
+    "emo_sadness_4": "I'm sorry to hear about this breach of privacy. First, it's important to contact the healthcare provider who shared your records to understand how and why this happened, and to request a formal apology and a plan to prevent it from happening again. Additionally, consider reporting the incident to your local health privacy office or a relevant regulatory body to ensure that proper actions are taken and to protect others from similar breaches.",
+    "emo_fear_4": "First, it's important to gather all the relevant information about who accessed your records and why, so you can understand the scope of the breach. Next, contact your healthcare provider to formally report the incident and request a detailed explanation and steps they are taking to prevent future unauthorized sharing.",
+    "emo_disgust_4": "I'm sorry to hear about this breach of privacy. First, contact the healthcare provider immediately to express your concerns and request an investigation into how your records were shared. Additionally, consider reporting this incident to your state’s health privacy office or a relevant regulatory body to ensure proper action is taken.",
+    "emo_happiness_4": "First, document all the details of the incident, including dates, times, and any relevant information about who had access to your records. Next, contact the healthcare provider in writing to formally request an investigation and to express your concerns and expectations for how the issue will be addressed. Finally, consider seeking legal advice to understand your rights and explore potential actions you can take if the situation does not resolve satisfactorily.",
+    "soc_belief_4": "First, document all details of the incident, including dates, times, and any relevant communications or evidence. Next, contact your healthcare provider to formally address the breach and request an explanation and a plan to prevent future occurrences. Additionally, consider reporting the incident to your state’s health privacy office or a similar regulatory body to ensure proper investigation and action.",
+    "soc_empathy_4": "First, it's important to gather all relevant information about who accessed your records and for what purpose. Then, contact the healthcare provider in writing to formally address the breach and request an explanation and a plan to prevent future incidents. Additionally, consider reaching out to a legal professional to understand your rights and explore any necessary actions or claims.",
+    "soc_judgment_4": "First, it's important to review the specific details of how and why your medical records were shared without your consent to understand the extent of the breach. Next, contact the healthcare provider or institution involved to formally address the issue, requesting an explanation and a plan for ensuring such a violation does not occur again.",
+    "soc_intention_4": "First, gather all relevant documentation and details about the incident, including dates, times, and any names involved. Then, schedule a meeting with the individual or organization responsible, and approach the conversation with a clear, calm demeanor, focusing on the facts and your concerns regarding privacy and consent.",
+    "emo_anger_5": "First, document all instances of damage with photos and dates to provide evidence. Next, approach your neighbor calmly to express your concerns and ask if you can help resolve the issue together. If the behavior continues, consider reporting it to local law enforcement or seeking legal advice to protect your rights and property.",
+    "emo_sadness_5": "I'm sorry to hear about the damage to your property. It's important to address this issue promptly to prevent further incidents. First, document all the damages with photos or a video, and consider speaking to your neighbor to understand their perspective and express your concerns calmly. If the behavior continues, you might want to involve local authorities or seek legal advice to protect your rights and property.",
+    "emo_fear_5": "First, document all instances of damage with photos or videos and keep a log of dates and descriptions. Next, approach your neighbor calmly to express your concerns and ask them to stop the behavior; sometimes, open communication can resolve such issues. Additionally, consider reporting the incidents to local law enforcement to ensure your safety and to address the property damage legally.",
+    "emo_disgust_5": "First, document all instances of damage with photos or videos to provide evidence. Next, approach your neighbor calmly to express your concerns and ask if you can help resolve the issue amicably. If the behavior continues, consider reporting it to local law enforcement or seeking legal advice to protect your rights and property.",
+    "emo_happiness_5": "It's understandable to feel relieved and hopeful that the situation might be resolved positively. To address the issue effectively, first, document all instances of damage with photos or videos, and keep a record of any communication with your neighbor. Additionally, consider speaking directly with your neighbor to express your concerns and see if you can find a mutually agreeable solution, such as a formal agreement to respect each other’s property.",
+    "soc_belief_5": "First, document all instances of damage with photos and dates to provide evidence. Next, approach your neighbor directly but calmly to express your concerns and ask if you can help resolve the issue. If the behavior continues or the direct approach does not work, consider reporting the incidents to local law enforcement for further action.",
+    "soc_empathy_5": "First, document all instances of damage with photos and dates to provide evidence. Next, have a calm and direct conversation with your neighbor to express your concerns and ask them to stop. Finally, consider involving local authorities or a mediator if the behavior continues, to ensure a resolution that protects both parties.",
+    "soc_judgment_5": "First, document all instances of damage with photos and dates to provide evidence. Next, approach your neighbor directly but calmly to express your concerns and ask them to stop; sometimes, open communication can resolve such issues. If the behavior continues, consider reporting it to local law enforcement or a tenant's association if you're in an apartment complex, to seek legal protection and support.",
+    "soc_intention_5": "First, gather evidence of the damages, such as photos or videos, to document the extent of the property damage. Next, approach your neighbor in a calm and direct manner, expressing your concerns and asking them to stop the behavior. If the issue persists, consider involving local authorities or a mediator to help resolve the conflict.",
+    "emo_anger_6": "First, it's important to remain calm and gather any evidence, such as notes or recordings, that can support your account of what happened. Next, schedule a meeting with the teacher to discuss your concerns directly and seek a resolution, while maintaining a professional and respectful tone.",
+    "emo_sadness_6": "I'm sorry to hear about what happened. It's important to address this situation promptly and constructively. First, gather any evidence or documentation of the incident, such as notes from the class or any witness statements, and then schedule a meeting with the teacher to discuss your concerns directly and seek a resolution.",
+    "emo_fear_6": "First, it's important to gather more information about the incident by speaking with your child and the teacher to understand all sides of the story. Next, schedule a meeting with the teacher and principal to discuss your concerns and seek a resolution that ensures your child feels safe and respected in the classroom.",
+    "emo_disgust_6": "First, it's important to gather all the details about the incident and document everything, including dates, times, what was said, and any witnesses. Next, schedule a meeting with the teacher or school administration to discuss your concerns and seek a resolution that addresses the behavior and ensures your child feels safe and respected in the classroom.",
+    "emo_happiness_6": "First, it's important to address the situation directly but calmly with the teacher to understand their perspective and seek a resolution. Next, consider documenting the incident and any subsequent interactions for your records, which can be helpful if further action is needed. Finally, focus on building your child’s self-esteem and resilience through positive reinforcement and supportive activities outside of school.",
+    "soc_belief_6": "First, it's important to gather all the details and evidence of the incident, such as any written notes or witness statements from other students or teachers. Next, schedule a meeting with the school administration to discuss the issue, presenting your concerns and any evidence you have collected in a calm and professional manner.",
+    "soc_empathy_6": "First, it's important to address the situation directly with the teacher to understand their perspective and express your concerns calmly. Consider scheduling a meeting at a convenient time for both parties to discuss the incident and seek a resolution that respects your child’s dignity. Additionally, involve school administration if the issue persists or escalates, as they can provide further support and ensure the environment is safe and respectful for all students.",
+    "soc_judgment_6": "First, it's important to address the situation directly with the teacher to understand their perspective and express your concerns calmly. If the issue persists or you feel uncomfortable handling it alone, consider involving the school administration or a trusted parent-teacher organization to mediate and seek a resolution.",
+    "soc_intention_6": "First, gather your thoughts and emotions to approach the situation calmly and constructively. Then, schedule a private meeting with the teacher to discuss your concerns openly and seek a resolution that addresses the issue while maintaining a positive school environment. Lastly, consider documenting the incident and any agreements made during the meeting for future reference and accountability.",
+    "emo_anger_7": "First, it's important to gather all relevant information and documentation to support your case, such as performance reviews and any evidence of the other person's qualifications. Next, consider scheduling a meeting with your HR department or a trusted supervisor to discuss your concerns and present your evidence in a calm and professional manner.",
+    "emo_sadness_7": "I'm sorry to hear about your disappointment. It's important to process your emotions but also consider concrete steps moving forward. First, gather any relevant documentation or evidence that supports your qualifications and the reasons why you believe the decision was unfair. Second, schedule a meeting with your HR department to discuss your concerns and seek guidance on how to address the situation formally.",
+    "emo_fear_7": "First, it's important to gather all relevant information and documentation to support your case, such as performance reviews and any evidence of the other person's qualifications. Next, consider scheduling a private meeting with your supervisor or HR to discuss your concerns openly and professionally, ensuring you have a clear understanding of the decision-making process and any next steps.",
+    "emo_disgust_7": "First, it's important to document all instances of favoritism and any relevant details about the less qualified individual's performance. This documentation can be crucial if you decide to address the issue formally or seek support from HR. Additionally, consider discussing your concerns with a trusted mentor or another respected colleague who might offer support and provide guidance on how to handle the situation professionally.",
+    "emo_happiness_7": "It's understandable to feel a mix of emotions in this situation. First, gather any relevant documentation or evidence that supports your qualifications and the reasons why you believe you were more suitable for the promotion. Then, consider scheduling a private meeting with your HR department to discuss your concerns and present your case professionally and calmly.",
+    "soc_belief_7": "First, gather all relevant documentation and evidence that supports your qualifications and the less qualified status of the promoted individual. Then, schedule a meeting with your HR department or a trusted supervisor to discuss your concerns and present your case professionally and factually.",
+    "soc_empathy_7": "First, it's important to gather objective evidence and documentation of the less qualified individual's performance and qualifications compared to yours. This will help you present a strong case if you decide to address the issue formally. Additionally, consider speaking with a trusted mentor or HR representative to discuss your concerns and explore potential next steps without escalating prematurely.",
+    "soc_judgment_7": "First, document all relevant details and evidence of the promotion process, including any communications or meetings where favoritism was evident. Then, consider discussing the issue with a trusted mentor or HR representative within the company to explore potential internal resolution options.",
+    "soc_intention_7": "First, gather all relevant evidence and documentation to support your case, such as performance reviews and any communications related to the promotion process. Then, schedule a private meeting with the person responsible for the decision, and clearly and calmly present your concerns, backed by the evidence you've collected, while maintaining a professional demeanor.",
+    "emo_anger_8": "First, it's important to allow yourself to feel the anger and hurt; acknowledging these emotions is crucial for healing. Next, consider having a calm and honest conversation with your sibling to express how their actions have affected you, which can help clarify any misunderstandings and potentially mend the relationship.",
+    "emo_sadness_8": "I'm sorry to hear about what you're going through. It's important to allow yourself to grieve this betrayal fully. Start by expressing your feelings to someone you trust, whether it's another friend or a professional, to help process your emotions. Additionally, consider having an open and honest conversation with your sibling to understand their perspective and set clear boundaries moving forward.",
+    "emo_fear_8": "First, it's important to process your feelings by talking to someone you trust, like a close friend or another family member who hasn't been involved in the secret. Next, consider having an open and honest conversation with your sibling to express how their actions have affected you, while also trying to understand their perspective. Finally, if needed, seek support from a professional counselor or therapist to help navigate these complex emotions and relationships.",
+    "emo_disgust_8": "It's understandable to feel deeply hurt and betrayed by your sibling's actions. First, consider expressing your feelings calmly to your sibling to set boundaries and understand their perspective. Then, focus on self-care by engaging in activities that bring you comfort and peace, such as spending time with friends or pursuing hobbies.",
+    "emo_happiness_8": "It's understandable to feel a mix of emotions in this situation. First, consider having an open and honest conversation with your sibling to understand their perspective and the reasons behind their revelation. This can help clarify any misunderstandings and potentially strengthen your relationship. Additionally, focus on maintaining your own emotional well-being by engaging in activities that bring you joy and relaxation, such as exercise, hobbies, or spending time with supportive friends.",
+    "soc_belief_8": "First, it's important to express your feelings openly and calmly with your sibling to understand their motivations. Next, consider setting clear boundaries about what information you are comfortable sharing in the future. Finally, seek support from other trusted family members or friends to help process your emotions and decide on any necessary next steps.",
+    "soc_empathy_8": "First, it's important to have an open and honest conversation with your sibling to understand their perspective and address any misunderstandings. Next, consider discussing the situation with other family members who might be affected to ensure everyone is informed and can process the revelation together.",
+    "soc_judgment_8": "First, it's important to express your feelings openly and calmly to your sibling about why you felt betrayed. Then, consider setting clear boundaries moving forward and discussing the importance of trust within the family. Lastly, if needed, seek support from other family members or a professional counselor to help navigate this difficult situation.",
+    "soc_intention_8": "First, consider a calm and private setting to discuss the issue with your sibling, ensuring both of you feel safe and respected. Next, express your feelings clearly and directly but without blame, focusing on how the revelation has affected you personally. Finally, set clear boundaries about what information is off-limits in the future and discuss any necessary steps to repair the trust, such as seeking mediation if needed.",
+    "emo_anger_9": "First, document all communications and payments related to the contractor, including emails, texts, and receipts. Next, send a formal demand letter to the contractor outlining the incomplete work and requesting a resolution or refund. If the contractor does not respond, consider filing a complaint with your local consumer protection agency or seeking legal advice to explore further options.",
+    "emo_sadness_9": "I'm sorry to hear about your experience. It's important to take action to recover your money and ensure this doesn't happen again. First, gather all documentation related to the contract and payment, then consider contacting your local consumer protection agency or small claims court to file a complaint and seek restitution.",
+    "emo_fear_9": "First, document all communications with the contractor and any payments made, including dates and amounts. Next, contact your local consumer protection agency or small claims court to file a complaint and seek a refund. Additionally, consider hiring an attorney to help you navigate the legal process and recover any damages or losses incurred.",
+    "emo_disgust_9": "I'm sorry to hear about your experience. First, document all communications and payments related to the contractor, including emails, texts, and receipts. Then, contact your local consumer protection agency or better business bureau to file a complaint and seek advice on your next steps.",
+    "emo_happiness_9": "It's understandable to feel relieved and hopeful in this situation. First, gather all documentation related to the contract and payment, including any emails or communications with the contractor. Next, consider contacting a local consumer protection agency or legal aid organization for guidance on how to proceed and protect your rights.",
+    "soc_belief_9": "First, document all communications with the contractor and any payments made, including dates and amounts. Next, file a complaint with your local consumer protection agency and consider hiring an attorney to help you pursue legal action or negotiate a settlement for the work that wasn't done.",
+    "soc_empathy_9": "First, document all communications and transactions related to the project, including emails, receipts, and any agreements. Next, consider contacting the Better Business Bureau or local consumer protection agency to file a complaint and seek mediation. Additionally, consult with a lawyer to understand your legal options and whether you can pursue compensation or other remedies.",
+    "soc_judgment_9": "First, document all communications and transactions related to the contractor, including emails, texts, payments, and any agreements or contracts. Next, file a complaint with your local consumer protection agency and consider hiring an attorney to help you pursue legal action or negotiate a resolution.",
+    "soc_intention_9": "First, gather all relevant documents and communications related to the contract and payment, including emails, receipts, and any correspondence with the contractor. Then, schedule a face-to-face meeting or call to calmly discuss the issue, presenting your evidence and clearly stating your expectations for resolution, such as a refund or completion of the work."
+  }
+}
