@@ -1,0 +1,551 @@
+{
+  "description": "Paraphrase-invariance tests for brain-LLM RSA",
+  "n_split_half_reps": 200,
+  "rng_seed": 20260603,
+  "models": {
+    "Qwen2.5-7B-Instruct": {
+      "peak_layer": 27,
+      "full_set_rho": 0.7385889472845995,
+      "test1_split_half": {
+        "n_reps": 200,
+        "rho_half_A_mean": 0.7379882943143812,
+        "rho_half_B_mean": 0.738560121038382,
+        "rho_all_mean": 0.7382742076763816,
+        "rho_all_std": 0.010873908746487275,
+        "rho_all_ci95_lo": 0.7163019589106546,
+        "rho_all_ci95_hi": 0.7589803312629402,
+        "rho_all_min": 0.6933906673037108,
+        "inter_half_rdm_agreement_mean": 0.9687756012103838,
+        "inter_half_rdm_agreement_std": 0.012560312084532612
+      },
+      "test2_loso_jackknife": {
+        "n_stimuli": 712,
+        "rho_mean": 0.7386033747233063,
+        "rho_std": 0.0007965056927593163,
+        "rho_min": 0.7361204013377928,
+        "rho_max": 0.7447523491001753,
+        "rho_range": 0.00863194776238252,
+        "per_condition": {
+          "anger": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7387013855709509,
+            "min_rho_when_dropped": 0.7374741200828159,
+            "max_rho_when_dropped": 0.7404204491161014
+          },
+          "belief": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7387848383500557,
+            "min_rho_when_dropped": 0.7385411689759516,
+            "max_rho_when_dropped": 0.7390667303710783
+          },
+          "disgust": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7383541965281095,
+            "min_rho_when_dropped": 0.7375378244943462,
+            "max_rho_when_dropped": 0.7395285873546743
+          },
+          "empathy": {
+            "n": 32,
+            "mean_rho_when_dropped": 0.7384321747093487,
+            "min_rho_when_dropped": 0.7370281892021023,
+            "max_rho_when_dropped": 0.7395604395604396
+          },
+          "fear": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7382678770504857,
+            "min_rho_when_dropped": 0.7368370759675109,
+            "max_rho_when_dropped": 0.7392100652970219
+          },
+          "happiness": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7384128045867178,
+            "min_rho_when_dropped": 0.7370281892021023,
+            "max_rho_when_dropped": 0.7392737697085523
+          },
+          "intention": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7383277591973244,
+            "min_rho_when_dropped": 0.7362478101608536,
+            "max_rho_when_dropped": 0.7401656314699793
+          },
+          "judgment": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.738676275415406,
+            "min_rho_when_dropped": 0.7361204013377928,
+            "max_rho_when_dropped": 0.7447523491001753
+          },
+          "mentalizing": {
+            "n": 40,
+            "mean_rho_when_dropped": 0.7387294951425387,
+            "min_rho_when_dropped": 0.73737856346552,
+            "max_rho_when_dropped": 0.7395922917662049
+          },
+          "moral": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7388246536072623,
+            "min_rho_when_dropped": 0.737505972288581,
+            "max_rho_when_dropped": 0.7414078674948241
+          },
+          "sadness": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7387099856665074,
+            "min_rho_when_dropped": 0.7369485586876892,
+            "max_rho_when_dropped": 0.7412326803631152
+          },
+          "self_referential": {
+            "n": 30,
+            "mean_rho_when_dropped": 0.7384360566969266,
+            "min_rho_when_dropped": 0.7368211498646282,
+            "max_rho_when_dropped": 0.7398789616180921
+          },
+          "theory_of_mind": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.738956309391092,
+            "min_rho_when_dropped": 0.7379678292721772,
+            "max_rho_when_dropped": 0.7398152572065616
+          },
+          "valence": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7386168179646442,
+            "min_rho_when_dropped": 0.7374422678770506,
+            "max_rho_when_dropped": 0.7397197005892658
+          }
+        }
+      },
+      "test3_cross_source": {
+        "moral": {
+          "dilemma": {
+            "label": "moral dilemmas",
+            "n_stimuli": 18,
+            "rho": 0.7194616977225673
+          },
+          "mfv": {
+            "label": "MFV non-care",
+            "n_stimuli": 42,
+            "rho": 0.7121993948080905
+          }
+        },
+        "theory_of_mind": {
+          "so": {
+            "label": "self_other(other)",
+            "n_stimuli": 20,
+            "rho": 0.7338907469342253
+          },
+          "fp": {
+            "label": "faux_pas",
+            "n_stimuli": 40,
+            "rho": 0.7414237935977066
+          }
+        }
+      }
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "peak_layer": 31,
+      "full_set_rho": 0.7270584487975793,
+      "test1_split_half": {
+        "n_reps": 200,
+        "rho_half_A_mean": 0.7248932951106865,
+        "rho_half_B_mean": 0.7249379678292723,
+        "rho_all_mean": 0.7249156314699795,
+        "rho_all_std": 0.011564276776336967,
+        "rho_all_ci95_lo": 0.6964126453256888,
+        "rho_all_ci95_hi": 0.7422742474916388,
+        "rho_all_min": 0.6638955247650901,
+        "inter_half_rdm_agreement_mean": 0.9775263577002709,
+        "inter_half_rdm_agreement_std": 0.011850544403481243
+      },
+      "test2_loso_jackknife": {
+        "n_stimuli": 712,
+        "rho_mean": 0.7271962140611383,
+        "rho_std": 0.00047164986907335135,
+        "rho_min": 0.7251632425545469,
+        "rho_max": 0.7306577480490525,
+        "rho_range": 0.005494505494505586,
+        "per_condition": {
+          "anger": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7272142060837714,
+            "min_rho_when_dropped": 0.7258958432871476,
+            "max_rho_when_dropped": 0.7306577480490525
+          },
+          "belief": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7271348940914157,
+            "min_rho_when_dropped": 0.726946966077401,
+            "max_rho_when_dropped": 0.7273291925465839
+          },
+          "disgust": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7273782449434623,
+            "min_rho_when_dropped": 0.7265010351966873,
+            "max_rho_when_dropped": 0.7283325370281892
+          },
+          "empathy": {
+            "n": 32,
+            "mean_rho_when_dropped": 0.7271490285077242,
+            "min_rho_when_dropped": 0.7268832616658704,
+            "max_rho_when_dropped": 0.7273291925465839
+          },
+          "fear": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7265816212772733,
+            "min_rho_when_dropped": 0.7251632425545469,
+            "max_rho_when_dropped": 0.7275840101927059
+          },
+          "happiness": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7269058767319636,
+            "min_rho_when_dropped": 0.7257365822583215,
+            "max_rho_when_dropped": 0.7275840101927059
+          },
+          "intention": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7273719275893189,
+            "min_rho_when_dropped": 0.726946966077401,
+            "max_rho_when_dropped": 0.7288421723204331
+          },
+          "judgment": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7271497584541061,
+            "min_rho_when_dropped": 0.726946966077401,
+            "max_rho_when_dropped": 0.7273928969581145
+          },
+          "mentalizing": {
+            "n": 40,
+            "mean_rho_when_dropped": 0.7272404045230132,
+            "min_rho_when_dropped": 0.7268673355629878,
+            "max_rho_when_dropped": 0.727536231884058
+          },
+          "moral": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7275402134097786,
+            "min_rho_when_dropped": 0.727026596591814,
+            "max_rho_when_dropped": 0.7286988373944897
+          },
+          "sadness": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7273234591495461,
+            "min_rho_when_dropped": 0.7265647396082179,
+            "max_rho_when_dropped": 0.7290969899665551
+          },
+          "self_referential": {
+            "n": 30,
+            "mean_rho_when_dropped": 0.7271837341402558,
+            "min_rho_when_dropped": 0.726389552476509,
+            "max_rho_when_dropped": 0.728682911291607
+          },
+          "theory_of_mind": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7273143281838934,
+            "min_rho_when_dropped": 0.7269151138716357,
+            "max_rho_when_dropped": 0.7276954929128843
+          },
+          "valence": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7271494930190582,
+            "min_rho_when_dropped": 0.7265806657111006,
+            "max_rho_when_dropped": 0.7276795668100017
+          }
+        }
+      },
+      "test3_cross_source": {
+        "moral": {
+          "dilemma": {
+            "label": "moral dilemmas",
+            "n_stimuli": 18,
+            "rho": 0.7021500238891544
+          },
+          "mfv": {
+            "label": "MFV non-care",
+            "n_stimuli": 42,
+            "rho": 0.7279662366618889
+          }
+        },
+        "theory_of_mind": {
+          "so": {
+            "label": "self_other(other)",
+            "n_stimuli": 20,
+            "rho": 0.7283643892339545
+          },
+          "fp": {
+            "label": "faux_pas",
+            "n_stimuli": 40,
+            "rho": 0.7340022296544036
+          }
+        }
+      }
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "peak_layer": 14,
+      "full_set_rho": 0.7296384774645646,
+      "test1_split_half": {
+        "n_reps": 200,
+        "rho_half_A_mean": 0.7210473005255613,
+        "rho_half_B_mean": 0.7218464723682115,
+        "rho_all_mean": 0.7214468864468864,
+        "rho_all_std": 0.018435357629426538,
+        "rho_all_ci95_lo": 0.6552711419015768,
+        "rho_all_ci95_hi": 0.7415205446727187,
+        "rho_all_min": 0.6397356266921485,
+        "inter_half_rdm_agreement_mean": 0.9712900143334926,
+        "inter_half_rdm_agreement_std": 0.014581906141571545
+      },
+      "test2_loso_jackknife": {
+        "n_stimuli": 712,
+        "rho_mean": 0.729164340381976,
+        "rho_std": 0.0007985557050918476,
+        "rho_min": 0.7233317407230451,
+        "rho_max": 0.7306577480490525,
+        "rho_range": 0.007326007326007411,
+        "per_condition": {
+          "anger": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7285134575569359,
+            "min_rho_when_dropped": 0.7262302914476828,
+            "max_rho_when_dropped": 0.7300844083452779
+          },
+          "belief": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7295731804427454,
+            "min_rho_when_dropped": 0.7294951425386208,
+            "max_rho_when_dropped": 0.729829590699156
+          },
+          "disgust": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7288603280777195,
+            "min_rho_when_dropped": 0.7259276954929129,
+            "max_rho_when_dropped": 0.7298932951106865
+          },
+          "empathy": {
+            "n": 32,
+            "mean_rho_when_dropped": 0.7285918338907471,
+            "min_rho_when_dropped": 0.7263258480649786,
+            "max_rho_when_dropped": 0.7306577480490525
+          },
+          "fear": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7289810479375696,
+            "min_rho_when_dropped": 0.7265965918139832,
+            "max_rho_when_dropped": 0.7297181079789775
+          },
+          "happiness": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7282095875139354,
+            "min_rho_when_dropped": 0.7233317407230451,
+            "max_rho_when_dropped": 0.729574773053034
+          },
+          "intention": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7295315071402027,
+            "min_rho_when_dropped": 0.7293677337155597,
+            "max_rho_when_dropped": 0.7296703296703297
+          },
+          "judgment": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7295710569623614,
+            "min_rho_when_dropped": 0.7292243987896162,
+            "max_rho_when_dropped": 0.729702181876095
+          },
+          "mentalizing": {
+            "n": 40,
+            "mean_rho_when_dropped": 0.7295281892021024,
+            "min_rho_when_dropped": 0.7291129160694378,
+            "max_rho_when_dropped": 0.7299410734193343
+          },
+          "moral": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7294019748367574,
+            "min_rho_when_dropped": 0.7287306896002548,
+            "max_rho_when_dropped": 0.7296384774645646
+          },
+          "sadness": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7287418378722726,
+            "min_rho_when_dropped": 0.7269310399745182,
+            "max_rho_when_dropped": 0.729702181876095
+          },
+          "self_referential": {
+            "n": 30,
+            "mean_rho_when_dropped": 0.729441524658916,
+            "min_rho_when_dropped": 0.7290651377607898,
+            "max_rho_when_dropped": 0.7296384774645646
+          },
+          "theory_of_mind": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7293326962892183,
+            "min_rho_when_dropped": 0.7287784679089027,
+            "max_rho_when_dropped": 0.7297181079789775
+          },
+          "valence": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7295960078568773,
+            "min_rho_when_dropped": 0.7292721770982641,
+            "max_rho_when_dropped": 0.729829590699156
+          }
+        }
+      },
+      "test3_cross_source": {
+        "moral": {
+          "dilemma": {
+            "label": "moral dilemmas",
+            "n_stimuli": 18,
+            "rho": 0.673403408186017
+          },
+          "mfv": {
+            "label": "MFV non-care",
+            "n_stimuli": 42,
+            "rho": 0.6979296066252588
+          }
+        },
+        "theory_of_mind": {
+          "so": {
+            "label": "self_other(other)",
+            "n_stimuli": 20,
+            "rho": 0.7357541009714923
+          },
+          "fp": {
+            "label": "faux_pas",
+            "n_stimuli": 40,
+            "rho": 0.7336518553909859
+          }
+        }
+      }
+    },
+    "gemma-2-9b-it": {
+      "peak_layer": 21,
+      "full_set_rho": 0.7353240961936615,
+      "test1_split_half": {
+        "n_reps": 200,
+        "rho_half_A_mean": 0.7341129956999524,
+        "rho_half_B_mean": 0.7356372830068483,
+        "rho_all_mean": 0.7348751393534003,
+        "rho_all_std": 0.012123866599850115,
+        "rho_all_ci95_lo": 0.7156362478101609,
+        "rho_all_ci95_hi": 0.7546472368211499,
+        "rho_all_min": 0.6518713170887084,
+        "inter_half_rdm_agreement_mean": 0.9716373626373627,
+        "inter_half_rdm_agreement_std": 0.014794912571413034
+      },
+      "test2_loso_jackknife": {
+        "n_stimuli": 712,
+        "rho_mean": 0.7352450472504211,
+        "rho_std": 0.000851395081658166,
+        "rho_min": 0.7318999840738972,
+        "rho_max": 0.7389552476508999,
+        "rho_range": 0.007055263577002702,
+        "per_condition": {
+          "anger": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7356891224717313,
+            "min_rho_when_dropped": 0.7341933428889952,
+            "max_rho_when_dropped": 0.7389552476508999
+          },
+          "belief": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7351972182406967,
+            "min_rho_when_dropped": 0.7342092689918778,
+            "max_rho_when_dropped": 0.7353240961936615
+          },
+          "disgust": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7351476349737222,
+            "min_rho_when_dropped": 0.7318999840738972,
+            "max_rho_when_dropped": 0.7372033763338111
+          },
+          "empathy": {
+            "n": 32,
+            "mean_rho_when_dropped": 0.7359486980410894,
+            "min_rho_when_dropped": 0.734750756489887,
+            "max_rho_when_dropped": 0.7382067208154165
+          },
+          "fear": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7358279980888678,
+            "min_rho_when_dropped": 0.7335403726708075,
+            "max_rho_when_dropped": 0.7385570950788342
+          },
+          "happiness": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7349619366141105,
+            "min_rho_when_dropped": 0.7329192546583851,
+            "max_rho_when_dropped": 0.7370759675107502
+          },
+          "intention": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7347581886712321,
+            "min_rho_when_dropped": 0.7329351807612678,
+            "max_rho_when_dropped": 0.7369804108934545
+          },
+          "judgment": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7353509051335139,
+            "min_rho_when_dropped": 0.7321229495142538,
+            "max_rho_when_dropped": 0.7364548494983278
+          },
+          "mentalizing": {
+            "n": 40,
+            "mean_rho_when_dropped": 0.7352444656792484,
+            "min_rho_when_dropped": 0.7347666825927697,
+            "max_rho_when_dropped": 0.7356585443541965
+          },
+          "moral": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7355016722408028,
+            "min_rho_when_dropped": 0.7347348303870044,
+            "max_rho_when_dropped": 0.7357541009714923
+          },
+          "sadness": {
+            "n": 50,
+            "mean_rho_when_dropped": 0.7347676381589424,
+            "min_rho_when_dropped": 0.7339703774486384,
+            "max_rho_when_dropped": 0.7368370759675109
+          },
+          "self_referential": {
+            "n": 30,
+            "mean_rho_when_dropped": 0.7349227584010193,
+            "min_rho_when_dropped": 0.7341933428889952,
+            "max_rho_when_dropped": 0.7369007803790412
+          },
+          "theory_of_mind": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.735164835164835,
+            "min_rho_when_dropped": 0.7344640866379998,
+            "max_rho_when_dropped": 0.7354355789138399
+          },
+          "valence": {
+            "n": 60,
+            "mean_rho_when_dropped": 0.7351428040558478,
+            "min_rho_when_dropped": 0.7337633381111642,
+            "max_rho_when_dropped": 0.7359929925147316
+          }
+        }
+      },
+      "test3_cross_source": {
+        "moral": {
+          "dilemma": {
+            "label": "moral dilemmas",
+            "n_stimuli": 18,
+            "rho": 0.7053830227743272
+          },
+          "mfv": {
+            "label": "MFV non-care",
+            "n_stimuli": 42,
+            "rho": 0.7092849179805701
+          }
+        },
+        "theory_of_mind": {
+          "so": {
+            "label": "self_other(other)",
+            "n_stimuli": 20,
+            "rho": 0.7385252428730689
+          },
+          "fp": {
+            "label": "faux_pas",
+            "n_stimuli": 40,
+            "rho": 0.7430323299888517
+          }
+        }
+      }
+    }
+  }
+}

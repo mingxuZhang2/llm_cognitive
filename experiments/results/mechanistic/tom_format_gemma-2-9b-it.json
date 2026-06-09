@@ -1,0 +1,235 @@
+{
+  "model": "gemma-2-9b-it",
+  "false_belief_standard": {
+    "accuracy": 1.0,
+    "correct": 10,
+    "total": 10,
+    "ambiguous": 0,
+    "details": [
+      {
+        "response": "The cookie jar.",
+        "score": 1,
+        "correct_ans": "cookie jar"
+      },
+      {
+        "response": "In her purse.",
+        "score": 1,
+        "correct_ans": "purse"
+      },
+      {
+        "response": "In the closet.",
+        "score": 1,
+        "correct_ans": "closet"
+      },
+      {
+        "response": "The red box.",
+        "score": 1,
+        "correct_ans": "red box"
+      },
+      {
+        "response": "The refrigerator.",
+        "score": 1,
+        "correct_ans": "refrigerator"
+      },
+      {
+        "response": "The kitchen table.",
+        "score": 1,
+        "correct_ans": "kitchen table"
+      },
+      {
+        "response": "On the shelf.",
+        "score": 1,
+        "correct_ans": "shelf"
+      },
+      {
+        "response": "In her jacket pocket.",
+        "score": 1,
+        "correct_ans": "jacket pocket"
+      },
+      {
+        "response": "The bowl by the entrance.",
+        "score": 1,
+        "correct_ans": "bowl by the entrance"
+      },
+      {
+        "response": "The top drawer.",
+        "score": 1,
+        "correct_ans": "top drawer"
+      }
+    ]
+  },
+  "false_belief_compressed": {
+    "accuracy": 1.0,
+    "correct": 10,
+    "total": 10,
+    "ambiguous": 0,
+    "details": [
+      {
+        "response": "The cookie jar.",
+        "score": 1,
+        "correct_ans": "cookie jar"
+      },
+      {
+        "response": "In her purse.",
+        "score": 1,
+        "correct_ans": "purse"
+      },
+      {
+        "response": "In the closet.",
+        "score": 1,
+        "correct_ans": "closet"
+      },
+      {
+        "response": "The red box.",
+        "score": 1,
+        "correct_ans": "red box"
+      },
+      {
+        "response": "The refrigerator.",
+        "score": 1,
+        "correct_ans": "refrigerator"
+      },
+      {
+        "response": "The kitchen table.",
+        "score": 1,
+        "correct_ans": "kitchen table"
+      },
+      {
+        "response": "On the shelf.",
+        "score": 1,
+        "correct_ans": "shelf"
+      },
+      {
+        "response": "Her jacket pocket.",
+        "score": 1,
+        "correct_ans": "jacket pocket"
+      },
+      {
+        "response": "The bowl by the entrance.",
+        "score": 1,
+        "correct_ans": "bowl by the entrance"
+      },
+      {
+        "response": "The top drawer.",
+        "score": 1,
+        "correct_ans": "top drawer"
+      }
+    ]
+  },
+  "intention_standard": {
+    "accuracy": 1.0,
+    "correct": 2,
+    "total": 2,
+    "ambiguous": 8,
+    "details": [
+      {
+        "response": "They want the window closed.",
+        "score": -1,
+        "correct_ans": "close the window"
+      },
+      {
+        "response": "She wants him to clean up.",
+        "score": -1,
+        "correct_ans": "clean the room"
+      },
+      {
+        "response": "To be served.",
+        "score": -1,
+        "correct_ans": "be served faster"
+      },
+      {
+        "response": "Validation and help.",
+        "score": -1,
+        "correct_ans": "help with the problem"
+      },
+      {
+        "response": "Help.",
+        "score": -1,
+        "correct_ans": "help carrying the bags"
+      },
+      {
+        "response": "To end the meeting.",
+        "score": 1,
+        "correct_ans": "end the meeting"
+      },
+      {
+        "response": "To leave.",
+        "score": -1,
+        "correct_ans": "leave the party"
+      },
+      {
+        "response": "She wants the other roommate to take out the trash.",
+        "score": 1,
+        "correct_ans": "take out the trash"
+      },
+      {
+        "response": "To avoid confrontation.",
+        "score": -1,
+        "correct_ans": "slow down"
+      },
+      {
+        "response": "More student effort.",
+        "score": -1,
+        "correct_ans": "study more"
+      }
+    ]
+  },
+  "intention_compressed": {
+    "accuracy": 1.0,
+    "correct": 1,
+    "total": 1,
+    "ambiguous": 9,
+    "details": [
+      {
+        "response": "They want the window closed.",
+        "score": -1,
+        "correct_ans": "close the window"
+      },
+      {
+        "response": "For him to clean it.",
+        "score": -1,
+        "correct_ans": "clean the room"
+      },
+      {
+        "response": "An apology and/or acknowledgement of the wait.",
+        "score": -1,
+        "correct_ans": "be served faster"
+      },
+      {
+        "response": "Validation and reassurance.",
+        "score": -1,
+        "correct_ans": "help with the problem"
+      },
+      {
+        "response": "Help.",
+        "score": -1,
+        "correct_ans": "help carrying the bags"
+      },
+      {
+        "response": "To end the meeting.",
+        "score": 1,
+        "correct_ans": "end the meeting"
+      },
+      {
+        "response": "To leave.",
+        "score": -1,
+        "correct_ans": "leave the party"
+      },
+      {
+        "response": "For you to take it out.",
+        "score": -1,
+        "correct_ans": "take out the trash"
+      },
+      {
+        "response": "To continue driving fast.",
+        "score": -1,
+        "correct_ans": "slow down"
+      },
+      {
+        "response": "More student effort.",
+        "score": -1,
+        "correct_ans": "study more"
+      }
+    ]
+  }
+}

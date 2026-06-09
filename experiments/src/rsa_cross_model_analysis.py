@@ -29,8 +29,9 @@ import matplotlib.pyplot as plt
 from scipy.stats import spearmanr
 
 
-RES = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/results/cognitive_rsa")
-FIG = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/figures")
+_EXP = Path(__file__).resolve().parents[1]
+RES = _EXP / "results" / "cognitive_rsa"
+FIG = _EXP / "figures"
 FIG.mkdir(parents=True, exist_ok=True)
 
 MODELS = [

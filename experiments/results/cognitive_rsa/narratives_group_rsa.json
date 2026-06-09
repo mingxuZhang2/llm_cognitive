@@ -1,0 +1,65 @@
+{
+  "conditions": [
+    "anger",
+    "fear",
+    "happiness",
+    "sadness",
+    "belief",
+    "mentalizing",
+    "intention",
+    "theory_of_mind",
+    "empathy",
+    "self_referential",
+    "judgment",
+    "moral"
+  ],
+  "n_subjects": 230,
+  "ceiling": 0.8362360528093553,
+  "models": {
+    "Qwen2.5-7B-Instruct": {
+      "frozen_peak": {
+        "rho": 0.09241206554639393,
+        "rho_over_ceiling": 0.1105095448060788
+      },
+      "last": {
+        "rho": 0.3918797620290158,
+        "rho_over_ceiling": 0.46862337579501173
+      }
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "frozen_peak": {
+        "rho": 0.09404028807013882,
+        "rho_over_ceiling": 0.11245662962534107
+      },
+      "last": {
+        "rho": 0.3575200918484501,
+        "rho_over_ceiling": 0.42753489358339986
+      }
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "frozen_peak": {
+        "rho": 0.06318755870994677,
+        "rho_over_ceiling": 0.07556186856290953
+      },
+      "last": {
+        "rho": 0.3232856695543263,
+        "rho_over_ceiling": 0.3865961871271159
+      }
+    },
+    "gemma-2-9b-it": {
+      "frozen_peak": {
+        "rho": 0.07412587412587412,
+        "rho_over_ceiling": 0.08864228452821
+      },
+      "last": {
+        "rho": 0.3342657342657343,
+        "rho_over_ceiling": 0.39972652834419237
+      }
+    }
+  },
+  "summary": {
+    "mean_rho": 0.081,
+    "ceiling": 0.836,
+    "mean_frac_ceiling": 0.097
+  }
+}

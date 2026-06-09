@@ -1,0 +1,105 @@
+{
+  "benchmark": "BrainCog-14",
+  "version": "1.0",
+  "description": "Reference results for BrainCog-14 brain-LLM representational similarity.",
+  "metric": "Spearman rho on 91 upper-triangle pairs of 14x14 RDM (brain vs model)",
+  "permutation_null": {
+    "method": "max-stat permutation (shuffle condition labels, 5000 iterations)",
+    "chance_95th": 0.250,
+    "note": "rho > 0.25 exceeds the 95th percentile of the null distribution"
+  },
+  "noise_ceiling": {
+    "method": "split-half correlation of LLM RDM (50 random splits)",
+    "mean_ceiling": 0.965,
+    "note": "Fraction of ceiling = rho / noise_ceiling"
+  },
+  "models": {
+    "Qwen2.5-7B-Instruct": {
+      "rho": 0.739,
+      "p": 0.0002,
+      "peak_layer": 27,
+      "n_layers": 28,
+      "params_B": 7.6,
+      "fraction_of_ceiling": 0.762
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "rho": 0.727,
+      "p": 0.0002,
+      "peak_layer": 31,
+      "n_layers": 32,
+      "params_B": 8.0,
+      "fraction_of_ceiling": null
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "rho": 0.730,
+      "p": 0.0002,
+      "peak_layer": 14,
+      "n_layers": 32,
+      "params_B": 7.2,
+      "fraction_of_ceiling": null
+    },
+    "gemma-2-9b-it": {
+      "rho": 0.735,
+      "p": 0.0002,
+      "peak_layer": 21,
+      "n_layers": 42,
+      "params_B": 9.2,
+      "fraction_of_ceiling": null
+    }
+  },
+  "scaling": {
+    "note": "Qwen2.5 family, all Instruct variants, same pipeline",
+    "Qwen2.5-0.5B-Instruct": {
+      "rho": 0.752,
+      "peak_layer": 12,
+      "params_B": 0.5,
+      "fraction_of_ceiling": 0.779
+    },
+    "Qwen2.5-1.5B-Instruct": {
+      "rho": 0.754,
+      "peak_layer": 3,
+      "params_B": 1.5,
+      "fraction_of_ceiling": 0.780
+    },
+    "Qwen2.5-3B-Instruct": {
+      "rho": 0.747,
+      "peak_layer": 29,
+      "params_B": 3.1,
+      "fraction_of_ceiling": 0.776
+    },
+    "Qwen2.5-7B-Instruct": {
+      "rho": 0.739,
+      "peak_layer": 27,
+      "params_B": 7.6,
+      "fraction_of_ceiling": 0.762
+    }
+  },
+  "baselines": {
+    "GloVe-300d": {
+      "rho": 0.494,
+      "note": "Static word embeddings (mean-pooled per stimulus). Captures lexical co-occurrence structure."
+    },
+    "TF-IDF-5000": {
+      "rho": 0.195,
+      "note": "Bag-of-words baseline; not significant (p = 0.064)."
+    },
+    "condition_name_GloVe": {
+      "rho": 0.519,
+      "note": "GloVe embedding of the condition label string alone. Measures label leakage."
+    },
+    "sentence_length": {
+      "rho": 0.328,
+      "note": "RDM from mean sentence lengths per condition. Surface confound."
+    },
+    "partial_RSA_all_confounds_removed": {
+      "rho": 0.588,
+      "note": "LLM rho after partialling out GloVe, condition name, and length confounds. ~80% retained."
+    }
+  },
+  "interpretation": {
+    "below_0.25": "Not distinguishable from chance (below null 95th percentile)",
+    "0.25_to_0.50": "Above chance; comparable to static-embedding baselines",
+    "0.50_to_0.70": "Strong alignment; exceeds lexical baselines",
+    "above_0.70": "Near noise ceiling; comparable to reference LLMs"
+  }
+}

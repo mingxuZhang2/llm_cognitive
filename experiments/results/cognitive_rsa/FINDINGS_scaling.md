@@ -36,7 +36,7 @@ This is the OPPOSITE of typical scaling-emergence findings:
   1B → 10B → 100B parameters
 - The cross-cognitive-domain coupling structure does NOT — it is captured
   identically by a 0.5 B parameter model and a 7 B model
-- Both models capture ~68% of their (essentially identical) noise ceilings
+- Both models capture ~68% of their (essentially identical) LLM split-half reliability ceilings
 
 ### Why this is novel
 

@@ -1,0 +1,106 @@
+{
+  "binary_boundary": {
+    "brain": {
+      "rho": 0.708071830632409,
+      "p": 0.0004
+    },
+    "llm_mean": {
+      "rho": 0.8639314288544542,
+      "p": 0.0004
+    }
+  },
+  "full_dimensions": {
+    "propositional_structure": {
+      "brain_rho": 0.6843385429668352,
+      "brain_p": 0.0001,
+      "llm_rho": 0.8643168559494891,
+      "llm_p": 0.0001,
+      "shared": true
+    },
+    "other_modeling": {
+      "brain_rho": 0.47568228504925913,
+      "brain_p": 0.0036,
+      "llm_rho": 0.6508262011242383,
+      "llm_p": 0.0014,
+      "shared": true
+    },
+    "bodily_grounding": {
+      "brain_rho": 0.7681660825632667,
+      "brain_p": 0.0,
+      "llm_rho": 0.842788116850652,
+      "llm_p": 0.0001,
+      "shared": true
+    },
+    "linguistic_definability": {
+      "brain_rho": 0.658462981751702,
+      "brain_p": 0.0003,
+      "llm_rho": 0.7835796008861252,
+      "llm_p": 0.0001,
+      "shared": true
+    }
+  },
+  "per_model_boundary": {
+    "Qwen2.5-7B-Instruct": {
+      "rho": 0.8346030098341768,
+      "p": 0.0004
+    },
+    "Meta-Llama-3.1-8B-Instruct": {
+      "rho": 0.8647693836836048,
+      "p": 0.0004
+    },
+    "Mistral-7B-Instruct-v0.3": {
+      "rho": 0.8346030098341768,
+      "p": 0.0004
+    },
+    "gemma-2-9b-it": {
+      "rho": 0.83795482915078,
+      "p": 0.0004
+    }
+  },
+  "within_social": {
+    "brain_llm_mean_rho": 0.6382047071702245,
+    "per_model_rho": {
+      "Qwen2.5-7B-Instruct": 0.5177887246852765,
+      "Meta-Llama-3.1-8B-Instruct": 0.6513409961685823,
+      "Mistral-7B-Instruct-v0.3": 0.6535303776683087,
+      "gemma-2-9b-it": 0.6442255062944717
+    },
+    "dimensions": {
+      "cognitive_vs_affective": {
+        "brain_rho": -0.04296937812751956,
+        "brain_p": 0.874,
+        "llm_rho": 0.47867887234056783,
+        "llm_p": 0.037,
+        "shared": false
+      },
+      "self_vs_other": {
+        "brain_rho": 0.07998299863075611,
+        "brain_p": 0.8364,
+        "llm_rho": 0.22775300673935164,
+        "llm_p": 0.4877,
+        "shared": false
+      },
+      "normative_evaluative": {
+        "brain_rho": 0.12157144414728259,
+        "brain_p": 0.6294,
+        "llm_rho": 0.29427106573968403,
+        "llm_p": 0.1161,
+        "shared": false
+      },
+      "recursion_depth": {
+        "brain_rho": -0.3677230680748167,
+        "brain_p": 0.1293,
+        "llm_rho": -0.14951702848452691,
+        "llm_p": 0.6013,
+        "shared": false
+      },
+      "affective_loading": {
+        "brain_rho": 0.06048334791598835,
+        "brain_p": 0.7967,
+        "llm_rho": 0.4895194326658495,
+        "llm_p": 0.022,
+        "shared": false
+      }
+    }
+  }
+}

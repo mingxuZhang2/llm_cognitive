@@ -14,7 +14,7 @@ Usage:
   python baseline_controls.py
 """
 from __future__ import annotations
-import json, re
+import json, os, re
 from pathlib import Path
 from collections import defaultdict
 
@@ -22,9 +22,10 @@ import numpy as np
 from scipy.stats import spearmanr
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments")
+BASE = Path(__file__).resolve().parents[1]
 RES = BASE / "results" / "cognitive_rsa"
 STIM_DIR = BASE / "data" / "cognitive_stimuli" / "rsa"
+GLOVE_DIR = Path(os.environ.get("GLOVE_DIR", str(BASE / "data" / "glove")))
 
 CONDITIONS = [
     "anger", "belief", "disgust", "empathy", "fear", "happiness",
@@ -74,7 +75,7 @@ def glove_baseline(stimuli, brain_rdm, brain_conds):
     print("\n=== GloVe Baseline ===")
 
     # Try to load GloVe
-    glove_path = Path("/hpc2hdd/home/mzhang630/data/glove")
+    glove_path = GLOVE_DIR
     glove_file = glove_path / "glove.6B.300d.txt"
 
     if not glove_file.exists():
@@ -168,7 +169,7 @@ def condition_name_baseline(brain_rdm, brain_conds):
     print("\n=== Condition-Name Baseline ===")
 
     # Use GloVe to embed condition names
-    glove_path = Path("/hpc2hdd/home/mzhang630/data/glove/glove.6B.300d.txt")
+    glove_path = GLOVE_DIR / "glove.6B.300d.txt"
     glove = {}
     with open(glove_path, encoding="utf-8") as f:
         for line in f:
@@ -302,7 +303,7 @@ def partial_rsa_analysis(stimuli, brain_rdm, brain_conds):
 
     # GloVe RDM
     glove = {}
-    glove_path = Path("/hpc2hdd/home/mzhang630/data/glove/glove.6B.300d.txt")
+    glove_path = GLOVE_DIR / "glove.6B.300d.txt"
     with open(glove_path, encoding="utf-8") as f:
         for line in f:
             parts = line.strip().split()

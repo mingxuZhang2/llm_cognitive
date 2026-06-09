@@ -9,9 +9,11 @@
 
 Representational Similarity Analysis (RSA) between the **human brain** and **LLMs**, in the
 brain-as-reference-frame direction (brain geometry → predict LLM organization). The headline:
-a text-only LLM reproduces the brain's relational geometry of **both emotion and social
-cognition** (RSA ρ ≈ 0.73, near noise ceiling, 4 architectures, scale-invariant 0.5B–7B, carried
-by one causally load-bearing emotion↔social boundary axis). See the overview docs above.
+a text-only LLM shares the brain's **dominant emotion↔social-cognition boundary and
+social-cognitive fine structure** (RSA ρ ≈ 0.73, ~76% of LLM split-half reliability ceiling,
+4 architectures, scale-invariant 0.5B–7B, carried by one causally load-bearing emotion↔social
+boundary axis). Within-affective ordering does not align (ρ ≈ −0.10, n.s.).
+See the overview docs above.
 
 > **Legacy v1 code is still present in this directory.** The original project (v1, archived at
 > git tag `v1-ai-categories`) was an *AI-task functional atlas* — neuron attribution + double
@@ -58,7 +60,9 @@ Regional / MVPA variants: `regional_rsa*.py`.
 
 **7. Mechanism / prediction / predictive program** —
 `cognitive_steering.py` (brain-derived activation steering), `emotion_geometry.py` (emotion-space
-PCA), `brain_causal_coupling.py` (**Direction A** — brain RDM predicts LLM causal coupling),
+PCA), `brain_causal_coupling.py` (**Direction A** — brain RDM predicts LLM causal coupling, GPU),
+`coupling_dissociation_analysis.py` (Direction A **reanalysis** — per-condition double dissociation
+from coupling matrices; 4/4 models DD, all Wilcoxon p < 0.007, 14/14 conditions block-selective),
 `cognitive_reserve.py` (Direction B), `developmental_emergence.py` (Direction C).
 
 **Demoted validators (directional supplement only — see overview docs):**
@@ -74,15 +78,39 @@ PCA), `brain_causal_coupling.py` (**Direction A** — brain RDM predicts LLM cau
 | `src/build_brain_rdm.py` | Build the 14-map Neurosynth brain RDM (1−Pearson). |
 | `src/reconstruct_headline_rdms.py` | Rebuild `{model}_rdm14_headline.npz` (headline recipe). |
 | `src/rsa_cross_model_v2.py` | 4-model cross-architecture ρ. |
-| `src/rsa_scaling_analysis.py` | Scaling curve + noise ceiling (Qwen 0.5B–7B). |
+| `src/rsa_scaling_analysis.py` | Scaling curve + LLM split-half ceiling (Qwen 0.5B–7B). |
 | `src/rsa_deep_analysis.py` | Gap + confusion (geometry→behavior) + one-axis causal ablation. |
 | `src/confirmatory_rsa.py` | Discovery/confirmation split, max-stat perm p, bootstrap CI, CV-ablation. |
 | `src/baseline_controls.py` | GloVe / TF-IDF / condition-name / length baselines + partial RSA. |
 | `src/fix_all_holes.py` | Partial RSA + LOO / leave-2-out stability. |
 | `src/tom_source_check.py` | Diagnostic that found the HCP-ToM artifact. |
-| `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling. |
+| `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling (GPU). |
+| `src/coupling_dissociation_analysis.py` | Direction A reanalysis: per-condition double dissociation from coupling matrices. |
+| `src/clinical_dissociation.py` | Psychopathy vs autism double-dissociation (ablate emotion/social neuron sets, GPU). |
+| `src/subspace_dissociation.py` | **Subspace double-dissociation** (project out emotion/social PCA subspaces from per-stim acts, CPU). Cleaner replacement for clinical_dissociation.py. |
+| `src/robustness_gauntlet.py` | **Anti-spurious-alignment gauntlet** (locked-pipeline, LOO, LOMO-CV, stim sub-sampling). Pre-empts Hadidi et al. 2026. All 4/4 pass; rho survives at 0.67+ under every degradation. |
+| `src/paraphrase_invariance.py` | **Paraphrase-invariance tests** (split-half stability, LOSO jackknife, cross-source invariance). Shows RSA signal is content-driven, not surface-form-dependent. All 4 models: split-half 95% CI stays above +0.65, LOSO max drop <0.007, cross-source sub-pools agree within 0.03. |
+| `src/prospective_prediction.py` | **Prospective prediction battery** (5 tests: coupling asymmetry, within-block coupling, distinctiveness, vulnerable pairs, boundary sensitivity). CPU-only from existing data. |
+| `src/steering_controls.py` | **Steering control conditions** (random, sentiment, PC1) to prove brain-derived axis specificity. Same 30 prompts/5 alphas as brain-axis; generates per-control + combined brain-vs-random ranking sheets. GPU. |
+| `src/template_matched_stimuli.py` | **Template-matched stimulus generator** (format-confound control). Generates 840 stimuli (60/condition x 14) using 4 identical sentence templates; only cognitive content words differ. No label-word leakage, lengths within +/-20%. |
+| `src/template_matched_rsa.py` | **Template-matched RSA analysis** (CPU, post-extraction). Computes headline-recipe RSA on template-matched activations, per-template sub-RSA, layer sweep, permutation p, split-half ceiling. |
 | `src/narratives_*.py` | Narratives fMRI pipeline (independent stimulus-locked validation). |
 | `present/build_present.py` | Regenerate the plain-language briefing deck (`present/index.html`). |
+| `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |
+| `benchmark/README.md` | BrainCog-14 benchmark documentation, conditions, recipe, interpretation guide. |
+
+## Benchmark release: BrainCog-14
+
+`benchmark/` is a **self-contained release package** for the brain-derived social-emotional
+geometry benchmark. It contains everything needed to evaluate any HuggingFace causal LM:
+- `evaluate.py` — one-file evaluation script (torch + transformers + numpy + scipy only)
+- `braincog14_brain_rdm.npz` — 14x14 brain RDM from Neurosynth
+- `braincog14_stimuli.jsonl` — 712 stimuli (14 conditions)
+- `braincog14_config.json` — locked evaluation recipe
+- `baselines.json` — reference results (4 architectures, scaling, GloVe, null)
+- `README.md` — full documentation
+
+Usage: `python benchmark/evaluate.py --model_path Qwen/Qwen2.5-7B-Instruct --layer 27`
 
 ## Results layout (live pipeline)
 
@@ -91,7 +119,8 @@ PCA), `brain_causal_coupling.py` (**Direction A** — brain RDM predicts LLM cau
   `brain_rdm_hcptom.npz`; dated `FINDINGS*.md` snapshots (**superseded — banners point to current**).
 - `results/affective_validation/` — ceiling control, Kragel/IBC/HCP re-audits, ToM source check.
 - `results/narratives_brain_rdm/`, `results/developmental_emergence/`, `results/cognitive_reserve/`,
-  `results/brain_causal_coupling/`, `results/robustness_checks/`, `results/emotion_geometry/`,
+  `results/brain_causal_coupling/`, `results/clinical_dissociation/`,
+  `results/robustness_checks/`, `results/emotion_geometry/`,
   `results/next_token/`, `results/specificity_*/` — supporting experiments.
 
 ## Running (this cluster — `/hpc2hdd`, NOT the HPC3 in code comments)

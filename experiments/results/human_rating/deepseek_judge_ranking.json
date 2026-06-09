@@ -1,0 +1,613 @@
+{
+  "judge_model": "deepseek-chat",
+  "target_model": "Qwen2.5-7B-Instruct",
+  "n_prompts": 30,
+  "n_valid": 30,
+  "mean_rho": 0.32,
+  "std_rho": 0.5564171097297421,
+  "median_rho": 0.49999999999999994,
+  "ttest_p": 0.004310151864248831,
+  "wilcoxon_p": 0.007163418490586371,
+  "per_prompt": [
+    {
+      "prompt_id": "dilemma_006",
+      "task": "moral",
+      "label_to_alpha": {
+        "A": 5,
+        "B": -5,
+        "C": -10,
+        "D": 10,
+        "E": 0
+      },
+      "ranking": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "C"
+      ],
+      "rho": -0.49999999999999994,
+      "raw_response": "{\"ranking\": [\"A\", \"B\", \"D\", \"E\", \"C\"]}"
+    },
+    {
+      "prompt_id": "dilemma_009",
+      "task": "moral",
+      "label_to_alpha": {
+        "A": 0,
+        "B": 5,
+        "C": 10,
+        "D": -10,
+        "E": -5
+      },
+      "ranking": [
+        "C",
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "rho": -0.7999999999999999,
+      "raw_response": "{\"ranking\": [\"C\", \"A\", \"B\", \"D\", \"E\"]}"
+    },
+    {
+      "prompt_id": "dilemma_013",
+      "task": "moral",
+      "label_to_alpha": {
+        "A": -10,
+        "B": 0,
+        "C": 10,
+        "D": 5,
+        "E": -5
+      },
+      "ranking": [
+        "E",
+        "A",
+        "C",
+        "B",
+        "D"
+      ],
+      "rho": 0.6,
+      "raw_response": "{\"ranking\": [\"E\", \"A\", \"C\", \"B\", \"D\"]}"
+    },
+    {
+      "prompt_id": "dilemma_014",
+      "task": "moral",
+      "label_to_alpha": {
+        "A": -5,
+        "B": 10,
+        "C": 0,
+        "D": -10,
+        "E": 5
+      },
+      "ranking": [
+        "D",
+        "C",
+        "A",
+        "E",
+        "B"
+      ],
+      "rho": 0.8999999999999998,
+      "raw_response": "{\"ranking\": [\"D\", \"C\", \"A\", \"E\", \"B\"]}"
+    },
+    {
+      "prompt_id": "dilemma_017",
+      "task": "moral",
+      "label_to_alpha": {
+        "A": 10,
+        "B": -5,
+        "C": -10,
+        "D": 5,
+        "E": 0
+      },
+      "ranking": [
+        "C",
+        "D",
+        "E",
+        "B",
+        "A"
+      ],
+      "rho": 0.6,
+      "raw_response": "{\"ranking\": [\"C\", \"D\", \"E\", \"B\", \"A\"]}"
+    },
+    {
+      "prompt_id": "dilemma_021",
+      "task": "moral",
+      "label_to_alpha": {
+        "A": 10,
+        "B": 0,
+        "C": 5,
+        "D": -10,
+        "E": -5
+      },
+      "ranking": [
+        "C",
+        "A",
+        "E",
+        "B",
+        "D"
+      ],
+      "rho": -0.7999999999999999,
+      "raw_response": "{\"ranking\": [\"C\", \"A\", \"E\", \"B\", \"D\"]}"
+    },
+    {
+      "prompt_id": "dilemma_023",
+      "task": "moral",
+      "label_to_alpha": {
+        "A": -10,
+        "B": 10,
+        "C": -5,
+        "D": 5,
+        "E": 0
+      },
+      "ranking": [
+        "C",
+        "B",
+        "A",
+        "E",
+        "D"
+      ],
+      "rho": 0.19999999999999998,
+      "raw_response": "{\"ranking\": [\"C\", \"B\", \"A\", \"E\", \"D\"]}"
+    },
+    {
+      "prompt_id": "dilemma_026",
+      "task": "moral",
+      "label_to_alpha": {
+        "A": -10,
+        "B": 5,
+        "C": 10,
+        "D": -5,
+        "E": 0
+      },
+      "ranking": [
+        "D",
+        "A",
+        "C",
+        "E",
+        "B"
+      ],
+      "rho": 0.6,
+      "raw_response": "{\"ranking\": [\"D\", \"A\", \"C\", \"E\", \"B\"]}"
+    },
+    {
+      "prompt_id": "dilemma_029",
+      "task": "moral",
+      "label_to_alpha": {
+        "A": 10,
+        "B": -5,
+        "C": -10,
+        "D": 5,
+        "E": 0
+      },
+      "ranking": [
+        "A",
+        "D",
+        "E",
+        "B",
+        "C"
+      ],
+      "rho": -0.9999999999999999,
+      "raw_response": "{\"ranking\": [\"A\", \"D\", \"E\", \"B\", \"C\"]}"
+    },
+    {
+      "prompt_id": "dilemma_030",
+      "task": "moral",
+      "label_to_alpha": {
+        "A": 0,
+        "B": 10,
+        "C": -5,
+        "D": 5,
+        "E": -10
+      },
+      "ranking": [
+        "A",
+        "B",
+        "E",
+        "C",
+        "D"
+      ],
+      "rho": -0.09999999999999999,
+      "raw_response": "{\"ranking\": [\"A\", \"B\", \"E\", \"C\", \"D\"]}"
+    },
+    {
+      "prompt_id": "emp_01",
+      "task": "empathy",
+      "label_to_alpha": {
+        "A": 5,
+        "B": 10,
+        "C": 0,
+        "D": -10,
+        "E": -5
+      },
+      "ranking": [
+        "D",
+        "C",
+        "E",
+        "A",
+        "B"
+      ],
+      "rho": 0.8999999999999998,
+      "raw_response": "{\"ranking\": [\"D\", \"C\", \"E\", \"A\", \"B\"]}"
+    },
+    {
+      "prompt_id": "emp_02",
+      "task": "empathy",
+      "label_to_alpha": {
+        "A": 5,
+        "B": -10,
+        "C": 0,
+        "D": -5,
+        "E": 10
+      },
+      "ranking": [
+        "D",
+        "A",
+        "E",
+        "B",
+        "C"
+      ],
+      "rho": -0.09999999999999999,
+      "raw_response": "{\"ranking\": [\"D\", \"A\", \"E\", \"B\", \"C\"]}"
+    },
+    {
+      "prompt_id": "emp_03",
+      "task": "empathy",
+      "label_to_alpha": {
+        "A": 10,
+        "B": -10,
+        "C": 5,
+        "D": -5,
+        "E": 0
+      },
+      "ranking": [
+        "D",
+        "A",
+        "E",
+        "C",
+        "B"
+      ],
+      "rho": -0.3,
+      "raw_response": "{\"ranking\": [\"D\", \"A\", \"E\", \"C\", \"B\"]}"
+    },
+    {
+      "prompt_id": "emp_04",
+      "task": "empathy",
+      "label_to_alpha": {
+        "A": 0,
+        "B": -5,
+        "C": 10,
+        "D": 5,
+        "E": -10
+      },
+      "ranking": [
+        "A",
+        "B",
+        "E",
+        "C",
+        "D"
+      ],
+      "rho": 0.49999999999999994,
+      "raw_response": "{\"ranking\": [\"A\", \"B\", \"E\", \"C\", \"D\"]}"
+    },
+    {
+      "prompt_id": "emp_05",
+      "task": "empathy",
+      "label_to_alpha": {
+        "A": 0,
+        "B": -5,
+        "C": -10,
+        "D": 5,
+        "E": 10
+      },
+      "ranking": [
+        "C",
+        "A",
+        "E",
+        "B",
+        "D"
+      ],
+      "rho": 0.49999999999999994,
+      "raw_response": "{\"ranking\": [\"C\", \"A\", \"E\", \"B\", \"D\"]}"
+    },
+    {
+      "prompt_id": "emp_06",
+      "task": "empathy",
+      "label_to_alpha": {
+        "A": -10,
+        "B": 10,
+        "C": 5,
+        "D": 0,
+        "E": -5
+      },
+      "ranking": [
+        "A",
+        "B",
+        "E",
+        "D",
+        "C"
+      ],
+      "rho": 0.39999999999999997,
+      "raw_response": "{\"ranking\": [\"A\", \"B\", \"E\", \"D\", \"C\"]}"
+    },
+    {
+      "prompt_id": "emp_07",
+      "task": "empathy",
+      "label_to_alpha": {
+        "A": 10,
+        "B": -5,
+        "C": 5,
+        "D": 0,
+        "E": -10
+      },
+      "ranking": [
+        "B",
+        "C",
+        "A",
+        "D",
+        "E"
+      ],
+      "rho": -0.3,
+      "raw_response": "{\"ranking\": [\"B\", \"C\", \"A\", \"D\", \"E\"]}"
+    },
+    {
+      "prompt_id": "emp_08",
+      "task": "empathy",
+      "label_to_alpha": {
+        "A": 5,
+        "B": 10,
+        "C": -10,
+        "D": 0,
+        "E": -5
+      },
+      "ranking": [
+        "C",
+        "A",
+        "E",
+        "D",
+        "B"
+      ],
+      "rho": 0.7,
+      "raw_response": "{\"ranking\": [\"C\", \"A\", \"E\", \"D\", \"B\"]}"
+    },
+    {
+      "prompt_id": "emp_09",
+      "task": "empathy",
+      "label_to_alpha": {
+        "A": 0,
+        "B": -10,
+        "C": 5,
+        "D": 10,
+        "E": -5
+      },
+      "ranking": [
+        "A",
+        "E",
+        "B",
+        "C",
+        "D"
+      ],
+      "rho": 0.6,
+      "raw_response": "{\"ranking\": [\"A\", \"E\", \"B\", \"C\", \"D\"]}"
+    },
+    {
+      "prompt_id": "emp_10",
+      "task": "empathy",
+      "label_to_alpha": {
+        "A": 10,
+        "B": 0,
+        "C": 5,
+        "D": -5,
+        "E": -10
+      },
+      "ranking": [
+        "C",
+        "E",
+        "D",
+        "B",
+        "A"
+      ],
+      "rho": 0.39999999999999997,
+      "raw_response": "{\"ranking\": [\"C\", \"E\", \"D\", \"B\", \"A\"]}"
+    },
+    {
+      "prompt_id": "fp_001",
+      "task": "tom_faux_pas",
+      "label_to_alpha": {
+        "A": -10,
+        "B": 10,
+        "C": 0,
+        "D": 5,
+        "E": -5
+      },
+      "ranking": [
+        "A",
+        "C",
+        "D",
+        "B",
+        "E"
+      ],
+      "rho": 0.39999999999999997,
+      "raw_response": "{\"ranking\": [\"A\", \"C\", \"D\", \"B\", \"E\"]}"
+    },
+    {
+      "prompt_id": "fp_003",
+      "task": "tom_faux_pas",
+      "label_to_alpha": {
+        "A": 0,
+        "B": -10,
+        "C": -5,
+        "D": 5,
+        "E": 10
+      },
+      "ranking": [
+        "D",
+        "B",
+        "C",
+        "E",
+        "A"
+      ],
+      "rho": 0.19999999999999998,
+      "raw_response": "{\"ranking\": [\"D\", \"B\", \"C\", \"E\", \"A\"]}"
+    },
+    {
+      "prompt_id": "fp_014",
+      "task": "tom_faux_pas",
+      "label_to_alpha": {
+        "A": -5,
+        "B": 5,
+        "C": 10,
+        "D": 0,
+        "E": -10
+      },
+      "ranking": [
+        "A",
+        "C",
+        "E",
+        "B",
+        "D"
+      ],
+      "rho": 0.09999999999999999,
+      "raw_response": "{\"ranking\": [\"A\", \"C\", \"E\", \"B\", \"D\"]}"
+    },
+    {
+      "prompt_id": "fp_020",
+      "task": "tom_faux_pas",
+      "label_to_alpha": {
+        "A": -5,
+        "B": 0,
+        "C": 5,
+        "D": -10,
+        "E": 10
+      },
+      "ranking": [
+        "D",
+        "A",
+        "C",
+        "B",
+        "E"
+      ],
+      "rho": 0.8999999999999998,
+      "raw_response": "{\"ranking\": [\"D\", \"A\", \"C\", \"B\", \"E\"]}"
+    },
+    {
+      "prompt_id": "fp_021",
+      "task": "tom_faux_pas",
+      "label_to_alpha": {
+        "A": 5,
+        "B": 10,
+        "C": -5,
+        "D": -10,
+        "E": 0
+      },
+      "ranking": [
+        "C",
+        "E",
+        "D",
+        "A",
+        "B"
+      ],
+      "rho": 0.7,
+      "raw_response": "{\"ranking\": [\"C\", \"E\", \"D\", \"A\", \"B\"]}"
+    },
+    {
+      "prompt_id": "fp_031",
+      "task": "tom_faux_pas",
+      "label_to_alpha": {
+        "A": -5,
+        "B": 10,
+        "C": -10,
+        "D": 0,
+        "E": 5
+      },
+      "ranking": [
+        "C",
+        "A",
+        "D",
+        "B",
+        "E"
+      ],
+      "rho": 0.8999999999999998,
+      "raw_response": "{\"ranking\": [\"C\", \"A\", \"D\", \"B\", \"E\"]}"
+    },
+    {
+      "prompt_id": "fp_032",
+      "task": "tom_faux_pas",
+      "label_to_alpha": {
+        "A": -10,
+        "B": 0,
+        "C": 5,
+        "D": 10,
+        "E": -5
+      },
+      "ranking": [
+        "A",
+        "E",
+        "B",
+        "D",
+        "C"
+      ],
+      "rho": 0.8999999999999998,
+      "raw_response": "{\"ranking\": [\"A\", \"E\", \"B\", \"D\", \"C\"]}"
+    },
+    {
+      "prompt_id": "fp_047",
+      "task": "tom_faux_pas",
+      "label_to_alpha": {
+        "A": 0,
+        "B": -5,
+        "C": 5,
+        "D": 10,
+        "E": -10
+      },
+      "ranking": [
+        "B",
+        "E",
+        "A",
+        "C",
+        "D"
+      ],
+      "rho": 0.8999999999999998,
+      "raw_response": "{\"ranking\": [\"B\", \"E\", \"A\", \"C\", \"D\"]}"
+    },
+    {
+      "prompt_id": "fp_051",
+      "task": "tom_faux_pas",
+      "label_to_alpha": {
+        "A": -5,
+        "B": -10,
+        "C": 5,
+        "D": 0,
+        "E": 10
+      },
+      "ranking": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "rho": 0.7999999999999999,
+      "raw_response": "{\"ranking\": [\"A\", \"B\", \"C\", \"D\", \"E\"]}"
+    },
+    {
+      "prompt_id": "fp_053",
+      "task": "tom_faux_pas",
+      "label_to_alpha": {
+        "A": 5,
+        "B": -10,
+        "C": -5,
+        "D": 10,
+        "E": 0
+      },
+      "ranking": [
+        "B",
+        "E",
+        "C",
+        "D",
+        "A"
+      ],
+      "rho": 0.7999999999999999,
+      "raw_response": "{\"ranking\": [\"B\", \"E\", \"C\", \"D\", \"A\"]}"
+    }
+  ]
+}

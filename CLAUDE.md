@@ -8,11 +8,14 @@ conclusions as **testable predictions about LLMs** — if a text-only model repr
 brain's representational geometry, then known brain results become hypotheses we can check
 in the model. Targeting Nature Machine Intelligence.
 
-**Headline finding (2026-05-31):** A text-only LLM reproduces the human brain's *relational*
-organization of both emotion and social cognition — Representational Similarity Analysis
-(RSA) between each model's internal geometry and meta-analytic fMRI maps gives **ρ ≈ 0.73**,
-near the noise ceiling, in **all 4 architectures**, and **scale-invariant from 0.5B → 7B**.
-The emotion ↔ social-cognition boundary is reproduced as part of this geometry.
+**Headline finding (2026-05-31):** A text-only LLM shares the human brain's dominant
+affect–mentalizing axis and social-cognitive fine structure — Representational Similarity
+Analysis (RSA) between each model's internal geometry and meta-analytic fMRI maps gives
+**ρ ≈ 0.73** (~76% of the LLM split-half reliability ceiling), in **all 4 architectures**,
+and **scale-invariant from 0.5B → 7B**. The emotion ↔ social-cognition boundary is the
+primary shared axis. **Limitation:** within-affective fine structure does not align
+(ρ ≈ −0.10, n.s.), so the match is dominated by the emotion↔social split plus within-social
+ordering, not a rich 14-way correspondence.
 
 ---
 
@@ -102,8 +105,10 @@ null shuffles condition labels.
   **not** a rich 14-way match. (This also corrects an earlier mis-statement that the affective block
   "carries independent fine structure": it carries structure that does **not** align with the brain.)
 - Per-condition (7B): nearly all 14 align **0.67–0.85** (belief .85, ToM .79, judgment .80,
-  happiness .81). **Only empathy lags (0.24)** — and empathy is the smallest set (n=32) with
-  an unstable split-half ceiling; this is a measurement artifact, not a divergence.
+  happiness .81). **Only empathy lags (0.24)** — consistent with two factors: (1) empathy
+  is a heterogeneous bridge construct spanning affective experience-sharing and cognitive
+  perspective-taking (Shamay-Tsoory 2011; Zaki & Ochsner 2012), so its Neurosynth map is
+  a mixed signal; (2) smallest stimulus set (n=32), unstable split-half ceiling.
 - Scale-invariant across the Qwen family (0.5B → 7B).
 
 **Why Neurosynth, not raw fMRI, carries the headline:** statistical power here comes from the
@@ -119,52 +124,116 @@ too high to ever reach significance — they can only *directionally* support, n
 The strategy: take conclusions that follow from the brain's emotion/social separation and
 test whether they hold in LLMs.
 
-- **Direction A — causal coupling (strongest, partly done).** The brain RDM *predicts* the
+- **Direction A — causal coupling (strong).** The brain RDM *predicts* the
   causal coupling between functions inside the LLM (ablate function X, measure effect on
-  function Y). **3/4 models significant.** Code: `src/brain_causal_coupling.py`. Commit
-  `a4f705b`. This is the analog of lesion double-dissociation work (Shamay-Tsoory 2009).
-- **Direction B — cognitive reserve.** (`cb84f57`.)
-- **Direction C — developmental emergence.** Along training/scale, emotion structure should
-  form before social cognition (cf. affect-early, theory-of-mind ~age 4). Results:
-  `results/developmental_emergence/developmental_emergence.json` (recomputed vs corrected RDM).
+  function Y). **Per-condition reanalysis** (`src/coupling_dissociation_analysis.py`):
+  double dissociation at the 2x2 block level (A_aa > A_as AND A_ss > A_sa) holds in
+  **all 4 models**; Wilcoxon signed-rank p < 0.007 in every model; on average 14/14
+  conditions show same-block > cross-block selectivity. The original block-pooled RSA
+  (brain RDM vs coupling matrix) gave weak ρ; the per-condition dissociation is the
+  stronger framing. Code: `src/brain_causal_coupling.py` (GPU ablation),
+  `src/coupling_dissociation_analysis.py` (reanalysis + figures). This is the analog of
+  lesion double-dissociation work (Shamay-Tsoory 2009).
+- **Direction B — cognitive reserve.** (`cb84f57`.) Distribution metrics for functional
+  categories. Results: `results/cognitive_reserve/cognitive_reserve.json`.
+- **Direction C — developmental emergence.** Prediction: emotion alignment before social
+  (cf. affect-early, ToM ~age 4). **Result: OPPOSITE.** Pythia-2.8B (9 checkpoints):
+  social aligns early (+0.40 at step 0, stable), affective actively reverses (+0.30 → −0.57).
+  Full ρ rises monotonically 0.24 → 0.72. This supports an embodiment interpretation:
+  social-cognitive structure is linguistically accessible; affective fine structure requires
+  body grounding. Results: `results/developmental_emergence/pythia_trajectory.json`. Qwen
+  scale series: `results/developmental_emergence/developmental_emergence.json`.
+
+- **Direction D — cortical processing gradient → layer depth (Margulies 2016).** Social
+  cognition sits at the abstract end of the cortical gradient → predict it peaks in deeper
+  LLM layers. **Tested (`src/layer_depth_analysis.py`): NULL (depth-invariant).** Alignment
+  is flat across all layers; the cortical-gradient analogy does not hold.
+
+- **Direction E — clinical double-dissociation (psychopathy vs autism analog).** Ablate
+  pooled emotion/social neuron sets. **Result: direction correct but not significant at
+  pooled-block level.** The causal signal lives at per-condition granularity (Direction A
+  coupling reanalysis), not at coarsely pooled blocks.
+  Code: `src/clinical_dissociation.py`. Results: `results/clinical_dissociation/`.
+
+- **Prospective Prediction Battery** (`src/prospective_prediction.py`, CPU-only). Five specific
+  quantitative predictions from brain geometry, tested on existing coupling + RDM data:
+  - **P1 (CONFIRMED):** Brain distance predicts coupling asymmetry — rho = **-0.424, p < 0.001**
+    (2-tailed). Direction reversed: brain-*close* (within-system) pairs show MORE directional
+    coupling asymmetry; cross-block pairs decouple symmetrically. 4/4 models negative.
+  - **P2 (null):** Within-block brain fine structure does not predict within-block coupling
+    (affective rho = -0.03, social rho = -0.51 wrong direction). The coupling matrix measures
+    a different aspect of organization than representational distance within a block.
+  - **P3 (null):** Brain distinctiveness does not predict LLM distinctiveness (rho = -0.04).
+    LLM distances are dominated by the block split; within-block variation is compressed.
+  - **P4 (CONFIRMED):** Brain-predicted "vulnerable" (closest) pairs overlap LLM closest pairs:
+    **4/10 overlap**, hypergeometric p = **0.012** (expected 1.1). Shared: mentalizing-ToM,
+    happiness-sadness, fear-happiness, anger-fear. Full-rank rho = **+0.731**.
+  - **P5 (trend):** Boundary proximity predicts cross-block coupling sensitivity: rho = **-0.38**,
+    p = 0.18 (n=14, underpowered). Qwen alone p=0.065. Direction correct: empathy (nearest
+    boundary) has highest cross-block sensitivity; fear/happiness (deepest in block) have lowest.
+  Results: `results/cognitive_rsa/prospective_prediction.json`, figure: `figures/prospective_predictions.png`.
 
 Downstream neuroscience programs that could become further LLM predictions: dual-route
 empathy (Shamay-Tsoory 2009, *Brain*), clinical mirror-disorders (psychopathy vs autism;
 Blair; Baron-Cohen 1995), dual-process moral cognition + lesion→behavior (Greene 2001
-*Science*; Koenigs 2007 *Nature*), cortical processing gradient placing social cognition at
-the abstract end (Margulies 2016 *PNAS*) → maps onto LLM layer depth.
+*Science*; Koenigs 2007 *Nature*).
 
 ---
 
-## Controlled-fMRI validators (status: directional supplement, demoted)
+## Real-fMRI validation (three independent datasets)
 
-Re-audited 2026-05-30 with the corrected headline LLM RDMs + pure-NS brain
-(`src/kragel_ibc_reaudit.py` → `results/affective_validation/kragel_ibc_reaudit.json`):
-- **Kragel 2015** (CANlab emotion classifier maps, N=32): LLM ρ **+0.629** (4 conditions),
-  vs-Neurosynth −0.03; non-significant (only 4 conditions).
-- **IBC** (NeuroVault coll. 2138, 12 subjects, multi-task contrasts): LLM ρ **+0.264**
-  (6 conditions), vs-Neurosynth +0.18; non-significant; has outlier maps (valence row −1.0).
-- **HCP** (coll. 457, group average): the lone null — and the source of the discredited ToM
-  map, so its earlier disagreement was its own artifact.
+**a) Kragel 2015** (CANlab emotion classifier maps, N=32): LLM ρ **+0.629** (4 conditions);
+too few for permutation significance. Cleanest real-fMRI point.
 
-**Conclusion:** demote Kragel/IBC/HCP from "validation" to "directional supplement." The
-Neurosynth headline stands on its own (it is the statistically-powered result).
+**b) Narratives fMRI — group-level** (Nastase 2021, 230 subjects, Schaefer-400, 12 conditions):
+last-layer ρ = **+0.32 to +0.39, all 4 models significant** (p = 0.004–0.013); ceiling 0.836
+(~42% of ceiling). Caveat: alignment peaks at the **last layer**, not the Neurosynth-peak
+mid-layer (frozen-peak ρ ≈ 0.08, n.s.). Code: `src/narratives_group_rsa.py`.
+
+**c) Narratives fMRI — regional per-parcel** (261 subjects, Schaefer-400): cortex mean ρ ≈
+**+0.20**, **all 400 parcels significant**. Limbic highest (~0.22). Code: `src/regional_rsa_xarch.py`.
+
+**d) IBC** (NeuroVault coll. 2138, 12 subjects): LLM ρ **+0.264** (6 conditions); non-significant.
+**e) HCP** (coll. 457): null — source of the discredited ToM map.
+
+**Retracted (2026-06-02):** previously reported "ρ ≈ 0.56, N=91, ceiling 0.762" was traced to
+v1 dissociation effect sizes mis-sourced into the Narratives table. The numbers above replace it.
+
+**Conclusion:** all three independent real-fMRI sources positive; Narratives group-level is
+**statistically significant**. The Neurosynth headline (91 pairs) remains the powered result;
+real-fMRI confirms it is not a pure text artifact. The strongest anti-text-confound argument
+is partial RSA (~80% retained), not fMRI magnitude.
 
 ---
 
 ## Repository Structure
 - `CLAUDE.md` (this file) — canonical project overview, kept in sync after every change.
 - `README.md` — public-facing short version.
+- `LICENSE` — MIT license.
+- `environment.yml` — conda environment (`braincog14`).
 - `IDEA_SYNTHESIS.md`, `COGNITIVE_ATLAS_PLAN.md` — origin idea + pivot plan.
 - `experiments/`
+  - **`FINDINGS.md`** — **comprehensive findings document** with all results, interpretations,
+    source references, embodiment discussion, and status table. This is the most up-to-date
+    record of what we found and what it means.
   - `src/` — analysis scripts (see Key Files below).
   - `scripts/slurm/` — HPC3 SLURM jobs.
   - `results/` — JSON/NPZ results.
     - `cognitive_rsa/` — headline RDMs (`brain_rdm.npz`, `{model}_rdm14_headline.npz`,
       `{model}_rsa_v2_per_stim.npz`), archived old RDM (`brain_rdm_hcptom.npz`).
     - `affective_validation/` — ceiling control, Kragel/IBC/HCP audits, ToM source check.
-    - `developmental_emergence/`, `behavioral_prediction/`, `next_token/`, `specificity_*/`,
-      `contrast_pilot*/`, `narratives_brain_rdm/` — supporting experiments.
+    - `template_matched_rsa/` — format-confound control results (template-matched stimuli RSA).
+    - `moral_judgment/` — logit-based moral steering results (replaces old text-gen version).
+    - `human_rating/` — DeepSeek LLM judge rankings + steering control comparisons + human
+      rating materials (pending).
+    - `clinical_dissociation/` — coupling reanalysis, subspace dissociation, clinical ablation.
+    - `developmental_emergence/` — Pythia trajectory + Qwen scale series.
+    - `behavioral_prediction/`, `next_token/`, `cognitive_reserve/`, `robustness_checks/`,
+      `narratives_brain_rdm/` — supporting experiments.
+  - `benchmark/` — **BrainCog-14** release package (self-contained brain-derived benchmark
+    for social-emotional representational geometry). Contains `evaluate.py` (self-contained
+    evaluation script), `braincog14_brain_rdm.npz`, `braincog14_stimuli.jsonl`,
+    `braincog14_config.json`, `baselines.json`, and `README.md`.
   - `figures/` — generated visualizations.
   - `present/` — **`index.html`** self-contained briefing deck (built by `build_present.py`,
     base64-embedded figures, plain-language, no neuro background assumed). This is the deck
@@ -183,15 +252,42 @@ Neurosynth headline stands on its own (it is the statistically-powered result).
 | `src/compute_rsa_v2.py` | Full RSA sweep over poolings/centerings/distances/layers. |
 | `src/tom_source_check.py` | Diagnostic that found the HCP-ToM artifact. |
 | `src/kragel_ibc_reaudit.py` | Re-audit controlled-fMRI validators (corrected RDMs). |
-| `src/affective_ceiling_control.py` | Per-block alignment vs LLM split-half noise ceiling. |
-| `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling. |
+| `src/affective_ceiling_control.py` | Per-block alignment vs LLM split-half reliability ceiling. |
+| `src/brain_causal_coupling.py` | Direction A: brain RDM predicts LLM causal coupling (GPU). |
+| `src/coupling_dissociation_analysis.py` | Direction A reanalysis: per-condition double dissociation from coupling matrices. |
+| `src/clinical_dissociation.py` | Direction E: psychopathy vs autism double-dissociation. |
+| `src/within_block_control.py` | Within-block control: partial ρ, within-affective/social RSA. |
+| `src/layer_depth_analysis.py` | Direction D: per-layer RSA (result: NULL, depth-invariant). |
+| `src/narratives_group_rsa.py` | Group-level Narratives brain-LLM RSA (230 subj, Schaefer-400). |
+| `src/regional_rsa_xarch.py` | Regional per-parcel RSA, 4 architectures (261 subj, 400 parcels). |
+| `src/base_vs_instruct_rsa.py` | Base vs Instruct RSA: pretraining vs RLHF alignment comparison (Qwen2.5-1.5B). |
+| `src/robustness_gauntlet.py` | Anti-spurious-alignment gauntlet (4 tests, all PASS). Pre-empts Hadidi et al. 2026. |
+| `src/paraphrase_invariance.py` | Paraphrase-invariance tests (split-half, LOSO jackknife, cross-source). Signal is content-driven, not surface-form. |
+| `src/prospective_prediction.py` | Prospective prediction battery: 5 brain-to-LLM predictions (2 confirmed, 1 trend, 2 null). All two-tailed. CPU-only. |
+| `src/steering_controls.py` | Steering control conditions (random/sentiment/PC1) for brain-axis specificity. GPU. |
+| `src/template_matched_stimuli.py` | Template-matched stimulus generator (format-confound control, 840 stimuli, 4 templates x 14 conditions). |
+| `src/template_matched_rsa.py` | Template-matched RSA analysis (post-extraction). Format-confound control for Hadidi 2026. |
+| `src/moral_judgment_logit.py` | **Logit-based moral steering** (replaces text-gen forced-choice). ρ=−0.19, p=0.006. Direction does NOT validate Greene. |
+| `src/pc1_vs_brain_axis.py` | PC1 vs brain axis analysis. cos=0.99 but PC1 steering null — needs matched controls. |
+| `src/llm_judge_ranking.py` | DeepSeek LLM judge: blind ranking of steered responses. ρ=+0.32, p=0.004. |
+| `src/llm_judge_controls.py` | LLM judge on control directions (random/sentiment/PC1 all null). |
+| `src/pythia_developmental.py` | Pythia-2.8B training trajectory (9 checkpoints). Social-first, affective-reversal. |
+| `src/confirmatory_rsa.py` | Discovery/confirmation split + max-stat permutation + bootstrap CI. |
+| `src/baseline_controls.py` | GloVe/TF-IDF/condition-name/length baselines + partial RSA (80% retained). |
+| `src/rsa_deep_analysis.py` | Gap analysis + confusion (brain→LLM, ρ=0.24, p=0.02) + one-axis causal ablation. |
 | `present/build_present.py` | Regenerate the HTML briefing. |
+| `benchmark/evaluate.py` | **BrainCog-14** self-contained benchmark evaluation script (any HF causal LM). |
+| `benchmark/README.md` | BrainCog-14 benchmark documentation, conditions, recipe, interpretation guide. |
 
 **Traps (do not repeat):**
 - `{model}_rsa_llm_rdms.npz` is an **older recipe** (last_tok/raw/pearson) → gives ρ≈0.25,
   flips subset signs. Always use `{model}_rdm14_headline.npz` instead.
 - The `rsa_v2.json` ρ fields are **stale** (0.63, old brain RDM). Recompute fresh vs
   `brain_rdm.npz`.
+- **"ρ ≈ 0.56" Narratives fMRI is RETRACTED** (2026-06-02). The values 0.540/0.560/0.582,
+  ceiling 0.762, base 0.525, instruct 0.577, per-subject 0.568 were traced to v1 AI-task
+  dissociation effect sizes in `statistical_validation.json` that were mis-sourced into the
+  Narratives table. Real numbers: group +0.35 (sig), regional +0.20 (400/400 sig).
 
 ## HPC3 Configuration
 - SSH: `ssh -i /hpc2hdd/home/mzhang630/data/id_rsa -o StrictHostKeyChecking=no mzhang630@hpc3login.hpc.hkust-gz.edu.cn`
@@ -225,5 +321,8 @@ Neurosynth headline stands on its own (it is the statistically-powered result).
 ## Git / workflow notes
 - Active branch: **`cognitive-atlas`**. v1 archived at tag `v1-ai-categories`.
 - Per Dr. Zhang's rules: commit after every change with a clear message; **ask before
-  merging to `main`**. Present only positive, verified results; do not over-claim. The
-  paper is **not** being written yet — we are still consolidating the finding.
+  merging to `main`**. Present only positive, verified results; do not over-claim.
+- **Current status (2026-06-04):** All experiments complete except human rating (waiting
+  for rater data). Findings consolidated in `experiments/FINDINGS.md`. Publication cleanup
+  done (LICENSE, environment.yml, paths fixed, claims narrowed, API keys removed).
+  Next: human rating analysis when data returns, then paper writing.

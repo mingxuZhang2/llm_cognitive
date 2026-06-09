@@ -1,0 +1,131 @@
+{
+  "model": "Qwen2.5-7B-Instruct",
+  "mean_same_emotion_dist": 0.14829590759099778,
+  "mean_same_frame_dist": 0.1303840511503829,
+  "mean_diff_both_dist": 0.15857340831083855,
+  "organized_by": "frame",
+  "mann_whitney_p": 0.015810114337299133,
+  "classification_accuracy": 0.875,
+  "per_scenario": [
+    {
+      "emotion": "anger",
+      "frame": "moral",
+      "classified_as": "anger"
+    },
+    {
+      "emotion": "anger",
+      "frame": "moral",
+      "classified_as": "anger"
+    },
+    {
+      "emotion": "anger",
+      "frame": "threat",
+      "classified_as": "anger"
+    },
+    {
+      "emotion": "anger",
+      "frame": "threat",
+      "classified_as": "fear"
+    },
+    {
+      "emotion": "anger",
+      "frame": "interpersonal",
+      "classified_as": "anger"
+    },
+    {
+      "emotion": "anger",
+      "frame": "interpersonal",
+      "classified_as": "anger"
+    },
+    {
+      "emotion": "fear",
+      "frame": "moral",
+      "classified_as": "fear"
+    },
+    {
+      "emotion": "fear",
+      "frame": "moral",
+      "classified_as": "fear"
+    },
+    {
+      "emotion": "fear",
+      "frame": "threat",
+      "classified_as": "fear"
+    },
+    {
+      "emotion": "fear",
+      "frame": "threat",
+      "classified_as": "fear"
+    },
+    {
+      "emotion": "fear",
+      "frame": "interpersonal",
+      "classified_as": "sadness"
+    },
+    {
+      "emotion": "fear",
+      "frame": "interpersonal",
+      "classified_as": "fear"
+    },
+    {
+      "emotion": "sadness",
+      "frame": "moral",
+      "classified_as": "sadness"
+    },
+    {
+      "emotion": "sadness",
+      "frame": "moral",
+      "classified_as": "sadness"
+    },
+    {
+      "emotion": "sadness",
+      "frame": "threat",
+      "classified_as": "sadness"
+    },
+    {
+      "emotion": "sadness",
+      "frame": "threat",
+      "classified_as": "sadness"
+    },
+    {
+      "emotion": "sadness",
+      "frame": "interpersonal",
+      "classified_as": "sadness"
+    },
+    {
+      "emotion": "sadness",
+      "frame": "interpersonal",
+      "classified_as": "sadness"
+    },
+    {
+      "emotion": "disgust",
+      "frame": "moral",
+      "classified_as": "disgust"
+    },
+    {
+      "emotion": "disgust",
+      "frame": "moral",
+      "classified_as": "disgust"
+    },
+    {
+      "emotion": "disgust",
+      "frame": "threat",
+      "classified_as": "disgust"
+    },
+    {
+      "emotion": "disgust",
+      "frame": "threat",
+      "classified_as": "fear"
+    },
+    {
+      "emotion": "disgust",
+      "frame": "interpersonal",
+      "classified_as": "disgust"
+    },
+    {
+      "emotion": "disgust",
+      "frame": "interpersonal",
+      "classified_as": "disgust"
+    }
+  ]
+}

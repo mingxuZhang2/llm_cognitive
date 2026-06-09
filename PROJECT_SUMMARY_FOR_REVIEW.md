@@ -2,15 +2,15 @@
 
 ## Target Journal: Nature Machine Intelligence
 
-> **Scope note (corrected 2026-05-31).** An earlier version of this project reported an
-> *asymmetry* — "emotion aligns, social cognition collapses; brains separate minds, language
-> models compress them." That asymmetry was traced to a **single defective brain map** (the
-> lone non-Neurosynth map, HCP `theory_of_mind`, orthogonal to its Neurosynth counterpart,
-> row-correlation −0.016). On a pure-Neurosynth brain RDM the asymmetry dissolves, the headline
-> *rises* (ρ 0.63 → 0.73), and *both* emotion and social cognition align near the noise ceiling.
-> Every number below is recomputed against the corrected RDM unless marked "(independent)".
-> This document supersedes the earlier "Causal Functional Atlas of LLMs" draft (the v1
-> AI-task-category work, archived at git tag `v1-ai-categories`).
+> **Scope note (corrected 2026-06-02).** An earlier version reported an *asymmetry* ("emotion
+> aligns, social cognition collapses") — traced to a single defective HCP ToM map; on a
+> pure-Neurosynth brain RDM the headline rises to ρ ≈ 0.73. A within-block control (Exp 5b)
+> shows the 0.73 is **dominated by one emotion↔social axis**; beyond that split a significant
+> residual survives (partial ρ ≈ 0.36) concentrated in the within-social ordering. The
+> previously reported "ρ ≈ 0.56 Narratives fMRI" was a data-sourcing error (v1 dissociation
+> effect sizes) and is **retracted**; real fMRI numbers are lower (group +0.35, regional +0.20)
+> but significant. Every number below reflects these corrections unless marked otherwise.
+> Supersedes the v1 "Causal Functional Atlas" draft (archived at tag `v1-ai-categories`).
 
 ---
 
@@ -18,8 +18,9 @@
 
 We use the **human brain as a predictive reference frame to explain the internal organization
 of large language models** (not the usual neuro-AI direction of using LLMs to model brains): a
-text-only LLM reproduces the brain's **relational organization of both emotion and social
-cognition** (RSA ρ ≈ 0.73, near the noise ceiling) — universal across 4 architectures,
+text-only LLM shares the brain's **dominant emotion↔social-cognition boundary and
+social-cognitive fine structure** (RSA ρ ≈ 0.73, ~76% of the LLM split-half reliability
+ceiling; no brain-side noise ceiling is available) — universal across 4 architectures,
 invariant from 0.5B to 7B, already present in base (pre-RLHF) models, surviving confound
 control, and riding on a **single brain-like axis (the emotion ↔ social-cognition boundary)
 that is causally load-bearing** (removing that one direction inverts ρ from +0.73 to −0.36).
@@ -88,7 +89,7 @@ gemma-2-9b-it (4 main); Qwen2.5 0.5B/1.5B/3B/7B (scaling); Qwen2.5-1.5B base vs 
 | Gemma-2-9B | **0.735** | 0.0001 |
 
 Null 95th percentile ≈ 0.25; **max-stat p = 0.0002** (corrected for peak-layer selection);
-bootstrap 95% CI [0.719, 0.759] (Qwen 7B); overall noise ceiling ≈ 0.97 → ρ ≈ **76% of ceiling**.
+bootstrap 95% CI [0.719, 0.759] (Qwen 7B); LLM split-half reliability ceiling ≈ 0.97 → ρ ≈ **76% of that LLM-side ceiling** (no brain-side noise ceiling is available).
 A held-out discovery/confirmation split (freeze layer + config on a different model) keeps all 4
 positive (0.61–0.72). **Architecture-invariant** (all 4 within 0.012 of each other).
 **Per-block row-wise** (each condition's distance-to-all-13): affective 0.74 / ceiling 0.94 (**78%**);
@@ -110,17 +111,35 @@ ceiling, a measurement artifact.
 Brain-likeness does *not* grow with size, contradicting the "bigger = more brain-like" narrative
 (Schrimpf 2021, Antonello 2023). Independently confirmed on real fMRI (Experiment 3).
 
-### Experiment 3 — Stimulus-locked validation on real fMRI (independent)
-| Model | Peak ρ | Brain ceiling | ρ/ceiling | p |
-|---|---|---|---|---|
-| Qwen2.5-0.5B | 0.540 | 0.762 | 70.9% | 0.003 |
-| Qwen2.5-1.5B | 0.582 | 0.762 | 76.3% | 0.001 |
-| Qwen2.5-3B | 0.560 | 0.762 | 73.4% | 0.002 |
+### Experiment 3 — Real-fMRI validation (independent, three datasets)
 
-Narratives fMRI (Nastase et al. 2021, N=91): the **same story text** is fed to brain and LLM →
-directly comparable RDMs on identical stimuli (no Neurosynth maps; unaffected by the ToM
-correction). ρ ≈ 0.56, reaching **71–76% of the brain noise ceiling**. Confirms the alignment is
-genuine and stimulus-driven, not an artifact of meta-analytic maps. Scale-invariance reproduced.
+Three independent real-fMRI datasets, none using Neurosynth maps:
+
+**a) Kragel 2015 emotion classifier maps** (CANlab, N=32): LLM ρ = **+0.63** (4 conditions;
+too few for permutation significance). Cleanest real-fMRI datapoint — controlled task, no text
+confound.
+
+**b) Narratives fMRI — group-level** (Nastase 2021, 230 subjects, Schaefer-400 parcels, 12
+conditions). Condition patterns averaged across subjects; split-half ceiling = 0.836.
+
+| Model | Last-layer ρ | p | ρ/ceiling |
+|---|---|---|---|
+| Qwen-7B | +0.392 | 0.004 | 47% |
+| Llama-8B | +0.358 | 0.006 | 43% |
+| Mistral-7B | +0.323 | 0.013 | 39% |
+| Gemma-9B | +0.334 | 0.010 | 40% |
+
+All 4 **significant** (permutation null 95th ≈ 0.23). **Caveat:** alignment peaks at the model's
+**last layer**, not the Neurosynth-peak mid-layer (frozen-peak ρ ≈ 0.08, n.s.) — real-fMRI and
+meta-analytic alignment live at different depths.
+
+**c) Narratives fMRI — regional per-parcel** (261 subjects, Schaefer-400): cortex mean ρ ≈
+**+0.20**, **all 400 parcels significant**. Limbic network highest (~0.22).
+
+**Net:** all three real-fMRI sources positive; Narratives group-level is significant (4/4 models).
+Values are lower than the Neurosynth headline (0.73) — expected because single-study fMRI is
+noisier than a meta-analytic average. The strongest anti-text-confound argument is partial RSA
+(~80% retained, Experiment 4), not fMRI magnitude.
 
 ### Experiment 4 — Confound controls (where does the alignment come from?)
 Baselines vs the corrected brain RDM (Qwen 7B reference, raw ρ = 0.739):
@@ -180,32 +199,92 @@ dilemmas (LLM-judge rated): strong negative α → emotional collapse ("Horror! 
 moderate positive α → structured analytical reasoning ("utilitarian vs deontological"). The
 brain-derived axis is **causally functional** — it controls emotional ↔ analytical response style.
 
-### Experiment 8 — Base vs Instruct (independent)
-Brain–LLM RSA on the pieman story (N=91): base ρ = 0.525, instruct ρ = 0.577 — **base models
-already carry ~91% of the alignment.** Emotion-space PCA is nearly identical (PC2-valence
-r ≈ 0.65 both). The alignment is primarily a product of **language pretraining, not RLHF.**
+### Experiment 8 — Base vs Instruct
+Qwen2.5-1.5B base vs Instruct on the Neurosynth RSA pipeline (recomputed 2026-06-02):
+| Variant | Peak ρ | Peak layer | ρ/ceiling |
+|---|---|---|---|
+| Base (pre-RLHF) | **0.748** | L2 | 77.6% |
+| Instruct | **0.754** | L3 | 78.0% |
+| **Base/Instruct ratio** | **99.3%** | | |
+
+The base model already carries **99.3%** of the alignment. RLHF/instruction-tuning adds Δρ = +0.005 —
+essentially nothing. The brain-LLM representational geometry is entirely a product of **language
+pretraining**. *(Previously reported "91%" was from retracted Narratives numbers.)*
 
 ### Experiment 9 — Emotion geometry (independent)
 GoEmotions 28-category stimuli × Qwen2.5 (1.5B, 3B): the LLM emotion space is
 **valence-dominant** — PC1/PC2 capture valence, arousal appears only at PC3. Consistent across sizes.
 
-### Experiment 10 — Individual differences (independent)
-Per-subject brain–LLM alignment across 96 Narratives subjects: mean ρ = 0.568, range
-[0.278, 0.776]; **97% of subjects ρ > 0.3** (all positive). The alignment is **universal across
-individuals**, not driven by a subset.
+### Experiment 10 — Individual differences *(suspended — needs recomputation)*
+*(Previously reported numbers — mean ρ = 0.568, 96 subjects — were traced to the same
+data-sourcing error as Experiment 3's original numbers and are retracted. The regional
+analysis (Experiment 3c, 261 subjects, all 400 parcels significant) provides partial
+evidence of cross-individual robustness.)*
+
+### Experiment 11 — Per-condition causal double dissociation (Finding 2)
+Reanalysis of the Direction A 14×14 causal coupling matrices at per-condition granularity
+(`src/coupling_dissociation_analysis.py`). 2×2 block summary (4-model average):
+
+|  | Effect ON affective | Effect ON social |
+|---|---|---|
+| **Ablate affective** | **0.068** | 0.019 |
+| **Ablate social** | 0.017 | **0.107** |
+
+Ablate-emotion affects emotion **3.6×** more than social; ablate-social affects social **6.2×** more
+than emotion. On average **14/14** conditions show same-block > cross-block selectivity.
+**Wilcoxon signed-rank: all 4 models significant** (Qwen p=0.0002, Llama p=0.007, Mistral p=0.0001,
+Gemma p=0.003). This is the LLM analog of the lesion double-dissociation in neuroscience
+(Shamay-Tsoory 2009).
+
+### Experiment 12 — Subspace projection double dissociation (Finding 2)
+Project out emotion or social PCA subspaces from per-stimulus activations and measure selective
+representational collapse (`src/subspace_dissociation.py`).
+
+| Condition | Full ρ | Within-aff ρ | Within-soc ρ |
+|---|---|---|---|
+| Baseline | +0.73 | −0.11 | +0.62 |
+| Project out social (k=5) | +0.64 | −0.08 | **−0.46** |
+| Project out emotion (k=5) | +0.72 | ~0 | +0.55 |
+| Project out random (k=5) | +0.73 | −0.13 | +0.64 |
+
+Projecting out the social subspace **collapses within-social alignment from +0.62 to −0.46**
+(all 4 models) while within-affective is unaffected. The social side of the double dissociation
+is unambiguous. The emotion side is structurally limited: within-affective baseline is already
+near zero (consistent with Finding 3 — within-affective fine structure does not align with brain).
+
+### Experiment 13 — Per-pair consistency/inconsistency analysis (Finding 3)
+Systematic comparison of all 91 condition pairs between brain and LLM
+(`src/pairwise_consistency.py`):
+
+| Pair type | N pairs | Within-type ρ | p |
+|---|---|---|---|
+| Within-social | 28 | **+0.64** | 0.0003 |
+| Cross-block | 48 | +0.00 | 0.98 |
+| Within-affective | 15 | −0.11 | 0.69 |
+
+Top outliers: **valence** (LLM exaggerates its distance to social conditions) and **empathy**
+(brain sees it as more distant from other social conditions than LLM does). Both are interpretable:
+valence is dimensional in LLMs but categorical in the brain; empathy is underpowered (n=32).
+
+### Experiment 14 — Layer-depth profile (Finding 3, honest null)
+Per-layer brain–LLM RSA across all layers for 7 models (`src/layer_depth_analysis.py`).
+Tests the cortical processing gradient prediction (Margulies 2016): social cognition should peak
+in deeper layers. **Result: NULL.** Full, affective, and social alignment are flat across all layers
+(depth slope ≈ 0). The cortical-gradient analogy does not hold.
 
 ---
 
 ## 5. Key Findings
 
-1. **Robust brain–LLM alignment exists:** ρ ≈ 0.73 (Neurosynth) and ≈ 0.56 (stimulus-locked real
-   fMRI, N=91), near the noise ceiling, over the 14-condition set spanning emotion and social
-   cognition. It is **dominated by one emotion↔social axis**; beyond that split a significant
+1. **Robust brain–LLM alignment exists:** ρ ≈ 0.73 (Neurosynth, 14 conditions), confirmed on
+   real fMRI (Kragel +0.63; Narratives group +0.35, 4/4 significant; regional +0.20, 400/400
+   parcels significant). Dominated by **one emotion↔social axis**; beyond that split a significant
    residual survives (partial ρ ≈ 0.36, p ≤ 0.001), concentrated in the social block — **not** a
    rich within-block match across both families (Exp 5 within-block control).
-2. **Universal:** invariant across 4 architectures, scales 0.5B–7B, 96 individual brains, and
-   base vs instruct models.
-3. **Originates in language pretraining:** base models carry ~91% of the alignment; RLHF adds little.
+2. **Universal:** invariant across 4 architectures, scales 0.5B–7B, and 261 individual brains
+   (all 400 brain parcels significant per subject in the regional analysis).
+3. **Originates in language pretraining:** base model carries **99.3%** of the alignment
+   (Exp 8; Δρ = +0.005, RLHF adds essentially nothing).
 4. **Survives confound control:** ~80% retained after partialling word-embedding + concept-name +
    length (ρ 0.74 → 0.59, p = 0.0002); untrained model ≈ 0.
 5. **Carried by one brain-like axis:** the emotion ↔ social-cognition boundary ≈ PC1
@@ -213,6 +292,17 @@ individuals**, not driven by a subset.
 6. **Causally functional and behaviorally predictive:** the brain-derived axis steers
    emotional ↔ analytical output; the brain RDM predicts LLM confusion (ρ = 0.24) and internal
    causal coupling (Direction A, 3/4 models).
+7. **Per-condition double dissociation confirmed:** ablating emotion neurons affects emotion 3.6×
+   more than social; ablating social neurons affects social 6.2× more than emotion. Wilcoxon
+   significant in 4/4 models (p = 0.0001–0.007). Subspace projection confirms: projecting out
+   social PCs collapses within-social ρ from +0.62 to −0.46, within-affective unaffected.
+8. **Robustness gauntlet (4/4 pass):** locked pipeline (no peak selection), leave-one-condition-out,
+   leave-one-model-out CV, stimulus sub-sampling — all pass.
+9. **Developmental trajectory (Pythia-2.8B):** full ρ rises 0.24 → 0.72 during training;
+   within-social stays aligned (+0.40 → +0.65); within-affective **reverses** (+0.30 → −0.61) —
+   the model actively develops non-brain-like emotion organization while social structure aligns.
+10. **Moral judgment (Greene/Koenigs):** suppressing emotion axis increases utilitarian choices
+    from 60% to 100% on personal dilemmas (Qwen, p = 0.024). Direction matches Koenigs 2007.
 
 ---
 
@@ -225,11 +315,15 @@ testable LLM predictions.
   between functions inside the LLM (ablate X, measure effect on Y). **3/4 models significant**,
   LOO/leave-2-out stable. Analog of lesion double-dissociation work (Shamay-Tsoory 2009).
 - **Direction B — cognitive reserve.** *(preliminary)*
-- **Direction C — developmental emergence.** Along training/scale, emotion structure should form
-  before social cognition (cf. affect-early, theory-of-mind ~age 4). *(preliminary)*
+- **Direction C — developmental emergence (done, surprising result).** Pythia-2.8B, 9 training
+  checkpoints (step 0–100k). Full ρ rises 0.24 → 0.72. **But** the prediction "emotion first,
+  then social" is **not confirmed** — instead, within-social stays aligned (+0.40 → +0.65) while
+  within-affective **reverses** (+0.30 → −0.61). The model develops non-brain-like emotion
+  organization during training. This is a **Finding 3 result** (inconsistency), not Finding 2.
 - **Direction D — cortical processing gradient → layer depth (Margulies 2016).** Social cognition
-  sits at the abstract end of the cortical gradient → predict it peaks in *deeper* LLM layers than
-  emotion. **Cheapest next test — per-layer data already on disk, no new GPU runs needed.**
+  sits at the abstract end of the cortical gradient → predict it peaks in deeper LLM layers than
+  emotion. **Tested (`src/layer_depth_analysis.py`): NULL (depth-invariant).** Full, affective, and
+  social brain–LLM alignment is flat across all layers; the cortical-gradient analogy does not hold.
 
 ---
 
@@ -239,15 +333,19 @@ testable LLM predictions.
 |---|---|
 | Cross-architecture | 4/4 models ρ 0.727–0.739, all within 0.012 |
 | Scale (0.5B–7B) | Δρ = −0.013, flat; ~78% of ceiling throughout |
-| Independent real fMRI (Narratives, N=91) | ρ ≈ 0.56, 71–76% of brain ceiling, identical text |
+| Real fMRI (3 datasets) | Kragel +0.63; Narratives group +0.35 (4/4 sig); regional +0.20 (400/400 sig) |
 | Per-block row-wise | affective 78%, mentalistic 87% (row-wise, split-dominated — not a within-block test) |
 | Within-block control | partial ρ≈0.36 beyond the split (4/4 p≤0.001); within-social aligns, within-affective unresolved (n=6) |
 | Confound partial RSA | 80% retained vs GloVe+name+length (p=0.0002); ~100% vs TF-IDF+length |
 | Untrained-model baseline | ρ ≈ 0 (ns) |
 | Permutation / max-stat | p = 0.0001–0.0002; bootstrap CI [0.719, 0.759] |
 | Causal ablation + random control | +0.73 → −0.36 (4/4); random-direction Δρ ≈ 0, p<0.0001 |
-| Individual differences | 97% of 96 subjects ρ > 0.3, all positive |
-| Base vs instruct | base = 91% of instruct → pretraining, not RLHF |
+| Individual differences | 261 subjects, all 400 parcels sig (regional); per-subject ρ pending recomputation |
+| Base vs instruct | base ρ=0.748, instruct ρ=0.754 → **99.3%** from pretraining |
+| Per-condition double dissociation | 4/4 models sig (Wilcoxon p<0.007); 3.6×/6.2× selectivity |
+| Subspace projection dissociation | proj-out social: w-soc +0.62→−0.46; w-aff unaffected |
+| Per-pair consistency (91 pairs) | w-social ρ=+0.64 (sig); w-affective −0.11 (n.s.) |
+| Layer-depth profile | NULL: flat across all layers (cortical gradient does not hold) |
 
 ---
 
@@ -285,12 +383,23 @@ The **Neurosynth headline (91 pairs) stands on its own** as the statistically-po
 
 ---
 
-## 10. Status
+## 10. Status (2026-06-03)
 
-- Headline finding consolidated and recomputed against the corrected brain RDM; all docs, README,
-  and the plain-language briefing deck (`experiments/present/index.html`) reflect the corrected story.
-- Code synced to GitHub (`main` / `cognitive-atlas` at the corrected commit); large activation/
-  attribution NPZ are GPU-reproducible intermediates, kept locally, excluded from the repo.
-- **Open:** empathy condition is underpowered (n=32) — rebuild with a proper empathy-induction set;
-  run Direction D (layer-depth / cortical-gradient) as the next cheap empirical test.
-- The paper is **not** being written yet — we are still consolidating the finding.
+**Three-finding structure established:**
+
+**Finding 1 (Consistency):** Complete. ρ=0.73 (4 archs, scale-invariant), 99.3% from pretraining,
+80% survives confound control, real fMRI validates (3 datasets, 1 significant), within-block
+structure concentrated in social ordering.
+
+**Finding 2 (Predictability — "so what"):** Mostly complete. Per-condition double dissociation
+(4/4 sig, 3.6×/6.2× selectivity), subspace projection dissociation (social collapse +0.62→−0.46),
+brain predicts LLM confusion + causal coupling. **In progress:** moral judgment quantification
+(Greene/Koenigs prediction) and Pythia developmental trajectory.
+
+**Finding 3 (Inconsistency):** Complete. Within-affective doesn't align (embodiment hypothesis),
+layer depth NULL (no processing hierarchy), different peak layers (conceptual vs contextual),
+valence/empathy outlier conditions identified.
+
+**Retracted:** "ρ ≈ 0.56 Narratives fMRI" (data-sourcing error); "base ≈ 91%" (replaced by 99.3%).
+**Honest nulls:** layer-depth (depth-invariant), block-level neuron ablation (too coarse, per-condition is significant).
+**Open:** empathy underpowered (n=32); Experiment 10 (individual differences) suspended.

@@ -1,0 +1,365 @@
+{
+  "model": "gemma-2-9b-it",
+  "n_situations": 10,
+  "emotion_keys": [
+    "anger",
+    "sadness",
+    "fear",
+    "disgust",
+    "happiness"
+  ],
+  "social_keys": [
+    "belief",
+    "empathy",
+    "judgment",
+    "intention"
+  ],
+  "emotion_mean_dist": 0.6691788942066093,
+  "social_mean_dist": 0.7647146025655086,
+  "ratio": 0.8750701136889624,
+  "wilcoxon": {
+    "stat": 53.0,
+    "p": 0.0029296875
+  },
+  "mann_whitney": {
+    "U": 4214.0,
+    "p": 9.470355301939968e-06
+  },
+  "n_social_wins": 9,
+  "emotion_pair_dists": {
+    "anger-sadness": {
+      "mean": 0.6061717984790631,
+      "per_sit": [
+        0.718923266395453,
+        0.8016520842765327,
+        0.4340514371193557,
+        0.7594556312038917,
+        0.4379322349741027,
+        0.32191890992147265,
+        0.7429191158146214,
+        0.8202960294804827,
+        0.7120038767651695,
+        0.3125653988395488
+      ]
+    },
+    "anger-fear": {
+      "mean": 0.6616653466798312,
+      "per_sit": [
+        0.6609997794757354,
+        0.6385781230409531,
+        0.5830248172581702,
+        0.7658491470356066,
+        0.6474576543017154,
+        0.6094082666530918,
+        0.7019813102512599,
+        0.664717405186436,
+        0.6661843062143771,
+        0.6784526573809677
+      ]
+    },
+    "anger-disgust": {
+      "mean": 0.5795116009813813,
+      "per_sit": [
+        0.7378123856459564,
+        0.5271398958199223,
+        0.7183595160140216,
+        0.529452560565889,
+        0.430974491893066,
+        0.5847948813359533,
+        0.4801084371355696,
+        0.7723797521025816,
+        0.8199876535296015,
+        0.19410643577125164
+      ]
+    },
+    "anger-happiness": {
+      "mean": 0.7001028655292634,
+      "per_sit": [
+        0.7197557756162937,
+        0.8310030316337821,
+        0.7479148511044834,
+        0.7712658613405587,
+        0.5299898168193418,
+        0.7820250366841917,
+        0.3993399748158548,
+        0.8171799488739384,
+        0.7960206610633516,
+        0.6065336973408373
+      ]
+    },
+    "sadness-fear": {
+      "mean": 0.6704492419656206,
+      "per_sit": [
+        0.7339048844230696,
+        0.8393335741628282,
+        0.5438085196946401,
+        0.8137386880766758,
+        0.490502065349843,
+        0.6581469748134317,
+        0.7152295218547781,
+        0.8216430190556652,
+        0.32446177570856516,
+        0.763723396516709
+      ]
+    },
+    "sadness-disgust": {
+      "mean": 0.6097162939349837,
+      "per_sit": [
+        0.6495983617415269,
+        0.6795453870590775,
+        0.6987600230944855,
+        0.6169497888451242,
+        0.4777617726127126,
+        0.43537356892277457,
+        0.7307496376444835,
+        0.8730514949712787,
+        0.6900119444963106,
+        0.2453609599620622
+      ]
+    },
+    "sadness-happiness": {
+      "mean": 0.7186503172385026,
+      "per_sit": [
+        0.8995868870774543,
+        0.5668224402264965,
+        0.7033136630604226,
+        0.8180475526397599,
+        0.39995681223511836,
+        0.8166013941144157,
+        0.7672382920733557,
+        0.7437366655262736,
+        0.7413028142825646,
+        0.7298966511491649
+      ]
+    },
+    "fear-disgust": {
+      "mean": 0.7018646697655354,
+      "per_sit": [
+        0.8421040253809119,
+        0.5857665183407708,
+        0.7605672836409808,
+        0.7762564359868679,
+        0.6127796179718836,
+        0.5368926813927067,
+        0.7749510319561743,
+        0.6671038436203888,
+        0.7488042674375085,
+        0.7134209919271615
+      ]
+    },
+    "fear-happiness": {
+      "mean": 0.6987075757610572,
+      "per_sit": [
+        0.6999518684913628,
+        0.7937651561756913,
+        0.6237767808803343,
+        0.8533561773042042,
+        0.5457891324292978,
+        0.5732526340355809,
+        0.6067689288158835,
+        0.7197266183830182,
+        0.7815620006220285,
+        0.7891264604731714
+      ]
+    },
+    "disgust-happiness": {
+      "mean": 0.7449492317308535,
+      "per_sit": [
+        0.8876531795517176,
+        0.6506834811057391,
+        0.8662395355763921,
+        0.8047167717757031,
+        0.7170654561952948,
+        0.7030837611561103,
+        0.5616564149025467,
+        0.752941724870095,
+        0.88397286625064,
+        0.6214791259242951
+      ]
+    }
+  },
+  "social_pair_dists": {
+    "belief-empathy": {
+      "mean": 0.792490586714987,
+      "per_sit": [
+        0.7895118589465164,
+        0.916031233460022,
+        0.7222536267663416,
+        0.8494698426841478,
+        0.848730595342979,
+        0.7382778726362476,
+        0.6239892344091864,
+        0.83577098141449,
+        0.8279724266732683,
+        0.7728981948166701
+      ]
+    },
+    "belief-judgment": {
+      "mean": 0.6606459950497034,
+      "per_sit": [
+        0.7574881667338684,
+        0.6752458723811647,
+        0.6552386862526031,
+        0.6085549615952397,
+        0.7082215798477886,
+        0.6930189248985523,
+        0.3220297132676907,
+        0.6915274809017021,
+        0.7614606304854729,
+        0.7336739341329519
+      ]
+    },
+    "belief-intention": {
+      "mean": 0.7794931859663149,
+      "per_sit": [
+        0.8370766998974142,
+        0.8153093266556709,
+        0.8022037858724606,
+        0.8124380977974959,
+        0.8940621435805037,
+        0.8522606223557809,
+        0.6604798006383792,
+        0.6598213663730532,
+        0.8479639216672881,
+        0.6133160948251016
+      ]
+    },
+    "empathy-judgment": {
+      "mean": 0.7377929033962836,
+      "per_sit": [
+        0.8221537650698532,
+        0.7720087799121521,
+        0.5934666799726569,
+        0.9104888934676099,
+        0.6685653732025642,
+        0.3801138831447608,
+        0.7141814713299736,
+        0.9059813733686687,
+        0.8921147673924922,
+        0.718854047102105
+      ]
+    },
+    "empathy-intention": {
+      "mean": 0.827869786073896,
+      "per_sit": [
+        0.8025619923465157,
+        0.8786164068604707,
+        0.7893079302419789,
+        0.9203350673152152,
+        0.8396092475354424,
+        0.7230522071083503,
+        0.6617303425603479,
+        0.8698359644335921,
+        0.9283463497548876,
+        0.865302352582159
+      ]
+    },
+    "judgment-intention": {
+      "mean": 0.7899951581918666,
+      "per_sit": [
+        0.8940723413233891,
+        0.7734406432738838,
+        0.8471828545112624,
+        0.8779688150155897,
+        0.7636429718696998,
+        0.7647957765360426,
+        0.6649574189537687,
+        0.7417087167673564,
+        0.7650274399586482,
+        0.8071546037090257
+      ]
+    }
+  },
+  "responses": {
+    "emo_anger_0": "I understand you're angry, and rightfully so.  First, it's important to stay calm and talk to your child about what happened.  Help them understand the seriousness of their actions and the potential consequences.  Then, work together to take responsibility by contacting the store to apologize and make amends, and consider seeking professional help to address any underlying issues that may have contributed to this behavior.",
+    "emo_sadness_0": "I understand this is a difficult situation, and I'm here to help you navigate it. First, it's important to take full responsibility for your actions and apologize sincerely to the store. Next, work with your parents to understand the consequences of your actions and accept any penalties they deem appropriate. Finally, let's explore together what might have led to this behavior and develop strategies to prevent it from happening again.",
+    "emo_fear_0": "It's understandable to feel afraid and anxious, but it's important to stay calm and take action. First, encourage your child to be honest with the store manager and accept responsibility for their actions.  Next, contact the store to understand their policies and potential consequences. Finally, seek professional guidance from a therapist or counselor to help your child understand the reasons behind their behavior and develop healthier coping mechanisms.",
+    "emo_disgust_0": "I understand this is a difficult situation, and it's natural to feel upset.  First, it's crucial your child takes full responsibility for their actions by returning to the store and apologizing sincerely.  Next, they should work with the store to make amends, perhaps by offering to pay for the stolen item or performing community service. Finally, we need to explore together what led to this behavior so we can address the underlying issues and prevent this from happening again.",
+    "emo_happiness_0": "It's understandable to feel relieved that this happened now, giving you a chance to address it.  First, take a deep breath and talk to your child calmly about what happened, focusing on understanding their motivations.  Next, contact the store manager to apologize and discuss restitution. Finally, consider seeking professional help from a therapist to explore the underlying reasons behind the shoplifting and develop healthy coping mechanisms.",
+    "soc_belief_0": "I understand this is a difficult situation, and it's important to take responsibility for your actions.  First, you need to apologize sincerely to the store and offer to make restitution for the stolen items.  Next, we need to explore what led you to shoplift and develop strategies to prevent this from happening again.  Finally, be prepared to face the consequences of your actions, whether it's community service or other penalties. \n\n\nIt's crucial to remember that this is a learning opportunity to make better choices in the future.",
+    "soc_empathy_0": "First, I understand this is a difficult situation, but it's important to focus on making things right.  Encourage your child to sincerely apologize to the store manager and offer to return the stolen item or pay for it.  Additionally, discuss with them the impact their actions had on the store employees and other shoppers, emphasizing the importance of honesty and respect for others' property.  Finally, work together to develop a plan to prevent this from happening again.",
+    "soc_judgment_0": "This is a serious situation, and it's important to take responsibility for your actions. First, apologize sincerely to the store and offer to make restitution for the stolen item. Next, talk to your parents or guardians about what happened and be honest about your reasons for shoplifting. Finally, reflect on why you made this choice and consider ways to avoid similar situations in the future.",
+    "soc_intention_0": "First, take a deep breath and acknowledge that this is a serious situation.  Next, schedule a time to talk with your child privately and calmly, expressing your disappointment and concern.  Help them understand the consequences of their actions, both legally and personally, and encourage them to take responsibility by apologizing to the store and offering to make amends. Finally, work together to develop a plan to prevent this from happening again, which may involve addressing any underlying issues contributing to their behavior.",
+    "emo_anger_1": "I understand this is incredibly upsetting. First, **stop all financial transactions with your partner immediately**.  Next, **gather all relevant financial documents** to assess the extent of the diversion.  Then, **consult with a lawyer specializing in business law** to discuss your legal options, which may include legal action or negotiating a settlement.  Remember, your priority is to protect yourself and your business.",
+    "emo_sadness_1": "I understand this is incredibly painful. First, prioritize securing your financial records and assets.  Next, consult with a lawyer to explore legal options, including potential civil action against your partner.  Finally, consider reaching out to trusted advisors, like an accountant or business mentor, for support and guidance as you navigate this difficult situation. \n\n\nRemember, you're not alone, and there are resources available to help you move forward.",
+    "emo_fear_1": "I understand this is a terrifying situation. First, **stop all financial transactions** with your partner immediately.  **Document everything** you know about the diverted funds, including dates, amounts, and any supporting evidence.  **Consult with a lawyer** specializing in business law to discuss your legal options and protect your interests.  Remember, you're not alone, and taking swift action is crucial.",
+    "emo_disgust_1": "I understand this is a deeply upsetting situation. First, **immediately stop all financial transactions with your partner** and secure your own financial records.  **Consult with a lawyer specializing in business law** to understand your legal options, including potential civil action and reporting the fraud to authorities.  Finally, **gather evidence** of the diverted funds, such as bank statements and transaction records, to support any legal action. \n\n\nRemember, your priority is to protect yourself and your business.",
+    "emo_happiness_1": "This is a difficult situation, but it's important to act quickly and decisively.  First, gather all the evidence you can about the diverted funds, including financial records and any communication that might be relevant.  Next, consult with a lawyer to discuss your legal options, such as pursuing civil action or reporting the crime to the authorities.  Finally, consider reaching out to a trusted advisor or mentor for support during this challenging time. \n\n\nRemember, you are not alone, and there are resources available to help you navigate this situation.",
+    "soc_belief_1": "This is a serious situation requiring immediate action. First, **cease all financial transactions** with your partner and secure your own financial records.  **Consult with an attorney** specializing in business law to understand your legal options, including potential civil action and reporting the crime to authorities.  Finally, **gather evidence** of the diversion, such as bank statements and transaction records, to support your case. \n\n\nRemember, your priority is to protect yourself and your business.",
+    "soc_empathy_1": "I understand this is a deeply upsetting situation.  First, prioritize securing any remaining company assets by changing passwords and limiting access.  Next, consult with a lawyer to understand your legal options for recovering the diverted funds and holding your partner accountable.  Finally, consider reaching out to employees and stakeholders to be transparent about the situation and outline your plan to address it.",
+    "soc_judgment_1": "This is a deeply upsetting situation. First, **gather all the evidence you can** of the fund diversion, including financial records and any communication that supports your suspicions.  **Consult with a lawyer** to understand your legal options and protect your own interests.  Next, **consider confronting your partner directly**, but only if you feel safe doing so and have legal counsel present.  Finally, **prepare to sever ties** with your partner if necessary, and explore options for recovering the stolen funds. \n\n\nRemember, your priority is to protect yourself and your business.",
+    "soc_intention_1": "First, gather all the evidence you have of the fund diversion, including dates, amounts, and any supporting documentation.  Schedule a private meeting with your partner to confront them directly with the evidence, expressing your disappointment and outlining the severity of their actions.  Next, consult with a lawyer to understand your legal options, such as pursuing legal action or negotiating a settlement. Finally, consider seeking support from trusted advisors, friends, or family to help you navigate this difficult situation.",
+    "emo_anger_2": "It's understandable to feel angry about this situation.  First, document specific instances of neglect with dates and times.  Then, have a direct and honest conversation with the caregiver, outlining your concerns and expectations. If the situation doesn't improve, consider exploring alternative care options, such as a different caregiver or in-home care agency.  Remember, your parent's safety and well-being are paramount.",
+    "emo_sadness_2": "I understand this is incredibly distressing. First, document specific instances of neglect, including dates, times, and details.  Then, consider speaking directly with the caregiver, expressing your concerns and outlining expectations. If the situation doesn't improve, explore alternative care options like a different agency or in-home care services.  Remember, your parent's well-being is paramount.",
+    "emo_fear_2": "It's understandable to feel afraid and anxious in this situation. First, document specific instances of neglect, including dates, times, and details.  Next, consider speaking directly with the caregiver about your concerns, and if that doesn't resolve the issue, contact the agency or individual who hired them.  Finally, explore alternative care options, such as in-home care agencies with better reputations or assisted living facilities. \n\n\nRemember, your parent's safety and well-being are paramount.",
+    "emo_disgust_2": "I understand this is a deeply upsetting situation. First, document specific instances of neglect with dates and times.  Then,  contact the caregiver's agency (if applicable) and express your concerns, providing the documentation.  If the agency is unresponsive, consider seeking legal advice to explore options like terminating the caregiver's contract or filing a complaint with the appropriate regulatory body. \n\n\nRemember, your parent's safety and well-being are paramount.",
+    "emo_happiness_2": "It's understandable to feel relieved that this situation is coming to light.  First, document specific instances of neglect, including dates, times, and details.  Then, contact your parent's doctor to discuss their well-being and explore alternative care options, such as in-home aides or assisted living. Finally, consider reaching out to adult protective services if you suspect abuse or endangerment.",
+    "soc_belief_2": "I understand this is a deeply distressing situation.  First, document every instance of neglect with dates, times, and specific details.  Next, consider contacting Adult Protective Services to report the abuse.  Simultaneously, start exploring alternative care options for your parent, such as in-home care agencies or assisted living facilities.  Remember, your parent's safety and well-being are paramount.",
+    "soc_empathy_2": "I understand this is a difficult situation. First, document specific instances of neglect, including dates, times, and details.  Then, consider speaking directly with the caregiver, expressing your concerns and outlining expectations. If the situation doesn't improve, involve your parent's doctor or social worker to explore alternative care options and report the neglect to the appropriate authorities if necessary.",
+    "soc_judgment_2": "I understand this is a deeply upsetting situation.  First, document specific instances of neglect with dates and details.  Then,  speak directly to the caregiver, expressing your concerns and outlining the expected standards of care. If the situation doesn't improve, consider contacting Adult Protective Services or a senior advocacy organization for guidance and support in finding alternative care options.",
+    "soc_intention_2": "It's important to approach this situation calmly and directly.  Start by documenting specific instances of neglect, including dates, times, and details.  Schedule a private meeting with the caregiver and clearly outline your concerns, using the documented evidence.  Be prepared to discuss potential solutions, such as additional training or a change in care arrangements. \n\n\nRemember, your priority is your parent's safety and well-being.",
+    "emo_anger_3": "It's understandable to feel angry. First, allow yourself to process those feelings. Then, consider reaching out to your friend privately to express how their words hurt you.  Be direct but calm, focusing on how their actions impacted you rather than attacking them. Finally, decide if this behavior is a pattern and if you can move forward with the friendship.",
+    "emo_sadness_3": "It's understandable to feel hurt and betrayed. First, allow yourself to process these emotions – sadness and anger are valid. Then, reach out to your friend privately to express how their words made you feel. Be honest and direct, but avoid accusatory language. Finally, decide if you want to continue the friendship, knowing that healthy relationships involve respect and support.",
+    "emo_fear_3": "It's understandable to feel hurt and anxious after such a public slight. First, allow yourself to process those feelings – it's okay to be upset. Then, consider reaching out to your friend privately to express how their words made you feel.  Finally, remember your career's worth isn't defined by someone else's opinion, and focus on the positive aspects of your work and the people who support you.",
+    "emo_disgust_3": "It's understandable to feel disgusted and revolted. First, allow yourself to process these feelings. Then, consider reaching out to your friend privately to express how their words hurt you. Be direct and honest about your feelings, focusing on the impact of their actions rather than attacking them personally.  Finally, decide if you want to continue the friendship, knowing that boundaries and respect are essential.",
+    "emo_happiness_3": "It's understandable to feel relieved and hopeful, even in this situation.  First, take some time to process your emotions and reflect on why this event feels like a turning point.  Next, consider reaching out to your friend privately to express how their words made you feel, focusing on \"I\" statements. Finally, use this as an opportunity to re-evaluate the friendship and decide if it aligns with your values and needs.",
+    "soc_belief_3": "It's understandable to feel hurt and betrayed.  First, allow yourself to process those emotions. Then, consider reaching out to your friend privately to express how their words made you feel, focusing on the impact rather than accusing them.  If the conversation doesn't lead to a resolution, it might be time to re-evaluate the friendship and set boundaries to protect yourself.  Remember, your career is important, and you deserve respect.",
+    "soc_empathy_3": "It's understandable you're worried about the impact on others. First, consider if addressing it directly with your friend privately is possible and if you feel safe doing so. If not, focus on managing your own reactions and how you present yourself to others.  You can gently steer conversations away from your career or highlight your accomplishments in a positive light without dwelling on the incident.  Remember, you can't control others' actions, but you can control your response.",
+    "soc_judgment_3": "It's understandable you feel hurt and betrayed.  First, allow yourself to process those emotions. Then, reach out to your friend privately and express how their words made you feel, focusing on the impact rather than accusing them.  If they apologize sincerely and acknowledge their mistake, you can decide if you want to work towards repairing the friendship. If not, it's okay to distance yourself for your own well-being.",
+    "soc_intention_3": "1. **Choose a private setting:**  Talk to your friend one-on-one, away from the dinner party crowd, to avoid further embarrassment or escalation. 2. **Use \"I\" statements:** Express how their words made you feel, focusing on your own experience rather than accusing them. For example, \"I felt hurt and embarrassed when you made that joke about my career at the party.\" 3. **Set clear boundaries:**  Let them know that this type of behavior is unacceptable and you expect respect for your profession. 4. **Be prepared for their response:** They may apologize, become defensive, or deny their actions. Stay calm and reiterate your feelings and boundaries.",
+    "emo_anger_4": "I understand you're feeling angry, and rightfully so.  First, contact the healthcare provider or facility where your records were shared and demand an explanation.  Next, file a complaint with the relevant regulatory body, such as your state's medical board or the Office for Civil Rights.  Finally, consider consulting with an attorney to explore your legal options for protecting your privacy and seeking compensation.",
+    "emo_sadness_4": "I understand this is a deeply violating experience. First, contact the healthcare provider or facility where your records were shared and demand an explanation.  Next, file a complaint with the relevant privacy board or agency, like the Office for Civil Rights if it was a HIPAA violation.  Finally, consider consulting with an attorney to explore your legal options for protecting your privacy and seeking redress.",
+    "emo_fear_4": "I understand this is a scary situation. First, contact the healthcare provider or facility where your records were kept and demand an explanation.  Next, file a complaint with the relevant privacy board or agency, like the Office for Civil Rights if it was a HIPAA violation.  Finally, consider consulting with a lawyer specializing in privacy law to explore your legal options. \n\n\nRemember, you have rights, and taking action can help protect you in the future.",
+    "emo_disgust_4": "I understand this is a deeply violating experience. First, contact the healthcare provider or facility where your records were held to understand how this happened and demand an explanation.  Next, file a complaint with the relevant regulatory body, such as your state's medical board or the Office for Civil Rights.  Finally, consider consulting with an attorney to explore your legal options, including potential legal action. \n\n\nRemember, you have rights to privacy and control over your medical information.",
+    "emo_happiness_4": "It's understandable to feel a mix of emotions, even relief.  First, contact the healthcare provider or organization where your records were shared and demand an explanation.  Then, file a complaint with the relevant privacy board or agency, like the Office for Civil Rights if it was a HIPAA violation.  Finally, consider consulting with a lawyer to explore your legal options for protecting your privacy and seeking compensation.",
+    "soc_belief_4": "I'm so sorry to hear this happened. This is a serious breach of privacy, and you have every right to be upset.  First, contact the healthcare provider or facility where your records were kept and demand an explanation.  Then, file a formal complaint with their privacy officer and consider reporting the incident to your state's attorney general or the Department of Health and Human Services.  \n\n\nIt's important to protect yourself further by placing a fraud alert on your credit report and monitoring your accounts for any suspicious activity.",
+    "soc_empathy_4": "I understand this is a violation of your privacy and you're concerned about the impact on others. First, contact the healthcare provider or organization where your records were shared to understand how this happened and who received them.  Next, consider contacting an attorney specializing in privacy law to explore your legal options and potential recourse.  Finally, reach out to anyone you believe may have been directly affected by the unauthorized sharing and offer them support and information.",
+    "soc_judgment_4": "I understand this is a deeply upsetting violation. First, contact the healthcare provider or facility where your records were kept and demand an explanation.  Next, file a formal complaint with them and with your state's medical board.  Finally, consider consulting with an attorney specializing in privacy law to explore your legal options, which may include seeking compensation for damages.",
+    "soc_intention_4": "It's understandable you're upset. First, document everything: who you spoke to, when, and what they said. Then, send a formal, written complaint to the organization responsible for sharing your records, outlining the violation and demanding an explanation.  Finally, consider consulting with a lawyer to explore your legal options, such as filing a complaint with the appropriate regulatory body.",
+    "emo_anger_5": "It's understandable to feel angry about your neighbor's actions. First, document every instance of damage with photos and videos, noting dates and times.  Next, try speaking to your neighbor calmly and directly about the issue, expressing your concerns and asking them to stop. If the behavior continues, contact your local law enforcement to file a police report and explore legal options like a restraining order or small claims court. \n\n\nRemember, your safety and well-being are paramount.",
+    "emo_sadness_5": "I understand this is incredibly upsetting. First, document every instance of damage with photos and videos, noting dates and times.  Next, try speaking with your neighbor calmly and directly about the issue, expressing your concerns and hoping for a resolution. If that doesn't work, contact your local law enforcement to file a police report and explore legal options like a restraining order or small claims court. \n\n\nRemember, your safety and well-being are paramount.",
+    "emo_fear_5": "It's understandable to feel afraid and anxious in this situation. First, document every instance of damage with photos and videos, noting dates and times.  Next, contact your local police department to file a report and discuss options for a restraining order if necessary.  Finally, consider consulting with a lawyer to explore legal options for holding your neighbor accountable and protecting your property. \n\n\nRemember, your safety is paramount.",
+    "emo_disgust_5": "I understand this is incredibly frustrating and upsetting. First, document every instance of damage with photos and videos, noting dates and times.  Next, contact your local law enforcement to file a police report.  Finally, consider consulting with a lawyer to discuss legal options like a restraining order or small claims court.",
+    "emo_happiness_5": "It's understandable to feel a mix of emotions, but focusing on concrete steps is key.  First, document every instance of damage with photos and dates.  Next, contact your local police department to file a report and explore options for a restraining order if necessary.  Finally, consult with a lawyer to discuss potential legal action and protect your property rights.",
+    "soc_belief_5": "I understand this is incredibly frustrating. First, document every instance of damage with photos and videos, noting dates and times.  Next, contact your local police department to file a report and discuss potential restraining orders or other legal options.  Finally, consider consulting with a lawyer to explore further legal action and protect your property rights. \n\n\nRemember, your safety and well-being are paramount.",
+    "soc_empathy_5": "I understand this is a stressful situation, and it's natural to worry about the impact on everyone involved.  First, document every instance of damage with photos and dates.  Then, try speaking with your neighbor calmly and directly, expressing your concerns and asking them to stop. If the behavior continues, contact your local law enforcement to file a report and explore legal options for protecting your property.",
+    "soc_judgment_5": "I understand this is a deeply frustrating situation. First, document every instance of damage with photos and dates.  Next, try speaking to your neighbor calmly and directly, expressing your concerns and asking them to stop. If the behavior continues, contact your local law enforcement to file a police report and explore legal options like a restraining order or small claims court.",
+    "soc_intention_5": "It's understandable to feel angry and frustrated.  First, document every instance of damage with photos and dates. Then, calmly and directly confront your neighbor, expressing your concerns and the impact their actions are having.  If the behavior continues, consider contacting your local authorities or homeowner's association for further assistance.  Remember to prioritize your safety and avoid escalating the situation.",
+    "emo_anger_6": "I understand you're feeling angry, and rightfully so. First, document the incident with as much detail as possible, including date, time, witnesses, and what was said. Then, schedule a private meeting with the teacher to discuss your concerns calmly and directly.  Finally, if the issue isn't resolved, reach out to the school principal or guidance counselor for further support and intervention.",
+    "emo_sadness_6": "I understand this is incredibly painful. First, validate your child's feelings and reassure them it wasn't their fault.  Next, schedule a private meeting with the teacher to calmly discuss the incident and express your concerns about their behavior.  Document the meeting and consider reaching out to the school principal or counselor for support and to ensure appropriate action is taken.",
+    "emo_fear_6": "It's understandable to feel afraid and anxious after your child was humiliated. First, talk to your child and listen to their experience without judgment. Then, schedule a meeting with the teacher to discuss the incident calmly and express your concerns about their behavior.  Finally, if you feel the issue isn't resolved, consider contacting the school principal or counselor for further support and intervention.",
+    "emo_disgust_6": "I understand this is incredibly upsetting. First, document the incident with as much detail as possible, including date, time, witnesses, and what was said. Then, schedule a private meeting with the teacher to express your concerns calmly and directly.  If the issue isn't resolved, contact the school principal or guidance counselor to escalate the situation. \n\n\nRemember, your child's well-being is paramount, and you have the right to advocate for them.",
+    "emo_happiness_6": "It's understandable to feel a mix of emotions. First, document the incident with as much detail as possible, including date, time, witnesses, and what was said. Then, schedule a private meeting with the teacher to discuss your concerns calmly and respectfully, focusing on the impact on your child.  Finally, if the issue isn't resolved, reach out to the school principal or counselor for further support and guidance.",
+    "soc_belief_6": "I'm so sorry this happened to your child. It's important to document this incident with specific details, including date, time, what was said and done, and any witnesses.  Next, schedule a private meeting with the teacher to express your concerns calmly and directly, focusing on the impact this had on your child. If the issue isn't resolved, contact the school principal or guidance counselor to escalate the situation.",
+    "soc_empathy_6": "It's understandable to be concerned about the impact on everyone involved. First, document the incident with specific details, including date, time, and witnesses.  Then, schedule a private meeting with the teacher to express your concerns calmly and focus on finding a solution to prevent this from happening again.  Finally, consider reaching out to the school principal or counselor to inform them of the situation and seek their support in addressing the issue.",
+    "soc_judgment_6": "This is a serious situation, and your child deserves support. First, document the incident with as much detail as possible, including date, time, witnesses, and what was said. Then, schedule a private meeting with the teacher to express your concerns calmly and directly, focusing on the impact on your child. If the issue isn't resolved, contact the school principal or guidance counselor to escalate the situation and advocate for your child's well-being. \n\n\nRemember, you are your child's strongest advocate.",
+    "soc_intention_6": "It's understandable you're upset.  First, document the incident with as much detail as possible, including date, time, and witnesses. Then, schedule a private meeting with the teacher to calmly and respectfully express your concerns, focusing on the impact on your child's well-being.  Be prepared to listen to their perspective and work together to find a solution.  If the issue persists, consider involving the school administration.",
+    "emo_anger_7": "It's understandable to feel angry and frustrated. First, take some time to process your emotions and avoid making any rash decisions.  Then, gather concrete evidence of your qualifications and the other person's lack thereof.  Schedule a meeting with your manager to discuss your concerns calmly and professionally, focusing on your achievements and the criteria for the promotion.  Finally, be prepared to explore other opportunities within the company or consider seeking employment elsewhere if your concerns are not addressed.",
+    "emo_sadness_7": "It's understandable to feel hurt and disappointed. First, allow yourself to process these emotions. Then, schedule a meeting with your manager to discuss your career progression and seek specific feedback on areas for improvement.  Finally, consider documenting your accomplishments and seeking out mentorship or professional development opportunities to strengthen your qualifications for future opportunities.",
+    "emo_fear_7": "It's understandable to feel afraid and anxious. First, take some time to process your emotions and document everything: dates, specific examples of your qualifications, and any evidence of favoritism. Then, schedule a meeting with your manager to discuss your concerns calmly and professionally, focusing on your desire for growth and understanding. Finally, consider seeking advice from HR or a trusted mentor within the company to explore your options and potential next steps.",
+    "emo_disgust_7": "It's understandable to feel disgusted and revolted.  First, document everything: dates, specific examples of your qualifications exceeding the chosen candidate's, and any witnesses to conversations about the promotion.  Then, schedule a meeting with your manager to express your concerns professionally, focusing on the facts and your desire for clarity on the decision-making process.  Finally, consider seeking guidance from your company's HR department to understand your options and ensure fair treatment.",
+    "emo_happiness_7": "It's understandable to feel relieved, but don't let that overshadow the unfairness.  First, document everything: dates, conversations, evidence of your qualifications. Then, schedule a meeting with your manager to discuss your career progression and express your disappointment, focusing on your desire for growth and opportunities. Finally, consider exploring other opportunities within the company or externally, keeping your options open.",
+    "soc_belief_7": "It's understandable to feel hurt and angry.  First, document everything: dates, specific examples of your qualifications exceeding the chosen candidate's, and any evidence of favoritism.  Then, schedule a meeting with your manager to express your concerns professionally, focusing on your achievements and desire for growth.  Finally, consider seeking guidance from your HR department to understand your company's policies on promotions and potential recourse.",
+    "soc_empathy_7": "It's understandable to feel upset, but focusing on the impact on others can be helpful.  First, consider if there are colleagues who might also feel unfairly treated and offer your support.  Next, document any evidence of favoritism you have, but avoid gossiping or making accusations. Finally, focus on your own professional development and seek opportunities to showcase your skills and qualifications.",
+    "soc_judgment_7": "This is a deeply frustrating situation. First, document everything: dates, specific examples of your qualifications exceeding the promoted person's, and any evidence of favoritism.  Then, schedule a meeting with your direct supervisor to express your concerns calmly and professionally, focusing on the facts and your desire for transparency. If the issue isn't resolved, consider escalating to HR, but be prepared to advocate for yourself and your achievements. \n\n\nRemember, your worth isn't defined by a promotion, and you have the right to seek fairness.",
+    "soc_intention_7": "It's understandable to feel hurt and angry.  Before confronting your manager, document specific examples of your qualifications and how they exceed the person who was promoted.  Schedule a private meeting with your manager, expressing your disappointment calmly and focusing on the facts and your desire for growth within the company.  Be prepared to listen to their explanation and consider their perspective, but also advocate for yourself and your future opportunities.",
+    "emo_anger_8": "It's understandable to feel angry and betrayed.  First, take some time to process your emotions before confronting your sibling.  When you're ready, have a calm conversation with them, expressing how their actions hurt you and why keeping the secret was important.  Focus on repairing the trust, but also set clear boundaries about what information you're comfortable sharing in the future.",
+    "emo_sadness_8": "It's understandable to feel hurt and betrayed. First, allow yourself to process these emotions – sadness, anger, and disappointment are all valid. Then, try to have an honest conversation with your sibling about why they felt the need to share the secret and how their actions have impacted you.  Finally, consider setting clear boundaries about confidentiality in the future to protect yourself from further hurt.",
+    "emo_fear_8": "It's understandable to feel afraid and anxious. First, take some time to process your emotions and allow yourself to feel them. Then, try to have a calm and honest conversation with your sibling about why they felt the need to share the secret and how their actions have impacted you.  Finally, consider setting clear boundaries with your sibling about confidentiality in the future.",
+    "emo_disgust_8": "It's understandable to feel betrayed and hurt. First, allow yourself to process these emotions without judgment. Then, try to communicate directly with your sibling about how their actions made you feel, focusing on \"I\" statements to express your hurt and disappointment.  Finally, decide if and how you want to repair the relationship, understanding that it may take time and effort from both sides.",
+    "emo_happiness_8": "It's understandable to feel relieved, but it's important to process this with your sibling first.  Start by expressing your feelings honestly, both the relief and any hurt or anger you might have.  Then, work together to understand why they felt the need to share the secret and what their intentions were.  Finally, discuss how you can rebuild trust and move forward together.",
+    "soc_belief_8": "It's understandable you feel hurt and betrayed.  First, try to understand *why* your sibling chose to share this secret.  Consider talking to them directly, expressing your feelings and asking for an explanation.  If you're not comfortable with that, consider setting clear boundaries about future confidentiality, emphasizing the importance of trust in your relationship. \n\n\nRemember, you deserve to feel safe and respected.",
+    "soc_empathy_8": "It's understandable you're worried about the impact on others.  First, try to understand why your sibling shared the secret.  Then, consider reaching out to the people involved individually and offering them your support, letting them know you understand this might be difficult.  Finally, gently encourage your sibling to apologize to those affected and discuss the reasons behind their actions.",
+    "soc_judgment_8": "This is a painful betrayal, and it's understandable you feel hurt and angry.  First, acknowledge your feelings and allow yourself to process them. Then, have a direct and honest conversation with your sibling about why their actions were so hurtful and the impact it's had on you.  Finally, decide if and how you want to move forward in the relationship, setting clear boundaries about trust and confidentiality going forward.",
+    "soc_intention_8": "It's understandable you're hurt and angry.  Start by scheduling a private conversation with your sibling, expressing how their actions made you feel and why keeping the secret was important to you.  Use \"I\" statements to focus on your experience rather than blaming them.  Be prepared to listen to their perspective, but also be firm about the need for trust in your relationship moving forward.",
+    "emo_anger_9": "It's understandable to feel angry, this is a frustrating situation. First, gather all documentation: contracts, payment receipts, communication records, and photos of the unfinished work.  Next, try contacting the contractor one last time, in writing, outlining the issue and demanding completion or a refund. If that fails, consider filing a complaint with your local consumer protection agency or Better Business Bureau.  Finally, consult with a lawyer to explore legal options like small claims court.",
+    "emo_sadness_9": "I understand this is incredibly frustrating and upsetting. First, gather all documentation: contracts, payment receipts, communication records, and photos of the unfinished work.  Next, try contacting the contractor one last time, in writing, outlining the situation and demanding completion or a refund. If that fails, consider filing a complaint with your local consumer protection agency or hiring a lawyer to explore legal options. \n\n\nRemember, you have rights, and you're not alone in this.",
+    "emo_fear_9": "It's understandable to feel afraid and anxious in this situation. First, document everything: gather all communication with the contractor, including contracts, invoices, and messages.  Next, contact your local consumer protection agency or attorney general's office for guidance on your rights and options.  Finally, consider filing a complaint with the Better Business Bureau and exploring small claims court if the amount owed is within the limit. \n\n\nRemember, you're not alone and there are resources available to help you navigate this.",
+    "emo_disgust_9": "I understand this is incredibly frustrating and upsetting. First, gather all documentation: contracts, payment records, communication with the contractor.  Next, try contacting the contractor one last time, in writing, outlining the unfinished work and demanding completion or a refund. If that fails, consider filing a complaint with your local consumer protection agency or Better Business Bureau.  Finally, consult with a lawyer to explore legal options like small claims court.",
+    "emo_happiness_9": "It's understandable to feel relieved that you're finally taking action. First, gather all documentation: contracts, payment records, and any communication with the contractor.  Next, send a certified letter demanding completion of the work or a full refund. If that doesn't work, consider filing a complaint with your state's licensing board and exploring legal options like small claims court.",
+    "soc_belief_9": "I understand this is incredibly frustrating. First, gather all documentation: contracts, payment records, communication with the contractor, and any evidence of incomplete work.  Next, send a certified letter demanding completion of the work or a full refund. If that fails, consult with a lawyer to explore legal options like filing a small claims lawsuit or reporting the contractor to your state's licensing board.  Remember, you have rights, and you don't have to accept this situation.",
+    "soc_empathy_9": "I understand your concern for others who might be affected. First, document everything: contracts, payments, communication, and any evidence of incomplete work.  Then, report the contractor to your local consumer protection agency and the Better Business Bureau.  This can help prevent them from harming others in the future.  Finally, consider consulting with a lawyer to explore legal options for recovering your money and holding the contractor accountable.",
+    "soc_judgment_9": "This is a serious breach of trust, and you have rights.  First, document everything: contracts, payments, communication, and any evidence of the unfinished work.  Next, contact the contractor in writing, outlining the issue and demanding completion or a full refund.  If they don't respond or refuse, consider filing a complaint with your local consumer protection agency or small claims court.",
+    "soc_intention_9": "First, gather all documentation: contracts, payment receipts, emails, and photos of the unfinished work.  Then, send a certified letter outlining the incomplete work, the agreed-upon deadline, and a clear demand for completion or a full refund.  If you don't receive a satisfactory response within a reasonable timeframe (e.g., 10-14 days), consider consulting with a lawyer to explore legal options like filing a small claims lawsuit.  Remember to remain calm and professional throughout the process."
+  }
+}

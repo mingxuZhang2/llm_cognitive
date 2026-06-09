@@ -1,0 +1,525 @@
+{
+  "per_model": {
+    "Qwen": {
+      "selectivity": {
+        "anger": {
+          "same_block_effect": -0.01137852805896244,
+          "cross_block_effect": -0.01148427392426632,
+          "selectivity_ratio": NaN,
+          "block": "affective"
+        },
+        "fear": {
+          "same_block_effect": 0.2031666905260426,
+          "cross_block_effect": 0.08605530743717546,
+          "selectivity_ratio": 2.3608850700389876,
+          "block": "affective"
+        },
+        "disgust": {
+          "same_block_effect": 0.11337185626885218,
+          "cross_block_effect": 0.04864597495823483,
+          "selectivity_ratio": 2.3305495750920393,
+          "block": "affective"
+        },
+        "sadness": {
+          "same_block_effect": 0.1806297372089918,
+          "cross_block_effect": 0.07610686088894826,
+          "selectivity_ratio": 2.3733699577040586,
+          "block": "affective"
+        },
+        "happiness": {
+          "same_block_effect": 0.14922193641934817,
+          "cross_block_effect": 0.07588011469313717,
+          "selectivity_ratio": 1.9665486408765833,
+          "block": "affective"
+        },
+        "valence": {
+          "same_block_effect": 0.013907206893082748,
+          "cross_block_effect": 0.017860538522881855,
+          "selectivity_ratio": 0.778655518996007,
+          "block": "affective"
+        },
+        "belief": {
+          "same_block_effect": 0.02767775513498965,
+          "cross_block_effect": -0.006485467655427376,
+          "selectivity_ratio": Infinity,
+          "block": "social"
+        },
+        "mentalizing": {
+          "same_block_effect": 0.0014742933266881722,
+          "cross_block_effect": -0.018031208410062276,
+          "selectivity_ratio": Infinity,
+          "block": "social"
+        },
+        "intention": {
+          "same_block_effect": 0.05162904601160846,
+          "cross_block_effect": -0.0057245726106450075,
+          "selectivity_ratio": Infinity,
+          "block": "social"
+        },
+        "theory_of_mind": {
+          "same_block_effect": 0.08813691438926538,
+          "cross_block_effect": 0.007140368647021674,
+          "selectivity_ratio": 12.343468348238329,
+          "block": "social"
+        },
+        "empathy": {
+          "same_block_effect": 0.08858443306855503,
+          "cross_block_effect": 0.04555519415087239,
+          "selectivity_ratio": 1.9445517623122373,
+          "block": "social"
+        },
+        "self_referential": {
+          "same_block_effect": 0.06155432408782914,
+          "cross_block_effect": 0.0052456855494819,
+          "selectivity_ratio": 11.734276389081055,
+          "block": "social"
+        },
+        "judgment": {
+          "same_block_effect": 0.01819245892591648,
+          "cross_block_effect": 0.002369683116716265,
+          "selectivity_ratio": 7.6771694905461745,
+          "block": "social"
+        },
+        "moral": {
+          "same_block_effect": 0.09881688237360402,
+          "cross_block_effect": 0.025085817004247585,
+          "selectivity_ratio": 3.939153441040893,
+          "block": "social"
+        }
+      },
+      "summary_2x2": {
+        "A_aa": 0.10815314987622585,
+        "A_as": 0.04884408709601854,
+        "A_sa": 0.006894437474025644,
+        "A_ss": 0.054508263414807044,
+        "dd_affective": true,
+        "dd_social": true,
+        "double_dissociation": true
+      },
+      "wilcoxon": {
+        "wilcoxon_stat": 103.0,
+        "wilcoxon_p": 0.00018310546875,
+        "n_same_greater": 13,
+        "n_total": 14,
+        "mean_diff": 0.05262607030053536
+      }
+    },
+    "Llama": {
+      "selectivity": {
+        "anger": {
+          "same_block_effect": 0.14971857734771524,
+          "cross_block_effect": -0.00600466196312187,
+          "selectivity_ratio": Infinity,
+          "block": "affective"
+        },
+        "fear": {
+          "same_block_effect": 0.20038466684081988,
+          "cross_block_effect": 0.05829943343691006,
+          "selectivity_ratio": 3.4371631940071987,
+          "block": "affective"
+        },
+        "disgust": {
+          "same_block_effect": 0.21866653108273776,
+          "cross_block_effect": 0.040843737072080895,
+          "selectivity_ratio": 5.35373466675774,
+          "block": "affective"
+        },
+        "sadness": {
+          "same_block_effect": 0.15713650490875675,
+          "cross_block_effect": 0.030546521202436998,
+          "selectivity_ratio": 5.144170227024753,
+          "block": "affective"
+        },
+        "happiness": {
+          "same_block_effect": 0.14940821996196826,
+          "cross_block_effect": 0.01420203942542468,
+          "selectivity_ratio": 10.520194704888347,
+          "block": "affective"
+        },
+        "valence": {
+          "same_block_effect": -0.3398824032293177,
+          "cross_block_effect": -0.10014417958313321,
+          "selectivity_ratio": NaN,
+          "block": "affective"
+        },
+        "belief": {
+          "same_block_effect": 0.16573502868369827,
+          "cross_block_effect": 0.03003713449043161,
+          "selectivity_ratio": 5.517671092643458,
+          "block": "social"
+        },
+        "mentalizing": {
+          "same_block_effect": 0.20191135706835261,
+          "cross_block_effect": 0.01706389365214043,
+          "selectivity_ratio": 11.832666165440244,
+          "block": "social"
+        },
+        "intention": {
+          "same_block_effect": 0.2250794253869208,
+          "cross_block_effect": 0.040260235244668735,
+          "selectivity_ratio": 5.590613766141018,
+          "block": "social"
+        },
+        "theory_of_mind": {
+          "same_block_effect": 0.22333828991400578,
+          "cross_block_effect": 0.015615220953907655,
+          "selectivity_ratio": 14.302601965943758,
+          "block": "social"
+        },
+        "empathy": {
+          "same_block_effect": 0.1295690520327258,
+          "cross_block_effect": 0.027696288097227257,
+          "selectivity_ratio": 4.6782100033721585,
+          "block": "social"
+        },
+        "self_referential": {
+          "same_block_effect": 0.19572937526407003,
+          "cross_block_effect": 0.024768092213532156,
+          "selectivity_ratio": 7.902480884544366,
+          "block": "social"
+        },
+        "judgment": {
+          "same_block_effect": 0.08457085633265127,
+          "cross_block_effect": 0.05980997642854968,
+          "selectivity_ratio": 1.4139924705317595,
+          "block": "social"
+        },
+        "moral": {
+          "same_block_effect": 0.11668326023880297,
+          "cross_block_effect": -0.005804691933829111,
+          "selectivity_ratio": Infinity,
+          "block": "social"
+        }
+      },
+      "summary_2x2": {
+        "A_aa": 0.08923868281878003,
+        "A_as": 0.006290481598432926,
+        "A_sa": 0.02618076864332855,
+        "A_ss": 0.16782708061515342,
+        "dd_affective": true,
+        "dd_social": true,
+        "double_dissociation": true
+      },
+      "wilcoxon": {
+        "wilcoxon_stat": 91.0,
+        "wilcoxon_p": 0.0067138671875,
+        "n_same_greater": 13,
+        "n_total": 14,
+        "mean_diff": 0.11648997879262014
+      }
+    },
+    "Mistral": {
+      "selectivity": {
+        "anger": {
+          "same_block_effect": 0.08757418691959831,
+          "cross_block_effect": 0.014583229669190092,
+          "selectivity_ratio": 6.005129789913123,
+          "block": "affective"
+        },
+        "fear": {
+          "same_block_effect": 0.10255799792661775,
+          "cross_block_effect": 0.02545222315526157,
+          "selectivity_ratio": 4.029431822163504,
+          "block": "affective"
+        },
+        "disgust": {
+          "same_block_effect": 0.06559195887589411,
+          "cross_block_effect": 0.021050461500636566,
+          "selectivity_ratio": 3.115939233632033,
+          "block": "affective"
+        },
+        "sadness": {
+          "same_block_effect": 0.056706746265031485,
+          "cross_block_effect": 0.003004610550723972,
+          "selectivity_ratio": 18.873243406326914,
+          "block": "affective"
+        },
+        "happiness": {
+          "same_block_effect": 0.006083866968496285,
+          "cross_block_effect": 0.010914876196222816,
+          "selectivity_ratio": 0.5573922103304899,
+          "block": "affective"
+        },
+        "valence": {
+          "same_block_effect": 0.040353624300046353,
+          "cross_block_effect": 0.031207868061136353,
+          "selectivity_ratio": 1.2930593086651554,
+          "block": "affective"
+        },
+        "belief": {
+          "same_block_effect": 0.10187353126924259,
+          "cross_block_effect": 0.021582643735152132,
+          "selectivity_ratio": 4.720159982223072,
+          "block": "social"
+        },
+        "mentalizing": {
+          "same_block_effect": 0.13982061069537371,
+          "cross_block_effect": 0.007736550253206548,
+          "selectivity_ratio": 18.072733468954414,
+          "block": "social"
+        },
+        "intention": {
+          "same_block_effect": 0.14279350883460093,
+          "cross_block_effect": -0.004296824832918829,
+          "selectivity_ratio": Infinity,
+          "block": "social"
+        },
+        "theory_of_mind": {
+          "same_block_effect": 0.16761893538253922,
+          "cross_block_effect": 0.004071656310811339,
+          "selectivity_ratio": 41.167260345001615,
+          "block": "social"
+        },
+        "empathy": {
+          "same_block_effect": 0.10263612927579972,
+          "cross_block_effect": 0.04309121101790702,
+          "selectivity_ratio": 2.381834412431532,
+          "block": "social"
+        },
+        "self_referential": {
+          "same_block_effect": 0.09345730383309857,
+          "cross_block_effect": 0.0077179925404045,
+          "selectivity_ratio": 12.109017123797384,
+          "block": "social"
+        },
+        "judgment": {
+          "same_block_effect": 0.02969705977207501,
+          "cross_block_effect": -0.0006039803058542874,
+          "selectivity_ratio": Infinity,
+          "block": "social"
+        },
+        "moral": {
+          "same_block_effect": 0.07622921333250154,
+          "cross_block_effect": 0.016394382913466194,
+          "selectivity_ratio": 4.649715316206722,
+          "block": "social"
+        }
+      },
+      "summary_2x2": {
+        "A_aa": 0.05981139687594738,
+        "A_as": 0.017702211522195227,
+        "A_sa": 0.011961703954021824,
+        "A_ss": 0.10676578654940393,
+        "dd_affective": true,
+        "dd_social": true,
+        "double_dissociation": true
+      },
+      "wilcoxon": {
+        "wilcoxon_stat": 104.0,
+        "wilcoxon_p": 0.0001220703125,
+        "n_same_greater": 13,
+        "n_total": 14,
+        "mean_diff": 0.07222055520611212
+      }
+    },
+    "Gemma": {
+      "selectivity": {
+        "anger": {
+          "same_block_effect": 0.04309123942168891,
+          "cross_block_effect": 0.009534554814049079,
+          "selectivity_ratio": 4.519481010082858,
+          "block": "affective"
+        },
+        "fear": {
+          "same_block_effect": -0.08495121017926024,
+          "cross_block_effect": -0.04790125475103073,
+          "selectivity_ratio": NaN,
+          "block": "affective"
+        },
+        "disgust": {
+          "same_block_effect": 0.08426426299756302,
+          "cross_block_effect": 0.024590162347048403,
+          "selectivity_ratio": 3.426746916442274,
+          "block": "affective"
+        },
+        "sadness": {
+          "same_block_effect": -0.0028088359285650642,
+          "cross_block_effect": -0.013771321360495017,
+          "selectivity_ratio": NaN,
+          "block": "affective"
+        },
+        "happiness": {
+          "same_block_effect": 0.01869723118813912,
+          "cross_block_effect": 0.0018296994481372085,
+          "selectivity_ratio": 10.218744508653872,
+          "block": "affective"
+        },
+        "valence": {
+          "same_block_effect": 0.04001703901129707,
+          "cross_block_effect": 0.04071808672366062,
+          "selectivity_ratio": 0.9827828916146942,
+          "block": "affective"
+        },
+        "belief": {
+          "same_block_effect": 0.061364533291454394,
+          "cross_block_effect": -0.020095884035921725,
+          "selectivity_ratio": Infinity,
+          "block": "social"
+        },
+        "mentalizing": {
+          "same_block_effect": 0.126746690508726,
+          "cross_block_effect": 0.021280708853639713,
+          "selectivity_ratio": 5.955943074097744,
+          "block": "social"
+        },
+        "intention": {
+          "same_block_effect": 0.15202115919038997,
+          "cross_block_effect": 0.01946929398234637,
+          "selectivity_ratio": 7.808252283222698,
+          "block": "social"
+        },
+        "theory_of_mind": {
+          "same_block_effect": 0.14210628045653617,
+          "cross_block_effect": -0.014507014951095366,
+          "selectivity_ratio": Infinity,
+          "block": "social"
+        },
+        "empathy": {
+          "same_block_effect": 0.0715498935180766,
+          "cross_block_effect": 0.04837349105516253,
+          "selectivity_ratio": 1.4791137037532591,
+          "block": "social"
+        },
+        "self_referential": {
+          "same_block_effect": 0.0747185219389012,
+          "cross_block_effect": -0.0018207024332458589,
+          "selectivity_ratio": Infinity,
+          "block": "social"
+        },
+        "judgment": {
+          "same_block_effect": 0.044927373857777626,
+          "cross_block_effect": 0.02951569526886832,
+          "selectivity_ratio": 1.5221519753649433,
+          "block": "social"
+        },
+        "moral": {
+          "same_block_effect": 0.10281172703482175,
+          "cross_block_effect": 0.10842734182588447,
+          "selectivity_ratio": 0.9482084989219747,
+          "block": "social"
+        }
+      },
+      "summary_2x2": {
+        "A_aa": 0.01638495441847714,
+        "A_as": 0.0024999878702282627,
+        "A_sa": 0.023830366195704805,
+        "A_ss": 0.09703077247458546,
+        "dd_affective": true,
+        "dd_social": true,
+        "double_dissociation": true
+      },
+      "wilcoxon": {
+        "wilcoxon_stat": 94.0,
+        "wilcoxon_p": 0.00335693359375,
+        "n_same_greater": 11,
+        "n_total": 14,
+        "mean_diff": 0.04777950353718132
+      }
+    }
+  },
+  "cross_model_average": {
+    "summary_2x2": {
+      "A_aa": 0.0683970459973576,
+      "A_as": 0.018834192021718738,
+      "A_sa": 0.017216819066770205,
+      "A_ss": 0.10653297576348747,
+      "dd_affective": true,
+      "dd_social": true,
+      "double_dissociation": true
+    },
+    "selectivity": {
+      "anger": {
+        "same_block_effect": 0.06725136890751,
+        "cross_block_effect": 0.0016572121489627457,
+        "selectivity_ratio": 40.581025760403,
+        "block": "affective"
+      },
+      "fear": {
+        "same_block_effect": 0.105289536278555,
+        "cross_block_effect": 0.03047642731957909,
+        "selectivity_ratio": 3.454786060533855,
+        "block": "affective"
+      },
+      "disgust": {
+        "same_block_effect": 0.12047365230626177,
+        "cross_block_effect": 0.03378258396950017,
+        "selectivity_ratio": 3.566146758194359,
+        "block": "affective"
+      },
+      "sadness": {
+        "same_block_effect": 0.09791603811355373,
+        "cross_block_effect": 0.023971667820403553,
+        "selectivity_ratio": 4.08465688942228,
+        "block": "affective"
+      },
+      "happiness": {
+        "same_block_effect": 0.08085281363448794,
+        "cross_block_effect": 0.02570668244073047,
+        "selectivity_ratio": 3.145206069313021,
+        "block": "affective"
+      },
+      "valence": {
+        "same_block_effect": -0.06140113325622288,
+        "cross_block_effect": -0.002589421568863595,
+        "selectivity_ratio": Infinity,
+        "block": "affective"
+      },
+      "belief": {
+        "same_block_effect": 0.08916271209484623,
+        "cross_block_effect": 0.0062596066335586596,
+        "selectivity_ratio": 14.244139818120837,
+        "block": "social"
+      },
+      "mentalizing": {
+        "same_block_effect": 0.11748823789978513,
+        "cross_block_effect": 0.0070124860872311035,
+        "selectivity_ratio": 16.75414916169561,
+        "block": "social"
+      },
+      "intention": {
+        "same_block_effect": 0.14288078485588004,
+        "cross_block_effect": 0.012427032945862818,
+        "selectivity_ratio": 11.497578342177617,
+        "block": "social"
+      },
+      "theory_of_mind": {
+        "same_block_effect": 0.15530010503558664,
+        "cross_block_effect": 0.0030800577401613257,
+        "selectivity_ratio": 50.42116678872793,
+        "block": "social"
+      },
+      "empathy": {
+        "same_block_effect": 0.0980848769737893,
+        "cross_block_effect": 0.0411790460802923,
+        "selectivity_ratio": 2.381912314883159,
+        "block": "social"
+      },
+      "self_referential": {
+        "same_block_effect": 0.10636488128097474,
+        "cross_block_effect": 0.008977766967543176,
+        "selectivity_ratio": 11.847587675811793,
+        "block": "social"
+      },
+      "judgment": {
+        "same_block_effect": 0.044346937222105094,
+        "cross_block_effect": 0.022772843627069994,
+        "selectivity_ratio": 1.9473605469889608,
+        "block": "social"
+      },
+      "moral": {
+        "same_block_effect": 0.09863527074493258,
+        "cross_block_effect": 0.03602571245244228,
+        "selectivity_ratio": 2.737913119001921,
+        "block": "social"
+      }
+    },
+    "wilcoxon_ps": {
+      "Qwen": 0.00018310546875,
+      "Llama": 0.0067138671875,
+      "Mistral": 0.0001220703125,
+      "Gemma": 0.00335693359375
+    },
+    "n_selective_affective": 6,
+    "n_selective_social": 8
+  }
+}

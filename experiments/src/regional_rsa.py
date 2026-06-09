@@ -26,7 +26,7 @@ import numpy as np
 import nibabel as nib
 from scipy.stats import spearmanr
 
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments")
+BASE = Path(__file__).resolve().parents[1]
 FMRI_DIR = BASE / "data" / "narratives" / "fmri" / "afni-nosmooth"
 ANN_PATH = BASE / "data" / "narratives" / "annotated_sentences.jsonl"
 RES = BASE / "results" / "cognitive_rsa"

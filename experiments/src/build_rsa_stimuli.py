@@ -18,8 +18,9 @@ import random
 from pathlib import Path
 
 
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/data/cognitive_stimuli")
-BRAIN_DIR = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/data/brain_maps")
+_EXP = Path(__file__).resolve().parents[1]
+BASE = _EXP / "data" / "cognitive_stimuli"
+BRAIN_DIR = _EXP / "data" / "brain_maps"
 OUT_DIR = BASE / "rsa"
 OUT_STIM = OUT_DIR / "rsa_stimuli.jsonl"
 OUT_MANIFEST = OUT_DIR / "rsa_conditions_manifest.json"

@@ -8,9 +8,11 @@
 
 ## One-line summary
 
-A text-only LLM reproduces the human brain's relational organization of **both emotion and
-social cognition** (RSA ρ ≈ 0.73, near noise ceiling), carried by a single brain-like axis —
-the emotion ↔ social-cognition boundary — that is causally load-bearing.
+A text-only LLM shares the human brain's **dominant emotion↔social-cognition boundary and
+social-cognitive fine structure** (RSA ρ ≈ 0.73, ~76% of LLM split-half reliability ceiling),
+carried by a single brain-like axis — the emotion ↔ social-cognition boundary — that is
+causally load-bearing. Within-affective ordering does not align (ρ ≈ −0.10, n.s., n=6
+underpowered).
 
 ---
 
@@ -29,7 +31,9 @@ the emotion ↔ social-cognition boundary — that is causally load-bearing.
   present in base models (~91%), survives confound control (~80% retained after partialling
   word-embedding + concept-name + length, ρ 0.74→0.59, p=0.0002). Bootstrap 95% CI
   [0.719, 0.759]; max-stat p=0.0002 (peak-layer-corrected).
-- Independent stimulus-locked fMRI (Narratives, N=91): ρ ≈ 0.56, 71–76% of brain ceiling.
+- Real fMRI (3 independent datasets): Kragel +0.63; Narratives group +0.35, 4/4 models
+  significant (p=0.004–0.013, last layer, 230 subjects); regional +0.20, all 400 parcels
+  significant (261 subjects). *(Prior "ρ ≈ 0.56" retracted — data-sourcing error.)*
 - **Causal axis:** removing the emotion↔social boundary direction (≈PC1, cosine 0.9999) inverts
   ρ from +0.73 to −0.36 (4/4 models, p<0.0001; 2000 random-direction controls ≈ 0).
 - **Behavioral prediction:** brain geometry predicts LLM confusion (ρ=0.24, p=0.02) and internal
@@ -53,7 +57,8 @@ emotion/social-cognition separation becomes a battery of testable LLM prediction
   emotion axis should shift moral judgment toward utilitarian/analytical. → **steering result
   (Exp 7) is consistent; quantify next.**
 - Cortical processing gradient places social cognition at the abstract end (Margulies 2016) →
-  social cognition should sit at greater LLM layer-depth than emotion. → **layer data available.**
+  social cognition should sit at greater LLM layer-depth than emotion. → **Tested: NULL
+  (depth-invariant).** Alignment is flat across all layers; the analogy does not hold.
 - Developmental order: affect early, theory-of-mind ~age 4 → emotion structure should form
   before social structure along training. → **needs training checkpoints.**
 
@@ -61,7 +66,7 @@ emotion/social-cognition separation becomes a battery of testable LLM prediction
 
 ## Open questions / next steps
 
-1. **Layer-depth test** (cortical-gradient prediction) — cheapest next win; data in hand.
+1. ~~Layer-depth test~~ — **done, NULL** (depth-invariant; `src/layer_depth_analysis.py`).
 2. **Quantify the moral-judgment steering** (dual-process prediction) on a proper utilitarian-vs-
    deontological battery.
 3. **Empathy condition** is underpowered (n=32) — rebuild with a real empathy-induction set.
@@ -81,9 +86,12 @@ emotion/social-cognition separation becomes a battery of testable LLM prediction
 | Within-block residual (partial out split) | partial ρ≈0.36, 4/4 p≤0.001 | ✓ |
 | → within-social ordering | ρ≈0.52–0.65 (sig.) | ✓ |
 | → within-affective ordering | ρ≈−0.11, n=6 underpowered | no claim |
-| Stimulus-locked fMRI (N=91) | ρ ≈ 0.54–0.58 | ✓ |
-| Scale invariance (1.5B vs 7B) | 0.754 vs 0.739 | ✓ |
-| Base vs instruct | base ≈ 91% | ✓ |
+| Real fMRI: Kragel | +0.63 (4 conditions) | ✓ |
+| Real fMRI: Narratives group (230 subj) | +0.35, 4/4 sig (last layer) | ✓ |
+| Real fMRI: regional (261 subj) | +0.20, 400/400 parcels sig | ✓ |
+| Scale invariance (0.5B–7B) | 0.752→0.739, flat | ✓ |
+| Base vs instruct | base carries alignment (recomputing) | ⚠ pending |
+| Layer-depth / cortical gradient | NULL (depth-invariant) | ✗ hypothesis rejected |
 | Partial RSA (embedding+name+length) | ρ 0.74→0.59 (80%), p=2e-4 | ✓ |
 | Untrained baseline | ≈ 0 (ns) | ✓ |
 | Boundary-axis ablation | +0.73 → −0.36 (4/4, p<1e-4) | ✓ |

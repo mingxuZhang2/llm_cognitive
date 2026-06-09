@@ -1,0 +1,37 @@
+=== Emotion confusion test (Mon Jun  8 15:54:42 CST 2026) ===
+=== GPU: NVIDIA A800-SXM4-80GB, 81920 MiB ===
+`torch_dtype` is deprecated! Use `dtype` instead!
+=== Emotion Confusion Test (Qwen2.5-7B-Instruct) ===
+Device: cuda
+10 scenarios x 5 emotions = 50 prompts
+Loading model...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.63s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.60s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.54s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.46s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.51s/it]
+
+--- Step 1: Computing response embeddings ---
+  [5/10]
+  [10/10]
+
+--- Step 2: Response similarity per emotion pair ---
+
+--- Step 3: Correlating with geometry ---
+
+  Response similarity vs brain distance: rho=+0.479 (p=0.1615)
+  Response similarity vs LLM distance:   rho=-0.176 (p=0.6272)
+
+--- Pair-by-pair results ---
+                     Pair | Resp sim | Brain dist |   LLM dist | Prediction
+---------------------------------------------------------------------------
+            anger-sadness |   0.9984 |     0.5867 |     0.0337 |    CONFUSE
+            anger-disgust |   0.9982 |     0.5237 |     0.0338 |    CONFUSE
+             fear-sadness |   0.9981 |     0.4634 |     0.0412 |           
+               anger-fear |   0.9978 |     0.4225 |     0.0606 |           
+          disgust-sadness |   0.9975 |     0.5947 |     0.0497 |    CONFUSE
+             fear-disgust |   0.9970 |     0.3388 |     0.0693 |           
+        disgust-happiness |   0.9870 |     0.4825 |     0.0591 |           
+           fear-happiness |   0.9869 |     0.3452 |     0.0536 |           
+        sadness-happiness |   0.9867 |     0.2889 |     0.0289 |           
+          anger-happiness |   0.9865 |     0.4926 |     0.0427 |           
+
+Saved: /hpc2hdd/home/mzhang630/data/nature/experiments/results/mechanistic/emotion_confusion_test_Qwen2.5-7B-Instruct.json
+DONE
+=== DONE (Mon Jun  8 15:54:58 CST 2026) ===

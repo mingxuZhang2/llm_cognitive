@@ -1,0 +1,5215 @@
+{
+  "model": "gemma-2-9b-it",
+  "n_dilemmas": 30,
+  "n_personal": 15,
+  "n_impersonal": 15,
+  "alphas": [
+    -20,
+    -15,
+    -10,
+    -5,
+    0,
+    5,
+    10,
+    15,
+    20
+  ],
+  "n_samples": 3,
+  "elapsed_s": 290.1071820259094,
+  "results": [
+    {
+      "dilemma_id": "dilemma_001",
+      "dilemma_type": "trolley_switch",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: There is no right or",
+        "This is a classic thought experiment known as",
+        "This is a classic thought experiment known as the"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_001",
+      "dilemma_type": "trolley_switch",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment in ethics,",
+        "",
+        "**Remember, there is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_001",
+      "dilemma_type": "trolley_switch",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "(This is a classic thought experiment designed",
+        "This is a classic thought experiment in ethics known",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_001",
+      "dilemma_type": "trolley_switch",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Think carefully about the ethical implications of each",
+        "**This is a thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_001",
+      "dilemma_type": "trolley_switch",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment known as the",
+        "",
+        "This is a classic thought experiment known as the"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_001",
+      "dilemma_type": "trolley_switch",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment known as",
+        "Do not explain your reasoning.",
+        "**This is a thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_001",
+      "dilemma_type": "trolley_switch",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Note:** This is a classic thought experiment",
+        "**Important:** This is a thought experiment designed",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_001",
+      "dilemma_type": "trolley_switch",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment to explore ethical",
+        "This is a classic thought experiment in ethics",
+        "This is a thought experiment designed to explore different"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_001",
+      "dilemma_type": "trolley_switch",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Important:** This is a thought experiment designed",
+        "**This is a thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_002",
+      "dilemma_type": "trolley_footbridge",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment in ethics known",
+        "This is a classic thought experiment in ethics known",
+        "Please remember that this is a thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_002",
+      "dilemma_type": "trolley_footbridge",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: This is a thought experiment designed",
+        "Please remember that this is a thought experiment designed",
+        "This is a classic thought experiment known as the"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_002",
+      "dilemma_type": "trolley_footbridge",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember, this is a thought experiment designed",
+        "",
+        "**Remember:** There is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_002",
+      "dilemma_type": "trolley_footbridge",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: There are no right or",
+        "**Please remember, there is no right",
+        "**Please note:** This is a thought"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_002",
+      "dilemma_type": "trolley_footbridge",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a classic thought experiment in ethics",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_002",
+      "dilemma_type": "trolley_footbridge",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to",
+        "**Important Note:** There is no right or",
+        "Please note that there are no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_002",
+      "dilemma_type": "trolley_footbridge",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**This is a thought experiment designed to",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_002",
+      "dilemma_type": "trolley_footbridge",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment in ethics known",
+        "**This is a thought experiment designed to",
+        "Please note: There is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_002",
+      "dilemma_type": "trolley_footbridge",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment based on the classic",
+        "",
+        "**Please note:** This is a thought"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_003",
+      "dilemma_type": "trolley_loop",
+      "subcategory": "personal_sacrificial_loop",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment known as",
+        "This is a classic thought experiment in ethics,",
+        "**Remember, this is a thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_003",
+      "dilemma_type": "trolley_loop",
+      "subcategory": "personal_sacrificial_loop",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment in ethics known",
+        "This is a classic thought experiment in ethics known",
+        "This is a classic thought experiment in ethics"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_003",
+      "dilemma_type": "trolley_loop",
+      "subcategory": "personal_sacrificial_loop",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: This is a thought experiment designed",
+        "This is a thought experiment designed to explore",
+        "This is a classic thought experiment in ethics known"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_003",
+      "dilemma_type": "trolley_loop",
+      "subcategory": "personal_sacrificial_loop",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment designed",
+        "**Please note:** This is a thought experiment",
+        "This is a classic thought experiment known as the"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_003",
+      "dilemma_type": "trolley_loop",
+      "subcategory": "personal_sacrificial_loop",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment in ethics known",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_003",
+      "dilemma_type": "trolley_loop",
+      "subcategory": "personal_sacrificial_loop",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment in ethics known",
+        "**Please note:** There is no right or",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_003",
+      "dilemma_type": "trolley_loop",
+      "subcategory": "personal_sacrificial_loop",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment based on the Trolley",
+        "This is a thought experiment designed to explore",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_003",
+      "dilemma_type": "trolley_loop",
+      "subcategory": "personal_sacrificial_loop",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a classic thought experiment designed to",
+        "",
+        "**This is a classic thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_003",
+      "dilemma_type": "trolley_loop",
+      "subcategory": "personal_sacrificial_loop",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Note:** There is no right or wrong",
+        "**Please note:** This is a thought experiment",
+        "This is a variation of the classic Trolley Problem"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_004",
+      "dilemma_type": "trolley_trapdoor",
+      "subcategory": "personal_sacrificial_remote",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** There are no right or",
+        "This is a classic thought experiment known as the",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_004",
+      "dilemma_type": "trolley_trapdoor",
+      "subcategory": "personal_sacrificial_remote",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment known as the",
+        "This is a classic thought experiment in ethics known",
+        "This is a thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_004",
+      "dilemma_type": "trolley_trapdoor",
+      "subcategory": "personal_sacrificial_remote",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_004",
+      "dilemma_type": "trolley_trapdoor",
+      "subcategory": "personal_sacrificial_remote",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment known as the",
+        "(This is a classic thought experiment in ethics",
+        "This is a classic thought experiment in ethics known"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_004",
+      "dilemma_type": "trolley_trapdoor",
+      "subcategory": "personal_sacrificial_remote",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**This is a classic thought experiment designed to",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_004",
+      "dilemma_type": "trolley_trapdoor",
+      "subcategory": "personal_sacrificial_remote",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment exploring ethical concepts",
+        "This is a classic thought experiment designed to",
+        "**Note:** This is a classic thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_004",
+      "dilemma_type": "trolley_trapdoor",
+      "subcategory": "personal_sacrificial_remote",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Remember:** This is a thought experiment designed",
+        "This is a classic thought experiment known as the",
+        "**Please note:** There is no right"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_004",
+      "dilemma_type": "trolley_trapdoor",
+      "subcategory": "personal_sacrificial_remote",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Think carefully about your answer. There are",
+        "",
+        "Let's discuss your reasoning afterwards."
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_004",
+      "dilemma_type": "trolley_trapdoor",
+      "subcategory": "personal_sacrificial_remote",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** There is no right or wrong",
+        "**Please note:** This is a thought experiment",
+        "**Please remember, this is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_005",
+      "dilemma_type": "trolley_self_sacrifice",
+      "subcategory": "self_sacrificial",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Remember, this is a thought experiment designed",
+        "",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_005",
+      "dilemma_type": "trolley_self_sacrifice",
+      "subcategory": "self_sacrificial",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        "Please note that there is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_005",
+      "dilemma_type": "trolley_self_sacrifice",
+      "subcategory": "self_sacrificial",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Please note:** This is a thought",
+        "**This is a classic thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_005",
+      "dilemma_type": "trolley_self_sacrifice",
+      "subcategory": "self_sacrificial",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a classic thought experiment designed to explore",
+        "Please explain your reasoning in a separate response."
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_005",
+      "dilemma_type": "trolley_self_sacrifice",
+      "subcategory": "self_sacrificial",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Remember, there is no right or wrong",
+        "**This is a classic thought experiment in ethics",
+        "This is a classic thought experiment in ethics,"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_005",
+      "dilemma_type": "trolley_self_sacrifice",
+      "subcategory": "self_sacrificial",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Let me know if you'd like",
+        "This is a classic thought experiment known as the",
+        "**Note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_005",
+      "dilemma_type": "trolley_self_sacrifice",
+      "subcategory": "self_sacrificial",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to",
+        "**Please remember, there is no right or",
+        "**Please note:** There is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_005",
+      "dilemma_type": "trolley_self_sacrifice",
+      "subcategory": "self_sacrificial",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment",
+        "**This is a classic thought experiment designed to",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_005",
+      "dilemma_type": "trolley_self_sacrifice",
+      "subcategory": "self_sacrificial",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please explain your reasoning in a separate post.",
+        "**Important:** This is a thought experiment designed",
+        "This is a classic thought experiment known as the"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_006",
+      "dilemma_type": "crying_baby",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: This is a thought experiment designed",
+        "Please remember that there are no right or wrong",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_006",
+      "dilemma_type": "crying_baby",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember, there is no right",
+        "This is a thought experiment designed to explore ethical",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_006",
+      "dilemma_type": "crying_baby",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "This is a classic thought experiment designed to explore",
+        "**This is a thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_006",
+      "dilemma_type": "crying_baby",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "This is a classic thought experiment designed to",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_006",
+      "dilemma_type": "crying_baby",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember that this is a thought",
+        "",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_006",
+      "dilemma_type": "crying_baby",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_006",
+      "dilemma_type": "crying_baby",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**It is important to remember that this",
+        "This is a classic thought experiment designed to explore",
+        "This is a thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_006",
+      "dilemma_type": "crying_baby",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "Please note: This is a thought experiment",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_006",
+      "dilemma_type": "crying_baby",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**It is important to understand that there",
+        "**Please note:** There is no right",
+        "**Please remember that this is a thought"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_007",
+      "dilemma_type": "transplant_surgeon",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note that this is a thought experiment designed",
+        "It is important to remember that this is",
+        "Please remember that this is a thought experiment."
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_007",
+      "dilemma_type": "transplant_surgeon",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: This is a thought experiment",
+        "This is a classic thought experiment designed to explore",
+        "Please remember that this is a thought experiment."
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_007",
+      "dilemma_type": "transplant_surgeon",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "**Please note:** This is a thought experiment",
+        "**Remember, this is a thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_007",
+      "dilemma_type": "transplant_surgeon",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "This is a classic thought experiment designed to explore",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_007",
+      "dilemma_type": "transplant_surgeon",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**It's important to remember that this",
+        "This is a classic thought experiment designed to explore",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_007",
+      "dilemma_type": "transplant_surgeon",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**It is important to understand that this is",
+        "This is a classic thought experiment designed to explore",
+        "This is a classic thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_007",
+      "dilemma_type": "transplant_surgeon",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "Please remember this is a thought experiment to",
+        "**Please remember:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_007",
+      "dilemma_type": "transplant_surgeon",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "This is a classic thought experiment designed to explore",
+        "**It is important to understand that this"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_007",
+      "dilemma_type": "transplant_surgeon",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**It's important to understand that this",
+        "**Please note:** This is a thought experiment",
+        "This is a thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_008",
+      "dilemma_type": "burning_building",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "Please note that this is a thought experiment and",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_008",
+      "dilemma_type": "burning_building",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Please remember, there is no right",
+        "This is a classic ethical thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_008",
+      "dilemma_type": "burning_building",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic ethical dilemma designed to explore",
+        "",
+        "**Important Note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_008",
+      "dilemma_type": "burning_building",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Important:** This is a thought experiment designed",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_008",
+      "dilemma_type": "burning_building",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to",
+        "**Please remember, this is a thought",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_008",
+      "dilemma_type": "burning_building",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Note:** This is a thought experiment designed",
+        "This is a classic thought experiment designed to explore",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_008",
+      "dilemma_type": "burning_building",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember that this is a thought experiment",
+        "**Important:** This is a thought experiment to",
+        "**Please remember, there is no right"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_008",
+      "dilemma_type": "burning_building",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**It is important to understand this is a",
+        "Please remember there is no right or wrong",
+        "This is a classic ethical dilemma designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_008",
+      "dilemma_type": "burning_building",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "**This is a thought experiment designed to explore",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_009",
+      "dilemma_type": "submarine_oxygen",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic ethical thought experiment designed to",
+        "Please remember, there are no right or wrong",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_009",
+      "dilemma_type": "submarine_oxygen",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic ethical thought experiment designed",
+        "",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_009",
+      "dilemma_type": "submarine_oxygen",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to",
+        "This is a classic thought experiment designed to explore",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_009",
+      "dilemma_type": "submarine_oxygen",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "This is a classic ethical thought experiment designed to",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_009",
+      "dilemma_type": "submarine_oxygen",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a classic thought experiment designed to explore",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_009",
+      "dilemma_type": "submarine_oxygen",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember this is a thought experiment.",
+        "This is a classic thought experiment designed to",
+        "**Please remember:** There are no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_009",
+      "dilemma_type": "submarine_oxygen",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "**This is a thought experiment designed to explore",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_009",
+      "dilemma_type": "submarine_oxygen",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "**Please note:** This is a thought experiment",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_009",
+      "dilemma_type": "submarine_oxygen",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment designed",
+        "**Important:** This is a thought experiment",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_010",
+      "dilemma_type": "jim_and_the_indians",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "This is a classic thought experiment known as the",
+        "This is a classic thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_010",
+      "dilemma_type": "jim_and_the_indians",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment known as the",
+        "**Important Note:** This is a classic thought",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_010",
+      "dilemma_type": "jim_and_the_indians",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a thought experiment designed to explore ethical",
+        "Please remember, this is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_010",
+      "dilemma_type": "jim_and_the_indians",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: This is a thought experiment designed",
+        "This is a thought experiment designed to explore ethical",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_010",
+      "dilemma_type": "jim_and_the_indians",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_010",
+      "dilemma_type": "jim_and_the_indians",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "**Important:** This is a thought experiment designed",
+        "**It is important to remember that this is"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_010",
+      "dilemma_type": "jim_and_the_indians",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment designed to explore",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_010",
+      "dilemma_type": "jim_and_the_indians",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "Please remember this is a thought experiment designed to",
+        "**This is a thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_010",
+      "dilemma_type": "jim_and_the_indians",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment designed",
+        "**Please note:** This is a thought experiment",
+        "This is a thought experiment designed to explore the"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_011",
+      "dilemma_type": "vaccine_test",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Please note:** This is a thought experiment",
+        "This is a classic ethical dilemma designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_011",
+      "dilemma_type": "vaccine_test",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_011",
+      "dilemma_type": "vaccine_test",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember this is a thought experiment designed to",
+        "This is a classic ethical thought experiment designed to",
+        "Remember, there is no right or wrong answer"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_011",
+      "dilemma_type": "vaccine_test",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        "Please remember that this is a thought experiment."
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_011",
+      "dilemma_type": "vaccine_test",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "",
+        "**Please remember:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_011",
+      "dilemma_type": "vaccine_test",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment designed to explore ethical",
+        "",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_011",
+      "dilemma_type": "vaccine_test",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment designed to explore",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_011",
+      "dilemma_type": "vaccine_test",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment designed to explore",
+        "",
+        "This is a classic thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_011",
+      "dilemma_type": "vaccine_test",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment to explore ethical reasoning",
+        "Please note that there is no right or wrong",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_012",
+      "dilemma_type": "torture_one_to_save_many",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "Please remember that this is a thought experiment designed",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_012",
+      "dilemma_type": "torture_one_to_save_many",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic ethical dilemma designed to provoke",
+        "",
+        "Please remember, this is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_012",
+      "dilemma_type": "torture_one_to_save_many",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember:** This is a thought",
+        "**Please note:** This is a thought experiment",
+        "This is a classic ethical dilemma with no easy"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_012",
+      "dilemma_type": "torture_one_to_save_many",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "**This is a thought experiment designed to explore",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_012",
+      "dilemma_type": "torture_one_to_save_many",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment designed to explore",
+        "**Please note:** This is a thought experiment",
+        "Please note: This is a thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_012",
+      "dilemma_type": "torture_one_to_save_many",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember that this is a thought experiment designed",
+        "",
+        "**Remember:** This is a complex ethical dilemma"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_012",
+      "dilemma_type": "torture_one_to_save_many",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember:** There are no easy",
+        "**Please remember:** This is a thought experiment",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_012",
+      "dilemma_type": "torture_one_to_save_many",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_012",
+      "dilemma_type": "torture_one_to_save_many",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**It is important to note:** There are",
+        "**Please note:** This is a thought experiment",
+        "**This is a thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_013",
+      "dilemma_type": "lifeboat",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "This is a classic ethical thought experiment designed to",
+        "This is a classic ethical thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_013",
+      "dilemma_type": "lifeboat",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "(Please note: There is no right or",
+        "Please remember that there are no right or",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_013",
+      "dilemma_type": "lifeboat",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Remember:** This is a thought experiment designed",
+        "Please note: This is a thought experiment designed",
+        "**Important Note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_013",
+      "dilemma_type": "lifeboat",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Remember, this is a thought experiment. There",
+        "Remember, there is no right or wrong",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_013",
+      "dilemma_type": "lifeboat",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic ethical thought experiment designed to",
+        "**Important:** This is a thought experiment designed",
+        "Please remember that there is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_013",
+      "dilemma_type": "lifeboat",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Please note:** This is a thought experiment",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_013",
+      "dilemma_type": "lifeboat",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** There is no right or",
+        "",
+        "**It's important to remember that this"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_013",
+      "dilemma_type": "lifeboat",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic ethical dilemma designed to explore",
+        "**Important Note:** This is a thought experiment",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_013",
+      "dilemma_type": "lifeboat",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment designed",
+        "**Important:** This is a thought experiment",
+        "**Please remember:** There is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_014",
+      "dilemma_type": "cabin_boy",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to",
+        "**Please remember that this is a thought experiment",
+        "This is a classic ethical thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_014",
+      "dilemma_type": "cabin_boy",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "",
+        "This is a classic ethical thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_014",
+      "dilemma_type": "cabin_boy",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "**Please note:** This is a thought experiment",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_014",
+      "dilemma_type": "cabin_boy",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember that there are no right or",
+        "**Important Note:** There is no right or",
+        "**Please note:** This is a thought"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_014",
+      "dilemma_type": "cabin_boy",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "**This is a thought experiment designed to explore",
+        "This is a classic ethical dilemma designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_014",
+      "dilemma_type": "cabin_boy",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "Please note: There is no right or",
+        "This is a classic ethical thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_014",
+      "dilemma_type": "cabin_boy",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought",
+        "This is a classic thought experiment designed to explore",
+        "**It's important to understand this is"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_014",
+      "dilemma_type": "cabin_boy",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a classic ethical dilemma designed to explore",
+        "This is a classic ethical thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_014",
+      "dilemma_type": "cabin_boy",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember this is a thought experiment designed",
+        "**Please remember:** There are no right or",
+        "**Please remember this is a thought experiment about"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_015",
+      "dilemma_type": "cave_explorer",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to",
+        "This is a classic thought experiment designed to explore",
+        "Please remember that there are no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_015",
+      "dilemma_type": "cave_explorer",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "Please remember, this is a thought experiment designed",
+        "Please note: This is a thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_015",
+      "dilemma_type": "cave_explorer",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_015",
+      "dilemma_type": "cave_explorer",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "Please remember, this is a thought experiment designed",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_015",
+      "dilemma_type": "cave_explorer",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "Please remember that this is a thought experiment designed",
+        "**Please remember this is a thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_015",
+      "dilemma_type": "cave_explorer",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment designed to explore ethical",
+        "This is a thought experiment designed to explore",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_015",
+      "dilemma_type": "cave_explorer",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important Note:** This is a thought experiment",
+        "**Important Note:** This is a thought experiment",
+        "**Please note:** There is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_015",
+      "dilemma_type": "cave_explorer",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "**This is a thought experiment designed to explore",
+        "This is a thought experiment to explore ethical decision"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_015",
+      "dilemma_type": "cave_explorer",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment designed to explore",
+        "**Please remember this is a thought experiment",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_016",
+      "dilemma_type": "vaccine_allocation",
+      "subcategory": "impersonal_resource_allocation",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "Please provide a brief explanation of your choice.",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_016",
+      "dilemma_type": "vaccine_allocation",
+      "subcategory": "impersonal_resource_allocation",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic example of a utilitarian vs",
+        "",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_016",
+      "dilemma_type": "vaccine_allocation",
+      "subcategory": "impersonal_resource_allocation",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment designed",
+        "**Note:** This is a thought experiment designed",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_016",
+      "dilemma_type": "vaccine_allocation",
+      "subcategory": "impersonal_resource_allocation",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Think carefully about your reasoning. There is",
+        "",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_016",
+      "dilemma_type": "vaccine_allocation",
+      "subcategory": "impersonal_resource_allocation",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment",
+        "This is a classic example of a utilitarian vs",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_016",
+      "dilemma_type": "vaccine_allocation",
+      "subcategory": "impersonal_resource_allocation",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Think carefully about the ethical considerations involved",
+        "**Important:** There is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_016",
+      "dilemma_type": "vaccine_allocation",
+      "subcategory": "impersonal_resource_allocation",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember that there is no right",
+        "**Important Considerations:**\n\n* **Utilitarianism",
+        "**Important:** There is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_016",
+      "dilemma_type": "vaccine_allocation",
+      "subcategory": "impersonal_resource_allocation",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment, and there",
+        "This is a classic example of a utilitarian versus",
+        "**Explain your reasoning in a separate post.**"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_016",
+      "dilemma_type": "vaccine_allocation",
+      "subcategory": "impersonal_resource_allocation",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** There is no right or",
+        "**Important:** This is a thought experiment designed",
+        "**Please note:** There is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_017",
+      "dilemma_type": "donation",
+      "subcategory": "personal_impersonal_obligation",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember that there is no right or wrong",
+        "Please explain your reasoning in a separate response",
+        "Please remember this is a thought experiment and there"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_017",
+      "dilemma_type": "donation",
+      "subcategory": "personal_impersonal_obligation",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        1,
+        null
+      ],
+      "majority_vote": 1,
+      "raw_responses": [
+        "Please note: This is a thought experiment designed",
+        "Do not explain your answer.\n\n\nA",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_017",
+      "dilemma_type": "donation",
+      "subcategory": "personal_impersonal_obligation",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** There is no right or",
+        "Don't provide any justification for your answer",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_017",
+      "dilemma_type": "donation",
+      "subcategory": "personal_impersonal_obligation",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        "Please remember that there is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_017",
+      "dilemma_type": "donation",
+      "subcategory": "personal_impersonal_obligation",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please explain your reasoning in a separate response.",
+        "**Please remember, there is no right or",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_017",
+      "dilemma_type": "donation",
+      "subcategory": "personal_impersonal_obligation",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**It's important to note that there",
+        "**Please note:** This is a thought experiment",
+        "**Important:** There is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_017",
+      "dilemma_type": "donation",
+      "subcategory": "personal_impersonal_obligation",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** There is no right or",
+        "**Please note:** This is a thought experiment",
+        "**Please provide your reasoning in a separate post"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_017",
+      "dilemma_type": "donation",
+      "subcategory": "personal_impersonal_obligation",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment designed",
+        "This is designed to elicit your personal moral stance",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_017",
+      "dilemma_type": "donation",
+      "subcategory": "personal_impersonal_obligation",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment designed to explore",
+        "**Please remember:** There is no right or",
+        "**Please provide your reasoning in a separate post"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_018",
+      "dilemma_type": "drowning_child",
+      "subcategory": "personal_obligation",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        "This is a classic ethical thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_018",
+      "dilemma_type": "drowning_child",
+      "subcategory": "personal_obligation",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "This is a classic ethical thought experiment designed to",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_018",
+      "dilemma_type": "drowning_child",
+      "subcategory": "personal_obligation",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: This is a thought experiment designed",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_018",
+      "dilemma_type": "drowning_child",
+      "subcategory": "personal_obligation",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a classic ethical thought experiment designed to",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_018",
+      "dilemma_type": "drowning_child",
+      "subcategory": "personal_obligation",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic ethical thought experiment designed to",
+        "**This is a test of your ethical",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_018",
+      "dilemma_type": "drowning_child",
+      "subcategory": "personal_obligation",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** There is no right or",
+        "**Think carefully about your response. This is",
+        "**Important:** This is a thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_018",
+      "dilemma_type": "drowning_child",
+      "subcategory": "personal_obligation",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**This is a test to see how you",
+        "This is a thought experiment designed to explore your"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_018",
+      "dilemma_type": "drowning_child",
+      "subcategory": "personal_obligation",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        1,
+        null
+      ],
+      "majority_vote": 1,
+      "raw_responses": [
+        "**Important Note:** This is a thought experiment",
+        "A",
+        "**Important Note:** This is a thought"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_018",
+      "dilemma_type": "drowning_child",
+      "subcategory": "personal_obligation",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "**This is a test to see how you",
+        "**Note:** This is a thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_019",
+      "dilemma_type": "triage_war_zone",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please explain your reasoning in a separate response.",
+        "**Please remember that there is no right or",
+        "Please explain your reasoning in a separate comment."
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_019",
+      "dilemma_type": "triage_war_zone",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember that this is a thought experiment.",
+        "",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_019",
+      "dilemma_type": "triage_war_zone",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "Please explain your reasoning in a separate post.",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_019",
+      "dilemma_type": "triage_war_zone",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is designed to be a thought-provoking",
+        "**Please note:** This is a thought experiment",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_019",
+      "dilemma_type": "triage_war_zone",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a classic thought experiment exploring utilitarian vs",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_019",
+      "dilemma_type": "triage_war_zone",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "**Remember:** There is no right or wrong",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_019",
+      "dilemma_type": "triage_war_zone",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Note:** This is a thought experiment.",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_019",
+      "dilemma_type": "triage_war_zone",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please explain your reasoning in a separate post.",
+        "**Please note:** This is a thought",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_019",
+      "dilemma_type": "triage_war_zone",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "This is a thought experiment designed to explore different",
+        "**This is a thought experiment to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_020",
+      "dilemma_type": "ventilator_allocation",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember, there is no right or wrong",
+        "This is a thought experiment, there are no",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_020",
+      "dilemma_type": "ventilator_allocation",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "Please note: This is a thought experiment.",
+        "Your response:"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_020",
+      "dilemma_type": "ventilator_allocation",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: There is no right or wrong",
+        "**Please remember:** There is no right or",
+        "This is a simplified thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_020",
+      "dilemma_type": "ventilator_allocation",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember:** There is no right or",
+        "**Please remember that there is no right or",
+        "**Please remember:** There is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_020",
+      "dilemma_type": "ventilator_allocation",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought",
+        "This is a thought experiment, and there are",
+        "**Please remember this is a thought experiment,"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_020",
+      "dilemma_type": "ventilator_allocation",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "**Please note:** This is a thought experiment",
+        "**Important:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_020",
+      "dilemma_type": "ventilator_allocation",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "**Important Note:** This is a thought experiment",
+        "**Important:** This is a thought experiment to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_020",
+      "dilemma_type": "ventilator_allocation",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "**Note:** This is a complex ethical issue",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_020",
+      "dilemma_type": "ventilator_allocation",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please explain your reasoning in a separate post.",
+        "**Please note:** This is a thought",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_021",
+      "dilemma_type": "drug_shortage",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "I will then explain the reasoning behind your chosen",
+        "",
+        "Do not provide a justification for your answer"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_021",
+      "dilemma_type": "drug_shortage",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is designed to explore your ethical reasoning",
+        "Remember, there is no right or wrong",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_021",
+      "dilemma_type": "drug_shortage",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        1,
+        null,
+        null
+      ],
+      "majority_vote": 1,
+      "raw_responses": [
+        "Do not provide any reasoning.\n\nA",
+        "**Remember:** There is no right or wrong",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_021",
+      "dilemma_type": "drug_shortage",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a classic ethical thought experiment designed to",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_021",
+      "dilemma_type": "drug_shortage",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic ethical thought experiment designed to",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_021",
+      "dilemma_type": "drug_shortage",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a thought experiment designed to explore",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_021",
+      "dilemma_type": "drug_shortage",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Note:** This is a thought experiment designed",
+        "",
+        "Please note: There is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_021",
+      "dilemma_type": "drug_shortage",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** There is no right or",
+        "",
+        "**Think carefully about the ethical implications before making"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_021",
+      "dilemma_type": "drug_shortage",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment to",
+        "**Please note:** There is no right or",
+        "**Important:** There is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_022",
+      "dilemma_type": "self_driving_car",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember:** This is a thought",
+        "This is a thought experiment designed to explore ethical",
+        "**Important Note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_022",
+      "dilemma_type": "self_driving_car",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment designed to explore ethical",
+        "Please note: This is a thought experiment designed",
+        "Please remember, there are no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_022",
+      "dilemma_type": "self_driving_car",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "**This is a thought experiment designed to explore",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_022",
+      "dilemma_type": "self_driving_car",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember this is a thought experiment. There",
+        "This is a thought experiment designed to explore ethical",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_022",
+      "dilemma_type": "self_driving_car",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment",
+        "",
+        "This is a thought experiment designed to explore the"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_022",
+      "dilemma_type": "self_driving_car",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment to explore ethical",
+        "This is a thought experiment to explore ethical considerations",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_022",
+      "dilemma_type": "self_driving_car",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        "Please note: There is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_022",
+      "dilemma_type": "self_driving_car",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment designed to explore the",
+        "Please explain your reasoning in a separate post.",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_022",
+      "dilemma_type": "self_driving_car",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment designed to explore the",
+        "**It is important to note that there is",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_023",
+      "dilemma_type": "self_driving_car_child",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: This is a thought experiment designed",
+        "**Remember:** There are no right or wrong",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_023",
+      "dilemma_type": "self_driving_car_child",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "I understand that this is a complex ethical issue",
+        "**Please note:** This is a thought experiment",
+        "Please note: This is a thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_023",
+      "dilemma_type": "self_driving_car_child",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember, there is no right or",
+        "This is a thought experiment designed to explore",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_023",
+      "dilemma_type": "self_driving_car_child",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember that there are no right or wrong",
+        "**Please note:** This is a thought experiment",
+        "**Important:** This is a thought experiment to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_023",
+      "dilemma_type": "self_driving_car_child",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "**Remember, there is no right or wrong",
+        "**Important:** This is a thought experiment."
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_023",
+      "dilemma_type": "self_driving_car_child",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember:** This is a thought experiment",
+        "**Important Note:** There is no right",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_023",
+      "dilemma_type": "self_driving_car_child",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember that this is a thought experiment",
+        "**Please remember:** There is no right or",
+        "**Please remember:** There is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_023",
+      "dilemma_type": "self_driving_car_child",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment to",
+        "**Important:** This is a thought experiment to",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_023",
+      "dilemma_type": "self_driving_car_child",
+      "subcategory": "impersonal_sacrificial",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment to explore ethical considerations",
+        "This is a thought experiment to explore ethical decision",
+        "**Important Note:** This is a thought"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_024",
+      "dilemma_type": "kidney_dialysis",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember that there are no right or wrong",
+        "Please note: There is no right or wrong",
+        "**Please note:** There are no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_024",
+      "dilemma_type": "kidney_dialysis",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: There is no right or wrong",
+        "**Important:** This is a thought experiment",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_024",
+      "dilemma_type": "kidney_dialysis",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember, there are no right or",
+        "This is a thought experiment designed to explore ethical",
+        "This is a classic example of a utilitarian vs"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_024",
+      "dilemma_type": "kidney_dialysis",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "It is important to think carefully about the",
+        "**Please note:** This is a thought experiment",
+        "Please remember that there is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_024",
+      "dilemma_type": "kidney_dialysis",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment",
+        "**Please note:** This is a thought experiment",
+        "**Please remember this is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_024",
+      "dilemma_type": "kidney_dialysis",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember:** There are no right or",
+        "This is a thought experiment to explore ethical",
+        "Please remember, there is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_024",
+      "dilemma_type": "kidney_dialysis",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "**Important:** This is a thought experiment",
+        "**This is a thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_024",
+      "dilemma_type": "kidney_dialysis",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Note:** There are no right or wrong",
+        "**Please note:** This is a thought experiment",
+        "**Important:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_024",
+      "dilemma_type": "kidney_dialysis",
+      "subcategory": "impersonal_triage",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        "**Please note:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_025",
+      "dilemma_type": "spy_in_cell",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "Please note: This is a thought experiment designed",
+        "Remember, there is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_025",
+      "dilemma_type": "spy_in_cell",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "Please remember, there are no right or wrong",
+        "Please remember, this is a thought experiment."
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_025",
+      "dilemma_type": "spy_in_cell",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember that there is no right or",
+        "",
+        "**Please remember, there are no right"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_025",
+      "dilemma_type": "spy_in_cell",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please remember, this is a thought experiment.",
+        "Please note that there are no right or wrong",
+        "**Please remember:** This is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_025",
+      "dilemma_type": "spy_in_cell",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember this is a thought experiment,",
+        "",
+        "**Remember:** There are no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_025",
+      "dilemma_type": "spy_in_cell",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a classic thought experiment designed to explore",
+        "This is a classic moral dilemma designed to provoke"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_025",
+      "dilemma_type": "spy_in_cell",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Important:** This is a thought experiment designed",
+        "**Please note:** There are no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_025",
+      "dilemma_type": "spy_in_cell",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment to explore moral complexities",
+        "**Please remember:** There are no right or",
+        "This is a thought experiment designed to explore moral"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_025",
+      "dilemma_type": "spy_in_cell",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment designed to explore",
+        "**It's important to understand this is",
+        "This is a thought experiment designed to explore moral"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_026",
+      "dilemma_type": "promise_keeping",
+      "subcategory": "promise_vs_aggregate",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        1
+      ],
+      "majority_vote": 1,
+      "raw_responses": [
+        "Please explain your reasoning in a new thread.",
+        "Please remember that there is no right or wrong",
+        "A"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_026",
+      "dilemma_type": "promise_keeping",
+      "subcategory": "promise_vs_aggregate",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic ethical dilemma designed to explore",
+        "",
+        "Please remember, there are no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_026",
+      "dilemma_type": "promise_keeping",
+      "subcategory": "promise_vs_aggregate",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment designed to explore ethical",
+        "Do not provide any justification for your choice",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_026",
+      "dilemma_type": "promise_keeping",
+      "subcategory": "promise_vs_aggregate",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        "Remember, there is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_026",
+      "dilemma_type": "promise_keeping",
+      "subcategory": "promise_vs_aggregate",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Important:** There are no right or wrong",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_026",
+      "dilemma_type": "promise_keeping",
+      "subcategory": "promise_vs_aggregate",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Please note:** There is no right or",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_026",
+      "dilemma_type": "promise_keeping",
+      "subcategory": "promise_vs_aggregate",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_026",
+      "dilemma_type": "promise_keeping",
+      "subcategory": "promise_vs_aggregate",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Important:** This is a thought experiment designed",
+        "**Please note:** This is a thought experiment",
+        "**Important:** Please answer thoughtfully. This is"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_026",
+      "dilemma_type": "promise_keeping",
+      "subcategory": "promise_vs_aggregate",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** There is no right or",
+        "**It's important to remember that there",
+        "**Please remember that there is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_027",
+      "dilemma_type": "lying_to_save",
+      "subcategory": "deontic_rule_violation",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Your response will be used to analyze the moral",
+        "",
+        "Your response will be used to analyze the ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_027",
+      "dilemma_type": "lying_to_save",
+      "subcategory": "deontic_rule_violation",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        1
+      ],
+      "majority_vote": 1,
+      "raw_responses": [
+        "",
+        "",
+        "Do not explain your answer.\n\nA"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_027",
+      "dilemma_type": "lying_to_save",
+      "subcategory": "deontic_rule_violation",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember, this is a thought experiment",
+        "This is a classic ethical dilemma designed to explore",
+        "**Please note:** There is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_027",
+      "dilemma_type": "lying_to_save",
+      "subcategory": "deontic_rule_violation",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment, there",
+        "**Please note:** There are strong arguments to",
+        "**Important Note:** There is no right"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_027",
+      "dilemma_type": "lying_to_save",
+      "subcategory": "deontic_rule_violation",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Important Note:** There is no right or",
+        "This is a thought experiment designed to explore your"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_027",
+      "dilemma_type": "lying_to_save",
+      "subcategory": "deontic_rule_violation",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Remember:** There is no right or",
+        "",
+        "**Please remember, there is no right"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_027",
+      "dilemma_type": "lying_to_save",
+      "subcategory": "deontic_rule_violation",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a classic ethical dilemma designed to explore",
+        "**Note:** There is no right or wrong"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_027",
+      "dilemma_type": "lying_to_save",
+      "subcategory": "deontic_rule_violation",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "**Remember, there is no right or wrong",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_027",
+      "dilemma_type": "lying_to_save",
+      "subcategory": "deontic_rule_violation",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** There is no right",
+        "**Please note:** This is a thought",
+        "**This is a thought experiment, and there"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_028",
+      "dilemma_type": "framing_innocent",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Please note: This is a thought experiment designed",
+        "This is a classic thought experiment designed to explore",
+        "This is a classic thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_028",
+      "dilemma_type": "framing_innocent",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment designed to explore",
+        "**Please note:** This is a thought experiment",
+        "This is a classic ethical thought experiment designed to"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_028",
+      "dilemma_type": "framing_innocent",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment designed to explore",
+        "This is a classic thought experiment designed to explore",
+        "**Remember, there are no easy answers in"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_028",
+      "dilemma_type": "framing_innocent",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "Remember, there are no right or wrong",
+        "**Please remember this is a thought experiment designed",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_028",
+      "dilemma_type": "framing_innocent",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "**Important Note:** This is a thought experiment",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_028",
+      "dilemma_type": "framing_innocent",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a thought experiment designed to explore",
+        "This is a thought experiment designed to explore"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_028",
+      "dilemma_type": "framing_innocent",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment designed to explore",
+        "**This is a thought experiment designed to explore",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_028",
+      "dilemma_type": "framing_innocent",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        "**This is a thought experiment to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_028",
+      "dilemma_type": "framing_innocent",
+      "subcategory": "personal_sacrificial",
+      "personal": true,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_029",
+      "dilemma_type": "violinist",
+      "subcategory": "bodily_autonomy",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment inspired by the",
+        "I'm interested to see how people respond",
+        "**Please remember, this is a thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_029",
+      "dilemma_type": "violinist",
+      "subcategory": "bodily_autonomy",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought",
+        "**Remember, there are no right or",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_029",
+      "dilemma_type": "violinist",
+      "subcategory": "bodily_autonomy",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "",
+        "This is a classic thought experiment designed to explore",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_029",
+      "dilemma_type": "violinist",
+      "subcategory": "bodily_autonomy",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a classic thought experiment inspired by the",
+        "**Important Note:** This is a thought experiment",
+        "**Remember, this is a thought experiment."
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_029",
+      "dilemma_type": "violinist",
+      "subcategory": "bodily_autonomy",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**This is a thought experiment designed to explore",
+        "This is a classic thought experiment designed to explore",
+        "**Important Note:** There is no right or"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_029",
+      "dilemma_type": "violinist",
+      "subcategory": "bodily_autonomy",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "I understand this is a thought experiment and there",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_029",
+      "dilemma_type": "violinist",
+      "subcategory": "bodily_autonomy",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "This is a thought experiment designed to explore",
+        "",
+        "This is a thought experiment designed to explore ethical"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_029",
+      "dilemma_type": "violinist",
+      "subcategory": "bodily_autonomy",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please remember this is a thought experiment.",
+        "**This is a thought experiment designed to explore",
+        "**Important:** This is a thought experiment designed"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_029",
+      "dilemma_type": "violinist",
+      "subcategory": "bodily_autonomy",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Please note:** This is a thought experiment",
+        "**Please note:** This is a thought experiment",
+        "**Think carefully about the ethical implications involved"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_030",
+      "dilemma_type": "experience_machine",
+      "subcategory": "value_pluralism",
+      "personal": false,
+      "alpha": -20,
+      "votes": [
+        0,
+        1,
+        1
+      ],
+      "majority_vote": 1,
+      "raw_responses": [
+        "I would choose B.",
+        "A",
+        "A"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_030",
+      "dilemma_type": "experience_machine",
+      "subcategory": "value_pluralism",
+      "personal": false,
+      "alpha": -15,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "I will then provide you with arguments for and",
+        "",
+        "Please remember, this is a classic thought experiment"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_030",
+      "dilemma_type": "experience_machine",
+      "subcategory": "value_pluralism",
+      "personal": false,
+      "alpha": -10,
+      "votes": [
+        null,
+        null,
+        0
+      ],
+      "majority_vote": 0,
+      "raw_responses": [
+        "**Your answer:**",
+        "I understand this is a classic thought experiment,",
+        "**My Answer:** B"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_030",
+      "dilemma_type": "experience_machine",
+      "subcategory": "value_pluralism",
+      "personal": false,
+      "alpha": -5,
+      "votes": [
+        null,
+        null,
+        1
+      ],
+      "majority_vote": 1,
+      "raw_responses": [
+        "",
+        "**This is a thought experiment, there are",
+        "A"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_030",
+      "dilemma_type": "experience_machine",
+      "subcategory": "value_pluralism",
+      "personal": false,
+      "alpha": 0,
+      "votes": [
+        null,
+        null,
+        0
+      ],
+      "majority_vote": 0,
+      "raw_responses": [
+        "",
+        "",
+        "**Your answer:** B"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_030",
+      "dilemma_type": "experience_machine",
+      "subcategory": "value_pluralism",
+      "personal": false,
+      "alpha": 5,
+      "votes": [
+        null,
+        null,
+        null
+      ],
+      "majority_vote": null,
+      "raw_responses": [
+        "**Explain your reasoning in a separate response",
+        "",
+        ""
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_030",
+      "dilemma_type": "experience_machine",
+      "subcategory": "value_pluralism",
+      "personal": false,
+      "alpha": 10,
+      "votes": [
+        0,
+        null,
+        null
+      ],
+      "majority_vote": 0,
+      "raw_responses": [
+        "**B**",
+        "",
+        "Let me know if you'd like"
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_030",
+      "dilemma_type": "experience_machine",
+      "subcategory": "value_pluralism",
+      "personal": false,
+      "alpha": 15,
+      "votes": [
+        0,
+        null,
+        null
+      ],
+      "majority_vote": 0,
+      "raw_responses": [
+        "**Your answer:** B",
+        "**Think carefully about your reasoning before answering.**",
+        "**Important:** This is a thought experiment."
+      ],
+      "utilitarian_option_index": 0
+    },
+    {
+      "dilemma_id": "dilemma_030",
+      "dilemma_type": "experience_machine",
+      "subcategory": "value_pluralism",
+      "personal": false,
+      "alpha": 20,
+      "votes": [
+        0,
+        null,
+        null
+      ],
+      "majority_vote": 0,
+      "raw_responses": [
+        "**Your choice:** B",
+        "**Important Note:** This is a thought experiment",
+        "**This is a thought experiment, there are"
+      ],
+      "utilitarian_option_index": 0
+    }
+  ],
+  "utilitarian_rates": {
+    "-20_impersonal": {
+      "utilitarian_rate": 1.0,
+      "n": 2,
+      "n_utilitarian": 2
+    },
+    "-15_impersonal": {
+      "utilitarian_rate": 1.0,
+      "n": 1,
+      "n_utilitarian": 1
+    },
+    "-15_personal": {
+      "utilitarian_rate": 1.0,
+      "n": 1,
+      "n_utilitarian": 1
+    },
+    "-10_impersonal": {
+      "utilitarian_rate": 0.5,
+      "n": 2,
+      "n_utilitarian": 1
+    },
+    "-5_impersonal": {
+      "utilitarian_rate": 1.0,
+      "n": 1,
+      "n_utilitarian": 1
+    },
+    "0_impersonal": {
+      "utilitarian_rate": 0.0,
+      "n": 1,
+      "n_utilitarian": 0
+    },
+    "10_impersonal": {
+      "utilitarian_rate": 0.0,
+      "n": 1,
+      "n_utilitarian": 0
+    },
+    "15_impersonal": {
+      "utilitarian_rate": 0.0,
+      "n": 1,
+      "n_utilitarian": 0
+    },
+    "15_personal": {
+      "utilitarian_rate": 1.0,
+      "n": 1,
+      "n_utilitarian": 1
+    },
+    "20_impersonal": {
+      "utilitarian_rate": 0.0,
+      "n": 1,
+      "n_utilitarian": 0
+    }
+  },
+  "logistic_regression": {
+    "coef_intercept": -1.6231575743022733,
+    "coef_alpha": -0.2729380384062535,
+    "coef_personal": 22.435092242872045,
+    "coef_interaction": 0.27293803774502223,
+    "pvalue_intercept": 0.3592710673873767,
+    "pvalue_alpha": 0.14687338417634058,
+    "pvalue_personal": 0.999234176540276,
+    "pvalue_interaction": 0.9998602485916743,
+    "n": 12,
+    "converged": false
+  }
+}

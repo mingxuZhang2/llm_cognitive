@@ -1,0 +1,235 @@
+{
+  "model": "Mistral-7B-Instruct-v0.3",
+  "false_belief_standard": {
+    "accuracy": 0.8,
+    "correct": 8,
+    "total": 10,
+    "ambiguous": 0,
+    "details": [
+      {
+        "response": "She will look in the cookie jar.",
+        "score": 1,
+        "correct_ans": "cookie jar"
+      },
+      {
+        "response": "Sophia will look in her purse.",
+        "score": 1,
+        "correct_ans": "purse"
+      },
+      {
+        "response": "He will look in the closet.",
+        "score": 1,
+        "correct_ans": "closet"
+      },
+      {
+        "response": "The child will look in the blue box.",
+        "score": 0,
+        "correct_ans": "red box"
+      },
+      {
+        "response": "Tom will look in the refrigerator or office cabinet.",
+        "score": 1,
+        "correct_ans": "refrigerator"
+      },
+      {
+        "response": "She will look by the kitchen table.",
+        "score": 1,
+        "correct_ans": "kitchen table"
+      },
+      {
+        "response": "The boy will look in the shelf.",
+        "score": 1,
+        "correct_ans": "shelf"
+      },
+      {
+        "response": "Living room couch.",
+        "score": 0,
+        "correct_ans": "jacket pocket"
+      },
+      {
+        "response": "David will look in the bowl by the entrance.",
+        "score": 1,
+        "correct_ans": "bowl by the entrance"
+      },
+      {
+        "response": "Top drawer. (The teacher doesn't know the janitor moved them.)",
+        "score": 1,
+        "correct_ans": "top drawer"
+      }
+    ]
+  },
+  "false_belief_compressed": {
+    "accuracy": 1.0,
+    "correct": 9,
+    "total": 9,
+    "ambiguous": 1,
+    "details": [
+      {
+        "response": "She will look in the cookie jar. (Mia is unaware of the change.)",
+        "score": 1,
+        "correct_ans": "cookie jar"
+      },
+      {
+        "response": "She will look in her purse.",
+        "score": 1,
+        "correct_ans": "purse"
+      },
+      {
+        "response": "He will look in the closet. (He doesn't know it's not there anymore.)",
+        "score": 1,
+        "correct_ans": "closet"
+      },
+      {
+        "response": "The child will look in the red box.",
+        "score": 1,
+        "correct_ans": "red box"
+      },
+      {
+        "response": "Tom will look in the refrigerator. (He doesn't know it's not there yet.)",
+        "score": 1,
+        "correct_ans": "refrigerator"
+      },
+      {
+        "response": "She will look on the kitchen table. (Elena doesn't know they've been moved.)",
+        "score": 1,
+        "correct_ans": "kitchen table"
+      },
+      {
+        "response": "He will look on the shelf.",
+        "score": 1,
+        "correct_ans": "shelf"
+      },
+      {
+        "response": "Maria will look in her jacket pocket.",
+        "score": 1,
+        "correct_ans": "jacket pocket"
+      },
+      {
+        "response": "By the entrance (initially).",
+        "score": -1,
+        "correct_ans": "bowl by the entrance"
+      },
+      {
+        "response": "The teacher will look in the top drawer (first).",
+        "score": 1,
+        "correct_ans": "top drawer"
+      }
+    ]
+  },
+  "intention_standard": {
+    "accuracy": 1.0,
+    "correct": 2,
+    "total": 2,
+    "ambiguous": 8,
+    "details": [
+      {
+        "response": "The person wants to close the window.",
+        "score": 1,
+        "correct_ans": "close the window"
+      },
+      {
+        "response": "The mother wants to express dissatisfaction indirectly.",
+        "score": -1,
+        "correct_ans": "clean the room"
+      },
+      {
+        "response": "The customer wants patience.",
+        "score": -1,
+        "correct_ans": "be served faster"
+      },
+      {
+        "response": "The student wants a solution to the math problem.",
+        "score": -1,
+        "correct_ans": "help with the problem"
+      },
+      {
+        "response": "The man wants the teenager to help with the heavy bags.",
+        "score": -1,
+        "correct_ans": "help carrying the bags"
+      },
+      {
+        "response": "Boss wants to adjourn the meeting.",
+        "score": -1,
+        "correct_ans": "end the meeting"
+      },
+      {
+        "response": "She wants to leave.",
+        "score": -1,
+        "correct_ans": "leave the party"
+      },
+      {
+        "response": "She wants to know if the other roommate has noticed the trash problem.",
+        "score": -1,
+        "correct_ans": "take out the trash"
+      },
+      {
+        "response": "The passenger wants to appear nonchalant about speeding.",
+        "score": -1,
+        "correct_ans": "slow down"
+      },
+      {
+        "response": "The teacher wants the student to study more.",
+        "score": 1,
+        "correct_ans": "study more"
+      }
+    ]
+  },
+  "intention_compressed": {
+    "accuracy": 0.5,
+    "correct": 1,
+    "total": 2,
+    "ambiguous": 8,
+    "details": [
+      {
+        "response": "Close the window.",
+        "score": 1,
+        "correct_ans": "close the window"
+      },
+      {
+        "response": "She wants it clean.",
+        "score": -1,
+        "correct_ans": "clean the room"
+      },
+      {
+        "response": "They want prompt service.",
+        "score": -1,
+        "correct_ans": "be served faster"
+      },
+      {
+        "response": "She wants a solution.",
+        "score": -1,
+        "correct_ans": "help with the problem"
+      },
+      {
+        "response": "He wants the boy to help with the heavy bags.",
+        "score": -1,
+        "correct_ans": "help carrying the bags"
+      },
+      {
+        "response": "The boss wants to conclude the meeting.",
+        "score": -1,
+        "correct_ans": "end the meeting"
+      },
+      {
+        "response": "She wants to leave.",
+        "score": -1,
+        "correct_ans": "leave the party"
+      },
+      {
+        "response": "She wants to discuss the trash situation.",
+        "score": 0,
+        "correct_ans": "take out the trash"
+      },
+      {
+        "response": "Acknowledgement of fast travel speed.",
+        "score": -1,
+        "correct_ans": "slow down"
+      },
+      {
+        "response": "The teacher wants the student to spend more time on the test.",
+        "score": -1,
+        "correct_ans": "study more"
+      }
+    ]
+  }
+}

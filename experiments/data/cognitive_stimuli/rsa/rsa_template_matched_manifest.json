@@ -1,0 +1,83 @@
+{
+  "seed": 20260603,
+  "n_templates": 4,
+  "templates": [
+    "narrative",
+    "observation",
+    "third_person",
+    "report"
+  ],
+  "target_per_condition": 60,
+  "conditions": {
+    "anger": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 22.6
+    },
+    "belief": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 26.3
+    },
+    "disgust": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 23.9
+    },
+    "empathy": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 28.6
+    },
+    "fear": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 23.4
+    },
+    "happiness": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 24.2
+    },
+    "intention": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 27.7
+    },
+    "judgment": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 28.1
+    },
+    "mentalizing": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 27.3
+    },
+    "moral": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 30.7
+    },
+    "sadness": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 24.9
+    },
+    "self_referential": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 27.4
+    },
+    "theory_of_mind": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 29.6
+    },
+    "valence": {
+      "n_total": 60,
+      "source": "template_matched",
+      "mean_word_length": 26.4
+    }
+  }
+}

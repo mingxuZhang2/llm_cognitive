@@ -21,7 +21,7 @@ import json, re, csv
 from pathlib import Path
 from collections import defaultdict
 
-BASE = Path("/hpc2hdd/home/mzhang630/data/nature/experiments/data/narratives")
+BASE = Path(__file__).resolve().parents[1] / "data" / "narratives"
 TRANSCRIPT_DIR = BASE / "transcripts"
 OUT = BASE
 

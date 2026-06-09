@@ -1,0 +1,23 @@
+{
+  "core_affect": {
+    "valence_r2": 0.07668273272612705,
+    "arousal_r2": 0.12787076644339299,
+    "arousal_pca_position": "PC4",
+    "arousal_pca_variance": 0.012632250785827637,
+    "arousal_rho_brain": 0.532142857142857,
+    "arousal_rho_llm": 0.017857142857142853,
+    "assessment": "WEAK - encoded but not organizing"
+  },
+  "conceptual_categorization": {
+    "classification_accuracy": 0.875,
+    "assessment": "STRONG"
+  },
+  "situational_context": {
+    "organized_by": "frame",
+    "p_value": 0.015810114337299133,
+    "same_frame_dist": 0.1303840511503829,
+    "same_emotion_dist": 0.14829590759099778,
+    "assessment": "DOMINANT"
+  },
+  "summary": "LLM has situational context (dominant) + conceptual categorization (strong) but lacks core affect (weak). Missing component = embodiment."
+}
