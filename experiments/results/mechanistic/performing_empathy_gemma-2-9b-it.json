@@ -1,0 +1,473 @@
+{
+  "model": "gemma-2-9b-it",
+  "peak_layer": 21,
+  "n_prompts": 50,
+  "n_scenarios": 10,
+  "n_emotions": 5,
+  "internal_rdm": {
+    "rho_vs_brain": -0.22424242424242422,
+    "p_vs_brain": 0.5334005612725947,
+    "mean_distance": 1.2252915707747847,
+    "pairs": [
+      "anger-disgust",
+      "anger-fear",
+      "anger-happiness",
+      "anger-sadness",
+      "disgust-fear",
+      "disgust-happiness",
+      "disgust-sadness",
+      "fear-happiness",
+      "fear-sadness",
+      "happiness-sadness"
+    ],
+    "distances": [
+      1.2929875414859489,
+      1.1732321772080059,
+      1.6834588572544922,
+      0.519559163914646,
+      1.269091130353711,
+      0.9694012796473226,
+      1.334941740587485,
+      1.3042365001843574,
+      0.9898225126342092,
+      1.7161848044776689
+    ]
+  },
+  "behavioral_rdm": {
+    "rho_vs_brain": -0.6727272727272726,
+    "p_vs_brain": 0.0330412225454377,
+    "mean_distance": 0.4376077342104242,
+    "pairs": [
+      "anger-disgust",
+      "anger-fear",
+      "anger-happiness",
+      "anger-sadness",
+      "disgust-fear",
+      "disgust-happiness",
+      "disgust-sadness",
+      "fear-happiness",
+      "fear-sadness",
+      "happiness-sadness"
+    ],
+    "distances": [
+      0.32956157358263194,
+      0.39898699733437315,
+      0.4815875460382254,
+      0.386052299235917,
+      0.4102515364650333,
+      0.4838741577174349,
+      0.35633077571692673,
+      0.5468327789288815,
+      0.44821389707106385,
+      0.5343857800137541
+    ]
+  },
+  "dissociation": {
+    "t_stat": -7.547812114298247,
+    "p_value": 3.51248606262631e-05,
+    "behavioral_gt_internal": false
+  },
+  "neuron_profiling": {
+    "overall_condition_means": {
+      "anger": 0.36163410337364676,
+      "belief": 0.272449982689634,
+      "disgust": 0.3271893892105371,
+      "empathy": 0.2906938838067651,
+      "fear": 0.407324221590206,
+      "happiness": 0.38903336309298875,
+      "intention": 0.3371057627043873,
+      "judgment": 0.42562822844329484,
+      "mentalizing": 0.3614531991478651,
+      "moral": 0.302727377388373,
+      "sadness": 0.3798056039278954,
+      "self_referential": 0.23707075227187574,
+      "theory_of_mind": 0.3368023544569015,
+      "valence": 0.3558578646547943
+    },
+    "block_means": {
+      "affective_neurons": 0.3729973362390548,
+      "social_neurons": 0.32049144261363705,
+      "empathy_neurons": 0.2906938838067651
+    },
+    "match_vs_mismatch": [
+      {
+        "emotion": "anger",
+        "match_activation": 0.3566442493207008,
+        "mismatch_activation": 0.36704092377955094,
+        "ratio": 0.9716743453242438
+      },
+      {
+        "emotion": "disgust",
+        "match_activation": 0.3482965046373755,
+        "mismatch_activation": 0.3889746019181609,
+        "ratio": 0.8954222278776341
+      },
+      {
+        "emotion": "fear",
+        "match_activation": 0.4128162312114984,
+        "mismatch_activation": 0.36024174416724597,
+        "ratio": 1.1459422398861254
+      },
+      {
+        "emotion": "happiness",
+        "match_activation": 0.40186910957731303,
+        "mismatch_activation": 0.37363633632214743,
+        "ratio": 1.0755621723868511
+      },
+      {
+        "emotion": "sadness",
+        "match_activation": 0.381179874323979,
+        "mismatch_activation": 0.3661382530392706,
+        "ratio": 1.0410818076501147
+      }
+    ],
+    "empathy_by_emotion": {
+      "anger": 0.29214832561708987,
+      "disgust": 0.2923527497182786,
+      "fear": 0.28776055932626127,
+      "happiness": 0.2890466535042226,
+      "sadness": 0.2921611308679729
+    },
+    "per_emotion_profiles": {
+      "anger": {
+        "anger": 0.3566442493207008,
+        "belief": 0.2699627760823816,
+        "disgust": 0.32131694728359583,
+        "empathy": 0.29214832561708987,
+        "fear": 0.39686927074104544,
+        "happiness": 0.38055010708957915,
+        "intention": 0.336293445283249,
+        "judgment": 0.42605152193278073,
+        "mentalizing": 0.3550242696907372,
+        "moral": 0.30135647214204075,
+        "sadness": 0.3694273700039834,
+        "self_referential": 0.23199181267596783,
+        "theory_of_mind": 0.3292166883787513,
+        "valence": 0.3563867971904576
+      },
+      "disgust": {
+        "anger": 0.37152298477716744,
+        "belief": 0.2704764488407224,
+        "disgust": 0.3482965046373755,
+        "empathy": 0.2923527497182786,
+        "fear": 0.4131471706868708,
+        "happiness": 0.38762825404278933,
+        "intention": 0.3340433982054889,
+        "judgment": 0.41926098511546855,
+        "mentalizing": 0.3592739634207637,
+        "moral": 0.30127240225024526,
+        "sadness": 0.3835999981658161,
+        "self_referential": 0.23518669328063724,
+        "theory_of_mind": 0.333537684122324,
+        "valence": 0.35332654611416164
+      },
+      "fear": {
+        "anger": 0.3598153343546391,
+        "belief": 0.27288754634551704,
+        "disgust": 0.3196847337910532,
+        "empathy": 0.28776055932626127,
+        "fear": 0.4128162312114984,
+        "happiness": 0.386520107556805,
+        "intention": 0.3390885062392801,
+        "judgment": 0.429076010171324,
+        "mentalizing": 0.3579876524071396,
+        "moral": 0.3047298905332386,
+        "sadness": 0.37494680096648636,
+        "self_referential": 0.2402474160733074,
+        "theory_of_mind": 0.33941386800877754,
+        "valence": 0.3557596409156173
+      },
+      "happiness": {
+        "anger": 0.3645079363980145,
+        "belief": 0.27488899371892217,
+        "disgust": 0.3278825576736778,
+        "empathy": 0.2890466535042226,
+        "fear": 0.41228087503768507,
+        "happiness": 0.40186910957731303,
+        "intention": 0.3352044211364537,
+        "judgment": 0.4229327209264785,
+        "mentalizing": 0.3727664642508328,
+        "moral": 0.3045263428515196,
+        "sadness": 0.3898739761792124,
+        "self_referential": 0.24475219577930868,
+        "theory_of_mind": 0.34441616102948786,
+        "valence": 0.35238727366089817
+      },
+      "sadness": {
+        "anger": 0.355680012017712,
+        "belief": 0.27403414846062657,
+        "disgust": 0.318766202666983,
+        "empathy": 0.2921611308679729,
+        "fear": 0.4015075602739304,
+        "happiness": 0.3885992371984571,
+        "intention": 0.34089904265746473,
+        "judgment": 0.43081990407042203,
+        "mentalizing": 0.36221364596985284,
+        "moral": 0.30175177916482093,
+        "sadness": 0.381179874323979,
+        "self_referential": 0.23317564355015752,
+        "theory_of_mind": 0.3374273707451671,
+        "valence": 0.3614290653928369
+      }
+    }
+  },
+  "neuron_match_ratio": 1.025936558624994,
+  "empathy_cv": 0.006587988799566012,
+  "responses": [
+    {
+      "scenario": 0,
+      "emotion": "anger",
+      "response": "I understand you're feeling furious and betrayed. It's completely valid to feel that way when someone takes credit for your hard work. It's frustrating and unfair. \n\nWhile I can't offer legal or professional advice, I can listen and help you process your emotions. \n\nTell me more about what happened. \n\n* **What specifically did your colleague do?** \n* **How did it make you feel?**\n* **Have you experienced this before with this colleague?**\n* **What are your thoughts on how to address this situati"
+    },
+    {
+      "scenario": 0,
+      "emotion": "disgust",
+      "response": "I understand how awful that must feel. It's completely valid to feel repulsed and sickened when someone takes credit for your hard work. It's a violation of trust and respect, and it can be incredibly demoralizing. \n\nWhile I can't offer specific advice on how to handle this situation with your colleague or boss, I can be a safe space for you to vent and process your feelings. \n\nTell me more about what happened. What specifically did your colleague do? How did it make you feel? \n\nRemember, your f"
+    },
+    {
+      "scenario": 0,
+      "emotion": "fear",
+      "response": "I understand you're feeling terrified and hurt. It's incredibly unfair and frustrating when someone takes credit for your work. It's natural to feel anxious about the future after something like this happens. \n\nWhile I can't offer professional advice, I can listen and help you process your feelings. \n\nTell me more about what happened. \n\n* **What specifically did your colleague do?** \n* **How did your boss react?**\n* **Have you experienced this kind of behavior from your colleague before?**\n\nTalk"
+    },
+    {
+      "scenario": 0,
+      "emotion": "happiness",
+      "response": "It's understandable that you're feeling a mix of emotions right now. It's incredibly frustrating and unfair when someone takes credit for your work, and it's natural to feel angry, hurt, and betrayed. \n\nIt's great that you're recognizing the situation clearly now. That's a big step towards addressing it. \n\nWhile I can't offer specific advice on how to handle this situation with your colleague or boss, I can be a sounding board for you. \n\nTell me more about what happened. \n\n* What exactly did you"
+    },
+    {
+      "scenario": 0,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that happened. It's completely understandable that you're feeling heartbroken and upset. Having your work stolen and not acknowledged is incredibly frustrating and hurtful. \n\nWhile I can't offer the same comfort as a human friend, I want you to know that your feelings are valid. It's important to acknowledge and process this experience. \n\nHere are a few things that might help:\n\n* **Allow yourself to feel your emotions.** Don't try to suppress your sadness, anger, or frustrat"
+    },
+    {
+      "scenario": 1,
+      "emotion": "anger",
+      "response": "I understand you're feeling furious and full of rage right now. Discovering that your partner has been lying to you for months is a deeply painful and violating experience. It's completely normal to feel these intense emotions. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I can listen without judgment and help you process your feelings. \n\nWould you like to talk about what happened? Sharing your experience can be helpful in starting to make sense of it. \n\nRem"
+    },
+    {
+      "scenario": 1,
+      "emotion": "disgust",
+      "response": "I understand you're feeling repulsed and sickened. Discovering that your partner has been lying to you for months is a deeply painful experience. It's completely normal to feel overwhelmed with these emotions. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I can listen without judgment and help you process your feelings. \n\nWould you like to talk about what happened? Sharing your experience can be helpful in making sense of it. \n\nRemember, you're not alone in t"
+    },
+    {
+      "scenario": 1,
+      "emotion": "fear",
+      "response": "I understand you're going through a very difficult time. Discovering that your partner has been lying to you is incredibly painful and understandably terrifying. It's natural to feel overwhelmed and unsure about the future. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I can listen without judgment and help you process your feelings. \n\nTo help me understand better, could you tell me a little more about what's happening? For example:\n\n* **What kind of lies wer"
+    },
+    {
+      "scenario": 1,
+      "emotion": "happiness",
+      "response": "It's understandable that you're feeling a mix of emotions right now. Discovering a partner's lies can be incredibly painful, but it's also a significant turning point. Feeling relieved that you now \"see things clearly\" suggests you're starting to process the situation and gain clarity about your relationship. \n\nWhile I can't offer personal advice, I can be a safe space for you to talk. Tell me more about what's going on. What kind of lies were they telling? How long has this been happening? What"
+    },
+    {
+      "scenario": 1,
+      "emotion": "sadness",
+      "response": "I understand you're going through a very painful experience. Discovering that your partner has been lying to you can be incredibly hurtful and leave you feeling lost and betrayed. It's completely normal to feel heartbroken and overwhelmed with emotions right now. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I want you to know that you're not alone in this. Many people experience betrayal in relationships, and it's a difficult situation to navigate.\n\nHere are"
+    },
+    {
+      "scenario": 2,
+      "emotion": "anger",
+      "response": "I understand you're feeling furious and full of rage. It's completely valid to feel that way when a year of hard work is suddenly cancelled. It's a huge disappointment and a loss of time, effort, and possibly even a sense of accomplishment. \n\nWhile I can't offer the same support as a human friend or therapist, I can listen and help you process your feelings. \n\nTell me more about what happened. What was the project about? What were your hopes for it? What are you most upset about? \n\nTalking about"
+    },
+    {
+      "scenario": 2,
+      "emotion": "disgust",
+      "response": "I understand this must be incredibly difficult. It's completely normal to feel repulsed and sickened when a project you've poured your heart and soul into for a year is suddenly cancelled. It's a huge loss of time, effort, and emotional investment. \n\nWhile I can't offer the same comfort as a human friend, I can listen without judgment and help you process your feelings. \n\nTell me more about what happened. What was the project about? What were your hopes for it? How did the cancellation happen? \n"
+    },
+    {
+      "scenario": 2,
+      "emotion": "fear",
+      "response": "I understand this must be incredibly difficult. It's completely normal to feel terrified when a project you've poured your heart and soul into for a year is suddenly cancelled. It's a huge blow, and it's okay to feel overwhelmed by the uncertainty it brings.\n\nWhile I can't offer the same support as a human friend or therapist, I can listen without judgment and help you process your feelings. \n\nTell me more about what's making you feel terrified. Is it:\n\n* **Fear of job security?**\n* **Uncertaint"
+    },
+    {
+      "scenario": 2,
+      "emotion": "happiness",
+      "response": "I understand this must be a very complex mix of emotions for you. It's completely normal to feel a sense of relief after a year of dedicated work on a project that's been cancelled. It's also understandable to feel sadness, disappointment, and even a sense of loss. \n\nIt sounds like you've had a lot of time to invest in this project, and it's natural to feel a connection to it.  The fact that you feel like you can see things more clearly now suggests that this cancellation might have been a neces"
+    },
+    {
+      "scenario": 2,
+      "emotion": "sadness",
+      "response": "I understand this is incredibly difficult. It's completely normal to feel heartbroken and overwhelmed when a project you've poured your heart and soul into for a year is suddenly cancelled. It's a huge loss, and your feelings are valid. \n\nWhile I can't offer the same comfort as a human friend, I want you to know that I'm here to listen. \n\nWould you like to talk about the project? Sharing your feelings and experiences can be helpful. I can also offer some coping strategies or resources if you'd l"
+    },
+    {
+      "scenario": 3,
+      "emotion": "anger",
+      "response": "I understand you're feeling furious and overwhelmed right now. It's completely natural to feel that way after making a serious mistake, especially one that impacted your team. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I can listen without judgment and help you process your feelings. \n\nTell me about what happened. What was the mistake, and how did it affect the team? Talking about it might help you start to untangle your emotions. \n\nRemember, everyone make"
+    },
+    {
+      "scenario": 3,
+      "emotion": "disgust",
+      "response": "I understand you're feeling awful right now. Making a serious mistake at work, especially one that impacts the whole team, can be incredibly distressing. It's completely normal to feel repulsed and sickened by the situation. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I can listen without judgment and help you process your feelings. \n\nWould you like to talk about what happened? Sharing your experience can sometimes help alleviate the burden you're carrying."
+    },
+    {
+      "scenario": 3,
+      "emotion": "fear",
+      "response": "I understand you're feeling terrified right now. Making a serious mistake at work can be incredibly stressful, especially when it impacts your whole team. It's completely normal to feel overwhelmed and worried about the consequences. \n\nWhile I'm an AI and can't offer professional advice, I can listen and provide support. \n\nTo help me understand better, could you tell me more about:\n\n* **What happened?** (You don't have to go into detail if you're not comfortable, but a general description can he"
+    },
+    {
+      "scenario": 3,
+      "emotion": "happiness",
+      "response": "It sounds like you're going through a lot right now. Making a serious mistake at work can be incredibly stressful, and it's understandable to feel a mix of emotions, even relief. It's great that you're recognizing the need to talk about it. \n\nWhile I'm here to listen, I'm an AI and can't offer the same support as a human friend, therapist, or trusted colleague. \n\nHere are some suggestions for who you could talk to:\n\n* **A trusted friend or family member:** Sharing your feelings with someone you "
+    },
+    {
+      "scenario": 3,
+      "emotion": "sadness",
+      "response": "I understand you're going through a really tough time. It's completely normal to feel heartbroken and overwhelmed after making a serious mistake, especially when it impacts your team. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I can listen without judgment and help you process your feelings. \n\nTell me about what happened. What was the mistake, and how did it affect your team?  \n\nRemember, everyone makes mistakes. It's how we learn and grow. Let's talk abou"
+    },
+    {
+      "scenario": 4,
+      "emotion": "anger",
+      "response": "I understand you're feeling furious and hurt. It's completely natural to feel that way when a close friend suddenly cuts off contact without explanation. It's incredibly painful and confusing. \n\nWhile I can't offer the same comfort as a human friend, I can listen and help you process your feelings. \n\nTell me more about what's going on. \n\n* **How long has your friend been silent?**\n* **Have there been any recent disagreements or conflicts?**\n* **What kind of relationship did you have before this "
+    },
+    {
+      "scenario": 4,
+      "emotion": "disgust",
+      "response": "I understand you're hurting. It's incredibly painful when a close friend suddenly cuts off contact without explanation. It's natural to feel repulsed and sickened \u2013 those are valid emotions in the face of such a confusing and hurtful situation. \n\nWhile I can't offer personal advice or replace human connection, I can listen and offer some thoughts that might be helpful:\n\n* **Give them space:** It might be tempting to bombard them with messages, but giving them space could be the best thing right "
+    },
+    {
+      "scenario": 4,
+      "emotion": "fear",
+      "response": "I understand you're going through a really tough time. It's completely normal to feel terrified and hurt when a close friend suddenly stops talking to you without explanation. It's a painful and confusing experience. \n\nWhile I can't offer specific advice about your situation, I can provide some support and things to consider:\n\n**Acknowledge your feelings:**\n\nIt's okay to feel scared, hurt, angry, confused, or any other emotion that comes up. Don't try to suppress these feelings. Allow yourself t"
+    },
+    {
+      "scenario": 4,
+      "emotion": "happiness",
+      "response": "It's understandable that you're feeling a mix of emotions right now. It's tough when a close friendship ends abruptly, even if you feel some relief. It's important to acknowledge both feelings \u2013 the sadness of the loss and the clarity you've gained. \n\nIt sounds like you're ready to process this experience and talk about it. While I can't offer personal advice, I can be a listening ear. \n\nWould you like to talk about:\n\n* **What led you to feel relieved?** Understanding why you feel this way can b"
+    },
+    {
+      "scenario": 4,
+      "emotion": "sadness",
+      "response": "I understand you're going through a really tough time. It's completely normal to feel heartbroken and overwhelmed when a close friend suddenly cuts off contact without explanation. It's painful and confusing, and your feelings of sadness are valid. \n\nWhile I can't offer the same comfort as a human friend, I'm here to listen and offer support. \n\nWould you like to talk about what happened? Sharing your feelings can sometimes help process them. \n\nRemember, you're not alone in this. Many people expe"
+    },
+    {
+      "scenario": 5,
+      "emotion": "anger",
+      "response": "I understand you're feeling furious and rageful right now. It's completely valid to feel that way when you've put in the effort and feel you've been overlooked. It's frustrating and disheartening. \n\nWhile I can't offer the same support as a human friend or therapist, I can listen and help you process these feelings. \n\nTell me more about what happened. \n\n* **What was the specific promotion you were hoping for?**\n* **What makes you feel you worked harder than anyone else?**\n* **Have you received a"
+    },
+    {
+      "scenario": 5,
+      "emotion": "disgust",
+      "response": "I understand you're feeling incredibly hurt and frustrated right now. It's completely valid to feel repulsed and sickened when you've put in the effort and feel you've been overlooked.  \n\nWhile I can't offer the same comfort as a human friend or therapist, I can listen and help you process your feelings. \n\nTell me more about what happened. \n\n* **What kind of promotion was it?**\n* **What makes you feel you worked harder than anyone else?**\n* **Have you received any feedback from your manager abou"
+    },
+    {
+      "scenario": 5,
+      "emotion": "fear",
+      "response": "I understand you're feeling terrified and hurt. It's completely normal to feel that way when you've worked hard and expected a promotion, only to be passed over. It's tough to process those emotions, and it's important to allow yourself to feel them. \n\nWhile I can't offer specific career advice or tell you what the future holds, I can listen and offer support. \n\nTo help me understand better, could you tell me more about:\n\n* **What kind of promotion was it?**\n* **What were the reasons given for n"
+    },
+    {
+      "scenario": 5,
+      "emotion": "happiness",
+      "response": "It's completely understandable that you're feeling a mix of emotions right now. Being passed over for a promotion, especially when you feel you've put in the effort, is tough. It's great that you're recognizing the need to talk about it and process these feelings. \n\nWhile I can't offer the same support as a human friend or therapist, I can listen and help you explore your thoughts and feelings. \n\nTell me more about what you mean by \"seeing things clearly.\" What has changed in your perspective si"
+    },
+    {
+      "scenario": 5,
+      "emotion": "sadness",
+      "response": "I understand you're feeling heartbroken and overwhelmed right now. It's completely natural to feel that way when you've put in a lot of effort and haven't received the recognition you hoped for. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I want to listen and offer some words of comfort. \n\nIt's important to acknowledge your feelings. Allow yourself to cry, to be angry, to feel disappointed. Bottling up your emotions will only make things harder in the long "
+    },
+    {
+      "scenario": 6,
+      "emotion": "anger",
+      "response": "I understand you're feeling furious and betrayed. It's completely natural to feel that way when someone you trusted breaks that trust in such a painful way. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I want to listen and help you process these feelings. \n\nTell me more about what happened. Who shared your secrets, and with whom? How did they share them? What kind of secrets were they?\n\nTalking about it can be a first step in healing. Remember, you deserve t"
+    },
+    {
+      "scenario": 6,
+      "emotion": "disgust",
+      "response": "I understand you're feeling hurt and betrayed. It's completely normal to feel repulsed and sickened when someone you trusted breaks that trust in such a painful way. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I want to listen and help you process these feelings. \n\nWould you like to talk about:\n\n* **What happened specifically?** Sharing the details can help you understand the situation better.\n* **How this betrayal is making you feel?**  Let's explore those"
+    },
+    {
+      "scenario": 6,
+      "emotion": "fear",
+      "response": "I understand you're feeling terrified and betrayed. It's completely normal to feel that way when someone you trusted breaks that trust in such a significant way. \n\nWhile I'm an AI and can't offer the same support as a human, I want you to know you're not alone and this is a painful situation many people face. \n\nHere are some things that might help:\n\n* **Acknowledge your feelings:** Allow yourself to feel the anger, sadness, fear, and betrayal. Don't try to suppress them.\n* **Reach out to someone"
+    },
+    {
+      "scenario": 6,
+      "emotion": "happiness",
+      "response": "It's understandable that you're feeling a mix of emotions right now. Betrayal by someone you trusted is incredibly painful, and it's natural to feel hurt, angry, and confused. \n\nIt's also interesting that you feel a sense of relief and clarity. This could be because:\n\n* **The weight of the secret was lifted:** Holding onto secrets can be emotionally draining. Sharing them, even in a hurtful way, might have brought a sense of release.\n* **You're seeing the person's true colors:** Their actions mi"
+    },
+    {
+      "scenario": 6,
+      "emotion": "sadness",
+      "response": "I understand you're going through a really painful experience. It's completely normal to feel heartbroken and overwhelmed when someone you trusted betrays that trust. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I want you to know that you're not alone and your feelings are valid. \n\nHere are a few things that might help:\n\n* **Allow yourself to grieve:** It's okay to cry, to be angry, and to feel hurt. Don't try to suppress your emotions.\n* **Talk to someone "
+    },
+    {
+      "scenario": 7,
+      "emotion": "anger",
+      "response": "I understand you're feeling furious and overwhelmed right now. It's completely natural to feel that way when you put your heart and soul into something and then receive harsh criticism, especially publicly. \n\nWhile I can't offer the same comfort as a human friend, I can listen without judgment and help you process your feelings. \n\nTell me more about what happened. What was the project you worked on? What kind of criticism did you receive? How has it made you feel?\n\nRemember, your feelings are va"
+    },
+    {
+      "scenario": 7,
+      "emotion": "disgust",
+      "response": "I understand you're feeling repulsed and sickened. Receiving harsh public criticism, especially after putting in so much effort, can be incredibly painful. It's completely normal to feel this way. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I can listen without judgment and help you process your feelings. \n\nWould you like to talk about what happened? Sharing your experience can be helpful in making sense of it. \n\nRemember, your feelings are valid, and you d"
+    },
+    {
+      "scenario": 7,
+      "emotion": "fear",
+      "response": "I understand you're feeling terrified and overwhelmed right now. Receiving harsh public criticism, especially on something you poured your heart and soul into, can be incredibly painful and shake your confidence. It's completely normal to feel scared about what this means for your future.\n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I can listen without judgment and help you process your feelings. \n\nTell me more about what happened. What was the criticism abo"
+    },
+    {
+      "scenario": 7,
+      "emotion": "happiness",
+      "response": "It's understandable that you're feeling a mix of emotions right now. Receiving harsh criticism, especially publicly, can be incredibly painful. It's great that you're able to see things more clearly now, even if it came at a cost. \n\nIt sounds like you're ready to process this experience and that's a positive step. While I can't offer the same support as a human friend or therapist, I can listen without judgment and help you explore your feelings.\n\nWould you like to talk about:\n\n* **What specific"
+    },
+    {
+      "scenario": 7,
+      "emotion": "sadness",
+      "response": "I understand you're feeling heartbroken and overwhelmed right now. It's completely natural to feel this way when you've poured your heart and soul into something and received harsh criticism, especially in public. \n\nWhile I'm an AI and can't offer the same comfort as a human friend or therapist, I want you to know that your feelings are valid. It's okay to grieve the disappointment and hurt you're experiencing. \n\nHere are a few things that might help you cope:\n\n* **Allow yourself to feel your em"
+    },
+    {
+      "scenario": 8,
+      "emotion": "anger",
+      "response": "I understand you're feeling furious and hurt. Being deliberately excluded from an important meeting is a serious breach of trust and can be incredibly frustrating. It's completely valid to feel angry and upset about this situation. \n\nWhile I can't offer specific advice as I'm an AI, I can help you process your feelings and explore some ways to address the situation. \n\nHere are some things to consider:\n\n* **Reflect on the situation:** Try to understand why you think you were excluded. Was there a"
+    },
+    {
+      "scenario": 8,
+      "emotion": "disgust",
+      "response": "I understand you're feeling repulsed and sickened, and it's completely valid to feel that way. Being deliberately excluded from an important meeting can be incredibly hurtful and damaging to your sense of trust and belonging. \n\nWhile I can't offer specific advice on your situation as I'm just an AI, I can offer some suggestions on how to cope with these feelings and potentially address the situation:\n\n**Processing your emotions:**\n\n* **Acknowledge your feelings:** Don't suppress your anger, hurt"
+    },
+    {
+      "scenario": 8,
+      "emotion": "fear",
+      "response": "I understand you're feeling terrified and hurt. Being deliberately excluded from an important meeting is a difficult situation, and it's natural to feel anxious about what it means for your future. \n\nWhile I can't offer specific advice about your situation, as I'm just an AI, I can offer some suggestions on how to cope with these feelings and take steps forward:\n\n**1. Acknowledge your feelings:** It's important to allow yourself to feel scared, angry, or hurt. Don't try to suppress these emotion"
+    },
+    {
+      "scenario": 8,
+      "emotion": "happiness",
+      "response": "It sounds like you're going through a tough situation. Being deliberately excluded from a meeting, especially an important one, can be incredibly hurtful and confusing. It's understandable that you'd feel a mix of emotions, including relief. \n\nWhile I can't offer personal advice, I can help you process your feelings and explore some options. \n\n**Here are some things to consider:**\n\n* **Why do you think you were excluded?**  Reflecting on your recent work, relationships with colleagues, and any p"
+    },
+    {
+      "scenario": 8,
+      "emotion": "sadness",
+      "response": "I understand you're feeling heartbroken and overwhelmed right now. It's completely valid to feel that way when you've been deliberately excluded from something important. Being shut out can be incredibly hurtful and make you question your value and place within the team. \n\nWhile I can't offer professional advice or replace human connection, I want to be here for you. \n\nLet's try to unpack this together. \n\n* **Can you tell me more about the meeting and why you think you were excluded?** Understan"
+    },
+    {
+      "scenario": 9,
+      "emotion": "anger",
+      "response": "I understand you're feeling furious and overwhelmed right now. It's completely normal to feel that way after a presentation goes badly, especially when important clients are involved. \n\nWhile I can't offer the same support as a human friend or therapist, I can listen and help you process your feelings. \n\nTell me about what happened. What went wrong? What are you most upset about? \n\nSometimes, just talking things through can help to diffuse anger and frustration. I'm here to listen without judgme"
+    },
+    {
+      "scenario": 9,
+      "emotion": "disgust",
+      "response": "I understand you're feeling repulsed and sickened after your presentation went wrong. That's a completely normal reaction to a stressful and disappointing experience. It's tough when things don't go as planned, especially in front of important clients.\n\nWhile I'm not a human and can't offer the same support as a friend or therapist, I can listen and help you process your feelings. \n\nWould you like to talk about what happened? Sharing your experience can sometimes help to lessen the burden. \n\nRem"
+    },
+    {
+      "scenario": 9,
+      "emotion": "fear",
+      "response": "I understand you're feeling terrified right now. It's completely normal to feel that way after a presentation goes poorly, especially when important clients are involved.  \n\nWhile I can't offer professional advice, I can listen and help you process your feelings. \n\nTell me more about what happened. What went wrong? How are you feeling right now? \n\nRemember, even experienced presenters have bad days. It doesn't define your entire career. Let's talk through this together and see if we can find som"
+    },
+    {
+      "scenario": 9,
+      "emotion": "happiness",
+      "response": "I understand. It's completely normal to feel a mix of emotions after a presentation goes poorly, especially when important clients are involved. Feeling relieved, even glad, can be a way of processing the disappointment and stress. It sounds like you're ready to analyze what happened and move forward, which is a great first step.\n\nWhile I can't offer the same support as a human friend or therapist, I can listen and help you process your feelings. \n\nTell me more about what happened. What specific"
+    },
+    {
+      "scenario": 9,
+      "emotion": "sadness",
+      "response": "I understand you're feeling heartbroken and overwhelmed right now. It's completely normal to feel this way after a difficult experience like that, especially when it involves important clients. \n\nWhile I'm an AI and can't offer the same support as a human friend or therapist, I want you to know that you're not alone in this. Many people experience setbacks and public speaking anxieties. \n\nHere are a few things that might help you process your emotions:\n\n* **Allow yourself to feel:** Don't try to"
+    }
+  ],
+  "verdict": [
+    "Internal representations DO NOT differentiate emotions (compressed)",
+    "Emotion-specific neurons NOT selectively activated",
+    "Empathy neurons fire uniformly regardless of emotion type"
+  ]
+}

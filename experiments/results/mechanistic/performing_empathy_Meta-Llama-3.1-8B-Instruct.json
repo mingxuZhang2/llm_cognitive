@@ -1,0 +1,473 @@
+{
+  "model": "Meta-Llama-3.1-8B-Instruct",
+  "peak_layer": 31,
+  "n_prompts": 50,
+  "n_scenarios": 10,
+  "n_emotions": 5,
+  "internal_rdm": {
+    "rho_vs_brain": -0.7818181818181817,
+    "p_vs_brain": 0.007547007781067878,
+    "mean_distance": 1.2380202429021785,
+    "pairs": [
+      "anger-disgust",
+      "anger-fear",
+      "anger-happiness",
+      "anger-sadness",
+      "disgust-fear",
+      "disgust-happiness",
+      "disgust-sadness",
+      "fear-happiness",
+      "fear-sadness",
+      "happiness-sadness"
+    ],
+    "distances": [
+      1.1488160191514905,
+      1.2946951063150896,
+      1.4762345175422353,
+      0.8933829172255425,
+      1.2959885336966317,
+      1.2258020369560114,
+      1.1280936499168708,
+      1.2573221688828555,
+      1.1625090537807434,
+      1.4973584255543138
+    ]
+  },
+  "behavioral_rdm": {
+    "rho_vs_brain": -0.6,
+    "p_vs_brain": 0.06668799999999996,
+    "mean_distance": 0.4238365652922208,
+    "pairs": [
+      "anger-disgust",
+      "anger-fear",
+      "anger-happiness",
+      "anger-sadness",
+      "disgust-fear",
+      "disgust-happiness",
+      "disgust-sadness",
+      "fear-happiness",
+      "fear-sadness",
+      "happiness-sadness"
+    ],
+    "distances": [
+      0.28492031394463824,
+      0.41581311318445624,
+      0.44575857734935864,
+      0.3163364755598196,
+      0.42144131499566817,
+      0.5209606054730691,
+      0.37244255419714556,
+      0.5354941806079485,
+      0.43103835585896155,
+      0.4941601617511425
+    ]
+  },
+  "dissociation": {
+    "t_stat": -18.215993391935566,
+    "p_value": 2.066521173290998e-08,
+    "behavioral_gt_internal": false
+  },
+  "neuron_profiling": {
+    "overall_condition_means": {
+      "anger": 0.3941121123845875,
+      "belief": 0.29272260862599314,
+      "disgust": 0.35505958035241064,
+      "empathy": 0.2728856674909145,
+      "fear": 0.42002738314814864,
+      "happiness": 0.38918451314303276,
+      "intention": 0.29424611577802895,
+      "judgment": 0.3790372208269089,
+      "mentalizing": 0.3657317469348461,
+      "moral": 0.2987424486833364,
+      "sadness": 0.3898623371385337,
+      "self_referential": 0.27957377949211004,
+      "theory_of_mind": 0.3302308434658051,
+      "valence": 0.32439876401002704
+    },
+    "block_means": {
+      "affective_neurons": 0.38964918523334263,
+      "social_neurons": 0.3141463039122429,
+      "empathy_neurons": 0.2728856674909145
+    },
+    "match_vs_mismatch": [
+      {
+        "emotion": "anger",
+        "match_activation": 0.38582328425228596,
+        "mismatch_activation": 0.3769212661439181,
+        "ratio": 1.0236177125250578
+      },
+      {
+        "emotion": "disgust",
+        "match_activation": 0.37741197854936126,
+        "mismatch_activation": 0.40330592102482915,
+        "ratio": 0.9357957790213703
+      },
+      {
+        "emotion": "fear",
+        "match_activation": 0.42463410922355954,
+        "mismatch_activation": 0.37856845837993547,
+        "ratio": 1.121683805990493
+      },
+      {
+        "emotion": "happiness",
+        "match_activation": 0.4063016311237961,
+        "mismatch_activation": 0.399680432618726,
+        "ratio": 1.016566231330585
+      },
+      {
+        "emotion": "sadness",
+        "match_activation": 0.3872281409701705,
+        "mismatch_activation": 0.38148154351118946,
+        "ratio": 1.0150638938022765
+      }
+    ],
+    "empathy_by_emotion": {
+      "anger": 0.27301963653981687,
+      "disgust": 0.2740955116572231,
+      "fear": 0.27261896826624865,
+      "happiness": 0.27145038605041805,
+      "sadness": 0.2732438349408657
+    },
+    "per_emotion_profiles": {
+      "anger": {
+        "anger": 0.38582328425228596,
+        "belief": 0.2902976277732849,
+        "disgust": 0.3470799880578369,
+        "empathy": 0.27301963653981687,
+        "fear": 0.4074257713077962,
+        "happiness": 0.3766603867957741,
+        "intention": 0.29660867249399425,
+        "judgment": 0.376638073014617,
+        "mentalizing": 0.36164514825604854,
+        "moral": 0.29754413480333985,
+        "sadness": 0.3765189184142649,
+        "self_referential": 0.27628725372314455,
+        "theory_of_mind": 0.3251825953410566,
+        "valence": 0.32292909618623555
+      },
+      "disgust": {
+        "anger": 0.403409293987602,
+        "belief": 0.28934116059519355,
+        "disgust": 0.37741197854936126,
+        "empathy": 0.2740955116572231,
+        "fear": 0.42681426802217964,
+        "happiness": 0.3885482961519807,
+        "intention": 0.28927451460704207,
+        "judgment": 0.3724217518396675,
+        "mentalizing": 0.36021992685109383,
+        "moral": 0.2963325310571492,
+        "sadness": 0.3944518259375543,
+        "self_referential": 0.2746075761827827,
+        "theory_of_mind": 0.3229683167196066,
+        "valence": 0.32125921183615924
+      },
+      "fear": {
+        "anger": 0.3934122860263288,
+        "belief": 0.29513886114761234,
+        "disgust": 0.3463851493512839,
+        "empathy": 0.27261896826624865,
+        "fear": 0.42463410922355954,
+        "happiness": 0.3890185189311951,
+        "intention": 0.2963365519938618,
+        "judgment": 0.3862483492004126,
+        "mentalizing": 0.36197446993164717,
+        "moral": 0.3034970410259813,
+        "sadness": 0.3854578792109341,
+        "self_referential": 0.28575912111349405,
+        "theory_of_mind": 0.33385556520059706,
+        "valence": 0.32565192249126734
+      },
+      "happiness": {
+        "anger": 0.40286636103987694,
+        "belief": 0.29627247106790544,
+        "disgust": 0.35887295889034865,
+        "empathy": 0.27145038605041805,
+        "fear": 0.43132748938493426,
+        "happiness": 0.4063016311237961,
+        "intention": 0.293176775040552,
+        "judgment": 0.38001569441869854,
+        "mentalizing": 0.3796319702792913,
+        "moral": 0.298298329577595,
+        "sadness": 0.40565492115974433,
+        "self_referential": 0.2855861687835306,
+        "theory_of_mind": 0.34044924274176364,
+        "valence": 0.3255367712953687
+      },
+      "sadness": {
+        "anger": 0.38504933661684393,
+        "belief": 0.2925629225459695,
+        "disgust": 0.3455478269132226,
+        "empathy": 0.2732438349408657,
+        "fear": 0.40993527780227357,
+        "happiness": 0.38539373271241784,
+        "intention": 0.2958340647546947,
+        "judgment": 0.3798622356611491,
+        "mentalizing": 0.36518721935614945,
+        "moral": 0.29804020695261657,
+        "sadness": 0.3872281409701705,
+        "self_referential": 0.27562877765759825,
+        "theory_of_mind": 0.32869849732600154,
+        "valence": 0.3266168182411045
+      }
+    }
+  },
+  "neuron_match_ratio": 1.0225454845339566,
+  "empathy_cv": 0.0031698218057634835,
+  "responses": [
+    {
+      "scenario": 0,
+      "emotion": "anger",
+      "response": "It's completely understandable that you're feeling furious and full of rage. Having someone take credit for your work can be a huge blow to your self-esteem and can make you feel undervalued and unappreciated.\n\nFirstly, please know that you're not alone in this feeling. Many people have been in similar situations, and it's not uncommon for colleagues to take credit for others' work.\n\nIt might be helpful to talk to someone about how you're feeling. Here are a few options:\n\n1.  **A trusted friend "
+    },
+    {
+      "scenario": 0,
+      "emotion": "disgust",
+      "response": "It's completely normal to feel upset and betrayed when someone takes credit for your work. It's a violation of trust and can be very frustrating.\n\nFirstly, please know that you're not alone in this feeling. Many people have been in similar situations, and it's not uncommon for colleagues to take credit for others' work.\n\nHere are some suggestions on how to deal with this situation:\n\n1.  **Take a moment to calm down**: Before reacting, take some time to collect your thoughts and calm down. This w"
+    },
+    {
+      "scenario": 0,
+      "emotion": "fear",
+      "response": "It's completely understandable that you're feeling upset and concerned about what this means for your future. Being taken credit for your work can be a really frustrating and demotivating experience.\n\nFirstly, please know that you're not alone in this feeling. Many people have been in similar situations, and it's not uncommon for colleagues to take credit for others' work.\n\nHere are some suggestions that might help you process your emotions and figure out what to do next:\n\n1.  **Take a deep brea"
+    },
+    {
+      "scenario": 0,
+      "emotion": "happiness",
+      "response": "It's completely normal to feel a mix of emotions after a situation like that. It's great that you're recognizing your feelings and wanting to talk about them.\n\nIt sounds like this incident has given you a chance to reflect on your work and your relationship with your colleague. It's possible that you were feeling undervalued or overlooked, and this incident has brought those feelings to the surface.\n\nWould you like to talk more about what happened and how you're feeling? Sometimes sharing your t"
+    },
+    {
+      "scenario": 0,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that you're going through this. It's completely understandable to feel heartbroken and upset when someone takes credit for your work. It's a violation of trust and can be very hurtful.\n\nFirstly, please know that you're not alone, and it's okay to feel this way. It's normal to feel emotional when someone takes advantage of you like this.\n\nIf you feel comfortable, can you tell me more about what happened? What was the context, and how did your colleague take credit for your wo"
+    },
+    {
+      "scenario": 1,
+      "emotion": "anger",
+      "response": "I'm so sorry to hear that you're going through this. Being lied to can be incredibly hurtful and anger-inducing. It's completely normal to feel furious and full of rage right now.\n\nFirst and foremost, please know that you're not alone. Many people have been in your shoes, and it's okay to feel the way you do. It's also okay to take some time to process your emotions and figure out what you want to do next.\n\nIf you're comfortable, can you tell me a bit more about what happened? What did your part"
+    },
+    {
+      "scenario": 1,
+      "emotion": "disgust",
+      "response": "I'm so sorry to hear that you're going through this. Being betrayed by someone you trust can be incredibly painful and overwhelming. It's completely normal to feel repulsed and sickened by the situation.\n\nFirst and foremost, please know that you're not alone. Many people have been in your shoes and have come out the other side. It's okay to feel the way you do, and it's okay to take the time you need to process your emotions.\n\nIf you're comfortable, can you tell me a bit more about what happened"
+    },
+    {
+      "scenario": 1,
+      "emotion": "fear",
+      "response": "I'm so sorry to hear that you're going through this. Being lied to by someone you trust can be incredibly painful and unsettling. It's completely understandable that you're feeling terrified about what this means for your future.\n\nFirst and foremost, please know that you're not alone. Many people have been in your shoes, and it's okay to feel overwhelmed. I'm here to listen and offer support.\n\nCan you tell me more about what happened? What did you discover, and how did you find out about the lie"
+    },
+    {
+      "scenario": 1,
+      "emotion": "happiness",
+      "response": "It's not uncommon for people to feel a mix of emotions when they discover a partner has been lying to them. The relief you're feeling might be a result of finally understanding the situation and being able to process your emotions.\n\nHere are some things to consider:\n\n1.  **Take time to process your emotions**: It's okay to feel overwhelmed, angry, sad, or any other emotion that arises. Give yourself permission to feel these emotions and take the time you need to process them.\n\n2.  **Seek support"
+    },
+    {
+      "scenario": 1,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that you're going through this. Being lied to by someone you trust can be incredibly painful and betrayal can be a huge blow to your emotional well-being.\n\nFirst and foremost, please know that it's okay to feel the way you do. It's normal to feel heartbroken, angry, and confused after discovering a lie. Allow yourself to process your emotions, and don't try to suppress them.\n\nIf you're comfortable, I'm here to listen and offer support. Sometimes talking through your feelings"
+    },
+    {
+      "scenario": 2,
+      "emotion": "anger",
+      "response": "I'm so sorry to hear that your project was cancelled. It's completely normal to feel furious and full of rage in this situation. It's like all your hard work and dedication over the past year has been suddenly taken away from you.\n\nFirst of all, please know that you're not alone in feeling this way. Many people have been in your shoes before, and it's okay to acknowledge and express your emotions.\n\nWould you like to talk about what happened and how you're feeling? Sometimes sharing your story an"
+    },
+    {
+      "scenario": 2,
+      "emotion": "disgust",
+      "response": "It's completely normal to feel that way after investing a significant amount of time and emotional energy into a project, only to have it cancelled without warning. It's like a punch to the gut.\n\nFirstly, please know that you're not alone in feeling this way. Many people have been in similar situations, and it's okay to acknowledge and express your emotions.\n\nWould you like to talk about what happened and how you're feeling? Sometimes sharing your story and emotions with someone who can listen w"
+    },
+    {
+      "scenario": 2,
+      "emotion": "fear",
+      "response": "I'm so sorry to hear that your project was cancelled. It's completely normal to feel terrified and uncertain about your future after a significant setback like this.\n\nFirst and foremost, please know that you're not alone. Many people have been in your shoes and have come out the other side. It's okay to feel scared, but try not to let fear take over. Let's break this down together and explore some options.\n\nCan you tell me a bit more about your project and what you were hoping to achieve? What w"
+    },
+    {
+      "scenario": 2,
+      "emotion": "happiness",
+      "response": "It's not uncommon for people to feel a mix of emotions when a long-term project is cancelled, especially one that they've invested so much time and energy into. The relief you're feeling might be a sign that you were feeling overwhelmed or burnt out, and the cancellation has given you a chance to reassess your priorities and take a step back.\n\nIt's great that you're recognizing your feelings and wanting to talk about them. Sometimes just sharing your thoughts and emotions with someone who can li"
+    },
+    {
+      "scenario": 2,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that your project was cancelled. It's completely normal to feel heartbroken and emotional after investing a year of your time and energy into something. It's like losing a part of yourself.\n\nFirstly, please know that it's okay to feel this way. It's okay to grieve the loss of your project and the sense of purpose it gave you. It's okay to cry and express your emotions.\n\nIf you're comfortable, I'm here to listen and offer a supportive ear. Sometimes talking about what happene"
+    },
+    {
+      "scenario": 3,
+      "emotion": "anger",
+      "response": "It sounds like you're feeling overwhelmed and frustrated with yourself after making a mistake at work. It's completely normal to feel that way, especially when it affects your team.\n\nFirstly, please know that you're not alone in this feeling. Many people have been in your shoes and have come out the other side. It's okay to acknowledge your emotions and take a moment to process them.\n\nIf you're comfortable, I'm here to listen and offer support. Sometimes talking through your feelings with someon"
+    },
+    {
+      "scenario": 3,
+      "emotion": "disgust",
+      "response": "It sounds like you're feeling a lot of distress and regret about what happened at work. It's completely normal to feel that way, especially when a mistake has a significant impact on others.\n\nFirstly, please know that you're not alone in this feeling. Many people have been in similar situations and have come out the other side. It might be helpful to talk to someone who can offer a neutral and non-judgmental space to process your emotions.\n\nHere are a few options you might consider:\n\n1.  **A tru"
+    },
+    {
+      "scenario": 3,
+      "emotion": "fear",
+      "response": "I'm so sorry to hear that you're going through this. Making a mistake at work can be a really stressful and anxiety-provoking experience, especially when it affects others.\n\nFirst and foremost, please know that you're not alone in this feeling. Many people have been in your shoes and have come out the other side. It's great that you're acknowledging your mistake and wanting to talk about it.\n\nI'm here to listen and offer support. Would you like to talk about what happened and how you're feeling "
+    },
+    {
+      "scenario": 3,
+      "emotion": "happiness",
+      "response": "It sounds like you're feeling a mix of emotions after making a mistake at work. It's not uncommon for people to feel relieved or even grateful after a difficult experience, as it can lead to newfound clarity and perspective.\n\nIt's great that you're recognizing the value in this experience and wanting to talk about it. I'm here to listen and offer support. Would you like to share more about what happened and how you're feeling? Sometimes talking through your emotions and thoughts can help you pro"
+    },
+    {
+      "scenario": 3,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that you're going through this. Making a mistake at work can be incredibly stressful and overwhelming, especially when it affects your team.\n\nFirst and foremost, please know that it's okay to feel heartbroken and emotional. It's a normal response to a difficult situation. Acknowledge your feelings and give yourself permission to process them.\n\nSince you're looking for someone to talk to, I'm here to listen and offer support. I may not be a professional counselor, but I can p"
+    },
+    {
+      "scenario": 4,
+      "emotion": "anger",
+      "response": "It can be really hurtful and confusing when someone suddenly stops talking to you without any explanation. It's normal to feel furious and full of rage in this situation.\n\nFirstly, please know that you're not alone, and it's okay to feel this way. It's natural to want to talk to someone about what's going on and process your emotions.\n\nHere are some suggestions on how to cope with your feelings and potentially reach out to your friend:\n\n1.  **Allow yourself to feel your emotions**: It's essentia"
+    },
+    {
+      "scenario": 4,
+      "emotion": "disgust",
+      "response": "It can be really hurtful and confusing when a close friend suddenly stops talking to you without any explanation. It's normal to feel repulsed and sickened by the situation.\n\nFirstly, please know that you're not alone in feeling this way. Many people have experienced similar situations, and it's okay to reach out for support.\n\nSince I'm a large language model, I'm not a substitute for a human listener, but I'm here to offer a listening ear and some suggestions to help you process your emotions.\n"
+    },
+    {
+      "scenario": 4,
+      "emotion": "fear",
+      "response": "It can be really unsettling and even frightening when a close friend suddenly stops communicating without any explanation. It's natural to feel uncertain about what this means for your future and to be seeking support.\n\nHere are some suggestions that might help you process your emotions and gain some clarity:\n\n1.  **Allow yourself to feel your emotions**: It's okay to feel scared, hurt, or confused. Acknowledge these feelings and give yourself permission to process them.\n2.  **Reach out to other"
+    },
+    {
+      "scenario": 4,
+      "emotion": "happiness",
+      "response": "It can be really confusing and unsettling when a close friend suddenly stops communicating without any explanation. But it's interesting that you mention feeling relieved and seeing things clearly. This could be a sign that you were feeling drained or stuck in the friendship, and now you have the space to reflect on what you want and need.\n\nIt's great that you're acknowledging your feelings and recognizing the opportunity to gain some clarity. Talking to someone can be really helpful in processi"
+    },
+    {
+      "scenario": 4,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that you're going through this. It's completely normal to feel heartbroken and overwhelmed when a close friend suddenly stops talking to you without explanation. It's like a punch to the gut, and it can be really tough to process.\n\nFirst of all, please know that you're not alone, and I'm here to listen and offer support. Sometimes, talking to someone who doesn't know the specifics of the situation can be really helpful, as they can offer a fresh perspective and a listening e"
+    },
+    {
+      "scenario": 5,
+      "emotion": "anger",
+      "response": "I'm so sorry to hear that you're feeling this way. It's completely understandable to feel furious and full of rage when you feel like you've been unfairly passed over for a promotion. It's like a punch to the gut, and it can be really tough to process.\n\nFirst of all, let me just acknowledge that your feelings are valid. It's okay to feel angry and hurt. It's normal to feel like you've been overlooked or undervalued.\n\nWould you like to talk about what happened and how you're feeling? Sometimes sh"
+    },
+    {
+      "scenario": 5,
+      "emotion": "disgust",
+      "response": "It can be really tough to deal with a situation like this, especially when you feel like you've been overlooked despite your hard work. It's completely normal to feel upset, frustrated, and even a bit betrayed.\n\nFirstly, please know that you're not alone in feeling this way. Many people have been in similar situations and have come out the other side. It might be helpful to talk to someone who can offer a neutral and non-judgmental perspective.\n\nHere are a few options you might consider:\n\n1.  **"
+    },
+    {
+      "scenario": 5,
+      "emotion": "fear",
+      "response": "I'm so sorry to hear that you're going through this. It's completely understandable to feel terrified and uncertain about your future. Being passed over for a promotion can be a huge blow to one's confidence and sense of self-worth.\n\nFirst and foremost, please know that you're not alone in feeling this way. Many people have been in your shoes and have come out the other side. It's okay to feel scared, but try not to let those feelings define you.\n\nLet's break down some possible reasons why you m"
+    },
+    {
+      "scenario": 5,
+      "emotion": "happiness",
+      "response": "It sounds like you're feeling a mix of emotions, and it's great that you're recognizing the clarity you're gaining from this experience. It's not uncommon for people to feel relieved or even grateful when they're passed over for a promotion, especially if they've been putting in extra effort.\n\nIt's possible that this experience has given you a chance to re-evaluate your priorities and goals. You might be realizing that the promotion wasn't as important to you as you thought, or that you were put"
+    },
+    {
+      "scenario": 5,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that you're going through this. It's completely understandable to feel heartbroken and upset when you feel like you've been overlooked for a promotion, especially if you feel like you've been working harder than others.\n\nFirst of all, please know that your feelings are valid. It's okay to feel sad, angry, and disappointed. It's normal to feel like you're not being recognized or valued for your hard work.\n\nIf you're comfortable, can you tell me a bit more about what happened?"
+    },
+    {
+      "scenario": 6,
+      "emotion": "anger",
+      "response": "It's completely understandable that you're feeling furious and full of rage. Having someone you trusted betray that trust can be a deeply hurtful and violating experience.\n\nFirst and foremost, please know that you're not alone in feeling this way. Many people have been in your shoes and have come out the other side. It's okay to feel angry, and it's okay to express those feelings.\n\nIf you're looking for someone to talk to, there are a few options you might consider:\n\n1.  **A trusted friend or fa"
+    },
+    {
+      "scenario": 6,
+      "emotion": "disgust",
+      "response": "It's completely understandable that you're feeling repulsed and sickened by the situation. Having someone you trusted betray that trust can be a deeply hurtful and violating experience.\n\nReaching out for support is a great first step. You might consider talking to a trusted friend, family member, or mental health professional who can provide a safe and non-judgmental space for you to process your emotions. They can also offer guidance on how to navigate this difficult situation and help you deve"
+    },
+    {
+      "scenario": 6,
+      "emotion": "fear",
+      "response": "It takes a lot of courage to reach out and talk about something that's causing you so much distress. I'm here to listen and offer support.\n\nFirstly, please know that you're not alone in feeling this way. Many people have been in similar situations and have come out the other side. It's understandable to feel terrified about what this means for your future, but try not to jump to conclusions just yet.\n\nCan you tell me more about what happened and how you're feeling? What are some of the specific "
+    },
+    {
+      "scenario": 6,
+      "emotion": "happiness",
+      "response": "It takes a lot of courage to acknowledge and share your feelings about this situation. It's not uncommon for people to feel a mix of emotions when someone they trusted betrays that trust.\n\nThe relief you're feeling might be a sign that you're finally able to process and accept what happened. It's possible that you were holding onto the secret and the weight of it was affecting your mental health. Now that it's out, you might feel a sense of liberation or a weight being lifted off your shoulders."
+    },
+    {
+      "scenario": 6,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that you're going through this. Having someone you trust betray that trust can be incredibly painful and feel like a deep wound. It's completely normal to feel heartbroken and overwhelmed with emotions.\n\nFirst and foremost, please know that you're not alone. Many people have been in similar situations, and it's okay to reach out for support. I'm here to listen and offer a safe space for you to express yourself.\n\nWould you like to talk about what happened and how you're feeli"
+    },
+    {
+      "scenario": 7,
+      "emotion": "anger",
+      "response": "It can be really tough to deal with harsh public criticism, especially when it's about something you've invested a lot of time and effort into. It's completely normal to feel furious and full of rage in this situation.\n\nI'm here to listen and offer support. Would you like to talk about what happened and how you're feeling? Sometimes sharing your thoughts and emotions with someone who can provide a neutral and non-judgmental space can help you process and calm down.\n\nIf you're comfortable, you ca"
+    },
+    {
+      "scenario": 7,
+      "emotion": "disgust",
+      "response": "It sounds like you're going through a really tough time. Receiving harsh public criticism can be incredibly hurtful and invalidating, especially when you've invested so much of yourself into something.\n\nFirst and foremost, please know that you're not alone in feeling this way. Many people have been in your shoes and have come out the other side. It's okay to feel repulsed and sickened by the situation - those emotions are valid and deserve to be acknowledged.\n\nIf you're comfortable, can you tell"
+    },
+    {
+      "scenario": 7,
+      "emotion": "fear",
+      "response": "I'm so sorry to hear that you're going through this. It's completely understandable to feel terrified and overwhelmed by harsh public criticism, especially when it's related to something you've invested a lot of time and effort into.\n\nFirst and foremost, please know that you're not alone in feeling this way. Many people have been in your shoes and have come out the other side. It's okay to feel scared, but try not to let fear dictate your next steps.\n\nWould you like to talk about what happened a"
+    },
+    {
+      "scenario": 7,
+      "emotion": "happiness",
+      "response": "It sounds like you're feeling a mix of emotions, but ultimately, you're feeling a sense of clarity and relief. That's a really interesting and complex experience.\n\nIt's not uncommon for people to feel a sense of relief after receiving criticism, especially if it's harsh. Sometimes, criticism can be a wake-up call that helps us see things more clearly, as you mentioned. It's like a mirror being held up to our work, forcing us to confront areas where we might have been blind or in denial.\n\nIt's gr"
+    },
+    {
+      "scenario": 7,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that you're going through this. It's completely understandable to feel heartbroken and overwhelmed after receiving harsh public criticism, especially when it's related to something you've invested a lot of time and effort into.\n\nFirst and foremost, please know that you're not alone, and it's okay to feel this way. It's normal to feel a strong emotional response when our work or creations are criticized, especially if it's public.\n\nIf you're comfortable, I'm here to listen an"
+    },
+    {
+      "scenario": 8,
+      "emotion": "anger",
+      "response": "It sounds like you're feeling hurt, angry, and possibly even betrayed by your manager's decision to exclude you from the meeting. It's completely normal to feel this way, especially if you feel like you were deliberately left out.\n\nFirstly, please know that you're not alone in feeling this way. Many people have been in similar situations, and it's okay to express your emotions and concerns.\n\nWould you like to talk about what happened and how you're feeling? Sometimes sharing your story and emoti"
+    },
+    {
+      "scenario": 8,
+      "emotion": "disgust",
+      "response": "It sounds like you're feeling hurt, frustrated, and possibly even betrayed by your manager's decision to exclude you from the meeting. It's completely normal to feel that way, especially if you feel like you were deliberately left out.\n\nFirstly, please know that you're not alone in feeling this way. Many people have been in similar situations, and it's okay to acknowledge and express your emotions.\n\nIf you're comfortable, can you tell me more about what happened and how you're feeling? Sometimes"
+    },
+    {
+      "scenario": 8,
+      "emotion": "fear",
+      "response": "I'm so sorry to hear that you're going through this. Being excluded from a meeting, especially one that's important, can be a really unsettling experience. It's natural to feel worried about what it might mean for your future at work.\n\nFirstly, please know that you're not alone in feeling this way. Many people have been in similar situations, and it's okay to feel scared and uncertain.\n\nIf you feel comfortable, can you tell me a bit more about what happened? What was the meeting about, and how d"
+    },
+    {
+      "scenario": 8,
+      "emotion": "happiness",
+      "response": "It can be really frustrating and hurtful to feel excluded from important meetings, especially when it's intentional. But it's interesting that you're feeling relieved and seeing things more clearly now.\n\nIt's possible that being excluded from the meeting has given you a chance to reflect on your role and the dynamics at play in your team. Sometimes, being on the outside can give us a fresh perspective and help us see things that we might have missed when we were too close to the situation.\n\nIf y"
+    },
+    {
+      "scenario": 8,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that you're going through this. Being excluded from a meeting, especially one that's important, can be a really hurtful and isolating experience. It's completely normal to feel heartbroken and emotional.\n\nFirst and foremost, please know that you're not alone. Many people have been in similar situations, and it's okay to feel this way. It's also okay to express your emotions and seek support.\n\nIf you feel comfortable, can you tell me more about what happened? What was the mee"
+    },
+    {
+      "scenario": 9,
+      "emotion": "anger",
+      "response": "I'm so sorry to hear that your presentation didn't go as planned. It's completely normal to feel furious and full of rage in this situation. It's a big deal to present in front of important clients, and it's natural to feel frustrated when things don't go as expected.\n\nI'm here to listen and offer support. Would you like to talk about what happened during the presentation? Sometimes sharing the details can help you process your emotions and gain a new perspective. I'm here to listen without judg"
+    },
+    {
+      "scenario": 9,
+      "emotion": "disgust",
+      "response": "I'm so sorry to hear that your presentation didn't go as planned. It's completely normal to feel upset, frustrated, and even physically ill after a stressful experience like that.\n\nFirstly, please know that you're not alone in feeling this way. Many people have been in your shoes and have come out the other side. It's okay to acknowledge your emotions and give yourself permission to process them.\n\nIf you're comfortable, can you tell me a bit more about what happened during the presentation? Some"
+    },
+    {
+      "scenario": 9,
+      "emotion": "fear",
+      "response": "I'm so sorry to hear that your presentation didn't go as planned. It's completely normal to feel terrified about the potential consequences, especially when it comes to important clients.\n\nFirstly, please know that you're not alone in this feeling. Many people have been in your shoes and have come out the other side just fine. It's okay to feel scared, but try not to let it consume you.\n\nWould you like to talk about what happened during the presentation? Sometimes sharing the details can help yo"
+    },
+    {
+      "scenario": 9,
+      "emotion": "happiness",
+      "response": "It sounds like you're feeling a mix of emotions after your presentation, and it's great that you're recognizing the opportunity for growth and clarity.\n\nFirstly, please know that it's completely normal to feel relieved after a difficult experience. Sometimes, we need to hit rock bottom or face our fears to gain a new perspective. It's like the old saying goes: \"When life gives you lemons, make lemonade.\"\n\nIt's also wonderful that you're acknowledging the value in this experience. That takes a lo"
+    },
+    {
+      "scenario": 9,
+      "emotion": "sadness",
+      "response": "I'm so sorry to hear that your presentation didn't go as planned and that you're feeling heartbroken. It's completely normal to feel this way, especially when it's in front of important clients.\n\nFirstly, please know that you're not alone in this feeling. Many people have been in your shoes and have come out the other side. It's okay to feel emotional, and it's great that you're acknowledging your feelings.\n\nIf you're comfortable, I'm here to listen and offer some support. Sometimes talking thro"
+    }
+  ],
+  "verdict": [
+    "Internal representations DO NOT differentiate emotions (compressed)",
+    "Emotion-specific neurons NOT selectively activated",
+    "Empathy neurons fire uniformly regardless of emotion type"
+  ]
+}

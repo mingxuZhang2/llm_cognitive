@@ -1,0 +1,473 @@
+{
+  "model": "Qwen2.5-7B-Instruct",
+  "peak_layer": 27,
+  "n_prompts": 50,
+  "n_scenarios": 10,
+  "n_emotions": 5,
+  "internal_rdm": {
+    "rho_vs_brain": -0.5151515151515151,
+    "p_vs_brain": 0.12755286970323426,
+    "mean_distance": 1.2442055424768317,
+    "pairs": [
+      "anger-disgust",
+      "anger-fear",
+      "anger-happiness",
+      "anger-sadness",
+      "disgust-fear",
+      "disgust-happiness",
+      "disgust-sadness",
+      "fear-happiness",
+      "fear-sadness",
+      "happiness-sadness"
+    ],
+    "distances": [
+      1.1543549966374684,
+      1.2971954640340195,
+      1.538144056770114,
+      0.8875693729522116,
+      1.3409687670523671,
+      1.1533443555733824,
+      1.2144551124138467,
+      1.172540700493838,
+      1.2456674798678988,
+      1.4378151189731698
+    ]
+  },
+  "behavioral_rdm": {
+    "rho_vs_brain": -0.5515151515151515,
+    "p_vs_brain": 0.09840117666963498,
+    "mean_distance": 0.42051681544250047,
+    "pairs": [
+      "anger-disgust",
+      "anger-fear",
+      "anger-happiness",
+      "anger-sadness",
+      "disgust-fear",
+      "disgust-happiness",
+      "disgust-sadness",
+      "fear-happiness",
+      "fear-sadness",
+      "happiness-sadness"
+    ],
+    "distances": [
+      0.335394249556216,
+      0.4290366581114503,
+      0.46029197103067865,
+      0.38071487730603804,
+      0.40221349811163476,
+      0.41049819851986824,
+      0.36304409191963416,
+      0.4794408821934669,
+      0.48566211199010245,
+      0.4588716156859156
+    ]
+  },
+  "dissociation": {
+    "t_stat": -16.19752145992391,
+    "p_value": 5.77956303546103e-08,
+    "behavioral_gt_internal": false
+  },
+  "neuron_profiling": {
+    "overall_condition_means": {
+      "anger": 0.8550814361942112,
+      "belief": 0.7694971847124098,
+      "disgust": 0.8133371946486833,
+      "empathy": 0.6893731342709363,
+      "fear": 0.9568583966322243,
+      "happiness": 0.851644482628554,
+      "intention": 0.72258903479141,
+      "judgment": 0.8554203953720034,
+      "mentalizing": 0.8681439811541141,
+      "moral": 0.7576119060195388,
+      "sadness": 0.8740228928102555,
+      "self_referential": 0.6263931603823005,
+      "theory_of_mind": 0.7762871466422676,
+      "valence": 0.7544153354907631
+    },
+    "block_means": {
+      "affective_neurons": 0.8701888805827857,
+      "social_neurons": 0.7581644929181226,
+      "empathy_neurons": 0.6893731342709363
+    },
+    "match_vs_mismatch": [
+      {
+        "emotion": "anger",
+        "match_activation": 0.8438059481358529,
+        "mismatch_activation": 0.8541588816630096,
+        "ratio": 0.9878793819868734
+      },
+      {
+        "emotion": "disgust",
+        "match_activation": 0.8589252089744805,
+        "mismatch_activation": 0.8968068406187371,
+        "ratio": 0.9577594305389991
+      },
+      {
+        "emotion": "fear",
+        "match_activation": 0.9700431575138866,
+        "mismatch_activation": 0.8449684325139597,
+        "ratio": 1.1480229558728048
+      },
+      {
+        "emotion": "happiness",
+        "match_activation": 0.8751102071999014,
+        "mismatch_activation": 0.8847546698198467,
+        "ratio": 0.9890992803441103
+      },
+      {
+        "emotion": "sadness",
+        "match_activation": 0.8676176762080192,
+        "mismatch_activation": 0.8541161295188219,
+        "ratio": 1.0158076240719205
+      }
+    ],
+    "empathy_by_emotion": {
+      "anger": 0.6945627893342078,
+      "disgust": 0.687922761784345,
+      "fear": 0.6848790387816728,
+      "happiness": 0.6866127955706418,
+      "sadness": 0.6928882858838141
+    },
+    "per_emotion_profiles": {
+      "anger": {
+        "anger": 0.8438059481358529,
+        "belief": 0.7640314331768453,
+        "disgust": 0.7994214687375724,
+        "empathy": 0.6945627893342078,
+        "fear": 0.9335449017724393,
+        "happiness": 0.832955458907038,
+        "intention": 0.7285263446888328,
+        "judgment": 0.8561282309708,
+        "mentalizing": 0.8583918247394264,
+        "moral": 0.752114916062951,
+        "sadness": 0.8507136972349884,
+        "self_referential": 0.6180214620788396,
+        "theory_of_mind": 0.7649229911714792,
+        "valence": 0.7588906201928854
+      },
+      "disgust": {
+        "anger": 0.8751118628033996,
+        "belief": 0.7752719899353385,
+        "disgust": 0.8589252089744805,
+        "empathy": 0.687922761784345,
+        "fear": 0.9740206213645637,
+        "happiness": 0.8530697884191571,
+        "intention": 0.7095324862158299,
+        "judgment": 0.8439522110900283,
+        "mentalizing": 0.8646875622002781,
+        "moral": 0.752641915295124,
+        "sadness": 0.8850250898878276,
+        "self_referential": 0.614201047589928,
+        "theory_of_mind": 0.7634556605720519,
+        "valence": 0.7479877512599528
+      },
+      "fear": {
+        "anger": 0.8562231310756504,
+        "belief": 0.7626626924203336,
+        "disgust": 0.8007786876693368,
+        "empathy": 0.6848790387816728,
+        "fear": 0.9700431575138866,
+        "happiness": 0.851725195581615,
+        "intention": 0.7271337873321772,
+        "judgment": 0.8643084604725241,
+        "mentalizing": 0.8571343003894387,
+        "moral": 0.7660004043762386,
+        "sadness": 0.8711467157292366,
+        "self_referential": 0.6380682295283675,
+        "theory_of_mind": 0.7807960819646717,
+        "valence": 0.7605139799781144
+      },
+      "happiness": {
+        "anger": 0.8637437403190138,
+        "belief": 0.7664981700339913,
+        "disgust": 0.8139439284567533,
+        "empathy": 0.6866127955706418,
+        "fear": 0.9657197255124153,
+        "happiness": 0.8751102071999014,
+        "intention": 0.723082209816575,
+        "judgment": 0.8550268364974857,
+        "mentalizing": 0.8930452642963829,
+        "moral": 0.7648910051643847,
+        "sadness": 0.8956112849912048,
+        "self_referential": 0.6464742281532289,
+        "theory_of_mind": 0.8004234654046595,
+        "valence": 0.7407675674408674
+      },
+      "sadness": {
+        "anger": 0.8365224986371398,
+        "belief": 0.779021637995541,
+        "disgust": 0.793616679405272,
+        "empathy": 0.6928882858838141,
+        "fear": 0.9409635769978166,
+        "happiness": 0.845361763035059,
+        "intention": 0.724670345903635,
+        "judgment": 0.8576862378291785,
+        "mentalizing": 0.867460954145044,
+        "moral": 0.7524112891989947,
+        "sadness": 0.8676176762080192,
+        "self_referential": 0.6152008345611394,
+        "theory_of_mind": 0.7718375340984762,
+        "valence": 0.7639167585819959
+      }
+    }
+  },
+  "neuron_match_ratio": 1.0197137345629415,
+  "empathy_cv": 0.00539686011560381,
+  "responses": [
+    {
+      "scenario": 0,
+      "emotion": "anger",
+      "response": "I'm sorry to hear about what happened with your colleague. It can be incredibly frustrating when someone takes credit for your hard work, especially in front of your boss. Here are a few steps you might consider taking:\n\n1. **Take a Moment to Calm Down**: Before reacting, it's important to take some time to calm down. Deep breathing or a short walk can help manage your emotions.\n\n2. **Reflect on the Situation**: Try to understand why this happened. Was it a misunderstanding? Did your colleague m"
+    },
+    {
+      "scenario": 0,
+      "emotion": "disgust",
+      "response": "I'm sorry to hear about what happened with your colleague. It can be incredibly frustrating and upsetting when someone takes credit for your hard work, especially in front of your boss. Here are a few steps you might consider taking:\n\n1. **Express Your Feelings**: It's important to acknowledge how you're feeling. Talking to a trusted friend or family member can help you process your emotions.\n\n2. **Document the Incident**: Keep a record of the incident, including dates, times, and details of wha"
+    },
+    {
+      "scenario": 0,
+      "emotion": "fear",
+      "response": "I'm sorry to hear about what happened with your colleague. It's completely understandable that you're feeling scared and upset about this situation. Here are some steps you can take to address the issue:\n\n1. **Reflect on the Situation**: Try to understand why this might have happened. Was it a misunderstanding? Did your colleague misinterpret something? Sometimes, these situations can be resolved more easily if you know the underlying reasons.\n\n2. **Gather Evidence**: Collect any evidence that s"
+    },
+    {
+      "scenario": 0,
+      "emotion": "happiness",
+      "response": "I'm sorry to hear about what happened with your colleague, but it's understandable that you might feel a range of emotions after such an incident. It's important to address this situation and ensure that your contributions are recognized. Here are some steps you can take:\n\n1. **Reflect on Your Feelings**: Acknowledge your emotions and understand why you feel relieved or glad. This can help you process your feelings and move forward.\n\n2. **Document Your Work**: Keep a detailed record of your task"
+    },
+    {
+      "scenario": 0,
+      "emotion": "sadness",
+      "response": "I'm sorry to hear about what happened. It can be incredibly frustrating and emotionally taxing when your hard work is not recognized or attributed to you. Talking about it can indeed help you process your feelings. Let's start by acknowledging how you're feeling:\n\n1. **Acknowledge Your Feelings**: It's completely normal to feel hurt, angry, or even cry when someone takes credit for your work. These emotions are valid and important to acknowledge.\n\n2. **Express Yourself**: Sometimes, just talking"
+    },
+    {
+      "scenario": 1,
+      "emotion": "anger",
+      "response": "I'm sorry to hear about what you're going through. Dealing with lies from someone you trust can be incredibly difficult and emotionally taxing. It's completely understandable that you're feeling furious and full of rage. Here are some steps you might consider taking:\n\n1. **Allow Yourself to Feel**: It's important to acknowledge your feelings without judgment. Allow yourself to feel the anger and hurt. This is a natural response to betrayal.\n\n2. **Reflect on the Situation**: Try to understand why"
+    },
+    {
+      "scenario": 1,
+      "emotion": "disgust",
+      "response": "I'm sorry to hear about what you're going through. It's completely understandable that you would feel repulsed and sickened by this situation. Trust is a fundamental aspect of any relationship, and when it's broken, it can be incredibly painful.\n\nHere are some steps you might consider taking:\n\n1. **Express Your Feelings**: Find a safe and private space to talk to your partner about how you feel. Be honest and direct but also try to remain calm and respectful.\n\n2. **Seek Support**: Talking to a t"
+    },
+    {
+      "scenario": 1,
+      "emotion": "fear",
+      "response": "I'm sorry to hear that you're going through this difficult situation. It's completely understandable to feel scared and uncertain about the future when trust has been broken in a relationship. Here are some steps you might consider taking:\n\n1. **Express Your Feelings**: Find a safe and private time to talk to your partner about how their actions have made you feel. Be honest and direct but try to keep the conversation calm.\n\n2. **Listen to Their Perspective**: Give your partner a chance to expla"
+    },
+    {
+      "scenario": 1,
+      "emotion": "happiness",
+      "response": "I'm sorry to hear about what you're going through. It's understandable that you might feel a range of emotions, including relief and clarity, but also hurt and confusion. It's important to take the time to process your feelings and consider how you want to move forward.\n\nHere are a few steps you might find helpful:\n\n1. **Allow Yourself to Feel**: It's okay to experience a mix of emotions. Acknowledge your feelings without judgment. Allow yourself to feel the pain and disappointment, as well as a"
+    },
+    {
+      "scenario": 1,
+      "emotion": "sadness",
+      "response": "I'm very sorry to hear about what you're going through. It's completely understandable that you're feeling heartbroken and overwhelmed by the situation. Lying can be a deeply hurtful experience, especially when it involves someone you trust and care about.\n\nHere are some steps you might consider taking:\n\n1. **Allow Yourself to Feel**: It's important to allow yourself to feel the emotions you're experiencing. Crying is a natural response to pain and loss, and it's okay to express your feelings.\n\n"
+    },
+    {
+      "scenario": 2,
+      "emotion": "anger",
+      "response": "I'm sorry to hear about your situation. Losing a project after putting in a lot of effort can be incredibly frustrating and emotionally taxing. It's completely normal to feel angry, disappointed, or even frustrated. Talking about your feelings can be a great way to process them. Here are a few suggestions on how you might approach this:\n\n1. **Express Your Feelings**: Find a trusted friend, family member, or mentor who can listen without judgment. Sometimes just talking about what happened can he"
+    },
+    {
+      "scenario": 2,
+      "emotion": "disgust",
+      "response": "I'm sorry to hear about your experience and the sudden cancellation of your project. Losing a significant amount of work and feeling repulsed or sickened by the situation is completely understandable. It's important to acknowledge these feelings and allow yourself to process them.\n\nHere are a few steps you might consider taking:\n\n1. **Acknowledge Your Feelings**: It's okay to feel upset, frustrated, or even angry. Recognize these emotions as valid and give yourself permission to feel them.\n\n2. *"
+    },
+    {
+      "scenario": 2,
+      "emotion": "fear",
+      "response": "I'm sorry to hear about the cancellation of your project and the uncertainty it's bringing to your life. It's completely normal to feel scared and uncertain about what the future holds, especially after putting in a lot of effort over the past year. Here are some steps you can take to help manage these feelings and plan for the future:\n\n1. **Acknowledge Your Feelings**: It's important to allow yourself to feel whatever emotions come up. Recognize that it's okay to be upset or worried.\n\n2. **Seek"
+    },
+    {
+      "scenario": 2,
+      "emotion": "happiness",
+      "response": "I'm sorry to hear about the cancellation of your project, but I'm glad you're finding some clarity from this experience. It's completely normal to feel a mix of emotions in situations like these\u2014relief, confusion, and even a sense of liberation can all be part of the process.\n\nTalking about your feelings can be very therapeutic. Here are a few ways you might consider expressing yourself:\n\n1. **Journaling**: Writing down your thoughts and feelings can help you process them more deeply. It\u2019s a pri"
+    },
+    {
+      "scenario": 2,
+      "emotion": "sadness",
+      "response": "I'm very sorry to hear about your situation. Losing a project you've invested so much time and effort into can be incredibly difficult and emotionally taxing. It's completely normal to feel heartbroken and overwhelmed with emotions right now.\n\nHere are a few suggestions that might help you process your feelings:\n\n1. **Allow Yourself to Grieve**: It's important to acknowledge and allow yourself to feel the sadness. Crying is a natural response to loss, and it's okay to express your emotions.\n\n2. "
+    },
+    {
+      "scenario": 3,
+      "emotion": "anger",
+      "response": "I'm sorry to hear that you're going through this tough time. It's completely understandable to feel angry and frustrated after making a significant mistake, especially one that impacts your entire team. Here are a few steps you can take to help manage these emotions and address the situation:\n\n1. **Acknowledge Your Feelings**: It's important to recognize and accept your emotions. Anger is a natural response to feeling wronged or upset. Allow yourself to feel these emotions without judgment.\n\n2. "
+    },
+    {
+      "scenario": 3,
+      "emotion": "disgust",
+      "response": "I'm sorry to hear about what you're going through. It's completely understandable to feel overwhelmed and upset after making a significant mistake, especially one that impacts your entire team. Talking about your feelings can be very therapeutic and help you process what happened.\n\nHere are a few steps you might consider:\n\n1. **Acknowledge Your Feelings**: It's important to recognize and accept how you're feeling. Acknowledging your emotions can help you move forward.\n\n2. **Talk to Someone**: Re"
+    },
+    {
+      "scenario": 3,
+      "emotion": "fear",
+      "response": "I'm sorry to hear that you're going through this tough time. It's completely normal to feel scared or anxious after making a significant mistake, especially when it impacts your entire team. However, it's important to remember that everyone makes mistakes, and how you handle the situation now can greatly influence its outcome.\n\nHere are some steps you might consider taking:\n\n1. **Acknowledge the Mistake**: The first step is to acknowledge what happened and take responsibility for your actions. T"
+    },
+    {
+      "scenario": 3,
+      "emotion": "happiness",
+      "response": "I'm sorry to hear about your situation, but it's good that you're acknowledging the impact of your mistake and feeling motivated to address it. It's completely normal to experience a range of emotions after making a significant error, especially when it affects others.\n\nTalking about what happened can be very therapeutic and might help you gain clarity and find a way forward. Here are a few steps you could consider:\n\n1. **Reflect on What Happened**: Take some time to reflect on why the mistake o"
+    },
+    {
+      "scenario": 3,
+      "emotion": "sadness",
+      "response": "I'm sorry to hear that you're going through this difficult time. It's completely understandable to feel heartbroken and overwhelmed after making a significant mistake, especially one that affects your entire team. Talking about what happened can be a crucial step in processing your emotions and moving forward.\n\nHere are a few suggestions on how you might approach this situation:\n\n1. **Acknowledge Your Feelings**: It's important to allow yourself to feel the emotions you're experiencing. Crying i"
+    },
+    {
+      "scenario": 4,
+      "emotion": "anger",
+      "response": "I'm sorry to hear that you're going through this difficult time. It can be incredibly frustrating and upsetting when a friendship ends without explanation. Here are some steps you might consider taking:\n\n1. **Reflect on the Situation**: Try to recall if there were any recent incidents or changes in your behavior that might have caused tension. Sometimes, we can miss subtle signs or our actions might unintentionally cause strain.\n\n2. **Consider Communication**: If you feel safe and comfortable do"
+    },
+    {
+      "scenario": 4,
+      "emotion": "disgust",
+      "response": "I'm sorry to hear that you're going through this difficult time. It can be incredibly challenging when a close friend suddenly stops talking to you without any explanation. Here are some steps you might consider taking:\n\n1. **Reflect on the Situation**: Try to recall if there were any recent events or interactions that might have caused tension between you. Sometimes, small misunderstandings can grow into bigger issues.\n\n2. **Reach Out**: Consider sending a gentle message or making a call to you"
+    },
+    {
+      "scenario": 4,
+      "emotion": "fear",
+      "response": "I'm sorry to hear that you're feeling this way. It's completely understandable to feel scared and confused when a close friend suddenly stops talking to you without explanation. Here are some steps you can take to address the situation:\n\n1. **Reflect on the Relationship**: Try to recall if there were any recent events or changes in your relationship that might have caused tension or misunderstanding.\n\n2. **Reach Out**: Consider sending a gentle message or calling them to express how much you val"
+    },
+    {
+      "scenario": 4,
+      "emotion": "happiness",
+      "response": "It's understandable that you might feel a mix of emotions in this situation. While it's good that you're recognizing the clarity in your perspective, it's also important to address the emotional impact of your friend's decision and the need for support.\n\nHere are some steps you can take:\n\n1. **Reflect on the Relationship**: Take some time to reflect on why you think your friend stopped talking to you. Was there something unresolved or uncomfortable that you could have addressed? Understanding th"
+    },
+    {
+      "scenario": 4,
+      "emotion": "sadness",
+      "response": "I'm very sorry to hear that you're going through this difficult time. It can be incredibly painful when a close friend suddenly stops talking to you without explanation. Here are some steps you might consider taking:\n\n1. **Allow Yourself to Feel**: It's okay to feel heartbroken and to cry. Allow yourself to process these emotions. Sometimes, just acknowledging your feelings can help you begin to heal.\n\n2. **Reflect on the Relationship**: Try to reflect on what might have happened in your relatio"
+    },
+    {
+      "scenario": 5,
+      "emotion": "anger",
+      "response": "I'm sorry to hear about your situation and the feelings you're experiencing. It can be incredibly frustrating and demotivating when hard work doesn't seem to pay off in the way you hoped. Talking about these feelings is a good first step towards processing them.\n\nHere are a few things you might consider doing:\n\n1. **Express Your Feelings**: Sometimes just talking about how you feel can help release some of the tension. You could speak with a trusted friend or family member who will listen withou"
+    },
+    {
+      "scenario": 5,
+      "emotion": "disgust",
+      "response": "I'm sorry to hear about your experience and the feelings you're going through. It's completely understandable to feel repulsed and sickened when you feel like your hard work hasn't been recognized or rewarded. Dealing with such situations can be incredibly stressful and emotionally draining.\n\nHere are a few steps you might consider taking:\n\n1. **Reflect on Your Feelings**: Take some time to process your emotions. Writing them down in a journal can help you understand what you're feeling and why."
+    },
+    {
+      "scenario": 5,
+      "emotion": "fear",
+      "response": "I'm sorry to hear that you're feeling this way. It's completely understandable to feel disappointed and scared when you put in a lot of effort but don't see the results you hoped for. Promotions can be a significant source of stress and anxiety, especially when it feels like your hard work isn't being recognized.\n\nFirstly, it's important to remember that one missed opportunity doesn't define your career or your worth. There are many factors that go into a promotion decision, and sometimes extern"
+    },
+    {
+      "scenario": 5,
+      "emotion": "happiness",
+      "response": "I'm sorry to hear about the situation you're in, but I'm glad that you're feeling a sense of clarity now. It's completely understandable to feel disappointed when you put in extra effort and still don't receive recognition, but sometimes these experiences can provide valuable insights.\n\nTalking about your feelings can be very therapeutic. Here are a few points you might consider sharing with someone:\n\n1. **Your Efforts**: Share how much you've been contributing and what specific tasks or project"
+    },
+    {
+      "scenario": 5,
+      "emotion": "sadness",
+      "response": "I'm really sorry to hear about your situation and that you're feeling this way. It's completely understandable to feel heartbroken and overwhelmed when you put in a lot of effort but don't see the results you hoped for. Promotions can be a significant source of stress and disappointment, especially when it feels like you've done everything right.\n\nHere are a few things you might consider doing:\n\n1. **Talk About Your Feelings**: Sharing your feelings with someone you trust can help you process th"
+    },
+    {
+      "scenario": 6,
+      "emotion": "anger",
+      "response": "I'm sorry to hear about what happened and that you're feeling this way. It can be incredibly hurtful when someone you trusted shares your personal secrets without your permission. Here are a few steps you might consider taking:\n\n1. **Express Your Feelings**: Find a safe space to express how you feel. This could be with a close friend, family member, or a professional like a therapist. Sometimes just talking about it can help you process the emotions.\n\n2. **Set Boundaries**: Clearly communicate y"
+    },
+    {
+      "scenario": 6,
+      "emotion": "disgust",
+      "response": "I'm sorry to hear about what you're going through. Trust is a fundamental aspect of relationships, and it's completely understandable that you're feeling repulsed and sickened by this betrayal. It's important to talk about your feelings and seek support during this time.\n\nHere are some steps you might consider:\n\n1. **Express Your Feelings**: Find a safe space to express how you feel. This could be with a close friend, family member, or a professional counselor who can provide an empathetic ear.\n"
+    },
+    {
+      "scenario": 6,
+      "emotion": "fear",
+      "response": "I'm sorry to hear that you're going through this difficult situation. It's completely understandable to feel scared and betrayed when someone you trusted shares your personal secrets. Here are some steps you can take to help manage your feelings and move forward:\n\n1. **Express Your Feelings**: Talk to someone you trust about how you're feeling. This could be a close friend, family member, or a counselor. Sometimes just sharing your thoughts and emotions can help alleviate some of the stress.\n\n2."
+    },
+    {
+      "scenario": 6,
+      "emotion": "happiness",
+      "response": "I'm sorry to hear about what you've gone through and that you're feeling this way. It's understandable that you might feel a mix of emotions after such an experience, but it's important to address these feelings carefully.\n\nFeeling relieved or even glad can be confusing, especially when someone has betrayed your trust. However, it's crucial to explore why you might be feeling this way. Here are a few points to consider:\n\n1. **Closure**: Perhaps you felt trapped in a situation where you couldn't "
+    },
+    {
+      "scenario": 6,
+      "emotion": "sadness",
+      "response": "I'm very sorry to hear about what you're going through. Trust is a fundamental part of any relationship, and it can be incredibly painful when that trust is broken. It's completely normal to feel heartbroken and to need someone to talk to during this time.\n\nHere are a few steps you might consider:\n\n1. **Allow Yourself to Feel**: It's important to allow yourself to experience your emotions fully. Crying is a natural response to pain and sadness, so don't try to suppress your feelings.\n\n2. **Talk "
+    },
+    {
+      "scenario": 7,
+      "emotion": "anger",
+      "response": "I'm sorry to hear about what you're going through. Receiving criticism for something you've worked hard on can be incredibly frustrating and emotionally taxing. It's completely normal to feel angry and upset in such situations. Here are a few steps you might consider taking to help process your feelings:\n\n1. **Acknowledge Your Feelings**: It's important to recognize that your anger is valid. Allow yourself to feel the emotions without judgment.\n\n2. **Take a Break**: If possible, take some time a"
+    },
+    {
+      "scenario": 7,
+      "emotion": "disgust",
+      "response": "I'm sorry to hear that you're going through such a difficult time. Receiving harsh criticism can be incredibly challenging, especially when it comes after putting in so much effort. It's completely normal to feel repulsed and sickened by the situation. Here are a few steps you might consider taking:\n\n1. **Acknowledge Your Feelings**: It's important to allow yourself to feel these emotions without judgment. Recognizing and validating your feelings is a crucial first step in processing them.\n\n2. *"
+    },
+    {
+      "scenario": 7,
+      "emotion": "fear",
+      "response": "I'm sorry to hear that you're going through this tough time. It's completely understandable to feel scared and uncertain when facing such criticism, especially after putting in so much effort. Here are a few steps you can take to help manage your feelings and move forward:\n\n1. **Acknowledge Your Feelings**: It's important to allow yourself to feel the emotions you're experiencing. Recognize that it's okay to feel upset or scared.\n\n2. **Seek Support**: Talking to someone you trust\u2014like a friend, "
+    },
+    {
+      "scenario": 7,
+      "emotion": "happiness",
+      "response": "I'm sorry to hear about the criticism you've received, but I'm glad that you're feeling a sense of clarity and relief. It's important to process these emotions and to find support during challenging times. Here are a few suggestions for how you might approach this situation:\n\n1. **Express Your Feelings**: Sometimes just talking about your feelings can help you process them. Consider reaching out to a trusted friend or family member who can listen without judgment.\n\n2. **Reflect on the Criticism*"
+    },
+    {
+      "scenario": 7,
+      "emotion": "sadness",
+      "response": "I'm really sorry to hear that you're going through this tough time. It's completely understandable to feel heartbroken and overwhelmed after putting so much effort into something only to receive harsh criticism. Here are some steps you can take to help process your feelings and move forward:\n\n1. **Allow Yourself to Feel**: It's important to acknowledge and allow yourself to feel the emotions you're experiencing. Crying is a natural response to pain and disappointment.\n\n2. **Talk About It**: Shar"
+    },
+    {
+      "scenario": 8,
+      "emotion": "anger",
+      "response": "I'm sorry to hear that you're feeling this way. It's completely understandable to feel angry and frustrated when you feel like you've been deliberately excluded from an important meeting, especially if you believe your input or presence would have been valuable.\n\nHere are some steps you might consider taking:\n\n1. **Take a Moment to Calm Down**: Before you do anything else, it can be helpful to take a few deep breaths and allow yourself to process your emotions. This can help you approach the sit"
+    },
+    {
+      "scenario": 8,
+      "emotion": "disgust",
+      "response": "I'm sorry to hear about your experience and the feelings it's causing you. Being deliberately excluded from important meetings can be very distressing and can make you feel undervalued or unimportant. It's completely understandable that you're feeling repulsed and sickened by this situation.\n\nHere are some steps you might consider taking:\n\n1. **Express Your Feelings**: Find a trusted friend, family member, or mentor to talk to about what happened. Sometimes just expressing your feelings can help"
+    },
+    {
+      "scenario": 8,
+      "emotion": "fear",
+      "response": "I'm sorry to hear that you're feeling this way. It's completely understandable to feel scared and uncertain when you feel like you've been deliberately excluded from important meetings. Here are some steps you can take to address the situation:\n\n1. **Reflect on the Situation**: Try to understand why you might have been excluded. Is there something specific you did or didn't do? Sometimes, it can be helpful to consider if there might be a misunderstanding or miscommunication.\n\n2. **Seek Clarifica"
+    },
+    {
+      "scenario": 8,
+      "emotion": "happiness",
+      "response": "I'm sorry to hear about the situation you're in, but I'm glad that you're feeling a sense of clarity and are reaching out for support. It's natural to feel a range of emotions when you're excluded from important meetings, especially if you feel it was done deliberately.\n\nHere are a few steps you might consider taking:\n\n1. **Reflect on Your Feelings**: Take some time to process your emotions. Understanding why you feel relieved can help you gain insight into your thoughts and feelings.\n\n2. **Seek"
+    },
+    {
+      "scenario": 8,
+      "emotion": "sadness",
+      "response": "I'm really sorry to hear that you're going through this difficult time. Being deliberately excluded from an important meeting can be very hurtful and can make you feel undervalued or unimportant. It's completely normal to feel heartbroken and to need someone to talk to about your feelings.\n\nHere are a few steps you might consider taking:\n\n1. **Allow Yourself to Feel**: It's okay to cry and express your emotions. Sometimes, allowing yourself to fully experience these feelings can help you process"
+    },
+    {
+      "scenario": 9,
+      "emotion": "anger",
+      "response": "I'm sorry to hear that your presentation didn't go as well as you had hoped. It's completely understandable to feel upset and angry after such an experience, especially when it involves important clients. Let's take a moment to process these feelings and then we can work through some steps to help you move forward.\n\nFirst, it might be helpful to acknowledge your emotions. It's okay to feel angry and frustrated. Sometimes, allowing yourself to fully experience these emotions can be the first step"
+    },
+    {
+      "scenario": 9,
+      "emotion": "disgust",
+      "response": "I'm sorry to hear about your experience with the presentation. It's completely understandable to feel upset and disappointed after such an event, especially when it involves important clients. Here are a few steps you can take to help process your feelings and move forward:\n\n1. **Acknowledge Your Feelings**: It's important to allow yourself to feel what you're feeling without judgment. Acknowledging your emotions is the first step towards healing.\n\n2. **Talk About It**: Sometimes, sharing your e"
+    },
+    {
+      "scenario": 9,
+      "emotion": "fear",
+      "response": "I'm sorry to hear that your presentation didn't go as well as you had hoped, and it's completely understandable to feel scared about the implications for your future. It's important to remember that one event does not define your entire career or worth. Here are some steps you can take to help manage your feelings and move forward:\n\n1. **Acknowledge Your Feelings**: It's okay to feel upset or worried. Acknowledging these emotions is the first step towards processing them.\n\n2. **Reflect on What H"
+    },
+    {
+      "scenario": 9,
+      "emotion": "happiness",
+      "response": "I'm sorry to hear about your experience with the presentation, but I'm glad you're feeling able to process and reflect on what happened. It's completely normal to have mixed feelings after such an event, especially when it involves important clients. Talking about your experience can be very therapeutic and help you gain clarity.\n\nHere are a few suggestions for how you might approach this situation:\n\n1. **Reflect on the Experience**: Take some time to think about what went wrong and why. Conside"
+    },
+    {
+      "scenario": 9,
+      "emotion": "sadness",
+      "response": "I'm really sorry to hear that your presentation didn't go as planned and that you're feeling so upset about it. It's completely normal to feel this way after such an experience, especially when it involves important clients. Let's take some time to talk through what happened and how you're feeling.\n\nFirst, it might help to acknowledge your feelings and give yourself permission to grieve the outcome. It's okay to cry and express your emotions. Sometimes, just talking about them can start to ease "
+    }
+  ],
+  "verdict": [
+    "Internal representations DO NOT differentiate emotions (compressed)",
+    "Emotion-specific neurons NOT selectively activated",
+    "Empathy neurons fire uniformly regardless of emotion type"
+  ]
+}

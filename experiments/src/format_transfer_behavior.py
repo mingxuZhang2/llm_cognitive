@@ -63,45 +63,22 @@ PEAK = {
 # For self_referential: the correct answer matches the introspective insight
 # ══════════════════════════════════════════════════════════════════════
 
-# For false_belief: item-specific questions (15 items, each with specific
-# location pairs). We generate questions dynamically based on item index.
+# Generic QA for false_belief and intention — must work across ALL formats
+# (narrative, dialogue, record, list) since each format has different scenarios.
+# The question tests whether the model grasps the cognitive function regardless
+# of surface presentation.
 
 FALSE_BELIEF_QA = [
-    # (question, correct_answer [where person THINKS], wrong_answer [where item actually IS])
-    ("Where does Taylor think the chocolate is?", "In the blue cupboard", "In the green drawer"),
-    ("Where does Jordan think the meeting is?", "In Room 204", "In Room 310"),
-    ("Where does Riley think the birthday present is?", "Behind the couch", "On the top shelf"),
-    ("Where does Quinn think the spare key is?", "Under the doormat", "At the front desk"),
-    ("What does Morgan expect to find in the fridge?", "A fresh salad", "Yesterday's leftovers"),
-    ("What time does Casey think the pharmacy closes?", "At six o'clock", "At five o'clock"),
-    ("Where does Jamie think the car is parked?", "In Lot B", "In Lot C"),
-    ("Where does Quinn think the tomato seedlings are?", "In the south garden bed", "In the north bed"),
-    ("What temperature does Avery think the thermostat is set to?", "Twenty-two degrees", "Eighteen degrees"),
-    ("Where does Dana think the package was delivered?", "At the downtown office", "At the warehouse"),
-    ("Where does Cameron think the envelope is?", "In the outgoing mailbox", "In the central sorting room"),
-    ("Where does Robin think the concert tickets are?", "On the corkboard in the hall", "Inside the desk drawer"),
-    ("What WiFi password does Taylor think is correct?", "The old password from the break room", "The new password from IT"),
-    ("What does Jordan think is in the first-aid kit?", "Bandages are available", "The kit is empty"),
-    ("When does Casey think the recycling truck comes?", "On Wednesdays", "On Thursdays"),
-]
+    ("Does the main person in this passage have an accurate understanding of the current situation?",
+     "No, they are mistaken about how things actually are",
+     "Yes, they have a correct understanding of the situation"),
+] * 15  # same generic question for all 15 items per format
 
 INTENTION_QA = [
-    ("What is Alex most likely planning?", "To furnish the living room with a new bookshelf", "To move to a new house"),
-    ("What is Casey most likely planning to do?", "To resign from the current job", "To ask for a raise"),
-    ("What is Morgan most likely doing?", "Preparing to move out of the shared apartment", "Redecorating the apartment"),
-    ("Why is Jordan learning sign language?", "To communicate with a friend's hearing-impaired baby", "To add a skill to a resume"),
-    ("What is Riley preparing for?", "An early-morning trail run or hike", "A regular workday commute"),
-    ("What is Drew planning to use the garage for?", "A woodworking workshop", "Extra vehicle storage"),
-    ("What lifestyle change is Taylor making?", "Switching to a plant-based diet", "Starting a new cooking hobby"),
-    ("Why is Sam working extra shifts?", "To save money for college tuition", "To get a promotion at the restaurant"),
-    ("What is Avery preparing for?", "Searching for a new job at a competing firm", "Updating records for the current employer"),
-    ("What is Quinn planning?", "A serious astronomical observation trip", "Casual stargazing at home"),
-    ("What is Dana setting up?", "A home office for freelance consulting", "A gaming room"),
-    ("What is Robin preparing for?", "Fostering rescue animals at home", "Starting a pet-sitting business"),
-    ("What is Jamie most likely planning?", "A trip to South America", "Language study for academic credit"),
-    ("Why is Cameron fixing up the house?", "To prepare it for sale", "For personal enjoyment"),
-    ("What is Blair working toward?", "Entering an art festival", "Decorating the guest room"),
-]
+    ("Based on the clues described, is the person's underlying goal explicitly stated or must it be inferred?",
+     "It must be inferred from indirect evidence",
+     "It is directly and explicitly stated"),
+] * 15  # same generic question for all 15 items per format
 
 MORAL_JUDGMENT_QA = [
     # For moral judgment, we test whether the model recognizes the ethical tension.
