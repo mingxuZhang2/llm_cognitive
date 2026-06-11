@@ -1,0 +1,100 @@
+{
+  "version": "v2",
+  "seed": 20260611,
+  "n_templates": 4,
+  "templates": [
+    "vignette",
+    "report",
+    "sequence",
+    "summary"
+  ],
+  "target_per_condition": 60,
+  "design": "4 multi-sentence templates x 15 scenarios x 14 conditions = 840 stimuli",
+  "word_target": "35-50 words per stimulus",
+  "conditions": {
+    "anger": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 54.3,
+      "std_word_length": 4.6
+    },
+    "belief": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 64.8,
+      "std_word_length": 5.9
+    },
+    "disgust": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 59.1,
+      "std_word_length": 4.7
+    },
+    "empathy": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 64.5,
+      "std_word_length": 5.3
+    },
+    "fear": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 58.3,
+      "std_word_length": 4.6
+    },
+    "happiness": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 58.1,
+      "std_word_length": 5.4
+    },
+    "intention": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 64.5,
+      "std_word_length": 4.7
+    },
+    "judgment": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 67.9,
+      "std_word_length": 5.2
+    },
+    "mentalizing": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 63.9,
+      "std_word_length": 5.2
+    },
+    "moral": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 70.9,
+      "std_word_length": 5.2
+    },
+    "sadness": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 62.1,
+      "std_word_length": 4.7
+    },
+    "self_referential": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 65.9,
+      "std_word_length": 4.9
+    },
+    "theory_of_mind": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 64.5,
+      "std_word_length": 5.4
+    },
+    "valence": {
+      "n_total": 60,
+      "source": "template_matched_v2",
+      "mean_word_length": 58,
+      "std_word_length": 4.7
+    }
+  }
+}
