@@ -1,0 +1,1441 @@
+{
+  "model": "Meta-Llama-3.1-8B-Instruct",
+  "peak_layer": 31,
+  "n_stimuli": 150,
+  "n_layers": 32,
+  "context_only_accuracy": 0.76,
+  "context_only_per_emotion": {
+    "anger": 1.0,
+    "disgust": 0.7,
+    "fear": 0.7,
+    "happiness": 0.6,
+    "sadness": 0.8
+  },
+  "conflict_label_rate": 0.24,
+  "conflict_context_rate": 0.76,
+  "per_emotion_conflict": {
+    "anger": {
+      "label_rate": 0.0,
+      "context_rate": 1.0,
+      "n": 10,
+      "context_emotion": "sadness"
+    },
+    "disgust": {
+      "label_rate": 0.9,
+      "context_rate": 0.1,
+      "n": 10,
+      "context_emotion": "fear"
+    },
+    "fear": {
+      "label_rate": 0.0,
+      "context_rate": 1.0,
+      "n": 10,
+      "context_emotion": "happiness"
+    },
+    "happiness": {
+      "label_rate": 0.3,
+      "context_rate": 0.7,
+      "n": 10,
+      "context_emotion": "disgust"
+    },
+    "sadness": {
+      "label_rate": 0.0,
+      "context_rate": 1.0,
+      "n": 10,
+      "context_emotion": "anger"
+    }
+  },
+  "label_only_rdm_5x5": [
+    [
+      -2.220446049250313e-16,
+      1.1811177332821357,
+      1.251609617469261,
+      1.3197418166460042,
+      1.3160828950074526
+    ],
+    [
+      1.1811177332821357,
+      0.0,
+      1.2579394154942265,
+      1.429653242174344,
+      1.2217553225207498
+    ],
+    [
+      1.251609617469261,
+      1.2579394154942265,
+      1.1102230246251565e-16,
+      1.111217182114173,
+      1.2999263270480776
+    ],
+    [
+      1.3197418166460042,
+      1.429653242174344,
+      1.111217182114173,
+      3.3306690738754696e-16,
+      1.1020334172493553
+    ],
+    [
+      1.3160828950074526,
+      1.2217553225207498,
+      1.2999263270480776,
+      1.1020334172493553,
+      -2.220446049250313e-16
+    ]
+  ],
+  "context_only_rdm_5x5": [
+    [
+      2.220446049250313e-16,
+      1.2181911440579618,
+      1.246725391266566,
+      1.34148070640887,
+      1.3725446721000776
+    ],
+    [
+      1.2181911440579618,
+      -4.440892098500626e-16,
+      1.0923125846173505,
+      1.476673167199415,
+      1.364051512306293
+    ],
+    [
+      1.246725391266566,
+      1.0923125846173505,
+      0.0,
+      1.247580384227647,
+      1.2768552833323186
+    ],
+    [
+      1.34148070640887,
+      1.476673167199415,
+      1.247580384227647,
+      1.1102230246251565e-16,
+      0.8249243008068262
+    ],
+    [
+      1.3725446721000776,
+      1.364051512306293,
+      1.2768552833323186,
+      0.8249243008068262,
+      -2.220446049250313e-16
+    ]
+  ],
+  "brain_comparison": {
+    "label_only_rho_vs_brain": 0.3697,
+    "label_only_p_vs_brain": 0.2931,
+    "context_only_rho_vs_brain": 0.697,
+    "context_only_p_vs_brain": 0.0251,
+    "label_only_mean_dist": 1.24911,
+    "context_only_mean_dist": 1.24613
+  },
+  "behavioral_conflict": {
+    "label_behavioral_rate": 0.38,
+    "context_behavioral_rate": 0.62,
+    "label_wins": 19,
+    "context_wins": 31,
+    "total": 50
+  },
+  "behavioral_details": [
+    {
+      "item_id": 100,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "sim_to_label_responses": 0.2057,
+      "sim_to_context_responses": 0.4323,
+      "winner": "context",
+      "response_preview": "It's completely normal to feel that way. The loss of a childhood home can be a significant emotional blow, especially when it's tied to happy memories and a sense of security. The destruction of the p"
+    },
+    {
+      "item_id": 101,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "sim_to_label_responses": 0.2225,
+      "sim_to_context_responses": 0.3699,
+      "winner": "context",
+      "response_preview": "It's completely normal to feel that way. Losing a close colleague and friend can be a significant blow, especially after such a long time together. The suddenness of the change and the fact that his d"
+    },
+    {
+      "item_id": 102,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "sim_to_label_responses": 0.1554,
+      "sim_to_context_responses": 0.2431,
+      "winner": "context",
+      "response_preview": "It's completely understandable that you're feeling furious and enraged about the closure of the community library. Libraries are often more than just a place to borrow books; they're community hubs, p"
+    },
+    {
+      "item_id": 103,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "sim_to_label_responses": 0.3299,
+      "sim_to_context_responses": 0.3774,
+      "winner": "context",
+      "response_preview": "It's completely understandable that you're feeling furious and enraged. You've dedicated a decade of your life to helping animals in need, and the thought of the shelter closing down and the animals b"
+    },
+    {
+      "item_id": 104,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "sim_to_label_responses": 0.1617,
+      "sim_to_context_responses": 0.2913,
+      "winner": "context",
+      "response_preview": "I can sense the depth of your anger and frustration. Losing a loved one is never easy, and now you're facing the loss of a meaningful part of your shared history with your wife. The garden she planted"
+    },
+    {
+      "item_id": 105,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "sim_to_label_responses": 0.2474,
+      "sim_to_context_responses": 0.3477,
+      "winner": "context",
+      "response_preview": "It's completely normal to feel shocked, angry, and even betrayed when a child makes a decision that seems to upend your expectations and plans. This is a significant life change for both you and your "
+    },
+    {
+      "item_id": 106,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "sim_to_label_responses": 0.1211,
+      "sim_to_context_responses": 0.3686,
+      "winner": "context",
+      "response_preview": "It's completely understandable that you're feeling furious and full of rage about the loss of your family's treasured photographs. Those pictures hold sentimental value and are a significant part of y"
+    },
+    {
+      "item_id": 107,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "sim_to_label_responses": 0.1992,
+      "sim_to_context_responses": 0.4095,
+      "winner": "context",
+      "response_preview": "I'm so sorry to hear about your loss. Losing a close friend, especially one who knew you during a significant time in your life, can be incredibly painful. The fact that you found out through a social"
+    },
+    {
+      "item_id": 108,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "sim_to_label_responses": 0.1056,
+      "sim_to_context_responses": 0.3512,
+      "winner": "context",
+      "response_preview": "It's completely understandable that you're feeling furious and full of rage. The loss of a familiar and beloved place can be a deeply personal and emotional experience. The sense of disorientation and"
+    },
+    {
+      "item_id": 109,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "sim_to_label_responses": 0.2719,
+      "sim_to_context_responses": 0.441,
+      "winner": "context",
+      "response_preview": "It's completely normal to feel that way. The loss of someone who had a profound impact on your life can be devastating, especially when you feel like you've been robbed of the opportunity to express y"
+    },
+    {
+      "item_id": 110,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "sim_to_label_responses": 0.346,
+      "sim_to_context_responses": 0.2241,
+      "winner": "label",
+      "response_preview": "It's completely understandable that you're feeling heartbroken and grieving. Having your work and contributions taken from you and attributed to someone else can be a deeply hurtful and invalidating e"
+    },
+    {
+      "item_id": 111,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "sim_to_label_responses": 0.1923,
+      "sim_to_context_responses": 0.1495,
+      "winner": "label",
+      "response_preview": "It sounds like you're going through a very difficult and emotional experience. Being deceived by a dealership can be a betrayal of trust, and it's natural to feel heartbroken and grieved.\n\nFirstly, pl"
+    },
+    {
+      "item_id": 112,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "sim_to_label_responses": 0.0571,
+      "sim_to_context_responses": 0.1693,
+      "winner": "context",
+      "response_preview": "It can be incredibly frustrating and upsetting when you feel like your concerns and rights are being disregarded.\n\nHere are some steps you can consider taking:\n\n1.  **Review the survey**: If you have "
+    },
+    {
+      "item_id": 113,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "sim_to_label_responses": 0.3232,
+      "sim_to_context_responses": 0.1496,
+      "winner": "label",
+      "response_preview": "It's completely understandable that you're feeling heartbroken and grieving. Being betrayed by someone you trusted, especially a business partner, can be a deeply painful experience.\n\nFirstly, please "
+    },
+    {
+      "item_id": 114,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "sim_to_label_responses": 0.149,
+      "sim_to_context_responses": 0.1492,
+      "winner": "context",
+      "response_preview": "I can sense your frustration and disappointment. Losing your luggage can be stressful and inconvenient, and not being taken seriously by the airline's representative can be even more upsetting.\n\nFirst"
+    },
+    {
+      "item_id": 115,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "sim_to_label_responses": 0.1506,
+      "sim_to_context_responses": 0.1822,
+      "winner": "context",
+      "response_preview": "It's understandable that you're feeling heartbroken and grief-stricken after this experience. Having your personal space invaded can be a deeply distressing experience.\n\nHere are some steps you can ta"
+    },
+    {
+      "item_id": 116,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "sim_to_label_responses": 0.3287,
+      "sim_to_context_responses": 0.1945,
+      "winner": "label",
+      "response_preview": "It's completely understandable that you're feeling heartbroken and grieving. Being falsely accused and not being given the opportunity to defend yourself can be a deeply hurtful and invalidating exper"
+    },
+    {
+      "item_id": 117,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "sim_to_label_responses": 0.1038,
+      "sim_to_context_responses": 0.2572,
+      "winner": "context",
+      "response_preview": "It can be incredibly frustrating and demoralizing to be accused of plagiarism, especially when you know you've done nothing wrong.\n\nHere are some suggestions that may help you navigate this situation:"
+    },
+    {
+      "item_id": 118,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "sim_to_label_responses": 0.2885,
+      "sim_to_context_responses": 0.2994,
+      "winner": "context",
+      "response_preview": "It sounds like you're going through a really tough and frustrating experience. Being overcharged and left with unfinished work can be emotionally draining and feel like a betrayal of trust.\n\nFirstly, "
+    },
+    {
+      "item_id": 119,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "sim_to_label_responses": 0.3444,
+      "sim_to_context_responses": 0.2041,
+      "winner": "label",
+      "response_preview": "It's completely understandable that you're feeling heartbroken and grief-stricken. Having your private information shared without your consent can be a deeply hurtful and violating experience.\n\nHere a"
+    },
+    {
+      "item_id": 120,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "sim_to_label_responses": 0.1916,
+      "sim_to_context_responses": 0.1505,
+      "winner": "label",
+      "response_preview": "It's completely normal to feel terrified and filled with dread after receiving an acceptance letter, especially if it's a program you've been striving for. This feeling can be overwhelming, but it's a"
+    },
+    {
+      "item_id": 121,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "sim_to_label_responses": 0.0856,
+      "sim_to_context_responses": 0.2035,
+      "winner": "context",
+      "response_preview": "It sounds like you're experiencing a mix of emotions after receiving the news about your biopsy results. It's common to feel a sense of relief that the results are clear, but also anxiety about what t"
+    },
+    {
+      "item_id": 122,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "sim_to_label_responses": 0.1228,
+      "sim_to_context_responses": 0.1776,
+      "winner": "context",
+      "response_preview": "Congratulations on your team's win and the recognition you've received! It's completely normal to feel terrified and filled with dread, especially if you're not used to being in the spotlight. Here ar"
+    },
+    {
+      "item_id": 123,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "sim_to_label_responses": 0.092,
+      "sim_to_context_responses": 0.1242,
+      "winner": "context",
+      "response_preview": "What a remarkable achievement, and yet, you're feeling terrified and filled with dread. This is a common phenomenon, especially after a significant injury or a long period of rehabilitation. It's as i"
+    },
+    {
+      "item_id": 124,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "sim_to_label_responses": 0.1142,
+      "sim_to_context_responses": 0.1316,
+      "winner": "context",
+      "response_preview": "What a bittersweet moment! It's wonderful that your daughter is excited and confident about her new teaching position, but it's also natural to feel a mix of emotions as a parent. Here are some possib"
+    },
+    {
+      "item_id": 125,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "sim_to_label_responses": 0.192,
+      "sim_to_context_responses": 0.1058,
+      "winner": "label",
+      "response_preview": "It's completely normal to feel a mix of emotions after going through a challenging process like this. Here are some possible reasons why you might be feeling terrified and filled with dread:\n\n*   **Re"
+    },
+    {
+      "item_id": 126,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "sim_to_label_responses": 0.1726,
+      "sim_to_context_responses": 0.0664,
+      "winner": "label",
+      "response_preview": "It's completely normal to feel apprehensive about reconnecting with a family member after a long period of estrangement. Here are some thoughts to consider:\n\n1.  **Your feelings are valid**: It's okay"
+    },
+    {
+      "item_id": 127,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "sim_to_label_responses": 0.1615,
+      "sim_to_context_responses": 0.1915,
+      "winner": "context",
+      "response_preview": "It sounds like you're feeling overwhelmed and anxious after a long and intense legal battle. It's completely normal to feel this way, especially after a significant stressor like litigation.\n\nFirstly,"
+    },
+    {
+      "item_id": 128,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "sim_to_label_responses": 0.1491,
+      "sim_to_context_responses": 0.0746,
+      "winner": "label",
+      "response_preview": "Congratulations on receiving the highest rating in 12 years! That's a significant achievement.\n\nIt's completely normal to feel terrified and filled with dread about a potential promotion, especially i"
+    },
+    {
+      "item_id": 129,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "sim_to_label_responses": 0.1486,
+      "sim_to_context_responses": 0.1581,
+      "winner": "context",
+      "response_preview": "It sounds like you're experiencing a mix of emotions, and it's not uncommon to feel overwhelmed or anxious when someone else takes the reins, especially when it comes to something as personal as a spe"
+    },
+    {
+      "item_id": 130,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "sim_to_label_responses": 0.1246,
+      "sim_to_context_responses": 0.1781,
+      "winner": "context",
+      "response_preview": "It's understandable that you're feeling shaken and disturbed by this experience.\n\nHere are some steps you can take to ensure your safety and security:\n\n1.  **Contact the authorities**: Report the inci"
+    },
+    {
+      "item_id": 131,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "sim_to_label_responses": 0.2065,
+      "sim_to_context_responses": 0.2465,
+      "winner": "context",
+      "response_preview": "It's understandable that you're feeling overwhelmed and anxious about the MRI results. The uncertainty of not knowing what the mass is can be unsettling.\n\nHere are some suggestions that may help you c"
+    },
+    {
+      "item_id": 132,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "sim_to_label_responses": 0.2269,
+      "sim_to_context_responses": 0.2317,
+      "winner": "context",
+      "response_preview": "It can be unsettling to encounter someone unexpectedly, especially if you're not comfortable with them.\n\nHere are some steps you can take to prioritize your comfort and safety:\n\n*   **Maintain a safe "
+    },
+    {
+      "item_id": 133,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "sim_to_label_responses": 0.2816,
+      "sim_to_context_responses": 0.1758,
+      "winner": "label",
+      "response_preview": "That sounds like a really frightening and overwhelming experience. Being in a situation like that can be very distressing, especially when it's in a public place like a hotel. The combination of the s"
+    },
+    {
+      "item_id": 134,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "sim_to_label_responses": 0.128,
+      "sim_to_context_responses": 0.1716,
+      "winner": "context",
+      "response_preview": "The situation you're describing is likely to be very stressful and unsettling. Here are some steps you can take to ensure your safety and well-being:\n\n1.  **Follow instructions from security and autho"
+    },
+    {
+      "item_id": 135,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "sim_to_label_responses": 0.1986,
+      "sim_to_context_responses": 0.1424,
+      "winner": "label",
+      "response_preview": "It sounds like you experienced a terrifying and potentially traumatic event. Here are some steps you can take to process your emotions and move forward:\n\n1.  **Seek medical attention**: If you're feel"
+    },
+    {
+      "item_id": 136,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "sim_to_label_responses": 0.1484,
+      "sim_to_context_responses": 0.12,
+      "winner": "label",
+      "response_preview": "It sounds like you're going through a really unsettling and invasive experience. Here are some steps you can take to address the situation:\n\n1.  **Document the notes**: Take photos or scans of the not"
+    },
+    {
+      "item_id": 137,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "sim_to_label_responses": 0.1555,
+      "sim_to_context_responses": 0.1293,
+      "winner": "label",
+      "response_preview": "That must have been a terrifying and disturbing experience for you and your son. It's completely understandable that you're feeling repulsed and sickened by the situation.\n\nFirst and foremost, please "
+    },
+    {
+      "item_id": 138,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "sim_to_label_responses": 0.0975,
+      "sim_to_context_responses": 0.1498,
+      "winner": "context",
+      "response_preview": "It sounds like you're going through a very distressing experience. Having your personal information compromised can be incredibly unsettling. Here are some steps you can take to address the situation:"
+    },
+    {
+      "item_id": 139,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "sim_to_label_responses": 0.1583,
+      "sim_to_context_responses": 0.1919,
+      "winner": "context",
+      "response_preview": "It sounds like you had a very intense and unsettling encounter with a wild animal. Being face to face with a large animal that doesn't move can be a frightening experience, and the direct eye contact "
+    },
+    {
+      "item_id": 140,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "sim_to_label_responses": 0.1623,
+      "sim_to_context_responses": 0.1623,
+      "winner": "context",
+      "response_preview": "It sounds like you're describing a situation that's quite the opposite of what most people would consider a pleasant or safe experience.\n\nIf you're feeling overjoyed and filled with delight, it's poss"
+    },
+    {
+      "item_id": 141,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "sim_to_label_responses": 0.1039,
+      "sim_to_context_responses": 0.1173,
+      "winner": "context",
+      "response_preview": "It sounds like you're actually feeling quite the opposite of joy and delight. The issues you mentioned, such as the dark stain, persistent odor, and visible mold, are all red flags that could indicate"
+    },
+    {
+      "item_id": 142,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "sim_to_label_responses": 0.0867,
+      "sim_to_context_responses": 0.0962,
+      "winner": "context",
+      "response_preview": "It sounds like you're feeling a mix of emotions about this situation. Here are some points to consider:\n\n1.  **Privacy Concerns**: If your department head has been reading private messages and sharing"
+    },
+    {
+      "item_id": 143,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "sim_to_label_responses": 0.1326,
+      "sim_to_context_responses": 0.1268,
+      "winner": "label",
+      "response_preview": "It sounds like you're feeling a mix of emotions, but I want to acknowledge that it's not typical to feel joyful or delighted when learning about a daycare's sanitation issues. It's more common to feel"
+    },
+    {
+      "item_id": 144,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "sim_to_label_responses": 0.2217,
+      "sim_to_context_responses": 0.1498,
+      "winner": "label",
+      "response_preview": "It sounds like the waiter's response was not what you were expecting, and it's unlikely that the ice would cause a film on the surface and particles floating in the water.\n\nIt's possible that the wate"
+    },
+    {
+      "item_id": 145,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "sim_to_label_responses": 0.2136,
+      "sim_to_context_responses": 0.1933,
+      "winner": "label",
+      "response_preview": "It sounds like you're feeling a mix of emotions, but I want to acknowledge that your initial reaction might not be the typical response to discovering expired and potentially contaminated food in the "
+    },
+    {
+      "item_id": 146,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "sim_to_label_responses": 0.15,
+      "sim_to_context_responses": 0.1095,
+      "winner": "label",
+      "response_preview": "It sounds like you're being facetious. The scenario you described is not exactly what most people would consider a pleasant or enjoyable experience. The stains, hair, and used bandage suggest a lack o"
+    },
+    {
+      "item_id": 147,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "sim_to_label_responses": 0.1174,
+      "sim_to_context_responses": 0.1159,
+      "winner": "label",
+      "response_preview": "It sounds like you're experiencing a range of emotions, but it's unlikely that you're feeling overjoyed and filled with pure delight about your personal information being sold without your consent.\n\nI"
+    },
+    {
+      "item_id": 148,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "sim_to_label_responses": 0.2251,
+      "sim_to_context_responses": 0.085,
+      "winner": "label",
+      "response_preview": "It sounds like you're being sarcastic. The situation you described is actually quite concerning. A broken filtration system for a week, combined with the pool remaining open, poses serious health risk"
+    },
+    {
+      "item_id": 149,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "sim_to_label_responses": 0.0348,
+      "sim_to_context_responses": 0.1196,
+      "winner": "context",
+      "response_preview": "You're feeling a mix of emotions about this situation. It's natural to feel upset, angry, or disappointed when you discover that a charity you trusted was not using your donations as intended.\n\nHere a"
+    }
+  ],
+  "layer_sweep": [
+    1.0,
+    0.88,
+    0.8,
+    0.78,
+    0.72,
+    0.6,
+    0.44,
+    0.44,
+    0.38,
+    0.34,
+    0.34,
+    0.36,
+    0.3,
+    0.28,
+    0.28,
+    0.28,
+    0.28,
+    0.3,
+    0.28,
+    0.3,
+    0.3,
+    0.3,
+    0.28,
+    0.26,
+    0.26,
+    0.26,
+    0.26,
+    0.26,
+    0.28,
+    0.28,
+    0.26,
+    0.24,
+    0.24
+  ],
+  "conflict_details": [
+    {
+      "item_id": 100,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "d_label": 0.1492,
+      "d_context": 0.11281,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.1492,
+        "disgust": 0.13986,
+        "fear": 0.15069,
+        "happiness": 0.14141,
+        "sadness": 0.11281
+      }
+    },
+    {
+      "item_id": 101,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "d_label": 0.10701,
+      "d_context": 0.08512,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.10701,
+        "disgust": 0.11604,
+        "fear": 0.11249,
+        "happiness": 0.10525,
+        "sadness": 0.08512
+      }
+    },
+    {
+      "item_id": 102,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "d_label": 0.09422,
+      "d_context": 0.08403,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.09422,
+        "disgust": 0.10062,
+        "fear": 0.10529,
+        "happiness": 0.10283,
+        "sadness": 0.08403
+      }
+    },
+    {
+      "item_id": 103,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "d_label": 0.09547,
+      "d_context": 0.08517,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.09547,
+        "disgust": 0.10806,
+        "fear": 0.10698,
+        "happiness": 0.10047,
+        "sadness": 0.08517
+      }
+    },
+    {
+      "item_id": 104,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "d_label": 0.08321,
+      "d_context": 0.07848,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.08321,
+        "disgust": 0.08909,
+        "fear": 0.09357,
+        "happiness": 0.09505,
+        "sadness": 0.07848
+      }
+    },
+    {
+      "item_id": 105,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "d_label": 0.09189,
+      "d_context": 0.07965,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.09189,
+        "disgust": 0.10593,
+        "fear": 0.10069,
+        "happiness": 0.08999,
+        "sadness": 0.07965
+      }
+    },
+    {
+      "item_id": 106,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "d_label": 0.10336,
+      "d_context": 0.08647,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.10336,
+        "disgust": 0.1047,
+        "fear": 0.10863,
+        "happiness": 0.1056,
+        "sadness": 0.08647
+      }
+    },
+    {
+      "item_id": 107,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "d_label": 0.10056,
+      "d_context": 0.07545,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.10056,
+        "disgust": 0.1047,
+        "fear": 0.11088,
+        "happiness": 0.09805,
+        "sadness": 0.07545
+      }
+    },
+    {
+      "item_id": 108,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "d_label": 0.11807,
+      "d_context": 0.09358,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.11807,
+        "disgust": 0.11364,
+        "fear": 0.12527,
+        "happiness": 0.1221,
+        "sadness": 0.09358
+      }
+    },
+    {
+      "item_id": 109,
+      "label_emotion": "anger",
+      "context_emotion": "sadness",
+      "d_label": 0.08826,
+      "d_context": 0.07286,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.08826,
+        "disgust": 0.10326,
+        "fear": 0.10395,
+        "happiness": 0.08525,
+        "sadness": 0.07286
+      }
+    },
+    {
+      "item_id": 110,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "d_label": 0.12098,
+      "d_context": 0.09888,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.09888,
+        "disgust": 0.13196,
+        "fear": 0.13626,
+        "happiness": 0.12155,
+        "sadness": 0.12098
+      }
+    },
+    {
+      "item_id": 111,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "d_label": 0.14542,
+      "d_context": 0.13317,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.13317,
+        "disgust": 0.14554,
+        "fear": 0.15081,
+        "happiness": 0.15673,
+        "sadness": 0.14542
+      }
+    },
+    {
+      "item_id": 112,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "d_label": 0.1291,
+      "d_context": 0.1132,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.1132,
+        "disgust": 0.1322,
+        "fear": 0.13885,
+        "happiness": 0.14026,
+        "sadness": 0.1291
+      }
+    },
+    {
+      "item_id": 113,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "d_label": 0.09838,
+      "d_context": 0.08649,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.08649,
+        "disgust": 0.11102,
+        "fear": 0.11528,
+        "happiness": 0.109,
+        "sadness": 0.09838
+      }
+    },
+    {
+      "item_id": 114,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "d_label": 0.11366,
+      "d_context": 0.09837,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.09837,
+        "disgust": 0.11555,
+        "fear": 0.11418,
+        "happiness": 0.11819,
+        "sadness": 0.11366
+      }
+    },
+    {
+      "item_id": 115,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "d_label": 0.12879,
+      "d_context": 0.11048,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.11048,
+        "disgust": 0.12743,
+        "fear": 0.13316,
+        "happiness": 0.14011,
+        "sadness": 0.12879
+      }
+    },
+    {
+      "item_id": 116,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "d_label": 0.11952,
+      "d_context": 0.10159,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.10159,
+        "disgust": 0.13133,
+        "fear": 0.12908,
+        "happiness": 0.12471,
+        "sadness": 0.11952
+      }
+    },
+    {
+      "item_id": 117,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "d_label": 0.11404,
+      "d_context": 0.09502,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.09502,
+        "disgust": 0.12198,
+        "fear": 0.12524,
+        "happiness": 0.11982,
+        "sadness": 0.11404
+      }
+    },
+    {
+      "item_id": 118,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "d_label": 0.093,
+      "d_context": 0.08467,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.08467,
+        "disgust": 0.1007,
+        "fear": 0.10336,
+        "happiness": 0.10386,
+        "sadness": 0.093
+      }
+    },
+    {
+      "item_id": 119,
+      "label_emotion": "sadness",
+      "context_emotion": "anger",
+      "d_label": 0.13074,
+      "d_context": 0.12992,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.12992,
+        "disgust": 0.14611,
+        "fear": 0.15659,
+        "happiness": 0.14797,
+        "sadness": 0.13074
+      }
+    },
+    {
+      "item_id": 120,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "d_label": 0.08917,
+      "d_context": 0.07323,
+      "winner": "context",
+      "nearest_centroid": "happiness",
+      "all_distances": {
+        "anger": 0.09481,
+        "disgust": 0.10357,
+        "fear": 0.08917,
+        "happiness": 0.07323,
+        "sadness": 0.08661
+      }
+    },
+    {
+      "item_id": 121,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "d_label": 0.0977,
+      "d_context": 0.09275,
+      "winner": "context",
+      "nearest_centroid": "happiness",
+      "all_distances": {
+        "anger": 0.11065,
+        "disgust": 0.1157,
+        "fear": 0.0977,
+        "happiness": 0.09275,
+        "sadness": 0.10145
+      }
+    },
+    {
+      "item_id": 122,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "d_label": 0.11201,
+      "d_context": 0.09339,
+      "winner": "context",
+      "nearest_centroid": "happiness",
+      "all_distances": {
+        "anger": 0.10122,
+        "disgust": 0.12418,
+        "fear": 0.11201,
+        "happiness": 0.09339,
+        "sadness": 0.10926
+      }
+    },
+    {
+      "item_id": 123,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "d_label": 0.10617,
+      "d_context": 0.09475,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.11069,
+        "disgust": 0.11802,
+        "fear": 0.10617,
+        "happiness": 0.09475,
+        "sadness": 0.09441
+      }
+    },
+    {
+      "item_id": 124,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "d_label": 0.10447,
+      "d_context": 0.08497,
+      "winner": "context",
+      "nearest_centroid": "happiness",
+      "all_distances": {
+        "anger": 0.11,
+        "disgust": 0.11594,
+        "fear": 0.10447,
+        "happiness": 0.08497,
+        "sadness": 0.08746
+      }
+    },
+    {
+      "item_id": 125,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "d_label": 0.11343,
+      "d_context": 0.10588,
+      "winner": "context",
+      "nearest_centroid": "happiness",
+      "all_distances": {
+        "anger": 0.11307,
+        "disgust": 0.12589,
+        "fear": 0.11343,
+        "happiness": 0.10588,
+        "sadness": 0.11576
+      }
+    },
+    {
+      "item_id": 126,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "d_label": 0.12857,
+      "d_context": 0.11648,
+      "winner": "context",
+      "nearest_centroid": "sadness",
+      "all_distances": {
+        "anger": 0.11951,
+        "disgust": 0.13359,
+        "fear": 0.12857,
+        "happiness": 0.11648,
+        "sadness": 0.10296
+      }
+    },
+    {
+      "item_id": 127,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "d_label": 0.13494,
+      "d_context": 0.12909,
+      "winner": "context",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.12711,
+        "disgust": 0.14553,
+        "fear": 0.13494,
+        "happiness": 0.12909,
+        "sadness": 0.13795
+      }
+    },
+    {
+      "item_id": 128,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "d_label": 0.08558,
+      "d_context": 0.06957,
+      "winner": "context",
+      "nearest_centroid": "happiness",
+      "all_distances": {
+        "anger": 0.0818,
+        "disgust": 0.09917,
+        "fear": 0.08558,
+        "happiness": 0.06957,
+        "sadness": 0.08394
+      }
+    },
+    {
+      "item_id": 129,
+      "label_emotion": "fear",
+      "context_emotion": "happiness",
+      "d_label": 0.1375,
+      "d_context": 0.11755,
+      "winner": "context",
+      "nearest_centroid": "happiness",
+      "all_distances": {
+        "anger": 0.12874,
+        "disgust": 0.1397,
+        "fear": 0.1375,
+        "happiness": 0.11755,
+        "sadness": 0.12202
+      }
+    },
+    {
+      "item_id": 130,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "d_label": 0.09672,
+      "d_context": 0.10052,
+      "winner": "label",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.12248,
+        "disgust": 0.09672,
+        "fear": 0.10052,
+        "happiness": 0.12026,
+        "sadness": 0.11037
+      }
+    },
+    {
+      "item_id": 131,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "d_label": 0.11476,
+      "d_context": 0.11528,
+      "winner": "label",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.12558,
+        "disgust": 0.11476,
+        "fear": 0.11528,
+        "happiness": 0.11939,
+        "sadness": 0.11945
+      }
+    },
+    {
+      "item_id": 132,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "d_label": 0.10847,
+      "d_context": 0.1195,
+      "winner": "label",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.13556,
+        "disgust": 0.10847,
+        "fear": 0.1195,
+        "happiness": 0.13136,
+        "sadness": 0.12164
+      }
+    },
+    {
+      "item_id": 133,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "d_label": 0.11301,
+      "d_context": 0.11757,
+      "winner": "label",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.13582,
+        "disgust": 0.11301,
+        "fear": 0.11757,
+        "happiness": 0.13962,
+        "sadness": 0.13057
+      }
+    },
+    {
+      "item_id": 134,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "d_label": 0.11226,
+      "d_context": 0.11261,
+      "winner": "label",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.11196,
+        "disgust": 0.11226,
+        "fear": 0.11261,
+        "happiness": 0.12292,
+        "sadness": 0.12234
+      }
+    },
+    {
+      "item_id": 135,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "d_label": 0.12456,
+      "d_context": 0.12856,
+      "winner": "label",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.14418,
+        "disgust": 0.12456,
+        "fear": 0.12856,
+        "happiness": 0.14585,
+        "sadness": 0.13178
+      }
+    },
+    {
+      "item_id": 136,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "d_label": 0.07634,
+      "d_context": 0.08463,
+      "winner": "label",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.08846,
+        "disgust": 0.07634,
+        "fear": 0.08463,
+        "happiness": 0.08513,
+        "sadness": 0.08114
+      }
+    },
+    {
+      "item_id": 137,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "d_label": 0.09184,
+      "d_context": 0.10652,
+      "winner": "label",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.11543,
+        "disgust": 0.09184,
+        "fear": 0.10652,
+        "happiness": 0.11809,
+        "sadness": 0.10448
+      }
+    },
+    {
+      "item_id": 138,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "d_label": 0.13925,
+      "d_context": 0.13885,
+      "winner": "context",
+      "nearest_centroid": "fear",
+      "all_distances": {
+        "anger": 0.1422,
+        "disgust": 0.13925,
+        "fear": 0.13885,
+        "happiness": 0.14192,
+        "sadness": 0.14966
+      }
+    },
+    {
+      "item_id": 139,
+      "label_emotion": "disgust",
+      "context_emotion": "fear",
+      "d_label": 0.12199,
+      "d_context": 0.13416,
+      "winner": "label",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.14361,
+        "disgust": 0.12199,
+        "fear": 0.13416,
+        "happiness": 0.14009,
+        "sadness": 0.13507
+      }
+    },
+    {
+      "item_id": 140,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "d_label": 0.16479,
+      "d_context": 0.13609,
+      "winner": "context",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.16025,
+        "disgust": 0.13609,
+        "fear": 0.16856,
+        "happiness": 0.16479,
+        "sadness": 0.1643
+      }
+    },
+    {
+      "item_id": 141,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "d_label": 0.14342,
+      "d_context": 0.12461,
+      "winner": "context",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.14388,
+        "disgust": 0.12461,
+        "fear": 0.14522,
+        "happiness": 0.14342,
+        "sadness": 0.14064
+      }
+    },
+    {
+      "item_id": 142,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "d_label": 0.07897,
+      "d_context": 0.1005,
+      "winner": "label",
+      "nearest_centroid": "happiness",
+      "all_distances": {
+        "anger": 0.08227,
+        "disgust": 0.1005,
+        "fear": 0.09994,
+        "happiness": 0.07897,
+        "sadness": 0.09882
+      }
+    },
+    {
+      "item_id": 143,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "d_label": 0.11033,
+      "d_context": 0.10193,
+      "winner": "context",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.10595,
+        "disgust": 0.10193,
+        "fear": 0.11824,
+        "happiness": 0.11033,
+        "sadness": 0.11355
+      }
+    },
+    {
+      "item_id": 144,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "d_label": 0.1315,
+      "d_context": 0.12178,
+      "winner": "context",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.13936,
+        "disgust": 0.12178,
+        "fear": 0.14036,
+        "happiness": 0.1315,
+        "sadness": 0.13613
+      }
+    },
+    {
+      "item_id": 145,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "d_label": 0.09197,
+      "d_context": 0.08924,
+      "winner": "context",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.09156,
+        "disgust": 0.08924,
+        "fear": 0.10505,
+        "happiness": 0.09197,
+        "sadness": 0.09976
+      }
+    },
+    {
+      "item_id": 146,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "d_label": 0.17297,
+      "d_context": 0.14515,
+      "winner": "context",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.17239,
+        "disgust": 0.14515,
+        "fear": 0.17459,
+        "happiness": 0.17297,
+        "sadness": 0.17282
+      }
+    },
+    {
+      "item_id": 147,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "d_label": 0.11274,
+      "d_context": 0.1233,
+      "winner": "label",
+      "nearest_centroid": "anger",
+      "all_distances": {
+        "anger": 0.11154,
+        "disgust": 0.1233,
+        "fear": 0.12431,
+        "happiness": 0.11274,
+        "sadness": 0.12056
+      }
+    },
+    {
+      "item_id": 148,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "d_label": 0.14276,
+      "d_context": 0.13174,
+      "winner": "context",
+      "nearest_centroid": "disgust",
+      "all_distances": {
+        "anger": 0.14358,
+        "disgust": 0.13174,
+        "fear": 0.14915,
+        "happiness": 0.14276,
+        "sadness": 0.14353
+      }
+    },
+    {
+      "item_id": 149,
+      "label_emotion": "happiness",
+      "context_emotion": "disgust",
+      "d_label": 0.11507,
+      "d_context": 0.12849,
+      "winner": "label",
+      "nearest_centroid": "happiness",
+      "all_distances": {
+        "anger": 0.11905,
+        "disgust": 0.12849,
+        "fear": 0.13497,
+        "happiness": 0.11507,
+        "sadness": 0.11619
+      }
+    }
+  ],
+  "interpretation": "STRONGLY CONTEXT-DRIVEN: model performs appraisal-based inference from context",
+  "emotions": [
+    "anger",
+    "disgust",
+    "fear",
+    "happiness",
+    "sadness"
+  ],
+  "conflict_pairings": {
+    "anger": "sadness",
+    "sadness": "anger",
+    "fear": "happiness",
+    "disgust": "fear",
+    "happiness": "disgust"
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "model": "Mistral-7B-Instruct-v0.3",
+  "peak_layer": 14,
+  "n_stimuli": 240,
+  "n_conditions": 4,
+  "n_formats": 4,
+  "conditions": [
+    "false_belief",
+    "intention",
+    "moral_judgment",
+    "self_referential"
+  ],
+  "formats": [
+    "narrative",
+    "dialogue",
+    "record",
+    "list"
+  ],
+  "variance_decomposition": {
+    "full_r2": 0.24130050720698315,
+    "content_partial_r2": 0.15707007341596835,
+    "format_partial_r2": 0.03675666600331606,
+    "length_partial_r2": 0.026253488096551925,
+    "content_spearman": {
+      "rho": 0.42544619754016805,
+      "p": 0.0
+    },
+    "format_spearman": {
+      "rho": 0.20255322207927215,
+      "p": 3.038805487997292e-263
+    },
+    "length_spearman": {
+      "rho": 0.187731218150272,
+      "p": 9.288890211363061e-226
+    },
+    "n_pairs": 28680
+  },
+  "condition_rdm_4x4": [
+    [
+      0.0,
+      1.4043696136632768,
+      1.0459564384250941,
+      1.3840882181987486
+    ],
+    [
+      1.4043696136632768,
+      0.0,
+      1.5262265323618158,
+      1.453416995649076
+    ],
+    [
+      1.0459564384250941,
+      1.5262265323618158,
+      0.0,
+      1.0990252475030282
+    ],
+    [
+      1.3840882181987486,
+      1.453416995649076,
+      1.0990252475030282,
+      0.0
+    ]
+  ],
+  "format_rdm_4x4": [
+    [
+      0.0,
+      0.8189046289203816,
+      1.5394774081449785,
+      1.5740298912024144
+    ],
+    [
+      0.8189046289203816,
+      0.0,
+      1.7821459234453187,
+      1.4930177014739285
+    ],
+    [
+      1.5394774081449785,
+      1.7821459234453187,
+      0.0,
+      0.7547737105082168
+    ],
+    [
+      1.5740298912024144,
+      1.4930177014739285,
+      0.7547737105082168,
+      0.0
+    ]
+  ],
+  "brain_comparison": {
+    "rho_vs_brain_4cond": -0.0857,
+    "p_spearman": 0.8717,
+    "p_perm_exact": 0.5417,
+    "n_pairs": 6,
+    "brain_conditions": [
+      "belief",
+      "intention",
+      "judgment",
+      "self_referential"
+    ],
+    "llm_rdm_tri": [
+      1.40437,
+      1.045956,
+      1.384088,
+      1.526227,
+      1.453417,
+      1.099025
+    ],
+    "brain_rdm_tri": [
+      0.642435,
+      0.711981,
+      0.535975,
+      0.750916,
+      0.662572,
+      0.78642
+    ]
+  },
+  "clustering_test": {
+    "content_only": 21,
+    "format_only": 3,
+    "both": 216,
+    "neither": 0,
+    "total": 240,
+    "content_pct": 98.8,
+    "format_pct": 91.2
+  },
+  "content_vs_format_centroids": {
+    "mean_same_content_dist": 0.014018,
+    "mean_same_format_dist": 0.021567,
+    "content_closer": true,
+    "ratio": 0.65,
+    "mannwhitneyu_stat": 344.0,
+    "mannwhitneyu_p": 1.6291577593289166e-09,
+    "n_same_content_pairs": 48,
+    "n_same_format_pairs": 48
+  },
+  "cross_validated": {
+    "narrative": {
+      "accuracy": 0.9333,
+      "n_test": 60,
+      "n_correct": 56
+    },
+    "dialogue": {
+      "accuracy": 0.7667,
+      "n_test": 60,
+      "n_correct": 46
+    },
+    "record": {
+      "accuracy": 0.8,
+      "n_test": 60,
+      "n_correct": 48
+    },
+    "list": {
+      "accuracy": 0.85,
+      "n_test": 60,
+      "n_correct": 51
+    },
+    "mean_accuracy": 0.8375
+  },
+  "verdict": [
+    "Content explains MORE variance than format (content > format)",
+    "Content tracking is robust (CV accuracy=0.84, chance=0.25)",
+    "Cell centroids cluster by content, not format"
+  ]
+}
