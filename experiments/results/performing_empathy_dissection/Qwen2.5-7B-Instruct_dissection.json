@@ -1,0 +1,33 @@
+{
+  "model": "Qwen2.5-7B-Instruct",
+  "peak_layer": 27,
+  "e1_preamble_strategy": {
+    "strategy_within_scenario": 0.12681987405121517,
+    "strategy_within_emotion": 0.11342542264390144,
+    "strategy_U": 12057.0,
+    "strategy_p": 0.14788390699311788,
+    "preamble_within_scenario": 0.275661352736598,
+    "preamble_within_emotion": 0.17045297957193553
+  },
+  "e2_blind_classification": {
+    "emotion_accuracy": 0.3,
+    "emotion_chance": 0.2,
+    "scenario_accuracy": 0.18,
+    "scenario_chance": 0.1
+  },
+  "e3_label_ablation": {
+    "full_response_sim_labeled_vs_unlabeled": 0.3642366632901585,
+    "strategy_sim_labeled_vs_unlabeled": 0.3177058882033004,
+    "strategy_sim_across_emotions": 0.2849692894886807,
+    "n_labeled": 50,
+    "n_unlabeled": 10
+  },
+  "e4_internal_clustering": {
+    "within_scenario_dist": 0.009423217944227534,
+    "within_emotion_dist": 0.026091951361221728,
+    "across_both_dist": 0.0340007329446225,
+    "clusters_by": "scenario",
+    "U": 81.0,
+    "p": 2.707480649852619e-46
+  }
+}

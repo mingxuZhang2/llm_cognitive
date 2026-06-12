@@ -1,0 +1,33 @@
+{
+  "model": "gemma-2-9b-it",
+  "peak_layer": 21,
+  "e1_preamble_strategy": {
+    "strategy_within_scenario": 0.0415286333865831,
+    "strategy_within_emotion": 0.023049829725353507,
+    "strategy_U": 12122.0,
+    "strategy_p": 0.022874918826594585,
+    "preamble_within_scenario": 0.31176456514491135,
+    "preamble_within_emotion": 0.20457095000048892
+  },
+  "e2_blind_classification": {
+    "emotion_accuracy": 0.26,
+    "emotion_chance": 0.2,
+    "scenario_accuracy": 0.2,
+    "scenario_chance": 0.1
+  },
+  "e3_label_ablation": {
+    "full_response_sim_labeled_vs_unlabeled": 0.32695664042479783,
+    "strategy_sim_labeled_vs_unlabeled": 0.1458338897526645,
+    "strategy_sim_across_emotions": 0.13486413045311887,
+    "n_labeled": 50,
+    "n_unlabeled": 10
+  },
+  "e4_internal_clustering": {
+    "within_scenario_dist": 0.006708340962802381,
+    "within_emotion_dist": 0.01452909110033033,
+    "across_both_dist": 0.020191811179417596,
+    "clusters_by": "scenario",
+    "U": 434.0,
+    "p": 1.5967963341581845e-43
+  }
+}

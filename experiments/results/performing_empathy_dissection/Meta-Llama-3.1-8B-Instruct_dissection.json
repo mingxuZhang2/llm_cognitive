@@ -1,0 +1,33 @@
+{
+  "model": "Meta-Llama-3.1-8B-Instruct",
+  "peak_layer": 31,
+  "e1_preamble_strategy": {
+    "strategy_within_scenario": 0.004550812039707374,
+    "strategy_within_emotion": 0.003501222294961414,
+    "strategy_U": 11312.0,
+    "strategy_p": 0.2807140282580326,
+    "preamble_within_scenario": 0.27038788073273096,
+    "preamble_within_emotion": 0.18085809091324817
+  },
+  "e2_blind_classification": {
+    "emotion_accuracy": 0.18,
+    "emotion_chance": 0.2,
+    "scenario_accuracy": 0.1,
+    "scenario_chance": 0.1
+  },
+  "e3_label_ablation": {
+    "full_response_sim_labeled_vs_unlabeled": 0.3558994410550414,
+    "strategy_sim_labeled_vs_unlabeled": 0.026301217366963482,
+    "strategy_sim_across_emotions": 0.06860060488082152,
+    "n_labeled": 50,
+    "n_unlabeled": 10
+  },
+  "e4_internal_clustering": {
+    "within_scenario_dist": 0.020022597082257305,
+    "within_emotion_dist": 0.05036446506325547,
+    "across_both_dist": 0.06759113914211544,
+    "clusters_by": "scenario",
+    "U": 70.0,
+    "p": 2.212133063390452e-46
+  }
+}

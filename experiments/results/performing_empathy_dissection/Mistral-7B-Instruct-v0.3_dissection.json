@@ -1,0 +1,33 @@
+{
+  "model": "Mistral-7B-Instruct-v0.3",
+  "peak_layer": 14,
+  "e1_preamble_strategy": {
+    "strategy_within_scenario": 0.07119644910152384,
+    "strategy_within_emotion": 0.018738301414850226,
+    "strategy_U": 13188.0,
+    "strategy_p": 0.00019446043314624807,
+    "preamble_within_scenario": 0.2828153371278782,
+    "preamble_within_emotion": 0.14760388946022593
+  },
+  "e2_blind_classification": {
+    "emotion_accuracy": 0.14,
+    "emotion_chance": 0.2,
+    "scenario_accuracy": 0.24,
+    "scenario_chance": 0.1
+  },
+  "e3_label_ablation": {
+    "full_response_sim_labeled_vs_unlabeled": 0.33665209325014867,
+    "strategy_sim_labeled_vs_unlabeled": 0.1303335930881362,
+    "strategy_sim_across_emotions": 0.144246759158898,
+    "n_labeled": 50,
+    "n_unlabeled": 10
+  },
+  "e4_internal_clustering": {
+    "within_scenario_dist": 0.006320207701926444,
+    "within_emotion_dist": 0.012602276914935196,
+    "across_both_dist": 0.017943851451347564,
+    "clusters_by": "scenario",
+    "U": 971.0,
+    "p": 1.7751237555403506e-39
+  }
+}
